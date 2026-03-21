@@ -1,0 +1,580 @@
+<!--
+  UNDGRND Movement — Navigation Component
+  File: /components/nav-component.html
+
+  Usage: Copy this entire block into any page <body>, as the first element.
+  Dependencies:
+    - /css/global.css (must be loaded in <head>)
+    - site-config.json (navigation data loaded via fetch in <script> below)
+
+  Navigation data source: site-config.json → navigation.main_menu, navigation.cta_button
+-->
+
+<!-- =====================================================================
+     NAV STYLES (scoped to this component)
+     ===================================================================== -->
+<style>
+  /* --- Header / Nav wrapper --- */
+  .site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(10, 10, 10, 0.95);       /* site-config: design.colors.dark_bg at 95% */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(139, 92, 246, 0.2); /* site-config: design.effects.card_border */
+    transition: all 0.3s ease;                /* site-config: design.effects.transition */
+  }
+
+  /* Scrolled state — slightly more opaque */
+  .site-nav.scrolled {
+    background: rgba(10, 10, 10, 0.98);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  /* --- Inner layout --- */
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin-inline: auto;
+    padding: 1.1rem 5%;
+    gap: 2rem;
+  }
+
+  /* --- Logo --- */
+  .nav-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .nav-logo__title {
+    font-family: 'Bebas Neue', Impact, sans-serif; /* site-config: design.fonts.display */
+    font-size: 2rem;
+    letter-spacing: 2px;
+    line-height: 1;
+    /* gradient-text from global.css */
+    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%); /* site-config: design.colors.gradient_purple */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .nav-logo__sub {
+    font-family: 'Outfit', Helvetica Neue, sans-serif; /* site-config: design.fonts.body */
+    font-size: 0.7rem;
+    font-weight: 400;                          /* site-config: design.fonts.weights.regular */
+    letter-spacing: 0.2em;
+    text-transform: lowercase;
+    color: #A1A1A1;                            /* site-config: design.colors.text_gray */
+    margin-top: 1px;
+  }
+
+  /* --- Desktop menu --- */
+  .nav-menu {
+    display: none; /* hidden on mobile by default */
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-menu__item {
+    position: relative;
+  }
+
+  .nav-menu__link {
+    font-family: 'Outfit', Helvetica Neue, sans-serif; /* site-config: design.fonts.body */
+    font-size: 0.95rem;
+    font-weight: 600;                          /* site-config: design.fonts.weights.semibold */
+    letter-spacing: 0.04em;
+    color: #A1A1A1;                            /* site-config: design.colors.text_gray */
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    padding-bottom: 2px;
+    position: relative;
+  }
+
+  /* Underline animation on hover */
+  .nav-menu__link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%); /* site-config: gradient_purple */
+    transition: width 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .nav-menu__link:hover {
+    color: #8B5CF6;                            /* site-config: design.colors.primary_purple */
+  }
+
+  .nav-menu__link:hover::after {
+    width: 100%;
+  }
+
+  /* Active / current page state */
+  .nav-menu__link.active {
+    color: #8B5CF6;                            /* site-config: design.colors.primary_purple */
+  }
+
+  .nav-menu__link.active::after {
+    width: 100%;
+  }
+
+  /* --- Desktop CTA button --- */
+  .nav-cta {
+    display: none; /* hidden on mobile */
+    flex-shrink: 0;
+  }
+
+  /* --- Hamburger button (mobile only) --- */
+  .nav-hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .nav-hamburger:hover {
+    background: rgba(139, 92, 246, 0.1);
+  }
+
+  .nav-hamburger__line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #FFFFFF;                       /* site-config: design.colors.text_white */
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  /* Hamburger → X animation */
+  .nav-hamburger.open .nav-hamburger__line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-hamburger.open .nav-hamburger__line:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  .nav-hamburger.open .nav-hamburger__line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* --- Mobile menu overlay --- */
+  .nav-mobile-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-mobile-overlay.open {
+    display: block;
+    opacity: 1;
+  }
+
+  /* --- Mobile slide-in menu --- */
+  .nav-mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(320px, 85vw);
+    background: #0A0A0A;                       /* site-config: design.colors.dark_bg */
+    border-left: 1px solid rgba(139, 92, 246, 0.2); /* site-config: design.effects.card_border */
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 2rem 2rem;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+  }
+
+  .nav-mobile-menu.open {
+    transform: translateX(0);
+  }
+
+  /* Mobile menu links list */
+  .nav-mobile-menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-mobile-menu__item {
+    border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+  }
+
+  .nav-mobile-menu__link {
+    display: block;
+    padding: 1.1rem 0;
+    font-family: 'Bebas Neue', Impact, sans-serif; /* site-config: design.fonts.display */
+    font-size: 1.75rem;
+    letter-spacing: 2px;
+    color: #FFFFFF;                            /* site-config: design.colors.text_white */
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+  }
+
+  .nav-mobile-menu__link:hover,
+  .nav-mobile-menu__link.active {
+    color: #8B5CF6;                            /* site-config: design.colors.primary_purple */
+    padding-left: 0.75rem;
+  }
+
+  /* Mobile CTA */
+  .nav-mobile-menu__cta {
+    margin-top: 2rem;
+  }
+
+  .nav-mobile-menu__cta a {
+    display: block;
+    text-align: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%); /* site-config: gradient_purple */
+    color: #FFFFFF;
+    font-family: 'Outfit', Helvetica Neue, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .nav-mobile-menu__cta a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
+  }
+
+  /* --- Tablet / Desktop breakpoint --- */
+  @media (min-width: 768px) {
+    .nav-menu {
+      display: flex;
+    }
+
+    .nav-cta {
+      display: block;
+    }
+
+    .nav-hamburger {
+      display: none;
+    }
+
+    .nav-mobile-menu,
+    .nav-mobile-overlay {
+      display: none !important;
+    }
+  }
+
+  /* Body padding offset so content doesn't hide under fixed nav */
+  body {
+    padding-top: 72px;
+  }
+
+  @media (min-width: 768px) {
+    body {
+      padding-top: 76px;
+    }
+  }
+</style>
+
+<!-- =====================================================================
+     NAV HTML
+     ===================================================================== -->
+
+<!-- Full-screen overlay (mobile) -->
+<div class="nav-mobile-overlay" id="navOverlay" aria-hidden="true"></div>
+
+<!-- Mobile slide-in menu -->
+<nav class="nav-mobile-menu" id="navMobileMenu" aria-label="Mobile navigation" aria-hidden="true">
+  <ul class="nav-mobile-menu__list" id="navMobileList">
+    <!-- Populated by JavaScript from site-config.json navigation.main_menu -->
+  </ul>
+  <div class="nav-mobile-menu__cta" id="navMobileCta">
+    <!-- Populated by JavaScript from site-config.json navigation.cta_button -->
+  </div>
+</nav>
+
+<!-- Main header -->
+<header class="site-nav" id="siteNav" role="banner">
+  <div class="nav-inner">
+
+    <!-- Logo — site-config.json: project.name -->
+    <a href="/" class="nav-logo" aria-label="UNDGRND Movement — Home">
+      <span class="nav-logo__title">UNDGRND</span>
+      <span class="nav-logo__sub">movement</span>
+    </a>
+
+    <!-- Desktop navigation — populated from site-config.json navigation.main_menu -->
+    <ul class="nav-menu" id="navDesktopMenu" role="list" aria-label="Main navigation">
+      <!-- Populated by JavaScript -->
+    </ul>
+
+    <!-- Desktop CTA — site-config.json navigation.cta_button -->
+    <div class="nav-cta" id="navDesktopCta">
+      <!-- Populated by JavaScript -->
+    </div>
+
+    <!-- Hamburger (mobile only) -->
+    <button
+      class="nav-hamburger"
+      id="navHamburger"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="navMobileMenu"
+    >
+      <span class="nav-hamburger__line" aria-hidden="true"></span>
+      <span class="nav-hamburger__line" aria-hidden="true"></span>
+      <span class="nav-hamburger__line" aria-hidden="true"></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- =====================================================================
+     NAV JAVASCRIPT
+     Data source: site-config.json → navigation.main_menu, navigation.cta_button
+     ===================================================================== -->
+<script>
+(function () {
+  'use strict';
+
+  /* ------------------------------------------------------------------
+     1. Load navigation data from site-config.json
+     ------------------------------------------------------------------ */
+  fetch('/site-config.json')
+    .then(function (res) {
+      if (!res.ok) throw new Error('Could not load site-config.json');
+      return res.json();
+    })
+    .then(function (config) {
+      var menuItems = config.navigation.main_menu;   // site-config.json navigation.main_menu
+      var ctaButton = config.navigation.cta_button;  // site-config.json navigation.cta_button
+      buildDesktopMenu(menuItems, ctaButton);
+      buildMobileMenu(menuItems, ctaButton);
+      highlightActivePage();
+    })
+    .catch(function (err) {
+      console.error('Nav: Failed to load site-config.json', err);
+      // Fallback: render static nav from site-config.json values
+      var fallbackMenu = [
+        { label: 'Home',      href: '/' },
+        { label: 'Adults',    href: '/adults.html' },
+        { label: 'Kids',      href: '/kids.html' },
+        { label: 'Timetable', href: '/timetable.html' },
+        { label: 'About',     href: '/about.html' },
+        { label: 'Contact',   href: '/contact.html' }
+      ];
+      var fallbackCta = { text: 'Book Now', href: '/timetable.html' };
+      buildDesktopMenu(fallbackMenu, fallbackCta);
+      buildMobileMenu(fallbackMenu, fallbackCta);
+      highlightActivePage();
+    });
+
+  /* ------------------------------------------------------------------
+     2. Build desktop navigation menu
+     ------------------------------------------------------------------ */
+  function buildDesktopMenu(items, cta) {
+    var list = document.getElementById('navDesktopMenu');
+    var ctaWrap = document.getElementById('navDesktopCta');
+    if (!list || !ctaWrap) return;
+
+    items.forEach(function (item) {
+      var li = document.createElement('li');
+      li.className = 'nav-menu__item';
+
+      var a = document.createElement('a');
+      a.href = item.href;
+      a.className = 'nav-menu__link';
+      a.textContent = item.label;
+
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    // CTA button
+    var ctaLink = document.createElement('a');
+    ctaLink.href = cta.href;
+    ctaLink.className = 'cta-button';
+    ctaLink.textContent = cta.text;
+    ctaWrap.appendChild(ctaLink);
+  }
+
+  /* ------------------------------------------------------------------
+     3. Build mobile navigation menu
+     ------------------------------------------------------------------ */
+  function buildMobileMenu(items, cta) {
+    var list = document.getElementById('navMobileList');
+    var ctaWrap = document.getElementById('navMobileCta');
+    if (!list || !ctaWrap) return;
+
+    items.forEach(function (item) {
+      var li = document.createElement('li');
+      li.className = 'nav-mobile-menu__item';
+
+      var a = document.createElement('a');
+      a.href = item.href;
+      a.className = 'nav-mobile-menu__link';
+      a.textContent = item.label;
+
+      // Close mobile menu when a link is clicked
+      a.addEventListener('click', closeMobileMenu);
+
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    // CTA button
+    ctaWrap.innerHTML = '';
+    var ctaLink = document.createElement('a');
+    ctaLink.href = cta.href;
+    ctaLink.textContent = cta.text;
+    ctaLink.addEventListener('click', closeMobileMenu);
+    ctaWrap.appendChild(ctaLink);
+  }
+
+  /* ------------------------------------------------------------------
+     4. Highlight active page based on window.location.pathname
+     ------------------------------------------------------------------ */
+  function highlightActivePage() {
+    var path = window.location.pathname;
+
+    // Desktop links
+    var desktopLinks = document.querySelectorAll('.nav-menu__link');
+    desktopLinks.forEach(function (link) {
+      var href = link.getAttribute('href');
+      if (isActivePath(path, href)) {
+        link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+
+    // Mobile links
+    var mobileLinks = document.querySelectorAll('.nav-mobile-menu__link');
+    mobileLinks.forEach(function (link) {
+      var href = link.getAttribute('href');
+      if (isActivePath(path, href)) {
+        link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+  }
+
+  function isActivePath(currentPath, linkHref) {
+    if (!linkHref) return false;
+    // Exact match for homepage
+    if (linkHref === '/' && (currentPath === '/' || currentPath === '/index.html')) return true;
+    // Match for other pages (ignore trailing slash)
+    if (linkHref !== '/' && currentPath !== '/') {
+      return currentPath.replace(/\/$/, '') === linkHref.replace(/\/$/, '');
+    }
+    return false;
+  }
+
+  /* ------------------------------------------------------------------
+     5. Scroll behaviour — add 'scrolled' class when page scrolls >50px
+     ------------------------------------------------------------------ */
+  var nav = document.getElementById('siteNav');
+
+  function onScroll() {
+    if (!nav) return;
+    if (window.scrollY > 50) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // Run on load in case page is already scrolled
+
+  /* ------------------------------------------------------------------
+     6. Mobile menu toggle
+     ------------------------------------------------------------------ */
+  var hamburger = document.getElementById('navHamburger');
+  var mobileMenu = document.getElementById('navMobileMenu');
+  var overlay    = document.getElementById('navOverlay');
+
+  function openMobileMenu() {
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    mobileMenu.classList.add('open');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden'; // Prevent background scroll
+  }
+
+  function closeMobileMenu() {
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileMenu.classList.remove('open');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  if (hamburger) {
+    hamburger.addEventListener('click', function () {
+      var isOpen = hamburger.classList.contains('open');
+      if (isOpen) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    });
+  }
+
+  // Close on overlay click
+  if (overlay) {
+    overlay.addEventListener('click', closeMobileMenu);
+  }
+
+  // Close on Escape key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && hamburger && hamburger.classList.contains('open')) {
+      closeMobileMenu();
+      hamburger.focus();
+    }
+  });
+
+}());
+</script>

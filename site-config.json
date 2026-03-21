@@ -1,387 +1,535 @@
 {
-  "site": {
+  "project": {
     "name": "UNDGRND Movement",
-    "tagline": "Move. Express. Connect.",
-    "description": "Gold Coast's underground dance and movement studio — where authentic expression meets community.",
-    "url": "https://undgrndmovement.com.au",
-    "logo": "assets/images/undgrnd-logo.png",
-    "favicon": "assets/images/undgrnd-logo.png",
-    "language": "en-AU",
-    "timezone": "Australia/Brisbane"
+    "tagline": "Foundational movement for body and mind",
+    "domain": "https://www.undrgrnd.com.au",
+    "repository": "https://github.com/BcomServicesLimited/undrgrnd.git"
   },
-  "brand": {
-    "colors": {
-      "primary": "#7B2FFF",
-      "primaryDark": "#5A1FCC",
-      "primaryLight": "#9B5FFF",
-      "accent": "#FF2FBF",
-      "accentAlt": "#2FFFFF",
-      "background": "#000000",
-      "backgroundAlt": "#0D0D0D",
-      "surface": "#1A1A1A",
-      "surfaceAlt": "#242424",
-      "text": "#FFFFFF",
-      "textMuted": "#A0A0A0",
-      "textDark": "#666666",
-      "neonYellow": "#FFE600",
-      "neonCyan": "#00FFFF",
-      "neonPink": "#FF2FBF",
-      "neonPurple": "#7B2FFF"
-    },
-    "fonts": {
-      "heading": "Bebas Neue, Impact, sans-serif",
-      "body": "Inter, Helvetica Neue, sans-serif",
-      "accent": "Space Grotesk, sans-serif",
-      "mono": "Space Mono, monospace"
-    },
-    "logoDescription": "UNDGRND in bold purple uppercase with 'movement' in white below, accompanied by neon line-art dancers on black background"
-  },
+  
   "business": {
-    "legalName": "UNDGRND Movement",
-    "abn": "",
-    "phone": "",
-    "email": "info@undgrndmovement.com.au",
-    "bookingEmail": "bookings@undgrndmovement.com.au",
+    "legal_name": "UNDGRND Movement",
+    "category_primary": "Dance School",
+    "category_secondary": "Yoga Studio",
     "address": {
-      "street": "",
-      "suburb": "Gold Coast",
+      "street": "163 Ferry Rd",
+      "suburb": "Southport",
       "state": "QLD",
-      "postcode": "",
+      "postcode": "4215",
       "country": "Australia",
-      "googleMapsUrl": ""
+      "geo": {
+        "latitude": "-27.9654",
+        "longitude": "153.4076"
+      }
+    },
+    "contact": {
+      "email": "olga.coaching1@gmail.com",
+      "phone": "[PLACEHOLDER - UPDATE BEFORE LAUNCH]",
+      "instagram": "[PLACEHOLDER - UPDATE BEFORE LAUNCH]",
+      "facebook": "[PLACEHOLDER - UPDATE BEFORE LAUNCH]"
     },
     "hours": {
-      "monday": "9:00 AM – 8:00 PM",
-      "tuesday": "9:00 AM – 8:00 PM",
-      "wednesday": "9:00 AM – 8:00 PM",
-      "thursday": "9:00 AM – 8:00 PM",
-      "friday": "9:00 AM – 7:00 PM",
-      "saturday": "8:00 AM – 5:00 PM",
-      "sunday": "Closed"
-    },
-    "social": {
-      "instagram": "https://www.instagram.com/undgrndmovement",
-      "facebook": "https://www.facebook.com/undgrndmovement",
-      "tiktok": "https://www.tiktok.com/@undgrndmovement",
-      "youtube": ""
+      "monday": "6:00 AM - 9:00 PM",
+      "tuesday": "6:00 AM - 9:00 PM",
+      "wednesday": "6:00 AM - 9:00 PM",
+      "thursday": "6:00 AM - 9:00 PM",
+      "friday": "6:00 AM - 9:00 PM",
+      "saturday": "8:00 AM - 4:00 PM",
+      "sunday": "8:00 AM - 4:00 PM",
+      "note": "[PLACEHOLDER - UPDATE WITH ACTUAL HOURS]"
     }
   },
-  "navigation": {
-    "items": [
-      { "label": "Home", "href": "#home" },
-      { "label": "About", "href": "#about" },
-      { "label": "Programs", "href": "#programs" },
-      { "label": "Schedule", "href": "#schedule" },
-      { "label": "Instructors", "href": "#instructors" },
-      { "label": "Pricing", "href": "#pricing" },
-      { "label": "Contact", "href": "#contact" }
-    ],
-    "ctaButton": {
-      "label": "Book a Class",
-      "href": "#booking"
-    }
-  },
-  "hero": {
-    "headline": "MOVE DIFFERENT.",
-    "subheadline": "UNDGRND Movement",
-    "body": "Gold Coast's most authentic dance and movement studio. From hip-hop to contemporary, we create space for every body to find its rhythm.",
-    "cta": {
-      "primary": { "label": "Book Your First Class", "href": "#booking" },
-      "secondary": { "label": "Explore Programs", "href": "#programs" }
-    },
-    "backgroundType": "video",
-    "backgroundFallback": "assets/images/hero-bg.jpg"
-  },
-  "about": {
-    "headline": "Born Underground. Built for Everyone.",
-    "body": [
-      "UNDGRND Movement was born from a simple belief: dance is for everyone. We're not about perfection — we're about expression, community, and showing up as you are.",
-      "Based on the Gold Coast, we bring together the best instructors across hip-hop, street dance, contemporary, and movement disciplines to create classes that challenge, inspire, and connect.",
-      "Whether you're stepping onto the floor for the first time or you've been dancing your whole life, UNDGRND is your space."
-    ],
-    "values": [
-      {
-        "icon": "flame",
-        "title": "Authentic Expression",
-        "description": "We celebrate individuality. There's no single way to move — find yours here."
-      },
-      {
-        "icon": "users",
-        "title": "Real Community",
-        "description": "More than a studio — a crew. We look out for each other on and off the floor."
-      },
-      {
-        "icon": "zap",
-        "title": "High Energy",
-        "description": "Every class is designed to push you, excite you, and leave you wanting more."
-      },
-      {
-        "icon": "heart",
-        "title": "Inclusive Spaces",
-        "description": "All ages, all levels, all bodies. UNDGRND is a judgment-free zone."
-      }
-    ]
-  },
-  "programs": [
-    {
-      "id": "hip-hop",
-      "name": "Hip-Hop",
-      "shortDescription": "Classic and contemporary hip-hop styles rooted in culture and community.",
-      "fullDescription": "From old-school foundations to new-school flows, our hip-hop classes cover the full spectrum. Learn the history, master the technique, and find your own style.",
-      "level": "All Levels",
-      "ageGroup": "12+",
-      "duration": "60 min",
-      "color": "#FFE600",
-      "icon": "music",
-      "image": "assets/images/program-hiphop.jpg"
-    },
-    {
-      "id": "street-dance",
-      "name": "Street Dance",
-      "shortDescription": "Freestyle, breaking, locking, popping — street culture on the Gold Coast.",
-      "fullDescription": "Street dance is where it all began. Our classes blend breaking, locking, popping, and freestyle to give you a complete street dance education.",
-      "level": "Beginner – Intermediate",
-      "ageGroup": "10+",
-      "duration": "60 min",
-      "color": "#FF2FBF",
-      "icon": "activity",
-      "image": "assets/images/program-street.jpg"
-    },
-    {
-      "id": "contemporary",
-      "name": "Contemporary",
-      "shortDescription": "Fluid, expressive movement that connects body and emotion.",
-      "fullDescription": "Contemporary dance at UNDGRND is raw and real. We strip back the formality and focus on authentic movement, breath, and connection to the music.",
-      "level": "All Levels",
-      "ageGroup": "14+",
-      "duration": "75 min",
-      "color": "#00FFFF",
-      "icon": "wind",
-      "image": "assets/images/program-contemporary.jpg"
-    },
-    {
-      "id": "kids-movement",
-      "name": "Kids Movement",
-      "shortDescription": "Fun, energetic classes that build confidence and coordination in young movers.",
-      "fullDescription": "Designed for children aged 5–12, our Kids Movement classes combine dance, games, and creative movement to build confidence, coordination, and a love of moving.",
-      "level": "Beginner",
-      "ageGroup": "5–12",
-      "duration": "45 min",
-      "color": "#7B2FFF",
-      "icon": "star",
-      "image": "assets/images/program-kids.jpg"
-    },
-    {
-      "id": "adult-beginners",
-      "name": "Adult Beginners",
-      "shortDescription": "Never danced before? This is your starting point — no experience needed.",
-      "fullDescription": "Our Adult Beginners program is the perfect entry point for anyone who's always wanted to dance but never had the chance. Zero judgment, maximum fun.",
-      "level": "Beginner",
-      "ageGroup": "18+",
-      "duration": "60 min",
-      "color": "#FF6B2F",
-      "icon": "play",
-      "image": "assets/images/program-adults.jpg"
-    },
-    {
-      "id": "performance-crew",
-      "name": "Performance Crew",
-      "shortDescription": "Audition-based performance group for dedicated dancers ready to compete and perform.",
-      "fullDescription": "For serious dancers ready to take it to the next level. Performance Crew trains for competitions, showcases, and events. Auditions held each term.",
-      "level": "Advanced",
-      "ageGroup": "14+",
-      "duration": "90 min",
-      "color": "#2FFF8F",
-      "icon": "award",
-      "image": "assets/images/program-crew.jpg"
-    }
-  ],
-  "schedule": {
-    "note": "Schedule is updated each term. Book online to secure your spot.",
-    "bookingUrl": "#booking",
-    "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-    "classes": [
-      { "day": "Monday", "time": "4:30 PM", "program": "kids-movement", "instructor": "TBA", "spots": 12 },
-      { "day": "Monday", "time": "6:00 PM", "program": "hip-hop", "instructor": "TBA", "spots": 16 },
-      { "day": "Tuesday", "time": "5:00 PM", "program": "adult-beginners", "instructor": "TBA", "spots": 14 },
-      { "day": "Tuesday", "time": "7:00 PM", "program": "contemporary", "instructor": "TBA", "spots": 14 },
-      { "day": "Wednesday", "time": "4:30 PM", "program": "kids-movement", "instructor": "TBA", "spots": 12 },
-      { "day": "Wednesday", "time": "6:30 PM", "program": "street-dance", "instructor": "TBA", "spots": 16 },
-      { "day": "Thursday", "time": "5:30 PM", "program": "hip-hop", "instructor": "TBA", "spots": 16 },
-      { "day": "Thursday", "time": "7:00 PM", "program": "performance-crew", "instructor": "TBA", "spots": 10 },
-      { "day": "Friday", "time": "4:00 PM", "program": "kids-movement", "instructor": "TBA", "spots": 12 },
-      { "day": "Friday", "time": "6:00 PM", "program": "street-dance", "instructor": "TBA", "spots": 16 },
-      { "day": "Saturday", "time": "9:00 AM", "program": "adult-beginners", "instructor": "TBA", "spots": 14 },
-      { "day": "Saturday", "time": "10:30 AM", "program": "hip-hop", "instructor": "TBA", "spots": 16 },
-      { "day": "Saturday", "time": "12:00 PM", "program": "performance-crew", "instructor": "TBA", "spots": 10 }
-    ]
-  },
-  "instructors": [
-    {
-      "id": "instructor-1",
-      "name": "TBA",
-      "role": "Founder & Head Instructor",
-      "specialties": ["Hip-Hop", "Street Dance"],
-      "bio": "Instructor bio coming soon.",
-      "image": "assets/images/instructor-1.jpg",
-      "social": { "instagram": "" }
-    }
-  ],
-  "pricing": {
-    "note": "All prices in AUD. Memberships auto-renew weekly. Cancel anytime.",
-    "currency": "AUD",
-    "plans": [
-      {
-        "id": "casual",
-        "name": "Casual Class",
-        "price": 25,
-        "per": "class",
-        "description": "Drop in whenever you like. No commitment required.",
-        "features": [
-          "Single class access",
-          "All programs available",
-          "Book online or at the door"
-        ],
-        "highlighted": false,
-        "cta": "Book Now"
-      },
-      {
-        "id": "weekly",
-        "name": "Weekly Membership",
-        "price": 55,
-        "per": "week",
-        "description": "Unlimited classes, every week. The best value for regular movers.",
-        "features": [
-          "Unlimited classes per week",
-          "All programs included",
-          "Priority booking",
-          "Member discounts on workshops"
-        ],
-        "highlighted": true,
-        "badge": "Most Popular",
-        "cta": "Start Moving"
-      },
-      {
-        "id": "term",
-        "name": "Term Pass",
-        "price": 180,
-        "per": "term (10 weeks)",
-        "description": "Commit to a term and save. Ideal for dedicated students.",
-        "features": [
-          "10-week access",
-          "Up to 2 classes per week",
-          "Locked-in pricing",
-          "Free trial class included"
-        ],
-        "highlighted": false,
-        "cta": "Get Term Pass"
-      },
-      {
-        "id": "kids",
-        "name": "Kids Term",
-        "price": 150,
-        "per": "term (10 weeks)",
-        "description": "Structured term program for kids aged 5–12.",
-        "features": [
-          "10-week kids program",
-          "1 class per week",
-          "End-of-term showcase",
-          "Progress reports"
-        ],
-        "highlighted": false,
-        "cta": "Enrol Now"
-      }
-    ],
-    "trialOffer": {
-      "enabled": true,
-      "label": "First Class Free",
-      "description": "New to UNDGRND? Your first class is on us. No strings attached.",
-      "cta": "Claim Free Class",
-      "href": "#booking"
-    }
-  },
-  "testimonials": [
-    {
-      "id": 1,
-      "name": "Sarah M.",
-      "suburb": "Burleigh Heads",
-      "program": "Adult Beginners",
-      "quote": "I was so nervous walking in for the first time. By the end of the class I was hooked. The instructors make you feel so welcome.",
-      "rating": 5
-    },
-    {
-      "id": 2,
-      "name": "Jake T.",
-      "suburb": "Robina",
-      "program": "Hip-Hop",
-      "quote": "Best dance studio on the Gold Coast, hands down. The vibe is unmatched and the teaching is next level.",
-      "rating": 5
-    },
-    {
-      "id": 3,
-      "name": "Mia L.",
-      "suburb": "Southport",
-      "program": "Kids Movement",
-      "quote": "My daughter absolutely loves it here. She's grown so much in confidence since joining UNDGRND.",
-      "rating": 5
-    },
-    {
-      "id": 4,
-      "name": "Chris B.",
-      "suburb": "Palm Beach",
-      "program": "Street Dance",
-      "quote": "Finally a studio that actually understands street culture. Real teaching, real community.",
-      "rating": 5
-    }
-  ],
-  "faq": [
-    {
-      "question": "Do I need experience to join?",
-      "answer": "Not at all! We have programs for complete beginners through to advanced dancers. Just show up and we'll take care of the rest."
-    },
-    {
-      "question": "What should I wear?",
-      "answer": "Comfortable clothes you can move in. Clean, non-marking sneakers are required on the studio floor."
-    },
-    {
-      "question": "How do I book a class?",
-      "answer": "You can book online through our booking system or contact us directly. We recommend booking in advance as classes fill up quickly."
-    },
-    {
-      "question": "Is there parking available?",
-      "answer": "Yes, there is parking available at our studio. Details will be provided upon booking confirmation."
-    },
-    {
-      "question": "Can I try before I commit?",
-      "answer": "Absolutely! Your first class is free. No membership required — just come in and see if UNDGRND is the right fit for you."
-    },
-    {
-      "question": "Do you offer private lessons?",
-      "answer": "Yes! We offer private and semi-private lessons for individuals and groups. Contact us to arrange a session."
-    }
-  ],
-  "contact": {
-    "headline": "Get In Touch",
-    "subheadline": "Questions, bookings, or just want to say hi — we'd love to hear from you.",
-    "formFields": [
-      { "name": "name", "label": "Your Name", "type": "text", "required": true },
-      { "name": "email", "label": "Email Address", "type": "email", "required": true },
-      { "name": "phone", "label": "Phone Number", "type": "tel", "required": false },
-      { "name": "program", "label": "Interested Program", "type": "select", "required": false, "options": ["Hip-Hop", "Street Dance", "Contemporary", "Kids Movement", "Adult Beginners", "Performance Crew", "Not sure yet"] },
-      { "name": "message", "label": "Message", "type": "textarea", "required": true }
-    ]
-  },
+  
   "seo": {
-    "defaultTitle": "UNDGRND Movement | Dance Studio Gold Coast",
-    "titleTemplate": "%s | UNDGRND Movement",
-    "defaultDescription": "Gold Coast's underground dance and movement studio. Hip-hop, street dance, contemporary, kids classes and more. Book your first class free.",
-    "keywords": ["dance studio gold coast", "hip hop dance gold coast", "street dance classes", "kids dance gold coast", "contemporary dance", "dance classes burleigh", "dance classes southport", "UNDGRND movement"],
-    "ogImage": "assets/images/undgrnd-logo.png"
+    "local_keywords": {
+      "primary": ["Gold Coast", "Southport"],
+      "secondary": ["Surfers Paradise", "Broadbeach", "Bundall", "Main Beach"],
+      "service_area": "Gold Coast and surrounding suburbs"
+    },
+    "target_keywords": [
+      "dance school gold coast",
+      "yoga studio southport",
+      "pole fitness gold coast",
+      "aerial classes southport",
+      "kids dance classes gold coast",
+      "beginner dance fitness gold coast",
+      "movement studio gold coast",
+      "recovery movement classes southport"
+    ]
   },
-  "meta": {
-    "version": "1.0.0",
-    "lastUpdated": "2026-03-22",
-    "configuredBy": "Manus AI",
-    "notes": "This file is the SINGLE SOURCE OF TRUTH for all website data. All components must read from this file. Never hardcode business details, program information, colors, or content."
+  
+  "design": {
+    "colors": {
+      "primary_purple": "#8B5CF6",
+      "accent_purple": "#A78BFA",
+      "pink_accent": "#EC4899",
+      "dark_bg": "#0A0A0A",
+      "card_bg": "#1A1A1A",
+      "text_white": "#FFFFFF",
+      "text_gray": "#A1A1A1",
+      "gradient_purple": "linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%)"
+    },
+    "fonts": {
+      "display": "Bebas Neue",
+      "body": "Outfit",
+      "weights": {
+        "light": 300,
+        "regular": 400,
+        "semibold": 600,
+        "bold": 700,
+        "extrabold": 800
+      }
+    },
+    "spacing": {
+      "section_padding": "8rem 5%",
+      "card_padding": "3rem 2rem",
+      "button_padding": "0.8rem 2rem"
+    },
+    "effects": {
+      "border_radius": "20px",
+      "card_border": "1px solid rgba(139, 92, 246, 0.2)",
+      "box_shadow": "0 20px 60px rgba(0, 0, 0, 0.5)",
+      "transition": "all 0.3s ease"
+    }
+  },
+  
+  "navigation": {
+    "main_menu": [
+      {"label": "Home", "href": "/"},
+      {"label": "Adults", "href": "/adults.html"},
+      {"label": "Kids", "href": "/kids.html"},
+      {"label": "Timetable", "href": "/timetable.html"},
+      {"label": "About", "href": "/about.html"},
+      {"label": "Contact", "href": "/contact.html"}
+    ],
+    "cta_button": {
+      "text": "Book Now",
+      "href": "/timetable.html"
+    }
+  },
+  
+  "programs": {
+    "adults": {
+      "dance": [
+        {
+          "id": "afro-groove",
+          "name": "Afro Groove Foundations",
+          "slug": "afro-groove-foundations",
+          "category": "Dance",
+          "level": "Beginner / Foundation",
+          "hero_program": true,
+          "short_description": "Beginner-friendly dance fitness inspired by Afrobeat and groove-based styles",
+          "full_description": "Afro Groove – Foundations is a beginner-friendly dance fitness class designed to improve rhythm, coordination, and full-body movement in a structured and supportive environment. Inspired by Afrobeat and groove-based styles, this class focuses on simple, repeatable movement patterns that build lower body strength, core stability, and overall mobility. Suitable for adults with no prior dance experience, sessions include guided warm-ups, easy-to-follow sequences, and controlled movement training to develop confidence and body awareness.",
+          "core_focus": [
+            "Hip mobility & control - improves flexibility + reduces stiffness",
+            "Rhythm and coordination development",
+            "Lower body strength and core stability",
+            "Body awareness and confidence building"
+          ],
+          "who_its_for": [
+            "Adults with no prior dance experience",
+            "Anyone looking to start dance fitness",
+            "Those wanting to improve coordination",
+            "People seeking fun, energetic workouts"
+          ],
+          "what_to_expect": [
+            "Guided warm-ups to prepare your body",
+            "Simple, repeatable movement patterns",
+            "Afrobeat-inspired grooves and rhythms",
+            "Supportive, non-competitive environment",
+            "Full-body workout with emphasis on lower body"
+          ],
+          "estimated_pricing": {
+            "drop_in": 25,
+            "class_pack_10": 200,
+            "unlimited_monthly": 180
+          }
+        },
+        {
+          "id": "movement-dance",
+          "name": "Movement Dance",
+          "slug": "movement-dance",
+          "category": "Dance",
+          "level": "Beginner / Foundation",
+          "hero_program": false,
+          "short_description": "Build body flow and confidence through expressive movement",
+          "core_focus": [
+            "Body flow and natural movement",
+            "Confidence building through expression",
+            "Creative movement exploration"
+          ],
+          "estimated_pricing": {
+            "drop_in": 25,
+            "class_pack_10": 200,
+            "unlimited_monthly": 180
+          }
+        },
+        {
+          "id": "recovery-movement",
+          "name": "Recovery Movement Dance",
+          "slug": "recovery-movement",
+          "category": "Dance",
+          "level": "Recovery / Medical Clearance Required",
+          "hero_program": false,
+          "medical_clearance_required": true,
+          "short_description": "Safe return to movement after injury, fatigue, or long inactivity",
+          "full_description": "Recovery Movement Dance is a specialized program designed for individuals recovering from injury, surgery, or physical and emotional stress. This class provides a safe, supportive environment for those returning to movement after extended periods of inactivity. Medical clearance is required before participation to ensure your safety and wellbeing.",
+          "core_focus": [
+            "Safe return to movement practices",
+            "Low-impact exercises and controlled transitions",
+            "Slow, mindful movement with controlled range of motion",
+            "Prevention of isolation through guided support"
+          ],
+          "medical_requirements": "Medical clearance from your healthcare provider is required before participating in this program. Please bring documentation to your first class.",
+          "estimated_pricing": {
+            "drop_in": 30,
+            "class_pack_8": 200
+          }
+        }
+      ],
+      "pole": [
+        {
+          "id": "pole-foundations",
+          "name": "Pole Fitness Foundations",
+          "slug": "pole-fitness-foundations",
+          "category": "Pole Fitness",
+          "level": "Beginner / Foundation",
+          "hero_program": false,
+          "short_description": "Learn how to use the pole safely with grip basics and simple spins",
+          "full_description": "Pole Fitness Foundations is designed for complete beginners who want to learn pole fitness in a safe, supportive environment. This class teaches you the fundamentals of pole work, including grip techniques, basic spins, and body positioning. No prior experience is necessary – just come ready to learn and have fun while building strength and coordination.",
+          "core_focus": [
+            "Grip basics and hand positioning",
+            "Walking around the pole with proper technique",
+            "Simple spins at low level",
+            "Body positioning and alignment",
+            "Safety protocols and control"
+          ],
+          "client_outcome": "I understand the pole and feel safe using it",
+          "what_to_expect": [
+            "Introduction to pole grip techniques",
+            "Learning to walk around the pole confidently",
+            "Basic low-level spins and transitions",
+            "Safety-first approach to every movement",
+            "Building foundational strength and control"
+          ],
+          "estimated_pricing": {
+            "drop_in": 28,
+            "class_pack_10": 220,
+            "unlimited_monthly": 200
+          }
+        },
+        {
+          "id": "pole-flow",
+          "name": "Pole Flow",
+          "slug": "pole-flow",
+          "category": "Pole Fitness",
+          "level": "Intermediate",
+          "hero_program": false,
+          "short_description": "Create smooth transitions and flowing movement around the pole",
+          "core_focus": [
+            "Flow between movements without stops",
+            "Smooth transitions and connectivity",
+            "Light floor transitions",
+            "Movement quality and grace"
+          ],
+          "client_outcome": "I can move around the pole smoothly and confidently",
+          "prerequisite": "Pole Fitness Foundations or instructor approval",
+          "estimated_pricing": {
+            "drop_in": 28,
+            "class_pack_10": 220,
+            "unlimited_monthly": 200
+          }
+        },
+        {
+          "id": "pole-strength",
+          "name": "Pole Strength & Movement",
+          "slug": "pole-strength-movement",
+          "category": "Pole Fitness",
+          "level": "Intermediate / Advanced",
+          "hero_program": false,
+          "short_description": "Build conditioning, holds, and controlled movement on the pole",
+          "core_focus": [
+            "Conditioning and strength building",
+            "Simple holds and static positions",
+            "Controlled movement techniques",
+            "Progressive skill development"
+          ],
+          "prerequisite": "Pole Fitness Foundations or instructor approval",
+          "estimated_pricing": {
+            "drop_in": 28,
+            "class_pack_10": 220,
+            "unlimited_monthly": 200
+          }
+        }
+      ],
+      "yoga": [
+        {
+          "id": "yoga-fusion",
+          "name": "Yoga Fusion",
+          "slug": "yoga-fusion",
+          "category": "Yoga",
+          "level": "All Levels",
+          "hero_program": false,
+          "short_description": "Modern fusion of traditional yoga with contemporary movement",
+          "estimated_pricing": {
+            "drop_in": 22,
+            "class_pack_10": 180,
+            "unlimited_monthly": 160
+          }
+        },
+        {
+          "id": "traditional-yoga",
+          "name": "Traditional Yoga",
+          "slug": "traditional-yoga",
+          "category": "Yoga",
+          "level": "All Levels",
+          "hero_program": false,
+          "short_description": "Classic yoga practices rooted in traditional techniques",
+          "estimated_pricing": {
+            "drop_in": 22,
+            "class_pack_10": 180,
+            "unlimited_monthly": 160
+          }
+        },
+        {
+          "id": "modern-yoga",
+          "name": "Modern Yoga",
+          "slug": "modern-yoga",
+          "category": "Yoga",
+          "level": "All Levels",
+          "hero_program": false,
+          "short_description": "Contemporary approach to yoga for today's lifestyle",
+          "estimated_pricing": {
+            "drop_in": 22,
+            "class_pack_10": 180,
+            "unlimited_monthly": 160
+          }
+        },
+        {
+          "id": "aerial-yoga",
+          "name": "Aerial Yoga",
+          "slug": "aerial-yoga",
+          "category": "Yoga",
+          "level": "Beginner / Foundation",
+          "hero_program": false,
+          "short_description": "Experience yoga suspended in silk hammocks",
+          "estimated_pricing": {
+            "drop_in": 30,
+            "class_pack_10": 250,
+            "unlimited_monthly": 220
+          }
+        }
+      ],
+      "aerial": [
+        {
+          "id": "aerial-silks",
+          "name": "Aerial Silks",
+          "slug": "aerial-silks",
+          "category": "Aerial",
+          "level": "Beginner / Foundation",
+          "hero_program": true,
+          "short_description": "Learn to dance and perform acrobatics on suspended fabric silks",
+          "full_description": "Aerial Silks is a beautiful and challenging form of aerial acrobatics where you learn to climb, wrap, and create stunning shapes using suspended fabric. This beginner-friendly class teaches you the fundamentals of aerial work in a safe, supportive environment. No prior experience is necessary – our instructors will guide you through each skill progression, helping you build strength, flexibility, and confidence as you learn to fly.",
+          "core_focus": [
+            "Climbing techniques and fabric manipulation",
+            "Basic wraps and foot locks",
+            "Body awareness and spatial orientation",
+            "Upper body and core strength development",
+            "Safe mounting, dismounting, and falling techniques",
+            "Flexibility and grace in aerial positions"
+          ],
+          "who_its_for": [
+            "Complete beginners curious about aerial arts",
+            "Adults looking for a unique fitness challenge",
+            "Those wanting to build upper body strength",
+            "Anyone seeking creative, artistic movement",
+            "People who want to overcome fear and build confidence"
+          ],
+          "what_to_expect": [
+            "Comprehensive warm-up and conditioning",
+            "Step-by-step instruction on silk techniques",
+            "Progressive skill building from ground work to aerial",
+            "Individual attention and spotting from instructors",
+            "Cool-down and stretching to prevent injury",
+            "A supportive community of fellow aerialists"
+          ],
+          "estimated_pricing": {
+            "drop_in": 32,
+            "class_pack_10": 280,
+            "unlimited_monthly": 240
+          }
+        }
+      ],
+      "choreography": [
+        {
+          "id": "choreography-fusion",
+          "name": "Choreography Fusion",
+          "slug": "choreography-fusion",
+          "category": "Choreography",
+          "level": "All Levels",
+          "hero_program": false,
+          "short_description": "Women's movement and confidence through choreographed dance",
+          "estimated_pricing": {
+            "drop_in": 25,
+            "class_pack_10": 200,
+            "unlimited_monthly": 180
+          }
+        }
+      ]
+    },
+    "kids": {
+      "yoga": [
+        {
+          "id": "kids-yoga",
+          "name": "Kids Yoga",
+          "slug": "kids-yoga",
+          "category": "Yoga",
+          "age_range": "6-16 years",
+          "short_description": "Fun, age-appropriate yoga for children",
+          "estimated_pricing": {
+            "drop_in": 18,
+            "term_8_weeks": 120
+          }
+        },
+        {
+          "id": "kids-aerial-yoga",
+          "name": "Kids Aerial Yoga",
+          "slug": "kids-aerial-yoga",
+          "category": "Yoga",
+          "age_range": "8-16 years",
+          "short_description": "Playful aerial yoga in hammocks for kids",
+          "estimated_pricing": {
+            "drop_in": 22,
+            "term_8_weeks": 150
+          }
+        }
+      ],
+      "pole": [
+        {
+          "id": "kids-pole-foundations",
+          "name": "Pole Fitness Kids - Foundations",
+          "slug": "kids-pole-foundations",
+          "category": "Pole Fitness",
+          "age_range": "8-16 years",
+          "short_description": "Gymnastics-style pole fitness for strength and coordination",
+          "note": "Taught in gymnastics style - focused on strength, coordination, and safety",
+          "estimated_pricing": {
+            "drop_in": 20,
+            "term_8_weeks": 140
+          }
+        }
+      ],
+      "aerial": [
+        {
+          "id": "kids-aerial-silks",
+          "name": "Kids Aerial Silks",
+          "slug": "kids-aerial-silks",
+          "category": "Aerial",
+          "age_range": "8-16 years",
+          "short_description": "Introduction to aerial arts on suspended silks",
+          "estimated_pricing": {
+            "drop_in": 22,
+            "term_8_weeks": 150
+          }
+        }
+      ],
+      "dance": [
+        {
+          "id": "kids-dance-moves",
+          "name": "Dance Moves (Urban Mix)",
+          "slug": "kids-dance-moves",
+          "category": "Dance",
+          "age_range": "6-16 years",
+          "short_description": "Hip hop and urban dance styles for kids",
+          "estimated_pricing": {
+            "drop_in": 18,
+            "term_8_weeks": 120
+          }
+        },
+        {
+          "id": "kids-modern-contemporary",
+          "name": "Modern Contemporary (Rhythm & Motion)",
+          "slug": "kids-modern-contemporary",
+          "category": "Dance",
+          "age_range": "8-16 years",
+          "short_description": "Expressive contemporary dance focusing on rhythm and movement quality",
+          "estimated_pricing": {
+            "drop_in": 18,
+            "term_8_weeks": 120
+          }
+        },
+        {
+          "id": "kids-creative-dance",
+          "name": "Creative Dance",
+          "slug": "kids-creative-dance",
+          "category": "Dance",
+          "age_range": "4-10 years",
+          "short_description": "Imaginative movement and dance exploration for younger children",
+          "estimated_pricing": {
+            "drop_in": 16,
+            "term_8_weeks": 100
+          }
+        }
+      ]
+    }
+  },
+  
+  "booking": {
+    "system": "Class Manager",
+    "integration_type": "iframe",
+    "timetable_url": "[PLACEHOLDER - INSERT CLASS MANAGER TIMETABLE EMBED URL]",
+    "booking_widget_url": "[PLACEHOLDER - INSERT CLASS MANAGER BOOKING WIDGET URL]",
+    "filtered_booking_urls": {
+      "adults": "[PLACEHOLDER]",
+      "kids": "[PLACEHOLDER]",
+      "dance": "[PLACEHOLDER]",
+      "pole": "[PLACEHOLDER]",
+      "yoga": "[PLACEHOLDER]",
+      "aerial": "[PLACEHOLDER]"
+    }
+  },
+  
+  "legal": {
+    "medical_disclaimer": "Medical clearance from your healthcare provider is required before participating in Recovery Movement classes. By booking this class, you confirm that you have obtained appropriate medical clearance and that your healthcare provider has approved your participation in physical movement activities.",
+    "general_disclaimer": "All classes at UNDGRND Movement are conducted by qualified instructors. Participants engage in physical activities at their own risk. Please inform your instructor of any injuries, medical conditions, or physical limitations before class. We recommend consulting with your healthcare provider before beginning any new exercise program.",
+    "liability_waiver": "By participating in classes at UNDGRND Movement, you acknowledge that physical activity involves inherent risks. You agree to follow all safety instructions provided by instructors and to practice within your own limits. UNDGRND Movement, its instructors, and staff are not liable for any injuries sustained during participation in classes or use of facilities.",
+    "privacy_policy_summary": "UNDGRND Movement collects personal information necessary for class bookings and communication. We comply with the Australian Privacy Principles under the Privacy Act 1988. Your information is stored securely and never shared with third parties without your consent.",
+    "covid_policy": "We maintain hygiene protocols in accordance with Queensland Health guidelines. Please do not attend class if you are unwell or experiencing COVID-19 symptoms."
+  },
+  
+  "philosophy": {
+    "mission": "UNDGRND Movement stands for foundational movement for body and mind. Not competition. Not performance pressure. Personal transformation only.",
+    "values": [
+      "Inclusive and beginner-friendly approach",
+      "Safe, supportive learning environment",
+      "Personal transformation over performance",
+      "Body and mind connection",
+      "Movement as healing and expression"
+    ],
+    "unique_approach": [
+      "Classes held in multiple environments: studio, park, beach, and specialized spaces",
+      "Focus on individual ability and health condition rather than age restrictions",
+      "Integration of recovery and rehabilitation principles",
+      "Trauma-informed movement practices",
+      "Collaborative programs with registered counsellors for deeper integration"
+    ]
+  },
+  
+  "instructor": {
+    "name": "Ollie",
+    "title": "Movement Practitioner & Performance Coach",
+    "bio_short": "Ollie is a certified movement practitioner specializing in foundational movement, recovery practices, and performance coaching. With qualifications in yoga instruction and trauma-informed movement, Ollie creates safe, inclusive spaces for personal transformation through dance, pole, aerial, and recovery movement.",
+    "qualifications": [
+      "Certified Yoga Instructor",
+      "Movement Practitioner",
+      "Performance Coach",
+      "Trauma-Informed Movement Specialist"
+    ],
+    "philosophy": "Movement is not tied to a room or a schedule. It's about creating space for your body to reconnect with itself – whether that's in the studio, at the beach, or in the park. Every body is welcome, every level is supported, and every journey is honored."
+  },
+  
+  "analytics": {
+    "google_analytics_id": "[PLACEHOLDER - ADD GA4 ID BEFORE LAUNCH]",
+    "facebook_pixel_id": "[PLACEHOLDER - OPTIONAL]",
+    "google_tag_manager_id": "[PLACEHOLDER - OPTIONAL]"
   }
 }

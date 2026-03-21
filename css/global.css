@@ -1,0 +1,749 @@
+/*
+ * UNDGRND Movement — Global Stylesheet
+ * Single source of truth: site-config.json
+ *
+ * All design tokens are sourced from site-config.json design.*
+ * Do not hardcode any values — update site-config.json and regenerate.
+ *
+ * Table of Contents:
+ *  1. CSS Variables (design tokens from site-config.json)
+ *  2. CSS Reset / Normalize
+ *  3. Base Typography
+ *  4. Layout Utilities
+ *  5. Component Utilities (.card, .cta-button, .cta-secondary, etc.)
+ *  6. Animation Keyframes
+ *  7. Responsive Breakpoints
+ */
+
+/* ==========================================================================
+   1. CSS VARIABLES
+   Source: site-config.json → design.colors, design.fonts, design.spacing, design.effects
+   ========================================================================== */
+
+:root {
+
+  /* --- Colors (site-config.json → design.colors) --- */
+  --color-primary-purple:   #8B5CF6;   /* design.colors.primary_purple  */
+  --color-accent-purple:    #A78BFA;   /* design.colors.accent_purple   */
+  --color-pink-accent:      #EC4899;   /* design.colors.pink_accent     */
+  --color-dark-bg:          #0A0A0A;   /* design.colors.dark_bg         */
+  --color-card-bg:          #1A1A1A;   /* design.colors.card_bg         */
+  --color-text-white:       #FFFFFF;   /* design.colors.text_white      */
+  --color-text-gray:        #A1A1A1;   /* design.colors.text_gray       */
+
+  /* Derived / composite color values */
+  --color-primary-purple-20: rgba(139, 92, 246, 0.2);   /* card border alpha */
+  --color-primary-purple-10: rgba(139, 92, 246, 0.1);   /* subtle bg tints  */
+  --color-primary-purple-30: rgba(139, 92, 246, 0.3);   /* hover states     */
+  --color-pink-accent-20:    rgba(236, 72, 153, 0.2);
+  --color-black-50:          rgba(0, 0, 0, 0.5);        /* box-shadow base  */
+
+  /* Gradient (site-config.json → design.colors.gradient_purple) */
+  --gradient-purple: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+
+  /* --- Fonts (site-config.json → design.fonts) --- */
+  --font-display: 'Bebas Neue', Impact, sans-serif;   /* design.fonts.display */
+  --font-body:    'Outfit', Helvetica Neue, sans-serif; /* design.fonts.body  */
+
+  /* Font weights (site-config.json → design.fonts.weights) */
+  --fw-light:     300;   /* design.fonts.weights.light     */
+  --fw-regular:   400;   /* design.fonts.weights.regular   */
+  --fw-semibold:  600;   /* design.fonts.weights.semibold  */
+  --fw-bold:      700;   /* design.fonts.weights.bold      */
+  --fw-extrabold: 800;   /* design.fonts.weights.extrabold */
+
+  /* --- Spacing (site-config.json → design.spacing) --- */
+  --spacing-section:  8rem 5%;    /* design.spacing.section_padding */
+  --spacing-card:     3rem 2rem;  /* design.spacing.card_padding    */
+  --spacing-button:   0.8rem 2rem; /* design.spacing.button_padding */
+
+  /* Spacing scale */
+  --space-xs:   0.5rem;
+  --space-sm:   1rem;
+  --space-md:   2rem;
+  --space-lg:   3rem;
+  --space-xl:   5rem;
+  --space-2xl:  8rem;
+
+  /* --- Effects (site-config.json → design.effects) --- */
+  --border-radius:  20px;                               /* design.effects.border_radius */
+  --card-border:    1px solid rgba(139, 92, 246, 0.2); /* design.effects.card_border   */
+  --box-shadow:     0 20px 60px rgba(0, 0, 0, 0.5);   /* design.effects.box_shadow    */
+  --transition:     all 0.3s ease;                     /* design.effects.transition    */
+
+  /* Additional derived effects */
+  --border-radius-sm:  8px;
+  --border-radius-md:  12px;
+  --border-radius-pill: 50px;
+  --box-shadow-sm:  0 4px 20px rgba(0, 0, 0, 0.3);
+  --box-shadow-lg:  0 30px 80px rgba(0, 0, 0, 0.6);
+  --box-shadow-glow: 0 0 30px rgba(139, 92, 246, 0.4);
+}
+
+
+/* ==========================================================================
+   2. CSS RESET / NORMALIZE
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-dark-bg);
+  color: var(--color-text-white);
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Remove default fieldset styles */
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent text overflow */
+p,
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+
+/* ==========================================================================
+   3. BASE TYPOGRAPHY
+   Fonts: site-config.json → design.fonts
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-regular); /* Bebas Neue is naturally bold */
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: var(--color-text-white);
+}
+
+/* Mobile-first type scale */
+h1 { font-size: clamp(2.5rem, 8vw, 5rem); }
+h2 { font-size: clamp(2rem,   6vw, 3.5rem); }
+h3 { font-size: clamp(1.5rem, 4vw, 2.25rem); }
+h4 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+h5 { font-size: clamp(1.1rem,  2.5vw, 1.4rem); }
+h6 { font-size: clamp(1rem,    2vw, 1.2rem); }
+
+p {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-gray);
+}
+
+p + p {
+  margin-top: 1rem;
+}
+
+strong {
+  font-weight: var(--fw-bold);
+  color: var(--color-text-white);
+}
+
+em {
+  font-style: italic;
+}
+
+a:hover {
+  color: var(--color-accent-purple);
+  transition: var(--transition);
+}
+
+small {
+  font-size: 0.875rem;
+  color: var(--color-text-gray);
+}
+
+label {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: 0.9rem;
+  color: var(--color-text-white);
+}
+
+/* Tablet type scale adjustments */
+@media (min-width: 768px) {
+  p {
+    font-size: 1.0625rem;
+  }
+}
+
+/* Desktop type scale adjustments */
+@media (min-width: 1024px) {
+  p {
+    font-size: 1.125rem;
+  }
+}
+
+
+/* ==========================================================================
+   4. LAYOUT UTILITIES
+   Spacing: site-config.json → design.spacing
+   ========================================================================== */
+
+/* .container — max-width 1400px, centered, 5% horizontal padding */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-inline: 5%;
+}
+
+/* .section-padding — site-config.json design.spacing.section_padding: "8rem 5%" */
+.section-padding {
+  padding: var(--spacing-section); /* 8rem 5% */
+}
+
+/* Reduced section padding on mobile */
+@media (max-width: 767px) {
+  .section-padding {
+    padding: 4rem 5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section-padding {
+    padding: 6rem 5%;
+  }
+}
+
+/* Grid helpers */
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Text alignment */
+.text-center { text-align: center; }
+.text-left   { text-align: left; }
+.text-right  { text-align: right; }
+
+/* Visibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+/* ==========================================================================
+   5. COMPONENT UTILITIES
+   ========================================================================== */
+
+/* --- .gradient-text ---
+   Source: site-config.json → design.colors.gradient_purple
+   linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%)
+   ---------------------------------------------------------------- */
+.gradient-text {
+  background: var(--gradient-purple);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+
+/* --- .card ---
+   Source: site-config.json → design.colors.card_bg, design.effects.card_border, design.effects.border_radius
+   ---------------------------------------------------------------- */
+.card {
+  background-color: var(--color-card-bg);   /* #1A1A1A */
+  border: var(--card-border);               /* 1px solid rgba(139,92,246,0.2) */
+  border-radius: var(--border-radius);      /* 20px */
+  padding: var(--spacing-card);             /* 3rem 2rem */
+  transition: var(--transition);
+}
+
+.card:hover {
+  border-color: var(--color-primary-purple-30);
+  box-shadow: var(--box-shadow-glow);
+  transform: translateY(-4px);
+}
+
+
+/* --- .cta-button ---
+   Source: site-config.json → design.colors.gradient_purple, design.spacing.button_padding
+   Gradient background, 50px border-radius, hover lift effect
+   ---------------------------------------------------------------- */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: var(--spacing-button);           /* 0.8rem 2rem */
+  background: var(--gradient-purple);       /* linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%) */
+  color: var(--color-text-white);
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: var(--border-radius-pill); /* 50px */
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #A78BFA 0%, #F472B6 100%);
+  opacity: 0;
+  transition: var(--transition);
+  border-radius: inherit;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.5);
+  color: var(--color-text-white);
+}
+
+.cta-button:hover::before {
+  opacity: 1;
+}
+
+.cta-button:active {
+  transform: translateY(-1px);
+}
+
+.cta-button span {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* --- .cta-secondary ---
+   Transparent with purple border; fills with gradient on hover
+   ---------------------------------------------------------------- */
+.cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: var(--spacing-button);           /* 0.8rem 2rem */
+  background: transparent;
+  color: var(--color-text-white);
+  font-family: var(--font-body);
+  font-weight: var(--fw-bold);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: var(--border-radius-pill); /* 50px */
+  border: 2px solid var(--color-primary-purple);
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.cta-secondary:hover {
+  background: var(--gradient-purple);
+  border-color: transparent;
+  color: var(--color-text-white);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+}
+
+.cta-secondary:active {
+  transform: translateY(-1px);
+}
+
+
+/* --- Category / Tag badge --- */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.85rem;
+  background: var(--color-primary-purple-10);
+  color: var(--color-accent-purple);
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--border-radius-pill);
+  border: 1px solid var(--color-primary-purple-20);
+}
+
+
+/* --- Section label (small uppercase label above headings) --- */
+.section-label {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent-purple);
+  margin-bottom: 1rem;
+}
+
+
+/* --- Divider --- */
+.divider {
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-purple);
+  border: none;
+  border-radius: 2px;
+  margin: 1.5rem auto;
+}
+
+.divider--left {
+  margin-left: 0;
+}
+
+
+/* --- Form elements --- */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 0.9rem 1.25rem;
+  background: var(--color-card-bg);
+  border: var(--card-border);
+  border-radius: var(--border-radius-md);
+  color: var(--color-text-white);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: var(--color-primary-purple);
+  box-shadow: 0 0 0 3px var(--color-primary-purple-10);
+  outline: none;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--color-text-gray);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+
+/* ==========================================================================
+   6. ANIMATION KEYFRAMES
+   ========================================================================== */
+
+/* fadeInUp — opacity 0→1, translateY 30px→0 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* pulse — subtle opacity animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* slideIn — horizontal slide from left */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Glow pulse for decorative elements */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(139, 92, 246, 0.7);
+  }
+}
+
+/* Gradient shift for backgrounds */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Float — subtle vertical float for hero elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Animation utility classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.6s ease forwards;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Scroll-triggered animation base state */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delay utilities */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+
+/* ==========================================================================
+   7. RESPONSIVE BREAKPOINTS
+   Mobile-first approach
+   ========================================================================== */
+
+/*
+ * Breakpoints:
+ *   Mobile:  max-width 767px    (default — mobile-first base styles above)
+ *   Tablet:  768px – 1023px
+ *   Desktop: 1024px+
+ */
+
+/* --- Tablet (768px – 1023px) --- */
+@media (min-width: 768px) {
+
+  .container {
+    padding-inline: 5%;
+  }
+
+  /* Two-column grid helper */
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Card padding increase on tablet */
+  .card {
+    padding: 2.5rem;
+  }
+
+  /* Button size increase */
+  .cta-button,
+  .cta-secondary {
+    font-size: 1.05rem;
+    padding: 1rem 2.5rem;
+  }
+}
+
+
+/* --- Desktop (1024px+) --- */
+@media (min-width: 1024px) {
+
+  .container {
+    padding-inline: 5%;
+  }
+
+  /* Three-column grid helper */
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Four-column grid helper */
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Card padding on desktop */
+  .card {
+    padding: var(--spacing-card); /* 3rem 2rem */
+  }
+
+  /* Button size on desktop */
+  .cta-button,
+  .cta-secondary {
+    font-size: 1.1rem;
+    padding: 1rem 2.75rem;
+  }
+}
+
+
+/* --- Large Desktop (1400px+) --- */
+@media (min-width: 1400px) {
+
+  .container {
+    padding-inline: 0;
+  }
+}
+
+
+/* --- Mobile only (max-width 767px) --- */
+@media (max-width: 767px) {
+
+  /* Stack grids to single column on mobile */
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Reduce card padding on mobile */
+  .card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  /* Full-width buttons on mobile */
+  .cta-button--full,
+  .cta-secondary--full {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* ==========================================================================
+   End of global.css
+   UNDGRND Movement — site-config.json v1.0
+   ========================================================================== */

@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title & Meta Description -->
+  <title>Aerial Silks Classes Gold Coast | Beginner Aerial Arts | UNDGRND Movement Southport</title>
+  <meta name="description" content="Learn aerial silks in a safe, progressive environment at UNDGRND Movement, Southport. Learn aerial silks from expert instructors on the Gold Coast.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.undrgrnd.com.au/programs/aerial-silks.html">
+
+  <!-- Favicon placeholders -->
+  <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="/css/global.css">
+
+  <!-- Schema Generator -->
+  <script src="/js/schema-generator.js"></script>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.undrgrnd.com.au/programs/aerial-silks.html">
+  <meta property="og:title" content="Aerial Silks Classes Gold Coast | Beginner Aerial Arts | UNDGRND Movement">
+  <meta property="og:description" content="Beginner aerial silks classes at UNDGRND Movement Southport. Safe, progressive aerial arts training on the Gold Coast.">
+
+  <!-- Page-specific styles -->
+  <style>
+    /* -----------------------------------------------------------------------
+       HERO
+    ----------------------------------------------------------------------- */
+    .prog-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: #0A0A0A;
+    }
+
+    .prog-hero__bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.75) 60%, rgba(10,10,10,0.97) 100%),
+        radial-gradient(ellipse 80% 70% at 65% 40%, rgba(139, 92, 246, 0.22) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 50% at 20% 80%, rgba(236, 72, 153, 0.14) 0%, transparent 55%);
+    }
+
+    .prog-hero__img-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      z-index: 0;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(236, 72, 153, 0.08) 100%);
+    }
+
+    .prog-hero__img-placeholder svg {
+      width: 64px;
+      height: 64px;
+      stroke: rgba(139, 92, 246, 0.35);
+      fill: none;
+      stroke-width: 1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .prog-hero__img-placeholder p {
+      font-size: 0.78rem;
+      color: rgba(161, 161, 161, 0.4);
+      max-width: 340px;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .prog-hero__content {
+      position: relative;
+      z-index: 1;
+      max-width: 1400px;
+      margin-inline: auto;
+      padding: 0 5% 5rem;
+      width: 100%;
+    }
+
+    .prog-hero__level {
+      display: inline-block;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 50px;
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      color: #A78BFA;
+      margin-bottom: 1rem;
+    }
+
+    .prog-hero__h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      line-height: 0.95;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin: 0 0 1.25rem;
+      max-width: 900px;
+    }
+
+    .prog-hero__location {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #A1A1A1;
+      margin-bottom: 2rem;
+    }
+
+    .prog-hero__location svg {
+      width: 15px;
+      height: 15px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .prog-hero__ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* -----------------------------------------------------------------------
+       STICKY BOOK NOW
+    ----------------------------------------------------------------------- */
+    .sticky-book {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 900;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .sticky-book.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .sticky-book a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      text-decoration: none;
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      padding: 0.85rem 1.5rem;
+      border-radius: 50px;
+      box-shadow: 0 8px 30px rgba(139, 92, 246, 0.45);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .sticky-book a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(139, 92, 246, 0.6);
+    }
+
+    .sticky-book a svg {
+      width: 16px;
+      height: 16px;
+      stroke: #FFFFFF;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* -----------------------------------------------------------------------
+       PROGRAM OVERVIEW
+    ----------------------------------------------------------------------- */
+    .overview-section {
+      padding: 8rem 5%;
+      background: #0A0A0A;
+    }
+
+    .overview-section__inner {
+      max-width: 1400px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    @media (min-width: 1024px) {
+      .overview-section__inner {
+        grid-template-columns: 1fr 380px;
+        gap: 5rem;
+        align-items: start;
+      }
+    }
+
+    .overview-section__eyebrow {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #A78BFA;
+      margin-bottom: 0.75rem;
+    }
+
+    .overview-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 1.5rem;
+    }
+
+    .overview-section__desc {
+      font-size: 1.05rem;
+      color: #A1A1A1;
+      line-height: 1.8;
+    }
+
+    /* Quick Info Box */
+    .info-box {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      padding: 2rem;
+      position: sticky;
+      top: 100px;
+    }
+
+    .info-box__title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+    }
+
+    .info-box__rows {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-box__row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .info-box__row-icon {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      background: rgba(139, 92, 246, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .info-box__row-icon svg {
+      width: 15px;
+      height: 15px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .info-box__row-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #A1A1A1;
+      line-height: 1;
+      margin-bottom: 0.2rem;
+    }
+
+    .info-box__row-value {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      line-height: 1.3;
+    }
+
+    .info-box__divider {
+      height: 1px;
+      background: rgba(139, 92, 246, 0.12);
+      margin: 1rem 0;
+    }
+
+    .info-box__pricing-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #A78BFA;
+      margin-bottom: 0.75rem;
+    }
+
+    .info-box__price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .info-box__price-row:last-child { border-bottom: none; }
+
+    .info-box__price-label {
+      font-size: 0.88rem;
+      color: #A1A1A1;
+    }
+
+    .info-box__price-amount {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #A78BFA;
+    }
+
+    .info-box__note {
+      font-size: 0.75rem;
+      color: rgba(161, 161, 161, 0.6);
+      margin-top: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .info-box__cta {
+      margin-top: 1.5rem;
+    }
+
+    .info-box__cta a {
+      display: block;
+      text-align: center;
+    }
+
+    /* -----------------------------------------------------------------------
+       CORE FOCUS
+    ----------------------------------------------------------------------- */
+    .focus-section {
+      padding: 8rem 5%;
+      background: #0D0D0D;
+    }
+
+    .focus-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .focus-grid {
+      max-width: 1400px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) { .focus-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .focus-grid { grid-template-columns: repeat(4, 1fr); } }
+
+    .focus-card {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      padding: 2rem 1.75rem;
+      transition: all 0.3s ease;
+    }
+
+    .focus-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(139, 92, 246, 0.45);
+      box-shadow: 0 15px 40px rgba(139, 92, 246, 0.12);
+    }
+
+    .focus-card__icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.1));
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .focus-card__icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .focus-card__text {
+      font-size: 0.95rem;
+      color: #FFFFFF;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .focus-card__sub {
+      font-size: 0.82rem;
+      color: #A1A1A1;
+      margin-top: 0.4rem;
+      line-height: 1.5;
+    }
+
+    /* -----------------------------------------------------------------------
+       WHO IT'S FOR
+    ----------------------------------------------------------------------- */
+    .who-section {
+      padding: 8rem 5%;
+      background: #0A0A0A;
+    }
+
+    .who-section__inner {
+      max-width: 1400px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    @media (min-width: 1024px) {
+      .who-section__inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: start;
+      }
+    }
+
+    .who-section h2 { margin-bottom: 1.5rem; }
+
+    .who-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .who-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      font-size: 1rem;
+      color: #A1A1A1;
+      line-height: 1.5;
+    }
+
+    .who-list li svg {
+      width: 18px;
+      height: 18px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* -----------------------------------------------------------------------
+       WHAT TO EXPECT — timeline
+    ----------------------------------------------------------------------- */
+    .expect-section {
+      padding: 8rem 5%;
+      background: #0D0D0D;
+    }
+
+    .expect-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .expect-timeline {
+      max-width: 800px;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .expect-step {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .expect-step__left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .expect-step__num {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      color: #FFFFFF;
+      flex-shrink: 0;
+    }
+
+    .expect-step__line {
+      width: 2px;
+      flex: 1;
+      background: rgba(139, 92, 246, 0.15);
+      margin: 4px 0;
+      min-height: 30px;
+    }
+
+    .expect-step:last-child .expect-step__line { display: none; }
+
+    .expect-step__content {
+      padding-bottom: 2.5rem;
+      padding-top: 0.5rem;
+    }
+
+    .expect-step__title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 0.35rem;
+    }
+
+    .expect-step__desc {
+      font-size: 0.9rem;
+      color: #A1A1A1;
+      line-height: 1.6;
+    }
+
+    /* -----------------------------------------------------------------------
+       SAFETY CALLOUT BOX
+    ----------------------------------------------------------------------- */
+    .safety-section {
+      padding: 6rem 5%;
+      background: #0A0A0A;
+    }
+
+    .safety-box {
+      max-width: 900px;
+      margin-inline: auto;
+      background: linear-gradient(135deg, rgba(234, 179, 8, 0.08) 0%, rgba(234, 179, 8, 0.04) 100%);
+      border: 1px solid rgba(234, 179, 8, 0.25);
+      border-left: 4px solid rgba(234, 179, 8, 0.6);
+      border-radius: 16px;
+      padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+    }
+
+    .safety-box__header {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .safety-box__icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(234, 179, 8, 0.12);
+      border: 1px solid rgba(234, 179, 8, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .safety-box__icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: #EAB308;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .safety-box__heading {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+      color: #FDE68A;
+    }
+
+    .safety-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .safety-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      font-size: 0.95rem;
+      color: #D1D5DB;
+      line-height: 1.5;
+    }
+
+    .safety-list li svg {
+      width: 18px;
+      height: 18px;
+      stroke: #EAB308;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* -----------------------------------------------------------------------
+       PRICING
+    ----------------------------------------------------------------------- */
+    .pricing-section {
+      padding: 8rem 5%;
+      background: #0D0D0D;
+    }
+
+    .pricing-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .pricing-grid {
+      max-width: 1000px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .pricing-card {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: all 0.35s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(139, 92, 246, 0.5);
+      box-shadow: 0 20px 50px rgba(139, 92, 246, 0.18);
+    }
+
+    .pricing-card--featured {
+      border-color: rgba(139, 92, 246, 0.5);
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(236, 72, 153, 0.05));
+      position: relative;
+    }
+
+    .pricing-card--featured::before {
+      content: 'Best Value';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      padding: 0.25rem 0.9rem;
+      border-radius: 50px;
+      white-space: nowrap;
+    }
+
+    .pricing-card__label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #A78BFA;
+    }
+
+    .pricing-card__price {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.5rem;
+      line-height: 1;
+      color: #FFFFFF;
+    }
+
+    .pricing-card__price sup {
+      font-size: 1.5rem;
+      vertical-align: super;
+      line-height: 0;
+    }
+
+    .pricing-card__period {
+      font-size: 0.85rem;
+      color: #A1A1A1;
+    }
+
+    .pricing-card__tagline {
+      font-size: 0.9rem;
+      color: #A1A1A1;
+      font-style: italic;
+    }
+
+    .pricing-card__cta {
+      margin-top: 0.5rem;
+      width: 100%;
+    }
+
+    /* -----------------------------------------------------------------------
+       FAQ ACCORDION
+    ----------------------------------------------------------------------- */
+    .faq-section {
+      padding: 8rem 5%;
+      background: #0A0A0A;
+    }
+
+    .faq-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 3rem;
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .faq-item {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.3s ease;
+    }
+
+    .faq-item.open { border-color: rgba(139, 92, 246, 0.45); }
+
+    .faq-item__question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .faq-item__question-text {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      line-height: 1.4;
+    }
+
+    .faq-item__icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item.open .faq-item__icon {
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      border-color: transparent;
+      transform: rotate(45deg);
+    }
+
+    .faq-item__icon svg {
+      width: 14px;
+      height: 14px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.3s ease;
+    }
+
+    .faq-item.open .faq-item__icon svg { stroke: #FFFFFF; }
+
+    .faq-item__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    .faq-item.open .faq-item__answer { max-height: 400px; }
+
+    .faq-item__answer-inner {
+      padding: 0 1.75rem 1.5rem;
+      font-size: 0.93rem;
+      color: #A1A1A1;
+      line-height: 1.7;
+    }
+
+    /* -----------------------------------------------------------------------
+       RELATED PROGRAMS
+    ----------------------------------------------------------------------- */
+    .related-section {
+      padding: 8rem 5%;
+      background: #0D0D0D;
+    }
+
+    .related-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .related-grid {
+      max-width: 1000px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    .related-card {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .related-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(139, 92, 246, 0.45);
+      box-shadow: 0 15px 40px rgba(139, 92, 246, 0.12);
+    }
+
+    .related-card__img {
+      height: 160px;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.1));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .related-card__img svg {
+      width: 36px;
+      height: 36px;
+      stroke: rgba(139, 92, 246, 0.5);
+      fill: none;
+      stroke-width: 1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .related-card__body { padding: 1.5rem; }
+
+    .related-card__name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.35rem;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
+    }
+
+    .related-card__desc {
+      font-size: 0.88rem;
+      color: #A1A1A1;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    /* -----------------------------------------------------------------------
+       SEO CONTENT
+    ----------------------------------------------------------------------- */
+    .seo-section {
+      padding: 8rem 5%;
+      background: #0A0A0A;
+    }
+
+    .seo-section__inner {
+      max-width: 900px;
+      margin-inline: auto;
+    }
+
+    .seo-section h2 { margin-bottom: 2rem; }
+
+    .seo-section h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.55rem;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin: 2.5rem 0 1rem;
+    }
+
+    .seo-section p {
+      font-size: 1rem;
+      color: #A1A1A1;
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+
+    .seo-section strong { color: #FFFFFF; font-weight: 600; }
+
+    /* -----------------------------------------------------------------------
+       CTA SECTION
+    ----------------------------------------------------------------------- */
+    .cta-section {
+      padding: 8rem 5%;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(236, 72, 153, 0.08) 100%);
+      border-top: 1px solid rgba(139, 92, 246, 0.15);
+    }
+
+    .cta-section__inner {
+      max-width: 700px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 1.25rem;
+    }
+
+    .cta-section__sub {
+      font-size: 1rem;
+      color: #A1A1A1;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .cta-section__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    /* -----------------------------------------------------------------------
+       SCROLL ANIMATIONS
+    ----------------------------------------------------------------------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.08s; }
+    .reveal-delay-2 { transition-delay: 0.16s; }
+    .reveal-delay-3 { transition-delay: 0.24s; }
+    .reveal-delay-4 { transition-delay: 0.32s; }
+  </style>
+</head>
+
+<body>
+
+<!-- =========================================================================
+     NAVIGATION — copy contents of /components/nav-component.html here
+     ========================================================================= -->
+
+
+<!-- =========================================================================
+     STICKY BOOK NOW
+     ========================================================================= -->
+<div class="sticky-book" id="stickyBook" aria-hidden="true">
+  <a href="/timetable.html?filter=aerial" tabindex="-1">
+    <!-- Lucide: calendar -->
+    <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+    Book Now
+  </a>
+</div>
+
+
+<!-- =========================================================================
+     1. HERO SECTION
+     ========================================================================= -->
+<section class="prog-hero" aria-label="Aerial Silks — UNDGRND Movement">
+
+  <div class="prog-hero__img-placeholder" aria-hidden="true">
+    <!-- Lucide: wind -->
+    <svg viewBox="0 0 24 24"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg>
+    <p>AI-generated: Graceful flexible woman suspended on aerial silks, beautiful wrap position, strength and elegance, purple dramatic lighting</p>
+  </div>
+
+  <div class="prog-hero__bg" aria-hidden="true"></div>
+
+  <div class="prog-hero__content">
+    <span class="prog-hero__level" id="heroLevel">All Levels — Beginner Friendly</span>
+
+    <h1 class="prog-hero__h1">Aerial Silks | Aerial Arts Classes Gold Coast</h1>
+
+    <p class="prog-hero__location">
+      <!-- Lucide: map-pin -->
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+      Southport Studio | 163 Ferry Rd
+    </p>
+
+    <div class="prog-hero__ctas">
+      <a href="/timetable.html?filter=aerial" class="cta-button">Book This Class</a>
+      <a href="/timetable.html" class="cta-secondary">View Timetable</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     2. PROGRAM OVERVIEW
+     ========================================================================= -->
+<section class="overview-section reveal" aria-labelledby="overviewHeading">
+  <div class="overview-section__inner">
+
+    <div>
+      <p class="overview-section__eyebrow">About This Program</p>
+      <h2 id="overviewHeading">Aerial Silks</h2>
+      <p class="overview-section__desc" id="programDesc">
+        Aerial Silks is a strength and flexibility discipline performed on suspended fabric. Students learn to climb, wrap, and perform controlled movements using two lengths of fabric hung from a rigging point. Classes focus on safe technique, progressive skill-building, and body conditioning. Suitable for beginners with no prior aerial experience — all equipment is provided and classes are structured to build confidence and strength from the ground up.
+      </p>
+    </div>
+
+    <aside class="info-box" aria-label="Quick program information">
+      <h3 class="info-box__title">Quick Info</h3>
+
+      <div class="info-box__rows" id="infoBoxRows">
+        <div class="info-box__row">
+          <div class="info-box__row-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          </div>
+          <div>
+            <p class="info-box__row-label">Level</p>
+            <p class="info-box__row-value" id="infoLevel">All Levels — Beginner Friendly</p>
+          </div>
+        </div>
+        <div class="info-box__row">
+          <div class="info-box__row-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          </div>
+          <div>
+            <p class="info-box__row-label">Category</p>
+            <p class="info-box__row-value" id="infoCategory">Aerial</p>
+          </div>
+        </div>
+        <div class="info-box__row">
+          <div class="info-box__row-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <div>
+            <p class="info-box__row-label">Duration</p>
+            <p class="info-box__row-value">60 minutes</p>
+          </div>
+        </div>
+        <div class="info-box__row">
+          <div class="info-box__row-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <div>
+            <p class="info-box__row-label">Class Size</p>
+            <p class="info-box__row-value">Max 10 students</p>
+          </div>
+        </div>
+        <div class="info-box__row">
+          <div class="info-box__row-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          </div>
+          <div>
+            <p class="info-box__row-label">What to Bring</p>
+            <p class="info-box__row-value">Form-fitting clothing covering torso and legs, no zippers or jewellery</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-box__divider"></div>
+
+      <p class="info-box__pricing-title">Pricing</p>
+      <div>
+        <div class="info-box__price-row">
+          <span class="info-box__price-label">Drop-In</span>
+          <span class="info-box__price-amount" id="priceDropIn">$32</span>
+        </div>
+        <div class="info-box__price-row">
+          <span class="info-box__price-label">10 Class Pack</span>
+          <span class="info-box__price-amount" id="pricePack">$280</span>
+        </div>
+        <div class="info-box__price-row">
+          <span class="info-box__price-label">Unlimited Monthly</span>
+          <span class="info-box__price-amount" id="priceMonthly">$240</span>
+        </div>
+      </div>
+      <p class="info-box__note">Prices are estimates. See full pricing when booking.</p>
+
+      <div class="info-box__cta">
+        <a href="/timetable.html?filter=aerial" class="cta-button">Book This Class</a>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     3. CORE FOCUS
+     ========================================================================= -->
+<section class="focus-section reveal" aria-labelledby="focusHeading">
+  <div class="focus-section__header">
+    <span class="section-label">What You'll Learn</span>
+    <h2 id="focusHeading">What You'll Learn</h2>
+  </div>
+
+  <div class="focus-grid" id="focusGrid">
+    <div class="focus-card reveal reveal-delay-1">
+      <div class="focus-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+      </div>
+      <p class="focus-card__text">Climbing and footlock technique</p>
+      <p class="focus-card__sub">Safe, progressive ascent from the ground up</p>
+    </div>
+    <div class="focus-card reveal reveal-delay-2">
+      <div class="focus-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+      </div>
+      <p class="focus-card__text">Wraps and basic poses</p>
+      <p class="focus-card__sub">Foundational positions that build confidence</p>
+    </div>
+    <div class="focus-card reveal reveal-delay-3">
+      <div class="focus-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+      </div>
+      <p class="focus-card__text">Upper body and core strength</p>
+      <p class="focus-card__sub">Build functional strength through movement</p>
+    </div>
+    <div class="focus-card reveal reveal-delay-4">
+      <div class="focus-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      </div>
+      <p class="focus-card__text">Controlled descents and safety</p>
+      <p class="focus-card__sub">You are always in control of your movement</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     4. WHO IT'S FOR
+     ========================================================================= -->
+<section class="who-section reveal" aria-labelledby="whoHeading">
+  <div class="who-section__inner">
+
+    <div>
+      <span class="section-label">Is This Class For You?</span>
+      <h2 id="whoHeading">Is Aerial Silks Right For You?</h2>
+      <ul class="who-list" id="whoList">
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Complete beginners with no aerial experience
+        </li>
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Adults wanting to build upper body and core strength
+        </li>
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Anyone curious about aerial arts on the Gold Coast
+        </li>
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Those seeking a unique, artistic fitness challenge
+        </li>
+      </ul>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+      <div class="card" style="padding: 2rem; text-align: center;">
+        <p style="font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: #8B5CF6; line-height: 1; margin-bottom: 0.25rem;">0</p>
+        <p style="font-size: 0.85rem; color: #A1A1A1; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;">Experience Required</p>
+      </div>
+      <div class="card" style="padding: 2rem; text-align: center;">
+        <p style="font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: #EC4899; line-height: 1; margin-bottom: 0.25rem;">10</p>
+        <p style="font-size: 0.85rem; color: #A1A1A1; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;">Max Class Size</p>
+      </div>
+      <div class="card" style="padding: 2rem; text-align: center;">
+        <p style="font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: #A78BFA; line-height: 1; margin-bottom: 0.25rem;">100%</p>
+        <p style="font-size: 0.85rem; color: #A1A1A1; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;">Safety First</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     5. WHAT TO EXPECT — timeline
+     ========================================================================= -->
+<section class="expect-section reveal" aria-labelledby="expectHeading">
+  <div class="expect-section__header">
+    <span class="section-label">First Class</span>
+    <h2 id="expectHeading">Your First Aerial Silks Class</h2>
+  </div>
+
+  <div class="expect-timeline" id="expectTimeline">
+    <div class="expect-step">
+      <div class="expect-step__left">
+        <div class="expect-step__num">1</div>
+        <div class="expect-step__line"></div>
+      </div>
+      <div class="expect-step__content">
+        <p class="expect-step__title">Safety briefing and equipment introduction</p>
+        <p class="expect-step__desc">We begin every first class with a thorough safety briefing and an introduction to the silks and rigging.</p>
+      </div>
+    </div>
+    <div class="expect-step">
+      <div class="expect-step__left">
+        <div class="expect-step__num">2</div>
+        <div class="expect-step__line"></div>
+      </div>
+      <div class="expect-step__content">
+        <p class="expect-step__title">Warm-up and body conditioning</p>
+        <p class="expect-step__desc">A structured warm-up prepares your muscles and joints for the demands of aerial work.</p>
+      </div>
+    </div>
+    <div class="expect-step">
+      <div class="expect-step__left">
+        <div class="expect-step__num">3</div>
+        <div class="expect-step__line"></div>
+      </div>
+      <div class="expect-step__content">
+        <p class="expect-step__title">Ground-level footlocks and wraps</p>
+        <p class="expect-step__desc">All beginners start close to the ground, learning footlocks and basic wraps before any climbing.</p>
+      </div>
+    </div>
+    <div class="expect-step">
+      <div class="expect-step__left">
+        <div class="expect-step__num">4</div>
+        <div class="expect-step__line"></div>
+      </div>
+      <div class="expect-step__content">
+        <p class="expect-step__title">Guided first climb at your own pace</p>
+        <p class="expect-step__desc">When you are ready, your instructor will guide your first climb — you control the height and pace.</p>
+      </div>
+    </div>
+    <div class="expect-step">
+      <div class="expect-step__left">
+        <div class="expect-step__num">5</div>
+        <div class="expect-step__line"></div>
+      </div>
+      <div class="expect-step__content">
+        <p class="expect-step__title">Controlled descent and cool-down</p>
+        <p class="expect-step__desc">Learn safe, controlled descents and finish with a cool-down to aid recovery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     6. SAFETY CALLOUT BOX
+     ========================================================================= -->
+<section class="safety-section reveal" aria-labelledby="safetyHeading">
+  <div class="safety-box">
+    <div class="safety-box__header">
+      <div class="safety-box__icon" aria-hidden="true">
+        <!-- Lucide: shield -->
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      </div>
+      <h2 class="safety-box__heading" id="safetyHeading">Your Safety is Our Priority</h2>
+    </div>
+    <ul class="safety-list">
+      <li>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        All equipment professionally rigged and inspected regularly
+      </li>
+      <li>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        Crash mats provided under all aerial apparatus
+      </li>
+      <li>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        Instructors are experienced, certified aerialists
+      </li>
+      <li>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        Progressive skill-building — we start from the ground
+      </li>
+      <li>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        You control your own pace and height at all times
+      </li>
+      <li>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        No dropping or falling — you learn controlled descents
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     7. PRICING
+     ========================================================================= -->
+<section class="pricing-section reveal" aria-labelledby="pricingHeading">
+  <div class="pricing-section__header">
+    <span class="section-label">Pricing</span>
+    <h2 id="pricingHeading">Flexible Pricing Options</h2>
+    <p style="color: #A1A1A1; font-size: 0.95rem; margin-top: 0.75rem;">All prices are estimates. Final pricing confirmed at booking.</p>
+  </div>
+
+  <div class="pricing-grid">
+
+    <div class="pricing-card reveal reveal-delay-1">
+      <p class="pricing-card__label">Drop-In</p>
+      <p class="pricing-card__price"><sup>$</sup><span id="pricingDropIn">32</span></p>
+      <p class="pricing-card__period">per class</p>
+      <p class="pricing-card__tagline">"Try it out"</p>
+      <div class="pricing-card__cta">
+        <a href="/timetable.html?filter=aerial" class="cta-secondary" style="display: block; text-align: center;">Book a Class</a>
+      </div>
+    </div>
+
+    <div class="pricing-card pricing-card--featured reveal reveal-delay-2">
+      <p class="pricing-card__label">Class Pack</p>
+      <p class="pricing-card__price"><sup>$</sup><span id="pricingPack">280</span></p>
+      <p class="pricing-card__period">for 10 classes</p>
+      <p class="pricing-card__tagline">"Best value"</p>
+      <div class="pricing-card__cta">
+        <a href="/timetable.html?filter=aerial" class="cta-button" style="display: block; text-align: center;">Get Pack</a>
+      </div>
+    </div>
+
+    <div class="pricing-card reveal reveal-delay-3">
+      <p class="pricing-card__label">Unlimited Monthly</p>
+      <p class="pricing-card__price"><sup>$</sup><span id="pricingMonthly">240</span></p>
+      <p class="pricing-card__period">per month</p>
+      <p class="pricing-card__tagline">"For dedicated students"</p>
+      <div class="pricing-card__cta">
+        <a href="/timetable.html?filter=aerial" class="cta-secondary" style="display: block; text-align: center;">Go Unlimited</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     8. FAQ ACCORDION
+     ========================================================================= -->
+<section class="faq-section reveal" aria-labelledby="faqHeading">
+  <div class="faq-section__header">
+    <span class="section-label">Questions</span>
+    <h2 id="faqHeading">Frequently Asked Questions</h2>
+  </div>
+
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" type="button">
+        <span class="faq-item__question-text">Do I need to be strong to start?</span>
+        <span class="faq-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+      </button>
+      <div class="faq-item__answer" role="region">
+        <div class="faq-item__answer-inner">No! You will build strength as you learn. We start with ground work and basic climbs that develop upper body and core strength progressively. Many of our Gold Coast students are surprised by how quickly their strength improves through regular aerial silks practice at our Southport studio.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" type="button">
+        <span class="faq-item__question-text">I am afraid of heights — can I still try?</span>
+        <span class="faq-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+      </button>
+      <div class="faq-item__answer" role="region">
+        <div class="faq-item__answer-inner">Yes! You control how high you go. Many students start close to the ground and gradually build confidence over multiple sessions. There is absolutely no pressure to go higher than you feel comfortable with. Our Southport instructors are experienced in supporting students through height anxiety, and many Gold Coast students who started with a fear of heights are now comfortable performing at full height.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" type="button">
+        <span class="faq-item__question-text">Will I get bruises?</span>
+        <span class="faq-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+      </button>
+      <div class="faq-item__answer" role="region">
+        <div class="faq-item__answer-inner">Possibly. Silks can cause friction marks as you are learning proper technique. They fade quickly and are part of the process. As your technique improves and your skin toughens, friction marks become less common. This is a normal part of learning aerial silks and is experienced by beginners at every Gold Coast aerial studio.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" type="button">
+        <span class="faq-item__question-text">What if I cannot climb?</span>
+        <span class="faq-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+      </button>
+      <div class="faq-item__answer" role="region">
+        <div class="faq-item__answer-inner">Climbing is taught progressively. We start with footlocks and wraps that do not require upper body strength. The footlock technique allows you to support your body weight through your legs, making climbing accessible even for those with limited upper body strength. Our Southport instructors will guide you step by step.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" type="button">
+        <span class="faq-item__question-text">Do I need to be flexible?</span>
+        <span class="faq-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+      </button>
+      <div class="faq-item__answer" role="region">
+        <div class="faq-item__answer-inner">No! Flexibility develops over time. Aerial silks actually helps improve flexibility as a natural result of regular practice. You do not need to be flexible to begin. Our Gold Coast students come in all shapes, sizes, and flexibility levels, and all are welcome at our Southport studio.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" type="button">
+        <span class="faq-item__question-text">What should I wear?</span>
+        <span class="faq-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+      </button>
+      <div class="faq-item__answer" role="region">
+        <div class="faq-item__answer-inner">Form-fitting clothing that covers your torso and legs is essential — no loose fabric that could catch in the silks. Avoid zippers, buttons, or jewellery as these can damage the fabric. Leggings and a fitted long-sleeved top are ideal. Bare feet or grip socks are recommended for footlocks.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     9. RELATED PROGRAMS
+     ========================================================================= -->
+<section class="related-section reveal" aria-labelledby="relatedHeading">
+  <div class="related-section__header">
+    <span class="section-label">Explore More</span>
+    <h2 id="relatedHeading">You Might Also Like</h2>
+  </div>
+
+  <div class="related-grid" id="relatedGrid">
+    <div class="related-card">
+      <div class="related-card__img" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+      </div>
+      <div class="related-card__body">
+        <h3 class="related-card__name">Aerial Yoga</h3>
+        <p class="related-card__desc">A gentler introduction to aerial movement using a hammock for support.</p>
+        <a href="/programs/aerial-yoga.html" style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #8B5CF6; text-decoration: none; border: 1.5px solid rgba(139, 92, 246, 0.35); padding: 0.55rem 1.25rem; border-radius: 50px; display: inline-block; transition: all 0.3s ease;">Learn More</a>
+      </div>
+    </div>
+    <div class="related-card">
+      <div class="related-card__img" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+      </div>
+      <div class="related-card__body">
+        <h3 class="related-card__name">Pole Strength &amp; Movement</h3>
+        <p class="related-card__desc">Build strength and body awareness through pole-based movement training.</p>
+        <a href="/programs/pole-strength.html" style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #8B5CF6; text-decoration: none; border: 1.5px solid rgba(139, 92, 246, 0.35); padding: 0.55rem 1.25rem; border-radius: 50px; display: inline-block; transition: all 0.3s ease;">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     10. SEO CONTENT
+     ========================================================================= -->
+<section class="seo-section reveal" aria-labelledby="seoHeading">
+  <div class="seo-section__inner">
+
+    <h2 id="seoHeading">Learn Aerial Silks on the Gold Coast — Beginner Classes at UNDGRND Movement Southport</h2>
+
+    <p>
+      Aerial silks is one of the most visually striking and physically rewarding disciplines in the world of aerial arts. Performed on two lengths of suspended fabric, aerial silks combines strength, flexibility, grace, and artistic expression into a single practice that challenges and transforms the body in ways that conventional fitness cannot. At <strong>UNDGRND Movement</strong> in Southport, our beginner aerial silks classes are designed to make this extraordinary discipline accessible to Gold Coast adults of all fitness levels — no experience, strength, or flexibility required to begin.
+    </p>
+
+    <h3>What Is Aerial Silks?</h3>
+
+    <p>
+      Aerial silks — also known as aerial fabric or tissu — is a circus and aerial arts discipline in which performers climb, wrap, and move through sequences using two lengths of fabric hung from a rigging point. Unlike trapeze or aerial hoop, silks offer a uniquely tactile and expressive medium: the fabric wraps around the body to create holds, poses, and transitions that are both functional and beautiful.
+    </p>
+
+    <p>
+      On the Gold Coast, aerial silks has grown steadily in popularity as adults seek fitness experiences that are more engaging, creative, and community-oriented than traditional gym workouts. UNDGRND Movement's Southport studio offers one of the Gold Coast's most welcoming and safety-focused environments for learning aerial silks from the ground up.
+    </p>
+
+    <h3>Benefits of Aerial Silks Training</h3>
+
+    <p>
+      The physical benefits of regular aerial silks practice are extensive. Full-body strength is the most immediate and noticeable result — particularly in the upper body, core, and grip. Climbing and holding positions on the silks requires and develops muscular endurance that is difficult to replicate through conventional exercise. Gold Coast students who train consistently report significant improvements in pull-up strength, core stability, and overall body composition within weeks of beginning.
+    </p>
+
+    <p>
+      Flexibility improves naturally through aerial silks practice. The positions and transitions required in silks work progressively stretch the hips, hamstrings, shoulders, and spine — areas that are commonly tight in adults who spend long hours sitting. Unlike static stretching, the flexibility gains from aerial silks are functional and dynamic, meaning they translate directly into improved everyday movement and reduced injury risk.
+    </p>
+
+    <p>
+      Grace and body awareness develop through the practice of moving intentionally in three dimensions. Aerial silks teaches students to understand their body in space — to feel where their limbs are, to control their movement, and to express themselves through physical form. This heightened body awareness has benefits that extend far beyond the studio, improving posture, coordination, and physical confidence in everyday life.
+    </p>
+
+    <h3>A Safe Introduction to Aerial Training</h3>
+
+    <p>
+      Safety is the foundation of everything we do at UNDGRND Movement's Southport studio. Our aerial silks program is structured around progressive skill-building that starts from the ground and advances only when each student is ready. All equipment is professionally rigged and inspected regularly. Crash mats are positioned under all aerial apparatus. Our instructors are certified aerialists with extensive experience in teaching beginners safely.
+    </p>
+
+    <p>
+      For Gold Coast adults who are new to aerial arts, the structured safety approach at our Southport studio means that the learning environment is never intimidating or rushed. Every student progresses at their own pace, and no one is pushed to attempt a skill before they have the technique and strength to do so safely. This approach is what distinguishes UNDGRND Movement from other Gold Coast aerial studios.
+    </p>
+
+    <h3>Overcoming Fear and Building Trust in Your Body</h3>
+
+    <p>
+      One of the most profound aspects of aerial silks training is the process of overcoming fear. For many Gold Coast students, the first few classes involve confronting a fear of heights, a lack of trust in their own strength, or a deep-seated belief that they are not the kind of person who can do something like this. Watching those beliefs dissolve over the course of a few sessions is one of the most rewarding things our Southport instructors witness.
+    </p>
+
+    <p>
+      The process of learning to trust the silks — and your own body — is transformative. When you discover that you can support your own weight, that you can climb, that you can hold a position you never thought possible, it changes the way you see yourself. This is the deeper value of aerial silks training, and it is something that Gold Coast students at UNDGRND Movement experience regularly.
+    </p>
+
+    <h3>Why Aerial Silks Is Perfect for Beginners</h3>
+
+    <p>
+      Aerial silks is uniquely well-suited to beginners because the fabric itself provides support and security that other aerial disciplines do not. Unlike aerial hoop or trapeze, where the apparatus is rigid, silks can be wrapped around the body to create holds that feel secure and controlled. This means that beginners can experience the sensation of being suspended and supported from their very first class, without needing significant strength or experience.
+    </p>
+
+    <p>
+      At our Southport studio, the beginner aerial silks curriculum is carefully sequenced to build confidence and competence progressively. Students start with footlocks and ground-level wraps, then progress to low-height climbs, then to basic poses and transitions. Each step builds on the last, and no student moves forward until they are ready. Gold Coast adults who have tried aerial silks at UNDGRND Movement consistently describe the experience as more accessible than they expected.
+    </p>
+
+    <h3>Southport Studio Facilities and Equipment</h3>
+
+    <p>
+      UNDGRND Movement is located at 163 Ferry Rd, Southport — a purpose-built movement studio with the ceiling height, rigging infrastructure, and floor space required for safe aerial training. Our Southport studio is equipped with professional-grade aerial silks rigging, crash mats, and all the equipment students need. Nothing is required from students except appropriate clothing and a willingness to learn.
+    </p>
+
+    <p>
+      The Southport location makes UNDGRND Movement accessible to Gold Coast residents from across the region — including Surfers Paradise, Broadbeach, Bundall, Main Beach, Labrador, and surrounding suburbs. If you have been searching for aerial silks classes on the Gold Coast, our Southport studio is the place to start.
+    </p>
+
+    <h3>Building Aerial Skills from Foundations to Advanced</h3>
+
+    <p>
+      The UNDGRND Movement aerial silks program is designed as a long-term journey. Beginners start with the foundations — footlocks, basic climbs, and simple wraps — and progress through increasingly complex skills as their strength, technique, and confidence develop. Advanced students work on drops, inversions, and choreographed sequences. The progression path is clear, structured, and entirely student-led.
+    </p>
+
+    <p>
+      Many Gold Coast students who begin in our beginner aerial silks class go on to explore other aerial disciplines at our Southport studio, including Aerial Yoga and Aerial Hoop. The foundational strength and body awareness developed through aerial silks training provides an excellent base for all aerial arts. UNDGRND Movement is proud to be part of the growing Gold Coast aerial arts community.
+    </p>
+
+    <p>
+      Ready to discover what your body is capable of? <strong>Book your first aerial silks class today</strong> at UNDGRND Movement, Southport — the Gold Coast's most safety-focused beginner aerial studio.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     11. CTA SECTION
+     ========================================================================= -->
+<section class="cta-section reveal" aria-labelledby="ctaHeading">
+  <div class="cta-section__inner">
+    <h2 id="ctaHeading">Ready to Fly?</h2>
+    <p class="cta-section__sub">Join Gold Coast's most safety-focused beginner aerial silks program at UNDGRND Movement in Southport. No experience, strength, or flexibility required — just bring yourself.</p>
+    <div class="cta-section__buttons">
+      <a href="/timetable.html?filter=aerial" class="cta-button">Book Your First Aerial Silks Class</a>
+      <a href="/contact.html" class="cta-secondary">Have questions? Get in touch</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     FOOTER — copy contents of /components/footer-component.html here
+     ========================================================================= -->
+
+
+<!-- =========================================================================
+     PAGE-SPECIFIC JAVASCRIPT
+     ========================================================================= -->
+<script>
+(function () {
+  'use strict';
+
+  /* -------------------------------------------------------------------------
+     1. Inject schema markup
+  ------------------------------------------------------------------------- */
+  if (typeof SchemaGenerator !== 'undefined') {
+    var breadcrumb = SchemaGenerator.generateBreadcrumbSchema([
+      { name: 'Home',   url: 'https://www.undrgrnd.com.au/' },
+      { name: 'Adults', url: 'https://www.undrgrnd.com.au/adults.html' },
+      { name: 'Aerial Silks', url: 'https://www.undrgrnd.com.au/programs/aerial-silks.html' }
+    ]);
+    if (breadcrumb) document.head.insertAdjacentHTML('beforeend', breadcrumb);
+  }
+
+  function escHtml(str) {
+    if (!str) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  var focusIcons = [
+    '<path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line>',
+    '<circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line>',
+    '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>',
+    '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>'
+  ];
+
+  var relatedIds = ['aerial-yoga', 'pole-strength'];
+
+  /* -------------------------------------------------------------------------
+     2. Load data from site-config.json
+  ------------------------------------------------------------------------- */
+  fetch('/site-config.json')
+    .then(function (res) { return res.json(); })
+    .then(function (config) {
+
+      var program = null;
+      var adults = config.programs && config.programs.adults;
+      if (adults) {
+        Object.keys(adults).forEach(function (catKey) {
+          adults[catKey].forEach(function (p) {
+            if (p.id === 'aerial-silks') program = p;
+          });
+        });
+      }
+
+      if (!program) return;
+
+      /* Service schema */
+      if (typeof SchemaGenerator !== 'undefined' && SchemaGenerator.generateServiceSchema) {
+        SchemaGenerator.generateServiceSchema(program).then(function (tag) {
+          if (tag) document.head.insertAdjacentHTML('beforeend', tag);
+        });
+      }
+
+      /* Hero level badge */
+      var heroLevel = document.getElementById('heroLevel');
+      if (heroLevel && program.level) heroLevel.textContent = program.level;
+
+      /* Meta description */
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc && program.short_description) {
+        metaDesc.setAttribute('content', program.short_description + ' at UNDGRND Movement, Southport. Learn aerial silks from expert instructors on the Gold Coast.');
+      }
+
+      /* Full description */
+      var descEl = document.getElementById('programDesc');
+      if (descEl && program.full_description) descEl.textContent = program.full_description;
+
+      /* Info box */
+      var infoLevel = document.getElementById('infoLevel');
+      if (infoLevel && program.level) infoLevel.textContent = program.level;
+
+      var infoCategory = document.getElementById('infoCategory');
+      if (infoCategory && program.category) infoCategory.textContent = program.category;
+
+      /* Pricing */
+      var p = program.estimated_pricing || {};
+      if (p.drop_in) {
+        ['priceDropIn', 'pricingDropIn'].forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) el.textContent = id === 'priceDropIn' ? '$' + p.drop_in : p.drop_in;
+        });
+      }
+      if (p.class_pack_10) {
+        ['pricePack', 'pricingPack'].forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) el.textContent = id === 'pricePack' ? '$' + p.class_pack_10 : p.class_pack_10;
+        });
+      }
+      if (p.unlimited_monthly) {
+        ['priceMonthly', 'pricingMonthly'].forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) el.textContent = id === 'priceMonthly' ? '$' + p.unlimited_monthly : p.unlimited_monthly;
+        });
+      }
+
+      /* Core focus cards */
+      var focusGrid = document.getElementById('focusGrid');
+      if (focusGrid && program.core_focus && program.core_focus.length) {
+        var focusHtml = '';
+        program.core_focus.forEach(function (item, i) {
+          var parts = item.split(' - ');
+          var title = parts[0] || item;
+          var sub   = parts[1] || '';
+          var icon  = focusIcons[i] || focusIcons[0];
+          var delay = i < 4 ? ' reveal-delay-' + (i + 1) : '';
+          focusHtml += '<div class="focus-card reveal' + delay + '">'
+            + '<div class="focus-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24">' + icon + '</svg></div>'
+            + '<p class="focus-card__text">' + escHtml(title) + '</p>'
+            + (sub ? '<p class="focus-card__sub">' + escHtml(sub) + '</p>' : '')
+            + '</div>';
+        });
+        focusGrid.innerHTML = focusHtml;
+      }
+
+      /* Who it's for */
+      var whoList = document.getElementById('whoList');
+      if (whoList && program.who_its_for && program.who_its_for.length) {
+        var whoHtml = '';
+        program.who_its_for.forEach(function (item) {
+          whoHtml += '<li>'
+            + '<svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>'
+            + escHtml(item)
+            + '</li>';
+        });
+        whoList.innerHTML = whoHtml;
+      }
+
+      /* What to expect timeline */
+      var timeline = document.getElementById('expectTimeline');
+      if (timeline && program.what_to_expect && program.what_to_expect.length) {
+        var timelineHtml = '';
+        program.what_to_expect.forEach(function (item, i) {
+          var isLast = i === program.what_to_expect.length - 1;
+          timelineHtml += '<div class="expect-step">'
+            + '<div class="expect-step__left">'
+            +   '<div class="expect-step__num">' + (i + 1) + '</div>'
+            +   (isLast ? '' : '<div class="expect-step__line"></div>')
+            + '</div>'
+            + '<div class="expect-step__content">'
+            +   '<p class="expect-step__title">' + escHtml(item) + '</p>'
+            + '</div>'
+            + '</div>';
+        });
+        timeline.innerHTML = timelineHtml;
+      }
+
+      /* Related programs */
+      var relatedGrid = document.getElementById('relatedGrid');
+      if (relatedGrid && adults) {
+        var relatedPrograms = [];
+        Object.keys(adults).forEach(function (catKey) {
+          adults[catKey].forEach(function (p2) {
+            if (relatedIds.indexOf(p2.id) !== -1) relatedPrograms.push(p2);
+          });
+        });
+        relatedPrograms.sort(function (a, b) {
+          return relatedIds.indexOf(a.id) - relatedIds.indexOf(b.id);
+        });
+        if (relatedPrograms.length) {
+          var relHtml = '';
+          relatedPrograms.forEach(function (rp) {
+            relHtml += '<div class="related-card">'
+              + '<div class="related-card__img" aria-hidden="true">'
+              +   '<svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>'
+              + '</div>'
+              + '<div class="related-card__body">'
+              +   '<h3 class="related-card__name">' + escHtml(rp.name) + '</h3>'
+              +   '<p class="related-card__desc">' + escHtml(rp.short_description || '') + '</p>'
+              +   '<a href="/programs/' + escHtml(rp.slug) + '.html" style="font-family: \'Outfit\', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #8B5CF6; text-decoration: none; border: 1.5px solid rgba(139, 92, 246, 0.35); padding: 0.55rem 1.25rem; border-radius: 50px; display: inline-block; transition: all 0.3s ease;">Learn More</a>'
+              + '</div>'
+              + '</div>';
+          });
+          relatedGrid.innerHTML = relHtml;
+        }
+      }
+
+      initReveal();
+    })
+    .catch(function (err) {
+      console.warn('aerial-silks.html: site-config.json load error —', err.message);
+    });
+
+  /* -------------------------------------------------------------------------
+     3. Sticky Book Now
+  ------------------------------------------------------------------------- */
+  var stickyBook = document.getElementById('stickyBook');
+  var heroEl     = document.querySelector('.prog-hero');
+  var stickyLink = stickyBook ? stickyBook.querySelector('a') : null;
+
+  window.addEventListener('scroll', function () {
+    if (!stickyBook) return;
+    var heroBottom = heroEl ? heroEl.getBoundingClientRect().bottom : 0;
+    if (heroBottom < 0) {
+      stickyBook.classList.add('visible');
+      stickyBook.setAttribute('aria-hidden', 'false');
+      if (stickyLink) stickyLink.removeAttribute('tabindex');
+    } else {
+      stickyBook.classList.remove('visible');
+      stickyBook.setAttribute('aria-hidden', 'true');
+      if (stickyLink) stickyLink.setAttribute('tabindex', '-1');
+    }
+  }, { passive: true });
+
+  /* -------------------------------------------------------------------------
+     4. FAQ accordion
+  ------------------------------------------------------------------------- */
+  document.querySelectorAll('.faq-item__question').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item   = btn.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function (el) {
+        el.classList.remove('open');
+        el.querySelector('.faq-item__question').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  /* -------------------------------------------------------------------------
+     5. Scroll animations
+  ------------------------------------------------------------------------- */
+  function initReveal() {
+    var revealEls = document.querySelectorAll('.reveal:not(.visible)');
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      revealEls.forEach(function (el) { observer.observe(el); });
+    } else {
+      revealEls.forEach(function (el) { el.classList.add('visible'); });
+    }
+  }
+
+  initReveal();
+
+  /* -------------------------------------------------------------------------
+     6. Smooth scroll
+  ------------------------------------------------------------------------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var targetId = anchor.getAttribute('href').slice(1);
+      var target   = document.getElementById(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+}());
+</script>
+
+</body>
+</html>

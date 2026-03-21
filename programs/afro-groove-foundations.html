@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title & Meta Description -->
+  <title>Afro Groove Foundations | Dance Classes Gold Coast | UNDGRND Movement Southport</title>
+  <meta name="description" content="Beginner-friendly dance fitness inspired by Afrobeat and groove-based styles at UNDGRND Movement, Southport. Beginner-friendly Afrobeat dance fitness on the Gold Coast.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.undrgrnd.com.au/programs/afro-groove-foundations.html">
+
+  <!-- Favicon placeholders -->
+  <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="/css/global.css">
+
+  <!-- Schema Generator -->
+  <script src="/js/schema-generator.js"></script>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.undrgrnd.com.au/programs/afro-groove-foundations.html">
+  <meta property="og:title" content="Afro Groove Foundations | Dance Classes Gold Coast | UNDGRND Movement">
+  <meta property="og:description" content="Beginner-friendly Afrobeat dance fitness classes at UNDGRND Movement Southport. Gold Coast's welcoming dance studio.">
+
+  <!-- Page-specific styles -->
+  <style>
+    /* -----------------------------------------------------------------------
+       HERO — full-width
+    ----------------------------------------------------------------------- */
+    .prog-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: #0A0A0A;
+    }
+
+    .prog-hero__bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.75) 60%, rgba(10,10,10,0.97) 100%),
+        radial-gradient(ellipse 80% 70% at 65% 40%, rgba(139, 92, 246, 0.22) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 50% at 20% 80%, rgba(236, 72, 153, 0.14) 0%, transparent 55%);
+    }
+
+    /* Image placeholder overlay */
+    .prog-hero__img-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      z-index: 0;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(236, 72, 153, 0.08) 100%);
+    }
+
+    .prog-hero__img-placeholder svg {
+      width: 64px;
+      height: 64px;
+      stroke: rgba(139, 92, 246, 0.35);
+      fill: none;
+      stroke-width: 1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .prog-hero__img-placeholder p {
+      font-size: 0.78rem;
+      color: rgba(161, 161, 161, 0.4);
+      max-width: 320px;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .prog-hero__content {
+      position: relative;
+      z-index: 1;
+      max-width: 1400px;
+      margin-inline: auto;
+      padding: 0 5% 5rem;
+      width: 100%;
+    }
+
+    .prog-hero__level {
+      display: inline-block;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 50px;
+      background: rgba(236, 72, 153, 0.15);
+      border: 1px solid rgba(236, 72, 153, 0.3);
+      color: #F472B6;
+      margin-bottom: 1rem;
+    }
+
+    .prog-hero__h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      line-height: 0.95;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin: 0 0 1.25rem;
+      max-width: 900px;
+    }
+
+    .prog-hero__location {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #A1A1A1;
+      margin-bottom: 2rem;
+    }
+
+    .prog-hero__location svg {
+      width: 15px;
+      height: 15px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .prog-hero__ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* -----------------------------------------------------------------------
+       STICKY BOOK NOW BUTTON
+    ----------------------------------------------------------------------- */
+    .sticky-book {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 900;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .sticky-book.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .sticky-book a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      text-decoration: none;
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      padding: 0.85rem 1.5rem;
+      border-radius: 50px;
+      box-shadow: 0 8px 30px rgba(139, 92, 246, 0.45);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .sticky-book a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(139, 92, 246, 0.6);
+    }
+
+    .sticky-book a svg {
+      width: 16px;
+      height: 16px;
+      stroke: #FFFFFF;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* -----------------------------------------------------------------------
+       PROGRAM OVERVIEW — two columns
+    ----------------------------------------------------------------------- */
+    .overview-section {
+      padding: 8rem 5%;
+      background: #0A0A0A;
+    }
+
+    .overview-section__inner {
+      max-width: 1400px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    @media (min-width: 1024px) {
+      .overview-section__inner {
+        grid-template-columns: 1fr 380px;
+        gap: 5rem;
+        align-items: start;
+      }
+    }
+
+    .overview-section__eyebrow {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #A78BFA;
+      margin-bottom: 0.75rem;
+    }
+
+    .overview-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 1.5rem;
+    }
+
+    .overview-section__desc {
+      font-size: 1.05rem;
+      color: #A1A1A1;
+      line-height: 1.8;
+    }
+
+    /* Quick Info Box */
+    .info-box {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      padding: 2rem;
+      position: sticky;
+      top: 100px;
+    }
+
+    .info-box__title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+    }
+
+    .info-box__rows {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-box__row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .info-box__row-icon {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      background: rgba(139, 92, 246, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .info-box__row-icon svg {
+      width: 15px;
+      height: 15px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .info-box__row-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #A1A1A1;
+      line-height: 1;
+      margin-bottom: 0.2rem;
+    }
+
+    .info-box__row-value {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      line-height: 1.3;
+    }
+
+    .info-box__divider {
+      height: 1px;
+      background: rgba(139, 92, 246, 0.12);
+      margin: 1rem 0;
+    }
+
+    .info-box__pricing-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #A78BFA;
+      margin-bottom: 0.75rem;
+    }
+
+    .info-box__price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .info-box__price-row:last-child { border-bottom: none; }
+
+    .info-box__price-label {
+      font-size: 0.88rem;
+      color: #A1A1A1;
+    }
+
+    .info-box__price-amount {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #A78BFA;
+    }
+
+    .info-box__note {
+      font-size: 0.75rem;
+      color: rgba(161, 161, 161, 0.6);
+      margin-top: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .info-box__cta {
+      margin-top: 1.5rem;
+    }
+
+    .info-box__cta a {
+      display: block;
+      text-align: center;
+    }
+
+    /* -----------------------------------------------------------------------
+       CORE FOCUS SECTION
+    ----------------------------------------------------------------------- */
+    .focus-section {
+      padding: 8rem 5%;
+      background: #0D0D0D;
+    }
+
+    .focus-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .focus-grid {
+      max-width: 1400px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .focus-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .focus-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .focus-card {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      padding: 2rem 1.75rem;
+      transition: all 0.3s ease;
+    }
+
+    .focus-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(139, 92, 246, 0.45);
+      box-shadow: 0 15px 40px rgba(139, 92, 246, 0.12);
+    }
+
+    .focus-card__icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.1));
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .focus-card__icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .focus-card__text {
+      font-size: 0.95rem;
+      color: #FFFFFF;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .focus-card__sub {
+      font-size: 0.82rem;
+      color: #A1A1A1;
+      margin-top: 0.4rem;
+      line-height: 1.5;
+    }
+
+    /* -----------------------------------------------------------------------
+       WHO IT'S FOR SECTION
+    ----------------------------------------------------------------------- */
+    .who-section {
+      padding: 8rem 5%;
+      background: #0A0A0A;
+    }
+
+    .who-section__inner {
+      max-width: 1400px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    @media (min-width: 1024px) {
+      .who-section__inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: start;
+      }
+    }
+
+    .who-section h2 { margin-bottom: 1.5rem; }
+
+    .who-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .who-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      font-size: 1rem;
+      color: #A1A1A1;
+      line-height: 1.5;
+    }
+
+    .who-list li svg {
+      width: 18px;
+      height: 18px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* -----------------------------------------------------------------------
+       WHAT TO EXPECT — timeline
+    ----------------------------------------------------------------------- */
+    .expect-section {
+      padding: 8rem 5%;
+      background: #0D0D0D;
+    }
+
+    .expect-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .expect-timeline {
+      max-width: 800px;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .expect-step {
+      display: flex;
+      gap: 1.5rem;
+      position: relative;
+    }
+
+    .expect-step__left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .expect-step__num {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      color: #FFFFFF;
+      flex-shrink: 0;
+    }
+
+    .expect-step__line {
+      width: 2px;
+      flex: 1;
+      background: rgba(139, 92, 246, 0.15);
+      margin: 4px 0;
+      min-height: 30px;
+    }
+
+    .expect-step:last-child .expect-step__line {
+      display: none;
+    }
+
+    .expect-step__content {
+      padding-bottom: 2.5rem;
+      padding-top: 0.5rem;
+    }
+
+    .expect-step__title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 0.35rem;
+    }
+
+    .expect-step__desc {
+      font-size: 0.9rem;
+      color: #A1A1A1;
+      line-height: 1.6;
+    }
+
+    .expect-reassurance {
+      max-width: 800px;
+      margin: 2rem auto 0;
+      padding: 1.5rem 2rem;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.07));
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 16px;
+      font-size: 1rem;
+      color: #FFFFFF;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    /* -----------------------------------------------------------------------
+       PRICING SECTION
+    ----------------------------------------------------------------------- */
+    .pricing-section {
+      padding: 8rem 5%;
+      background: #0A0A0A;
+    }
+
+    .pricing-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .pricing-grid {
+      max-width: 1000px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .pricing-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .pricing-card {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: all 0.35s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(139, 92, 246, 0.5);
+      box-shadow: 0 20px 50px rgba(139, 92, 246, 0.18);
+    }
+
+    .pricing-card--featured {
+      border-color: rgba(139, 92, 246, 0.5);
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(236, 72, 153, 0.05));
+      position: relative;
+    }
+
+    .pricing-card--featured::before {
+      content: 'Best Value';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      padding: 0.25rem 0.9rem;
+      border-radius: 50px;
+      white-space: nowrap;
+    }
+
+    .pricing-card__label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #A78BFA;
+    }
+
+    .pricing-card__price {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.5rem;
+      line-height: 1;
+      color: #FFFFFF;
+    }
+
+    .pricing-card__price sup {
+      font-size: 1.5rem;
+      vertical-align: super;
+      line-height: 0;
+    }
+
+    .pricing-card__period {
+      font-size: 0.85rem;
+      color: #A1A1A1;
+    }
+
+    .pricing-card__tagline {
+      font-size: 0.9rem;
+      color: #A1A1A1;
+      font-style: italic;
+    }
+
+    .pricing-card__cta {
+      margin-top: 0.5rem;
+      width: 100%;
+    }
+
+    /* -----------------------------------------------------------------------
+       FAQ ACCORDION
+    ----------------------------------------------------------------------- */
+    .faq-section {
+      padding: 8rem 5%;
+      background: #0D0D0D;
+    }
+
+    .faq-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 3rem;
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .faq-item {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.3s ease;
+    }
+
+    .faq-item.open { border-color: rgba(139, 92, 246, 0.45); }
+
+    .faq-item__question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .faq-item__question-text {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      line-height: 1.4;
+    }
+
+    .faq-item__icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item.open .faq-item__icon {
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      border-color: transparent;
+      transform: rotate(45deg);
+    }
+
+    .faq-item__icon svg {
+      width: 14px;
+      height: 14px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.3s ease;
+    }
+
+    .faq-item.open .faq-item__icon svg { stroke: #FFFFFF; }
+
+    .faq-item__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    .faq-item.open .faq-item__answer { max-height: 400px; }
+
+    .faq-item__answer-inner {
+      padding: 0 1.75rem 1.5rem;
+      font-size: 0.93rem;
+      color: #A1A1A1;
+      line-height: 1.7;
+    }
+
+    /* -----------------------------------------------------------------------
+       RELATED PROGRAMS
+    ----------------------------------------------------------------------- */
+    .related-section {
+      padding: 8rem 5%;
+      background: #0A0A0A;
+    }
+
+    .related-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .related-grid {
+      max-width: 1400px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .related-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .related-card {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .related-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(139, 92, 246, 0.45);
+      box-shadow: 0 15px 40px rgba(139, 92, 246, 0.12);
+    }
+
+    .related-card__img {
+      height: 160px;
+      background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(139, 92, 246, 0.1));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .related-card__img svg {
+      width: 36px;
+      height: 36px;
+      stroke: rgba(236, 72, 153, 0.5);
+      fill: none;
+      stroke-width: 1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .related-card__body {
+      padding: 1.5rem;
+    }
+
+    .related-card__name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.35rem;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
+    }
+
+    .related-card__desc {
+      font-size: 0.88rem;
+      color: #A1A1A1;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    /* -----------------------------------------------------------------------
+       SEO CONTENT SECTION
+    ----------------------------------------------------------------------- */
+    .seo-section {
+      padding: 8rem 5%;
+      background: #0D0D0D;
+    }
+
+    .seo-section__inner {
+      max-width: 900px;
+      margin-inline: auto;
+    }
+
+    .seo-section h2 { margin-bottom: 2rem; }
+
+    .seo-section h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.55rem;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin: 2.5rem 0 1rem;
+    }
+
+    .seo-section p {
+      font-size: 1rem;
+      color: #A1A1A1;
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+
+    .seo-section strong { color: #FFFFFF; font-weight: 600; }
+
+    /* -----------------------------------------------------------------------
+       CTA SECTION
+    ----------------------------------------------------------------------- */
+    .cta-section {
+      padding: 8rem 5%;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(236, 72, 153, 0.08) 100%);
+      border-top: 1px solid rgba(139, 92, 246, 0.15);
+    }
+
+    .cta-section__inner {
+      max-width: 700px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 1.25rem;
+    }
+
+    .cta-section__sub {
+      font-size: 1rem;
+      color: #A1A1A1;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .cta-section__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    /* -----------------------------------------------------------------------
+       SCROLL ANIMATIONS
+    ----------------------------------------------------------------------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.08s; }
+    .reveal-delay-2 { transition-delay: 0.16s; }
+    .reveal-delay-3 { transition-delay: 0.24s; }
+    .reveal-delay-4 { transition-delay: 0.32s; }
+  </style>
+</head>
+
+<body>
+
+<!-- =========================================================================
+     NAVIGATION — copy contents of /components/nav-component.html here
+     ========================================================================= -->
+
+
+<!-- =========================================================================
+     STICKY BOOK NOW BUTTON
+     ========================================================================= -->
+<div class="sticky-book" id="stickyBook" aria-hidden="true">
+  <a href="/timetable.html?filter=dance" tabindex="-1">
+    <!-- Lucide: calendar -->
+    <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+    Book Now
+  </a>
+</div>
+
+
+<!-- =========================================================================
+     1. HERO SECTION
+     ========================================================================= -->
+<section class="prog-hero" aria-label="Afro Groove Foundations — UNDGRND Movement">
+
+  <!-- Image placeholder -->
+  <div class="prog-hero__img-placeholder" aria-hidden="true">
+    <!-- Lucide: music -->
+    <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+    <p>AI-generated: Athletic flexible woman in dynamic Afro dance pose, hip movement emphasis, purple gradient lighting</p>
+  </div>
+
+  <div class="prog-hero__bg" aria-hidden="true"></div>
+
+  <div class="prog-hero__content">
+    <span class="prog-hero__level" id="heroLevel">Beginner / Foundation</span>
+
+    <h1 class="prog-hero__h1">Afro Groove Foundations | Dance Classes Gold Coast</h1>
+
+    <p class="prog-hero__location">
+      <!-- Lucide: map-pin -->
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+      Southport Studio | 163 Ferry Rd
+    </p>
+
+    <div class="prog-hero__ctas">
+      <a href="/timetable.html?filter=dance" class="cta-button">Book This Class</a>
+      <a href="/timetable.html" class="cta-secondary">View Timetable</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     2. PROGRAM OVERVIEW — two columns
+     ========================================================================= -->
+<section class="overview-section reveal" aria-labelledby="overviewHeading">
+  <div class="overview-section__inner">
+
+    <!-- Left: Full description -->
+    <div>
+      <p class="overview-section__eyebrow">About This Program</p>
+      <h2 id="overviewHeading">Afro Groove Foundations</h2>
+      <p class="overview-section__desc" id="programDesc">
+        Afro Groove – Foundations is a beginner-friendly dance fitness class designed to improve rhythm, coordination, and full-body movement in a structured and supportive environment. Inspired by Afrobeat and groove-based styles, this class focuses on simple, repeatable movement patterns that build lower body strength, core stability, and overall mobility. Suitable for adults with no prior dance experience, sessions include guided warm-ups, easy-to-follow sequences, and controlled movement training to develop confidence and body awareness.
+      </p>
+    </div>
+
+    <!-- Right: Quick Info Box -->
+    <aside class="info-box" aria-label="Quick program information">
+      <h3 class="info-box__title">Quick Info</h3>
+
+      <div class="info-box__rows" id="infoBoxRows">
+        <div class="info-box__row">
+          <div class="info-box__row-icon" aria-hidden="true">
+            <!-- Lucide: bar-chart-2 -->
+            <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          </div>
+          <div>
+            <p class="info-box__row-label">Level</p>
+            <p class="info-box__row-value" id="infoLevel">Beginner / Foundation</p>
+          </div>
+        </div>
+        <div class="info-box__row">
+          <div class="info-box__row-icon" aria-hidden="true">
+            <!-- Lucide: tag -->
+            <svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          </div>
+          <div>
+            <p class="info-box__row-label">Category</p>
+            <p class="info-box__row-value" id="infoCategory">Dance</p>
+          </div>
+        </div>
+        <div class="info-box__row">
+          <div class="info-box__row-icon" aria-hidden="true">
+            <!-- Lucide: clock -->
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <div>
+            <p class="info-box__row-label">Duration</p>
+            <p class="info-box__row-value">60 minutes</p>
+          </div>
+        </div>
+        <div class="info-box__row">
+          <div class="info-box__row-icon" aria-hidden="true">
+            <!-- Lucide: users -->
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <div>
+            <p class="info-box__row-label">Class Size</p>
+            <p class="info-box__row-value">Max 15 students</p>
+          </div>
+        </div>
+        <div class="info-box__row">
+          <div class="info-box__row-icon" aria-hidden="true">
+            <!-- Lucide: shopping-bag -->
+            <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          </div>
+          <div>
+            <p class="info-box__row-label">What to Bring</p>
+            <p class="info-box__row-value">Comfortable activewear, water bottle, indoor shoes</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-box__divider"></div>
+
+      <p class="info-box__pricing-title">Pricing</p>
+      <div id="infoBoxPricing">
+        <div class="info-box__price-row">
+          <span class="info-box__price-label">Drop-In</span>
+          <span class="info-box__price-amount" id="priceDropIn">$25</span>
+        </div>
+        <div class="info-box__price-row">
+          <span class="info-box__price-label">10 Class Pack</span>
+          <span class="info-box__price-amount" id="pricePack">$200</span>
+        </div>
+        <div class="info-box__price-row">
+          <span class="info-box__price-label">Unlimited Monthly</span>
+          <span class="info-box__price-amount" id="priceMonthly">$180</span>
+        </div>
+      </div>
+      <p class="info-box__note">Prices are estimates. See full pricing when booking.</p>
+
+      <div class="info-box__cta">
+        <a href="/timetable.html?filter=dance" class="cta-button">Book This Class</a>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     3. CORE FOCUS AREAS
+     ========================================================================= -->
+<section class="focus-section reveal" aria-labelledby="focusHeading">
+  <div class="focus-section__header">
+    <span class="section-label">What You'll Learn</span>
+    <h2 id="focusHeading">Core Focus Areas</h2>
+  </div>
+
+  <!-- Populated by JS from site-config.json program.core_focus -->
+  <div class="focus-grid" id="focusGrid">
+    <!-- Fallback static content (overwritten by JS) -->
+    <div class="focus-card reveal reveal-delay-1">
+      <div class="focus-card__icon" aria-hidden="true">
+        <!-- Lucide: activity -->
+        <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+      </div>
+      <p class="focus-card__text">Hip mobility &amp; control</p>
+      <p class="focus-card__sub">Improves flexibility + reduces stiffness</p>
+    </div>
+    <div class="focus-card reveal reveal-delay-2">
+      <div class="focus-card__icon" aria-hidden="true">
+        <!-- Lucide: music -->
+        <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+      </div>
+      <p class="focus-card__text">Rhythm and coordination development</p>
+      <p class="focus-card__sub">Find your groove through structured patterns</p>
+    </div>
+    <div class="focus-card reveal reveal-delay-3">
+      <div class="focus-card__icon" aria-hidden="true">
+        <!-- Lucide: zap -->
+        <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+      </div>
+      <p class="focus-card__text">Lower body strength and core stability</p>
+      <p class="focus-card__sub">Build functional fitness through dance</p>
+    </div>
+    <div class="focus-card reveal reveal-delay-4">
+      <div class="focus-card__icon" aria-hidden="true">
+        <!-- Lucide: star -->
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+      </div>
+      <p class="focus-card__text">Body awareness and confidence building</p>
+      <p class="focus-card__sub">Move with intention and self-assurance</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     4. WHO IT'S FOR
+     ========================================================================= -->
+<section class="who-section reveal" aria-labelledby="whoHeading">
+  <div class="who-section__inner">
+
+    <div>
+      <span class="section-label">Is This Class For You?</span>
+      <h2 id="whoHeading">Is Afro Groove Right For You?</h2>
+      <!-- Populated by JS from site-config.json program.who_its_for -->
+      <ul class="who-list" id="whoList">
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Adults with no prior dance experience
+        </li>
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Anyone looking to start dance fitness
+        </li>
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Those wanting to improve coordination
+        </li>
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          People seeking fun, energetic workouts
+        </li>
+      </ul>
+    </div>
+
+    <!-- Decorative stat block -->
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+      <div class="card" style="padding: 2rem; text-align: center;">
+        <p style="font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: #8B5CF6; line-height: 1; margin-bottom: 0.25rem;">0</p>
+        <p style="font-size: 0.85rem; color: #A1A1A1; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;">Experience Required</p>
+      </div>
+      <div class="card" style="padding: 2rem; text-align: center;">
+        <p style="font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: #EC4899; line-height: 1; margin-bottom: 0.25rem;">60</p>
+        <p style="font-size: 0.85rem; color: #A1A1A1; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;">Minutes Per Class</p>
+      </div>
+      <div class="card" style="padding: 2rem; text-align: center;">
+        <p style="font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: #A78BFA; line-height: 1; margin-bottom: 0.25rem;">15</p>
+        <p style="font-size: 0.85rem; color: #A1A1A1; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;">Max Class Size</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     5. WHAT TO EXPECT — timeline
+     ========================================================================= -->
+<section class="expect-section reveal" aria-labelledby="expectHeading">
+  <div class="expect-section__header">
+    <span class="section-label">First Class</span>
+    <h2 id="expectHeading">Your First Afro Groove Class</h2>
+  </div>
+
+  <!-- Populated by JS from site-config.json program.what_to_expect -->
+  <div class="expect-timeline" id="expectTimeline">
+    <div class="expect-step">
+      <div class="expect-step__left">
+        <div class="expect-step__num">1</div>
+        <div class="expect-step__line"></div>
+      </div>
+      <div class="expect-step__content">
+        <p class="expect-step__title">Guided warm-ups to prepare your body</p>
+        <p class="expect-step__desc">We start every class with a structured warm-up that prepares your muscles and joints for movement.</p>
+      </div>
+    </div>
+    <div class="expect-step">
+      <div class="expect-step__left">
+        <div class="expect-step__num">2</div>
+        <div class="expect-step__line"></div>
+      </div>
+      <div class="expect-step__content">
+        <p class="expect-step__title">Simple, repeatable movement patterns</p>
+        <p class="expect-step__desc">Each sequence is broken down into easy-to-follow steps that build on each other progressively.</p>
+      </div>
+    </div>
+    <div class="expect-step">
+      <div class="expect-step__left">
+        <div class="expect-step__num">3</div>
+        <div class="expect-step__line"></div>
+      </div>
+      <div class="expect-step__content">
+        <p class="expect-step__title">Afrobeat-inspired grooves and rhythms</p>
+        <p class="expect-step__desc">Discover the joy of Afrobeat music and movement in a structured, supportive setting.</p>
+      </div>
+    </div>
+    <div class="expect-step">
+      <div class="expect-step__left">
+        <div class="expect-step__num">4</div>
+        <div class="expect-step__line"></div>
+      </div>
+      <div class="expect-step__content">
+        <p class="expect-step__title">Supportive, non-competitive environment</p>
+        <p class="expect-step__desc">No mirrors, no pressure — just movement, music, and community.</p>
+      </div>
+    </div>
+    <div class="expect-step">
+      <div class="expect-step__left">
+        <div class="expect-step__num">5</div>
+        <div class="expect-step__line"></div>
+      </div>
+      <div class="expect-step__content">
+        <p class="expect-step__title">Full-body workout with emphasis on lower body</p>
+        <p class="expect-step__desc">Leave feeling energised, stronger, and more connected to your body.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="expect-reassurance">
+    Our instructor will guide you through every movement. No dance experience necessary!
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     6. PRICING SECTION
+     ========================================================================= -->
+<section class="pricing-section reveal" aria-labelledby="pricingHeading">
+  <div class="pricing-section__header">
+    <span class="section-label">Pricing</span>
+    <h2 id="pricingHeading">Flexible Pricing Options</h2>
+    <p style="color: #A1A1A1; font-size: 0.95rem; margin-top: 0.75rem;">All prices are estimates. Final pricing confirmed at booking.</p>
+  </div>
+
+  <div class="pricing-grid">
+
+    <div class="pricing-card reveal reveal-delay-1">
+      <p class="pricing-card__label">Drop-In</p>
+      <p class="pricing-card__price"><sup>$</sup><span id="pricingDropIn">25</span></p>
+      <p class="pricing-card__period">per class</p>
+      <p class="pricing-card__tagline">"Try it out"</p>
+      <div class="pricing-card__cta">
+        <a href="/timetable.html?filter=dance" class="cta-secondary" style="display: block; text-align: center;">Book a Class</a>
+      </div>
+    </div>
+
+    <div class="pricing-card pricing-card--featured reveal reveal-delay-2">
+      <p class="pricing-card__label">Class Pack</p>
+      <p class="pricing-card__price"><sup>$</sup><span id="pricingPack">200</span></p>
+      <p class="pricing-card__period">for 10 classes</p>
+      <p class="pricing-card__tagline">"Best value"</p>
+      <div class="pricing-card__cta">
+        <a href="/timetable.html?filter=dance" class="cta-button" style="display: block; text-align: center;">Get Pack</a>
+      </div>
+    </div>
+
+    <div class="pricing-card reveal reveal-delay-3">
+      <p class="pricing-card__label">Unlimited Monthly</p>
+      <p class="pricing-card__price"><sup>$</sup><span id="pricingMonthly">180</span></p>
+      <p class="pricing-card__period">per month</p>
+      <p class="pricing-card__tagline">"For dedicated students"</p>
+      <div class="pricing-card__cta">
+        <a href="/timetable.html?filter=dance" class="cta-secondary" style="display: block; text-align: center;">Go Unlimited</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     7. FAQ ACCORDION
+     ========================================================================= -->
+<section class="faq-section reveal" aria-labelledby="faqHeading">
+  <div class="faq-section__header">
+    <span class="section-label">Questions</span>
+    <h2 id="faqHeading">Frequently Asked Questions</h2>
+  </div>
+
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" type="button">
+        <span class="faq-item__question-text">Do I need dance experience?</span>
+        <span class="faq-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+      </button>
+      <div class="faq-item__answer" role="region">
+        <div class="faq-item__answer-inner">No! This class is designed for complete beginners. Afro Groove Foundations is built from the ground up for people who have never danced before. Every movement is taught step-by-step, and our Gold Coast instructor will ensure you feel comfortable and confident from your very first class.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" type="button">
+        <span class="faq-item__question-text">Do I need to know Afrobeat music?</span>
+        <span class="faq-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+      </button>
+      <div class="faq-item__answer" role="region">
+        <div class="faq-item__answer-inner">Not at all. We will introduce you to the rhythms and music as we go. Part of the joy of Afro Groove is discovering the music for the first time. Our Southport instructor will guide you through the rhythmic patterns so that the music and movement come together naturally over time.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" type="button">
+        <span class="faq-item__question-text">What if I have no rhythm?</span>
+        <span class="faq-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+      </button>
+      <div class="faq-item__answer" role="region">
+        <div class="faq-item__answer-inner">Everyone has rhythm! We will help you find yours through simple, repeatable patterns. Rhythm is a skill that develops with practice, and Afro Groove Foundations is specifically designed to build it progressively. Many of our Gold Coast students are surprised by how quickly their sense of timing improves.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" type="button">
+        <span class="faq-item__question-text">What should I wear?</span>
+        <span class="faq-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+      </button>
+      <div class="faq-item__answer" role="region">
+        <div class="faq-item__answer-inner">Comfortable activewear that allows freedom of movement is ideal. Barefoot or indoor dance shoes work well for this class. Avoid restrictive clothing or heavy footwear. Bring a water bottle — this is an energetic class and you will want to stay hydrated throughout.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" type="button">
+        <span class="faq-item__question-text">Will I be able to keep up as a beginner?</span>
+        <span class="faq-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+      </button>
+      <div class="faq-item__answer" role="region">
+        <div class="faq-item__answer-inner">Absolutely. We teach step-by-step and repeat patterns until everyone feels comfortable. No one is left behind in our Southport studio. The class is structured so that beginners can follow along while also providing enough variety to keep things interesting as you progress. Our Gold Coast instructor is experienced in teaching mixed-ability groups.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     8. RELATED PROGRAMS
+     ========================================================================= -->
+<section class="related-section reveal" aria-labelledby="relatedHeading">
+  <div class="related-section__header">
+    <span class="section-label">Explore More</span>
+    <h2 id="relatedHeading">You Might Also Like</h2>
+  </div>
+
+  <!-- Populated by JS from site-config.json -->
+  <div class="related-grid" id="relatedGrid">
+    <!-- Fallback static (overwritten by JS) -->
+    <div class="related-card">
+      <div class="related-card__img" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+      </div>
+      <div class="related-card__body">
+        <h3 class="related-card__name">Movement Dance</h3>
+        <p class="related-card__desc">Build body flow and confidence through expressive movement.</p>
+        <a href="/programs/movement-dance.html" class="btn-learn" style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #8B5CF6; text-decoration: none; border: 1.5px solid rgba(139, 92, 246, 0.35); padding: 0.55rem 1.25rem; border-radius: 50px; display: inline-block; transition: all 0.3s ease;">Learn More</a>
+      </div>
+    </div>
+    <div class="related-card">
+      <div class="related-card__img" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+      </div>
+      <div class="related-card__body">
+        <h3 class="related-card__name">Choreography Fusion</h3>
+        <p class="related-card__desc">Women's movement and confidence through choreographed dance.</p>
+        <a href="/programs/choreography-fusion.html" class="btn-learn" style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #8B5CF6; text-decoration: none; border: 1.5px solid rgba(139, 92, 246, 0.35); padding: 0.55rem 1.25rem; border-radius: 50px; display: inline-block; transition: all 0.3s ease;">Learn More</a>
+      </div>
+    </div>
+    <div class="related-card">
+      <div class="related-card__img" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+      </div>
+      <div class="related-card__body">
+        <h3 class="related-card__name">Pole Flow</h3>
+        <p class="related-card__desc">Create smooth transitions and flowing movement around the pole.</p>
+        <a href="/programs/pole-flow.html" class="btn-learn" style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #8B5CF6; text-decoration: none; border: 1.5px solid rgba(139, 92, 246, 0.35); padding: 0.55rem 1.25rem; border-radius: 50px; display: inline-block; transition: all 0.3s ease;">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     9. SEO CONTENT SECTION
+     ========================================================================= -->
+<section class="seo-section reveal" aria-labelledby="seoHeading">
+  <div class="seo-section__inner">
+
+    <h2 id="seoHeading">Afro Groove Dance Classes on the Gold Coast — Beginner-Friendly at UNDGRND Movement Southport</h2>
+
+    <p>
+      Afro Groove dance is one of the most accessible and joyful forms of movement available to adults on the Gold Coast. Rooted in the rhythms and energy of Afrobeat music, Afro Groove combines expressive hip movement, full-body coordination, and rhythmic footwork into a dance fitness format that anyone can enjoy — regardless of experience, fitness level, or background. At <strong>UNDGRND Movement</strong> in Southport, our Afro Groove Foundations class has been designed specifically for beginners on the Gold Coast who want to discover the joy of dance in a safe, supportive, and genuinely welcoming environment.
+    </p>
+
+    <h3>What Is Afro Groove Dance?</h3>
+
+    <p>
+      Afro Groove is a contemporary dance fitness style inspired by West African dance traditions and modern Afrobeat music. It emphasises fluid hip movement, rhythmic coordination, and expressive full-body engagement. Unlike many fitness-focused dance styles, Afro Groove prioritises the quality and feeling of movement over performance — making it an ideal starting point for adults on the Gold Coast who are new to dance or returning after a long break.
+    </p>
+
+    <p>
+      The Gold Coast has a vibrant and growing movement community, and Afro Groove is one of the fastest-growing dance styles in the region. Its appeal lies in its accessibility: the movements are grounded, rhythmic, and deeply satisfying to perform. You do not need to be a trained dancer to enjoy Afro Groove. You simply need to be willing to move.
+    </p>
+
+    <h3>Benefits of Afrobeat Dance Fitness</h3>
+
+    <p>
+      Afro Groove offers a wide range of physical and mental benefits that make it one of the most rewarding fitness activities available on the Gold Coast. As a cardiovascular workout, a single 60-minute Afro Groove class can be as effective as a gym session — but far more enjoyable. The rhythmic, repetitive nature of the movements builds endurance and aerobic capacity without the monotony of traditional cardio exercise.
+    </p>
+
+    <p>
+      Hip mobility is one of the most significant physical benefits of regular Afro Groove practice. Many Gold Coast adults spend long hours sitting at desks or in cars, leading to tight hip flexors, reduced mobility, and lower back discomfort. The hip-focused movements in Afro Groove Foundations actively work to counteract these patterns, improving flexibility, reducing stiffness, and building the kind of functional mobility that supports everyday movement.
+    </p>
+
+    <p>
+      Coordination and body awareness develop rapidly through Afro Groove practice. The class teaches students to move different parts of the body independently and in sequence — a skill that has broad benefits for sport, everyday movement, and physical confidence. Gold Coast students regularly report improvements in their balance, posture, and general body control after just a few weeks of regular practice.
+    </p>
+
+    <h3>Why Afrobeat Dance Is Great for Beginners</h3>
+
+    <p>
+      Afrobeat dance is uniquely well-suited to beginners for several reasons. The movements are grounded and low-impact, meaning they are accessible to adults of all fitness levels without placing excessive strain on joints or muscles. The rhythmic structure of Afrobeat music makes it easier to learn and remember movement sequences, as the body naturally responds to the pulse of the music. And the joyful, communal spirit of Afrobeat culture creates an atmosphere in class that is warm, encouraging, and genuinely fun.
+    </p>
+
+    <p>
+      At our Southport studio, Afro Groove Foundations is structured to ensure that complete beginners feel comfortable from their very first class. Movements are introduced one at a time, built up gradually, and repeated until everyone in the class feels confident before moving on. There is no pressure to perform, no mirrors to feel self-conscious in front of, and no competition between students. The Gold Coast community that has formed around our Afro Groove classes is one of the most welcoming and supportive groups in our studio.
+    </p>
+
+    <h3>How UNDGRND Movement Teaches Afro Groove</h3>
+
+    <p>
+      UNDGRND Movement's approach to teaching Afro Groove is rooted in the studio's broader philosophy of foundational movement for body and mind. Every class begins with a structured warm-up that prepares the body for the demands of the session. Movement sequences are introduced progressively, with each new element building on what has come before. The instructor provides clear, accessible cues that help students understand not just what to do, but why — building body awareness alongside physical skill.
+    </p>
+
+    <p>
+      Our Southport instructor brings qualifications in movement practice, yoga instruction, and trauma-informed movement to every Afro Groove class. This means that the class is not just physically safe — it is also emotionally safe. Students are never pushed beyond their comfort level, and the studio environment is deliberately designed to be non-judgmental and inclusive. Gold Coast adults of all ages, backgrounds, and body types are welcome in our Afro Groove Foundations class.
+    </p>
+
+    <h3>Located in Southport, Serving the Gold Coast</h3>
+
+    <p>
+      UNDGRND Movement is located at 163 Ferry Rd, Southport — making it easily accessible for Gold Coast residents from Surfers Paradise, Broadbeach, Bundall, Main Beach, and surrounding suburbs. Our Southport studio is purpose-built for movement classes, with a sprung floor, adequate space for full-body movement, and a welcoming atmosphere that reflects the values of the UNDGRND Movement community.
+    </p>
+
+    <p>
+      For Gold Coast adults who have been thinking about trying dance but have not yet taken the first step, Afro Groove Foundations is the ideal starting point. The class is designed to remove every barrier to entry — no experience required, no special equipment needed, no performance pressure. Just movement, music, and community in the heart of Southport.
+    </p>
+
+    <h3>Building Confidence Through Rhythm and Movement</h3>
+
+    <p>
+      One of the most consistent things Gold Coast students tell us about Afro Groove Foundations is how much it has improved their confidence — not just in dance, but in everyday life. There is something deeply empowering about learning to move your body with intention and joy. When you discover that you can pick up a new movement pattern, feel the rhythm of the music, and express yourself through dance, it changes the way you carry yourself outside the studio as well.
+    </p>
+
+    <p>
+      The confidence built in Afro Groove Foundations often leads students to explore other programs at UNDGRND Movement. Many of our Gold Coast students progress from Afro Groove into Choreography Fusion or Movement Dance, building on the foundation of body awareness and rhythmic confidence they have developed. The progression path is natural and entirely student-led — there is no pressure to advance before you are ready.
+    </p>
+
+    <h3>A Supportive Community in Southport</h3>
+
+    <p>
+      UNDGRND Movement is more than a dance studio — it is a community. The Gold Coast adults who attend our Afro Groove Foundations classes come from all walks of life, and what unites them is a shared commitment to movement, growth, and mutual support. Our Southport studio is a place where you can be yourself, move at your own pace, and be celebrated for showing up — regardless of how the class goes.
+    </p>
+
+    <p>
+      Ready to feel the rhythm? <strong>Book your first Afro Groove class today</strong> at UNDGRND Movement, Southport — Gold Coast's most welcoming beginner dance studio.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     10. CTA SECTION
+     ========================================================================= -->
+<section class="cta-section reveal" aria-labelledby="ctaHeading">
+  <div class="cta-section__inner">
+    <h2 id="ctaHeading">Ready to Start Your Afro Groove Journey?</h2>
+    <p class="cta-section__sub">Join Gold Coast's most welcoming beginner dance class at UNDGRND Movement in Southport. No experience needed — just bring yourself and a willingness to move.</p>
+    <div class="cta-section__buttons">
+      <a href="/timetable.html?filter=dance" class="cta-button">Book Your First Class</a>
+      <a href="/contact.html" class="cta-secondary">Questions? Contact Us</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     FOOTER — copy contents of /components/footer-component.html here
+     ========================================================================= -->
+
+
+<!-- =========================================================================
+     PAGE-SPECIFIC JAVASCRIPT
+     ========================================================================= -->
+<script>
+(function () {
+  'use strict';
+
+  /* -------------------------------------------------------------------------
+     1. Inject schema markup
+  ------------------------------------------------------------------------- */
+  if (typeof SchemaGenerator !== 'undefined') {
+    var breadcrumb = SchemaGenerator.generateBreadcrumbSchema([
+      { name: 'Home',   url: 'https://www.undrgrnd.com.au/' },
+      { name: 'Adults', url: 'https://www.undrgrnd.com.au/adults.html' },
+      { name: 'Afro Groove Foundations', url: 'https://www.undrgrnd.com.au/programs/afro-groove-foundations.html' }
+    ]);
+    if (breadcrumb) document.head.insertAdjacentHTML('beforeend', breadcrumb);
+  }
+
+  function escHtml(str) {
+    if (!str) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  /* Focus area icons */
+  var focusIcons = [
+    '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>',
+    '<path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle>',
+    '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>',
+    '<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>'
+  ];
+
+  /* Related programs to display */
+  var relatedIds = ['movement-dance', 'choreography-fusion', 'pole-flow'];
+
+  /* -------------------------------------------------------------------------
+     2. Load data from site-config.json
+  ------------------------------------------------------------------------- */
+  fetch('/site-config.json')
+    .then(function (res) { return res.json(); })
+    .then(function (config) {
+
+      /* Find afro-groove program */
+      var program = null;
+      var adults = config.programs && config.programs.adults;
+      if (adults) {
+        Object.keys(adults).forEach(function (catKey) {
+          adults[catKey].forEach(function (p) {
+            if (p.id === 'afro-groove') program = p;
+          });
+        });
+      }
+
+      if (!program) return;
+
+      /* Inject Service schema */
+      if (typeof SchemaGenerator !== 'undefined' && SchemaGenerator.generateServiceSchema) {
+        SchemaGenerator.generateServiceSchema(program).then(function (tag) {
+          if (tag) document.head.insertAdjacentHTML('beforeend', tag);
+        });
+      }
+
+      /* Update hero level badge */
+      var heroLevel = document.getElementById('heroLevel');
+      if (heroLevel && program.level) heroLevel.textContent = program.level;
+
+      /* Update meta description */
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc && program.short_description) {
+        metaDesc.setAttribute('content', program.short_description + ' at UNDGRND Movement, Southport. Beginner-friendly Afrobeat dance fitness on the Gold Coast.');
+      }
+
+      /* Update full description */
+      var descEl = document.getElementById('programDesc');
+      if (descEl && program.full_description) descEl.textContent = program.full_description;
+
+      /* Update info box */
+      var infoLevel = document.getElementById('infoLevel');
+      if (infoLevel && program.level) infoLevel.textContent = program.level;
+
+      var infoCategory = document.getElementById('infoCategory');
+      if (infoCategory && program.category) infoCategory.textContent = program.category;
+
+      /* Update pricing */
+      var p = program.estimated_pricing || {};
+      if (p.drop_in) {
+        var els = ['priceDropIn', 'pricingDropIn'];
+        els.forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) el.textContent = id === 'priceDropIn' ? '$' + p.drop_in : p.drop_in;
+        });
+      }
+      if (p.class_pack_10) {
+        var packEls = ['pricePack', 'pricingPack'];
+        packEls.forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) el.textContent = id === 'pricePack' ? '$' + p.class_pack_10 : p.class_pack_10;
+        });
+      }
+      if (p.unlimited_monthly) {
+        var monthlyEls = ['priceMonthly', 'pricingMonthly'];
+        monthlyEls.forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) el.textContent = id === 'priceMonthly' ? '$' + p.unlimited_monthly : p.unlimited_monthly;
+        });
+      }
+
+      /* Build core focus cards */
+      var focusGrid = document.getElementById('focusGrid');
+      if (focusGrid && program.core_focus && program.core_focus.length) {
+        var focusHtml = '';
+        program.core_focus.forEach(function (item, i) {
+          var parts = item.split(' - ');
+          var title = parts[0] || item;
+          var sub   = parts[1] || '';
+          var icon  = focusIcons[i] || focusIcons[0];
+          var delay = i < 4 ? ' reveal-delay-' + (i + 1) : '';
+          focusHtml += '<div class="focus-card reveal' + delay + '">'
+            + '<div class="focus-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24">' + icon + '</svg></div>'
+            + '<p class="focus-card__text">' + escHtml(title) + '</p>'
+            + (sub ? '<p class="focus-card__sub">' + escHtml(sub) + '</p>' : '')
+            + '</div>';
+        });
+        focusGrid.innerHTML = focusHtml;
+      }
+
+      /* Build who-it's-for list */
+      var whoList = document.getElementById('whoList');
+      if (whoList && program.who_its_for && program.who_its_for.length) {
+        var whoHtml = '';
+        program.who_its_for.forEach(function (item) {
+          whoHtml += '<li>'
+            + '<svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>'
+            + escHtml(item)
+            + '</li>';
+        });
+        whoList.innerHTML = whoHtml;
+      }
+
+      /* Build what-to-expect timeline */
+      var timeline = document.getElementById('expectTimeline');
+      if (timeline && program.what_to_expect && program.what_to_expect.length) {
+        var timelineHtml = '';
+        program.what_to_expect.forEach(function (item, i) {
+          var isLast = i === program.what_to_expect.length - 1;
+          timelineHtml += '<div class="expect-step">'
+            + '<div class="expect-step__left">'
+            +   '<div class="expect-step__num">' + (i + 1) + '</div>'
+            +   (isLast ? '' : '<div class="expect-step__line"></div>')
+            + '</div>'
+            + '<div class="expect-step__content">'
+            +   '<p class="expect-step__title">' + escHtml(item) + '</p>'
+            + '</div>'
+            + '</div>';
+        });
+        timeline.innerHTML = timelineHtml;
+      }
+
+      /* Build related programs */
+      var relatedGrid = document.getElementById('relatedGrid');
+      if (relatedGrid && adults) {
+        var relatedPrograms = [];
+        Object.keys(adults).forEach(function (catKey) {
+          adults[catKey].forEach(function (p2) {
+            if (relatedIds.indexOf(p2.id) !== -1) relatedPrograms.push(p2);
+          });
+        });
+
+        /* Sort by relatedIds order */
+        relatedPrograms.sort(function (a, b) {
+          return relatedIds.indexOf(a.id) - relatedIds.indexOf(b.id);
+        });
+
+        if (relatedPrograms.length) {
+          var relHtml = '';
+          relatedPrograms.forEach(function (rp) {
+            relHtml += '<div class="related-card">'
+              + '<div class="related-card__img" aria-hidden="true">'
+              +   '<svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>'
+              + '</div>'
+              + '<div class="related-card__body">'
+              +   '<h3 class="related-card__name">' + escHtml(rp.name) + '</h3>'
+              +   '<p class="related-card__desc">' + escHtml(rp.short_description || '') + '</p>'
+              +   '<a href="/programs/' + escHtml(rp.slug) + '.html" style="font-family: \'Outfit\', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #8B5CF6; text-decoration: none; border: 1.5px solid rgba(139, 92, 246, 0.35); padding: 0.55rem 1.25rem; border-radius: 50px; display: inline-block; transition: all 0.3s ease;">Learn More</a>'
+              + '</div>'
+              + '</div>';
+          });
+          relatedGrid.innerHTML = relHtml;
+        }
+      }
+
+      initReveal();
+    })
+    .catch(function (err) {
+      console.warn('afro-groove-foundations.html: site-config.json load error —', err.message);
+    });
+
+  /* -------------------------------------------------------------------------
+     3. Sticky Book Now button
+  ------------------------------------------------------------------------- */
+  var stickyBook = document.getElementById('stickyBook');
+  var heroEl     = document.querySelector('.prog-hero');
+  var stickyLink = stickyBook ? stickyBook.querySelector('a') : null;
+
+  window.addEventListener('scroll', function () {
+    if (!stickyBook) return;
+    var heroBottom = heroEl ? heroEl.getBoundingClientRect().bottom : 0;
+    if (heroBottom < 0) {
+      stickyBook.classList.add('visible');
+      stickyBook.setAttribute('aria-hidden', 'false');
+      if (stickyLink) stickyLink.removeAttribute('tabindex');
+    } else {
+      stickyBook.classList.remove('visible');
+      stickyBook.setAttribute('aria-hidden', 'true');
+      if (stickyLink) stickyLink.setAttribute('tabindex', '-1');
+    }
+  }, { passive: true });
+
+  /* -------------------------------------------------------------------------
+     4. FAQ accordion
+  ------------------------------------------------------------------------- */
+  document.querySelectorAll('.faq-item__question').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item   = btn.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function (el) {
+        el.classList.remove('open');
+        el.querySelector('.faq-item__question').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  /* -------------------------------------------------------------------------
+     5. Scroll animations
+  ------------------------------------------------------------------------- */
+  function initReveal() {
+    var revealEls = document.querySelectorAll('.reveal:not(.visible)');
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      revealEls.forEach(function (el) { observer.observe(el); });
+    } else {
+      revealEls.forEach(function (el) { el.classList.add('visible'); });
+    }
+  }
+
+  initReveal();
+
+  /* -------------------------------------------------------------------------
+     6. Smooth scroll for anchor links
+  ------------------------------------------------------------------------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var targetId = anchor.getAttribute('href').slice(1);
+      var target   = document.getElementById(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+}());
+</script>
+
+</body>
+</html>

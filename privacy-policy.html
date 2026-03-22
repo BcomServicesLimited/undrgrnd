@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title & Meta Description -->
+  <title>Privacy Policy | UNDGRND Movement</title>
+  <meta name="description" content="Privacy policy for UNDGRND Movement. Learn how we collect, use, and protect your personal information.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.undrgrnd.com.au/privacy-policy.html">
+
+  <!-- Robots — legal pages should be indexed but not followed for SEO -->
+  <meta name="robots" content="noindex, follow">
+
+  <!-- Favicon placeholders -->
+  <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="/css/global.css">
+
+  <!-- Page-specific styles -->
+  <style>
+    /* -----------------------------------------------------------------------
+       PAGE HEADER
+    ----------------------------------------------------------------------- */
+    .legal-hero {
+      padding: 10rem 5% 4rem;
+      background: #0A0A0A;
+      border-bottom: 1px solid rgba(139, 92, 246, 0.12);
+    }
+
+    .legal-hero__inner {
+      max-width: 900px;
+      margin-inline: auto;
+    }
+
+    .legal-hero__eyebrow {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #A78BFA;
+      margin-bottom: 0.75rem;
+    }
+
+    .legal-hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 0.95;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 1.25rem;
+    }
+
+    .legal-hero__meta {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.82rem;
+      color: rgba(161, 161, 161, 0.6);
+      margin-bottom: 1.25rem;
+    }
+
+    .legal-hero__meta svg {
+      width: 13px;
+      height: 13px;
+      stroke: rgba(161, 161, 161, 0.5);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .legal-hero__intro {
+      font-size: 1rem;
+      color: #A1A1A1;
+      line-height: 1.75;
+      max-width: 720px;
+    }
+
+    /* -----------------------------------------------------------------------
+       MAIN LAYOUT
+    ----------------------------------------------------------------------- */
+    .legal-body {
+      padding: 5rem 5% 8rem;
+      background: #0A0A0A;
+    }
+
+    .legal-body__inner {
+      max-width: 900px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+
+    @media (min-width: 1024px) {
+      .legal-body__inner {
+        grid-template-columns: 220px 1fr;
+        gap: 5rem;
+        align-items: start;
+      }
+    }
+
+    /* -----------------------------------------------------------------------
+       TABLE OF CONTENTS
+    ----------------------------------------------------------------------- */
+    .toc {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 16px;
+      padding: 1.75rem;
+    }
+
+    @media (min-width: 1024px) {
+      .toc {
+        position: sticky;
+        top: 100px;
+      }
+    }
+
+    .toc__heading {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(161, 161, 161, 0.5);
+      margin-bottom: 1rem;
+    }
+
+    .toc__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .toc__list li a {
+      display: block;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #A1A1A1;
+      text-decoration: none;
+      padding: 0.4rem 0.6rem;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      line-height: 1.4;
+    }
+
+    .toc__list li a:hover {
+      color: #A78BFA;
+      background: rgba(139, 92, 246, 0.08);
+    }
+
+    .toc__list li a.active {
+      color: #FFFFFF;
+      background: rgba(139, 92, 246, 0.12);
+    }
+
+    /* -----------------------------------------------------------------------
+       LEGAL CONTENT
+    ----------------------------------------------------------------------- */
+    .legal-content {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+    }
+
+    .legal-section {
+      scroll-margin-top: 100px;
+    }
+
+    .legal-section__number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #8B5CF6;
+      margin-bottom: 0.75rem;
+    }
+
+    .legal-section h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .legal-section p {
+      font-size: 0.95rem;
+      color: #A1A1A1;
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+
+    .legal-section p:last-child { margin-bottom: 0; }
+
+    .legal-section ul {
+      list-style: none;
+      margin: 0.75rem 0 1rem;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .legal-section ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.93rem;
+      color: #A1A1A1;
+      line-height: 1.6;
+    }
+
+    .legal-section ul li::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #8B5CF6;
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+
+    .legal-section ul li strong { color: #FFFFFF; }
+
+    .legal-section a {
+      color: #A78BFA;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+
+    .legal-section a:hover { color: #FFFFFF; }
+
+    /* Highlight box */
+    .legal-highlight {
+      background: rgba(139, 92, 246, 0.06);
+      border: 1px solid rgba(139, 92, 246, 0.15);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .legal-highlight p {
+      font-size: 0.9rem;
+      color: #A1A1A1;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .legal-highlight p strong { color: #A78BFA; }
+
+    /* Warning box */
+    .legal-warning {
+      background: rgba(245, 158, 11, 0.06);
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .legal-warning p {
+      font-size: 0.9rem;
+      color: rgba(161, 161, 161, 0.9);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .legal-warning p strong { color: #F59E0B; }
+
+    /* Contact block */
+    .legal-contact-block {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 14px;
+      padding: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .legal-contact-block__row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .legal-contact-block__row:last-child { border-bottom: none; padding-bottom: 0; }
+    .legal-contact-block__row:first-child { padding-top: 0; }
+
+    .legal-contact-block__label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(161, 161, 161, 0.5);
+      min-width: 80px;
+      margin-top: 1px;
+    }
+
+    .legal-contact-block__value {
+      font-size: 0.92rem;
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+
+    .legal-contact-block__value a {
+      color: #A78BFA;
+      text-decoration: none;
+    }
+
+    .legal-contact-block__value a:hover { color: #FFFFFF; }
+
+    /* -----------------------------------------------------------------------
+       BACK TO TOP
+    ----------------------------------------------------------------------- */
+    .back-to-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #A1A1A1;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      margin-top: 1rem;
+    }
+
+    .back-to-top:hover { color: #A78BFA; }
+
+    .back-to-top svg {
+      width: 14px;
+      height: 14px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- =========================================================================
+     NAVIGATION — copy contents of /components/nav-component.html here
+     ========================================================================= -->
+
+
+<!-- =========================================================================
+     1. PAGE HEADER
+     ========================================================================= -->
+<header class="legal-hero" id="top">
+  <div class="legal-hero__inner">
+    <p class="legal-hero__eyebrow">UNDGRND Movement &mdash; Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="legal-hero__meta">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      Last Updated: 21 March 2026
+    </p>
+    <p class="legal-hero__intro">UNDGRND Movement is committed to protecting your privacy. This policy explains how we collect, use, and safeguard your information in accordance with the <em>Privacy Act 1988</em> (Cth) and the Australian Privacy Principles.</p>
+  </div>
+</header>
+
+
+<!-- =========================================================================
+     2. MAIN BODY — TOC + CONTENT
+     ========================================================================= -->
+<main class="legal-body" aria-label="Privacy policy content">
+  <div class="legal-body__inner">
+
+    <!-- TABLE OF CONTENTS -->
+    <nav class="toc" aria-label="Privacy policy table of contents">
+      <p class="toc__heading">Contents</p>
+      <ol class="toc__list">
+        <li><a href="#section-1">1. Information We Collect</a></li>
+        <li><a href="#section-2">2. How We Use Information</a></li>
+        <li><a href="#section-3">3. How We Store Information</a></li>
+        <li><a href="#section-4">4. Third Parties</a></li>
+        <li><a href="#section-5">5. Your Rights</a></li>
+        <li><a href="#section-6">6. Changes to This Policy</a></li>
+        <li><a href="#section-7">7. Contact</a></li>
+      </ol>
+    </nav>
+
+    <!-- LEGAL CONTENT -->
+    <div class="legal-content">
+
+      <!-- ----------------------------------------------------------------
+           SECTION 1: Information We Collect
+      ----------------------------------------------------------------- -->
+      <section class="legal-section" id="section-1" aria-labelledby="s1heading">
+        <span class="legal-section__number" aria-hidden="true">1</span>
+        <h2 id="s1heading">Information We Collect</h2>
+
+        <p>We collect personal information that is reasonably necessary to provide our movement classes and related services. The types of information we may collect include:</p>
+
+        <ul>
+          <li><strong>Personal identification information:</strong> Your full name, email address, and phone number, collected when you register, book a class, or contact us.</li>
+          <li><strong>Health information:</strong> Medical clearance documentation for Recovery Movement classes. This sensitive information is collected only where required for your safety and is handled with the highest level of care in accordance with the Australian Privacy Principles.</li>
+          <li><strong>Booking information:</strong> Class preferences, attendance history, and scheduling data collected through our booking system.</li>
+          <li><strong>Payment information:</strong> Payment details are processed securely through third-party payment providers. We do not store your full card details on our systems.</li>
+          <li><strong>Communications:</strong> Records of correspondence between you and UNDGRND Movement, including enquiries, feedback, and support requests.</li>
+        </ul>
+
+        <div class="legal-highlight">
+          <p><strong>Note on health information:</strong> Health and medical information is classified as sensitive information under the <em>Privacy Act 1988</em>. We collect this information only with your explicit consent and only where it is directly necessary for your safety in class.</p>
+        </div>
+      </section>
+
+      <!-- ----------------------------------------------------------------
+           SECTION 2: How We Use Information
+      ----------------------------------------------------------------- -->
+      <section class="legal-section" id="section-2" aria-labelledby="s2heading">
+        <span class="legal-section__number" aria-hidden="true">2</span>
+        <h2 id="s2heading">How We Use Information</h2>
+
+        <p>We use the personal information we collect for the following purposes:</p>
+
+        <ul>
+          <li><strong>Class bookings and schedule management:</strong> Processing your bookings, managing class capacity, and maintaining your attendance records.</li>
+          <li><strong>Communication:</strong> Sending you information about your classes, schedule changes, cancellations, and studio updates. You may opt out of non-essential communications at any time.</li>
+          <li><strong>Safety and medical clearance verification:</strong> Ensuring that students attending Recovery Movement classes have appropriate medical clearance from their treating practitioner.</li>
+          <li><strong>Service improvement:</strong> Understanding how our services are used so we can improve the quality and range of programs we offer.</li>
+          <li><strong>Legal compliance:</strong> Meeting our obligations under Australian law, including tax, financial record-keeping, and child safety requirements.</li>
+          <li><strong>Emergency contact:</strong> In the event of an injury or medical emergency during a class, we may use your emergency contact information to notify your nominated person.</li>
+        </ul>
+
+        <p>We will not use your personal information for any purpose that is not described in this policy without first obtaining your consent.</p>
+      </section>
+
+      <!-- ----------------------------------------------------------------
+           SECTION 3: How We Store Information
+      ----------------------------------------------------------------- -->
+      <section class="legal-section" id="section-3" aria-labelledby="s3heading">
+        <span class="legal-section__number" aria-hidden="true">3</span>
+        <h2 id="s3heading">How We Store Information</h2>
+
+        <p>We take the security of your personal information seriously. The following measures are in place to protect your data:</p>
+
+        <ul>
+          <li><strong>Secure digital systems:</strong> Personal information is stored in password-protected, encrypted digital systems with access restricted to authorised staff only.</li>
+          <li><strong>Limited access:</strong> Only staff members who require access to your information to perform their duties are permitted to view it.</li>
+          <li><strong>Data retention:</strong> We retain your personal information for as long as you are an active client of UNDGRND Movement. Financial records are retained for a minimum of seven years in accordance with Australian tax law. Health information is retained only for as long as it is required for safety purposes.</li>
+          <li><strong>No sale of data:</strong> We do not sell, rent, or share your personal information with third parties for marketing purposes.</li>
+          <li><strong>Data breach response:</strong> In the event of a data breach that is likely to result in serious harm, we will notify affected individuals and the Office of the Australian Information Commissioner (OAIC) in accordance with the Notifiable Data Breaches scheme.</li>
+        </ul>
+
+        <div class="legal-warning">
+          <p><strong>Important:</strong> While we take all reasonable steps to protect your information, no data transmission over the internet or electronic storage system is completely secure. We cannot guarantee absolute security.</p>
+        </div>
+      </section>
+
+      <!-- ----------------------------------------------------------------
+           SECTION 4: Third Parties
+      ----------------------------------------------------------------- -->
+      <section class="legal-section" id="section-4" aria-labelledby="s4heading">
+        <span class="legal-section__number" aria-hidden="true">4</span>
+        <h2 id="s4heading">Third Parties</h2>
+
+        <p>We use a small number of trusted third-party service providers to operate our business. These providers may handle your personal information as part of their service:</p>
+
+        <ul>
+          <li><strong>Class Manager:</strong> Our booking system, which processes class registrations, attendance records, and related booking data. Class Manager operates under its own privacy policy.</li>
+          <li><strong>Email service provider:</strong> Used to send you booking confirmations, class reminders, and studio communications.</li>
+          <li><strong>Payment processor:</strong> Handles secure payment transactions. We use a PCI-DSS compliant payment provider. We do not store your full payment card details.</li>
+          <li><strong>Website hosting provider:</strong> Hosts the UNDGRND Movement website and associated files.</li>
+        </ul>
+
+        <p>All third-party service providers are bound by confidentiality obligations and are required to handle your personal information in accordance with Australian privacy law. We do not permit third parties to use your personal information for their own marketing purposes.</p>
+
+        <p>We will not disclose your personal information to any other third party without your consent, except where required by law or to protect the safety of an individual.</p>
+      </section>
+
+      <!-- ----------------------------------------------------------------
+           SECTION 5: Your Rights
+      ----------------------------------------------------------------- -->
+      <section class="legal-section" id="section-5" aria-labelledby="s5heading">
+        <span class="legal-section__number" aria-hidden="true">5</span>
+        <h2 id="s5heading">Your Rights</h2>
+
+        <p>Under the Australian Privacy Principles (APPs) contained in the <em>Privacy Act 1988</em> (Cth), you have the following rights in relation to your personal information:</p>
+
+        <ul>
+          <li><strong>Right to access:</strong> You may request access to the personal information we hold about you. We will respond to access requests within 30 days.</li>
+          <li><strong>Right to correction:</strong> If you believe that any personal information we hold about you is inaccurate, incomplete, or out of date, you may request that we correct it.</li>
+          <li><strong>Right to deletion:</strong> You may request that we delete your personal information. We will comply with deletion requests where we are not legally required to retain the information.</li>
+          <li><strong>Right to opt out:</strong> You may opt out of non-essential communications (such as newsletters or promotional messages) at any time by contacting us or using the unsubscribe link in any marketing email.</li>
+          <li><strong>Right to complain:</strong> If you believe we have mishandled your personal information, you have the right to lodge a complaint with the Office of the Australian Information Commissioner (OAIC).</li>
+        </ul>
+
+        <div class="legal-highlight">
+          <p><strong>GDPR considerations:</strong> If you are located in the European Union or European Economic Area, you may also have rights under the General Data Protection Regulation (GDPR), including the right to data portability and the right to object to processing. Please contact us to exercise these rights.</p>
+        </div>
+
+        <p>To exercise any of your rights, please contact us using the details in Section 7 below.</p>
+      </section>
+
+      <!-- ----------------------------------------------------------------
+           SECTION 6: Changes to This Policy
+      ----------------------------------------------------------------- -->
+      <section class="legal-section" id="section-6" aria-labelledby="s6heading">
+        <span class="legal-section__number" aria-hidden="true">6</span>
+        <h2 id="s6heading">Changes to This Policy</h2>
+
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make changes, we will:</p>
+
+        <ul>
+          <li>Post the updated policy on this page with a new "Last Updated" date.</li>
+          <li>Notify active clients of material changes via email where appropriate.</li>
+        </ul>
+
+        <p>Your continued use of UNDGRND Movement's services after a policy update has been posted constitutes your acceptance of the revised policy. We encourage you to review this page periodically to stay informed about how we protect your information.</p>
+
+        <p>If you do not agree with any changes to this policy, you may request deletion of your personal information by contacting us.</p>
+      </section>
+
+      <!-- ----------------------------------------------------------------
+           SECTION 7: Contact
+      ----------------------------------------------------------------- -->
+      <section class="legal-section" id="section-7" aria-labelledby="s7heading">
+        <span class="legal-section__number" aria-hidden="true">7</span>
+        <h2 id="s7heading">Contact for Privacy Concerns</h2>
+
+        <p>If you have any questions about this Privacy Policy, wish to exercise your rights, or wish to make a privacy complaint, please contact us:</p>
+
+        <div class="legal-contact-block">
+          <div class="legal-contact-block__row">
+            <span class="legal-contact-block__label">Business</span>
+            <span class="legal-contact-block__value">UNDGRND Movement</span>
+          </div>
+          <div class="legal-contact-block__row">
+            <span class="legal-contact-block__label">Address</span>
+            <span class="legal-contact-block__value">163 Ferry Rd, Southport QLD 4215, Australia</span>
+          </div>
+          <div class="legal-contact-block__row">
+            <span class="legal-contact-block__label">Email</span>
+            <span class="legal-contact-block__value">
+              <a href="mailto:olga.coaching1@gmail.com" id="privacyEmail">olga.coaching1@gmail.com</a>
+            </span>
+          </div>
+        </div>
+
+        <p>We will respond to all privacy enquiries within 30 days of receipt.</p>
+
+        <p>If you are not satisfied with our response to a privacy complaint, you may contact the <strong>Office of the Australian Information Commissioner (OAIC)</strong>:</p>
+
+        <ul>
+          <li><strong>Website:</strong> <a href="https://www.oaic.gov.au/" target="_blank" rel="noopener noreferrer">www.oaic.gov.au</a></li>
+          <li><strong>Phone:</strong> 1300 363 992</li>
+          <li><strong>Post:</strong> GPO Box 5218, Sydney NSW 2001</li>
+        </ul>
+
+        <p>The OAIC can investigate complaints about the handling of personal information by organisations covered by the <em>Privacy Act 1988</em>.</p>
+
+        <a href="#top" class="back-to-top" aria-label="Back to top of page">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+          Back to top
+        </a>
+      </section>
+
+    </div>
+    <!-- END LEGAL CONTENT -->
+
+  </div>
+</main>
+
+
+<!-- =========================================================================
+     FOOTER — copy contents of /components/footer-component.html here
+     ========================================================================= -->
+
+
+<!-- =========================================================================
+     PAGE-SPECIFIC JAVASCRIPT
+     ========================================================================= -->
+<script>
+(function () {
+  'use strict';
+
+  /* -------------------------------------------------------------------------
+     1. Load contact email from site-config.json
+  ------------------------------------------------------------------------- */
+  fetch('/site-config.json')
+    .then(function (res) { return res.json(); })
+    .then(function (config) {
+      var contact = config.business && config.business.contact;
+      if (contact && contact.email) {
+        var emailEl = document.getElementById('privacyEmail');
+        if (emailEl) {
+          emailEl.href = 'mailto:' + contact.email;
+          emailEl.textContent = contact.email;
+        }
+      }
+    })
+    .catch(function (err) {
+      console.warn('privacy-policy.html: site-config.json load error \u2014', err.message);
+    });
+
+  /* -------------------------------------------------------------------------
+     2. TOC active link on scroll
+  ------------------------------------------------------------------------- */
+  var sections = document.querySelectorAll('.legal-section');
+  var tocLinks = document.querySelectorAll('.toc__list a');
+
+  if ('IntersectionObserver' in window && sections.length && tocLinks.length) {
+    var tocObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var id = entry.target.getAttribute('id');
+          tocLinks.forEach(function (link) {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+
+    sections.forEach(function (section) { tocObserver.observe(section); });
+  }
+
+  /* -------------------------------------------------------------------------
+     3. Smooth scroll for TOC links and back-to-top
+  ------------------------------------------------------------------------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var targetId = anchor.getAttribute('href').slice(1);
+      var target = document.getElementById(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+}());
+</script>
+
+</body>
+</html>

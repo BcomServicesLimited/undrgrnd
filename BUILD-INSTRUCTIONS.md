@@ -1,7 +1,7 @@
-# UNDGRND Movement Website - Build Instructions for Manus
+# UNDRGRND Movement Website - Build Instructions for Manus
 
 ## Project Overview
-Build a multi-page HTML website for UNDGRND Movement, a Gold Coast movement studio offering dance, pole fitness, yoga, and aerial classes. The site must be heavily optimized for local SEO, LLM-friendly, and integrate with Class Manager booking system.
+Build a multi-page HTML website for UNDRGRND Movement, a Gold Coast movement studio offering dance, pole fitness, yoga, and aerial classes. The site must be heavily optimized for local SEO, LLM-friendly, and integrate with Class Manager booking system.
 
 ## Single Source of Truth
 **ALL site configuration is in `site-config.json`**
@@ -53,7 +53,7 @@ Create a reusable navigation HTML snippet (nav-component.html) that can be inclu
 
 Requirements:
 1. Fixed position header with backdrop blur
-2. Logo using "UNDGRND movement" text with gradient from site-config.json colors
+2. Logo using "UNDRGRND movement" text with gradient from site-config.json colors
 3. Navigation links from site-config.json navigation.main_menu array
 4. CTA button from site-config.json navigation.cta_button
 5. Mobile hamburger menu (JavaScript toggle)
@@ -88,7 +88,7 @@ Content structure:
      * Hours summary
 
 2. Bottom bar:
-   - Copyright © 2026 UNDGRND Movement
+   - Copyright © 2026 UNDRGRND Movement
    - Privacy Policy | Terms of Service
    - "Proudly serving Gold Coast and Southport communities"
 
@@ -166,8 +166,8 @@ Page structure:
      * "Show Me Classes" CTA
      * JavaScript: filters selection, links to appropriate page with hash
    
-   - Why UNDGRND Section:
-     * H2: "Why UNDGRND Movement?"
+   - Why UNDRGRND Section:
+     * H2: "Why UNDRGRND Movement?"
      * Three pillar cards (Foundation, Recovery, Expression)
      * Each pillar: icon, title, description
      * Pull descriptions from site-config.json philosophy
@@ -216,7 +216,7 @@ Requirements:
 - Cover all program types: dance, pole fitness, yoga, aerial
 - Target keywords from site-config.json naturally
 - Address these topics:
-  * What makes UNDGRND Movement unique
+  * What makes UNDRGRND Movement unique
   * Who the classes are for (beginners welcome)
   * Benefits of each program type
   * The studio's philosophy and approach
@@ -250,7 +250,7 @@ Create adults.html landing page.
 Page structure:
 1. <head>
    - Title: "Adult Movement Classes Gold Coast | Dance, Pole, Yoga & Aerial | Southport"
-   - Meta description: "Beginner-friendly movement classes for adults at UNDGRND Movement, Southport. Dance fitness, pole, yoga, and aerial programs. No experience needed. Book your Gold Coast class today."
+   - Meta description: "Beginner-friendly movement classes for adults at UNDRGRND Movement, Southport. Dance fitness, pole, yoga, and aerial programs. No experience needed. Book your Gold Coast class today."
    - Import global.css
    - Breadcrumb schema: Home > Adults
    - Service schema for adult programs
@@ -311,7 +311,7 @@ Write SEO content for adults.html (800-1000 words).
 
 Cover:
 - Benefits of adult movement classes for fitness and wellbeing
-- Why Gold Coast adults choose UNDGRND Movement
+- Why Gold Coast adults choose UNDRGRND Movement
 - Overview of each program type (dance, pole, yoga, aerial)
 - Beginner-friendly approach and progression
 - Recovery and rehabilitation options
@@ -342,7 +342,7 @@ Create kids.html landing page.
 Page structure:
 1. <head>
    - Title: "Kids Dance & Movement Classes Gold Coast | Yoga, Pole & Aerial | Southport"
-   - Meta description: "Fun, age-appropriate movement classes for children at UNDGRND Movement, Southport. Kids dance, yoga, pole fitness, and aerial programs. Gold Coast's trusted kids movement studio."
+   - Meta description: "Fun, age-appropriate movement classes for children at UNDRGRND Movement, Southport. Kids dance, yoga, pole fitness, and aerial programs. Gold Coast's trusted kids movement studio."
    - Import global.css
    - Breadcrumb schema: Home > Kids
    - Service schema for kids programs
@@ -431,7 +431,7 @@ This template will be used for:
 
 Page structure:
 1. <head> (populated dynamically based on program):
-   - Title: "[Program Name] | UNDGRND Movement Gold Coast | [Category] Classes Southport"
+   - Title: "[Program Name] | UNDRGRND Movement Gold Coast | [Category] Classes Southport"
    - Meta description: Pull from program short_description + location
    - Import global.css
    - Breadcrumb schema: Home > [Adults/Kids] > [Program Name]
@@ -658,8 +658,8 @@ Create timetable.html with Class Manager integration.
 
 Page structure:
 1. <head>
-   - Title: "Class Timetable | Book Dance, Pole, Yoga & Aerial Classes | UNDGRND Movement Gold Coast"
-   - Meta description: "View and book movement classes at UNDGRND Movement, Southport. Live timetable with availability for dance, pole fitness, yoga, and aerial classes on the Gold Coast."
+   - Title: "Class Timetable | Book Dance, Pole, Yoga & Aerial Classes | UNDRGRND Movement Gold Coast"
+   - Meta description: "View and book movement classes at UNDRGRND Movement, Southport. Live timetable with availability for dance, pole fitness, yoga, and aerial classes on the Gold Coast."
    - Import global.css
 
 2. <body>
@@ -754,8 +754,8 @@ Create contact.html.
 
 Page structure:
 1. <head>
-   - Title: "Contact Us | UNDGRND Movement Gold Coast | Southport Dance & Yoga Studio"
-   - Meta description: "Get in touch with UNDGRND Movement in Southport, Gold Coast. Visit us at 163 Ferry Rd or email olga.coaching1@gmail.com. Book your first class today."
+   - Title: "Contact Us | UNDRGRND Movement Gold Coast | Southport Dance & Yoga Studio"
+   - Meta description: "Get in touch with UNDRGRND Movement in Southport, Gold Coast. Visit us at 163 Ferry Rd or email olga.coaching1@gmail.com. Book your first class today."
    - Import global.css
    - LocalBusiness schema with contact info
 
@@ -850,15 +850,15 @@ Create about.html.
 
 Page structure:
 1. <head>
-   - Title: "About UNDGRND Movement | Gold Coast Movement Studio | Our Story & Philosophy"
-   - Meta description: "Learn about UNDGRND Movement's unique approach to dance, pole, yoga, and aerial classes in Southport, Gold Coast. Founded on the principle of personal transformation, not competition."
+   - Title: "About UNDRGRND Movement | Gold Coast Movement Studio | Our Story & Philosophy"
+   - Meta description: "Learn about UNDRGRND Movement's unique approach to dance, pole, yoga, and aerial classes in Southport, Gold Coast. Founded on the principle of personal transformation, not competition."
    - Import global.css
 
 2. <body>
    - Include nav-component.html
    
    - Hero:
-     * H1: "About UNDGRND Movement"
+     * H1: "About UNDRGRND Movement"
      * Mission statement from site-config.json philosophy.mission
      * Background image: studio space or abstract movement imagery
    
@@ -892,7 +892,7 @@ Page structure:
      * Reference WHO and IADMS recommendations from site-config.json
    
    - What Makes Us Different:
-     * H2: "Why Choose UNDGRND Movement?"
+     * H2: "Why Choose UNDRGRND Movement?"
      * Grid of differentiators:
        - Beginner-friendly focus
        - Medical clearance support
@@ -1064,9 +1064,9 @@ Create sitemap.xml:
 
 #### Prompt 11.1: Create Favicon Set
 ```
-Using the UNDGRND logo image at /mnt/user-data/uploads/UNDGRND_Logo__1_.png:
+Using the UNDRGRND logo image at /mnt/user-data/uploads/UNDRGRND_Logo__1_.png:
 
-1. Extract or create a square version focusing on the "U" or the word "UNDGRND"
+1. Extract or create a square version focusing on the "U" or the word "UNDRGRND"
 2. Generate multiple sizes:
    - favicon.ico (16x16, 32x32)
    - favicon-16x16.png
@@ -1135,7 +1135,7 @@ Ensure every page has:
    - Review schema when testimonials added
 
 2. NAP Consistency:
-   - Name: UNDGRND Movement (exactly as in site-config.json)
+   - Name: UNDRGRND Movement (exactly as in site-config.json)
    - Address: 163 Ferry Rd, Southport QLD 4215
    - Phone: [from site-config.json]
    - Must be IDENTICAL on every page, footer, and in schema
@@ -1369,7 +1369,7 @@ git remote add origin https://github.com/BcomServicesLimited/undrgrnd.git
 
 # Add all files
 git add .
-git commit -m "Initial UNDGRND Movement website build"
+git commit -m "Initial UNDRGRND Movement website build"
 
 # Push to main branch
 git push -u origin main

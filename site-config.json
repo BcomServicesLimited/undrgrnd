@@ -1,13 +1,13 @@
 {
   "project": {
-    "name": "UNDGRND Movement",
+    "name": "UNDRGRND Movement",
     "tagline": "Foundational movement for body and mind",
     "domain": "https://www.undrgrnd.com.au",
     "repository": "https://github.com/BcomServicesLimited/undrgrnd.git"
   },
   
   "business": {
-    "legal_name": "UNDGRND Movement",
+    "legal_name": "UNDRGRND Movement",
     "category_primary": "Dance School",
     "category_secondary": "Yoga Studio",
     "address": {
@@ -490,14 +490,14 @@
   
   "legal": {
     "medical_disclaimer": "Medical clearance from your healthcare provider is required before participating in Recovery Movement classes. By booking this class, you confirm that you have obtained appropriate medical clearance and that your healthcare provider has approved your participation in physical movement activities.",
-    "general_disclaimer": "All classes at UNDGRND Movement are conducted by qualified instructors. Participants engage in physical activities at their own risk. Please inform your instructor of any injuries, medical conditions, or physical limitations before class. We recommend consulting with your healthcare provider before beginning any new exercise program.",
-    "liability_waiver": "By participating in classes at UNDGRND Movement, you acknowledge that physical activity involves inherent risks. You agree to follow all safety instructions provided by instructors and to practice within your own limits. UNDGRND Movement, its instructors, and staff are not liable for any injuries sustained during participation in classes or use of facilities.",
-    "privacy_policy_summary": "UNDGRND Movement collects personal information necessary for class bookings and communication. We comply with the Australian Privacy Principles under the Privacy Act 1988. Your information is stored securely and never shared with third parties without your consent.",
+    "general_disclaimer": "All classes at UNDRGRND Movement are conducted by qualified instructors. Participants engage in physical activities at their own risk. Please inform your instructor of any injuries, medical conditions, or physical limitations before class. We recommend consulting with your healthcare provider before beginning any new exercise program.",
+    "liability_waiver": "By participating in classes at UNDRGRND Movement, you acknowledge that physical activity involves inherent risks. You agree to follow all safety instructions provided by instructors and to practice within your own limits. UNDRGRND Movement, its instructors, and staff are not liable for any injuries sustained during participation in classes or use of facilities.",
+    "privacy_policy_summary": "UNDRGRND Movement collects personal information necessary for class bookings and communication. We comply with the Australian Privacy Principles under the Privacy Act 1988. Your information is stored securely and never shared with third parties without your consent.",
     "covid_policy": "We maintain hygiene protocols in accordance with Queensland Health guidelines. Please do not attend class if you are unwell or experiencing COVID-19 symptoms."
   },
   
   "philosophy": {
-    "mission": "UNDGRND Movement stands for foundational movement for body and mind. Not competition. Not performance pressure. Personal transformation only.",
+    "mission": "UNDRGRND Movement stands for foundational movement for body and mind. Not competition. Not performance pressure. Personal transformation only.",
     "values": [
       "Inclusive and beginner-friendly approach",
       "Safe, supportive learning environment",

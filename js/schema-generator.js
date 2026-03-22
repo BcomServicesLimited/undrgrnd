@@ -1,5 +1,5 @@
 /**
- * UNDGRND Movement — Schema Generator
+ * UNDRGRND Movement — Schema Generator
  * File: /js/schema-generator.js
  *
  * Generates JSON-LD structured data script tags for insertion into <head>.

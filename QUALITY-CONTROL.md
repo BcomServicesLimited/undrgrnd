@@ -1,4 +1,4 @@
-# UNDGRND Movement Website - Quality Control & Validation Guide
+# UNDRGRND Movement Website - Quality Control & Validation Guide
 
 ## Data Validation Rules
 
@@ -118,7 +118,7 @@ All URLs must be:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Title | UNDGRND Movement</title>
+    <title>Page Title | UNDRGRND Movement</title>
     <meta name="description" content="...">
     <link rel="canonical" href="https://www.undrgrnd.com.au/page">
     <!-- Schema markup -->
@@ -685,4 +685,4 @@ Keep these files up to date:
 
 ---
 
-This quality control guide ensures the UNDGRND Movement website maintains professional standards for code, content, performance, accessibility, and SEO.
+This quality control guide ensures the UNDRGRND Movement website maintains professional standards for code, content, performance, accessibility, and SEO.

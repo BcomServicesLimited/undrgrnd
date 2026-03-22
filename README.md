@@ -1,6 +1,6 @@
-# UNDGRND Movement Website
+# UNDRGRND Movement Website
 
-Official website for UNDGRND Movement — Gold Coast's premier movement studio offering dance, pole fitness, yoga, and aerial classes.
+Official website for UNDRGRND Movement — Gold Coast's premier movement studio offering dance, pole fitness, yoga, and aerial classes.
 
 ## 🌐 Live Site
 - **Domain:** https://www.undrgrnd.com.au
@@ -65,7 +65,7 @@ Official website for UNDGRND Movement — Gold Coast's premier movement studio o
 │
 └── assets/
     └── images/
-        └── undgrnd-logo.png            # UNDGRND Movement logo
+        └── undgrnd-logo.png            # UNDRGRND Movement logo
 ```
 
 ## 🚀 Deployment
@@ -143,4 +143,4 @@ Key sections in `site-config.json`:
 - **Studio:** 163 Ferry Rd, Southport QLD 4215
 
 ## 📄 License
-© 2026 UNDGRND Movement. All rights reserved.
+© 2026 UNDRGRND Movement. All rights reserved.

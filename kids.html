@@ -289,32 +289,24 @@
       display: none;
     }
 
-    /* Card image placeholder */
+    /* Card image */
     .program-card__img {
       height: 200px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0.6rem;
-      padding: 1rem;
-      text-align: center;
+      overflow: hidden;
+      display: block;
+      flex-shrink: 0;
     }
 
-    .program-card__img svg {
-      width: 40px;
-      height: 40px;
-      fill: none;
-      stroke-width: 1;
-      stroke-linecap: round;
-      stroke-linejoin: round;
+    .program-card__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
     }
 
-    .program-card__img p {
-      font-size: 0.72rem;
-      color: rgba(161, 161, 161, 0.5);
-      max-width: 180px;
-      line-height: 1.4;
+    .program-card:hover .program-card__img img {
+      transform: scale(1.05);
     }
 
     /* Category-coded image backgrounds */
@@ -1953,9 +1945,8 @@
 
     return '<article class="program-card program-card--' + meta.cls + ' reveal"'
       + ' data-age-min="' + age.min + '" data-age-max="' + age.max + '">'
-      + '<div class="program-card__img" aria-hidden="true">'
-      +   '<svg viewBox="0 0 24 24">' + meta.icon + '</svg>'
-      +   '<p>' + escHtml(program.name) + ' — kids class image placeholder</p>'
+      + '<div class="program-card__img">'
+      +   '<img src="/images/hero/' + escHtml(slug) + '.webp" alt="' + escHtml(program.name) + ' at UNDRGRND Movement Gold Coast" loading="lazy" width="600" height="338">'
       + '</div>'
       + '<div class="program-card__body">'
       +   '<span class="program-badge badge--' + meta.cls + '">' + escHtml(meta.label) + '</span>'

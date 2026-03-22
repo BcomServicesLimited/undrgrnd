@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title & Meta Description -->
+  <title>Page Not Found | UNDGRND Movement</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Return to UNDGRND Movement homepage.">
+
+  <!-- No canonical on 404 pages -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Favicon placeholders -->
+  <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="/css/global.css">
+
+  <!-- Page-specific styles -->
+  <style>
+    /* -----------------------------------------------------------------------
+       FULL-VIEWPORT WRAPPER
+    ----------------------------------------------------------------------- */
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: #0A0A0A;
+    }
+
+    /* -----------------------------------------------------------------------
+       MAIN ERROR CONTENT
+    ----------------------------------------------------------------------- */
+    .error-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8rem 5% 6rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Background radial glow */
+    .error-main::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 50% 40%, rgba(139, 92, 246, 0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 30% at 30% 70%, rgba(236, 72, 153, 0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .error-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 680px;
+      margin-inline: auto;
+    }
+
+    /* -----------------------------------------------------------------------
+       404 DISPLAY NUMBER
+    ----------------------------------------------------------------------- */
+    .error-number {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(7rem, 20vw, 12rem);
+      line-height: 0.85;
+      letter-spacing: 4px;
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1.5rem;
+      display: block;
+      /* Subtle animation */
+      animation: errorPulse 4s ease-in-out infinite;
+    }
+
+    @keyframes errorPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
+
+    /* -----------------------------------------------------------------------
+       HEADING & TEXT
+    ----------------------------------------------------------------------- */
+    .error-inner h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 1.25rem;
+      line-height: 1.1;
+    }
+
+    .error-inner__text {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: #A1A1A1;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+      max-width: 480px;
+      margin-inline: auto;
+    }
+
+    /* -----------------------------------------------------------------------
+       NAVIGATION BUTTONS GRID
+    ----------------------------------------------------------------------- */
+    .error-nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      max-width: 520px;
+      margin-inline: auto;
+    }
+
+    @media (max-width: 480px) {
+      .error-nav {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .error-nav__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      border-radius: 14px;
+      padding: 1rem 1.25rem;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+
+    .error-nav__btn svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    /* Primary — gradient fill */
+    .error-nav__btn--primary {
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      color: #FFFFFF;
+      grid-column: 1 / -1;
+    }
+
+    .error-nav__btn--primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(139, 92, 246, 0.4);
+    }
+
+    @media (max-width: 480px) {
+      .error-nav__btn--primary { grid-column: 1; }
+    }
+
+    /* Secondary — outlined */
+    .error-nav__btn--secondary {
+      background: rgba(139, 92, 246, 0.06);
+      border-color: rgba(139, 92, 246, 0.25);
+      color: #A1A1A1;
+    }
+
+    .error-nav__btn--secondary:hover {
+      background: rgba(139, 92, 246, 0.12);
+      border-color: rgba(139, 92, 246, 0.5);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    /* -----------------------------------------------------------------------
+       CONTACT FALLBACK TEXT
+    ----------------------------------------------------------------------- */
+    .error-contact {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.85rem;
+      color: rgba(161, 161, 161, 0.55);
+      line-height: 1.6;
+    }
+
+    .error-contact a {
+      color: #A78BFA;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+
+    .error-contact a:hover { color: #FFFFFF; }
+
+    /* -----------------------------------------------------------------------
+       DECORATIVE DIVIDER DOTS
+    ----------------------------------------------------------------------- */
+    .error-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .error-divider__dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(139, 92, 246, 0.35);
+    }
+
+    .error-divider__dot:nth-child(2) {
+      background: rgba(167, 139, 250, 0.5);
+      width: 8px;
+      height: 8px;
+    }
+  </style>
+</head>
+
+<body class="error-page">
+
+<!-- =========================================================================
+     NAVIGATION — copy contents of /components/nav-component.html here
+     ========================================================================= -->
+
+
+<!-- =========================================================================
+     ERROR CONTENT
+     ========================================================================= -->
+<main class="error-main" aria-labelledby="errorHeading">
+  <div class="error-inner">
+
+    <!-- 404 number -->
+    <span class="error-number" aria-hidden="true">404</span>
+
+    <!-- Heading -->
+    <h1 id="errorHeading">Oops! This Page Doesn't Exist</h1>
+
+    <!-- Subtext -->
+    <p class="error-inner__text">Looks like you've ventured into uncharted territory. Let's get you back on track.</p>
+
+    <!-- Decorative dots -->
+    <div class="error-divider" aria-hidden="true">
+      <span class="error-divider__dot"></span>
+      <span class="error-divider__dot"></span>
+      <span class="error-divider__dot"></span>
+    </div>
+
+    <!-- Navigation buttons -->
+    <nav class="error-nav" aria-label="Return to site navigation">
+
+      <a href="/" class="error-nav__btn error-nav__btn--primary">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        Go Home
+      </a>
+
+      <a href="/adults.html" class="error-nav__btn error-nav__btn--secondary">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg>
+        View Classes
+      </a>
+
+      <a href="/timetable.html" class="error-nav__btn error-nav__btn--secondary">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        Check Timetable
+      </a>
+
+      <a href="/contact.html" class="error-nav__btn error-nav__btn--secondary">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        Contact Us
+      </a>
+
+    </nav>
+
+    <!-- Contact fallback -->
+    <p class="error-contact">
+      If you think this is a mistake, please contact us at
+      <a href="mailto:olga.coaching1@gmail.com" id="errorEmail">olga.coaching1@gmail.com</a>
+    </p>
+
+  </div>
+</main>
+
+
+<!-- =========================================================================
+     FOOTER — copy contents of /components/footer-component.html here
+     ========================================================================= -->
+
+
+<!-- =========================================================================
+     PAGE-SPECIFIC JAVASCRIPT
+     ========================================================================= -->
+<script>
+(function () {
+  'use strict';
+
+  /* Load contact email from site-config.json */
+  fetch('/site-config.json')
+    .then(function (res) { return res.json(); })
+    .then(function (config) {
+      var email = config.business && config.business.contact && config.business.contact.email;
+      if (email) {
+        var emailEl = document.getElementById('errorEmail');
+        if (emailEl) {
+          emailEl.href = 'mailto:' + email;
+          emailEl.textContent = email;
+        }
+      }
+    })
+    .catch(function () {
+      /* Fallback email already rendered in HTML — no action needed */
+    });
+
+}());
+</script>
+
+</body>
+</html>

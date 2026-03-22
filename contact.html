@@ -96,21 +96,33 @@
 
     @media (min-width: 1024px) {
       .contact-main__inner {
-        grid-template-columns: 1fr 1fr;
-        gap: 5rem;
+        grid-template-columns: 1fr;
+        gap: 4rem;
         align-items: start;
+      }
+    }
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .contact-info {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .contact-info {
+        grid-template-columns: repeat(3, 1fr);
       }
     }
 
     /* -----------------------------------------------------------------------
        CONTACT INFO CARDS
     ----------------------------------------------------------------------- */
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
     .contact-card {
       background: #1A1A1A;
       border: 1px solid rgba(139, 92, 246, 0.2);
@@ -1489,121 +1501,6 @@
             Accessible entrance
           </li>
         </ul>
-      </div>
-
-    </div>
-
-    <!-- RIGHT COLUMN — Contact Form -->
-    <div class="contact-form-wrapper reveal">
-
-      <!-- FORM BACKEND: Integrate with Formspree, Netlify Forms, or email service -->
-      <h2>Send Us a Message</h2>
-      <p class="contact-form-wrapper__sub">We'll get back to you within 24 hours.</p>
-
-      <form id="contactForm" novalidate aria-label="Contact enquiry form">
-
-        <!-- Name -->
-        <div class="form-group">
-          <label for="fieldName">Name <span class="required" aria-hidden="true">*</span></label>
-          <input
-            type="text"
-            id="fieldName"
-            name="name"
-            class="form-control"
-            placeholder="Your full name"
-            required
-            autocomplete="name"
-            aria-required="true">
-          <p class="form-error-msg" id="errorName" role="alert">Please enter your name.</p>
-        </div>
-
-        <!-- Email -->
-        <div class="form-group">
-          <label for="fieldEmail">Email <span class="required" aria-hidden="true">*</span></label>
-          <input
-            type="email"
-            id="fieldEmail"
-            name="email"
-            class="form-control"
-            placeholder="your@email.com"
-            required
-            autocomplete="email"
-            aria-required="true">
-          <p class="form-error-msg" id="errorEmail" role="alert">Please enter a valid email address.</p>
-        </div>
-
-        <!-- Phone -->
-        <div class="form-group">
-          <label for="fieldPhone">Phone <span style="font-size: 0.7em; font-weight: 400; text-transform: none; letter-spacing: 0; color: rgba(161,161,161,0.5);">(optional)</span></label>
-          <input
-            type="tel"
-            id="fieldPhone"
-            name="phone"
-            class="form-control"
-            placeholder="04XX XXX XXX"
-            autocomplete="tel">
-        </div>
-
-        <!-- Subject -->
-        <div class="form-group">
-          <label for="fieldSubject">Subject <span class="required" aria-hidden="true">*</span></label>
-          <select id="fieldSubject" name="subject" class="form-control" required aria-required="true">
-            <option value="" disabled selected>Select a subject</option>
-            <option value="General Inquiry">General Inquiry</option>
-            <option value="Class Information">Class Information</option>
-            <option value="Booking Question">Booking Question</option>
-            <option value="Medical Clearance Question">Medical Clearance Question</option>
-            <option value="Partnership Inquiry">Partnership Inquiry</option>
-            <option value="Other">Other</option>
-          </select>
-          <p class="form-error-msg" id="errorSubject" role="alert">Please select a subject.</p>
-        </div>
-
-        <!-- Interested In -->
-        <div class="form-group">
-          <label for="fieldInterest">I'm Interested In <span style="font-size: 0.7em; font-weight: 400; text-transform: none; letter-spacing: 0; color: rgba(161,161,161,0.5);">(optional)</span></label>
-          <select id="fieldInterest" name="interest" class="form-control">
-            <option value="" disabled selected>Select a program area</option>
-            <option value="Adults - Dance">Adults &mdash; Dance</option>
-            <option value="Adults - Pole Fitness">Adults &mdash; Pole Fitness</option>
-            <option value="Adults - Yoga">Adults &mdash; Yoga</option>
-            <option value="Adults - Aerial">Adults &mdash; Aerial</option>
-            <option value="Kids Programs">Kids Programs</option>
-            <option value="Not Sure Yet">Not Sure Yet</option>
-          </select>
-        </div>
-
-        <!-- Message -->
-        <div class="form-group">
-          <label for="fieldMessage">Message <span class="required" aria-hidden="true">*</span></label>
-          <textarea
-            id="fieldMessage"
-            name="message"
-            class="form-control"
-            rows="5"
-            placeholder="Tell us how we can help..."
-            required
-            aria-required="true"></textarea>
-          <p class="form-error-msg" id="errorMessage" role="alert">Please enter your message.</p>
-        </div>
-
-        <button type="submit" class="form-submit-btn" id="submitBtn">Send Message</button>
-
-        <!-- Global error message -->
-        <div class="form-global-error" id="formGlobalError" role="alert">
-          Something went wrong. Please email us directly at
-          <a href="mailto:undrgrndgc@gmail.com" id="errorEmailLink" style="color: #FCA5A5; font-weight: 700;">undrgrndgc@gmail.com</a>
-        </div>
-
-      </form>
-
-      <!-- Success message (shown after submission) -->
-      <div class="form-success" id="formSuccess" role="status" aria-live="polite">
-        <div class="form-success__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-        </div>
-        <h3>Message Sent!</h3>
-        <p>Thank you! We'll respond within 24 hours.<br>In the meantime, feel free to browse our <a href="/adults.html" style="color: #A78BFA; text-decoration: none;">programs</a> or <a href="/timetable.html" style="color: #A78BFA; text-decoration: none;">timetable</a>.</p>
       </div>
 
     </div>

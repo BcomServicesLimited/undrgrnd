@@ -975,6 +975,587 @@
 </head>
 
 <body>
+<!--
+  UNDRGRND Movement — Navigation Component
+  File: /components/nav-component.html
+
+  Usage: Copy this entire block into any page <body>, as the first element.
+  Dependencies:
+    - /css/global.css (must be loaded in <head>)
+    - site-config.json (navigation data loaded via fetch in <script> below)
+
+  Navigation data source: site-config.json → navigation.main_menu, navigation.cta_button
+-->
+
+<!-- =====================================================================
+     NAV STYLES (scoped to this component)
+     ===================================================================== -->
+<style>
+  /* --- Header / Nav wrapper --- */
+  .site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(10, 10, 10, 0.95);       /* site-config: design.colors.dark_bg at 95% */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(139, 92, 246, 0.2); /* site-config: design.effects.card_border */
+    transition: all 0.3s ease;                /* site-config: design.effects.transition */
+  }
+
+  /* Scrolled state — slightly more opaque */
+  .site-nav.scrolled {
+    background: rgba(10, 10, 10, 0.98);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  /* --- Inner layout --- */
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin-inline: auto;
+    padding: 1.1rem 5%;
+    gap: 2rem;
+  }
+
+  /* --- Logo --- */
+  .nav-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .nav-logo__title {
+    font-family: 'Bebas Neue', Impact, sans-serif; /* site-config: design.fonts.display */
+    font-size: 2rem;
+    letter-spacing: 2px;
+    line-height: 1;
+    /* gradient-text from global.css */
+    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%); /* site-config: design.colors.gradient_purple */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .nav-logo__sub {
+    font-family: 'Outfit', Helvetica Neue, sans-serif; /* site-config: design.fonts.body */
+    font-size: 0.7rem;
+    font-weight: 400;                          /* site-config: design.fonts.weights.regular */
+    letter-spacing: 0.2em;
+    text-transform: lowercase;
+    color: #A1A1A1;                            /* site-config: design.colors.text_gray */
+    margin-top: 1px;
+  }
+
+  /* --- Desktop menu --- */
+  .nav-menu {
+    display: none; /* hidden on mobile by default */
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-menu__item {
+    position: relative;
+  }
+
+  .nav-menu__link {
+    font-family: 'Outfit', Helvetica Neue, sans-serif; /* site-config: design.fonts.body */
+    font-size: 0.95rem;
+    font-weight: 600;                          /* site-config: design.fonts.weights.semibold */
+    letter-spacing: 0.04em;
+    color: #A1A1A1;                            /* site-config: design.colors.text_gray */
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    padding-bottom: 2px;
+    position: relative;
+  }
+
+  /* Underline animation on hover */
+  .nav-menu__link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%); /* site-config: gradient_purple */
+    transition: width 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .nav-menu__link:hover {
+    color: #8B5CF6;                            /* site-config: design.colors.primary_purple */
+  }
+
+  .nav-menu__link:hover::after {
+    width: 100%;
+  }
+
+  /* Active / current page state */
+  .nav-menu__link.active {
+    color: #8B5CF6;                            /* site-config: design.colors.primary_purple */
+  }
+
+  .nav-menu__link.active::after {
+    width: 100%;
+  }
+
+  /* --- Desktop CTA button --- */
+  .nav-cta {
+    display: none; /* hidden on mobile */
+    flex-shrink: 0;
+  }
+
+  /* --- Hamburger button (mobile only) --- */
+  .nav-hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .nav-hamburger:hover {
+    background: rgba(139, 92, 246, 0.1);
+  }
+
+  .nav-hamburger__line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #FFFFFF;                       /* site-config: design.colors.text_white */
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  /* Hamburger → X animation */
+  .nav-hamburger.open .nav-hamburger__line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-hamburger.open .nav-hamburger__line:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  .nav-hamburger.open .nav-hamburger__line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* --- Mobile menu overlay --- */
+  .nav-mobile-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-mobile-overlay.open {
+    display: block;
+    opacity: 1;
+  }
+
+  /* --- Mobile slide-in menu --- */
+  .nav-mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(320px, 85vw);
+    background: #0A0A0A;                       /* site-config: design.colors.dark_bg */
+    border-left: 1px solid rgba(139, 92, 246, 0.2); /* site-config: design.effects.card_border */
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 2rem 2rem;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+  }
+
+  .nav-mobile-menu.open {
+    transform: translateX(0);
+  }
+
+  /* Mobile menu links list */
+  .nav-mobile-menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-mobile-menu__item {
+    border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+  }
+
+  .nav-mobile-menu__link {
+    display: block;
+    padding: 1.1rem 0;
+    font-family: 'Bebas Neue', Impact, sans-serif; /* site-config: design.fonts.display */
+    font-size: 1.75rem;
+    letter-spacing: 2px;
+    color: #FFFFFF;                            /* site-config: design.colors.text_white */
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+  }
+
+  .nav-mobile-menu__link:hover,
+  .nav-mobile-menu__link.active {
+    color: #8B5CF6;                            /* site-config: design.colors.primary_purple */
+    padding-left: 0.75rem;
+  }
+
+  /* Mobile CTA */
+  .nav-mobile-menu__cta {
+    margin-top: 2rem;
+  }
+
+  .nav-mobile-menu__cta a {
+    display: block;
+    text-align: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%); /* site-config: gradient_purple */
+    color: #FFFFFF;
+    font-family: 'Outfit', Helvetica Neue, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .nav-mobile-menu__cta a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
+  }
+
+  /* --- Tablet / Desktop breakpoint --- */
+  @media (min-width: 768px) {
+    .nav-menu {
+      display: flex;
+    }
+
+    .nav-cta {
+      display: block;
+    }
+
+    .nav-hamburger {
+      display: none;
+    }
+
+    .nav-mobile-menu,
+    .nav-mobile-overlay {
+      display: none !important;
+    }
+  }
+
+  /* Body padding offset so content doesn't hide under fixed nav */
+  body {
+    padding-top: 72px;
+  }
+
+  @media (min-width: 768px) {
+    body {
+      padding-top: 76px;
+    }
+  }
+</style>
+
+<!-- =====================================================================
+     NAV HTML
+     ===================================================================== -->
+
+<!-- Full-screen overlay (mobile) -->
+<div class="nav-mobile-overlay" id="navOverlay" aria-hidden="true"></div>
+
+<!-- Mobile slide-in menu -->
+<nav class="nav-mobile-menu" id="navMobileMenu" aria-label="Mobile navigation" aria-hidden="true">
+  <ul class="nav-mobile-menu__list" id="navMobileList">
+    <!-- Populated by JavaScript from site-config.json navigation.main_menu -->
+  </ul>
+  <div class="nav-mobile-menu__cta" id="navMobileCta">
+    <!-- Populated by JavaScript from site-config.json navigation.cta_button -->
+  </div>
+</nav>
+
+<!-- Main header -->
+<header class="site-nav" id="siteNav" role="banner">
+  <div class="nav-inner">
+
+    <!-- Logo — site-config.json: project.name -->
+    <a href="/" class="nav-logo" aria-label="UNDRGRND Movement — Home">
+      <span class="nav-logo__title">UNDRGRND</span>
+      <span class="nav-logo__sub">movement</span>
+    </a>
+
+    <!-- Desktop navigation — populated from site-config.json navigation.main_menu -->
+    <ul class="nav-menu" id="navDesktopMenu" role="list" aria-label="Main navigation">
+      <!-- Populated by JavaScript -->
+    </ul>
+
+    <!-- Desktop CTA — site-config.json navigation.cta_button -->
+    <div class="nav-cta" id="navDesktopCta">
+      <!-- Populated by JavaScript -->
+    </div>
+
+    <!-- Hamburger (mobile only) -->
+    <button
+      class="nav-hamburger"
+      id="navHamburger"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="navMobileMenu"
+    >
+      <span class="nav-hamburger__line" aria-hidden="true"></span>
+      <span class="nav-hamburger__line" aria-hidden="true"></span>
+      <span class="nav-hamburger__line" aria-hidden="true"></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- =====================================================================
+     NAV JAVASCRIPT
+     Data source: site-config.json → navigation.main_menu, navigation.cta_button
+     ===================================================================== -->
+<script>
+(function () {
+  'use strict';
+
+  /* ------------------------------------------------------------------
+     1. Load navigation data from site-config.json
+     ------------------------------------------------------------------ */
+  fetch('/site-config.json')
+    .then(function (res) {
+      if (!res.ok) throw new Error('Could not load site-config.json');
+      return res.json();
+    })
+    .then(function (config) {
+      var menuItems = config.navigation.main_menu;   // site-config.json navigation.main_menu
+      var ctaButton = config.navigation.cta_button;  // site-config.json navigation.cta_button
+      buildDesktopMenu(menuItems, ctaButton);
+      buildMobileMenu(menuItems, ctaButton);
+      highlightActivePage();
+    })
+    .catch(function (err) {
+      console.error('Nav: Failed to load site-config.json', err);
+      // Fallback: render static nav from site-config.json values
+      var fallbackMenu = [
+        { label: 'Home',      href: '/' },
+        { label: 'Adults',    href: '/adults.html' },
+        { label: 'Kids',      href: '/kids.html' },
+        { label: 'Timetable', href: '/timetable.html' },
+        { label: 'About',     href: '/about.html' },
+        { label: 'Contact',   href: '/contact.html' }
+      ];
+      var fallbackCta = { text: 'Book Now', href: '/timetable.html' };
+      buildDesktopMenu(fallbackMenu, fallbackCta);
+      buildMobileMenu(fallbackMenu, fallbackCta);
+      highlightActivePage();
+    });
+
+  /* ------------------------------------------------------------------
+     2. Build desktop navigation menu
+     ------------------------------------------------------------------ */
+  function buildDesktopMenu(items, cta) {
+    var list = document.getElementById('navDesktopMenu');
+    var ctaWrap = document.getElementById('navDesktopCta');
+    if (!list || !ctaWrap) return;
+
+    items.forEach(function (item) {
+      var li = document.createElement('li');
+      li.className = 'nav-menu__item';
+
+      var a = document.createElement('a');
+      a.href = item.href;
+      a.className = 'nav-menu__link';
+      a.textContent = item.label;
+
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    // CTA button
+    var ctaLink = document.createElement('a');
+    ctaLink.href = cta.href;
+    ctaLink.className = 'cta-button';
+    ctaLink.textContent = cta.text;
+    ctaWrap.appendChild(ctaLink);
+  }
+
+  /* ------------------------------------------------------------------
+     3. Build mobile navigation menu
+     ------------------------------------------------------------------ */
+  function buildMobileMenu(items, cta) {
+    var list = document.getElementById('navMobileList');
+    var ctaWrap = document.getElementById('navMobileCta');
+    if (!list || !ctaWrap) return;
+
+    items.forEach(function (item) {
+      var li = document.createElement('li');
+      li.className = 'nav-mobile-menu__item';
+
+      var a = document.createElement('a');
+      a.href = item.href;
+      a.className = 'nav-mobile-menu__link';
+      a.textContent = item.label;
+
+      // Close mobile menu when a link is clicked
+      a.addEventListener('click', closeMobileMenu);
+
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    // CTA button
+    ctaWrap.innerHTML = '';
+    var ctaLink = document.createElement('a');
+    ctaLink.href = cta.href;
+    ctaLink.textContent = cta.text;
+    ctaLink.addEventListener('click', closeMobileMenu);
+    ctaWrap.appendChild(ctaLink);
+  }
+
+  /* ------------------------------------------------------------------
+     4. Highlight active page based on window.location.pathname
+     ------------------------------------------------------------------ */
+  function highlightActivePage() {
+    var path = window.location.pathname;
+
+    // Desktop links
+    var desktopLinks = document.querySelectorAll('.nav-menu__link');
+    desktopLinks.forEach(function (link) {
+      var href = link.getAttribute('href');
+      if (isActivePath(path, href)) {
+        link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+
+    // Mobile links
+    var mobileLinks = document.querySelectorAll('.nav-mobile-menu__link');
+    mobileLinks.forEach(function (link) {
+      var href = link.getAttribute('href');
+      if (isActivePath(path, href)) {
+        link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+  }
+
+  function isActivePath(currentPath, linkHref) {
+    if (!linkHref) return false;
+    // Exact match for homepage
+    if (linkHref === '/' && (currentPath === '/' || currentPath === '/index.html')) return true;
+    // Match for other pages (ignore trailing slash)
+    if (linkHref !== '/' && currentPath !== '/') {
+      return currentPath.replace(/\/$/, '') === linkHref.replace(/\/$/, '');
+    }
+    return false;
+  }
+
+  /* ------------------------------------------------------------------
+     5. Scroll behaviour — add 'scrolled' class when page scrolls >50px
+     ------------------------------------------------------------------ */
+  var nav = document.getElementById('siteNav');
+
+  function onScroll() {
+    if (!nav) return;
+    if (window.scrollY > 50) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // Run on load in case page is already scrolled
+
+  /* ------------------------------------------------------------------
+     6. Mobile menu toggle
+     ------------------------------------------------------------------ */
+  var hamburger = document.getElementById('navHamburger');
+  var mobileMenu = document.getElementById('navMobileMenu');
+  var overlay    = document.getElementById('navOverlay');
+
+  function openMobileMenu() {
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    mobileMenu.classList.add('open');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden'; // Prevent background scroll
+  }
+
+  function closeMobileMenu() {
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileMenu.classList.remove('open');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  if (hamburger) {
+    hamburger.addEventListener('click', function () {
+      var isOpen = hamburger.classList.contains('open');
+      if (isOpen) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    });
+  }
+
+  // Close on overlay click
+  if (overlay) {
+    overlay.addEventListener('click', closeMobileMenu);
+  }
+
+  // Close on Escape key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && hamburger && hamburger.classList.contains('open')) {
+      closeMobileMenu();
+      hamburger.focus();
+    }
+  });
+
+}());
+</script>
+
 
 <!-- =========================================================================
      NAVIGATION — copy contents of /components/nav-component.html here
@@ -1849,5 +2430,641 @@
 }());
 </script>
 
+
+<!--
+  UNDRGRND Movement — Footer Component
+  File: /components/footer-component.html
+
+  Usage: Copy this entire block into any page <body>, as the last element before </body>.
+  Dependencies:
+    - /css/global.css (must be loaded in <head>)
+    - site-config.json (footer data loaded via fetch in <script> below)
+
+  Data sources:
+    - project.tagline
+    - business.legal_name, business.address, business.contact, business.hours
+    - navigation.main_menu
+
+  NAP CONSISTENCY: Name, Address, Phone are rendered directly from
+  site-config.json to ensure exact match with Google My Business.
+-->
+
+<!-- =====================================================================
+     FOOTER STYLES (scoped to this component)
+     ===================================================================== -->
+<style>
+  /* --- Footer wrapper --- */
+  .site-footer {
+    background-color: #1A1A1A;               /* site-config: design.colors.card_bg */
+    border-top: 3px solid;
+    border-image: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%) 1; /* site-config: gradient_purple */
+    color: #FFFFFF;                           /* site-config: design.colors.text_white */
+    font-family: 'Outfit', Helvetica Neue, sans-serif; /* site-config: design.fonts.body */
+    margin-top: auto;
+  }
+
+  /* --- Main footer grid --- */
+  .footer-main {
+    max-width: 1400px;
+    margin-inline: auto;
+    padding: 5rem 5% 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  /* Tablet: 2 columns */
+  @media (min-width: 768px) {
+    .footer-main {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem 4rem;
+    }
+  }
+
+  /* Desktop: 3 columns */
+  @media (min-width: 1024px) {
+    .footer-main {
+      grid-template-columns: 1.4fr 1fr 1.4fr;
+      gap: 2rem 4rem;
+    }
+  }
+
+  /* --- Column shared styles --- */
+  .footer-col__heading {
+    font-family: 'Bebas Neue', Impact, sans-serif; /* site-config: design.fonts.display */
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8B5CF6;                           /* site-config: design.colors.primary_purple */
+    margin-bottom: 1.25rem;
+  }
+
+  /* ---- COLUMN 1: Brand ---- */
+  .footer-brand__logo {
+    display: inline-flex;
+    flex-direction: column;
+    text-decoration: none;
+    line-height: 1;
+    margin-bottom: 1.25rem;
+  }
+
+  .footer-brand__title {
+    font-family: 'Bebas Neue', Impact, sans-serif; /* site-config: design.fonts.display */
+    font-size: 2.25rem;
+    letter-spacing: 2px;
+    line-height: 1;
+    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%); /* site-config: gradient_purple */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .footer-brand__sub {
+    font-family: 'Outfit', Helvetica Neue, sans-serif; /* site-config: design.fonts.body */
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: lowercase;
+    color: #A1A1A1;                           /* site-config: design.colors.text_gray */
+    margin-top: 2px;
+  }
+
+  .footer-brand__tagline {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #A1A1A1;                           /* site-config: design.colors.text_gray */
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+    max-width: 280px;
+  }
+
+  /* Social icons */
+  .footer-social {
+    display: flex;
+    gap: 0.85rem;
+    align-items: center;
+  }
+
+  .footer-social__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(139, 92, 246, 0.4); /* site-config: primary_purple at 40% */
+    color: #A1A1A1;                           /* site-config: text_gray */
+    text-decoration: none;
+    transition: all 0.3s ease;               /* site-config: design.effects.transition */
+    background: transparent;
+  }
+
+  .footer-social__link:hover {
+    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%); /* site-config: gradient_purple */
+    border-color: transparent;
+    color: #FFFFFF;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+  }
+
+  .footer-social__link svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.75;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* ---- COLUMN 2: Quick Links ---- */
+  .footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .footer-links__item a {
+    display: inline-block;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #A1A1A1;                           /* site-config: text_gray */
+    text-decoration: none;
+    padding: 0.45rem 0;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    position: relative;
+  }
+
+  .footer-links__item a::before {
+    content: '→';
+    position: absolute;
+    left: -1.2rem;
+    opacity: 0;
+    color: #8B5CF6;                           /* site-config: primary_purple */
+    transition: opacity 0.3s ease, left 0.3s ease;
+  }
+
+  .footer-links__item a:hover {
+    color: #FFFFFF;                           /* site-config: text_white */
+    padding-left: 1.2rem;
+  }
+
+  .footer-links__item a:hover::before {
+    opacity: 1;
+    left: 0;
+  }
+
+  /* ---- COLUMN 3: Contact Info ---- */
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-contact__item {
+    display: flex;
+    gap: 0.85rem;
+    align-items: flex-start;
+  }
+
+  .footer-contact__icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    color: #8B5CF6;                           /* site-config: primary_purple */
+  }
+
+  .footer-contact__icon svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.75;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .footer-contact__text {
+    font-size: 0.9rem;
+    color: #A1A1A1;                           /* site-config: text_gray */
+    line-height: 1.6;
+  }
+
+  .footer-contact__text a {
+    color: #A1A1A1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-contact__text a:hover {
+    color: #8B5CF6;                           /* site-config: primary_purple */
+  }
+
+  .footer-contact__text strong {
+    display: block;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+  }
+
+  /* Hours table */
+  .footer-hours {
+    font-size: 0.875rem;
+    color: #A1A1A1;
+    line-height: 1.8;
+  }
+
+  .footer-hours span {
+    color: #FFFFFF;
+    font-weight: 600;
+  }
+
+  /* --- Bottom bar --- */
+  .footer-bottom {
+    border-top: 1px solid rgba(139, 92, 246, 0.15);
+    max-width: 1400px;
+    margin-inline: auto;
+    padding: 1.5rem 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .footer-bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+
+  .footer-bottom__copy {
+    font-size: 0.85rem;
+    color: #A1A1A1;
+  }
+
+  .footer-bottom__links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-bottom__links a {
+    font-size: 0.85rem;
+    color: #A1A1A1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-bottom__links a:hover {
+    color: #8B5CF6;
+  }
+
+  .footer-bottom__links span {
+    color: rgba(139, 92, 246, 0.4);
+    font-size: 0.75rem;
+  }
+
+  .footer-bottom__tagline {
+    font-size: 0.8rem;
+    color: rgba(161, 161, 161, 0.6);
+    font-style: italic;
+  }
+
+  @media (min-width: 768px) {
+    .footer-bottom__tagline {
+      text-align: right;
+    }
+  }
+</style>
+
+<!-- =====================================================================
+     FOOTER HTML
+     NAP data populated from site-config.json via JavaScript fetch
+     ===================================================================== -->
+<footer class="site-footer" role="contentinfo" itemscope itemtype="https://schema.org/LocalBusiness">
+
+  <div class="footer-main">
+
+    <!-- ---- COLUMN 1: Brand + Social ---- -->
+    <div class="footer-col footer-col--brand">
+
+      <a href="/" class="footer-brand__logo" aria-label="UNDRGRND Movement — Home">
+        <span class="footer-brand__title">UNDRGRND</span>
+        <span class="footer-brand__sub">movement</span>
+      </a>
+
+      <!-- Tagline: site-config.json → project.tagline -->
+      <p class="footer-brand__tagline" id="footerTagline">
+        Foundational movement for body and mind
+      </p>
+
+      <!-- Social links: site-config.json → business.contact.instagram / .facebook -->
+      <div class="footer-social" aria-label="Social media links">
+
+        <!-- Instagram -->
+        <a
+          href="#"
+          class="footer-social__link"
+          id="footerInstagram"
+          aria-label="UNDRGRND Movement on Instagram"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <!-- Lucide: instagram -->
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+
+        <!-- Facebook -->
+        <a
+          href="#"
+          class="footer-social__link"
+          id="footerFacebook"
+          aria-label="UNDRGRND Movement on Facebook"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <!-- Lucide: facebook -->
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+          </svg>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- ---- COLUMN 2: Quick Links ---- -->
+    <div class="footer-col footer-col--links">
+      <h3 class="footer-col__heading">Quick Links</h3>
+      <!-- Links populated from site-config.json navigation.main_menu -->
+      <ul class="footer-links" id="footerNavLinks" role="list">
+        <!-- Populated by JavaScript -->
+      </ul>
+    </div>
+
+    <!-- ---- COLUMN 3: Contact Info ---- -->
+    <!--
+      NAP CONSISTENCY: All Name, Address, Phone values are rendered
+      directly from site-config.json to match Google My Business exactly.
+    -->
+    <div class="footer-col footer-col--contact">
+      <h3 class="footer-col__heading">Contact Us</h3>
+
+      <address class="footer-contact" style="font-style: normal;" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+
+        <!-- Address: site-config.json → business.address -->
+        <div class="footer-contact__item">
+          <span class="footer-contact__icon" aria-hidden="true">
+            <!-- Lucide: map-pin -->
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </span>
+          <div class="footer-contact__text">
+            <strong>Studio</strong>
+            <!-- NAP: street, suburb, state, postcode from site-config.json business.address -->
+            <span id="footerAddress">163 Ferry Rd<br>Southport QLD 4215<br>Australia</span>
+          </div>
+        </div>
+
+        <!-- Email: site-config.json → business.contact.email -->
+        <div class="footer-contact__item">
+          <span class="footer-contact__icon" aria-hidden="true">
+            <!-- Lucide: mail -->
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </span>
+          <div class="footer-contact__text">
+            <strong>Email</strong>
+            <!-- NAP: email from site-config.json business.contact.email -->
+            <a href="mailto:olga.coaching1@gmail.com" id="footerEmail" itemprop="email">olga.coaching1@gmail.com</a>
+          </div>
+        </div>
+
+        <!-- Phone: site-config.json → business.contact.phone -->
+        <div class="footer-contact__item">
+          <span class="footer-contact__icon" aria-hidden="true">
+            <!-- Lucide: phone -->
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"></path></svg>
+          </span>
+          <div class="footer-contact__text">
+            <strong>Phone</strong>
+            <!-- NAP: phone from site-config.json business.contact.phone -->
+            <a href="tel:[PLACEHOLDER]" id="footerPhone" itemprop="telephone">[PLACEHOLDER - UPDATE BEFORE LAUNCH]</a>
+          </div>
+        </div>
+
+        <!-- Hours: site-config.json → business.hours -->
+        <div class="footer-contact__item">
+          <span class="footer-contact__icon" aria-hidden="true">
+            <!-- Lucide: clock -->
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </span>
+          <div class="footer-contact__text">
+            <strong>Hours</strong>
+            <div class="footer-hours">
+              <!-- Hours summary from site-config.json business.hours -->
+              <span>Mon–Fri:</span> 6:00 AM – 9:00 PM<br>
+              <span>Sat–Sun:</span> 8:00 AM – 4:00 PM
+            </div>
+          </div>
+        </div>
+
+      </address>
+    </div>
+
+  </div><!-- /.footer-main -->
+
+  <!-- ---- Bottom bar ---- -->
+  <div class="footer-bottom">
+
+    <p class="footer-bottom__copy">
+      <!-- NAP: legal_name from site-config.json business.legal_name -->
+      &copy; 2026 <span itemprop="name">UNDRGRND Movement</span>. All rights reserved.
+    </p>
+
+    <nav class="footer-bottom__links" aria-label="Legal links">
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <span aria-hidden="true">|</span>
+      <a href="/terms-of-service.html">Terms of Service</a>
+    </nav>
+
+    <p class="footer-bottom__tagline">
+      Proudly serving Gold Coast and Southport communities
+    </p>
+
+  </div>
+
+</footer>
+
+<!-- =====================================================================
+     FOOTER JAVASCRIPT
+     Data source: site-config.json → project, business, navigation
+     NAP values are pre-rendered in HTML above; JS only updates social
+     links and nav items to avoid any NAP inconsistency from async load.
+     ===================================================================== -->
+<script>
+(function () {
+  'use strict';
+
+  fetch('/site-config.json')
+    .then(function (res) {
+      if (!res.ok) throw new Error('Could not load site-config.json');
+      return res.json();
+    })
+    .then(function (config) {
+
+      /* --- Tagline: project.tagline --- */
+      var taglineEl = document.getElementById('footerTagline');
+      if (taglineEl && config.project && config.project.tagline) {
+        taglineEl.textContent = config.project.tagline;
+      }
+
+      /* --- Social links: business.contact.instagram / .facebook ---
+           URLs are placeholders until client updates site-config.json.
+           We only set href if the value is not a placeholder string.
+      --- */
+      var instagram = config.business && config.business.contact && config.business.contact.instagram;
+      var facebook  = config.business && config.business.contact && config.business.contact.facebook;
+
+      var igLink = document.getElementById('footerInstagram');
+      if (igLink && instagram && instagram.indexOf('PLACEHOLDER') === -1) {
+        igLink.href = instagram;
+      }
+
+      var fbLink = document.getElementById('footerFacebook');
+      if (fbLink && facebook && facebook.indexOf('PLACEHOLDER') === -1) {
+        fbLink.href = facebook;
+      }
+
+      /* --- NAP: Address --- */
+      var addressEl = document.getElementById('footerAddress');
+      if (addressEl && config.business && config.business.address) {
+        var addr = config.business.address;
+        addressEl.innerHTML =
+          addr.street + '<br>' +
+          addr.suburb + ' ' + addr.state + ' ' + addr.postcode + '<br>' +
+          addr.country;
+      }
+
+      /* --- NAP: Email --- */
+      var emailEl = document.getElementById('footerEmail');
+      if (emailEl && config.business && config.business.contact && config.business.contact.email) {
+        var email = config.business.contact.email;
+        emailEl.href = 'mailto:' + email;
+        emailEl.textContent = email;
+      }
+
+      /* --- NAP: Phone --- */
+      var phoneEl = document.getElementById('footerPhone');
+      if (phoneEl && config.business && config.business.contact && config.business.contact.phone) {
+        var phone = config.business.contact.phone;
+        if (phone.indexOf('PLACEHOLDER') === -1) {
+          phoneEl.href = 'tel:' + phone.replace(/\s/g, '');
+          phoneEl.textContent = phone;
+        }
+      }
+
+      /* --- Quick links: navigation.main_menu --- */
+      var navList = document.getElementById('footerNavLinks');
+      if (navList && config.navigation && config.navigation.main_menu) {
+        config.navigation.main_menu.forEach(function (item) {
+          var li = document.createElement('li');
+          li.className = 'footer-links__item';
+
+          var a = document.createElement('a');
+          a.href = item.href;
+          a.textContent = item.label;
+
+          li.appendChild(a);
+          navList.appendChild(li);
+        });
+      }
+
+    })
+    .catch(function (err) {
+      console.error('Footer: Failed to load site-config.json', err);
+
+      /* Fallback: render static nav links from site-config.json values */
+      var fallbackLinks = [
+        { label: 'Home',      href: '/' },
+        { label: 'Adults',    href: '/adults.html' },
+        { label: 'Kids',      href: '/kids.html' },
+        { label: 'Timetable', href: '/timetable.html' },
+        { label: 'About',     href: '/about.html' },
+        { label: 'Contact',   href: '/contact.html' }
+      ];
+
+      var navList = document.getElementById('footerNavLinks');
+      if (navList) {
+        fallbackLinks.forEach(function (item) {
+          var li = document.createElement('li');
+          li.className = 'footer-links__item';
+          var a = document.createElement('a');
+          a.href = item.href;
+          a.textContent = item.label;
+          li.appendChild(a);
+          navList.appendChild(li);
+        });
+      }
+    });
+
+}());
+</script>
+
+<script>
+// Mobile menu toggle
+const hamburger = document.querySelector('.hamburger-menu');
+const navLinks = document.querySelector('.nav-links');
+
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  });
+}
+
+// Close mobile menu when link clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    hamburger.classList.remove('active');
+  });
+});
+
+// Highlight active page
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a').forEach(link => {
+  if (link.getAttribute('href') === currentPage ||
+      (currentPage === '' && link.getAttribute('href') === '/')) {
+    link.classList.add('active');
+  }
+});
+
+// Add scrolled class to nav
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  if (nav) {
+    if (window.scrollY > 50) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  }
+});
+</script>
 </body>
 </html>

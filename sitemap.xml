@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- =====================================================================
+       HOMEPAGE
+       ===================================================================== -->
+  <url>
+    <loc>https://www.undrgrnd.com.au/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- =====================================================================
+       MAIN PAGES
+       ===================================================================== -->
+  <url>
+    <loc>https://www.undrgrnd.com.au/adults.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.undrgrnd.com.au/kids.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.undrgrnd.com.au/timetable.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.undrgrnd.com.au/about.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.undrgrnd.com.au/contact.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- =====================================================================
+       ADULT PROGRAM PAGES — Dance
+       ===================================================================== -->
+  <url>
+    <loc>https://www.undrgrnd.com.au/programs/afro-groove-foundations.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.undrgrnd.com.au/programs/movement-dance.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.undrgrnd.com.au/programs/recovery-movement.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- =====================================================================
+       ADULT PROGRAM PAGES — Pole
+       ===================================================================== -->
+  <url>
+    <loc>https://www.undrgrnd.com.au/programs/pole-fitness-foundations.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.undrgrnd.com.au/programs/pole-flow.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.undrgrnd.com.au/programs/pole-strength-movement.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- =====================================================================
+       ADULT PROGRAM PAGES — Yoga
+       ===================================================================== -->
+  <url>
+    <loc>https://www.undrgrnd.com.au/programs/yoga-fusion.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.undrgrnd.com.au/programs/traditional-yoga.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.undrgrnd.com.au/programs/modern-yoga.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.undrgrnd.com.au/programs/aerial-yoga.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- =====================================================================
+       ADULT PROGRAM PAGES — Aerial
+       ===================================================================== -->
+  <url>
+    <loc>https://www.undrgrnd.com.au/programs/aerial-silks.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- =====================================================================
+       ADULT PROGRAM PAGES — Choreography
+       ===================================================================== -->
+  <url>
+    <loc>https://www.undrgrnd.com.au/programs/choreography-fusion.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- =====================================================================
+       KIDS PROGRAM PAGES — Yoga
+       ===================================================================== -->
+  <url>
+    <loc>https://www.undrgrnd.com.au/programs/kids-yoga.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.undrgrnd.com.au/programs/kids-aerial-yoga.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- =====================================================================
+       KIDS PROGRAM PAGES — Pole
+       ===================================================================== -->
+  <url>
+    <loc>https://www.undrgrnd.com.au/programs/kids-pole-foundations.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- =====================================================================
+       KIDS PROGRAM PAGES — Aerial
+       ===================================================================== -->
+  <url>
+    <loc>https://www.undrgrnd.com.au/programs/kids-aerial-silks.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- =====================================================================
+       KIDS PROGRAM PAGES — Dance
+       ===================================================================== -->
+  <url>
+    <loc>https://www.undrgrnd.com.au/programs/kids-dance-moves.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.undrgrnd.com.au/programs/kids-modern-contemporary.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.undrgrnd.com.au/programs/kids-creative-dance.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- =====================================================================
+       LEGAL PAGES
+       ===================================================================== -->
+  <url>
+    <loc>https://www.undrgrnd.com.au/privacy-policy.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.undrgrnd.com.au/terms-of-service.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

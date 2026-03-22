@@ -1,0 +1,9 @@
+# UNDGRND Movement - Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.undrgrnd.com.au/sitemap.xml
+
+# No restrictions - all pages are public
+Disallow:

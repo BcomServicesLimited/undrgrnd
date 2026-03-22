@@ -118,7 +118,11 @@
     .age-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(236,72,153,.1);border:1px solid rgba(236,72,153,.3);color:#EC4899;padding:.3rem .8rem;border-radius:50px;font-size:.8rem;font-weight:700;margin-bottom:1rem;}
     .kids-note{background:rgba(236,72,153,.08);border:1px solid rgba(236,72,153,.3);border-radius:12px;padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:.9rem;color:var(--color-text-gray);}
     .kids-note strong{color:#EC4899;}
-  </style>
+  </style>  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
 </head>
 <body>
 <!--
@@ -171,10 +175,8 @@
   /* --- Logo --- */
   .nav-logo {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     text-decoration: none;
-    line-height: 1;
     flex-shrink: 0;
   }
 
@@ -461,8 +463,7 @@
 
     <!-- Logo — site-config.json: project.name -->
     <a href="/" class="nav-logo" aria-label="UNDRGRND Movement — Home">
-      <span class="nav-logo__title">UNDRGRND</span>
-      <span class="nav-logo__sub">movement</span>
+      <img src="../images/logo/logo-header.webp" alt="UNDRGRND Movement — Gold Coast Dance Studio" width="215" height="49" style="height:50px;width:auto;display:block;" loading="eager">
     </a>
 
     <!-- Desktop navigation — populated from site-config.json navigation.main_menu -->

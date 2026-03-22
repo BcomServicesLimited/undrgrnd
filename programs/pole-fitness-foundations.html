@@ -1,0 +1,2111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title & Meta Description -->
+  <title>Pole Fitness Foundations Gold Coast | Beginner Pole Classes | UNDGRND Movement Southport</title>
+  <meta name="description" content="Safe, structured beginner pole fitness classes for complete beginners at UNDGRND Movement, Southport. Safe, beginner-friendly pole fitness on the Gold Coast.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.undrgrnd.com.au/programs/pole-fitness-foundations.html">
+
+  <!-- Favicon placeholders -->
+  <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="/css/global.css">
+
+  <!-- Schema Generator -->
+  <script src="/js/schema-generator.js"></script>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.undrgrnd.com.au/programs/pole-fitness-foundations.html">
+  <meta property="og:title" content="Pole Fitness Foundations Gold Coast | Beginner Pole Classes | UNDGRND Movement">
+  <meta property="og:description" content="Safe, beginner-friendly pole fitness classes at UNDGRND Movement Southport. Athletic, strength-based pole training on the Gold Coast.">
+
+  <!-- Page-specific styles -->
+  <style>
+    /* -----------------------------------------------------------------------
+       HERO
+    ----------------------------------------------------------------------- */
+    .prog-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: #0A0A0A;
+    }
+
+    .prog-hero__bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.75) 60%, rgba(10,10,10,0.97) 100%),
+        radial-gradient(ellipse 80% 70% at 65% 40%, rgba(139, 92, 246, 0.22) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 50% at 20% 80%, rgba(236, 72, 153, 0.14) 0%, transparent 55%);
+    }
+
+    .prog-hero__img-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      z-index: 0;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(236, 72, 153, 0.08) 100%);
+    }
+
+    .prog-hero__img-placeholder svg {
+      width: 64px;
+      height: 64px;
+      stroke: rgba(139, 92, 246, 0.35);
+      fill: none;
+      stroke-width: 1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .prog-hero__img-placeholder p {
+      font-size: 0.78rem;
+      color: rgba(161, 161, 161, 0.4);
+      max-width: 340px;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .prog-hero__content {
+      position: relative;
+      z-index: 1;
+      max-width: 1400px;
+      margin-inline: auto;
+      padding: 0 5% 5rem;
+      width: 100%;
+    }
+
+    .prog-hero__level {
+      display: inline-block;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 50px;
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      color: #A78BFA;
+      margin-bottom: 1rem;
+    }
+
+    .prog-hero__h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      line-height: 0.95;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin: 0 0 1.25rem;
+      max-width: 900px;
+    }
+
+    .prog-hero__location {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #A1A1A1;
+      margin-bottom: 2rem;
+    }
+
+    .prog-hero__location svg {
+      width: 15px;
+      height: 15px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .prog-hero__ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* -----------------------------------------------------------------------
+       STICKY BOOK NOW
+    ----------------------------------------------------------------------- */
+    .sticky-book {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 900;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .sticky-book.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .sticky-book a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      text-decoration: none;
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      padding: 0.85rem 1.5rem;
+      border-radius: 50px;
+      box-shadow: 0 8px 30px rgba(139, 92, 246, 0.45);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .sticky-book a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(139, 92, 246, 0.6);
+    }
+
+    .sticky-book a svg {
+      width: 16px;
+      height: 16px;
+      stroke: #FFFFFF;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* -----------------------------------------------------------------------
+       PROGRAM OVERVIEW
+    ----------------------------------------------------------------------- */
+    .overview-section {
+      padding: 8rem 5%;
+      background: #0A0A0A;
+    }
+
+    .overview-section__inner {
+      max-width: 1400px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    @media (min-width: 1024px) {
+      .overview-section__inner {
+        grid-template-columns: 1fr 380px;
+        gap: 5rem;
+        align-items: start;
+      }
+    }
+
+    .overview-section__eyebrow {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #A78BFA;
+      margin-bottom: 0.75rem;
+    }
+
+    .overview-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 1.5rem;
+    }
+
+    .overview-section__desc {
+      font-size: 1.05rem;
+      color: #A1A1A1;
+      line-height: 1.8;
+    }
+
+    /* Info Box */
+    .info-box {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      padding: 2rem;
+      position: sticky;
+      top: 100px;
+    }
+
+    .info-box__title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+    }
+
+    .info-box__rows {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-box__row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .info-box__row-icon {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      background: rgba(139, 92, 246, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .info-box__row-icon svg {
+      width: 15px;
+      height: 15px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .info-box__row-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #A1A1A1;
+      line-height: 1;
+      margin-bottom: 0.2rem;
+    }
+
+    .info-box__row-value {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      line-height: 1.3;
+    }
+
+    .info-box__divider {
+      height: 1px;
+      background: rgba(139, 92, 246, 0.12);
+      margin: 1rem 0;
+    }
+
+    .info-box__pricing-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #A78BFA;
+      margin-bottom: 0.75rem;
+    }
+
+    .info-box__price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .info-box__price-row:last-child { border-bottom: none; }
+
+    .info-box__price-label { font-size: 0.88rem; color: #A1A1A1; }
+
+    .info-box__price-amount { font-size: 1rem; font-weight: 700; color: #A78BFA; }
+
+    .info-box__note {
+      font-size: 0.75rem;
+      color: rgba(161, 161, 161, 0.6);
+      margin-top: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .info-box__cta { margin-top: 1.5rem; }
+    .info-box__cta a { display: block; text-align: center; }
+
+    /* -----------------------------------------------------------------------
+       CORE FOCUS
+    ----------------------------------------------------------------------- */
+    .focus-section {
+      padding: 8rem 5%;
+      background: #0D0D0D;
+    }
+
+    .focus-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .focus-grid {
+      max-width: 1400px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) { .focus-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .focus-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .focus-card {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      padding: 2rem 1.75rem;
+      transition: all 0.3s ease;
+    }
+
+    .focus-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(139, 92, 246, 0.45);
+      box-shadow: 0 15px 40px rgba(139, 92, 246, 0.12);
+    }
+
+    .focus-card__icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.1));
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .focus-card__icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .focus-card__text {
+      font-size: 0.95rem;
+      color: #FFFFFF;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .focus-card__sub {
+      font-size: 0.82rem;
+      color: #A1A1A1;
+      margin-top: 0.4rem;
+      line-height: 1.5;
+    }
+
+    /* Client outcome highlight */
+    .outcome-box {
+      max-width: 1400px;
+      margin: 2.5rem auto 0;
+      padding: 1.75rem 2.5rem;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.07));
+      border: 1px solid rgba(139, 92, 246, 0.25);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .outcome-box__icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #8B5CF6, #EC4899);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .outcome-box__icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: #FFFFFF;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .outcome-box__label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #A78BFA;
+      margin-bottom: 0.25rem;
+    }
+
+    .outcome-box__text {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      font-style: italic;
+    }
+
+    /* -----------------------------------------------------------------------
+       WHO IT'S FOR
+    ----------------------------------------------------------------------- */
+    .who-section {
+      padding: 8rem 5%;
+      background: #0A0A0A;
+    }
+
+    .who-section__inner {
+      max-width: 1400px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    @media (min-width: 1024px) {
+      .who-section__inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: start;
+      }
+    }
+
+    .who-section h2 { margin-bottom: 1.5rem; }
+
+    .who-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .who-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      font-size: 1rem;
+      color: #A1A1A1;
+      line-height: 1.5;
+    }
+
+    .who-list li svg {
+      width: 18px;
+      height: 18px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* -----------------------------------------------------------------------
+       CLARIFICATIONS BOX — Pole FITNESS vs. Pole Dancing
+    ----------------------------------------------------------------------- */
+    .clarify-section {
+      padding: 6rem 5%;
+      background: #0D0D0D;
+    }
+
+    .clarify-box {
+      max-width: 900px;
+      margin-inline: auto;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(236, 72, 153, 0.05) 100%);
+      border: 1px solid rgba(139, 92, 246, 0.25);
+      border-left: 4px solid #8B5CF6;
+      border-radius: 16px;
+      padding: 2.5rem;
+    }
+
+    .clarify-box__header {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .clarify-box__icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(139, 92, 246, 0.12);
+      border: 1px solid rgba(139, 92, 246, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .clarify-box__icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .clarify-box__heading {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+    }
+
+    .clarify-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .clarify-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      font-size: 0.97rem;
+      color: #D1D5DB;
+      line-height: 1.6;
+    }
+
+    .clarify-list li svg {
+      width: 18px;
+      height: 18px;
+      stroke: #A78BFA;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .clarify-list li strong { color: #FFFFFF; font-weight: 700; }
+
+    /* -----------------------------------------------------------------------
+       WHAT TO EXPECT — timeline
+    ----------------------------------------------------------------------- */
+    .expect-section {
+      padding: 8rem 5%;
+      background: #0A0A0A;
+    }
+
+    .expect-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .expect-timeline {
+      max-width: 800px;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .expect-step { display: flex; gap: 1.5rem; }
+
+    .expect-step__left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .expect-step__num {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      color: #FFFFFF;
+      flex-shrink: 0;
+    }
+
+    .expect-step__line {
+      width: 2px;
+      flex: 1;
+      background: rgba(139, 92, 246, 0.15);
+      margin: 4px 0;
+      min-height: 30px;
+    }
+
+    .expect-step:last-child .expect-step__line { display: none; }
+
+    .expect-step__content { padding-bottom: 2.5rem; padding-top: 0.5rem; }
+
+    .expect-step__title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 0.35rem;
+    }
+
+    .expect-step__desc {
+      font-size: 0.9rem;
+      color: #A1A1A1;
+      line-height: 1.6;
+    }
+
+    /* -----------------------------------------------------------------------
+       PROGRESSION PATH
+    ----------------------------------------------------------------------- */
+    .progression-section {
+      padding: 8rem 5%;
+      background: #0D0D0D;
+    }
+
+    .progression-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .progression-track {
+      max-width: 900px;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    @media (min-width: 768px) {
+      .progression-track {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 0;
+      }
+    }
+
+    .progression-step {
+      flex: 1;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (min-width: 768px) {
+      .progression-step:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        right: -1px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2px;
+        height: 60%;
+        background: rgba(139, 92, 246, 0.2);
+      }
+    }
+
+    .progression-step__inner {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      padding: 2rem 1.75rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: all 0.3s ease;
+    }
+
+    .progression-step--current .progression-step__inner {
+      border-color: rgba(139, 92, 246, 0.55);
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.06));
+      box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
+    }
+
+    @media (min-width: 768px) {
+      .progression-step:not(:last-child) .progression-step__inner {
+        border-radius: 20px 0 0 20px;
+        border-right: none;
+      }
+      .progression-step:not(:first-child) .progression-step__inner {
+        border-radius: 0 20px 20px 0;
+        border-left: none;
+      }
+      .progression-step:not(:first-child):not(:last-child) .progression-step__inner {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+      }
+    }
+
+    .progression-step__num {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #A1A1A1;
+    }
+
+    .progression-step--current .progression-step__num { color: #A78BFA; }
+
+    .progression-step__badge {
+      display: inline-block;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.65rem;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #8B5CF6, #EC4899);
+      color: #FFFFFF;
+      align-self: flex-start;
+    }
+
+    .progression-step__name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+    }
+
+    .progression-step__desc {
+      font-size: 0.85rem;
+      color: #A1A1A1;
+      line-height: 1.5;
+    }
+
+    .progression-tagline {
+      text-align: center;
+      margin-top: 2.5rem;
+      font-size: 1rem;
+      color: #A1A1A1;
+      font-style: italic;
+    }
+
+    /* -----------------------------------------------------------------------
+       PRICING
+    ----------------------------------------------------------------------- */
+    .pricing-section {
+      padding: 8rem 5%;
+      background: #0A0A0A;
+    }
+
+    .pricing-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .pricing-grid {
+      max-width: 1000px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .pricing-card {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: all 0.35s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(139, 92, 246, 0.5);
+      box-shadow: 0 20px 50px rgba(139, 92, 246, 0.18);
+    }
+
+    .pricing-card--featured {
+      border-color: rgba(139, 92, 246, 0.5);
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(236, 72, 153, 0.05));
+      position: relative;
+    }
+
+    .pricing-card--featured::before {
+      content: 'Best Value';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      padding: 0.25rem 0.9rem;
+      border-radius: 50px;
+      white-space: nowrap;
+    }
+
+    .pricing-card__label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #A78BFA;
+    }
+
+    .pricing-card__price {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.5rem;
+      line-height: 1;
+      color: #FFFFFF;
+    }
+
+    .pricing-card__price sup {
+      font-size: 1.5rem;
+      vertical-align: super;
+      line-height: 0;
+    }
+
+    .pricing-card__period { font-size: 0.85rem; color: #A1A1A1; }
+    .pricing-card__tagline { font-size: 0.9rem; color: #A1A1A1; font-style: italic; }
+    .pricing-card__cta { margin-top: 0.5rem; width: 100%; }
+
+    /* -----------------------------------------------------------------------
+       FAQ ACCORDION
+    ----------------------------------------------------------------------- */
+    .faq-section {
+      padding: 8rem 5%;
+      background: #0D0D0D;
+    }
+
+    .faq-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 3rem;
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .faq-item {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.3s ease;
+    }
+
+    .faq-item.open { border-color: rgba(139, 92, 246, 0.45); }
+
+    .faq-item__question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .faq-item__question-text {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      line-height: 1.4;
+    }
+
+    .faq-item__icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item.open .faq-item__icon {
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      border-color: transparent;
+      transform: rotate(45deg);
+    }
+
+    .faq-item__icon svg {
+      width: 14px;
+      height: 14px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.3s ease;
+    }
+
+    .faq-item.open .faq-item__icon svg { stroke: #FFFFFF; }
+
+    .faq-item__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    .faq-item.open .faq-item__answer { max-height: 400px; }
+
+    .faq-item__answer-inner {
+      padding: 0 1.75rem 1.5rem;
+      font-size: 0.93rem;
+      color: #A1A1A1;
+      line-height: 1.7;
+    }
+
+    /* -----------------------------------------------------------------------
+       RELATED PROGRAMS
+    ----------------------------------------------------------------------- */
+    .related-section {
+      padding: 8rem 5%;
+      background: #0A0A0A;
+    }
+
+    .related-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .related-grid {
+      max-width: 1400px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) { .related-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .related-card {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .related-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(139, 92, 246, 0.45);
+      box-shadow: 0 15px 40px rgba(139, 92, 246, 0.12);
+    }
+
+    .related-card__img {
+      height: 160px;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.1));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .related-card__img svg {
+      width: 36px;
+      height: 36px;
+      stroke: rgba(139, 92, 246, 0.5);
+      fill: none;
+      stroke-width: 1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .related-card__body { padding: 1.5rem; }
+
+    .related-card__name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.35rem;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
+    }
+
+    .related-card__desc {
+      font-size: 0.88rem;
+      color: #A1A1A1;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    /* -----------------------------------------------------------------------
+       SEO CONTENT
+    ----------------------------------------------------------------------- */
+    .seo-section {
+      padding: 8rem 5%;
+      background: #0D0D0D;
+    }
+
+    .seo-section__inner { max-width: 900px; margin-inline: auto; }
+
+    .seo-section h2 { margin-bottom: 2rem; }
+
+    .seo-section h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.55rem;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin: 2.5rem 0 1rem;
+    }
+
+    .seo-section p {
+      font-size: 1rem;
+      color: #A1A1A1;
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+
+    .seo-section strong { color: #FFFFFF; font-weight: 600; }
+
+    /* -----------------------------------------------------------------------
+       CTA SECTION
+    ----------------------------------------------------------------------- */
+    .cta-section {
+      padding: 8rem 5%;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(236, 72, 153, 0.08) 100%);
+      border-top: 1px solid rgba(139, 92, 246, 0.15);
+    }
+
+    .cta-section__inner {
+      max-width: 700px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 1.25rem;
+    }
+
+    .cta-section__sub {
+      font-size: 1rem;
+      color: #A1A1A1;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .cta-section__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    /* -----------------------------------------------------------------------
+       SCROLL ANIMATIONS
+    ----------------------------------------------------------------------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .reveal-delay-1 { transition-delay: 0.08s; }
+    .reveal-delay-2 { transition-delay: 0.16s; }
+    .reveal-delay-3 { transition-delay: 0.24s; }
+  </style>
+</head>
+
+<body>
+
+<!-- =========================================================================
+     NAVIGATION — copy contents of /components/nav-component.html here
+     ========================================================================= -->
+
+
+<!-- =========================================================================
+     STICKY BOOK NOW
+     ========================================================================= -->
+<div class="sticky-book" id="stickyBook" aria-hidden="true">
+  <a href="/timetable.html?filter=pole" tabindex="-1">
+    <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+    Book Now
+  </a>
+</div>
+
+
+<!-- =========================================================================
+     1. HERO SECTION
+     ========================================================================= -->
+<section class="prog-hero" aria-label="Pole Fitness Foundations — UNDGRND Movement">
+
+  <div class="prog-hero__img-placeholder" aria-hidden="true">
+    <!-- Lucide: trending-up -->
+    <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+    <p>AI-generated: Strong flexible woman demonstrating beginner pole grip, focused expression, controlled positioning, purple accent lighting</p>
+  </div>
+
+  <div class="prog-hero__bg" aria-hidden="true"></div>
+
+  <div class="prog-hero__content">
+    <span class="prog-hero__level" id="heroLevel">Beginner / Foundation</span>
+
+    <h1 class="prog-hero__h1">Pole Fitness Foundations | Beginner Pole Classes Gold Coast</h1>
+
+    <p class="prog-hero__location">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+      Southport Studio | 163 Ferry Rd
+    </p>
+
+    <div class="prog-hero__ctas">
+      <a href="/timetable.html?filter=pole" class="cta-button">Book This Class</a>
+      <a href="/timetable.html" class="cta-secondary">View Timetable</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     2. PROGRAM OVERVIEW
+     ========================================================================= -->
+<section class="overview-section reveal" aria-labelledby="overviewHeading">
+  <div class="overview-section__inner">
+
+    <div>
+      <p class="overview-section__eyebrow">About This Program</p>
+      <h2 id="overviewHeading">Pole Fitness Foundations</h2>
+      <p class="overview-section__desc" id="programDesc">
+        Pole Fitness – Foundations is a structured beginner program that introduces students to the fundamentals of pole fitness as a sport. Classes cover grip techniques, basic walks, entry-level spins, and safe body positioning around the pole. All movements are taught with a focus on control, safety, and progressive strength development. No prior experience is required — this program is designed for absolute beginners who want to learn pole fitness from the ground up in a supportive, non-judgmental environment.
+      </p>
+    </div>
+
+    <aside class="info-box" aria-label="Quick program information">
+      <h3 class="info-box__title">Quick Info</h3>
+
+      <div class="info-box__rows">
+        <div class="info-box__row">
+          <div class="info-box__row-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          </div>
+          <div>
+            <p class="info-box__row-label">Level</p>
+            <p class="info-box__row-value" id="infoLevel">Beginner / Foundation</p>
+          </div>
+        </div>
+        <div class="info-box__row">
+          <div class="info-box__row-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          </div>
+          <div>
+            <p class="info-box__row-label">Category</p>
+            <p class="info-box__row-value" id="infoCategory">Pole</p>
+          </div>
+        </div>
+        <div class="info-box__row">
+          <div class="info-box__row-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <div>
+            <p class="info-box__row-label">Duration</p>
+            <p class="info-box__row-value">60 minutes</p>
+          </div>
+        </div>
+        <div class="info-box__row">
+          <div class="info-box__row-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <div>
+            <p class="info-box__row-label">Class Size</p>
+            <p class="info-box__row-value">Max 12 students</p>
+          </div>
+        </div>
+        <div class="info-box__row">
+          <div class="info-box__row-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          </div>
+          <div>
+            <p class="info-box__row-label">What to Wear</p>
+            <p class="info-box__row-value">Shorts and tank top — skin contact aids grip. No lotion or oils.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-box__divider"></div>
+
+      <p class="info-box__pricing-title">Pricing</p>
+      <div>
+        <div class="info-box__price-row">
+          <span class="info-box__price-label">Drop-In</span>
+          <span class="info-box__price-amount" id="priceDropIn">$28</span>
+        </div>
+        <div class="info-box__price-row">
+          <span class="info-box__price-label">10 Class Pack</span>
+          <span class="info-box__price-amount" id="pricePack">$220</span>
+        </div>
+        <div class="info-box__price-row">
+          <span class="info-box__price-label">Unlimited Monthly</span>
+          <span class="info-box__price-amount" id="priceMonthly">$200</span>
+        </div>
+      </div>
+      <p class="info-box__note">Prices are estimates. See full pricing when booking.</p>
+
+      <div class="info-box__cta">
+        <a href="/timetable.html?filter=pole" class="cta-button">Book This Class</a>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     3. CORE FOCUS
+     ========================================================================= -->
+<section class="focus-section reveal" aria-labelledby="focusHeading">
+  <div class="focus-section__header">
+    <span class="section-label">Skills</span>
+    <h2 id="focusHeading">What You'll Master</h2>
+  </div>
+
+  <div class="focus-grid" id="focusGrid">
+    <div class="focus-card reveal reveal-delay-1">
+      <div class="focus-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path></svg>
+      </div>
+      <p class="focus-card__text">Grip basics and hand placement</p>
+      <p class="focus-card__sub">The foundation of all pole work</p>
+    </div>
+    <div class="focus-card reveal reveal-delay-2">
+      <div class="focus-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      </div>
+      <p class="focus-card__text">Walking around the pole</p>
+      <p class="focus-card__sub">Controlled movement and footwork</p>
+    </div>
+    <div class="focus-card reveal reveal-delay-3">
+      <div class="focus-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+      </div>
+      <p class="focus-card__text">Simple beginner spins</p>
+      <p class="focus-card__sub">Entry-level rotational movements</p>
+    </div>
+    <div class="focus-card reveal reveal-delay-1">
+      <div class="focus-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      </div>
+      <p class="focus-card__text">Body positioning and alignment</p>
+      <p class="focus-card__sub">Correct form from day one</p>
+    </div>
+    <div class="focus-card reveal reveal-delay-2">
+      <div class="focus-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+      </div>
+      <p class="focus-card__text">Safety and controlled movement</p>
+      <p class="focus-card__sub">Confidence through proper technique</p>
+    </div>
+  </div>
+
+  <!-- Client outcome highlight -->
+  <div class="outcome-box reveal" id="outcomeBox">
+    <div class="outcome-box__icon" aria-hidden="true">
+      <!-- Lucide: star -->
+      <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+    </div>
+    <div>
+      <p class="outcome-box__label">Class Outcome</p>
+      <p class="outcome-box__text" id="outcomeText">"I understand the pole and feel safe"</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     4. WHO IT'S FOR
+     ========================================================================= -->
+<section class="who-section reveal" aria-labelledby="whoHeading">
+  <div class="who-section__inner">
+
+    <div>
+      <span class="section-label">Is This Class For You?</span>
+      <h2 id="whoHeading">Is Pole Fitness Right For You?</h2>
+      <ul class="who-list">
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Complete beginners with no pole experience
+        </li>
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Anyone wanting to build full-body strength
+        </li>
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          People looking for a unique, empowering fitness challenge
+        </li>
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Those who want to learn pole safely from the ground up
+        </li>
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          All genders welcome — classes are primarily women but not exclusive
+        </li>
+      </ul>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+      <div class="card" style="padding: 2rem; text-align: center;">
+        <p style="font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: #8B5CF6; line-height: 1; margin-bottom: 0.25rem;">0</p>
+        <p style="font-size: 0.85rem; color: #A1A1A1; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;">Experience Required</p>
+      </div>
+      <div class="card" style="padding: 2rem; text-align: center;">
+        <p style="font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: #EC4899; line-height: 1; margin-bottom: 0.25rem;">ALL</p>
+        <p style="font-size: 0.85rem; color: #A1A1A1; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;">Genders Welcome</p>
+      </div>
+      <div class="card" style="padding: 2rem; text-align: center;">
+        <p style="font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: #A78BFA; line-height: 1; margin-bottom: 0.25rem;">60</p>
+        <p style="font-size: 0.85rem; color: #A1A1A1; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;">Minutes Per Class</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     5. CLARIFICATIONS BOX — Pole FITNESS vs. Pole Dancing
+     ========================================================================= -->
+<section class="clarify-section reveal" aria-labelledby="clarifyHeading">
+  <div class="clarify-box">
+    <div class="clarify-box__header">
+      <div class="clarify-box__icon" aria-hidden="true">
+        <!-- Lucide: info -->
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+      </div>
+      <h2 class="clarify-box__heading" id="clarifyHeading">Pole FITNESS vs. Pole Dancing</h2>
+    </div>
+    <ul class="clarify-list">
+      <li>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span><strong>This is pole FITNESS</strong> — an athletic, strength-based approach to pole work.</span>
+      </li>
+      <li>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>We teach pole as a <strong>sport and fitness discipline</strong>, not exotic dance.</span>
+      </li>
+      <li>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>All movements are taught with <strong>proper technique, control, and safety</strong> as top priorities.</span>
+      </li>
+      <li>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Our focus is on building <strong>strength, coordination, and confidence</strong>.</span>
+      </li>
+      <li>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>Everyone starts from <strong>absolute basics</strong> — this is THE beginning.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     6. WHAT TO EXPECT — timeline
+     ========================================================================= -->
+<section class="expect-section reveal" aria-labelledby="expectHeading">
+  <div class="expect-section__header">
+    <span class="section-label">First Class</span>
+    <h2 id="expectHeading">Your First Pole Fitness Class</h2>
+  </div>
+
+  <div class="expect-timeline" id="expectTimeline">
+    <div class="expect-step">
+      <div class="expect-step__left">
+        <div class="expect-step__num">1</div>
+        <div class="expect-step__line"></div>
+      </div>
+      <div class="expect-step__content">
+        <p class="expect-step__title">Introduction to the pole and studio</p>
+        <p class="expect-step__desc">We start with a brief introduction to the equipment, the studio, and what to expect from the program.</p>
+      </div>
+    </div>
+    <div class="expect-step">
+      <div class="expect-step__left">
+        <div class="expect-step__num">2</div>
+        <div class="expect-step__line"></div>
+      </div>
+      <div class="expect-step__content">
+        <p class="expect-step__title">Warm-up and body preparation</p>
+        <p class="expect-step__desc">A structured warm-up prepares your wrists, shoulders, and core for pole work.</p>
+      </div>
+    </div>
+    <div class="expect-step">
+      <div class="expect-step__left">
+        <div class="expect-step__num">3</div>
+        <div class="expect-step__line"></div>
+      </div>
+      <div class="expect-step__content">
+        <p class="expect-step__title">Grip technique and hand placement</p>
+        <p class="expect-step__desc">Learn the foundational grips that underpin all pole movements — safety starts here.</p>
+      </div>
+    </div>
+    <div class="expect-step">
+      <div class="expect-step__left">
+        <div class="expect-step__num">4</div>
+        <div class="expect-step__line"></div>
+      </div>
+      <div class="expect-step__content">
+        <p class="expect-step__title">Basic walks and body positioning</p>
+        <p class="expect-step__desc">Practise controlled walking around the pole with correct posture and alignment.</p>
+      </div>
+    </div>
+    <div class="expect-step">
+      <div class="expect-step__left">
+        <div class="expect-step__num">5</div>
+        <div class="expect-step__line"></div>
+      </div>
+      <div class="expect-step__content">
+        <p class="expect-step__title">First beginner spin</p>
+        <p class="expect-step__desc">With grip and positioning established, you will attempt your first guided spin — a milestone moment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     7. PROGRESSION PATH
+     ========================================================================= -->
+<section class="progression-section reveal" aria-labelledby="progressionHeading">
+  <div class="progression-section__header">
+    <span class="section-label">Your Journey</span>
+    <h2 id="progressionHeading">Your Pole Journey</h2>
+  </div>
+
+  <div class="progression-track">
+
+    <div class="progression-step progression-step--current">
+      <div class="progression-step__inner">
+        <p class="progression-step__num">Step 1</p>
+        <span class="progression-step__badge">You Are Here</span>
+        <p class="progression-step__name">Pole Foundations</p>
+        <p class="progression-step__desc">Grip, walks, basic spins, body positioning, safety and control. The essential starting point for all pole fitness.</p>
+      </div>
+    </div>
+
+    <div class="progression-step">
+      <div class="progression-step__inner">
+        <p class="progression-step__num">Step 2</p>
+        <p class="progression-step__name">Pole Flow</p>
+        <p class="progression-step__desc">Connecting movements, transitions, and developing grace and fluidity around the pole.</p>
+        <a href="/programs/pole-flow.html" style="font-size: 0.8rem; font-weight: 700; color: #8B5CF6; text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; margin-top: auto; padding-top: 0.75rem;">Explore &rarr;</a>
+      </div>
+    </div>
+
+    <div class="progression-step">
+      <div class="progression-step__inner">
+        <p class="progression-step__num">Step 3</p>
+        <p class="progression-step__name">Pole Strength &amp; Movement</p>
+        <p class="progression-step__desc">Holds, conditioning, and advanced techniques for dedicated pole fitness students.</p>
+        <a href="/programs/pole-strength.html" style="font-size: 0.8rem; font-weight: 700; color: #8B5CF6; text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; margin-top: auto; padding-top: 0.75rem;">Explore &rarr;</a>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="progression-tagline">Start where you are. Progress at your pace.</p>
+</section>
+
+
+<!-- =========================================================================
+     8. PRICING
+     ========================================================================= -->
+<section class="pricing-section reveal" aria-labelledby="pricingHeading">
+  <div class="pricing-section__header">
+    <span class="section-label">Pricing</span>
+    <h2 id="pricingHeading">Flexible Pricing Options</h2>
+    <p style="color: #A1A1A1; font-size: 0.95rem; margin-top: 0.75rem;">All prices are estimates. Final pricing confirmed at booking.</p>
+  </div>
+
+  <div class="pricing-grid">
+
+    <div class="pricing-card reveal reveal-delay-1">
+      <p class="pricing-card__label">Drop-In</p>
+      <p class="pricing-card__price"><sup>$</sup><span id="pricingDropIn">28</span></p>
+      <p class="pricing-card__period">per class</p>
+      <p class="pricing-card__tagline">"Try it out"</p>
+      <div class="pricing-card__cta">
+        <a href="/timetable.html?filter=pole" class="cta-secondary" style="display: block; text-align: center;">Book a Class</a>
+      </div>
+    </div>
+
+    <div class="pricing-card pricing-card--featured reveal reveal-delay-2">
+      <p class="pricing-card__label">Class Pack</p>
+      <p class="pricing-card__price"><sup>$</sup><span id="pricingPack">220</span></p>
+      <p class="pricing-card__period">for 10 classes</p>
+      <p class="pricing-card__tagline">"Best value"</p>
+      <div class="pricing-card__cta">
+        <a href="/timetable.html?filter=pole" class="cta-button" style="display: block; text-align: center;">Get Pack</a>
+      </div>
+    </div>
+
+    <div class="pricing-card reveal reveal-delay-3">
+      <p class="pricing-card__label">Unlimited Monthly</p>
+      <p class="pricing-card__price"><sup>$</sup><span id="pricingMonthly">200</span></p>
+      <p class="pricing-card__period">per month</p>
+      <p class="pricing-card__tagline">"For dedicated students"</p>
+      <div class="pricing-card__cta">
+        <a href="/timetable.html?filter=pole" class="cta-secondary" style="display: block; text-align: center;">Go Unlimited</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     9. FAQ ACCORDION
+     ========================================================================= -->
+<section class="faq-section reveal" aria-labelledby="faqHeading">
+  <div class="faq-section__header">
+    <span class="section-label">Questions</span>
+    <h2 id="faqHeading">Frequently Asked Questions</h2>
+  </div>
+
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" type="button">
+        <span class="faq-item__question-text">Do I need to be strong to start?</span>
+        <span class="faq-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+      </button>
+      <div class="faq-item__answer" role="region">
+        <div class="faq-item__answer-inner">No! You will build strength as you learn. We start with basic grips and low-level movements that are accessible to everyone. Pole fitness is one of the best ways to develop upper body and core strength progressively — many Gold Coast students are surprised by how quickly their strength improves through regular classes at our Southport studio.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" type="button">
+        <span class="faq-item__question-text">Is pole fitness the same as pole dancing?</span>
+        <span class="faq-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+      </button>
+      <div class="faq-item__answer" role="region">
+        <div class="faq-item__answer-inner">No. Pole fitness is athletic and strength-focused. We teach pole as a sport, with an emphasis on technique, control, and progressive skill development. Our Gold Coast classes are structured around building physical capability, not performance. The focus is entirely on what your body can do — strength, coordination, and confidence.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" type="button">
+        <span class="faq-item__question-text">Will I learn tricks in the first class?</span>
+        <span class="faq-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+      </button>
+      <div class="faq-item__answer" role="region">
+        <div class="faq-item__answer-inner">We start with foundational grips, walks, and basic spins. "Tricks" come later with proper technique and strength development. This approach ensures that when you do progress to more advanced movements, you have the foundation to do them safely and correctly. Our Southport instructors take a progressive, safety-first approach to every Gold Coast student's development.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" type="button">
+        <span class="faq-item__question-text">What should I wear?</span>
+        <span class="faq-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+      </button>
+      <div class="faq-item__answer" role="region">
+        <div class="faq-item__answer-inner">Shorts and a tank top are ideal — skin contact with the pole helps with grip and is essential for many movements. Avoid applying lotion or oils before class as these reduce grip significantly. Long leggings and long sleeves can be worn for comfort during the warm-up and can be removed when working on the pole.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" type="button">
+        <span class="faq-item__question-text">I have no upper body strength — can I do this?</span>
+        <span class="faq-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+      </button>
+      <div class="faq-item__answer" role="region">
+        <div class="faq-item__answer-inner">Yes! Pole uses full-body strength, and you will develop it progressively through the program. The Foundations class is specifically designed to build strength from scratch. Many Gold Coast students start with very limited upper body strength and are amazed by their progress after just a few weeks of regular classes at our Southport studio.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     10. RELATED PROGRAMS
+     ========================================================================= -->
+<section class="related-section reveal" aria-labelledby="relatedHeading">
+  <div class="related-section__header">
+    <span class="section-label">Explore More</span>
+    <h2 id="relatedHeading">You Might Also Like</h2>
+  </div>
+
+  <div class="related-grid" id="relatedGrid">
+    <div class="related-card">
+      <div class="related-card__img" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+      </div>
+      <div class="related-card__body">
+        <h3 class="related-card__name">Pole Flow</h3>
+        <p class="related-card__desc">The natural next step — connecting movements, transitions, and developing grace.</p>
+        <a href="/programs/pole-flow.html" style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #8B5CF6; text-decoration: none; border: 1.5px solid rgba(139, 92, 246, 0.35); padding: 0.55rem 1.25rem; border-radius: 50px; display: inline-block; transition: all 0.3s ease;">Learn More</a>
+      </div>
+    </div>
+    <div class="related-card">
+      <div class="related-card__img" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+      </div>
+      <div class="related-card__body">
+        <h3 class="related-card__name">Pole Strength &amp; Movement</h3>
+        <p class="related-card__desc">Advanced holds, conditioning, and strength-focused pole training.</p>
+        <a href="/programs/pole-strength.html" style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #8B5CF6; text-decoration: none; border: 1.5px solid rgba(139, 92, 246, 0.35); padding: 0.55rem 1.25rem; border-radius: 50px; display: inline-block; transition: all 0.3s ease;">Learn More</a>
+      </div>
+    </div>
+    <div class="related-card">
+      <div class="related-card__img" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg>
+      </div>
+      <div class="related-card__body">
+        <h3 class="related-card__name">Aerial Silks</h3>
+        <p class="related-card__desc">Similar strength focus — suspended fabric aerial arts for beginners.</p>
+        <a href="/programs/aerial-silks.html" style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #8B5CF6; text-decoration: none; border: 1.5px solid rgba(139, 92, 246, 0.35); padding: 0.55rem 1.25rem; border-radius: 50px; display: inline-block; transition: all 0.3s ease;">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     11. SEO CONTENT
+     ========================================================================= -->
+<section class="seo-section reveal" aria-labelledby="seoHeading">
+  <div class="seo-section__inner">
+
+    <h2 id="seoHeading">Beginner Pole Fitness Classes on the Gold Coast — Safe, Empowering Training at UNDGRND Movement Southport</h2>
+
+    <p>
+      Pole fitness is one of the most effective and empowering full-body workouts available to adults on the Gold Coast. Far removed from its entertainment origins, modern pole fitness is recognised internationally as a competitive sport and athletic discipline that develops extraordinary levels of strength, flexibility, coordination, and body confidence. At <strong>UNDGRND Movement</strong> in Southport, our Pole Fitness Foundations class is designed to introduce Gold Coast adults to this remarkable discipline in a safe, structured, and completely beginner-friendly environment.
+    </p>
+
+    <h3>What Is Pole Fitness?</h3>
+
+    <p>
+      Pole fitness is an athletic discipline performed on a vertical pole, combining elements of gymnastics, dance, and strength training. Students learn to grip, walk, spin, and eventually hold and invert on the pole using full-body strength and technique. It is practised competitively at national and international levels, and is increasingly recognised as one of the most comprehensive strength and conditioning workouts available.
+    </p>
+
+    <p>
+      On the Gold Coast, pole fitness has grown significantly in popularity as adults seek fitness experiences that are challenging, creative, and community-oriented. UNDGRND Movement's Southport studio offers a structured, sport-focused approach to pole fitness that is accessible to complete beginners and progressively challenging for those who continue to develop their skills.
+    </p>
+
+    <h3>Benefits of Pole Fitness Training</h3>
+
+    <p>
+      The physical benefits of regular pole fitness practice are comprehensive and well-documented. Full-body strength is the most immediate result — particularly in the upper body, core, and grip. The demands of supporting your own body weight on the pole develop functional strength that transfers directly to everyday movement and other athletic pursuits. Gold Coast students who train consistently report significant improvements in pull-up strength, core stability, and overall body composition.
+    </p>
+
+    <p>
+      Core stability is a defining feature of pole fitness training. Every movement on the pole requires active engagement of the deep core muscles — the muscles that support the spine, stabilise the pelvis, and protect the lower back. Regular pole fitness training at our Southport studio develops core strength that has wide-ranging benefits for posture, injury prevention, and athletic performance.
+    </p>
+
+    <p>
+      Flexibility improves naturally through consistent pole fitness practice. The range of motion required for pole movements progressively stretches the hips, hamstrings, shoulders, and spine. Unlike static stretching, the flexibility gains from pole fitness are dynamic and functional, meaning they support active movement rather than passive range of motion alone.
+    </p>
+
+    <h3>Pole Fitness vs. Pole Dancing — Understanding the Difference</h3>
+
+    <p>
+      One of the most common misconceptions about pole fitness is that it is the same as pole dancing. It is not. Pole fitness is an athletic, strength-based discipline that is taught and practised as a sport. At UNDGRND Movement's Southport studio, we teach pole as a fitness and movement discipline with a focus on technique, control, and progressive physical development. The emphasis is entirely on what your body can do — not on performance or entertainment.
+    </p>
+
+    <p>
+      This distinction matters for Gold Coast adults who are curious about pole fitness but have been put off by misconceptions. Our Pole Fitness Foundations class is welcoming to all genders, all body types, and all fitness backgrounds. The only requirement is a willingness to learn and a commitment to showing up. Many of our Gold Coast students describe their first pole fitness class as one of the most surprisingly enjoyable and empowering experiences they have had in a fitness setting.
+    </p>
+
+    <h3>Safe Progression for Absolute Beginners</h3>
+
+    <p>
+      The UNDGRND Movement approach to teaching pole fitness is built on the principle of progressive, safety-first skill development. Every student in the Foundations class starts from the absolute beginning — grip technique, body positioning, and controlled walking around the pole. No movement is introduced until the preceding skill has been properly established. This approach ensures that students develop genuine competence and confidence at each stage before progressing to the next.
+    </p>
+
+    <p>
+      Our Southport instructors are experienced in teaching beginners and are skilled at adapting their instruction to individual students' needs, fitness levels, and learning styles. Gold Coast students of all ages and backgrounds have successfully completed our Pole Fitness Foundations program, and many have gone on to progress through our intermediate and advanced pole programs.
+    </p>
+
+    <h3>Why Pole Fitness Is an Incredible Workout</h3>
+
+    <p>
+      Pole fitness is one of the few fitness disciplines that develops strength, flexibility, coordination, and body awareness simultaneously. A single 60-minute class at our Southport studio will challenge your grip strength, upper body endurance, core stability, and spatial awareness in ways that conventional gym workouts simply cannot replicate. The progressive nature of the skill development also means that there is always something new to work towards — keeping motivation high and progress visible.
+    </p>
+
+    <p>
+      Gold Coast students who train regularly in pole fitness report improvements not just in their physical fitness, but in their overall relationship with their body. The process of learning to do something physically challenging — something that initially seemed impossible — builds a kind of confidence and self-belief that extends far beyond the studio.
+    </p>
+
+    <h3>Southport Studio and Gold Coast Community</h3>
+
+    <p>
+      UNDGRND Movement is located at 163 Ferry Rd, Southport, with purpose-built facilities for pole fitness training. Our Southport studio is equipped with professional-grade poles, crash mats, and adequate floor space for safe movement. The studio environment is deliberately designed to be welcoming, non-judgmental, and supportive — reflecting the values of the Gold Coast movement community that has formed around UNDGRND Movement.
+    </p>
+
+    <p>
+      Ready to discover what your body is capable of? <strong>Book your first Pole Fitness Foundations class today</strong> at UNDGRND Movement, Southport — the Gold Coast's most beginner-friendly pole fitness studio.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     12. CTA SECTION
+     ========================================================================= -->
+<section class="cta-section reveal" aria-labelledby="ctaHeading">
+  <div class="cta-section__inner">
+    <h2 id="ctaHeading">Ready to Discover Your Strength?</h2>
+    <p class="cta-section__sub">Join Gold Coast's most beginner-friendly pole fitness program at UNDGRND Movement in Southport. No experience, no strength, no flexibility required — just bring yourself.</p>
+    <div class="cta-section__buttons">
+      <a href="/timetable.html?filter=pole" class="cta-button">Book Your First Pole Fitness Class</a>
+      <a href="/contact.html" class="cta-secondary">Questions? We're here to help</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     FOOTER — copy contents of /components/footer-component.html here
+     ========================================================================= -->
+
+
+<!-- =========================================================================
+     PAGE-SPECIFIC JAVASCRIPT
+     ========================================================================= -->
+<script>
+(function () {
+  'use strict';
+
+  /* -------------------------------------------------------------------------
+     1. Inject schema markup
+  ------------------------------------------------------------------------- */
+  if (typeof SchemaGenerator !== 'undefined') {
+    var breadcrumb = SchemaGenerator.generateBreadcrumbSchema([
+      { name: 'Home',   url: 'https://www.undrgrnd.com.au/' },
+      { name: 'Adults', url: 'https://www.undrgrnd.com.au/adults.html' },
+      { name: 'Pole Fitness Foundations', url: 'https://www.undrgrnd.com.au/programs/pole-fitness-foundations.html' }
+    ]);
+    if (breadcrumb) document.head.insertAdjacentHTML('beforeend', breadcrumb);
+  }
+
+  function escHtml(str) {
+    if (!str) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  var focusIcons = [
+    '<path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>',
+    '<circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>',
+    '<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline>',
+    '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>',
+    '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>'
+  ];
+
+  var relatedIds = ['pole-flow', 'pole-strength', 'aerial-silks'];
+
+  /* -------------------------------------------------------------------------
+     2. Load data from site-config.json
+  ------------------------------------------------------------------------- */
+  fetch('/site-config.json')
+    .then(function (res) { return res.json(); })
+    .then(function (config) {
+
+      var program = null;
+      var adults = config.programs && config.programs.adults;
+      if (adults) {
+        Object.keys(adults).forEach(function (catKey) {
+          adults[catKey].forEach(function (p) {
+            if (p.id === 'pole-foundations') program = p;
+          });
+        });
+      }
+
+      if (!program) return;
+
+      /* Service schema */
+      if (typeof SchemaGenerator !== 'undefined' && SchemaGenerator.generateServiceSchema) {
+        SchemaGenerator.generateServiceSchema(program).then(function (tag) {
+          if (tag) document.head.insertAdjacentHTML('beforeend', tag);
+        });
+      }
+
+      /* Hero level badge */
+      var heroLevel = document.getElementById('heroLevel');
+      if (heroLevel && program.level) heroLevel.textContent = program.level;
+
+      /* Meta description */
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc && program.short_description) {
+        metaDesc.setAttribute('content', program.short_description + ' at UNDGRND Movement, Southport. Safe, beginner-friendly pole fitness on the Gold Coast.');
+      }
+
+      /* Full description */
+      var descEl = document.getElementById('programDesc');
+      if (descEl && program.full_description) descEl.textContent = program.full_description;
+
+      /* Info box */
+      var infoLevel = document.getElementById('infoLevel');
+      if (infoLevel && program.level) infoLevel.textContent = program.level;
+
+      var infoCategory = document.getElementById('infoCategory');
+      if (infoCategory && program.category) infoCategory.textContent = program.category;
+
+      /* Pricing */
+      var p = program.estimated_pricing || {};
+      if (p.drop_in) {
+        ['priceDropIn', 'pricingDropIn'].forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) el.textContent = id === 'priceDropIn' ? '$' + p.drop_in : p.drop_in;
+        });
+      }
+      if (p.class_pack_10) {
+        ['pricePack', 'pricingPack'].forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) el.textContent = id === 'pricePack' ? '$' + p.class_pack_10 : p.class_pack_10;
+        });
+      }
+      if (p.unlimited_monthly) {
+        ['priceMonthly', 'pricingMonthly'].forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) el.textContent = id === 'priceMonthly' ? '$' + p.unlimited_monthly : p.unlimited_monthly;
+        });
+      }
+
+      /* Client outcome */
+      var outcomeEl = document.getElementById('outcomeText');
+      if (outcomeEl && program.client_outcome) {
+        outcomeEl.textContent = '\u201C' + program.client_outcome + '\u201D';
+      }
+
+      /* Core focus cards */
+      var focusGrid = document.getElementById('focusGrid');
+      if (focusGrid && program.core_focus && program.core_focus.length) {
+        var focusHtml = '';
+        program.core_focus.forEach(function (item, i) {
+          var parts = item.split(' - ');
+          var title = parts[0] || item;
+          var sub   = parts[1] || '';
+          var icon  = focusIcons[i] || focusIcons[0];
+          var delay = (i % 3) + 1;
+          focusHtml += '<div class="focus-card reveal reveal-delay-' + delay + '">'
+            + '<div class="focus-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24">' + icon + '</svg></div>'
+            + '<p class="focus-card__text">' + escHtml(title) + '</p>'
+            + (sub ? '<p class="focus-card__sub">' + escHtml(sub) + '</p>' : '')
+            + '</div>';
+        });
+        /* Re-append outcome box after grid rebuild */
+        var outcomeBox = document.getElementById('outcomeBox');
+        focusGrid.innerHTML = focusHtml;
+        if (outcomeBox) focusGrid.parentNode.appendChild(outcomeBox);
+      }
+
+      /* What to expect timeline */
+      var timeline = document.getElementById('expectTimeline');
+      if (timeline && program.what_to_expect && program.what_to_expect.length) {
+        var timelineHtml = '';
+        program.what_to_expect.forEach(function (item, i) {
+          var isLast = i === program.what_to_expect.length - 1;
+          timelineHtml += '<div class="expect-step">'
+            + '<div class="expect-step__left">'
+            +   '<div class="expect-step__num">' + (i + 1) + '</div>'
+            +   (isLast ? '' : '<div class="expect-step__line"></div>')
+            + '</div>'
+            + '<div class="expect-step__content">'
+            +   '<p class="expect-step__title">' + escHtml(item) + '</p>'
+            + '</div>'
+            + '</div>';
+        });
+        timeline.innerHTML = timelineHtml;
+      }
+
+      /* Related programs */
+      var relatedGrid = document.getElementById('relatedGrid');
+      if (relatedGrid && adults) {
+        var relatedPrograms = [];
+        Object.keys(adults).forEach(function (catKey) {
+          adults[catKey].forEach(function (p2) {
+            if (relatedIds.indexOf(p2.id) !== -1) relatedPrograms.push(p2);
+          });
+        });
+        relatedPrograms.sort(function (a, b) {
+          return relatedIds.indexOf(a.id) - relatedIds.indexOf(b.id);
+        });
+        if (relatedPrograms.length) {
+          var relHtml = '';
+          relatedPrograms.forEach(function (rp) {
+            relHtml += '<div class="related-card">'
+              + '<div class="related-card__img" aria-hidden="true">'
+              +   '<svg viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>'
+              + '</div>'
+              + '<div class="related-card__body">'
+              +   '<h3 class="related-card__name">' + escHtml(rp.name) + '</h3>'
+              +   '<p class="related-card__desc">' + escHtml(rp.short_description || '') + '</p>'
+              +   '<a href="/programs/' + escHtml(rp.slug) + '.html" style="font-family: \'Outfit\', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #8B5CF6; text-decoration: none; border: 1.5px solid rgba(139, 92, 246, 0.35); padding: 0.55rem 1.25rem; border-radius: 50px; display: inline-block; transition: all 0.3s ease;">Learn More</a>'
+              + '</div>'
+              + '</div>';
+          });
+          relatedGrid.innerHTML = relHtml;
+        }
+      }
+
+      initReveal();
+    })
+    .catch(function (err) {
+      console.warn('pole-fitness-foundations.html: site-config.json load error —', err.message);
+    });
+
+  /* -------------------------------------------------------------------------
+     3. Sticky Book Now
+  ------------------------------------------------------------------------- */
+  var stickyBook = document.getElementById('stickyBook');
+  var heroEl     = document.querySelector('.prog-hero');
+  var stickyLink = stickyBook ? stickyBook.querySelector('a') : null;
+
+  window.addEventListener('scroll', function () {
+    if (!stickyBook) return;
+    var heroBottom = heroEl ? heroEl.getBoundingClientRect().bottom : 0;
+    if (heroBottom < 0) {
+      stickyBook.classList.add('visible');
+      stickyBook.setAttribute('aria-hidden', 'false');
+      if (stickyLink) stickyLink.removeAttribute('tabindex');
+    } else {
+      stickyBook.classList.remove('visible');
+      stickyBook.setAttribute('aria-hidden', 'true');
+      if (stickyLink) stickyLink.setAttribute('tabindex', '-1');
+    }
+  }, { passive: true });
+
+  /* -------------------------------------------------------------------------
+     4. FAQ accordion
+  ------------------------------------------------------------------------- */
+  document.querySelectorAll('.faq-item__question').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item   = btn.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function (el) {
+        el.classList.remove('open');
+        el.querySelector('.faq-item__question').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  /* -------------------------------------------------------------------------
+     5. Scroll animations
+  ------------------------------------------------------------------------- */
+  function initReveal() {
+    var revealEls = document.querySelectorAll('.reveal:not(.visible)');
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      revealEls.forEach(function (el) { observer.observe(el); });
+    } else {
+      revealEls.forEach(function (el) { el.classList.add('visible'); });
+    }
+  }
+
+  initReveal();
+
+  /* -------------------------------------------------------------------------
+     6. Smooth scroll
+  ------------------------------------------------------------------------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var targetId = anchor.getAttribute('href').slice(1);
+      var target   = document.getElementById(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+}());
+</script>
+
+</body>
+</html>

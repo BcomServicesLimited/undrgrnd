@@ -2,12 +2,15 @@
 
 Official website for UNDRGRND Movement — Gold Coast's premier movement studio offering dance, pole fitness, yoga, and aerial classes.
 
-## 🌐 Live Site
+## Live Site
 - **Domain:** https://www.undrgrnd.com.au
-- **Repository:** https://github.com/BcomServicesLimited/undrgrnd.git
+- **Repository:** https://github.com/BcomServicesLimited/BcomITSolutionsPROJECT
 
-## 📍 Location
-163 Ferry Rd, Southport QLD 4215, Australia
+## Location
+- **Studio:** Inside Flips Academy, 163 Ferry Rd, Southport QLD 4215
+- **Phone:** 0721 402 690
+- **Email:** undrgrndgc@gmail.com
+- **Booking:** https://undrgrnd-movement.classmanager.com/register
 
 ## 🏗️ Built With
 - HTML5 (semantic markup)
@@ -32,26 +35,45 @@ Official website for UNDRGRND Movement — Gold Coast's premier movement studio 
 ├── robots.txt                          # Crawl rules
 ├── site-config.json                    # Single source of truth for all data
 │
-├── programs/                           # Individual program pages
-│   ├── afro-groove-foundations.html
-│   ├── aerial-silks.html
-│   ├── pole-fitness-foundations.html
-│   ├── movement-dance.html
-│   ├── recovery-movement.html
-│   ├── pole-flow.html
-│   ├── pole-strength-movement.html
-│   ├── yoga-fusion.html
-│   ├── traditional-yoga.html
-│   ├── modern-yoga.html
-│   ├── aerial-yoga.html
-│   ├── choreography-fusion.html
-│   ├── kids-yoga.html
-│   ├── kids-aerial-yoga.html
-│   ├── kids-pole-foundations.html
-│   ├── kids-aerial-silks.html
-│   ├── kids-dance-moves.html
-│   ├── kids-modern-contemporary.html
-│   └── kids-creative-dance.html
+├── programs/                                       # Individual program pages
+│   │
+│   ├── ADULTS — DANCE
+│   ├── afro-groove-foundations.html                # Afro Groove - Foundations (ACTIVE)
+│   ├── booty-burn-foundations.html                 # Booty Burn - Foundations (ACTIVE, NEW 2026)
+│   ├── movement-flow-foundations.html              # Movement Flow - Foundations (ACTIVE)
+│   ├── recovery-movement-flow-foundations.html     # Recovery Movement Flow - Foundations (COMING SOON)
+│   │
+│   ├── ADULTS — POLE
+│   ├── pole-fitness-foundations.html               # Pole Fitness - Foundations (COMING SOON)
+│   ├── pole-flow-foundations.html                  # Pole Flow - Foundations (COMING SOON)
+│   ├── pole-strength-movement.html                 # Pole Strength & Movement - Foundations (ACTIVE)
+│   │
+│   ├── ADULTS — YOGA
+│   ├── fusion-yoga-foundations.html                # Fusion Yoga - Foundations (ACTIVE)
+│   ├── traditional-yoga-foundations.html           # Traditional Yoga - Foundations (ACTIVE)
+│   ├── flow-yoga-foundations.html                  # Flow Yoga - Foundations (ACTIVE)
+│   ├── aerial-yoga-foundations.html                # Aerial Yoga - Foundations (ACTIVE)
+│   │
+│   ├── ADULTS — AERIAL
+│   ├── aerial-silks-foundations.html               # Aerial Silks - Foundations (ACTIVE)
+│   │
+│   ├── ADULTS — CHOREOGRAPHY
+│   ├── choreography-fusion-foundations.html        # Choreography Fusion - Foundations (ACTIVE)
+│   │
+│   ├── KIDS — DANCE
+│   ├── kids-dance-moves.html                       # Dance Moves (Urban Mix) - Foundations (ACTIVE)
+│   ├── kids-modern-contemporary.html               # Modern Contemporary (Rhythm & Motion) - Foundations (ACTIVE)
+│   ├── kids-creative-dance.html                    # Creative Dance - Foundations (ACTIVE)
+│   │
+│   ├── KIDS — YOGA
+│   ├── kids-yoga.html                              # Kids Yoga - Foundations (ACTIVE)
+│   ├── kids-aerial-yoga.html                       # Kids Aerial Yoga - Foundations (COMING SOON)
+│   │
+│   ├── KIDS — POLE
+│   ├── kids-pole-foundations.html                  # Pole Fitness Kids - Foundations (COMING SOON)
+│   │
+│   └── KIDS — AERIAL
+│       └── kids-aerial-silks.html                  # Kids Aerial Silks - Foundations (COMING SOON)
 │
 ├── css/
 │   └── global.css                      # Main stylesheet (design tokens from site-config.json)
@@ -63,9 +85,9 @@ Official website for UNDRGRND Movement — Gold Coast's premier movement studio 
 │   ├── nav-component.html              # Navigation (reusable)
 │   └── footer-component.html          # Footer (reusable)
 │
-└── assets/
-    └── images/
-        └── undgrnd-logo.png            # UNDRGRND Movement logo
+└── images/
+    ├── hero/                                       # Hero images (desktop + mobile WebP)
+    └── undgrnd-logo.png                            # UNDRGRND Movement logo
 ```
 
 ## 🚀 Deployment
@@ -122,8 +144,10 @@ Key sections in `site-config.json`:
 | `business` | Legal name, address, contact details, hours |
 | `design` | Colours, fonts, spacing, effects |
 | `navigation` | Menu items, CTA button |
-| `programs.adults` | All 12 adult programs (dance, pole, yoga, aerial, choreography) |
+| `programs.adults` | All 13 adult programs (dance, pole, yoga, aerial, choreography) |
+| `programs.adults.intensity_groups` | Intensity group definitions (balanced, moderate, active) |
 | `programs.kids` | All 7 kids programs |
+| `programs.kids.age_bands` | Age band definitions (4–7, 8–12, 13–16) |
 | `booking` | Class Manager integration URLs |
 | `legal` | Disclaimers, waiver, privacy summary, COVID policy |
 | `instructor` | Instructor bio, qualifications, philosophy |
@@ -138,9 +162,10 @@ Key sections in `site-config.json`:
 - Mobile-first responsive design
 - Semantic HTML5 with ARIA attributes
 
-## 📧 Contact
-- **Email:** olga.coaching1@gmail.com
-- **Studio:** 163 Ferry Rd, Southport QLD 4215
+## Contact
+- **Email:** undrgrndgc@gmail.com
+- **Phone:** 0721 402 690
+- **Studio:** Inside Flips Academy, 163 Ferry Rd, Southport QLD 4215
 
 ## 📄 License
 © 2026 UNDRGRND Movement. All rights reserved.

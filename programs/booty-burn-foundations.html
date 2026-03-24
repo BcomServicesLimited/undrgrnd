@@ -1,0 +1,2700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title & Meta Description -->
+  <title>Booty Burn - Foundations | Dance Fitness Gold Coast | UNDRGRND Movement Southport</title>
+  <meta name="description" content="High-energy beginner dance fitness class focused on glute activation and lower body strength at UNDRGRND Movement, Southport. Booty Burn Foundations on the Gold Coast.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.undrgrnd.com.au/programs/booty-burn-foundations.html">
+
+  <!-- Favicon placeholders -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="/css/global.css">
+
+  <!-- Schema Generator -->
+  <script src="/js/schema-generator.js"></script>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.undrgrnd.com.au/programs/booty-burn-foundations.html">
+  <meta property="og:title" content="Booty Burn - Foundations | Dance Fitness Gold Coast | UNDRGRND Movement">
+  <meta property="og:description" content="High-energy beginner dance fitness focused on glute activation and lower body strength at UNDRGRND Movement Southport. Gold Coast's welcoming dance studio.">
+
+  <!-- Page-specific styles -->
+  <style>
+    /* -----------------------------------------------------------------------
+       HERO — full-width
+    ----------------------------------------------------------------------- */
+    .prog-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: #0A0A0A;
+    }
+
+    .prog-hero__bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.75) 60%, rgba(10,10,10,0.97) 100%),
+        radial-gradient(ellipse 80% 70% at 65% 40%, rgba(139, 92, 246, 0.22) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 50% at 20% 80%, rgba(236, 72, 153, 0.14) 0%, transparent 55%);
+    }
+
+    /* Image placeholder overlay */
+    .prog-hero__img-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      z-index: 0;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(236, 72, 153, 0.08) 100%);
+    }
+
+    .prog-hero__img-placeholder svg {
+      width: 64px;
+      height: 64px;
+      stroke: rgba(139, 92, 246, 0.35);
+      fill: none;
+      stroke-width: 1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .prog-hero__img-placeholder p {
+      font-size: 0.78rem;
+      color: rgba(161, 161, 161, 0.4);
+      max-width: 320px;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .prog-hero__content {
+      position: relative;
+      z-index: 1;
+      max-width: 1400px;
+      margin-inline: auto;
+      padding: 0 5% 5rem;
+      width: 100%;
+    }
+
+    .prog-hero__level {
+      display: inline-block;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 50px;
+      background: rgba(236, 72, 153, 0.15);
+      border: 1px solid rgba(236, 72, 153, 0.3);
+      color: #F472B6;
+      margin-bottom: 1rem;
+    }
+
+    .prog-hero__h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      line-height: 0.95;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin: 0 0 1.25rem;
+      max-width: 900px;
+    }
+
+    .prog-hero__location {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #A1A1A1;
+      margin-bottom: 2rem;
+    }
+
+    .prog-hero__location svg {
+      width: 15px;
+      height: 15px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .prog-hero__ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* -----------------------------------------------------------------------
+       STICKY BOOK NOW BUTTON
+    ----------------------------------------------------------------------- */
+    .sticky-book {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 900;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .sticky-book.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .sticky-book a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      text-decoration: none;
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      padding: 0.85rem 1.5rem;
+      border-radius: 50px;
+      box-shadow: 0 8px 30px rgba(139, 92, 246, 0.45);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .sticky-book a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(139, 92, 246, 0.6);
+    }
+
+    .sticky-book a svg {
+      width: 16px;
+      height: 16px;
+      stroke: #FFFFFF;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* -----------------------------------------------------------------------
+       PROGRAM OVERVIEW — two columns
+    ----------------------------------------------------------------------- */
+    .overview-section {
+      padding: 8rem 5%;
+      background: #0A0A0A;
+    }
+
+    .overview-section__inner {
+      max-width: 1400px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    @media (min-width: 1024px) {
+      .overview-section__inner {
+        grid-template-columns: 1fr 380px;
+        gap: 5rem;
+        align-items: start;
+      }
+    }
+
+    .overview-section__eyebrow {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #A78BFA;
+      margin-bottom: 0.75rem;
+    }
+
+    .overview-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 1.5rem;
+    }
+
+    .overview-section__desc {
+      font-size: 1.05rem;
+      color: #A1A1A1;
+      line-height: 1.8;
+    }
+
+    /* Quick Info Box */
+    .info-box {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      padding: 2rem;
+      position: sticky;
+      top: 100px;
+    }
+
+    .info-box__title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+    }
+
+    .info-box__rows {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-box__row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .info-box__row-icon {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      background: rgba(139, 92, 246, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .info-box__row-icon svg {
+      width: 15px;
+      height: 15px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .info-box__row-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #A1A1A1;
+      line-height: 1;
+      margin-bottom: 0.2rem;
+    }
+
+    .info-box__row-value {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      line-height: 1.3;
+    }
+
+    .info-box__divider {
+      height: 1px;
+      background: rgba(139, 92, 246, 0.12);
+      margin: 1rem 0;
+    }
+
+    .info-box__pricing-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #A78BFA;
+      margin-bottom: 0.75rem;
+    }
+
+    .info-box__price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .info-box__price-row:last-child { border-bottom: none; }
+
+    .info-box__price-label {
+      font-size: 0.88rem;
+      color: #A1A1A1;
+    }
+
+    .info-box__price-amount {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #A78BFA;
+    }
+
+    .info-box__note {
+      font-size: 0.75rem;
+      color: rgba(161, 161, 161, 0.6);
+      margin-top: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .info-box__cta {
+      margin-top: 1.5rem;
+    }
+
+    .info-box__cta a {
+      display: block;
+      text-align: center;
+    }
+
+    /* -----------------------------------------------------------------------
+       CORE FOCUS SECTION
+    ----------------------------------------------------------------------- */
+    .focus-section {
+      padding: 8rem 5%;
+      background: #0D0D0D;
+    }
+
+    .focus-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .focus-grid {
+      max-width: 1400px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .focus-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .focus-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .focus-card {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: all 0.35s ease;
+    }
+
+    .focus-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(139, 92, 246, 0.5);
+      box-shadow: 0 20px 50px rgba(139, 92, 246, 0.18);
+    }
+
+    .focus-card__icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.1));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+    }
+
+    .focus-card__icon svg {
+      width: 26px;
+      height: 26px;
+      stroke: #A78BFA;
+      fill: none;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .focus-card__text {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .focus-card__sub {
+      font-size: 0.85rem;
+      color: #A1A1A1;
+      line-height: 1.5;
+    }
+
+    /* -----------------------------------------------------------------------
+       WHO IT'S FOR
+    ----------------------------------------------------------------------- */
+    .who-section {
+      padding: 8rem 5%;
+      background: #0A0A0A;
+    }
+
+    .who-section__inner {
+      max-width: 1400px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .who-section__inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .who-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 2rem;
+    }
+
+    .who-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .who-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 1rem;
+      color: #A1A1A1;
+      line-height: 1.5;
+    }
+
+    .who-list li svg {
+      width: 18px;
+      height: 18px;
+      stroke: #A78BFA;
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* -----------------------------------------------------------------------
+       WHAT TO EXPECT — timeline
+    ----------------------------------------------------------------------- */
+    .expect-section {
+      padding: 8rem 5%;
+      background: #0D0D0D;
+    }
+
+    .expect-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .expect-timeline {
+      max-width: 800px;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .expect-step {
+      display: flex;
+      gap: 1.5rem;
+      position: relative;
+    }
+
+    .expect-step__left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .expect-step__num {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      color: #FFFFFF;
+      flex-shrink: 0;
+    }
+
+    .expect-step__line {
+      width: 2px;
+      flex: 1;
+      background: rgba(139, 92, 246, 0.15);
+      margin: 4px 0;
+      min-height: 30px;
+    }
+
+    .expect-step:last-child .expect-step__line {
+      display: none;
+    }
+
+    .expect-step__content {
+      padding-bottom: 2.5rem;
+      padding-top: 0.5rem;
+    }
+
+    .expect-step__title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 0.35rem;
+    }
+
+    .expect-step__desc {
+      font-size: 0.9rem;
+      color: #A1A1A1;
+      line-height: 1.6;
+    }
+
+    .expect-reassurance {
+      max-width: 800px;
+      margin: 2rem auto 0;
+      padding: 1.5rem 2rem;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.07));
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 16px;
+      font-size: 1rem;
+      color: #FFFFFF;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    /* -----------------------------------------------------------------------
+       PRICING SECTION
+    ----------------------------------------------------------------------- */
+    .pricing-section {
+      padding: 8rem 5%;
+      background: #0A0A0A;
+    }
+
+    .pricing-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .pricing-grid {
+      max-width: 1000px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .pricing-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .pricing-card {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: all 0.35s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(139, 92, 246, 0.5);
+      box-shadow: 0 20px 50px rgba(139, 92, 246, 0.18);
+    }
+
+    .pricing-card--featured {
+      border-color: rgba(139, 92, 246, 0.5);
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(236, 72, 153, 0.05));
+      position: relative;
+    }
+
+    .pricing-card--featured::before {
+      content: 'Best Value';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      padding: 0.25rem 0.9rem;
+      border-radius: 50px;
+      white-space: nowrap;
+    }
+
+    .pricing-card__label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #A78BFA;
+    }
+
+    .pricing-card__price {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.5rem;
+      line-height: 1;
+      color: #FFFFFF;
+    }
+
+    .pricing-card__price sup {
+      font-size: 1.5rem;
+      vertical-align: super;
+      line-height: 0;
+    }
+
+    .pricing-card__period {
+      font-size: 0.85rem;
+      color: #A1A1A1;
+    }
+
+    .pricing-card__tagline {
+      font-size: 0.9rem;
+      color: #A1A1A1;
+      font-style: italic;
+    }
+
+    .pricing-card__cta {
+      margin-top: 0.5rem;
+      width: 100%;
+    }
+
+    /* -----------------------------------------------------------------------
+       FAQ ACCORDION
+    ----------------------------------------------------------------------- */
+    .faq-section {
+      padding: 8rem 5%;
+      background: #0D0D0D;
+    }
+
+    .faq-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 3rem;
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .faq-item {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.3s ease;
+    }
+
+    .faq-item.open { border-color: rgba(139, 92, 246, 0.45); }
+
+    .faq-item__question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .faq-item__question-text {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      line-height: 1.4;
+    }
+
+    .faq-item__icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item.open .faq-item__icon {
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      border-color: transparent;
+      transform: rotate(45deg);
+    }
+
+    .faq-item__icon svg {
+      width: 14px;
+      height: 14px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.3s ease;
+    }
+
+    .faq-item.open .faq-item__icon svg { stroke: #FFFFFF; }
+
+    .faq-item__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    .faq-item.open .faq-item__answer { max-height: 400px; }
+
+    .faq-item__answer-inner {
+      padding: 0 1.75rem 1.5rem;
+      font-size: 0.93rem;
+      color: #A1A1A1;
+      line-height: 1.7;
+    }
+
+    /* -----------------------------------------------------------------------
+       RELATED PROGRAMS
+    ----------------------------------------------------------------------- */
+    .related-section {
+      padding: 8rem 5%;
+      background: #0A0A0A;
+    }
+
+    .related-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .related-grid {
+      max-width: 1400px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .related-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .related-card {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .related-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(139, 92, 246, 0.45);
+      box-shadow: 0 15px 40px rgba(139, 92, 246, 0.12);
+    }
+
+    .related-card__img {
+      height: 160px;
+      background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(139, 92, 246, 0.1));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .related-card__img svg {
+      width: 36px;
+      height: 36px;
+      stroke: rgba(236, 72, 153, 0.5);
+      fill: none;
+      stroke-width: 1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .related-card__body {
+      padding: 1.5rem;
+    }
+
+    .related-card__name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.35rem;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
+    }
+
+    .related-card__desc {
+      font-size: 0.88rem;
+      color: #A1A1A1;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    /* -----------------------------------------------------------------------
+       SEO CONTENT SECTION
+    ----------------------------------------------------------------------- */
+    .seo-section {
+      padding: 8rem 5%;
+      background: #0D0D0D;
+    }
+
+    .seo-section__inner {
+      max-width: 900px;
+      margin-inline: auto;
+    }
+
+    .seo-section h2 { margin-bottom: 2rem; }
+
+    .seo-section h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.55rem;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin: 2.5rem 0 1rem;
+    }
+
+    .seo-section p {
+      font-size: 1rem;
+      color: #A1A1A1;
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+
+    .seo-section strong { color: #FFFFFF; font-weight: 600; }
+
+    /* -----------------------------------------------------------------------
+       CTA SECTION
+    ----------------------------------------------------------------------- */
+    .cta-section {
+      padding: 8rem 5%;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(236, 72, 153, 0.08) 100%);
+      border-top: 1px solid rgba(139, 92, 246, 0.15);
+    }
+
+    .cta-section__inner {
+      max-width: 700px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 1.25rem;
+    }
+
+    .cta-section__sub {
+      font-size: 1rem;
+      color: #A1A1A1;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .cta-section__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    /* -----------------------------------------------------------------------
+       SCROLL ANIMATIONS
+    ----------------------------------------------------------------------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.08s; }
+    .reveal-delay-2 { transition-delay: 0.16s; }
+    .reveal-delay-3 { transition-delay: 0.24s; }
+    .reveal-delay-4 { transition-delay: 0.32s; }
+  </style>
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+</head>
+
+<body>
+<!--
+  UNDRGRND Movement — Navigation Component
+  File: /components/nav-component.html
+
+  Usage: Copy this entire block into any page <body>, as the first element.
+  Dependencies:
+    - /css/global.css (must be loaded in <head>)
+    - site-config.json (navigation data loaded via fetch in <script> below)
+
+  Navigation data source: site-config.json → navigation.main_menu, navigation.cta_button
+-->
+
+<!-- =====================================================================
+     NAV STYLES (scoped to this component)
+     ===================================================================== -->
+<style>
+  /* --- Header / Nav wrapper --- */
+  .site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(10, 10, 10, 0.95);       /* site-config: design.colors.dark_bg at 95% */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(139, 92, 246, 0.2); /* site-config: design.effects.card_border */
+    transition: all 0.3s ease;                /* site-config: design.effects.transition */
+  }
+
+  /* Scrolled state — slightly more opaque */
+  .site-nav.scrolled {
+    background: rgba(10, 10, 10, 0.98);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  /* --- Inner layout --- */
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin-inline: auto;
+    padding: 1.1rem 5%;
+    gap: 2rem;
+  }
+
+  /* --- Logo --- */
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .nav-logo__title {
+    font-family: 'Bebas Neue', Impact, sans-serif; /* site-config: design.fonts.display */
+    font-size: 2rem;
+    letter-spacing: 2px;
+    line-height: 1;
+    /* gradient-text from global.css */
+    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%); /* site-config: design.colors.gradient_purple */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .nav-logo__sub {
+    font-family: 'Outfit', Helvetica Neue, sans-serif; /* site-config: design.fonts.body */
+    font-size: 0.7rem;
+    font-weight: 400;                          /* site-config: design.fonts.weights.regular */
+    letter-spacing: 0.2em;
+    text-transform: lowercase;
+    color: #A1A1A1;                            /* site-config: design.colors.text_gray */
+    margin-top: 1px;
+  }
+
+  /* --- Desktop menu --- */
+  .nav-menu {
+    display: none; /* hidden on mobile by default */
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-menu__item {
+    position: relative;
+  }
+
+  .nav-menu__link {
+    font-family: 'Outfit', Helvetica Neue, sans-serif; /* site-config: design.fonts.body */
+    font-size: 0.95rem;
+    font-weight: 600;                          /* site-config: design.fonts.weights.semibold */
+    letter-spacing: 0.04em;
+    color: #A1A1A1;                            /* site-config: design.colors.text_gray */
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    padding-bottom: 2px;
+    position: relative;
+  }
+
+  /* Underline animation on hover */
+  .nav-menu__link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%); /* site-config: gradient_purple */
+    transition: width 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .nav-menu__link:hover {
+    color: #8B5CF6;                            /* site-config: design.colors.primary_purple */
+  }
+
+  .nav-menu__link:hover::after {
+    width: 100%;
+  }
+
+  /* Active / current page state */
+  .nav-menu__link.active {
+    color: #8B5CF6;                            /* site-config: design.colors.primary_purple */
+  }
+
+  .nav-menu__link.active::after {
+    width: 100%;
+  }
+
+  /* --- Desktop CTA button --- */
+  .nav-cta {
+    display: none; /* hidden on mobile */
+    flex-shrink: 0;
+  }
+
+  /* --- Hamburger button (mobile only) --- */
+  .nav-hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .nav-hamburger:hover {
+    background: rgba(139, 92, 246, 0.1);
+  }
+
+  .nav-hamburger__line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #FFFFFF;                       /* site-config: design.colors.text_white */
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  /* Hamburger → X animation */
+  .nav-hamburger.open .nav-hamburger__line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-hamburger.open .nav-hamburger__line:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  .nav-hamburger.open .nav-hamburger__line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* --- Mobile menu overlay --- */
+  .nav-mobile-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-mobile-overlay.open {
+    display: block;
+    opacity: 1;
+  }
+
+  /* --- Mobile slide-in menu --- */
+  .nav-mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(320px, 85vw);
+    background: #0A0A0A;                       /* site-config: design.colors.dark_bg */
+    border-left: 1px solid rgba(139, 92, 246, 0.2); /* site-config: design.effects.card_border */
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 2rem 2rem;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+  }
+
+  .nav-mobile-menu.open {
+    transform: translateX(0);
+  }
+
+  /* Mobile menu links list */
+  .nav-mobile-menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-mobile-menu__item {
+    border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+  }
+
+  .nav-mobile-menu__link {
+    display: block;
+    padding: 1.1rem 0;
+    font-family: 'Bebas Neue', Impact, sans-serif; /* site-config: design.fonts.display */
+    font-size: 1.75rem;
+    letter-spacing: 2px;
+    color: #FFFFFF;                            /* site-config: design.colors.text_white */
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+  }
+
+  .nav-mobile-menu__link:hover,
+  .nav-mobile-menu__link.active {
+    color: #8B5CF6;                            /* site-config: design.colors.primary_purple */
+    padding-left: 0.75rem;
+  }
+
+  /* Mobile CTA */
+  .nav-mobile-menu__cta {
+    margin-top: 2rem;
+  }
+
+  .nav-mobile-menu__cta a {
+    display: block;
+    text-align: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%); /* site-config: gradient_purple */
+    color: #FFFFFF;
+    font-family: 'Outfit', Helvetica Neue, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .nav-mobile-menu__cta a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
+  }
+
+  /* --- Tablet / Desktop breakpoint --- */
+  @media (min-width: 768px) {
+    .nav-menu {
+      display: flex;
+    }
+
+    .nav-cta {
+      display: block;
+    }
+
+    .nav-hamburger {
+      display: none;
+    }
+
+    .nav-mobile-menu,
+    .nav-mobile-overlay {
+      display: none !important;
+    }
+  }
+
+  /* Body padding offset so content doesn't hide under fixed nav */
+  body {
+    padding-top: 72px;
+  }
+
+  @media (min-width: 768px) {
+    body {
+      padding-top: 76px;
+    }
+  }
+</style>
+
+<!-- =====================================================================
+     NAV HTML
+     ===================================================================== -->
+
+<!-- Full-screen overlay (mobile) -->
+<div class="nav-mobile-overlay" id="navOverlay" aria-hidden="true"></div>
+
+<!-- Mobile slide-in menu -->
+<nav class="nav-mobile-menu" id="navMobileMenu" aria-label="Mobile navigation" aria-hidden="true">
+  <ul class="nav-mobile-menu__list" id="navMobileList">
+    <!-- Populated by JavaScript from site-config.json navigation.main_menu -->
+  </ul>
+  <div class="nav-mobile-menu__cta" id="navMobileCta">
+    <!-- Populated by JavaScript from site-config.json navigation.cta_button -->
+  </div>
+</nav>
+
+<!-- Main header -->
+<header class="site-nav" id="siteNav" role="banner">
+  <div class="nav-inner">
+
+    <!-- Logo — site-config.json: project.name -->
+    <a href="/" class="nav-logo" aria-label="UNDRGRND Movement — Home">
+      <img src="../images/logo/logo-header.webp" alt="UNDRGRND Movement — Gold Coast Dance Studio" width="232" height="50" style="height:50px;width:auto;display:block;" loading="eager">
+    </a>
+
+    <!-- Desktop navigation — populated from site-config.json navigation.main_menu -->
+    <ul class="nav-menu" id="navDesktopMenu" role="list" aria-label="Main navigation">
+      <!-- Populated by JavaScript -->
+    </ul>
+
+    <!-- Desktop CTA — site-config.json navigation.cta_button -->
+    <div class="nav-cta" id="navDesktopCta">
+      <!-- Populated by JavaScript -->
+    </div>
+
+    <!-- Hamburger (mobile only) -->
+    <button
+      class="nav-hamburger"
+      id="navHamburger"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="navMobileMenu"
+    >
+      <span class="nav-hamburger__line" aria-hidden="true"></span>
+      <span class="nav-hamburger__line" aria-hidden="true"></span>
+      <span class="nav-hamburger__line" aria-hidden="true"></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- =====================================================================
+     NAV JAVASCRIPT
+     Data source: site-config.json → navigation.main_menu, navigation.cta_button
+     ===================================================================== -->
+<script>
+(function () {
+  'use strict';
+
+  /* ------------------------------------------------------------------
+     1. Load navigation data from site-config.json
+     ------------------------------------------------------------------ */
+  fetch('/site-config.json')
+    .then(function (res) {
+      if (!res.ok) throw new Error('Could not load site-config.json');
+      return res.json();
+    })
+    .then(function (config) {
+      var menuItems = config.navigation.main_menu;   // site-config.json navigation.main_menu
+      var ctaButton = config.navigation.cta_button;  // site-config.json navigation.cta_button
+      buildDesktopMenu(menuItems, ctaButton);
+      buildMobileMenu(menuItems, ctaButton);
+      highlightActivePage();
+    })
+    .catch(function (err) {
+      console.error('Nav: Failed to load site-config.json', err);
+      // Fallback: render static nav from site-config.json values
+      var fallbackMenu = [
+        { label: 'Home',      href: '/' },
+        { label: 'Adults',    href: '/adults.html' },
+        { label: 'Kids',      href: '/kids.html' },
+        { label: 'Timetable', href: '/timetable.html' },
+        { label: 'About',     href: '/about.html' },
+        { label: 'Contact',   href: '/contact.html' }
+      ];
+      var fallbackCta = { text: 'Book Now', href: 'https://undrgrnd-movement.classmanager.com/register' };
+      buildDesktopMenu(fallbackMenu, fallbackCta);
+      buildMobileMenu(fallbackMenu, fallbackCta);
+      highlightActivePage();
+    });
+
+  /* ------------------------------------------------------------------
+     2. Build desktop navigation menu
+     ------------------------------------------------------------------ */
+  function buildDesktopMenu(items, cta) {
+    var list = document.getElementById('navDesktopMenu');
+    var ctaWrap = document.getElementById('navDesktopCta');
+    if (!list || !ctaWrap) return;
+
+    items.forEach(function (item) {
+      var li = document.createElement('li');
+      li.className = 'nav-menu__item';
+      var a = document.createElement('a');
+      a.href = item.href;
+      a.className = 'nav-menu__link';
+      a.textContent = item.label;
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    var ctaA = document.createElement('a');
+    ctaA.href = cta.href;
+    ctaA.className = 'cta-button';
+    ctaA.textContent = cta.text;
+    ctaWrap.appendChild(ctaA);
+  }
+
+  /* ------------------------------------------------------------------
+     3. Build mobile navigation menu
+     ------------------------------------------------------------------ */
+  function buildMobileMenu(items, cta) {
+    var list = document.getElementById('navMobileList');
+    var ctaWrap = document.getElementById('navMobileCta');
+    if (!list || !ctaWrap) return;
+
+    items.forEach(function (item) {
+      var li = document.createElement('li');
+      li.className = 'nav-mobile-menu__item';
+      var a = document.createElement('a');
+      a.href = item.href;
+      a.className = 'nav-mobile-menu__link';
+      a.textContent = item.label;
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    var ctaA = document.createElement('a');
+    ctaA.href = cta.href;
+    ctaA.textContent = cta.text;
+    ctaWrap.appendChild(ctaA);
+  }
+
+  /* ------------------------------------------------------------------
+     4. Highlight active page link
+     ------------------------------------------------------------------ */
+  function highlightActivePage() {
+    var path = window.location.pathname;
+    document.querySelectorAll('.nav-menu__link, .nav-mobile-menu__link').forEach(function (link) {
+      var href = link.getAttribute('href');
+      if (href === path || (href !== '/' && path.startsWith(href))) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  /* ------------------------------------------------------------------
+     5. Scroll → add .scrolled class to header
+     ------------------------------------------------------------------ */
+  var nav = document.getElementById('siteNav');
+  if (nav) {
+    window.addEventListener('scroll', function () {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+  }
+
+  /* ------------------------------------------------------------------
+     6. Mobile hamburger toggle
+     ------------------------------------------------------------------ */
+  var hamburger = document.getElementById('navHamburger');
+  var mobileMenu = document.getElementById('navMobileMenu');
+  var overlay    = document.getElementById('navOverlay');
+
+  function openMenu() {
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    mobileMenu.classList.add('open');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileMenu.classList.remove('open');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  if (hamburger) {
+    hamburger.addEventListener('click', function () {
+      if (mobileMenu.classList.contains('open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+  }
+
+  if (overlay) {
+    overlay.addEventListener('click', closeMenu);
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('open')) {
+      closeMenu();
+      hamburger.focus();
+    }
+  });
+
+}());
+</script>
+
+
+<!-- =========================================================================
+     NAVIGATION — copy contents of /components/nav-component.html here
+     ========================================================================= -->
+
+
+<!-- =========================================================================
+     STICKY BOOK NOW BUTTON
+     ========================================================================= -->
+<div class="sticky-book" id="stickyBook" aria-hidden="true">
+  <a href="https://undrgrnd-movement.classmanager.com/register" tabindex="-1">
+    <!-- Lucide: calendar -->
+    <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+    Book Now
+  </a>
+</div>
+
+
+<!-- =========================================================================
+     1. HERO SECTION
+     ========================================================================= -->
+<section class="prog-hero" aria-label="Booty Burn - Foundations — UNDRGRND Movement">
+
+  <!-- Hero image -->
+  <picture>
+    <source media="(max-width: 767px)" srcset="../images/hero/booty-burn-foundations-mobile.webp" type="image/webp">
+    <source media="(min-width: 768px)" srcset="../images/hero/booty-burn-foundations.webp" type="image/webp">
+    <img src="../images/hero/booty-burn-foundations.webp" alt="Booty Burn Foundations dance fitness class at UNDRGRND Movement, Gold Coast" loading="eager" width="1400" height="781" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
+  </picture>
+
+  <div class="prog-hero__bg" aria-hidden="true"></div>
+
+  <div class="prog-hero__content">
+    <span class="prog-hero__level" id="heroLevel">Beginner / Foundation</span>
+
+    <h1 class="prog-hero__h1">Booty Burn Foundations | Dance Fitness Gold Coast</h1>
+
+    <p class="prog-hero__location">
+      <!-- Lucide: map-pin -->
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+      Southport Studio | Inside Flips Academy
+    </p>
+
+    <div class="prog-hero__ctas">
+      <a href="https://undrgrnd-movement.classmanager.com/register" class="cta-button">Book This Class</a>
+      <a href="/timetable.html" class="cta-secondary">View Timetable</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     2. PROGRAM OVERVIEW — two columns
+     ========================================================================= -->
+<section class="overview-section reveal" aria-labelledby="overviewHeading">
+  <div class="overview-section__inner">
+
+    <!-- Left: Full description -->
+    <div>
+      <p class="overview-section__eyebrow">About This Program</p>
+      <h2 id="overviewHeading">Booty Burn - Foundations</h2>
+      <p class="overview-section__desc" id="programDesc">
+        Booty Burn – Foundations is a high-energy, beginner-friendly dance fitness class focused on lower body strength, glute activation, and full-body conditioning through fun and engaging movement. Combining dance-inspired sequences with targeted lower body exercises, this class is designed to build strength, improve coordination, and get your heart rate up in a supportive and motivating environment. Through each curated, smooth, and authentic movement, you'll work your glutes, legs, and core while developing rhythm, confidence, and body awareness. No prior dance experience is required — just come ready to move and have fun.
+      </p>
+    </div>
+
+    <!-- Right: Quick Info Box -->
+    <aside class="info-box" aria-label="Quick program information">
+      <h3 class="info-box__title">Quick Info</h3>
+
+      <div class="info-box__rows" id="infoBoxRows">
+        <div class="info-box__row">
+          <div class="info-box__row-icon" aria-hidden="true">
+            <!-- Lucide: bar-chart-2 -->
+            <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          </div>
+          <div>
+            <p class="info-box__row-label">Level</p>
+            <p class="info-box__row-value" id="infoLevel">Beginner / Foundation</p>
+          </div>
+        </div>
+        <div class="info-box__row">
+          <div class="info-box__row-icon" aria-hidden="true">
+            <!-- Lucide: tag -->
+            <svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+          </div>
+          <div>
+            <p class="info-box__row-label">Category</p>
+            <p class="info-box__row-value" id="infoCategory">Dance</p>
+          </div>
+        </div>
+        <div class="info-box__row">
+          <div class="info-box__row-icon" aria-hidden="true">
+            <!-- Lucide: clock -->
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <div>
+            <p class="info-box__row-label">Duration</p>
+            <p class="info-box__row-value">60 minutes</p>
+          </div>
+        </div>
+        <div class="info-box__row">
+          <div class="info-box__row-icon" aria-hidden="true">
+            <!-- Lucide: users -->
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <div>
+            <p class="info-box__row-label">Class Size</p>
+            <p class="info-box__row-value">Max 15 students</p>
+          </div>
+        </div>
+        <div class="info-box__row">
+          <div class="info-box__row-icon" aria-hidden="true">
+            <!-- Lucide: shopping-bag -->
+            <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          </div>
+          <div>
+            <p class="info-box__row-label">What to Bring</p>
+            <p class="info-box__row-value">Comfortable activewear, water bottle, supportive shoes</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-box__divider"></div>
+
+      <p class="info-box__pricing-title">Pricing</p>
+      <div id="infoBoxPricing">
+        <div class="info-box__price-row">
+          <span class="info-box__price-label">Drop-In</span>
+          <span class="info-box__price-amount" id="priceDropIn">$25</span>
+        </div>
+        <div class="info-box__price-row">
+          <span class="info-box__price-label">10 Class Pack</span>
+          <span class="info-box__price-amount" id="pricePack">$200</span>
+        </div>
+        <div class="info-box__price-row">
+          <span class="info-box__price-label">Unlimited Monthly</span>
+          <span class="info-box__price-amount" id="priceMonthly">$180</span>
+        </div>
+      </div>
+      <p class="info-box__note">Prices are estimates. See full pricing when booking.</p>
+
+      <div class="info-box__cta">
+        <a href="https://undrgrnd-movement.classmanager.com/register" class="cta-button">Book This Class</a>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     3. CORE FOCUS AREAS
+     ========================================================================= -->
+<section class="focus-section reveal" aria-labelledby="focusHeading">
+  <div class="focus-section__header">
+    <span class="section-label">What You'll Work On</span>
+    <h2 id="focusHeading">Core Focus Areas</h2>
+  </div>
+
+  <div class="focus-grid" id="focusGrid">
+    <div class="focus-card reveal reveal-delay-1">
+      <div class="focus-card__icon" aria-hidden="true">
+        <!-- Lucide: zap -->
+        <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+      </div>
+      <p class="focus-card__text">Glute activation and lower body strength</p>
+      <p class="focus-card__sub">Targeted exercises to build and tone your glutes and legs</p>
+    </div>
+    <div class="focus-card reveal reveal-delay-2">
+      <div class="focus-card__icon" aria-hidden="true">
+        <!-- Lucide: music -->
+        <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+      </div>
+      <p class="focus-card__text">Dance-inspired conditioning sequences</p>
+      <p class="focus-card__sub">Fun, rhythmic movement that never feels like a workout</p>
+    </div>
+    <div class="focus-card reveal reveal-delay-3">
+      <div class="focus-card__icon" aria-hidden="true">
+        <!-- Lucide: activity -->
+        <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+      </div>
+      <p class="focus-card__text">Coordination and rhythm</p>
+      <p class="focus-card__sub">Build timing and body awareness through structured patterns</p>
+    </div>
+    <div class="focus-card reveal reveal-delay-4">
+      <div class="focus-card__icon" aria-hidden="true">
+        <!-- Lucide: star -->
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+      </div>
+      <p class="focus-card__text">Full-body fitness through movement</p>
+      <p class="focus-card__sub">Cardio, strength, and confidence in every session</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     4. WHO IT'S FOR
+     ========================================================================= -->
+<section class="who-section reveal" aria-labelledby="whoHeading">
+  <div class="who-section__inner">
+
+    <div>
+      <span class="section-label">Is This Class For You?</span>
+      <h2 id="whoHeading">Is Booty Burn Right For You?</h2>
+      <ul class="who-list" id="whoList">
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Adults who want a fun, high-energy workout
+        </li>
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Anyone looking to tone and strengthen their lower body
+        </li>
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Beginners with no prior dance experience
+        </li>
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Those who want to improve coordination and body confidence
+        </li>
+      </ul>
+    </div>
+
+    <!-- Decorative stat block -->
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+      <div class="card" style="padding: 2rem; text-align: center;">
+        <p style="font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: #8B5CF6; line-height: 1; margin-bottom: 0.25rem;">0</p>
+        <p style="font-size: 0.85rem; color: #A1A1A1; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;">Experience Required</p>
+      </div>
+      <div class="card" style="padding: 2rem; text-align: center;">
+        <p style="font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: #EC4899; line-height: 1; margin-bottom: 0.25rem;">60</p>
+        <p style="font-size: 0.85rem; color: #A1A1A1; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;">Minutes Per Class</p>
+      </div>
+      <div class="card" style="padding: 2rem; text-align: center;">
+        <p style="font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: #A78BFA; line-height: 1; margin-bottom: 0.25rem;">15</p>
+        <p style="font-size: 0.85rem; color: #A1A1A1; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;">Max Class Size</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     5. WHAT TO EXPECT — timeline
+     ========================================================================= -->
+<section class="expect-section reveal" aria-labelledby="expectHeading">
+  <div class="expect-section__header">
+    <span class="section-label">First Class</span>
+    <h2 id="expectHeading">Your First Booty Burn Class</h2>
+  </div>
+
+  <div class="expect-timeline" id="expectTimeline">
+    <div class="expect-step">
+      <div class="expect-step__left">
+        <div class="expect-step__num">1</div>
+        <div class="expect-step__line"></div>
+      </div>
+      <div class="expect-step__content">
+        <p class="expect-step__title">Dynamic warm-up to activate your lower body</p>
+        <p class="expect-step__desc">We start every class with a targeted warm-up that wakes up your glutes, hips, and legs — preparing your body for the work ahead.</p>
+      </div>
+    </div>
+    <div class="expect-step">
+      <div class="expect-step__left">
+        <div class="expect-step__num">2</div>
+        <div class="expect-step__line"></div>
+      </div>
+      <div class="expect-step__content">
+        <p class="expect-step__title">Dance-inspired movement sequences</p>
+        <p class="expect-step__desc">Each sequence is broken down into easy-to-follow steps that combine dance-style movement with targeted lower body conditioning.</p>
+      </div>
+    </div>
+    <div class="expect-step">
+      <div class="expect-step__left">
+        <div class="expect-step__num">3</div>
+        <div class="expect-step__line"></div>
+      </div>
+      <div class="expect-step__content">
+        <p class="expect-step__title">Glute and leg-focused conditioning</p>
+        <p class="expect-step__desc">The heart of the class — energetic, music-driven exercises that target your glutes, hamstrings, quads, and inner thighs.</p>
+      </div>
+    </div>
+    <div class="expect-step">
+      <div class="expect-step__left">
+        <div class="expect-step__num">4</div>
+        <div class="expect-step__line"></div>
+      </div>
+      <div class="expect-step__content">
+        <p class="expect-step__title">Core integration and full-body flow</p>
+        <p class="expect-step__desc">We bring it all together with core-engaged movement that connects your lower body strength to full-body coordination.</p>
+      </div>
+    </div>
+    <div class="expect-step">
+      <div class="expect-step__left">
+        <div class="expect-step__num">5</div>
+        <div class="expect-step__line"></div>
+      </div>
+      <div class="expect-step__content">
+        <p class="expect-step__title">Cool-down and stretch</p>
+        <p class="expect-step__desc">Every class ends with a proper cool-down and stretch to support recovery, reduce soreness, and leave you feeling great.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="expect-reassurance">
+    Our instructor will guide you through every movement. No dance experience necessary — just bring your energy!
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     6. PRICING SECTION
+     ========================================================================= -->
+<section class="pricing-section reveal" aria-labelledby="pricingHeading">
+  <div class="pricing-section__header">
+    <span class="section-label">Pricing</span>
+    <h2 id="pricingHeading">Flexible Pricing Options</h2>
+    <p style="color: #A1A1A1; font-size: 0.95rem; margin-top: 0.75rem;">All prices are estimates. Final pricing confirmed at booking.</p>
+  </div>
+
+  <div class="pricing-grid">
+
+    <div class="pricing-card reveal reveal-delay-1">
+      <p class="pricing-card__label">Drop-In</p>
+      <p class="pricing-card__price"><sup>$</sup><span id="pricingDropIn">25</span></p>
+      <p class="pricing-card__period">per class</p>
+      <p class="pricing-card__tagline">"Try it out"</p>
+      <div class="pricing-card__cta">
+        <a href="https://undrgrnd-movement.classmanager.com/register" class="cta-secondary" style="display: block; text-align: center;">Book a Class</a>
+      </div>
+    </div>
+
+    <div class="pricing-card pricing-card--featured reveal reveal-delay-2">
+      <p class="pricing-card__label">Class Pack</p>
+      <p class="pricing-card__price"><sup>$</sup><span id="pricingPack">200</span></p>
+      <p class="pricing-card__period">for 10 classes</p>
+      <p class="pricing-card__tagline">"Best value"</p>
+      <div class="pricing-card__cta">
+        <a href="https://undrgrnd-movement.classmanager.com/register" class="cta-button" style="display: block; text-align: center;">Get Pack</a>
+      </div>
+    </div>
+
+    <div class="pricing-card reveal reveal-delay-3">
+      <p class="pricing-card__label">Unlimited Monthly</p>
+      <p class="pricing-card__price"><sup>$</sup><span id="pricingMonthly">180</span></p>
+      <p class="pricing-card__period">per month</p>
+      <p class="pricing-card__tagline">"For dedicated students"</p>
+      <div class="pricing-card__cta">
+        <a href="https://undrgrnd-movement.classmanager.com/register" class="cta-secondary" style="display: block; text-align: center;">Go Unlimited</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     7. FAQ ACCORDION
+     ========================================================================= -->
+<section class="faq-section reveal" aria-labelledby="faqHeading">
+  <div class="faq-section__header">
+    <span class="section-label">Questions</span>
+    <h2 id="faqHeading">Frequently Asked Questions</h2>
+  </div>
+
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" type="button">
+        <span class="faq-item__question-text">Do I need dance experience for Booty Burn?</span>
+        <span class="faq-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+      </button>
+      <div class="faq-item__answer" role="region">
+        <div class="faq-item__answer-inner">Not at all. Booty Burn – Foundations is designed specifically for beginners. Every movement is taught step-by-step, and our Gold Coast instructor will ensure you feel comfortable and confident from your very first class. The class is structured so that anyone can follow along regardless of their fitness or dance background.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" type="button">
+        <span class="faq-item__question-text">What muscles does Booty Burn target?</span>
+        <span class="faq-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+      </button>
+      <div class="faq-item__answer" role="region">
+        <div class="faq-item__answer-inner">Booty Burn primarily targets the glutes, hamstrings, quadriceps, and inner thighs, with core engagement throughout. The dance-inspired sequences also work your hip flexors and improve overall lower body mobility. You will feel the burn in all the right places while having fun moving to music.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" type="button">
+        <span class="faq-item__question-text">Is Booty Burn suitable if I have knee or hip issues?</span>
+        <span class="faq-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+      </button>
+      <div class="faq-item__answer" role="region">
+        <div class="faq-item__answer-inner">We recommend speaking with your healthcare provider before starting any new fitness class if you have existing joint concerns. Our Southport instructor is experienced in offering modifications for different bodies and fitness levels. Please let us know about any injuries or limitations before class so we can ensure you move safely.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" type="button">
+        <span class="faq-item__question-text">What should I wear to Booty Burn?</span>
+        <span class="faq-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+      </button>
+      <div class="faq-item__answer" role="region">
+        <div class="faq-item__answer-inner">Comfortable, form-fitting activewear that allows freedom of movement is ideal. Supportive athletic shoes or dance trainers work well for this class. Avoid loose or baggy clothing that may restrict movement. Bring a water bottle — this is a high-energy class and you will want to stay hydrated throughout.</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-item__question" aria-expanded="false" type="button">
+        <span class="faq-item__question-text">How quickly will I see results?</span>
+        <span class="faq-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </span>
+      </button>
+      <div class="faq-item__answer" role="region">
+        <div class="faq-item__answer-inner">Many Gold Coast students notice improved energy, coordination, and body awareness within just a few classes. Physical changes like increased strength and muscle tone typically become noticeable after 4–6 weeks of consistent attendance. The most important thing is to enjoy the process — the results follow naturally when you are having fun and showing up regularly.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     8. RELATED PROGRAMS
+     ========================================================================= -->
+<section class="related-section reveal" aria-labelledby="relatedHeading">
+  <div class="related-section__header">
+    <span class="section-label">Explore More</span>
+    <h2 id="relatedHeading">You Might Also Like</h2>
+  </div>
+
+  <div class="related-grid" id="relatedGrid">
+    <div class="related-card">
+      <div class="related-card__img" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+      </div>
+      <div class="related-card__body">
+        <h3 class="related-card__name">Afro Groove Foundations</h3>
+        <p class="related-card__desc">Beginner-friendly dance fitness inspired by Afrobeat rhythms and groove-based movement.</p>
+        <a href="/programs/afro-groove-foundations.html" class="btn-learn" style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #8B5CF6; text-decoration: none; border: 1.5px solid rgba(139, 92, 246, 0.35); padding: 0.55rem 1.25rem; border-radius: 50px; display: inline-block; transition: all 0.3s ease;">Learn More</a>
+      </div>
+    </div>
+    <div class="related-card">
+      <div class="related-card__img" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+      </div>
+      <div class="related-card__body">
+        <h3 class="related-card__name">Choreography Fusion</h3>
+        <p class="related-card__desc">Women's movement and confidence through choreographed dance sequences.</p>
+        <a href="/programs/choreography-fusion.html" class="btn-learn" style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #8B5CF6; text-decoration: none; border: 1.5px solid rgba(139, 92, 246, 0.35); padding: 0.55rem 1.25rem; border-radius: 50px; display: inline-block; transition: all 0.3s ease;">Learn More</a>
+      </div>
+    </div>
+    <div class="related-card">
+      <div class="related-card__img" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      </div>
+      <div class="related-card__body">
+        <h3 class="related-card__name">Movement Flow</h3>
+        <p class="related-card__desc">Build body flow and confidence through expressive, intuitive movement.</p>
+        <a href="/programs/movement-dance.html" class="btn-learn" style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #8B5CF6; text-decoration: none; border: 1.5px solid rgba(139, 92, 246, 0.35); padding: 0.55rem 1.25rem; border-radius: 50px; display: inline-block; transition: all 0.3s ease;">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     9. SEO CONTENT SECTION
+     ========================================================================= -->
+<section class="seo-section reveal" aria-labelledby="seoHeading">
+  <div class="seo-section__inner">
+
+    <h2 id="seoHeading">Booty Burn Dance Fitness on the Gold Coast — Beginner-Friendly at UNDRGRND Movement Southport</h2>
+
+    <p>
+      Booty Burn – Foundations is one of the most exciting and results-driven dance fitness classes available to adults on the Gold Coast. Combining targeted lower body conditioning with dance-inspired movement sequences, this class delivers a high-energy workout that feels more like a dance party than a gym session. At <strong>UNDRGRND Movement</strong> in Southport, our Booty Burn Foundations class has been designed specifically for beginners on the Gold Coast who want to build lower body strength, improve coordination, and discover the joy of movement in a safe, supportive, and genuinely welcoming environment.
+    </p>
+
+    <h3>What Is Booty Burn Dance Fitness?</h3>
+
+    <p>
+      Booty Burn is a contemporary dance fitness format that fuses targeted glute and lower body conditioning with rhythmic, music-driven movement sequences. Unlike traditional gym-based glute workouts, Booty Burn uses dance-inspired choreography to make the conditioning process engaging, enjoyable, and highly effective. The result is a class that simultaneously builds strength, improves coordination, and elevates your mood — all while working your glutes, legs, and core in ways that feel natural and empowering.
+    </p>
+
+    <p>
+      The Gold Coast fitness community has embraced dance-based conditioning formats because they offer something that traditional gym workouts often cannot: genuine enjoyment. When you are having fun moving to music, you push harder, stay longer, and come back more often. Booty Burn harnesses this principle to deliver real physical results through an experience that Gold Coast adults genuinely look forward to.
+    </p>
+
+    <h3>Benefits of Booty Burn for Lower Body Strength</h3>
+
+    <p>
+      The primary physical benefit of Booty Burn is targeted lower body development. The class specifically focuses on glute activation — a critical component of functional fitness that is often underdeveloped in Gold Coast adults who spend long hours sitting. Strong glutes support healthy posture, reduce lower back pain, improve athletic performance, and contribute to the kind of toned, shapely physique that many people work hard to achieve.
+    </p>
+
+    <p>
+      Beyond glute activation, Booty Burn works the hamstrings, quadriceps, and inner thighs through dynamic, multi-directional movement patterns. This comprehensive lower body approach builds balanced strength that supports everyday activities — from climbing stairs to carrying groceries — while also improving overall athletic capability. Gold Coast students regularly report improvements in their strength, endurance, and physical confidence after just a few weeks of consistent Booty Burn practice.
+    </p>
+
+    <p>
+      The cardiovascular component of Booty Burn is equally significant. The high-energy, continuous nature of the class elevates your heart rate and keeps it elevated throughout the session, delivering meaningful aerobic conditioning alongside the strength work. This dual benefit — strength and cardio in a single class — makes Booty Burn one of the most time-efficient fitness options available on the Gold Coast.
+    </p>
+
+    <h3>Why Dance-Based Fitness Works for Beginners</h3>
+
+    <p>
+      Dance-based fitness formats like Booty Burn are uniquely effective for beginners because they leverage the brain's natural response to music and rhythm. When movement is set to music, it becomes easier to learn, easier to remember, and significantly more enjoyable to perform. The rhythmic structure of the class helps beginners internalise movement patterns quickly, building coordination and body awareness at a faster rate than traditional exercise formats.
+    </p>
+
+    <p>
+      At our Southport studio, Booty Burn Foundations is structured to ensure that complete beginners feel comfortable from their very first class. Movements are introduced one at a time, built up gradually, and repeated until everyone in the class feels confident before moving on. There is no pressure to perform, no mirrors to feel self-conscious in front of, and no competition between students. The Gold Coast community that has formed around our Booty Burn classes is one of the most welcoming and supportive groups in our studio.
+    </p>
+
+    <h3>How UNDRGRND Movement Teaches Booty Burn</h3>
+
+    <p>
+      UNDRGRND Movement's approach to teaching Booty Burn is rooted in the studio's broader philosophy of foundational movement for body and mind. Every class begins with a dynamic warm-up that specifically targets the glutes, hips, and lower body — preparing the muscles and joints for the demands of the session. Movement sequences are introduced progressively, with each new element building on what has come before. The instructor provides clear, accessible cues that help students understand not just what to do, but why — building body awareness alongside physical strength.
+    </p>
+
+    <p>
+      Our Southport instructor brings qualifications in movement practice and a deep understanding of how to create safe, effective, and enjoyable fitness experiences for adults of all backgrounds. This means that the class is not just physically effective — it is also emotionally safe. Students are never pushed beyond their comfort level, and the studio environment is deliberately designed to be non-judgmental and inclusive. Gold Coast adults of all ages, backgrounds, and body types are welcome in our Booty Burn Foundations class.
+    </p>
+
+    <h3>Located in Southport, Serving the Gold Coast</h3>
+
+    <p>
+      UNDRGRND Movement is located inside Flips Academy at Southport Park Shopping Centre — making it easily accessible for Gold Coast residents from Surfers Paradise, Broadbeach, Bundall, Main Beach, and surrounding suburbs. Our Southport studio is purpose-built for movement classes, with a sprung floor, adequate space for full-body movement, and a welcoming atmosphere that reflects the values of the UNDRGRND Movement community.
+    </p>
+
+    <p>
+      For Gold Coast adults who want to build lower body strength, improve their fitness, and have fun doing it, Booty Burn Foundations is the ideal starting point. The class is designed to remove every barrier to entry — no experience required, no special equipment needed, no performance pressure. Just movement, music, and community in the heart of Southport.
+    </p>
+
+    <h3>Building Confidence Through Strength and Movement</h3>
+
+    <p>
+      One of the most consistent things Gold Coast students tell us about Booty Burn Foundations is how much it has improved their confidence — not just physically, but in how they carry themselves every day. There is something deeply empowering about discovering that your body is capable of more than you thought. When you feel your glutes activating, your coordination improving, and your energy levels rising, it changes the way you approach every aspect of your life.
+    </p>
+
+    <p>
+      The confidence built in Booty Burn Foundations often leads students to explore other programs at UNDRGRND Movement. Many of our Gold Coast students progress from Booty Burn into Afro Groove Foundations or Choreography Fusion, building on the foundation of lower body strength and rhythmic confidence they have developed. The progression path is natural and entirely student-led — there is no pressure to advance before you are ready.
+    </p>
+
+    <h3>A Supportive Community in Southport</h3>
+
+    <p>
+      UNDRGRND Movement is more than a dance studio — it is a community. The Gold Coast adults who attend our Booty Burn Foundations classes come from all walks of life, and what unites them is a shared commitment to movement, strength, and mutual support. Our Southport studio is a place where you can be yourself, move at your own pace, and be celebrated for showing up — regardless of how the class goes.
+    </p>
+
+    <p>
+      Ready to feel the burn? <strong>Book your first Booty Burn class today</strong> at UNDRGRND Movement, Southport — Gold Coast's most welcoming beginner dance fitness studio.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- =========================================================================
+     10. CTA SECTION
+     ========================================================================= -->
+<section class="cta-section reveal" aria-labelledby="ctaHeading">
+  <div class="cta-section__inner">
+    <h2 id="ctaHeading">Ready to Start Your Booty Burn Journey?</h2>
+    <p class="cta-section__sub">Join Gold Coast's most welcoming beginner dance fitness class at UNDRGRND Movement in Southport. No experience needed — just bring yourself and a willingness to move and sweat.</p>
+    <div class="cta-section__buttons">
+      <a href="https://undrgrnd-movement.classmanager.com/register" class="cta-button">Book Your First Class</a>
+      <a href="/contact.html" class="cta-secondary">Questions? Contact Us</a>
+    </div>
+  </div>
+</section>
+
+
+<!--
+  UNDRGRND Movement — Footer Component
+  File: /components/footer-component.html
+
+  Usage: Copy this entire block into any page <body>, as the last element before </body>.
+  Dependencies:
+    - /css/global.css (must be loaded in <head>)
+    - site-config.json (footer data loaded via fetch in <script> below)
+
+  Data sources:
+    - project.tagline
+    - business.legal_name, business.address, business.contact, business.hours
+    - navigation.main_menu
+
+  NAP CONSISTENCY: Name, Address, Phone are rendered directly from
+  site-config.json to ensure exact match with Google My Business.
+-->
+
+<!-- =====================================================================
+     FOOTER STYLES (scoped to this component)
+     ===================================================================== -->
+<style>
+  /* --- Footer wrapper --- */
+  .site-footer {
+    background-color: #1A1A1A;               /* site-config: design.colors.card_bg */
+    border-top: 3px solid;
+    border-image: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%) 1; /* site-config: gradient_purple */
+    color: #FFFFFF;                           /* site-config: design.colors.text_white */
+    font-family: 'Outfit', Helvetica Neue, sans-serif; /* site-config: design.fonts.body */
+    margin-top: auto;
+  }
+
+  /* --- Main footer grid --- */
+  .footer-main {
+    max-width: 1400px;
+    margin-inline: auto;
+    padding: 5rem 5% 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  /* Tablet: 2 columns */
+  @media (min-width: 768px) {
+    .footer-main {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem 4rem;
+    }
+  }
+
+  /* Desktop: 3 columns */
+  @media (min-width: 1024px) {
+    .footer-main {
+      grid-template-columns: 1.4fr 1fr 1.4fr;
+      gap: 2rem 4rem;
+    }
+  }
+
+  /* --- Column shared styles --- */
+  .footer-col__heading {
+    font-family: 'Bebas Neue', Impact, sans-serif; /* site-config: design.fonts.display */
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8B5CF6;                           /* site-config: design.colors.primary_purple */
+    margin-bottom: 1.25rem;
+  }
+
+  /* ---- COLUMN 1: Brand ---- */
+  .footer-brand__logo {
+    display: inline-flex;
+    flex-direction: column;
+    text-decoration: none;
+    line-height: 1;
+    margin-bottom: 1.25rem;
+  }
+
+  .footer-brand__title {
+    font-family: 'Bebas Neue', Impact, sans-serif; /* site-config: design.fonts.display */
+    font-size: 2.25rem;
+    letter-spacing: 2px;
+    line-height: 1;
+    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%); /* site-config: gradient_purple */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .footer-brand__sub {
+    font-family: 'Outfit', Helvetica Neue, sans-serif; /* site-config: design.fonts.body */
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: lowercase;
+    color: #A1A1A1;                           /* site-config: design.colors.text_gray */
+    margin-top: 2px;
+  }
+
+  .footer-brand__tagline {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #A1A1A1;                           /* site-config: design.colors.text_gray */
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+    max-width: 280px;
+  }
+
+  /* Social icons */
+  .footer-social {
+    display: flex;
+    gap: 0.85rem;
+    align-items: center;
+  }
+
+  .footer-social__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(139, 92, 246, 0.4); /* site-config: primary_purple at 40% */
+    color: #A1A1A1;                           /* site-config: text_gray */
+    text-decoration: none;
+    transition: all 0.3s ease;               /* site-config: design.effects.transition */
+    background: transparent;
+  }
+
+  .footer-social__link:hover {
+    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%); /* site-config: gradient_purple */
+    border-color: transparent;
+    color: #FFFFFF;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+  }
+
+  .footer-social__link svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.75;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* ---- COLUMN 2: Quick Links ---- */
+  .footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .footer-links__item a {
+    display: inline-block;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #A1A1A1;                           /* site-config: text_gray */
+    text-decoration: none;
+    padding: 0.45rem 0;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    position: relative;
+  }
+
+  .footer-links__item a::before {
+    content: '→';
+    position: absolute;
+    left: -1.2rem;
+    opacity: 0;
+    color: #8B5CF6;                           /* site-config: primary_purple */
+    transition: opacity 0.3s ease, left 0.3s ease;
+  }
+
+  .footer-links__item a:hover {
+    color: #FFFFFF;                           /* site-config: text_white */
+    padding-left: 1.2rem;
+  }
+
+  .footer-links__item a:hover::before {
+    opacity: 1;
+    left: 0;
+  }
+
+  /* ---- COLUMN 3: Contact Info ---- */
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-contact__item {
+    display: flex;
+    gap: 0.85rem;
+    align-items: flex-start;
+  }
+
+  .footer-contact__icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    color: #8B5CF6;                           /* site-config: primary_purple */
+  }
+
+  .footer-contact__icon svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.75;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .footer-contact__text {
+    font-size: 0.9rem;
+    color: #A1A1A1;                           /* site-config: text_gray */
+    line-height: 1.6;
+  }
+
+  .footer-contact__text a {
+    color: #A1A1A1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-contact__text a:hover {
+    color: #8B5CF6;                           /* site-config: primary_purple */
+  }
+
+  .footer-contact__text strong {
+    display: block;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+  }
+
+  /* Hours table */
+  .footer-hours {
+    font-size: 0.875rem;
+    color: #A1A1A1;
+    line-height: 1.8;
+  }
+
+  .footer-hours span {
+    color: #FFFFFF;
+    font-weight: 600;
+  }
+
+  /* --- Bottom bar --- */
+  .footer-bottom {
+    border-top: 1px solid rgba(139, 92, 246, 0.15);
+    max-width: 1400px;
+    margin-inline: auto;
+    padding: 1.5rem 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .footer-bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+
+  .footer-bottom__copy {
+    font-size: 0.85rem;
+    color: #A1A1A1;
+  }
+
+  .footer-bottom__links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-bottom__links a {
+    font-size: 0.85rem;
+    color: #A1A1A1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-bottom__links a:hover {
+    color: #8B5CF6;
+  }
+
+  .footer-bottom__links span {
+    color: rgba(139, 92, 246, 0.3);
+  }
+</style>
+
+<!-- =====================================================================
+     FOOTER HTML
+     ===================================================================== -->
+<footer class="site-footer" role="contentinfo" aria-label="Site footer">
+
+  <div class="footer-main">
+
+    <!-- Column 1: Brand -->
+    <div class="footer-col footer-col--brand">
+      <a href="/" class="footer-brand__logo" aria-label="UNDRGRND Movement — Home">
+        <img src="../images/logo/logo-full.webp" alt="UNDRGRND Movement" width="200" height="80" style="height:60px;width:auto;display:block;" loading="lazy">
+      </a>
+      <p class="footer-brand__tagline" id="footerTagline">Gold Coast's underground movement studio.</p>
+      <div class="footer-social" aria-label="Social media links">
+        <a href="https://www.instagram.com/undrgrnd.movement/" class="footer-social__link" id="footerInstagram" aria-label="Follow UNDRGRND Movement on Instagram" target="_blank" rel="noopener noreferrer">
+          <!-- Instagram icon -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <a href="https://www.facebook.com/undrgrnd.movement" class="footer-social__link" id="footerFacebook" aria-label="Follow UNDRGRND Movement on Facebook" target="_blank" rel="noopener noreferrer">
+          <!-- Facebook icon -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Column 2: Quick Links -->
+    <div class="footer-col footer-col--links">
+      <h3 class="footer-col__heading">Quick Links</h3>
+      <ul class="footer-links" id="footerNavLinks">
+        <!-- Populated by JavaScript from site-config.json navigation.main_menu -->
+        <li class="footer-links__item"><a href="/">Home</a></li>
+        <li class="footer-links__item"><a href="/adults.html">Adults</a></li>
+        <li class="footer-links__item"><a href="/kids.html">Kids</a></li>
+        <li class="footer-links__item"><a href="/timetable.html">Timetable</a></li>
+        <li class="footer-links__item"><a href="/about.html">About</a></li>
+        <li class="footer-links__item"><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Contact Info -->
+    <div class="footer-col footer-col--contact">
+      <h3 class="footer-col__heading">Find Us</h3>
+      <div class="footer-contact">
+
+        <!-- Address -->
+        <div class="footer-contact__item">
+          <span class="footer-contact__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </span>
+          <div class="footer-contact__text">
+            <strong>Studio Location</strong>
+            Inside Flips Academy<br>
+            Southport Park Shopping Centre<br>
+            Gold Coast, QLD
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="footer-contact__item">
+          <span class="footer-contact__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z"></path></svg>
+          </span>
+          <div class="footer-contact__text">
+            <strong>Phone</strong>
+            <a href="tel:+61721402690">0721 402 690</a>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="footer-contact__item">
+          <span class="footer-contact__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </span>
+          <div class="footer-contact__text">
+            <strong>Email</strong>
+            <a href="mailto:undrgrndgc@gmail.com">undrgrndgc@gmail.com</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="footer-bottom">
+    <p class="footer-bottom__copy">
+      &copy; <span id="footerYear">2025</span> UNDRGRND Movement. All rights reserved. Proudly serving Gold Coast and Southport communities.
+    </p>
+    <div class="footer-bottom__links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <span aria-hidden="true">|</span>
+      <a href="/terms.html">Terms of Use</a>
+    </div>
+  </div>
+
+</footer>
+
+<!-- =====================================================================
+     FOOTER JAVASCRIPT
+     Data source: site-config.json → project.tagline, navigation.main_menu, social
+     ===================================================================== -->
+<script>
+(function () {
+  'use strict';
+
+  /* Update copyright year */
+  var yearEl = document.getElementById('footerYear');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* Load footer data from site-config.json */
+  fetch('/site-config.json')
+    .then(function (res) {
+      if (!res.ok) throw new Error('Could not load site-config.json');
+      return res.json();
+    })
+    .then(function (config) {
+      /* Tagline */
+      var taglineEl = document.getElementById('footerTagline');
+      if (taglineEl && config.project && config.project.tagline) {
+        taglineEl.textContent = config.project.tagline;
+      }
+
+      /* Social links */
+      if (config.social) {
+        var igEl = document.getElementById('footerInstagram');
+        var fbEl = document.getElementById('footerFacebook');
+        if (igEl && config.social.instagram) igEl.href = config.social.instagram;
+        if (fbEl && config.social.facebook) fbEl.href = config.social.facebook;
+      }
+
+      /* Quick links */
+      var navLinks = document.getElementById('footerNavLinks');
+      if (navLinks && config.navigation && config.navigation.main_menu) {
+        navLinks.innerHTML = '';
+        config.navigation.main_menu.forEach(function (item) {
+          var li = document.createElement('li');
+          li.className = 'footer-links__item';
+          var a = document.createElement('a');
+          a.href = item.href;
+          a.textContent = item.label;
+          li.appendChild(a);
+          navLinks.appendChild(li);
+        });
+      }
+    })
+    .catch(function (err) {
+      console.error('Footer: Failed to load site-config.json', err);
+    });
+
+}());
+</script>
+
+
+<!-- =========================================================================
+     PAGE SCRIPTS
+     ========================================================================= -->
+<script>
+(function () {
+  'use strict';
+
+  /* -------------------------------------------------------------------------
+     1. Schema.org JSON-LD — Breadcrumb + Service + FAQ
+  ------------------------------------------------------------------------- */
+  if (window.SchemaGenerator) {
+    var breadcrumbs = [
+      { name: 'Home',    url: 'https://www.undrgrnd.com.au/' },
+      { name: 'Adults',  url: 'https://www.undrgrnd.com.au/adults.html' },
+      { name: 'Booty Burn - Foundations', url: 'https://www.undrgrnd.com.au/programs/booty-burn-foundations.html' }
+    ];
+
+    var program = {
+      name: 'Booty Burn - Foundations',
+      short_description: 'High-energy lower body and glute-focused dance fitness class',
+      estimated_pricing: {
+        drop_in: 25,
+        class_pack_10: 200,
+        unlimited_monthly: 180
+      }
+    };
+
+    var faqs = [
+      {
+        question: 'Do I need dance experience for Booty Burn?',
+        answer: 'Not at all. Booty Burn – Foundations is designed specifically for beginners. Every movement is taught step-by-step, and our Gold Coast instructor will ensure you feel comfortable and confident from your very first class.'
+      },
+      {
+        question: 'What muscles does Booty Burn target?',
+        answer: 'Booty Burn primarily targets the glutes, hamstrings, quadriceps, and inner thighs, with core engagement throughout. The dance-inspired sequences also work your hip flexors and improve overall lower body mobility.'
+      },
+      {
+        question: 'Is Booty Burn suitable if I have knee or hip issues?',
+        answer: 'We recommend speaking with your healthcare provider before starting any new fitness class if you have existing joint concerns. Our instructor offers modifications for different bodies and fitness levels.'
+      },
+      {
+        question: 'What should I wear to Booty Burn?',
+        answer: 'Comfortable, form-fitting activewear that allows freedom of movement is ideal. Supportive athletic shoes or dance trainers work well for this class. Bring a water bottle as this is a high-energy class.'
+      },
+      {
+        question: 'How quickly will I see results?',
+        answer: 'Many Gold Coast students notice improved energy, coordination, and body awareness within just a few classes. Physical changes like increased strength and muscle tone typically become noticeable after 4–6 weeks of consistent attendance.'
+      }
+    ];
+
+    document.head.insertAdjacentHTML('beforeend', window.SchemaGenerator.generateBreadcrumbSchema(breadcrumbs));
+    document.head.insertAdjacentHTML('beforeend', window.SchemaGenerator.generateServiceSchema(program));
+    document.head.insertAdjacentHTML('beforeend', window.SchemaGenerator.generateFAQSchema(faqs));
+  }
+
+  /* -------------------------------------------------------------------------
+     2. Sticky Book Now button — show after scrolling past hero
+  ------------------------------------------------------------------------- */
+  var stickyBook = document.getElementById('stickyBook');
+  if (stickyBook) {
+    window.addEventListener('scroll', function () {
+      var heroHeight = window.innerHeight * 0.6;
+      if (window.scrollY > heroHeight) {
+        stickyBook.classList.add('visible');
+        stickyBook.setAttribute('aria-hidden', 'false');
+        stickyBook.querySelector('a').removeAttribute('tabindex');
+      } else {
+        stickyBook.classList.remove('visible');
+        stickyBook.setAttribute('aria-hidden', 'true');
+        stickyBook.querySelector('a').setAttribute('tabindex', '-1');
+      }
+    }, { passive: true });
+  }
+
+  /* -------------------------------------------------------------------------
+     3. FAQ accordion
+  ------------------------------------------------------------------------- */
+  document.querySelectorAll('.faq-item__question').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+
+      /* Close all */
+      document.querySelectorAll('.faq-item').forEach(function (el) {
+        el.classList.remove('open');
+        el.querySelector('.faq-item__question').setAttribute('aria-expanded', 'false');
+      });
+
+      /* Toggle clicked */
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  /* -------------------------------------------------------------------------
+     4. Scroll-reveal animations
+  ------------------------------------------------------------------------- */
+  function initReveal() {
+    var revealEls = document.querySelectorAll('.reveal');
+    if (!revealEls.length) return;
+
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      revealEls.forEach(function (el) { observer.observe(el); });
+    } else {
+      revealEls.forEach(function (el) { el.classList.add('visible'); });
+    }
+  }
+
+  initReveal();
+
+  /* -------------------------------------------------------------------------
+     5. Smooth scroll for anchor links
+  ------------------------------------------------------------------------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var targetId = anchor.getAttribute('href').slice(1);
+      var target   = document.getElementById(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+}());
+</script>
+
+</body>
+</html>

@@ -623,7 +623,9 @@
     "season_id": 1,
     "filtered_booking_urls": {
       "note": "Class Manager does not support filtered URLs - all buttons link to main calendar"
-    }
+    },
+    "enrolment_url": "https://app.classmanager.com/classes/undrgrnd-movement",
+    "login_url": "https://app.classmanager.com/portal/undrgrnd-movement/login"
   },
   "legal": {
     "medical_disclaimer": "Medical clearance from your healthcare provider is required before participating in Recovery Movement classes. By booking this class, you confirm that you have obtained appropriate medical clearance and that your healthcare provider has approved your participation in physical movement activities.",

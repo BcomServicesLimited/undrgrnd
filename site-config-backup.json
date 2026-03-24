@@ -1,0 +1,536 @@
+{
+  "project": {
+    "name": "UNDRGRND Movement",
+    "tagline": "Foundational movement for body and mind",
+    "domain": "https://www.undrgrnd.com.au",
+    "repository": "https://github.com/BcomServicesLimited/undrgrnd.git"
+  },
+  
+  "business": {
+    "legal_name": "UNDRGRND Movement",
+    "category_primary": "Dance School",
+    "category_secondary": "Yoga Studio",
+    "address": {
+      "street": "163 Ferry Rd",
+      "suburb": "Southport",
+      "state": "QLD",
+      "postcode": "4215",
+      "country": "Australia",
+      "geo": {
+        "latitude": "-27.9654",
+        "longitude": "153.4076"
+      }
+    },
+    "contact": {
+      "email": "undrgrndgc@gmail.com",
+      "phone": "0721402690",
+      "phone_display": "0721 402 690",
+      "phone_international": "+61 7 2140 2690",
+      "instagram": "[UPDATE WHEN AVAILABLE]",
+      "facebook": "[UPDATE WHEN AVAILABLE]"
+    },
+    "hours": {
+      "monday": "6:00 AM - 9:00 PM",
+      "tuesday": "6:00 AM - 9:00 PM",
+      "wednesday": "6:00 AM - 9:00 PM",
+      "thursday": "6:00 AM - 9:00 PM",
+      "friday": "6:00 AM - 9:00 PM",
+      "saturday": "8:00 AM - 4:00 PM",
+      "sunday": "8:00 AM - 4:00 PM",
+      "note": "[PLACEHOLDER - UPDATE WITH ACTUAL HOURS]"
+    }
+  },
+  
+  "seo": {
+    "local_keywords": {
+      "primary": ["Gold Coast", "Southport"],
+      "secondary": ["Surfers Paradise", "Broadbeach", "Bundall", "Main Beach"],
+      "service_area": "Gold Coast and surrounding suburbs"
+    },
+    "target_keywords": [
+      "dance school gold coast",
+      "yoga studio southport",
+      "pole fitness gold coast",
+      "aerial classes southport",
+      "kids dance classes gold coast",
+      "beginner dance fitness gold coast",
+      "movement studio gold coast",
+      "recovery movement classes southport"
+    ]
+  },
+  
+  "design": {
+    "colors": {
+      "primary_purple": "#8B5CF6",
+      "accent_purple": "#A78BFA",
+      "pink_accent": "#EC4899",
+      "dark_bg": "#0A0A0A",
+      "card_bg": "#1A1A1A",
+      "text_white": "#FFFFFF",
+      "text_gray": "#A1A1A1",
+      "gradient_purple": "linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%)"
+    },
+    "fonts": {
+      "display": "Bebas Neue",
+      "body": "Outfit",
+      "weights": {
+        "light": 300,
+        "regular": 400,
+        "semibold": 600,
+        "bold": 700,
+        "extrabold": 800
+      }
+    },
+    "spacing": {
+      "section_padding": "8rem 5%",
+      "card_padding": "3rem 2rem",
+      "button_padding": "0.8rem 2rem"
+    },
+    "effects": {
+      "border_radius": "20px",
+      "card_border": "1px solid rgba(139, 92, 246, 0.2)",
+      "box_shadow": "0 20px 60px rgba(0, 0, 0, 0.5)",
+      "transition": "all 0.3s ease"
+    }
+  },
+  
+  "navigation": {
+    "main_menu": [
+      {"label": "Home", "href": "/"},
+      {"label": "Adults", "href": "/adults.html"},
+      {"label": "Kids", "href": "/kids.html"},
+      {"label": "Timetable", "href": "/timetable.html"},
+      {"label": "About", "href": "/about.html"},
+      {"label": "Contact", "href": "/contact.html"}
+    ],
+    "cta_button": {
+      "text": "Book Now",
+      "href": "/timetable.html"
+    }
+  },
+  
+  "programs": {
+    "adults": {
+      "dance": [
+        {
+          "id": "afro-groove",
+          "name": "Afro Groove Foundations",
+          "slug": "afro-groove-foundations",
+          "category": "Dance",
+          "level": "Beginner / Foundation",
+          "hero_program": true,
+          "short_description": "Beginner-friendly dance fitness inspired by Afrobeat and groove-based styles",
+          "full_description": "Afro Groove – Foundations is a beginner-friendly dance fitness class designed to improve rhythm, coordination, and full-body movement in a structured and supportive environment. Inspired by Afrobeat and groove-based styles, this class focuses on simple, repeatable movement patterns that build lower body strength, core stability, and overall mobility. Suitable for adults with no prior dance experience, sessions include guided warm-ups, easy-to-follow sequences, and controlled movement training to develop confidence and body awareness.",
+          "core_focus": [
+            "Hip mobility & control - improves flexibility + reduces stiffness",
+            "Rhythm and coordination development",
+            "Lower body strength and core stability",
+            "Body awareness and confidence building"
+          ],
+          "who_its_for": [
+            "Adults with no prior dance experience",
+            "Anyone looking to start dance fitness",
+            "Those wanting to improve coordination",
+            "People seeking fun, energetic workouts"
+          ],
+          "what_to_expect": [
+            "Guided warm-ups to prepare your body",
+            "Simple, repeatable movement patterns",
+            "Afrobeat-inspired grooves and rhythms",
+            "Supportive, non-competitive environment",
+            "Full-body workout with emphasis on lower body"
+          ],
+          "estimated_pricing": {
+            "drop_in": 25,
+            "class_pack_10": 200,
+            "unlimited_monthly": 180
+          }
+        },
+        {
+          "id": "movement-dance",
+          "name": "Movement Dance",
+          "slug": "movement-dance",
+          "category": "Dance",
+          "level": "Beginner / Foundation",
+          "hero_program": false,
+          "short_description": "Build body flow and confidence through expressive movement",
+          "core_focus": [
+            "Body flow and natural movement",
+            "Confidence building through expression",
+            "Creative movement exploration"
+          ],
+          "estimated_pricing": {
+            "drop_in": 25,
+            "class_pack_10": 200,
+            "unlimited_monthly": 180
+          }
+        },
+        {
+          "id": "recovery-movement",
+          "name": "Recovery Movement Dance",
+          "slug": "recovery-movement",
+          "category": "Dance",
+          "level": "Recovery / Medical Clearance Required",
+          "hero_program": false,
+          "medical_clearance_required": true,
+          "short_description": "Safe return to movement after injury, fatigue, or long inactivity",
+          "full_description": "Recovery Movement Dance is a specialized program designed for individuals recovering from injury, surgery, or physical and emotional stress. This class provides a safe, supportive environment for those returning to movement after extended periods of inactivity. Medical clearance is required before participation to ensure your safety and wellbeing.",
+          "core_focus": [
+            "Safe return to movement practices",
+            "Low-impact exercises and controlled transitions",
+            "Slow, mindful movement with controlled range of motion",
+            "Prevention of isolation through guided support"
+          ],
+          "medical_requirements": "Medical clearance from your healthcare provider is required before participating in this program. Please bring documentation to your first class.",
+          "estimated_pricing": {
+            "drop_in": 30,
+            "class_pack_8": 200
+          }
+        }
+      ],
+      "pole": [
+        {
+          "id": "pole-foundations",
+          "name": "Pole Fitness Foundations",
+          "slug": "pole-fitness-foundations",
+          "category": "Pole Fitness",
+          "level": "Beginner / Foundation",
+          "hero_program": false,
+          "short_description": "Learn how to use the pole safely with grip basics and simple spins",
+          "full_description": "Pole Fitness Foundations is designed for complete beginners who want to learn pole fitness in a safe, supportive environment. This class teaches you the fundamentals of pole work, including grip techniques, basic spins, and body positioning. No prior experience is necessary – just come ready to learn and have fun while building strength and coordination.",
+          "core_focus": [
+            "Grip basics and hand positioning",
+            "Walking around the pole with proper technique",
+            "Simple spins at low level",
+            "Body positioning and alignment",
+            "Safety protocols and control"
+          ],
+          "client_outcome": "I understand the pole and feel safe using it",
+          "what_to_expect": [
+            "Introduction to pole grip techniques",
+            "Learning to walk around the pole confidently",
+            "Basic low-level spins and transitions",
+            "Safety-first approach to every movement",
+            "Building foundational strength and control"
+          ],
+          "estimated_pricing": {
+            "drop_in": 28,
+            "class_pack_10": 220,
+            "unlimited_monthly": 200
+          }
+        },
+        {
+          "id": "pole-flow",
+          "name": "Pole Flow",
+          "slug": "pole-flow",
+          "category": "Pole Fitness",
+          "level": "Intermediate",
+          "hero_program": false,
+          "short_description": "Create smooth transitions and flowing movement around the pole",
+          "core_focus": [
+            "Flow between movements without stops",
+            "Smooth transitions and connectivity",
+            "Light floor transitions",
+            "Movement quality and grace"
+          ],
+          "client_outcome": "I can move around the pole smoothly and confidently",
+          "prerequisite": "Pole Fitness Foundations or instructor approval",
+          "estimated_pricing": {
+            "drop_in": 28,
+            "class_pack_10": 220,
+            "unlimited_monthly": 200
+          }
+        },
+        {
+          "id": "pole-strength",
+          "name": "Pole Strength & Movement",
+          "slug": "pole-strength-movement",
+          "category": "Pole Fitness",
+          "level": "Intermediate / Advanced",
+          "hero_program": false,
+          "short_description": "Build conditioning, holds, and controlled movement on the pole",
+          "core_focus": [
+            "Conditioning and strength building",
+            "Simple holds and static positions",
+            "Controlled movement techniques",
+            "Progressive skill development"
+          ],
+          "prerequisite": "Pole Fitness Foundations or instructor approval",
+          "estimated_pricing": {
+            "drop_in": 28,
+            "class_pack_10": 220,
+            "unlimited_monthly": 200
+          }
+        }
+      ],
+      "yoga": [
+        {
+          "id": "yoga-fusion",
+          "name": "Yoga Fusion",
+          "slug": "yoga-fusion",
+          "category": "Yoga",
+          "level": "All Levels",
+          "hero_program": false,
+          "short_description": "Modern fusion of traditional yoga with contemporary movement",
+          "estimated_pricing": {
+            "drop_in": 22,
+            "class_pack_10": 180,
+            "unlimited_monthly": 160
+          }
+        },
+        {
+          "id": "traditional-yoga",
+          "name": "Traditional Yoga",
+          "slug": "traditional-yoga",
+          "category": "Yoga",
+          "level": "All Levels",
+          "hero_program": false,
+          "short_description": "Classic yoga practices rooted in traditional techniques",
+          "estimated_pricing": {
+            "drop_in": 22,
+            "class_pack_10": 180,
+            "unlimited_monthly": 160
+          }
+        },
+        {
+          "id": "modern-yoga",
+          "name": "Modern Yoga",
+          "slug": "modern-yoga",
+          "category": "Yoga",
+          "level": "All Levels",
+          "hero_program": false,
+          "short_description": "Contemporary approach to yoga for today's lifestyle",
+          "estimated_pricing": {
+            "drop_in": 22,
+            "class_pack_10": 180,
+            "unlimited_monthly": 160
+          }
+        },
+        {
+          "id": "aerial-yoga",
+          "name": "Aerial Yoga",
+          "slug": "aerial-yoga",
+          "category": "Yoga",
+          "level": "Beginner / Foundation",
+          "hero_program": false,
+          "short_description": "Experience yoga suspended in silk hammocks",
+          "estimated_pricing": {
+            "drop_in": 30,
+            "class_pack_10": 250,
+            "unlimited_monthly": 220
+          }
+        }
+      ],
+      "aerial": [
+        {
+          "id": "aerial-silks",
+          "name": "Aerial Silks",
+          "slug": "aerial-silks",
+          "category": "Aerial",
+          "level": "Beginner / Foundation",
+          "hero_program": true,
+          "short_description": "Learn to dance and perform acrobatics on suspended fabric silks",
+          "full_description": "Aerial Silks is a beautiful and challenging form of aerial acrobatics where you learn to climb, wrap, and create stunning shapes using suspended fabric. This beginner-friendly class teaches you the fundamentals of aerial work in a safe, supportive environment. No prior experience is necessary – our instructors will guide you through each skill progression, helping you build strength, flexibility, and confidence as you learn to fly.",
+          "core_focus": [
+            "Climbing techniques and fabric manipulation",
+            "Basic wraps and foot locks",
+            "Body awareness and spatial orientation",
+            "Upper body and core strength development",
+            "Safe mounting, dismounting, and falling techniques",
+            "Flexibility and grace in aerial positions"
+          ],
+          "who_its_for": [
+            "Complete beginners curious about aerial arts",
+            "Adults looking for a unique fitness challenge",
+            "Those wanting to build upper body strength",
+            "Anyone seeking creative, artistic movement",
+            "People who want to overcome fear and build confidence"
+          ],
+          "what_to_expect": [
+            "Comprehensive warm-up and conditioning",
+            "Step-by-step instruction on silk techniques",
+            "Progressive skill building from ground work to aerial",
+            "Individual attention and spotting from instructors",
+            "Cool-down and stretching to prevent injury",
+            "A supportive community of fellow aerialists"
+          ],
+          "estimated_pricing": {
+            "drop_in": 32,
+            "class_pack_10": 280,
+            "unlimited_monthly": 240
+          }
+        }
+      ],
+      "choreography": [
+        {
+          "id": "choreography-fusion",
+          "name": "Choreography Fusion",
+          "slug": "choreography-fusion",
+          "category": "Choreography",
+          "level": "All Levels",
+          "hero_program": false,
+          "short_description": "Women's movement and confidence through choreographed dance",
+          "estimated_pricing": {
+            "drop_in": 25,
+            "class_pack_10": 200,
+            "unlimited_monthly": 180
+          }
+        }
+      ]
+    },
+    "kids": {
+      "yoga": [
+        {
+          "id": "kids-yoga",
+          "name": "Kids Yoga",
+          "slug": "kids-yoga",
+          "category": "Yoga",
+          "age_range": "6-16 years",
+          "short_description": "Fun, age-appropriate yoga for children",
+          "estimated_pricing": {
+            "drop_in": 18,
+            "term_8_weeks": 120
+          }
+        },
+        {
+          "id": "kids-aerial-yoga",
+          "name": "Kids Aerial Yoga",
+          "slug": "kids-aerial-yoga",
+          "category": "Yoga",
+          "age_range": "8-16 years",
+          "short_description": "Playful aerial yoga in hammocks for kids",
+          "estimated_pricing": {
+            "drop_in": 22,
+            "term_8_weeks": 150
+          }
+        }
+      ],
+      "pole": [
+        {
+          "id": "kids-pole-foundations",
+          "name": "Pole Fitness Kids - Foundations",
+          "slug": "kids-pole-foundations",
+          "category": "Pole Fitness",
+          "age_range": "8-16 years",
+          "short_description": "Gymnastics-style pole fitness for strength and coordination",
+          "note": "Taught in gymnastics style - focused on strength, coordination, and safety",
+          "estimated_pricing": {
+            "drop_in": 20,
+            "term_8_weeks": 140
+          }
+        }
+      ],
+      "aerial": [
+        {
+          "id": "kids-aerial-silks",
+          "name": "Kids Aerial Silks",
+          "slug": "kids-aerial-silks",
+          "category": "Aerial",
+          "age_range": "8-16 years",
+          "short_description": "Introduction to aerial arts on suspended silks",
+          "estimated_pricing": {
+            "drop_in": 22,
+            "term_8_weeks": 150
+          }
+        }
+      ],
+      "dance": [
+        {
+          "id": "kids-dance-moves",
+          "name": "Dance Moves (Urban Mix)",
+          "slug": "kids-dance-moves",
+          "category": "Dance",
+          "age_range": "6-16 years",
+          "short_description": "Hip hop and urban dance styles for kids",
+          "estimated_pricing": {
+            "drop_in": 18,
+            "term_8_weeks": 120
+          }
+        },
+        {
+          "id": "kids-modern-contemporary",
+          "name": "Modern Contemporary (Rhythm & Motion)",
+          "slug": "kids-modern-contemporary",
+          "category": "Dance",
+          "age_range": "8-16 years",
+          "short_description": "Expressive contemporary dance focusing on rhythm and movement quality",
+          "estimated_pricing": {
+            "drop_in": 18,
+            "term_8_weeks": 120
+          }
+        },
+        {
+          "id": "kids-creative-dance",
+          "name": "Creative Dance",
+          "slug": "kids-creative-dance",
+          "category": "Dance",
+          "age_range": "4-10 years",
+          "short_description": "Imaginative movement and dance exploration for younger children",
+          "estimated_pricing": {
+            "drop_in": 16,
+            "term_8_weeks": 100
+          }
+        }
+      ]
+    }
+  },
+  
+  "booking": {
+    "system": "Class Manager",
+    "integration_type": "javascript",
+    "company_url": "undrgrnd-movement",
+    "public_key": "c8b02e58-1d42-4611-9426-696e72a43630",
+    "timetable_div_id": "timetable",
+    "register_url": "https://app.classmanager.com/portal/undrgrnd-movement/register",
+    "cdn_script": "https://cdn.classmanager.com/assets/app/js/embed-script.js",
+    "season_id": 1,
+    "filtered_booking_urls": {
+      "note": "Class Manager does not support filtered URLs - all buttons link to main calendar"
+    }
+  },
+  
+  "legal": {
+    "medical_disclaimer": "Medical clearance from your healthcare provider is required before participating in Recovery Movement classes. By booking this class, you confirm that you have obtained appropriate medical clearance and that your healthcare provider has approved your participation in physical movement activities.",
+    "general_disclaimer": "All classes at UNDRGRND Movement are conducted by qualified instructors. Participants engage in physical activities at their own risk. Please inform your instructor of any injuries, medical conditions, or physical limitations before class. We recommend consulting with your healthcare provider before beginning any new exercise program.",
+    "liability_waiver": "By participating in classes at UNDRGRND Movement, you acknowledge that physical activity involves inherent risks. You agree to follow all safety instructions provided by instructors and to practice within your own limits. UNDRGRND Movement, its instructors, and staff are not liable for any injuries sustained during participation in classes or use of facilities.",
+    "privacy_policy_summary": "UNDRGRND Movement collects personal information necessary for class bookings and communication. We comply with the Australian Privacy Principles under the Privacy Act 1988. Your information is stored securely and never shared with third parties without your consent.",
+    "covid_policy": "We maintain hygiene protocols in accordance with Queensland Health guidelines. Please do not attend class if you are unwell or experiencing COVID-19 symptoms."
+  },
+  
+  "philosophy": {
+    "mission": "UNDRGRND Movement stands for foundational movement for body and mind. Not competition. Not performance pressure. Personal transformation only.",
+    "values": [
+      "Inclusive and beginner-friendly approach",
+      "Safe, supportive learning environment",
+      "Personal transformation over performance",
+      "Body and mind connection",
+      "Movement as healing and expression"
+    ],
+    "unique_approach": [
+      "Classes held in multiple environments: studio, park, beach, and specialized spaces",
+      "Focus on individual ability and health condition rather than age restrictions",
+      "Integration of recovery and rehabilitation principles",
+      "Trauma-informed movement practices",
+      "Collaborative programs with registered counsellors for deeper integration"
+    ]
+  },
+  
+  "instructor": {
+    "name": "Ollie",
+    "title": "Movement Practitioner & Performance Coach",
+    "bio_short": "Ollie is a certified movement practitioner specializing in foundational movement, recovery practices, and performance coaching. With qualifications in yoga instruction and trauma-informed movement, Ollie creates safe, inclusive spaces for personal transformation through dance, pole, aerial, and recovery movement.",
+    "qualifications": [
+      "Certified Yoga Instructor",
+      "Movement Practitioner",
+      "Performance Coach",
+      "Trauma-Informed Movement Specialist"
+    ],
+    "philosophy": "Movement is not tied to a room or a schedule. It's about creating space for your body to reconnect with itself – whether that's in the studio, at the beach, or in the park. Every body is welcome, every level is supported, and every journey is honored."
+  },
+  
+  "analytics": {
+    "google_analytics_id": "[PLACEHOLDER - ADD GA4 ID BEFORE LAUNCH]",
+    "facebook_pixel_id": "[PLACEHOLDER - OPTIONAL]",
+    "google_tag_manager_id": "[PLACEHOLDER - OPTIONAL]"
+  }
+}

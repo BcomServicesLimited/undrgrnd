@@ -1362,7 +1362,7 @@
         { label: 'About',     href: '/about.html' },
         { label: 'Contact',   href: '/contact.html' }
       ];
-      var fallbackCta = { text: 'Book Now', href: 'https://undrgrnd-movement.classmanager.com/register' };
+      var fallbackCta = { text: 'Book Now', href: 'https://app.classmanager.com/classes/undrgrnd-movement' };
       buildDesktopMenu(fallbackMenu, fallbackCta);
       buildMobileMenu(fallbackMenu, fallbackCta);
       highlightActivePage();
@@ -1567,7 +1567,7 @@
       </p>
 
       <div style="margin-top: 0.5rem;">
-        <a href="https://undrgrnd-movement.classmanager.com/register" class="cta-button">View Timetable</a>
+        <a href="https://app.classmanager.com/classes/undrgrnd-movement" class="cta-button">View Timetable</a>
       </div>
     </div>
 
@@ -1836,7 +1836,7 @@
     <p>Please ensure you have your medical clearance documentation ready to present at your first class.</p>
 
     <div class="modal-box__actions">
-      <a href="https://undrgrnd-movement.classmanager.com/register" class="cta-button">I Have Clearance — Book Now</a>
+      <a href="https://app.classmanager.com/classes/undrgrnd-movement" class="cta-button">I Have Clearance — Book Now</a>
       <a href="/contact.html" class="cta-secondary" style="padding: 0.8rem 1.5rem;">Contact Us First</a>
     </div>
 
@@ -1945,7 +1945,7 @@
       ? '<a href="mailto:undrgrndgc@gmail.com?subject=Waitlist for ' + escHtml(program.name) + '" class="btn-learn">Join Waitlist</a>'
       : (isMedical
           ? '<button class="btn-book" data-medical="true" type="button">Book Now</button>'
-          : '<a href="https://undrgrnd-movement.classmanager.com/register" class="btn-book">Book Now</a>');
+          : '<a href="https://app.classmanager.com/classes/undrgrnd-movement" class="btn-book">Book Now</a>');
     var learnBtn = isComingSoon
       ? '<a href="#" class="btn-learn disabled" aria-disabled="true">Coming Soon</a>'
       : '<a href="/programs/' + escHtml(slug) + '.html" class="btn-learn">Learn More</a>';

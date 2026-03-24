@@ -333,6 +333,88 @@
     .badge--pole    { background: rgba(139, 92, 246, 0.15); color: #A78BFA; border-color: rgba(139, 92, 246, 0.25); }
     .badge--yoga    { background: rgba(59, 130, 246, 0.15); color: #60A5FA; border-color: rgba(59, 130, 246, 0.25); }
     .badge--aerial  { background: rgba(16, 185, 129, 0.15); color: #34D399; border-color: rgba(16, 185, 129, 0.25); }
+    .badge--coming-soon { background: rgba(245, 158, 11, 0.15); color: #FBBF24; border-color: rgba(245, 158, 11, 0.25); }
+
+    /* Coming Soon button disabled state */
+    .btn-learn.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    /* -----------------------------------------------------------------------
+       AGE BANDS SECTION
+    ----------------------------------------------------------------------- */
+    .age-bands {
+      padding: 4rem 5%;
+      background: rgba(139, 92, 246, 0.03);
+      border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+    }
+    .age-bands .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .age-bands h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 0.75rem;
+    }
+    .age-bands .section-intro {
+      color: #A1A1A1;
+      font-size: 1rem;
+      max-width: 640px;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+    .age-bands-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .age-band-card {
+      background: #1A1A1A;
+      border-radius: 16px;
+      padding: 1.75rem;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+    }
+    .age-band-label {
+      display: inline-block;
+      padding: 0.4rem 0.9rem;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-bottom: 0.75rem;
+    }
+    .age-band-label.ages-4-7   { background: rgba(236, 72, 153, 0.2); color: #EC4899; }
+    .age-band-label.ages-8-12  { background: rgba(139, 92, 246, 0.2); color: #8B5CF6; }
+    .age-band-label.ages-13-16 { background: rgba(16, 185, 129, 0.2); color: #34D399; }
+    .age-band-card h3 {
+      color: #FFFFFF;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0.5rem 0;
+    }
+    .age-band-card p {
+      color: #A1A1A1;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
+    }
+    .age-band-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .age-band-card ul li {
+      padding: 0.4rem 0;
+      color: #A1A1A1;
+      font-size: 0.88rem;
+      border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+    }
+    .age-band-card ul li:last-child { border-bottom: none; }
 
     .program-badge {
       display: inline-block;
@@ -1490,6 +1572,60 @@
 
 
 <!-- =========================================================================
+     1B. AGE BANDS SECTION
+     ========================================================================= -->
+<section class="age-bands" aria-labelledby="ageBandsHeading">
+  <div class="container">
+    <h2 id="ageBandsHeading">Find the Right Class for Your Child's Age</h2>
+    <p class="section-intro">
+      All UNDRGRND Movement kids' programs are designed for specific age groups to ensure the right level of challenge, safety, and fun for every child on the Gold Coast.
+    </p>
+
+    <div class="age-bands-grid">
+
+      <div class="age-band-card">
+        <div class="age-band-label ages-4-7">Ages 4–7</div>
+        <h3>Little Movers</h3>
+        <p>Play-based movement for young children. Focus on imagination, rhythm, and body awareness in a joyful, pressure-free environment at our Southport studio.</p>
+        <ul>
+          <li>Creative Dance - Foundations</li>
+        </ul>
+      </div>
+
+      <div class="age-band-card">
+        <div class="age-band-label ages-8-12">Ages 8–12</div>
+        <h3>Junior Explorers</h3>
+        <p>Structured movement classes that build real skills. Dance, yoga, aerial, and pole fitness for primary school-aged children on the Gold Coast.</p>
+        <ul>
+          <li>Dance Moves (Urban Mix) - Foundations</li>
+          <li>Modern Contemporary (Rhythm &amp; Motion) - Foundations</li>
+          <li>Kids Yoga - Foundations</li>
+          <li>Kids Aerial Yoga - Foundations (Coming Soon)</li>
+          <li>Kids Aerial Silks - Foundations (Coming Soon)</li>
+          <li>Pole Fitness Kids - Foundations (Coming Soon)</li>
+        </ul>
+      </div>
+
+      <div class="age-band-card">
+        <div class="age-band-label ages-13-16">Ages 13–16</div>
+        <h3>Teen Movers</h3>
+        <p>More advanced movement for teenagers. Build strength, confidence, and coordination through dance, aerial, and fitness-focused classes in Southport.</p>
+        <ul>
+          <li>Dance Moves (Urban Mix) - Foundations</li>
+          <li>Modern Contemporary (Rhythm &amp; Motion) - Foundations</li>
+          <li>Kids Yoga - Foundations</li>
+          <li>Kids Aerial Yoga - Foundations (Coming Soon)</li>
+          <li>Kids Aerial Silks - Foundations (Coming Soon)</li>
+          <li>Pole Fitness Kids - Foundations (Coming Soon)</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================================
      2. AGE GROUP TABS
      ========================================================================= -->
 <div class="tabs-section" id="programs">
@@ -1769,10 +1905,32 @@
 <section class="seo-section reveal" aria-labelledby="seoHeading">
   <div class="seo-section__inner">
 
-    <h2 id="seoHeading">Gold Coast's Premier Kids Movement Studio in Southport</h2>
+    <h2 id="seoHeading">Kids Movement Classes on the Gold Coast — Dance, Yoga, Aerial &amp; Pole Fitness at UNDRGRND Movement Southport</h2>
 
     <p>
-      Finding the right activity for your child on the Gold Coast is one of the most important decisions a parent can make. Movement classes offer children something that team sports and screen time simply cannot — a deep, personal relationship with their own body. <strong>UNDRGRND Movement</strong> in Southport is Gold Coast's dedicated kids' movement studio, offering dance, yoga, aerial, and pole fitness programs for children aged 4 to 16. Our approach is built on safety, fun, and genuine skill development, not performance pressure or competition.
+      <strong>UNDRGRND Movement</strong> in Southport offers kids' movement classes across dance, yoga, aerial, and pole fitness for children aged 4 to 16 on the Gold Coast. All programs are structured as foundation classes — designed for beginners, grouped by age, and focused on genuine skill development in a safe, supportive environment. No prior experience is required for any class.
+    </p>
+
+    <h3>Ages 4–7: Little Movers</h3>
+
+    <p>
+      Our youngest students begin with <strong>Creative Dance - Foundations</strong>, a play-based introduction to movement for children aged 4 to 7. Classes encourage imagination, rhythm, and physical expression through games, stories, and guided exploration. Children build coordination and body awareness in a joyful, pressure-free environment at our Southport studio. This class is the ideal first movement experience for Gold Coast children starting their journey.
+    </p>
+
+    <h3>Ages 8–12: Junior Explorers</h3>
+
+    <p>
+      Primary school-aged children on the Gold Coast have the widest range of class options at UNDRGRND Movement. <strong>Dance Moves (Urban Mix) - Foundations</strong> introduces hip hop and urban dance styles in a fun, structured format, building rhythm, coordination, and performance confidence through age-appropriate choreography. <strong>Modern Contemporary (Rhythm &amp; Motion) - Foundations</strong> takes a more expressive approach, developing movement quality, musicality, and artistic awareness.
+    </p>
+
+    <p>
+      <strong>Kids Yoga - Foundations</strong> is available for children aged 6 to 16 and uses age-appropriate poses, breathing exercises, and mindfulness activities to support physical and mental wellbeing. For children who want to take their practice further, <strong>Kids Aerial Yoga - Foundations</strong> (coming soon to our Southport studio) uses suspended silk hammocks to create a unique, playful yoga experience that builds strength, flexibility, and spatial awareness. <strong>Kids Aerial Silks - Foundations</strong> (coming soon) and <strong>Pole Fitness Kids - Foundations</strong> (coming soon) round out our aerial and strength offerings for this age group.
+    </p>
+
+    <h3>Ages 13–16: Teen Movers</h3>
+
+    <p>
+      Teenagers on the Gold Coast can access the full range of kids' programs at UNDRGRND Movement. The same dance, yoga, aerial, and pole fitness classes available to 8–12 year olds are also open to teenagers, with instructors adapting the level of challenge and complexity to suit older students. Our Southport studio provides a non-competitive, encouraging environment where teenagers can explore movement at their own pace and build genuine physical confidence.
     </p>
 
     <h3>Why Gold Coast Parents Choose UNDRGRND Movement</h3>
@@ -1785,50 +1943,10 @@
       Every kids' class at UNDRGRND Movement begins with the fundamentals of movement — body awareness, coordination, and spatial understanding. These foundational skills support children not just in their movement practice, but in sport, school, and everyday life. Our instructors are trained to work with children of all temperaments and ability levels, and our small class sizes ensure every child receives the individual attention they deserve.
     </p>
 
-    <h3>Kids Dance Classes on the Gold Coast</h3>
-
-    <p>
-      Our Gold Coast kids' dance programs cater to a wide age range and variety of interests. <strong>Creative Dance</strong> for ages 4 to 10 is a play-based introduction to movement that encourages imagination, rhythm, and physical expression. Children explore movement concepts through games, stories, and guided exploration — building coordination and body awareness in a joyful, pressure-free environment.
-    </p>
-
-    <p>
-      For older children, <strong>Dance Moves (Urban Mix)</strong> introduces hip hop and urban dance styles in a fun, structured format. This Gold Coast kids' dance class is open to children aged 6 to 16 and builds rhythm, coordination, and performance confidence through age-appropriate urban choreography. <strong>Modern Contemporary (Rhythm and Motion)</strong> for ages 8 to 16 takes a more expressive approach, developing movement quality, musicality, and artistic awareness through contemporary dance techniques.
-    </p>
-
-    <h3>Kids Yoga Classes in Southport</h3>
-
-    <p>
-      Yoga is one of the most beneficial practices a child can develop, building flexibility, focus, and emotional regulation alongside physical strength. Our <strong>Kids Yoga</strong> classes in Southport are designed for children aged 6 to 16 and use age-appropriate poses, breathing exercises, and mindfulness activities to support physical and mental wellbeing. Classes are fun, interactive, and structured to hold children's attention while delivering genuine developmental benefits.
-    </p>
-
-    <p>
-      For children who want to take their yoga practice to new heights — literally — our <strong>Kids Aerial Yoga</strong> program uses suspended silk hammocks to create a unique, playful yoga experience. Available for children aged 8 to 16, Kids Aerial Yoga on the Gold Coast builds strength, flexibility, and spatial awareness while providing the added excitement of being off the ground. This class is consistently one of our most popular kids' offerings at our Southport studio.
-    </p>
-
-    <h3>Kids Aerial Silks on the Gold Coast</h3>
-
-    <p>
-      <strong>Kids Aerial Silks</strong> is one of the most exciting movement experiences available to children on the Gold Coast. Students aged 8 to 16 learn to climb, wrap, and create shapes using suspended fabric silks, building upper body strength, core stability, and spatial awareness in a safe, supervised environment. Our Southport aerial silks instructors provide step-by-step guidance with individual spotting, ensuring every child progresses safely and confidently.
-    </p>
-
-    <p>
-      Aerial arts build a unique combination of physical and mental skills in children. The focus required to learn a new aerial skill, the trust developed between student and instructor, and the confidence gained from achieving something genuinely challenging all contribute to a child's broader development. Gold Coast families regularly tell us that aerial classes have transformed their child's confidence both inside and outside the studio.
-    </p>
-
-    <h3>Kids Pole Fitness — Gymnastics Style</h3>
-
-    <p>
-      Our <strong>Pole Fitness Kids Foundations</strong> class is taught in a gymnastics style, with a strong focus on strength, coordination, and safety. Available for children aged 8 to 16, this Gold Coast kids' pole fitness class teaches children how to use the pole as a tool for building physical fitness — climbing, holding positions, and developing body control. The class has no performance or adult-style elements; it is purely a strength and coordination program delivered in a safe, age-appropriate format.
-    </p>
-
-    <p>
-      Many parents on the Gold Coast are surprised to learn how beneficial gymnastics-style pole fitness is for children. The upper body strength, grip development, and spatial awareness built in these classes support children in all other physical activities, from swimming to team sports. Our Southport instructors are experienced in delivering this program in a way that is both safe and genuinely enjoyable for children.
-    </p>
-
     <h3>Serving Gold Coast Families from Southport</h3>
 
     <p>
-      UNDRGRND Movement's Southport studio is easily accessible for families from across the Gold Coast, including Surfers Paradise, Broadbeach, Bundall, Main Beach, and surrounding suburbs. We offer term enrolments and casual drop-in options to suit different family schedules. Our kids' programs run throughout the Queensland school term calendar, with holiday programs available during school breaks.
+      UNDRGRND Movement's Southport studio is easily accessible for families from across the Gold Coast, including Surfers Paradise, Broadbeach, Bundall, Main Beach, Nerang, and surrounding suburbs. We offer term enrolments and casual drop-in options to suit different family schedules. Our kids' programs run throughout the Queensland school term calendar, with holiday programs available during school breaks.
     </p>
 
     <div class="seo-section__cta-text">
@@ -1943,6 +2061,15 @@
       priceHtml = '<p class="program-card__price"><strong>$' + program.estimated_pricing.term_8_weeks + '</strong> for 8 weeks</p>';
     }
 
+    /* Coming Soon badge */
+    var isComingSoon = program.status === 'coming_soon';
+    var comingSoonBadge = isComingSoon
+      ? '<span class="program-badge badge--coming-soon">Coming Soon</span>'
+      : '';
+    var learnBtn = isComingSoon
+      ? '<a href="#" class="btn-learn disabled" aria-disabled="true">Coming Soon</a>'
+      : '<a href="/programs/' + escHtml(slug) + '.html" class="btn-learn">Learn More</a>';
+
     return '<article class="program-card program-card--' + meta.cls + ' reveal"'
       + ' data-age-min="' + age.min + '" data-age-max="' + age.max + '">'
       + '<div class="program-card__img">'
@@ -1950,6 +2077,7 @@
       + '</div>'
       + '<div class="program-card__body">'
       +   '<span class="program-badge badge--' + meta.cls + '">' + escHtml(meta.label) + '</span>'
+      +   (comingSoonBadge ? comingSoonBadge : '')
       +   '<h3 class="program-card__name">' + escHtml(program.name) + '</h3>'
       +   (program.age_range
           ? '<span class="program-card__age"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>' + escHtml(program.age_range) + '</span>'
@@ -1959,7 +2087,7 @@
       +   priceHtml
       + '</div>'
       + '<div class="program-card__actions">'
-      +   '<a href="/programs/' + escHtml(slug) + '.html" class="btn-learn">Learn More</a>'
+      +   learnBtn
       + '</div>'
       + '</article>';
   }

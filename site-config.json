@@ -5,7 +5,6 @@
     "domain": "https://www.undrgrnd.com.au",
     "repository": "https://github.com/BcomServicesLimited/undrgrnd.git"
   },
-  
   "business": {
     "legal_name": "UNDRGRND Movement",
     "category_primary": "Dance School",
@@ -40,11 +39,18 @@
       "note": "[PLACEHOLDER - UPDATE WITH ACTUAL HOURS]"
     }
   },
-  
   "seo": {
     "local_keywords": {
-      "primary": ["Gold Coast", "Southport"],
-      "secondary": ["Surfers Paradise", "Broadbeach", "Bundall", "Main Beach"],
+      "primary": [
+        "Gold Coast",
+        "Southport"
+      ],
+      "secondary": [
+        "Surfers Paradise",
+        "Broadbeach",
+        "Bundall",
+        "Main Beach"
+      ],
       "service_area": "Gold Coast and surrounding suburbs"
     },
     "target_keywords": [
@@ -58,7 +64,6 @@
       "recovery movement classes southport"
     ]
   },
-  
   "design": {
     "colors": {
       "primary_purple": "#8B5CF6",
@@ -93,36 +98,52 @@
       "transition": "all 0.3s ease"
     }
   },
-  
   "navigation": {
     "main_menu": [
-      {"label": "Home", "href": "/"},
-      {"label": "Adults", "href": "/adults.html"},
-      {"label": "Kids", "href": "/kids.html"},
-      {"label": "Timetable", "href": "/timetable.html"},
-      {"label": "About", "href": "/about.html"},
-      {"label": "Contact", "href": "/contact.html"}
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Adults",
+        "href": "/adults.html"
+      },
+      {
+        "label": "Kids",
+        "href": "/kids.html"
+      },
+      {
+        "label": "Timetable",
+        "href": "/timetable.html"
+      },
+      {
+        "label": "About",
+        "href": "/about.html"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact.html"
+      }
     ],
     "cta_button": {
       "text": "Book Now",
       "href": "/timetable.html"
     }
   },
-  
   "programs": {
     "adults": {
       "dance": [
         {
           "id": "afro-groove",
-          "name": "Afro Groove Foundations",
+          "name": "Afro Groove - Foundations",
           "slug": "afro-groove-foundations",
           "category": "Dance",
           "level": "Beginner / Foundation",
           "hero_program": true,
           "short_description": "Beginner-friendly dance fitness inspired by Afrobeat and groove-based styles",
-          "full_description": "Afro Groove – Foundations is a beginner-friendly dance fitness class designed to improve rhythm, coordination, and full-body movement in a structured and supportive environment. Inspired by Afrobeat and groove-based styles, this class focuses on simple, repeatable movement patterns that build lower body strength, core stability, and overall mobility. Suitable for adults with no prior dance experience, sessions include guided warm-ups, easy-to-follow sequences, and controlled movement training to develop confidence and body awareness.",
+          "full_description": "Afro Groove – Foundations is a beginner-friendly dance fitness class designed to improve rhythm, coordination, and full-body movement in a structured and supportive environment. Inspired by Afrobeat and groove-based styles, this class focuses on simple, repeatable movement patterns that build lower body strength, core stability, and overall mobility. Through each curated, smooth, and authentic movement, you'll develop confidence, body awareness, and a deeper connection to rhythm and music. Suitable for adults with no prior dance experience, sessions include guided warm-ups, easy-to-follow sequences, and controlled movement training.",
           "core_focus": [
-            "Hip mobility & control - improves flexibility + reduces stiffness",
+            "Hip mobility and control",
             "Rhythm and coordination development",
             "Lower body strength and core stability",
             "Body awareness and confidence building"
@@ -144,20 +165,26 @@
             "drop_in": 25,
             "class_pack_10": 200,
             "unlimited_monthly": 180
-          }
+          },
+          "intensity": "Active",
+          "status": "active"
         },
         {
-          "id": "movement-dance",
-          "name": "Movement Dance",
-          "slug": "movement-dance",
+          "id": "booty-burn",
+          "name": "Booty Burn - Foundations",
+          "slug": "booty-burn-foundations",
           "category": "Dance",
           "level": "Beginner / Foundation",
+          "intensity": "Active",
+          "status": "active",
           "hero_program": false,
-          "short_description": "Build body flow and confidence through expressive movement",
+          "short_description": "High-energy lower body and glute-focused dance fitness class",
+          "full_description": "Booty Burn – Foundations is a high-energy, beginner-friendly dance fitness class focused on lower body strength, glute activation, and full-body conditioning through fun and engaging movement. Combining dance-inspired sequences with targeted lower body exercises, this class is designed to build strength, improve coordination, and get your heart rate up in a supportive and motivating environment. Through each curated, smooth, and authentic movement, you'll work your glutes, legs, and core while developing rhythm, confidence, and body awareness. No prior dance experience is required — just come ready to move and have fun.",
           "core_focus": [
-            "Body flow and natural movement",
-            "Confidence building through expression",
-            "Creative movement exploration"
+            "Glute activation and lower body strength",
+            "Dance-inspired conditioning sequences",
+            "Coordination and rhythm",
+            "Full-body fitness through movement"
           ],
           "estimated_pricing": {
             "drop_in": 25,
@@ -166,44 +193,68 @@
           }
         },
         {
-          "id": "recovery-movement",
-          "name": "Recovery Movement Dance",
-          "slug": "recovery-movement",
+          "id": "movement-flow",
+          "name": "Movement Flow - Foundations",
+          "slug": "movement-flow-foundations",
+          "category": "Dance",
+          "level": "Beginner / Foundation",
+          "hero_program": false,
+          "short_description": "Build body flow and confidence through expressive movement",
+          "core_focus": [
+            "Fluid, natural movement patterns",
+            "Body awareness and mobility",
+            "Smooth transitions and coordination",
+            "Confidence through gentle movement"
+          ],
+          "estimated_pricing": {
+            "drop_in": 25,
+            "class_pack_10": 200,
+            "unlimited_monthly": 180
+          },
+          "intensity": "Balanced",
+          "status": "active",
+          "full_description": "Movement Flow – Foundations is a beginner-friendly class designed to help you reconnect with your body through fluid, natural movement in a calm and supportive environment. The focus is on developing body awareness, improving mobility, and building confidence through simple, guided movement sequences that feel natural and accessible. Each session introduces easy-to-follow patterns that encourage smooth transitions, gentle strength work, and a greater sense of ease in how you move. Through each curated, smooth, and authentic movement, you'll develop coordination, flexibility, and a deeper connection to your body. This class is ideal for beginners or anyone returning to movement who wants to build confidence and body awareness in a gentle and structured way."
+        },
+        {
+          "id": "recovery-movement-flow",
+          "name": "Recovery Movement Flow - Foundations",
+          "slug": "recovery-movement-flow",
           "category": "Dance",
           "level": "Recovery / Medical Clearance Required",
           "hero_program": false,
           "medical_clearance_required": true,
           "short_description": "Safe return to movement after injury, fatigue, or long inactivity",
-          "full_description": "Recovery Movement Dance is a specialized program designed for individuals recovering from injury, surgery, or physical and emotional stress. This class provides a safe, supportive environment for those returning to movement after extended periods of inactivity. Medical clearance is required before participation to ensure your safety and wellbeing.",
+          "full_description": "Recovery Movement Flow – Foundations is a gentle, low-impact class designed for individuals who are returning to movement after injury, illness, surgery, or an extended period of inactivity. The class focuses on rebuilding body awareness, improving mobility, and restoring confidence in movement through slow, controlled, and mindful sequences. Each session is carefully structured to support safe re-engagement with physical activity, with movements introduced gradually and adapted to individual needs. Through each curated, smooth, and authentic movement, you'll rebuild strength, flexibility, and coordination at a pace that feels right for your body. Medical clearance is required before participating in this program.",
           "core_focus": [
-            "Safe return to movement practices",
-            "Low-impact exercises and controlled transitions",
-            "Slow, mindful movement with controlled range of motion",
-            "Prevention of isolation through guided support"
+            "Safe return to movement",
+            "Low-impact and controlled sequences",
+            "Body awareness and mobility restoration",
+            "Mindful, gradual progression"
           ],
           "medical_requirements": "Medical clearance from your healthcare provider is required before participating in this program. Please bring documentation to your first class.",
           "estimated_pricing": {
             "drop_in": 30,
             "class_pack_8": 200
-          }
+          },
+          "intensity": "Balanced",
+          "status": "active"
         }
       ],
       "pole": [
         {
           "id": "pole-foundations",
-          "name": "Pole Fitness Foundations",
+          "name": "Pole Fitness - Foundations",
           "slug": "pole-fitness-foundations",
           "category": "Pole Fitness",
           "level": "Beginner / Foundation",
           "hero_program": false,
           "short_description": "Learn how to use the pole safely with grip basics and simple spins",
-          "full_description": "Pole Fitness Foundations is designed for complete beginners who want to learn pole fitness in a safe, supportive environment. This class teaches you the fundamentals of pole work, including grip techniques, basic spins, and body positioning. No prior experience is necessary – just come ready to learn and have fun while building strength and coordination.",
+          "full_description": "Pole Fitness – Foundations is a beginner-friendly class designed to introduce you to pole movement in a safe, structured, and supportive environment. The class focuses on building grip strength, body awareness, and basic movement patterns on the pole, giving you the confidence and technique to progress safely. Through simple, guided exercises such as basic grips, walking patterns, and low-level spins, you'll develop upper body strength, core stability, and coordination at a comfortable pace. Each session places strong emphasis on technique, posture, and control, ensuring you build a solid foundation before progressing to more complex movements. This class is ideal for complete beginners with no prior experience who want to explore pole fitness in a safe and encouraging setting.",
           "core_focus": [
-            "Grip basics and hand positioning",
-            "Walking around the pole with proper technique",
-            "Simple spins at low level",
-            "Body positioning and alignment",
-            "Safety protocols and control"
+            "Grip strength and basic technique",
+            "Body awareness and posture",
+            "Low-level spins and walking patterns",
+            "Upper body strength and core stability"
           ],
           "client_outcome": "I understand the pole and feel safe using it",
           "what_to_expect": [
@@ -217,21 +268,23 @@
             "drop_in": 28,
             "class_pack_10": 220,
             "unlimited_monthly": 200
-          }
+          },
+          "intensity": "Moderate",
+          "status": "active"
         },
         {
           "id": "pole-flow",
-          "name": "Pole Flow",
+          "name": "Pole Flow - Foundations",
           "slug": "pole-flow",
           "category": "Pole Fitness",
           "level": "Intermediate",
           "hero_program": false,
           "short_description": "Create smooth transitions and flowing movement around the pole",
           "core_focus": [
-            "Flow between movements without stops",
-            "Smooth transitions and connectivity",
-            "Light floor transitions",
-            "Movement quality and grace"
+            "Smooth transitions and connected sequences",
+            "Flow and movement quality",
+            "Coordination and timing",
+            "Body awareness and control"
           ],
           "client_outcome": "I can move around the pole smoothly and confidently",
           "prerequisite": "Pole Fitness Foundations or instructor approval",
@@ -239,35 +292,41 @@
             "drop_in": 28,
             "class_pack_10": 220,
             "unlimited_monthly": 200
-          }
+          },
+          "intensity": "Moderate",
+          "status": "coming_soon",
+          "full_description": "Pole Flow – Foundations builds on the basics of pole movement by introducing smooth transitions, connected sequences, and a greater sense of fluidity and control on the pole. The class focuses on linking movements together in a way that feels natural and graceful, developing coordination, timing, and body awareness through guided flow-based sequences. Through each curated, smooth, and authentic movement, you'll improve your ability to transition between positions with ease and confidence. This class is ideal for those who have completed Pole Fitness – Foundations and are ready to develop their movement quality and flow."
         },
         {
           "id": "pole-strength",
-          "name": "Pole Strength & Movement",
+          "name": "Pole Strength & Movement - Foundations",
           "slug": "pole-strength-movement",
           "category": "Pole Fitness",
           "level": "Intermediate / Advanced",
           "hero_program": false,
           "short_description": "Build conditioning, holds, and controlled movement on the pole",
           "core_focus": [
-            "Conditioning and strength building",
-            "Simple holds and static positions",
-            "Controlled movement techniques",
-            "Progressive skill development"
+            "Upper body and core conditioning",
+            "Controlled movement and body alignment",
+            "Progressive strength building",
+            "Safe technique and posture"
           ],
           "prerequisite": "Pole Fitness Foundations or instructor approval",
           "estimated_pricing": {
             "drop_in": 28,
             "class_pack_10": 220,
             "unlimited_monthly": 200
-          }
+          },
+          "intensity": "Active",
+          "status": "coming_soon",
+          "full_description": "Pole Strength & Movement – Foundations introduces a strength-focused approach to pole training, combining conditioning exercises with controlled movement patterns to build upper body strength, core stability, and overall body control. The class focuses on developing the physical foundation needed to progress in pole fitness, with an emphasis on safe technique, body alignment, and progressive strength building. Through guided exercises and structured movement sequences, you'll build the strength and control needed to perform more advanced pole skills with confidence. This class is ideal for those who have completed Pole Fitness – Foundations and want to build strength and conditioning alongside their pole practice."
         }
       ],
       "yoga": [
         {
-          "id": "yoga-fusion",
-          "name": "Yoga Fusion",
-          "slug": "yoga-fusion",
+          "id": "fusion-yoga",
+          "name": "Fusion Yoga - Foundations",
+          "slug": "fusion-yoga-foundations",
           "category": "Yoga",
           "level": "All Levels",
           "hero_program": false,
@@ -276,11 +335,20 @@
             "drop_in": 22,
             "class_pack_10": 180,
             "unlimited_monthly": 160
-          }
+          },
+          "intensity": "Balanced",
+          "status": "active",
+          "full_description": "Fusion Yoga – Foundations is a beginner-friendly class that blends traditional yoga with modern movement to create an accessible and engaging practice. The class focuses on improving flexibility, mobility, and body awareness through a combination of classic yoga postures and contemporary movement patterns. Each session is structured to guide you through simple, well-rounded sequences that build strength, improve posture, and develop a greater sense of ease and control in your body. Through each curated, smooth, and authentic movement, you'll develop flexibility, coordination, and a deeper connection to your body. This class is ideal for beginners or anyone looking for a fresh and accessible approach to yoga.",
+          "core_focus": [
+            "Traditional yoga + modern movement",
+            "Mobility and strength",
+            "Controlled sequences",
+            "Body awareness and posture"
+          ]
         },
         {
           "id": "traditional-yoga",
-          "name": "Traditional Yoga",
+          "name": "Traditional Yoga - Foundations",
           "slug": "traditional-yoga",
           "category": "Yoga",
           "level": "All Levels",
@@ -290,12 +358,21 @@
             "drop_in": 22,
             "class_pack_10": 180,
             "unlimited_monthly": 160
-          }
+          },
+          "intensity": "Balanced",
+          "status": "active",
+          "full_description": "Traditional Yoga – Foundations offers a beginner-friendly approach to building a strong and steady yoga practice through classic postures, breath control, and mindful movement. The class follows a structured and grounded format, helping you develop flexibility, strength, and balance at a comfortable pace. Each session guides you through simple, well-established sequences with a focus on alignment, posture, and controlled breathing. Movements are introduced gradually, allowing you to build confidence and stability without pressure. Through each curated, smooth, and authentic movement, you'll develop body awareness, improve mobility, and create a sense of ease and control in your practice.",
+          "core_focus": [
+            "Classic postures and breath control",
+            "Alignment and posture",
+            "Flexibility and balance",
+            "Mindful movement"
+          ]
         },
         {
-          "id": "modern-yoga",
-          "name": "Modern Yoga",
-          "slug": "modern-yoga",
+          "id": "flow-yoga",
+          "name": "Flow Yoga - Foundations",
+          "slug": "flow-yoga-foundations",
           "category": "Yoga",
           "level": "All Levels",
           "hero_program": false,
@@ -304,11 +381,20 @@
             "drop_in": 22,
             "class_pack_10": 180,
             "unlimited_monthly": 160
-          }
+          },
+          "intensity": "Balanced",
+          "status": "active",
+          "full_description": "Flow Yoga – Foundations offers a beginner-friendly approach to yoga through fluid movement, functional strength, and simple, dynamic sequences. The class focuses on improving mobility, stability, and overall body control while keeping the practice accessible and easy to follow. Combining traditional yoga elements with modern movement patterns, each session creates an active and engaging experience built around controlled transitions, posture, and strength through movement rather than long static holds. Through each curated, smooth, and authentic movement, you'll develop body awareness, improve flexibility, and build strength in a way that feels natural and sustainable.",
+          "core_focus": [
+            "Fluid movement and dynamic sequences",
+            "Functional strength",
+            "Controlled transitions",
+            "Active and engaging practice"
+          ]
         },
         {
           "id": "aerial-yoga",
-          "name": "Aerial Yoga",
+          "name": "Aerial Yoga - Foundations",
           "slug": "aerial-yoga",
           "category": "Yoga",
           "level": "Beginner / Foundation",
@@ -318,26 +404,33 @@
             "drop_in": 30,
             "class_pack_10": 250,
             "unlimited_monthly": 220
-          }
+          },
+          "intensity": "Balanced",
+          "status": "active",
+          "full_description": "Aerial Yoga – Foundations introduces you to movement using a suspended hammock in a safe and structured environment. The class focuses on improving flexibility, mobility, and strength while reducing pressure on the joints through supported movement. Through simple, guided sequences, the hammock is used to assist stretching, balance, and controlled transitions, allowing you to move with greater ease and confidence. Each session emphasises posture, alignment, and gentle strength work, making movement more accessible while still building control. This class is ideal for beginners with no prior experience who want to explore a supported approach to movement while improving flexibility, strength, and body awareness.",
+          "core_focus": [
+            "Supported movement in hammock",
+            "Flexibility and mobility",
+            "Reduced joint pressure",
+            "Posture and alignment"
+          ]
         }
       ],
       "aerial": [
         {
           "id": "aerial-silks",
-          "name": "Aerial Silks",
+          "name": "Aerial Silks - Foundations",
           "slug": "aerial-silks",
           "category": "Aerial",
           "level": "Beginner / Foundation",
           "hero_program": true,
           "short_description": "Learn to dance and perform acrobatics on suspended fabric silks",
-          "full_description": "Aerial Silks is a beautiful and challenging form of aerial acrobatics where you learn to climb, wrap, and create stunning shapes using suspended fabric. This beginner-friendly class teaches you the fundamentals of aerial work in a safe, supportive environment. No prior experience is necessary – our instructors will guide you through each skill progression, helping you build strength, flexibility, and confidence as you learn to fly.",
+          "full_description": "Aerial Silks – Foundations introduces you to aerial movement using suspended fabric in a safe and structured environment. The class focuses on building strength, coordination, and body awareness while learning to move with control and confidence off the ground. Through simple, guided techniques such as basic grips, supported holds, and low-level movements, you'll develop upper body strength, core stability, and coordination at a comfortable pace. Each session places strong emphasis on technique, posture, and control, allowing you to progress safely and with confidence. This class is ideal for beginners with no prior experience who want to explore aerial movement while building strength and body control in a supportive setting.",
           "core_focus": [
-            "Climbing techniques and fabric manipulation",
-            "Basic wraps and foot locks",
-            "Body awareness and spatial orientation",
-            "Upper body and core strength development",
-            "Safe mounting, dismounting, and falling techniques",
-            "Flexibility and grace in aerial positions"
+            "Basic grips and supported holds",
+            "Upper body strength and core stability",
+            "Coordination and body awareness",
+            "Technique and control"
           ],
           "who_its_for": [
             "Complete beginners curious about aerial arts",
@@ -358,13 +451,15 @@
             "drop_in": 32,
             "class_pack_10": 280,
             "unlimited_monthly": 240
-          }
+          },
+          "intensity": "Balanced",
+          "status": "active"
         }
       ],
       "choreography": [
         {
           "id": "choreography-fusion",
-          "name": "Choreography Fusion",
+          "name": "Choreography Fusion - Foundations",
           "slug": "choreography-fusion",
           "category": "Choreography",
           "level": "All Levels",
@@ -374,15 +469,33 @@
             "drop_in": 25,
             "class_pack_10": 200,
             "unlimited_monthly": 180
-          }
+          },
+          "intensity": "Balanced",
+          "status": "active",
+          "full_description": "Choreography Fusion – Foundations is a beginner-friendly class designed to help you build confidence through simple, guided movement sequences. The focus is on learning short, easy-to-follow choreography while developing coordination, timing, and body awareness in a supportive environment. Blending elements from different movement styles, each session introduces structured combinations that are broken down step by step, making them accessible even if you have no prior experience. The emphasis is on moving with clarity and confidence, without pressure to perform or get everything perfect. Through each curated, smooth, and authentic movement, you'll become more comfortable learning and remembering movement while building confidence in how you move.",
+          "core_focus": [
+            "Short, easy-to-follow choreography",
+            "Coordination and timing",
+            "Body awareness",
+            "Confidence building"
+          ]
         }
-      ]
+      ],
+      "intensity_groups": {
+        "balanced": "Low-impact, accessible, suitable for all fitness levels",
+        "moderate": "Moderate intensity, some fitness base recommended",
+        "active": "Higher intensity, regular physical activity recommended"
+      },
+      "age_groups": {
+        "open": "18+ (no upper age limit)",
+        "note": "We welcome all adults regardless of age or fitness level"
+      }
     },
     "kids": {
       "yoga": [
         {
           "id": "kids-yoga",
-          "name": "Kids Yoga",
+          "name": "Kids Yoga - Foundations",
           "slug": "kids-yoga",
           "category": "Yoga",
           "age_range": "6-16 years",
@@ -390,11 +503,13 @@
           "estimated_pricing": {
             "drop_in": 18,
             "term_8_weeks": 120
-          }
+          },
+          "status": "active",
+          "full_description": "Kids Yoga – Foundations introduces children to movement through simple, engaging, and structured activities that support coordination, balance, and body awareness. The class uses basic yoga poses in a fun and accessible way to help children build confidence while staying active. Through easy-to-follow sequences, light stretching, and gentle movement, children improve flexibility, posture, and overall coordination. Sessions are designed to keep children engaged while encouraging healthy movement habits from an early age. This class is ideal for children who benefit from calm, structured movement and want to build confidence, focus, and body awareness in a safe and supportive environment."
         },
         {
           "id": "kids-aerial-yoga",
-          "name": "Kids Aerial Yoga",
+          "name": "Kids Aerial Yoga - Foundations",
           "slug": "kids-aerial-yoga",
           "category": "Yoga",
           "age_range": "8-16 years",
@@ -402,7 +517,9 @@
           "estimated_pricing": {
             "drop_in": 22,
             "term_8_weeks": 150
-          }
+          },
+          "status": "coming_soon",
+          "full_description": "Kids Aerial Yoga - Foundations introduces children to movement using a soft, suspended hammock in a safe and supportive environment. The class focuses on building coordination, balance, and body awareness while keeping movement fun and engaging. Through simple, guided exercises, children use the hammock to explore stretching, gentle strength work, and basic movement patterns. The support of the hammock allows them to move with confidence, reducing pressure on the joints while making movement more accessible and enjoyable. This class is ideal for children who enjoy playful movement and want to build confidence, coordination, and flexibility in a safe and structured setting."
         }
       ],
       "pole": [
@@ -413,17 +530,19 @@
           "category": "Pole Fitness",
           "age_range": "8-16 years",
           "short_description": "Gymnastics-style pole fitness for strength and coordination",
-          "note": "Taught in gymnastics style - focused on strength, coordination, and safety",
+          "note": "Strength and coordination-based movement - gymnastics style",
           "estimated_pricing": {
             "drop_in": 20,
             "term_8_weeks": 140
-          }
+          },
+          "status": "coming_soon",
+          "full_description": "Pole Fitness Kids - Foundations help children build strength, coordination, and body awareness through safe and structured movement using the pole. The class is designed to support physical development while introducing controlled, age-appropriate movement in a positive and supportive environment. Through simple, guided exercises such as basic holds, grip work, and low-level movement patterns, children learn how to move with control and stability. Movements are introduced step by step, allowing them to build upper body strength, core stability, and coordination at a comfortable pace. This class is ideal for children who enjoy active movement and want to develop strength and confidence in a safe and structured setting."
         }
       ],
       "aerial": [
         {
           "id": "kids-aerial-silks",
-          "name": "Kids Aerial Silks",
+          "name": "Kids Aerial Silks - Foundations",
           "slug": "kids-aerial-silks",
           "category": "Aerial",
           "age_range": "8-16 years",
@@ -431,13 +550,15 @@
           "estimated_pricing": {
             "drop_in": 22,
             "term_8_weeks": 150
-          }
+          },
+          "status": "coming_soon",
+          "full_description": "Kids Aerial Silks – Foundations introduces children to aerial movement using suspended fabric in a safe and structured environment. This class focuses on building strength, coordination, and body awareness while helping children gain confidence moving off the ground. Through simple, guided exercises such as basic grips, supported holds, and low-level movements, children learn how to move with control and stability on the silks. Movements are introduced step by step, allowing them to build strength and coordination at a comfortable pace while staying engaged and active. This class is ideal for children who enjoy movement, climbing, and exploring new physical challenges in a safe and supportive setting."
         }
       ],
       "dance": [
         {
           "id": "kids-dance-moves",
-          "name": "Dance Moves (Urban Mix)",
+          "name": "Dance Moves (Urban Mix) - Foundations",
           "slug": "kids-dance-moves",
           "category": "Dance",
           "age_range": "6-16 years",
@@ -445,11 +566,13 @@
           "estimated_pricing": {
             "drop_in": 18,
             "term_8_weeks": 120
-          }
+          },
+          "status": "active",
+          "full_description": "Dance Moves (Urban Mix) – Foundations is a fun and beginner-friendly class that introduces children to rhythm, coordination, and basic dance movement in an engaging and structured environment. Inspired by simple urban-style movement, this class keeps kids active while helping them connect with music through easy, repeatable patterns. Through guided sequences, step patterns, and rhythm-based activities, children develop timing, coordination, and body awareness in a way that feels natural and enjoyable. Movements are kept simple and age-appropriate, allowing children to build confidence as they learn to move with control and ease. This class is ideal for kids who enjoy music, movement, and staying active while building confidence in a positive and supportive setting."
         },
         {
           "id": "kids-modern-contemporary",
-          "name": "Modern Contemporary (Rhythm & Motion)",
+          "name": "Modern Contemporary (Rhythm & Motion) - Foundations",
           "slug": "kids-modern-contemporary",
           "category": "Dance",
           "age_range": "8-16 years",
@@ -457,11 +580,13 @@
           "estimated_pricing": {
             "drop_in": 18,
             "term_8_weeks": 120
-          }
+          },
+          "status": "active",
+          "full_description": "Modern Contemporary (Rhythm & Motion) – Foundations introduces children to expressive movement, coordination, and musicality in a structured and supportive environment. Blending simple contemporary elements with rhythm-based movement, this class helps children explore how their body moves naturally with music. Through easy-to-follow sequences and flowing movement patterns, children learn to move with control while developing balance, posture, and coordination. The focus is on building confidence through movement, while allowing space for natural expression. Children develop body awareness, improve coordination, and become more confident in how they move and express themselves."
         },
         {
           "id": "kids-creative-dance",
-          "name": "Creative Dance",
+          "name": "Creative Dance - Foundations",
           "slug": "kids-creative-dance",
           "category": "Dance",
           "age_range": "4-10 years",
@@ -469,12 +594,24 @@
           "estimated_pricing": {
             "drop_in": 16,
             "term_8_weeks": 100
-          }
+          },
+          "status": "active",
+          "full_description": "Creative Dance – Foundations is a beginner-friendly class designed to encourage children to explore movement, imagination, and self-expression in a fun and supportive environment. This class focuses on helping children feel comfortable moving in their own way while building coordination and body awareness. Each session includes simple guided activities, creative movement tasks, and easy-to-follow patterns that support rhythm, balance, and control. Children are encouraged to explore different ways of moving while staying within a structured and safe framework. This class is ideal for children who enjoy freedom in movement and want to build confidence while expressing themselves in a safe and supportive environment."
         }
-      ]
+      ],
+      "age_bands": {
+        "group_1": "6-9 combined",
+        "group_2": "10-15 combined",
+        "minimum_class_size": 4,
+        "note": "We use flex bands for age-appropriate grouping",
+        "age_stages": {
+          "early": "6-8 (Early Stage)",
+          "development": "9-12 (Development Stage)",
+          "pre_teen": "13-15 (Pre-Teen / Teen)"
+        }
+      }
     }
   },
-  
   "booking": {
     "system": "Class Manager",
     "integration_type": "javascript",
@@ -488,7 +625,6 @@
       "note": "Class Manager does not support filtered URLs - all buttons link to main calendar"
     }
   },
-  
   "legal": {
     "medical_disclaimer": "Medical clearance from your healthcare provider is required before participating in Recovery Movement classes. By booking this class, you confirm that you have obtained appropriate medical clearance and that your healthcare provider has approved your participation in physical movement activities.",
     "general_disclaimer": "All classes at UNDRGRND Movement are conducted by qualified instructors. Participants engage in physical activities at their own risk. Please inform your instructor of any injuries, medical conditions, or physical limitations before class. We recommend consulting with your healthcare provider before beginning any new exercise program.",
@@ -496,7 +632,6 @@
     "privacy_policy_summary": "UNDRGRND Movement collects personal information necessary for class bookings and communication. We comply with the Australian Privacy Principles under the Privacy Act 1988. Your information is stored securely and never shared with third parties without your consent.",
     "covid_policy": "We maintain hygiene protocols in accordance with Queensland Health guidelines. Please do not attend class if you are unwell or experiencing COVID-19 symptoms."
   },
-  
   "philosophy": {
     "mission": "UNDRGRND Movement stands for foundational movement for body and mind. Not competition. Not performance pressure. Personal transformation only.",
     "values": [
@@ -514,7 +649,6 @@
       "Collaborative programs with registered counsellors for deeper integration"
     ]
   },
-  
   "instructor": {
     "name": "Ollie",
     "title": "Movement Practitioner & Performance Coach",
@@ -527,7 +661,6 @@
     ],
     "philosophy": "Movement is not tied to a room or a schedule. It's about creating space for your body to reconnect with itself – whether that's in the studio, at the beach, or in the park. Every body is welcome, every level is supported, and every journey is honored."
   },
-  
   "analytics": {
     "google_analytics_id": "[PLACEHOLDER - ADD GA4 ID BEFORE LAUNCH]",
     "facebook_pixel_id": "[PLACEHOLDER - OPTIONAL]",

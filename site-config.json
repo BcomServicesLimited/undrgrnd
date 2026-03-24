@@ -477,16 +477,15 @@
   
   "booking": {
     "system": "Class Manager",
-    "integration_type": "iframe",
-    "timetable_url": "[PLACEHOLDER - INSERT CLASS MANAGER TIMETABLE EMBED URL]",
-    "booking_widget_url": "[PLACEHOLDER - INSERT CLASS MANAGER BOOKING WIDGET URL]",
+    "integration_type": "javascript",
+    "company_url": "undrgrnd-movement",
+    "public_key": "c8b02e58-1d42-4611-9426-696e72a43630",
+    "timetable_div_id": "timetable",
+    "register_url": "https://app.classmanager.com/portal/undrgrnd-movement/register",
+    "cdn_script": "https://cdn.classmanager.com/assets/app/js/embed-script.js",
+    "season_id": 1,
     "filtered_booking_urls": {
-      "adults": "[PLACEHOLDER]",
-      "kids": "[PLACEHOLDER]",
-      "dance": "[PLACEHOLDER]",
-      "pole": "[PLACEHOLDER]",
-      "yoga": "[PLACEHOLDER]",
-      "aerial": "[PLACEHOLDER]"
+      "note": "Class Manager does not support filtered URLs - all buttons link to main calendar"
     }
   },
   

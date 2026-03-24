@@ -10,6 +10,8 @@
 
   <!-- Canonical -->
   <link rel="canonical" href="https://www.undrgrnd.com.au/timetable.html">
+  <!-- Content Security Policy for Class Manager embed -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.classmanager.com; connect-src 'self' https://app.classmanager.com https://api.classmanager.com; style-src 'self' 'unsafe-inline';">
 
   <!-- Favicon placeholders -->
   <!-- Google Fonts -->
@@ -1088,6 +1090,62 @@
       padding-top: 76px;
     }
   }
+
+  /* Class Manager Timetable Styles */
+  .timetable-container {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem 0;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    min-height: 600px;
+  }
+
+  .timetable-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-gray);
+  }
+
+  #timetable table {
+    width: 100%;
+    color: var(--text-white);
+  }
+
+  #timetable th {
+    background: rgba(139, 92, 246, 0.2);
+    color: var(--text-white);
+    padding: 1rem;
+    font-weight: 600;
+  }
+
+  #timetable td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+  }
+
+  #timetable tr:hover {
+    background: rgba(139, 92, 246, 0.05);
+  }
+
+  #timetable a {
+    color: var(--primary-purple);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  #timetable a:hover {
+    color: var(--accent-purple);
+  }
+
+  @media (max-width: 767px) {
+    .timetable-container {
+      padding: 1rem;
+    }
+    #timetable {
+      overflow-x: auto;
+    }
+  }
 </style>
 
 <!-- =====================================================================
@@ -1176,7 +1234,7 @@
         { label: 'About',     href: '/about.html' },
         { label: 'Contact',   href: '/contact.html' }
       ];
-      var fallbackCta = { text: 'Book Now', href: '/timetable.html' };
+      var fallbackCta = { text: 'Book Now', href: 'https://app.classmanager.com/portal/undrgrnd-movement/register' };
       buildDesktopMenu(fallbackMenu, fallbackCta);
       buildMobileMenu(fallbackMenu, fallbackCta);
       highlightActivePage();
@@ -1391,92 +1449,24 @@
 </section>
 
 
-<!-- =========================================================================
-     2. STICKY FILTER BAR
-     ========================================================================= -->
-<div class="filter-bar" id="filterBar" role="navigation" aria-label="Class filters">
-  <div class="filter-bar__inner">
+<!-- CLASS MANAGER INTEGRATION -->
+<section class="timetable-section">
+  <div class="container">
 
-    <!-- Audience filters -->
-    <div class="filter-bar__group">
-      <span class="filter-bar__label">Audience:</span>
-      <button class="filter-btn active" data-filter="all" type="button">All Classes</button>
-      <button class="filter-btn" data-filter="adults" type="button">Adults Only</button>
-      <button class="filter-btn" data-filter="kids" type="button">Kids Only</button>
+    <!-- Timetable Instructions -->
+    <div class="timetable-intro">
+      <p>Select a class below to view details and book your spot. New to UNDRGRND? All our foundation classes are perfect for complete beginners!</p>
     </div>
 
-    <!-- Category filters -->
-    <div class="filter-bar__group">
-      <span class="filter-bar__label">Category:</span>
-      <button class="filter-btn" data-filter="dance" type="button">Dance</button>
-      <button class="filter-btn" data-filter="pole" type="button">Pole</button>
-      <button class="filter-btn" data-filter="yoga" type="button">Yoga</button>
-      <button class="filter-btn" data-filter="aerial" type="button">Aerial</button>
-      <button class="filter-btn" data-filter="recovery" type="button">Recovery</button>
+    <!-- Class Manager Timetable Embed -->
+    <div class="timetable-container">
+      <div id="timetable"></div>
     </div>
 
-    <!-- Week navigation -->
-    <div class="week-nav" aria-label="Week navigation">
-      <button class="week-nav__btn" id="prevWeek" type="button" aria-label="Previous week">
-        <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
-        Prev
-      </button>
-      <span class="week-nav__current" id="weekLabel">This Week</span>
-      <button class="week-nav__btn" id="nextWeek" type="button" aria-label="Next week">
-        Next
-        <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      </button>
-      <button class="week-nav__btn" id="thisWeek" type="button">Today</button>
+    <!-- Loading Message (shows while timetable loads) -->
+    <div id="timetable-loading" style="text-align: center; padding: 3rem;">
+      <p>Loading class timetable...</p>
     </div>
-
-    <p class="filter-bar__note">Filters will be functional when Class Manager is integrated</p>
-
-  </div>
-</div>
-
-
-<!-- =========================================================================
-     3. CLASS MANAGER INTEGRATION
-     ========================================================================= -->
-<section class="calendar-section" id="calendar" aria-labelledby="calendarHeading">
-  <div class="calendar-section__inner">
-
-    <!-- IFRAME EMBED POINT: Replace this div with iframe once Class Manager URL is configured -->
-    <div class="calendar-placeholder" id="calendarPlaceholder" role="region" aria-label="Class booking calendar placeholder">
-
-      <div class="calendar-placeholder__icon" aria-hidden="true">
-        <!-- Lucide: calendar -->
-        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-      </div>
-
-      <h2 class="calendar-placeholder__heading" id="calendarHeading">Class Booking Calendar</h2>
-
-      <p class="calendar-placeholder__text">
-        Class Manager booking system will be embedded here.
-      </p>
-
-      <p class="calendar-placeholder__subtext">
-        To integrate: Update <code style="font-family: monospace; color: #A78BFA; font-size: 0.8em;">site-config.json</code> &rarr; <code style="font-family: monospace; color: #A78BFA; font-size: 0.8em;">booking.timetable_url</code> with your Class Manager embed URL
-      </p>
-
-      <div>
-        <p class="calendar-placeholder__code-label">Iframe code to use when ready:</p>
-        <pre class="calendar-placeholder__code">&lt;iframe
-  id="class-manager-calendar"
-  src="[URL from site-config.json booking.timetable_url]"
-  width="100%"
-  height="900px"
-  frameborder="0"
-  title="UNDRGRND Movement Class Schedule"
-  loading="lazy"&gt;
-&lt;/iframe&gt;</pre>
-      </div>
-
-      <!-- Loading spinner (shown when iframe is active and loading) -->
-      <div class="calendar-spinner" id="calendarSpinner" role="status" aria-label="Loading calendar"></div>
-
-    </div>
-    <!-- END IFRAME EMBED POINT -->
 
   </div>
 </section>
@@ -1784,99 +1774,7 @@
     });
 
   /* -------------------------------------------------------------------------
-     2. Filter buttons — active state + localStorage persistence
-  ------------------------------------------------------------------------- */
-  var audienceFilters = document.querySelectorAll('[data-filter="all"], [data-filter="adults"], [data-filter="kids"]');
-  var categoryFilters = document.querySelectorAll('[data-filter="dance"], [data-filter="pole"], [data-filter="yoga"], [data-filter="aerial"], [data-filter="recovery"]');
-
-  function setActiveFilter(group, btn) {
-    group.forEach(function (b) { b.classList.remove('active'); });
-    btn.classList.add('active');
-  }
-
-  audienceFilters.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      setActiveFilter(audienceFilters, btn);
-      try { localStorage.setItem('tt_audience', btn.getAttribute('data-filter')); } catch (e) {}
-    });
-  });
-
-  categoryFilters.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      setActiveFilter(categoryFilters, btn);
-      try { localStorage.setItem('tt_category', btn.getAttribute('data-filter')); } catch (e) {}
-      /* Smooth scroll to calendar */
-      var cal = document.getElementById('calendar');
-      if (cal) cal.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-
-  /* Restore from localStorage */
-  try {
-    var savedAudience = localStorage.getItem('tt_audience');
-    var savedCategory = localStorage.getItem('tt_category');
-    if (savedAudience) {
-      var aBtn = document.querySelector('[data-filter="' + savedAudience + '"]');
-      if (aBtn) setActiveFilter(audienceFilters, aBtn);
-    }
-    if (savedCategory) {
-      var cBtn = document.querySelector('[data-filter="' + savedCategory + '"]');
-      if (cBtn) setActiveFilter(categoryFilters, cBtn);
-    }
-  } catch (e) {}
-
-  /* Restore from URL hash (e.g. /timetable.html?filter=pole) */
-  var urlParams = new URLSearchParams(window.location.search);
-  var urlFilter = urlParams.get('filter');
-  if (urlFilter) {
-    var urlBtn = document.querySelector('[data-filter="' + urlFilter + '"]');
-    if (urlBtn) {
-      var isCat = ['dance', 'pole', 'yoga', 'aerial', 'recovery'].indexOf(urlFilter) !== -1;
-      setActiveFilter(isCat ? categoryFilters : audienceFilters, urlBtn);
-      try { localStorage.setItem(isCat ? 'tt_category' : 'tt_audience', urlFilter); } catch (e) {}
-      setTimeout(function () {
-        var cal = document.getElementById('calendar');
-        if (cal) cal.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 400);
-    }
-  }
-
-  /* -------------------------------------------------------------------------
-     3. Week navigation
-  ------------------------------------------------------------------------- */
-  var weekOffset = 0;
-
-  function getWeekLabel(offset) {
-    if (offset === 0) return 'This Week';
-    var now = new Date();
-    now.setDate(now.getDate() + offset * 7);
-    var mon = new Date(now);
-    mon.setDate(now.getDate() - ((now.getDay() + 6) % 7));
-    var sun = new Date(mon);
-    sun.setDate(mon.getDate() + 6);
-    var opts = { month: 'short', day: 'numeric' };
-    return mon.toLocaleDateString('en-AU', opts) + ' \u2013 ' + sun.toLocaleDateString('en-AU', opts);
-  }
-
-  var weekLabel = document.getElementById('weekLabel');
-
-  document.getElementById('prevWeek').addEventListener('click', function () {
-    weekOffset--;
-    if (weekLabel) weekLabel.textContent = getWeekLabel(weekOffset);
-  });
-
-  document.getElementById('nextWeek').addEventListener('click', function () {
-    weekOffset++;
-    if (weekLabel) weekLabel.textContent = getWeekLabel(weekOffset);
-  });
-
-  document.getElementById('thisWeek').addEventListener('click', function () {
-    weekOffset = 0;
-    if (weekLabel) weekLabel.textContent = 'This Week';
-  });
-
-  /* -------------------------------------------------------------------------
-     4. Booking policies accordion
+     2. Booking policies accordion
   ------------------------------------------------------------------------- */
   document.querySelectorAll('.policy-item__question').forEach(function (btn) {
     btn.addEventListener('click', function () {
@@ -2548,6 +2446,41 @@ window.addEventListener('scroll', () => {
     }
   }
 });
+</script>
+
+<!-- Class Manager Scripts -->
+<script src="https://cdn.classmanager.com/assets/app/js/embed-script.js" defer></script>
+<script>
+  const data_config = {
+    styles: {
+      'thClasses': null,
+      'tdClasses': null,
+      'trClasses': null,
+      'tableClasses': null,
+      'theadClasses': null,
+      'tbodyClasses': null,
+    },
+    type: 'season',
+    id: 1,
+    layout: 'table',
+    data: ['time','location','class','staff','price']
+  };
+
+  const cm_config = {
+    div_id: 'timetable',
+    public_key: 'c8b02e58-1d42-4611-9426-696e72a43630',
+    company_url: 'undrgrnd-movement'
+  };
+
+  // Hide loading message once timetable loads
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      const loadingDiv = document.getElementById('timetable-loading');
+      if (loadingDiv && document.getElementById('timetable').children.length > 0) {
+        loadingDiv.style.display = 'none';
+      }
+    }, 2000);
+  });
 </script>
 </body>
 </html>

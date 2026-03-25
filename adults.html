@@ -2005,11 +2005,24 @@
       var html = '';
       var order = ['dance', 'pole', 'yoga', 'aerial', 'choreography', 'stretching'];
 
+      /* Collect all programs with their category key */
+      var allPrograms = [];
       order.forEach(function (catKey) {
         if (!adults[catKey]) return;
         adults[catKey].forEach(function (program) {
-          html += buildProgramCard(program, catKey);
+          allPrograms.push({ program: program, catKey: catKey });
         });
+      });
+
+      /* Sort: active classes first, coming_soon after */
+      allPrograms.sort(function (a, b) {
+        var aActive = (a.program.status !== 'coming_soon') ? 0 : 1;
+        var bActive = (b.program.status !== 'coming_soon') ? 0 : 1;
+        return aActive - bActive;
+      });
+
+      allPrograms.forEach(function (item) {
+        html += buildProgramCard(item.program, item.catKey);
       });
 
       grid.innerHTML = html;

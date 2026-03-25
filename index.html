@@ -847,8 +847,16 @@
 
   /* --- Desktop CTA button --- */
   .nav-cta {
-    display: none; /* hidden on mobile */
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
     flex-shrink: 0;
+  }
+
+  @media (max-width: 1023px) {
+    .nav-cta {
+      display: none; /* hidden on mobile */
+    }
   }
 
   /* --- Hamburger button (mobile only) --- */
@@ -1138,12 +1146,19 @@
       list.appendChild(li);
     });
 
-    // CTA button
+    // CTA button (Book Now)
     var ctaLink = document.createElement('a');
     ctaLink.href = cta.href;
     ctaLink.className = 'cta-button';
     ctaLink.textContent = cta.text;
     ctaWrap.appendChild(ctaLink);
+
+    // Login button (secondary style) - only on homepage
+    var loginLink = document.createElement('a');
+    loginLink.href = 'https://app.classmanager.com/portal/undrgrnd-movement/login';
+    loginLink.className = 'cta-secondary';
+    loginLink.textContent = 'Login';
+    ctaWrap.appendChild(loginLink);
   }
 
   /* ------------------------------------------------------------------

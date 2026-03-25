@@ -134,6 +134,42 @@
     "adults": {
       "dance": [
         {
+          "id": "afro-groove",
+          "name": "Afro Groove - Foundations",
+          "slug": "afro-groove-foundations",
+          "category": "Dance",
+          "level": "Beginner / Foundation",
+          "hero_program": true,
+          "short_description": "Beginner-friendly dance fitness inspired by Afrobeat and groove-based styles",
+          "full_description": "Afro Groove \u2013 Foundations is a beginner-friendly dance fitness class designed to improve rhythm, coordination, and full-body movement in a structured and supportive environment. Inspired by Afrobeat and groove-based styles, this class focuses on simple, repeatable movement patterns that build lower body strength, core stability, and overall mobility. Through each curated, smooth, and authentic movement, you'll develop confidence, body awareness, and a deeper connection to rhythm and music. Suitable for adults with no prior dance experience, sessions include guided warm-ups, easy-to-follow sequences, and controlled movement training.",
+          "core_focus": [
+            "Hip mobility and control",
+            "Rhythm and coordination development",
+            "Lower body strength and core stability",
+            "Body awareness and confidence building"
+          ],
+          "who_its_for": [
+            "Adults with no prior dance experience",
+            "Anyone looking to start dance fitness",
+            "Those wanting to improve coordination",
+            "People seeking fun, energetic workouts"
+          ],
+          "what_to_expect": [
+            "Guided warm-ups to prepare your body",
+            "Simple, repeatable movement patterns",
+            "Afrobeat-inspired grooves and rhythms",
+            "Supportive, non-competitive environment",
+            "Full-body workout with emphasis on lower body"
+          ],
+          "estimated_pricing": {
+            "drop_in": 25,
+            "class_pack_10": 200,
+            "unlimited_monthly": 180
+          },
+          "intensity": "Active",
+          "status": "active"
+        },
+        {
           "id": "booty-burn",
           "name": "Booty Burn - Foundations",
           "slug": "booty-burn-foundations",
@@ -143,8 +179,7 @@
           "status": "active",
           "hero_program": false,
           "short_description": "High-energy lower body and glute-focused dance fitness class",
-          "full_description": "Feel the beat, step into the movement, and get ready to work. Booty Burn \u2013 Foundations is a beginner-friendly class built around rhythm, energy, and a deep, steady burn that builds as you move. This class focuses on the glutes, hips, and core using simple, repeatable patterns that are easy to follow from your first session. You'll work through follow-along drills with a strong focus on pelvic and hip movement, combined with layered leg patterns that keep the lower body constantly engaged. The sequences are simple to learn but designed to be held, repeated, and felt. With a strong focus on pelvic and hip movement, you'll not only feel the burn through the glutes, but also build deeper core strength and support how your body moves day to day. Ideal for those who want to activate, shape, and feel their glutes working.",
-          "booking_url": "https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/booty-burn-foundations",
+          "full_description": "Booty Burn \u2013 Foundations is a high-energy, beginner-friendly dance fitness class focused on lower body strength, glute activation, and full-body conditioning through fun and engaging movement. Combining dance-inspired sequences with targeted lower body exercises, this class is designed to build strength, improve coordination, and get your heart rate up in a supportive and motivating environment. Through each curated, smooth, and authentic movement, you'll work your glutes, legs, and core while developing rhythm, confidence, and body awareness. No prior dance experience is required \u2014 just come ready to move and have fun.",
           "core_focus": [
             "Glute activation and lower body strength",
             "Dance-inspired conditioning sequences",
@@ -178,8 +213,7 @@
           },
           "intensity": "Balanced",
           "status": "active",
-          "full_description": "Move, explore, and reconnect with your body through natural, flowing movement. Movement Flow - Foundations is a beginner-friendly class built around simple sequences that help you move better, feel more confident, and develop your own way of moving. Rather than following a fixed dance style, this class blends different movement approaches into smooth, continuous patterns that feel natural and intuitive. You'll move through guided sequences that improve coordination, mobility, and overall body control without pressure to get everything perfect. With an emphasis on smooth transitions, posture, and ease of movement, you'll build strength, flexibility, and awareness through each curated, smooth, authentic, and holistic movement. Suitable for both men and women, this class offers a structured yet relaxed space to move freely, build confidence, and enjoy the process from the first session.",
-          "booking_url": "https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/movement-flow-foundations"
+          "full_description": "Movement Flow \u2013 Foundations is a beginner-friendly class designed to help you reconnect with your body through fluid, natural movement in a calm and supportive environment. The focus is on developing body awareness, improving mobility, and building confidence through simple, guided movement sequences that feel natural and accessible. Each session introduces easy-to-follow patterns that encourage smooth transitions, gentle strength work, and a greater sense of ease in how you move. Through each curated, smooth, and authentic movement, you'll develop coordination, flexibility, and a deeper connection to your body. This class is ideal for beginners or anyone returning to movement who wants to build confidence and body awareness in a gentle and structured way."
         },
         {
           "id": "recovery-movement-flow",
@@ -304,13 +338,58 @@
           },
           "intensity": "Balanced",
           "status": "active",
-          "full_description": "A balanced approach to yoga that brings together structure and flow. Fusion Yoga \u2013 Foundations is a beginner-friendly class that combines traditional yoga principles with modern, movement-based flow to create a practice that feels both grounded and dynamic. 'Fusion' means you'll experience both sides \u2014 the stability of classic postures and the fluidity of continuous movement. Some parts of the class focus on alignment, breath, and controlled holds, while others guide you through smooth transitions that build strength, mobility, and coordination. This combination allows you to develop a deeper understanding of your body while keeping the practice engaging and accessible from the first session. Suitable for beginners with no prior experience, this class offers a structured yet flexible environment to build strength, improve mobility, and move with more awareness and control.",
-          "booking_url": "https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/fusion-yoga-foundations",
+          "full_description": "Fusion Yoga \u2013 Foundations is a beginner-friendly class that blends traditional yoga with modern movement to create an accessible and engaging practice. The class focuses on improving flexibility, mobility, and body awareness through a combination of classic yoga postures and contemporary movement patterns. Each session is structured to guide you through simple, well-rounded sequences that build strength, improve posture, and develop a greater sense of ease and control in your body. Through each curated, smooth, and authentic movement, you'll develop flexibility, coordination, and a deeper connection to your body. This class is ideal for beginners or anyone looking for a fresh and accessible approach to yoga.",
           "core_focus": [
             "Traditional yoga + modern movement",
             "Mobility and strength",
             "Controlled sequences",
             "Body awareness and posture"
+          ]
+        },
+        {
+          "id": "traditional-yoga",
+          "name": "Traditional Yoga - Foundations",
+          "slug": "traditional-yoga-foundations",
+          "category": "Yoga",
+          "level": "All Levels",
+          "hero_program": false,
+          "short_description": "Classic yoga practices rooted in traditional techniques",
+          "estimated_pricing": {
+            "drop_in": 22,
+            "class_pack_10": 180,
+            "unlimited_monthly": 160
+          },
+          "intensity": "Balanced",
+          "status": "active",
+          "full_description": "Traditional Yoga \u2013 Foundations offers a beginner-friendly approach to building a strong and steady yoga practice through classic postures, breath control, and mindful movement. The class follows a structured and grounded format, helping you develop flexibility, strength, and balance at a comfortable pace. Each session guides you through simple, well-established sequences with a focus on alignment, posture, and controlled breathing. Movements are introduced gradually, allowing you to build confidence and stability without pressure. Through each curated, smooth, and authentic movement, you'll develop body awareness, improve mobility, and create a sense of ease and control in your practice.",
+          "core_focus": [
+            "Classic postures and breath control",
+            "Alignment and posture",
+            "Flexibility and balance",
+            "Mindful movement"
+          ]
+        },
+        {
+          "id": "flow-yoga",
+          "name": "Flow Yoga - Foundations",
+          "slug": "flow-yoga-foundations",
+          "category": "Yoga",
+          "level": "All Levels",
+          "hero_program": false,
+          "short_description": "Contemporary approach to yoga for today's lifestyle",
+          "estimated_pricing": {
+            "drop_in": 22,
+            "class_pack_10": 180,
+            "unlimited_monthly": 160
+          },
+          "intensity": "Balanced",
+          "status": "active",
+          "full_description": "Flow Yoga \u2013 Foundations offers a beginner-friendly approach to yoga through fluid movement, functional strength, and simple, dynamic sequences. The class focuses on improving mobility, stability, and overall body control while keeping the practice accessible and easy to follow. Combining traditional yoga elements with modern movement patterns, each session creates an active and engaging experience built around controlled transitions, posture, and strength through movement rather than long static holds. Through each curated, smooth, and authentic movement, you'll develop body awareness, improve flexibility, and build strength in a way that feels natural and sustainable.",
+          "core_focus": [
+            "Fluid movement and dynamic sequences",
+            "Functional strength",
+            "Controlled transitions",
+            "Active and engaging practice"
           ]
         },
         {
@@ -327,7 +406,7 @@
             "unlimited_monthly": 220
           },
           "intensity": "Balanced",
-          "status": "coming_soon",
+          "status": "active",
           "full_description": "Aerial Yoga \u2013 Foundations introduces you to movement using a suspended hammock in a safe and structured environment. The class focuses on improving flexibility, mobility, and strength while reducing pressure on the joints through supported movement. Through simple, guided sequences, the hammock is used to assist stretching, balance, and controlled transitions, allowing you to move with greater ease and confidence. Each session emphasises posture, alignment, and gentle strength work, making movement more accessible while still building control. This class is ideal for beginners with no prior experience who want to explore a supported approach to movement while improving flexibility, strength, and body awareness.",
           "core_focus": [
             "Supported movement in hammock",
@@ -346,8 +425,7 @@
           "level": "Beginner / Foundation",
           "hero_program": true,
           "short_description": "Learn to dance and perform acrobatics on suspended fabric silks",
-          "booking_url": "https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/aerial-silks-foundations",
-          "full_description": "Aerial Silks \u2013 Foundations introduces you to aerial movement using suspended fabric in a safe and structured environment. This class is built around the fundamentals of aerial acrobatics, where you learn how to climb, wrap, and hold positions on the silks while developing strength, coordination, and body control. Each session guides you through simple, foundational techniques such as basic grips, supported holds, and low-level wraps that form the base of aerial tricks and sequences. With a strong emphasis on technique, posture, and control, you'll build upper body strength, core stability, and confidence while learning how to move safely off the ground. Through each curated, smooth, and authentic movement, you'll begin to understand how aerial skills are constructed, giving you a clear pathway into more advanced tricks and combinations over time. This class is ideal for beginners with no prior experience who want to explore aerial acrobatics in a supportive, structured, and safety-focused environment.",
+          "full_description": "Aerial Silks \u2013 Foundations introduces you to aerial movement using suspended fabric in a safe and structured environment. The class focuses on building strength, coordination, and body awareness while learning to move with control and confidence off the ground. Through simple, guided techniques such as basic grips, supported holds, and low-level movements, you'll develop upper body strength, core stability, and coordination at a comfortable pace. Each session places strong emphasis on technique, posture, and control, allowing you to progress safely and with confidence. This class is ideal for beginners with no prior experience who want to explore aerial movement while building strength and body control in a supportive setting.",
           "core_focus": [
             "Basic grips and supported holds",
             "Upper body strength and core stability",
@@ -394,45 +472,13 @@
           },
           "intensity": "Balanced",
           "status": "active",
-          "full_description": "Step in, learn the sequence, and make it your own. Choreography Fusion \u2013 Foundations is a beginner-friendly class focused on building confidence through simple, guided choreography that's easy to follow from the first session. 'Fusion' means you're not locked into one style. Each class blends elements from different movement styles \u2014 such as groove, flow, and basic contemporary \u2014 giving you variety while helping you understand how movement connects across styles. You'll learn short combinations step by step, with clear breakdowns that help you understand timing, transitions, and how sequences are built \u2014 not just copy them. The focus is on coordination, timing, and moving through a full sequence with clarity and control, without pressure to perform or get everything perfect. Ideal for adults who want to build confidence, improve coordination, and learn choreography in a structured but flexible way.",
-          "booking_url": "https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/choreography-fusion-foundations",
+          "full_description": "Choreography Fusion \u2013 Foundations is a beginner-friendly class designed to help you build confidence through simple, guided movement sequences. The focus is on learning short, easy-to-follow choreography while developing coordination, timing, and body awareness in a supportive environment. Blending elements from different movement styles, each session introduces structured combinations that are broken down step by step, making them accessible even if you have no prior experience. The emphasis is on moving with clarity and confidence, without pressure to perform or get everything perfect. Through each curated, smooth, and authentic movement, you'll become more comfortable learning and remembering movement while building confidence in how you move.",
           "core_focus": [
             "Short, easy-to-follow choreography",
             "Coordination and timing",
             "Body awareness",
             "Confidence building"
           ]
-        }
-      ],
-      "stretching": [
-        {
-          "id": "stretch-mobility",
-          "name": "Stretch & Mobility - Foundations",
-          "slug": "stretch-mobility-foundations",
-          "category": "Stretching",
-          "level": "Beginner / Foundation",
-          "intensity": "Gentle / Slow",
-          "status": "active",
-          "booking_url": "https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/stretch-mobility-foundations",
-          "short_description": "Slow down, release tension, and give your body the space it needs to move better",
-          "full_description": "Stretch & Mobility \u2013 Foundations is a beginner-friendly class focused on improving flexibility, reducing stiffness, and restoring ease of movement. This class combines guided stretching with simple mobility work to help open up tight areas such as hips, hamstrings, back, and shoulders. Movements are slow, controlled, and accessible, allowing you to gradually increase range without forcing or pushing. Each session is designed to help you feel more relaxed, move more freely, and support recovery from training or daily stress. Ideal for adults who want to improve flexibility, reduce tightness, and feel better in their body.",
-          "core_focus": [
-            "Improving flexibility and range of motion",
-            "Reducing stiffness in hips, hamstrings, back, shoulders",
-            "Slow, controlled, accessible movements",
-            "Recovery support and tension release"
-          ],
-          "who_its_for": [
-            "Anyone wanting to improve flexibility",
-            "Those with tight muscles or limited range",
-            "Recovery from training or daily stress",
-            "Complete beginners to stretching practice"
-          ],
-          "estimated_pricing": {
-            "drop_in": 18,
-            "class_pack_10": 160,
-            "unlimited_monthly": 140
-          }
         }
       ],
       "intensity_groups": {

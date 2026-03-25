@@ -1,0 +1,1357 @@
+{
+  "summary": {
+    "total_pages": 38,
+    "pages_with_images": 38,
+    "total_image_refs": 180,
+    "missing_count": 0,
+    "missing": []
+  },
+  "pages": [
+    {
+      "page": "404.html",
+      "legacy": false,
+      "image_count": 2,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "/images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "/images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "about.html",
+      "legacy": false,
+      "image_count": 3,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "/images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "/images/instructor/instructor-olga.webp",
+          "resolved": "images/instructor/instructor-olga.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "/images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "adults.html",
+      "legacy": false,
+      "image_count": 6,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "/images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "/images/hero/hero-adults.webp",
+          "resolved": "images/hero/hero-adults.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "/images/hero/",
+          "resolved": "images/hero/",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "/images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "/images/hero/hero-adults-mobile.webp",
+          "resolved": "images/hero/hero-adults-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "/images/hero/hero-adults.webp",
+          "resolved": "images/hero/hero-adults.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "contact.html",
+      "legacy": false,
+      "image_count": 2,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "/images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "/images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "index.html",
+      "legacy": false,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "/images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "/images/hero/hero-home.webp",
+          "resolved": "images/hero/hero-home.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "/images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "/images/hero/hero-home-mobile.webp",
+          "resolved": "images/hero/hero-home-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "/images/hero/hero-home.webp",
+          "resolved": "images/hero/hero-home.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "kids.html",
+      "legacy": false,
+      "image_count": 6,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "/images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "/images/hero/hero-kids.webp",
+          "resolved": "images/hero/hero-kids.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "/images/hero/",
+          "resolved": "images/hero/",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "/images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "/images/hero/hero-kids-mobile.webp",
+          "resolved": "images/hero/hero-kids-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "/images/hero/hero-kids.webp",
+          "resolved": "images/hero/hero-kids.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "privacy-policy.html",
+      "legacy": false,
+      "image_count": 2,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "/images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "/images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/aerial-silks-foundations.html",
+      "legacy": false,
+      "image_count": 6,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/aerial-silks.webp",
+          "resolved": "images/hero/aerial-silks.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/programs/aerial-silks-about.webp",
+          "resolved": "images/programs/aerial-silks-about.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/aerial-silks-mobile.webp",
+          "resolved": "images/hero/aerial-silks-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/aerial-silks.webp",
+          "resolved": "images/hero/aerial-silks.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/aerial-silks.html",
+      "legacy": true,
+      "image_count": 6,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/aerial-silks.webp",
+          "resolved": "images/hero/aerial-silks.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/programs/aerial-silks-about.webp",
+          "resolved": "images/programs/aerial-silks-about.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/aerial-silks-mobile.webp",
+          "resolved": "images/hero/aerial-silks-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/aerial-silks.webp",
+          "resolved": "images/hero/aerial-silks.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/aerial-yoga-foundations.html",
+      "legacy": false,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/aerial-yoga-foundations.webp",
+          "resolved": "images/hero/aerial-yoga-foundations.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/aerial-yoga-foundations-mobile.webp",
+          "resolved": "images/hero/aerial-yoga-foundations-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/aerial-yoga-foundations.webp",
+          "resolved": "images/hero/aerial-yoga-foundations.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/aerial-yoga.html",
+      "legacy": true,
+      "image_count": 6,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/aerial-yoga.webp",
+          "resolved": "images/hero/aerial-yoga.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/programs/aerial-yoga-about.webp",
+          "resolved": "images/programs/aerial-yoga-about.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/aerial-yoga-mobile.webp",
+          "resolved": "images/hero/aerial-yoga-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/aerial-yoga.webp",
+          "resolved": "images/hero/aerial-yoga.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/afro-groove-foundations.html",
+      "legacy": false,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/afro-groove-foundations.webp",
+          "resolved": "images/hero/afro-groove-foundations.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/afro-groove-foundations-mobile.webp",
+          "resolved": "images/hero/afro-groove-foundations-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/afro-groove-foundations.webp",
+          "resolved": "images/hero/afro-groove-foundations.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/booty-burn-foundations.html",
+      "legacy": false,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/booty-burn-foundations.webp",
+          "resolved": "images/hero/booty-burn-foundations.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/booty-burn-foundations-mobile.webp",
+          "resolved": "images/hero/booty-burn-foundations-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/booty-burn-foundations.webp",
+          "resolved": "images/hero/booty-burn-foundations.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/choreography-fusion-foundations.html",
+      "legacy": false,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/choreography-fusion-foundations.webp",
+          "resolved": "images/hero/choreography-fusion-foundations.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/choreography-fusion-foundations-mobile.webp",
+          "resolved": "images/hero/choreography-fusion-foundations-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/choreography-fusion-foundations.webp",
+          "resolved": "images/hero/choreography-fusion-foundations.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/choreography-fusion.html",
+      "legacy": true,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/choreography-fusion.webp",
+          "resolved": "images/hero/choreography-fusion.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/choreography-fusion-mobile.webp",
+          "resolved": "images/hero/choreography-fusion-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/choreography-fusion.webp",
+          "resolved": "images/hero/choreography-fusion.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/flow-yoga-foundations.html",
+      "legacy": false,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/flow-yoga-foundations.webp",
+          "resolved": "images/hero/flow-yoga-foundations.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/flow-yoga-foundations-mobile.webp",
+          "resolved": "images/hero/flow-yoga-foundations-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/flow-yoga-foundations.webp",
+          "resolved": "images/hero/flow-yoga-foundations.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/fusion-yoga-foundations.html",
+      "legacy": false,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/fusion-yoga-foundations.webp",
+          "resolved": "images/hero/fusion-yoga-foundations.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/fusion-yoga-foundations-mobile.webp",
+          "resolved": "images/hero/fusion-yoga-foundations-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/fusion-yoga-foundations.webp",
+          "resolved": "images/hero/fusion-yoga-foundations.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/kids-aerial-silks.html",
+      "legacy": false,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/kids-aerial-silks.webp",
+          "resolved": "images/hero/kids-aerial-silks.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/kids-aerial-silks-mobile.webp",
+          "resolved": "images/hero/kids-aerial-silks-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/kids-aerial-silks.webp",
+          "resolved": "images/hero/kids-aerial-silks.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/kids-aerial-yoga.html",
+      "legacy": false,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/kids-aerial-yoga.webp",
+          "resolved": "images/hero/kids-aerial-yoga.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/kids-aerial-yoga-mobile.webp",
+          "resolved": "images/hero/kids-aerial-yoga-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/kids-aerial-yoga.webp",
+          "resolved": "images/hero/kids-aerial-yoga.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/kids-creative-dance.html",
+      "legacy": false,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/kids-creative-dance.webp",
+          "resolved": "images/hero/kids-creative-dance.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/kids-creative-dance-mobile.webp",
+          "resolved": "images/hero/kids-creative-dance-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/kids-creative-dance.webp",
+          "resolved": "images/hero/kids-creative-dance.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/kids-dance-moves.html",
+      "legacy": false,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/kids-dance-moves.webp",
+          "resolved": "images/hero/kids-dance-moves.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/kids-dance-moves-mobile.webp",
+          "resolved": "images/hero/kids-dance-moves-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/kids-dance-moves.webp",
+          "resolved": "images/hero/kids-dance-moves.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/kids-modern-contemporary.html",
+      "legacy": false,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/kids-modern-contemporary.webp",
+          "resolved": "images/hero/kids-modern-contemporary.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/kids-modern-contemporary-mobile.webp",
+          "resolved": "images/hero/kids-modern-contemporary-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/kids-modern-contemporary.webp",
+          "resolved": "images/hero/kids-modern-contemporary.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/kids-pole-foundations.html",
+      "legacy": false,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/kids-pole-foundations.webp",
+          "resolved": "images/hero/kids-pole-foundations.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/kids-pole-foundations-mobile.webp",
+          "resolved": "images/hero/kids-pole-foundations-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/kids-pole-foundations.webp",
+          "resolved": "images/hero/kids-pole-foundations.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/kids-yoga.html",
+      "legacy": false,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/kids-yoga.webp",
+          "resolved": "images/hero/kids-yoga.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/kids-yoga-mobile.webp",
+          "resolved": "images/hero/kids-yoga-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/kids-yoga.webp",
+          "resolved": "images/hero/kids-yoga.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/modern-yoga.html",
+      "legacy": true,
+      "image_count": 6,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/modern-yoga.webp",
+          "resolved": "images/hero/modern-yoga.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/programs/modern-yoga-about.webp",
+          "resolved": "images/programs/modern-yoga-about.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/modern-yoga-mobile.webp",
+          "resolved": "images/hero/modern-yoga-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/modern-yoga.webp",
+          "resolved": "images/hero/modern-yoga.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/movement-dance.html",
+      "legacy": true,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/movement-dance.webp",
+          "resolved": "images/hero/movement-dance.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/movement-dance-mobile.webp",
+          "resolved": "images/hero/movement-dance-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/movement-dance.webp",
+          "resolved": "images/hero/movement-dance.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/movement-flow-foundations.html",
+      "legacy": false,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/movement-flow-foundations.webp",
+          "resolved": "images/hero/movement-flow-foundations.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/movement-flow-foundations-mobile.webp",
+          "resolved": "images/hero/movement-flow-foundations-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/movement-flow-foundations.webp",
+          "resolved": "images/hero/movement-flow-foundations.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/pole-fitness-foundations.html",
+      "legacy": false,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/pole-fitness-foundations.webp",
+          "resolved": "images/hero/pole-fitness-foundations.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/pole-fitness-foundations-mobile.webp",
+          "resolved": "images/hero/pole-fitness-foundations-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/pole-fitness-foundations.webp",
+          "resolved": "images/hero/pole-fitness-foundations.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/pole-flow-foundations.html",
+      "legacy": false,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/pole-flow.webp",
+          "resolved": "images/hero/pole-flow.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/pole-flow-mobile.webp",
+          "resolved": "images/hero/pole-flow-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/pole-flow.webp",
+          "resolved": "images/hero/pole-flow.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/pole-flow.html",
+      "legacy": true,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/pole-flow.webp",
+          "resolved": "images/hero/pole-flow.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/pole-flow-mobile.webp",
+          "resolved": "images/hero/pole-flow-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/pole-flow.webp",
+          "resolved": "images/hero/pole-flow.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/pole-strength-movement.html",
+      "legacy": false,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/pole-strength-movement.webp",
+          "resolved": "images/hero/pole-strength-movement.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/pole-strength-movement-mobile.webp",
+          "resolved": "images/hero/pole-strength-movement-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/pole-strength-movement.webp",
+          "resolved": "images/hero/pole-strength-movement.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/recovery-movement-flow-foundations.html",
+      "legacy": false,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/recovery-movement-flow-foundations.webp",
+          "resolved": "images/hero/recovery-movement-flow-foundations.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/recovery-movement-flow-foundations-mobile.webp",
+          "resolved": "images/hero/recovery-movement-flow-foundations-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/recovery-movement-flow-foundations.webp",
+          "resolved": "images/hero/recovery-movement-flow-foundations.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/recovery-movement.html",
+      "legacy": true,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/recovery-movement.webp",
+          "resolved": "images/hero/recovery-movement.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/recovery-movement-mobile.webp",
+          "resolved": "images/hero/recovery-movement-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/recovery-movement.webp",
+          "resolved": "images/hero/recovery-movement.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/traditional-yoga-foundations.html",
+      "legacy": false,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/traditional-yoga-foundations.webp",
+          "resolved": "images/hero/traditional-yoga-foundations.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/traditional-yoga-foundations-mobile.webp",
+          "resolved": "images/hero/traditional-yoga-foundations-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/traditional-yoga-foundations.webp",
+          "resolved": "images/hero/traditional-yoga-foundations.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/traditional-yoga.html",
+      "legacy": true,
+      "image_count": 6,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/traditional-yoga.webp",
+          "resolved": "images/hero/traditional-yoga.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/programs/traditional-yoga-about.webp",
+          "resolved": "images/programs/traditional-yoga-about.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/traditional-yoga-mobile.webp",
+          "resolved": "images/hero/traditional-yoga-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/traditional-yoga.webp",
+          "resolved": "images/hero/traditional-yoga.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "programs/yoga-fusion.html",
+      "legacy": true,
+      "image_count": 5,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/hero/yoga-fusion.webp",
+          "resolved": "images/hero/yoga-fusion.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "../images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/yoga-fusion-mobile.webp",
+          "resolved": "images/hero/yoga-fusion-mobile.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "source srcset",
+          "src": "../images/hero/yoga-fusion.webp",
+          "resolved": "images/hero/yoga-fusion.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "terms-of-service.html",
+      "legacy": false,
+      "image_count": 2,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "/images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "/images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "page": "timetable.html",
+      "legacy": false,
+      "image_count": 2,
+      "images": [
+        {
+          "ref_type": "img src",
+          "src": "/images/logo/logo-header.webp",
+          "resolved": "images/logo/logo-header.webp",
+          "status": "OK"
+        },
+        {
+          "ref_type": "img src",
+          "src": "/images/logo/logo-full.webp",
+          "resolved": "images/logo/logo-full.webp",
+          "status": "OK"
+        }
+      ]
+    }
+  ]
+}

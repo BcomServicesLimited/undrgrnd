@@ -331,6 +331,9 @@
     .badge--yoga          { background: rgba(59, 130, 246, 0.15); color: #60A5FA; border-color: rgba(59, 130, 246, 0.25); }
     .badge--aerial        { background: rgba(16, 185, 129, 0.15); color: #34D399; border-color: rgba(16, 185, 129, 0.25); }
     .badge--choreography  { background: rgba(245, 158, 11, 0.15); color: #FBBF24; border-color: rgba(245, 158, 11, 0.25); }
+    .badge--stretching    { background: rgba(20, 184, 166, 0.15); color: #2DD4BF; border-color: rgba(20, 184, 166, 0.25); }
+    .program-card--stretching .program-card__img { background: linear-gradient(135deg, rgba(20, 184, 166, 0.18), rgba(59, 130, 246, 0.08)); }
+    .program-card--stretching .program-card__img svg { stroke: rgba(20, 184, 166, 0.6); }
 
     .program-badge {
       display: inline-block;
@@ -1645,6 +1648,7 @@
       <button class="filter-btn"        data-filter="yoga"          type="button">Yoga</button>
       <button class="filter-btn"        data-filter="aerial"        type="button">Aerial</button>
       <button class="filter-btn"        data-filter="choreography"  type="button">Choreography</button>
+      <button class="filter-btn"        data-filter="stretching"    type="button">Stretching</button>
     </div>
   </div>
 </div>
@@ -1999,7 +2003,7 @@
       if (!adults) return;
 
       var html = '';
-      var order = ['dance', 'pole', 'yoga', 'aerial', 'choreography'];
+      var order = ['dance', 'pole', 'yoga', 'aerial', 'choreography', 'stretching'];
 
       order.forEach(function (catKey) {
         if (!adults[catKey]) return;

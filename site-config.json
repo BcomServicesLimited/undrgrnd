@@ -203,7 +203,7 @@
             "class_pack_8": 200
           },
           "intensity": "Balanced",
-          "status": "active"
+          "status": "coming_soon"
         }
       ],
       "pole": [
@@ -236,7 +236,7 @@
             "unlimited_monthly": 200
           },
           "intensity": "Moderate",
-          "status": "active"
+          "status": "coming_soon"
         },
         {
           "id": "pole-flow",

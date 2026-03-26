@@ -238,8 +238,7 @@ function generateLocalBusinessSchema() {
       'priceRange': '$$',
       'currenciesAccepted': 'AUD',
       'paymentAccepted': 'Cash, Credit Card',
-      'hasMap': 'https://maps.google.com/?q=' +
-        encodeURIComponent(address.street + ', ' + address.suburb + ' ' + address.state + ' ' + address.postcode)
+      'hasMap': 'https://maps.app.goo.gl/UMrxgrQbENHh1y7U9'
     };
 
     /* Only add phone if not a placeholder */
@@ -248,16 +247,16 @@ function generateLocalBusinessSchema() {
     }
 
     /* Only add social links if not placeholders */
-    var sameAs = [];
+    var sameAs = [
+      'https://maps.app.goo.gl/UMrxgrQbENHh1y7U9'
+    ];
     if (contact.instagram && contact.instagram.indexOf('PLACEHOLDER') === -1) {
       sameAs.push(contact.instagram);
     }
     if (contact.facebook && contact.facebook.indexOf('PLACEHOLDER') === -1) {
       sameAs.push(contact.facebook);
     }
-    if (sameAs.length > 0) {
-      schema['sameAs'] = sameAs;
-    }
+    schema['sameAs'] = sameAs;
 
     return buildScriptTag(schema);
   });

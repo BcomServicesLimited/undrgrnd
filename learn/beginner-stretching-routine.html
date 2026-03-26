@@ -3,785 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <!-- Title & Meta Description -->
-  <title>Class Timetable | Book Dance, Pole, Yoga &amp; Aerial Classes | UNDRGRND Movement Gold Coast</title>
-  <meta name="description" content="View the UNDRGRND Movement class timetable in Southport, Gold Coast. Book dance, pole, yoga & aerial classes online. Beginner sessions available weekly.">
-
+  <title>A Beginner Stretching Routine for Tight Muscles | UNDRGRND Movement Gold Coast</title>
+  <meta name="description" content="Ten minutes a day is all it takes. This beginner routine targets the hips, hamstrings, and lower back. From UNDRGRND Movement, Southport Gold Coast.">
   <!-- Canonical -->
-  <link rel="canonical" href="https://www.undrgrnd.com.au/timetable.html">
-  <!-- Content Security Policy for Class Manager embed -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.classmanager.com; connect-src 'self' https://app.classmanager.com https://api.classmanager.com; style-src 'self' 'unsafe-inline';">
-
-  <!-- Favicon placeholders -->
+  <link rel="canonical" href="https://www.undrgrnd.com.au/learn/beginner-stretching-routine.html">
+  <!-- Robots -->
+  <meta name="robots" content="index, follow">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
   <!-- Global CSS -->
   <link rel="stylesheet" href="/css/global.css">
-
+  <!-- Schema Generator -->
+  <script src="/js/schema-generator.js"></script>
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.undrgrnd.com.au/timetable.html">
-  <meta property="og:title" content="Class Timetable | UNDRGRND Movement Gold Coast">
-  <meta property="og:description" content="View and book movement classes at UNDRGRND Movement, Southport. Live timetable for dance, pole fitness, yoga, and aerial classes on the Gold Coast.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.undrgrnd.com.au/learn/beginner-stretching-routine.html">
+  <meta property="og:title" content="A Beginner Stretching Routine for Tight Muscles | UNDRGRND Movement Gold Coast">
+  <meta property="og:description" content="Ten minutes a day is all it takes. This beginner routine targets the hips, hamstrings, and lower back.">
   <meta property="og:image" content="https://www.undrgrnd.com.au/images/og-image.webp">
-
   <!-- Page-specific styles -->
   <style>
     /* -----------------------------------------------------------------------
-       HERO
+       ARTICLE HERO
     ----------------------------------------------------------------------- */
-    .tt-hero {
-      padding: 10rem 5% 5rem;
-      background: #0A0A0A;
-      border-bottom: 1px solid rgba(139, 92, 246, 0.12);
+    .article-hero {
+      padding: 9rem 5% 4rem;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139, 92, 246, 0.18) 0%, transparent 70%), #0A0A0A;
     }
-
-    .tt-hero__inner {
-      max-width: 1400px;
+    .article-hero__inner {
+      max-width: 800px;
       margin-inline: auto;
     }
-
-    .tt-hero__eyebrow {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #A78BFA;
-      margin-bottom: 0.75rem;
-    }
-
-    .tt-hero h1 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(3rem, 8vw, 6rem);
-      line-height: 0.95;
-      letter-spacing: 1px;
-      color: #FFFFFF;
-      margin-bottom: 1rem;
-    }
-
-    .tt-hero__sub {
-      font-size: 1.15rem;
-      color: #A1A1A1;
-      margin-bottom: 1rem;
-      max-width: 600px;
-    }
-
-    .tt-hero__location {
-      display: inline-flex;
+    .article-hero__breadcrumb {
+      display: flex;
       align-items: center;
       gap: 0.5rem;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
+      color: #A1A1A1;
+      margin-bottom: 1.5rem;
+    }
+    .article-hero__breadcrumb a {
+      color: #A78BFA;
+      text-decoration: none;
+    }
+    .article-hero__breadcrumb a:hover {
+      color: #FFFFFF;
+    }
+    .article-hero__breadcrumb svg {
+      width: 12px;
+      height: 12px;
+      stroke: #A1A1A1;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+    .article-hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin: 1rem 0 1.25rem;
+    }
+    .article-hero__meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .article-hero__read-time {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.82rem;
       font-weight: 600;
       color: #A1A1A1;
-      margin-bottom: 1.25rem;
     }
-
-    .tt-hero__location svg {
-      width: 15px;
-      height: 15px;
+    .article-hero__read-time svg {
+      width: 14px;
+      height: 14px;
       stroke: #8B5CF6;
       fill: none;
       stroke-width: 2;
       stroke-linecap: round;
       stroke-linejoin: round;
     }
-
-    .tt-hero__note {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.88rem;
-      color: #A78BFA;
-      background: rgba(139, 92, 246, 0.08);
-      border: 1px solid rgba(139, 92, 246, 0.2);
-      border-radius: 50px;
-      padding: 0.5rem 1.1rem;
-    }
-
-    .tt-hero__note svg {
-      width: 14px;
-      height: 14px;
-      stroke: #A78BFA;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      flex-shrink: 0;
-    }
-
     /* -----------------------------------------------------------------------
-       INTEGRATION NOTICE BANNER
+       ARTICLE BODY
     ----------------------------------------------------------------------- */
-    .integration-notice {
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.07));
-      border-bottom: 1px solid rgba(139, 92, 246, 0.2);
-      padding: 0.85rem 5%;
-    }
-
-    .integration-notice__inner {
-      max-width: 1400px;
-      margin-inline: auto;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-
-    .integration-notice svg {
-      width: 16px;
-      height: 16px;
-      stroke: #A78BFA;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      flex-shrink: 0;
-    }
-
-    .integration-notice__text {
-      font-size: 0.85rem;
-      color: #A78BFA;
-      font-weight: 600;
-    }
-
-    .integration-notice__sub {
-      font-size: 0.8rem;
-      color: rgba(161, 161, 161, 0.7);
-    }
-
-    /* -----------------------------------------------------------------------
-       STICKY FILTER BAR
-    ----------------------------------------------------------------------- */
-    .filter-bar {
-      position: sticky;
-      top: 70px; /* below fixed nav */
-      z-index: 800;
-      background: rgba(10, 10, 10, 0.97);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(139, 92, 246, 0.2);
-      padding: 1rem 5%;
-    }
-
-    .filter-bar__inner {
-      max-width: 1400px;
-      margin-inline: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-    }
-
-    @media (min-width: 768px) {
-      .filter-bar__inner {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-      }
-    }
-
-    .filter-bar__group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      align-items: center;
-    }
-
-    .filter-bar__label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(161, 161, 161, 0.5);
-      margin-right: 0.25rem;
-    }
-
-    .filter-btn {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #A1A1A1;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 50px;
-      padding: 0.4rem 1rem;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      white-space: nowrap;
-    }
-
-    .filter-btn:hover {
-      color: #FFFFFF;
-      border-color: rgba(139, 92, 246, 0.4);
-      background: rgba(139, 92, 246, 0.08);
-    }
-
-    .filter-btn.active {
-      color: #FFFFFF;
-      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-      border-color: transparent;
-    }
-
-    /* Week navigation */
-    .week-nav {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .week-nav__btn {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      color: #A1A1A1;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 8px;
-      padding: 0.4rem 0.85rem;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-
-    .week-nav__btn:hover {
-      color: #FFFFFF;
-      border-color: rgba(139, 92, 246, 0.4);
-    }
-
-    .week-nav__btn svg {
-      width: 13px;
-      height: 13px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .week-nav__current {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: #FFFFFF;
-      padding: 0.4rem 0.85rem;
-      background: rgba(139, 92, 246, 0.1);
-      border: 1px solid rgba(139, 92, 246, 0.2);
-      border-radius: 8px;
-      white-space: nowrap;
-    }
-
-    .filter-bar__note {
-      font-size: 0.7rem;
-      color: rgba(161, 161, 161, 0.4);
-      font-style: italic;
-      width: 100%;
-    }
-
-    /* -----------------------------------------------------------------------
-       CALENDAR SECTION
-    ----------------------------------------------------------------------- */
-    .calendar-section {
+    .article-body {
+      background: #0D0D0D;
       padding: 4rem 5%;
-      background: #0A0A0A;
     }
-
-    .calendar-section__inner {
-      max-width: 1400px;
+    .article-body__inner {
+      max-width: 800px;
       margin-inline: auto;
     }
-
-    /* IFRAME EMBED POINT: Replace this div with iframe once Class Manager URL is configured */
-    .calendar-placeholder {
-      min-height: 900px;
-      border: 2px dashed rgba(139, 92, 246, 0.3);
-      border-radius: 20px;
-      background: rgba(139, 92, 246, 0.03);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 4rem 2rem;
+    .coming-soon-notice {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.25);
+      border-radius: 16px;
+      padding: 3rem 2.5rem;
       text-align: center;
     }
-
-    .calendar-placeholder__icon {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: rgba(139, 92, 246, 0.08);
-      border: 1px solid rgba(139, 92, 246, 0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .calendar-placeholder__icon svg {
-      width: 36px;
-      height: 36px;
+    .coming-soon-notice svg {
+      width: 48px;
+      height: 48px;
       stroke: rgba(139, 92, 246, 0.5);
       fill: none;
       stroke-width: 1.5;
       stroke-linecap: round;
       stroke-linejoin: round;
+      margin-bottom: 1.25rem;
     }
-
-    .calendar-placeholder__heading {
+    .coming-soon-notice h2 {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 2rem;
       letter-spacing: 1px;
       color: #FFFFFF;
+      margin: 0 0 0.75rem;
     }
-
-    .calendar-placeholder__text {
-      font-size: 1rem;
+    .coming-soon-notice p {
+      font-size: 0.95rem;
       color: #A1A1A1;
-      max-width: 480px;
       line-height: 1.7;
+      max-width: 480px;
+      margin: 0 auto 2rem;
     }
-
-    .calendar-placeholder__subtext {
-      font-size: 0.85rem;
-      color: rgba(161, 161, 161, 0.5);
-      max-width: 520px;
-      line-height: 1.6;
-    }
-
-    .calendar-placeholder__code {
-      background: rgba(0, 0, 0, 0.4);
-      border: 1px solid rgba(139, 92, 246, 0.15);
-      border-radius: 10px;
-      padding: 1rem 1.5rem;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 0.78rem;
-      color: #A78BFA;
-      text-align: left;
-      max-width: 600px;
-      width: 100%;
-      overflow-x: auto;
-      line-height: 1.6;
-    }
-
-    .calendar-placeholder__code-label {
+    /* -----------------------------------------------------------------------
+       BADGE COLOURS
+    ----------------------------------------------------------------------- */
+    .badge--dance         { background: rgba(236, 72, 153, 0.15); color: #F472B6; border-color: rgba(236, 72, 153, 0.25); }
+    .badge--pole          { background: rgba(139, 92, 246, 0.15); color: #A78BFA; border-color: rgba(139, 92, 246, 0.25); }
+    .badge--yoga          { background: rgba(59, 130, 246, 0.15); color: #60A5FA; border-color: rgba(59, 130, 246, 0.25); }
+    .badge--aerial        { background: rgba(16, 185, 129, 0.15); color: #34D399; border-color: rgba(16, 185, 129, 0.25); }
+    .badge--stretching    { background: rgba(20, 184, 166, 0.15); color: #2DD4BF; border-color: rgba(20, 184, 166, 0.25); }
+    .program-badge {
+      display: inline-block;
       font-family: 'Outfit', sans-serif;
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(161, 161, 161, 0.4);
-      margin-bottom: 0.5rem;
+      padding: 0.28rem 0.8rem;
+      border-radius: 50px;
+      border: 1px solid;
+      width: fit-content;
     }
-
-    /* Loading spinner (for when real iframe is active) */
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-
-    .calendar-spinner {
-      display: none;
-      width: 40px;
-      height: 40px;
-      border: 3px solid rgba(139, 92, 246, 0.15);
-      border-top-color: #8B5CF6;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-    }
-
-    /* -----------------------------------------------------------------------
-       BOOKING HELP
-    ----------------------------------------------------------------------- */
-    .help-section {
-      padding: 6rem 5%;
-      background: #0D0D0D;
-    }
-
-    .help-section__inner {
-      max-width: 1400px;
-      margin-inline: auto;
-    }
-
-    .help-section h2 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-      letter-spacing: 1px;
-      color: #FFFFFF;
-      margin-bottom: 2.5rem;
-    }
-
-    .help-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    @media (min-width: 768px) {
-      .help-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
-    }
-
-    .help-card {
-      background: #1A1A1A;
-      border: 1px solid rgba(139, 92, 246, 0.2);
-      border-radius: 20px;
-      padding: 2rem;
-    }
-
-    .help-card__title {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-family: 'Outfit', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 1.25rem;
-    }
-
-    .help-card__title svg {
-      width: 20px;
-      height: 20px;
-      stroke: #8B5CF6;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      flex-shrink: 0;
-    }
-
-    .help-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .help-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      font-size: 0.92rem;
-      color: #A1A1A1;
-      line-height: 1.5;
-    }
-
-    .help-list li svg {
-      width: 15px;
-      height: 15px;
-      stroke: #8B5CF6;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .help-contact-item {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-      padding: 0.85rem 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .help-contact-item:last-of-type { border-bottom: none; }
-
-    .help-contact-item__icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      background: rgba(139, 92, 246, 0.1);
-      border: 1px solid rgba(139, 92, 246, 0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .help-contact-item__icon svg {
-      width: 16px;
-      height: 16px;
-      stroke: #8B5CF6;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .help-contact-item__label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #A1A1A1;
-      margin-bottom: 0.15rem;
-    }
-
-    .help-contact-item__value a {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #FFFFFF;
-      text-decoration: none;
-      transition: color 0.25s ease;
-    }
-
-    .help-contact-item__value a:hover { color: #A78BFA; }
-
-    .help-response-note {
-      font-size: 0.8rem;
-      color: rgba(161, 161, 161, 0.5);
-      margin-top: 1rem;
-      font-style: italic;
-    }
-
-    /* -----------------------------------------------------------------------
-       BOOKING POLICIES — accordion
-    ----------------------------------------------------------------------- */
-    .policies-section {
-      padding: 6rem 5%;
-      background: #0A0A0A;
-    }
-
-    .policies-section__inner {
-      max-width: 1400px;
-      margin-inline: auto;
-    }
-
-    .policies-section h2 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-      letter-spacing: 1px;
-      color: #FFFFFF;
-      margin-bottom: 2.5rem;
-    }
-
-    .policy-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      max-width: 900px;
-    }
-
-    .policy-item {
-      background: #1A1A1A;
-      border: 1px solid rgba(139, 92, 246, 0.2);
-      border-radius: 14px;
-      overflow: hidden;
-      transition: border-color 0.3s ease;
-    }
-
-    .policy-item.open { border-color: rgba(139, 92, 246, 0.45); }
-
-    .policy-item__question {
-      width: 100%;
-      background: none;
-      border: none;
-      padding: 1.4rem 1.75rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      cursor: pointer;
-      text-align: left;
-    }
-
-    .policy-item__question-text {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.97rem;
-      font-weight: 700;
-      color: #FFFFFF;
-      line-height: 1.4;
-    }
-
-    .policy-item__icon {
-      flex-shrink: 0;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: rgba(139, 92, 246, 0.1);
-      border: 1px solid rgba(139, 92, 246, 0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-    }
-
-    .policy-item.open .policy-item__icon {
-      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-      border-color: transparent;
-      transform: rotate(45deg);
-    }
-
-    .policy-item__icon svg {
-      width: 14px;
-      height: 14px;
-      stroke: #8B5CF6;
-      fill: none;
-      stroke-width: 2.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: stroke 0.3s ease;
-    }
-
-    .policy-item.open .policy-item__icon svg { stroke: #FFFFFF; }
-
-    .policy-item__answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-    }
-
-    .policy-item.open .policy-item__answer { max-height: 400px; }
-
-    .policy-item__answer-inner {
-      padding: 0 1.75rem 1.5rem;
-      font-size: 0.92rem;
-      color: #A1A1A1;
-      line-height: 1.7;
-    }
-
-    /* -----------------------------------------------------------------------
-       WHAT TO BRING
-    ----------------------------------------------------------------------- */
-    .bring-section {
-      padding: 6rem 5%;
-      background: #0D0D0D;
-    }
-
-    .bring-section__inner {
-      max-width: 1400px;
-      margin-inline: auto;
-    }
-
-    .bring-section h2 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-      letter-spacing: 1px;
-      color: #FFFFFF;
-      margin-bottom: 2.5rem;
-    }
-
-    .bring-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-
-    @media (min-width: 768px) { .bring-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 1024px) { .bring-grid { grid-template-columns: repeat(4, 1fr); } }
-
-    .bring-card {
-      background: #1A1A1A;
-      border: 1px solid rgba(139, 92, 246, 0.2);
-      border-radius: 20px;
-      padding: 2rem 1.75rem;
-      transition: all 0.3s ease;
-    }
-
-    .bring-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(139, 92, 246, 0.4);
-    }
-
-    .bring-card__icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.1));
-      border: 1px solid rgba(139, 92, 246, 0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.25rem;
-    }
-
-    .bring-card__icon svg {
-      width: 22px;
-      height: 22px;
-      stroke: #8B5CF6;
-      fill: none;
-      stroke-width: 1.75;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .bring-card__type {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.3rem;
-      letter-spacing: 1px;
-      color: #FFFFFF;
-      margin-bottom: 1rem;
-    }
-
-    .bring-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .bring-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.6rem;
-      font-size: 0.88rem;
-      color: #A1A1A1;
-      line-height: 1.4;
-    }
-
-    .bring-list li svg {
-      width: 13px;
-      height: 13px;
-      stroke: #A78BFA;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    /* -----------------------------------------------------------------------
-       SCROLL ANIMATIONS
-    ----------------------------------------------------------------------- */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    .reveal-delay-1 { transition-delay: 0.08s; }
-    .reveal-delay-2 { transition-delay: 0.16s; }
-    .reveal-delay-3 { transition-delay: 0.24s; }
-    .reveal-delay-4 { transition-delay: 0.32s; }
   </style>
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "A Beginner Stretching Routine for Tight Muscles",
+  "description": "Ten minutes a day is all it takes. This beginner routine targets the hips, hamstrings, and lower back.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "UNDRGRND Movement",
+    "url": "https://www.undrgrnd.com.au"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.undrgrnd.com.au/learn/beginner-stretching-routine.html"
+  }
+}
+</script>
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.undrgrnd.com.au/images/og-image.webp">
 </head>
-
 <body>
-<!--
-  UNDRGRND Movement — Navigation Component
   File: /components/nav-component.html
 
   Usage: Copy this entire block into any page <body>, as the first element.
@@ -1094,60 +489,12 @@
     }
   }
 
-  /* Class Manager Timetable Styles */
-  .timetable-container {
-    background: var(--card-bg);
-    border-radius: 20px;
-    padding: 2rem;
-    margin: 2rem 0;
-    border: 1px solid rgba(139, 92, 246, 0.2);
-    min-height: 600px;
-  }
-
-  .timetable-intro {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--text-gray);
-  }
-
-  #timetable table {
-    width: 100%;
-    color: var(--text-white);
-  }
-
-  #timetable th {
-    background: rgba(139, 92, 246, 0.2);
-    color: var(--text-white);
-    padding: 1rem;
-    font-weight: 600;
-  }
-
-  #timetable td {
-    padding: 1rem;
-    border-bottom: 1px solid rgba(139, 92, 246, 0.1);
-  }
-
-  #timetable tr:hover {
-    background: rgba(139, 92, 246, 0.05);
-  }
-
-  #timetable a {
-    color: var(--primary-purple);
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  #timetable a:hover {
-    color: var(--accent-purple);
-  }
-
-  @media (max-width: 767px) {
-    .timetable-container {
-      padding: 1rem;
-    }
-    #timetable {
-      overflow-x: auto;
-    }
+  /* Smaller nav CTA buttons to accommodate Learn link */
+  .nav-cta .cta-button,
+  .nav-cta .cta-secondary {
+    padding: 0.5rem 1.1rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
   }
 </style>
 
@@ -1417,426 +764,41 @@
 
 
 <!-- =========================================================================
-     NAVIGATION — copy contents of /components/nav-component.html here
+     1. ARTICLE HERO
      ========================================================================= -->
-
-
-<!-- =========================================================================
-     INTEGRATION NOTICE BANNER
-     ========================================================================= -->
-<div class="integration-notice" role="status" aria-live="polite">
-  <div class="integration-notice__inner">
-    <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-    <span class="integration-notice__text">Booking integration pending.</span>
-    <span class="integration-notice__sub">Class Manager URL to be configured in site-config.json &rarr; <code style="font-family: monospace; color: #A78BFA;">booking.timetable_url</code></span>
-  </div>
-</div>
-
-
-<!-- =========================================================================
-     1. HERO SECTION
-     ========================================================================= -->
-<section class="tt-hero" aria-labelledby="ttHeroHeading">
-  <div class="tt-hero__inner">
-    <p class="tt-hero__eyebrow">UNDRGRND Movement &mdash; Southport</p>
-    <h1 id="ttHeroHeading">Class Timetable</h1>
-    <p class="tt-hero__sub">View live availability and book your session</p>
-    <p class="tt-hero__location">
-      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-      163 Ferry Rd, Southport QLD 4215
-    </p>
-    <span class="tt-hero__note">
-      <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-      Book directly through our online system. New to UNDRGRND? All classes welcome beginners!
-    </span>
-  </div>
-</section>
-
-
-<!-- CLASS MANAGER INTEGRATION -->
-<section class="timetable-section">
-  <div class="container">
-
-    <!-- Timetable Instructions -->
-    <div class="timetable-intro">
-      <p>Our timetable features foundation classes across dance, pole, yoga, and aerial for adults and kids on the Gold Coast. All programs are beginner-friendly and designed for complete newcomers to movement at UNDRGRND Movement Southport.</p>
-      <p><strong>Adults:</strong> Choose from Dynamic (16&ndash;25), Balanced (26&ndash;45), or Gentle (45+) intensity levels. All programs include the &ldquo;Foundations&rdquo; suffix indicating beginner-friendly content.</p>
-      <p><strong>Kids:</strong> Age bands are 6&ndash;9 (combined) and 10&ndash;15 (combined) with a minimum of 4 students per class.</p>
-    </div>
-    <!-- Coming Soon Notice -->
-    <div class="coming-soon-notice" style="background:#1A1A1A;border:1px solid rgba(245,158,11,0.3);border-radius:12px;padding:1.5rem 2rem;margin-bottom:2rem;">
-      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:#FBBF24;margin:0 0 0.75rem;">Coming Soon to the Timetable</h3>
-      <p style="color:#A1A1A1;font-size:0.9rem;margin:0 0 0.75rem;">The following programs are in development and will be added to the live timetable when bookings open. <a href="/contact.html" style="color:#A78BFA;">Join the waitlist</a> to be notified.</p>
-      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:0.5rem;">
-        <li style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.25);border-radius:50px;padding:0.3rem 0.9rem;font-size:0.82rem;color:#FBBF24;">Recovery Movement Flow - Foundations</li>
-        <li style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.25);border-radius:50px;padding:0.3rem 0.9rem;font-size:0.82rem;color:#FBBF24;">Pole Fitness - Foundations</li>
-        <li style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.25);border-radius:50px;padding:0.3rem 0.9rem;font-size:0.82rem;color:#FBBF24;">Pole Flow - Foundations</li>
-        <li style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.25);border-radius:50px;padding:0.3rem 0.9rem;font-size:0.82rem;color:#FBBF24;">Aerial Yoga - Foundations</li>
-        <li style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.25);border-radius:50px;padding:0.3rem 0.9rem;font-size:0.82rem;color:#FBBF24;">Kids Aerial Yoga - Foundations</li>
-        <li style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.25);border-radius:50px;padding:0.3rem 0.9rem;font-size:0.82rem;color:#FBBF24;">Pole Fitness Kids - Foundations</li>
-        <li style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.25);border-radius:50px;padding:0.3rem 0.9rem;font-size:0.82rem;color:#FBBF24;">Kids Aerial Silks - Foundations</li>
-      </ul>
-    </div>
-
-    <!-- Class Manager Timetable Embed -->
-    <div class="timetable-container">
-      <div id="timetable"></div>
-    </div>
-
-    <!-- Loading Message (shows while timetable loads) -->
-    <div id="timetable-loading" style="text-align: center; padding: 3rem;">
-      <p>Loading class timetable...</p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- =========================================================================
-     4. BOOKING HELP
-     ========================================================================= -->
-<section class="help-section reveal" aria-labelledby="helpHeading">
-  <div class="help-section__inner">
-    <h2 id="helpHeading">Need Help Booking?</h2>
-
-    <div class="help-grid">
-
-      <!-- Troubleshooting -->
-      <div class="help-card">
-        <h3 class="help-card__title">
-          <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-          Troubleshooting
-        </h3>
-        <ul class="help-list">
-          <li>
-            <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Make sure JavaScript is enabled in your browser
-          </li>
-          <li>
-            <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Try a different browser if issues persist
-          </li>
-          <li>
-            <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Clear your browser cache and reload the page
-          </li>
-          <li>
-            <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Contact us directly if problems continue
-          </li>
-        </ul>
-      </div>
-
-      <!-- Contact info -->
-      <div class="help-card">
-        <h3 class="help-card__title">
-          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.72 16z"></path></svg>
-          Contact Us
-        </h3>
-
-        <div class="help-contact-item">
-          <div class="help-contact-item__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          </div>
-          <div>
-            <p class="help-contact-item__label">Email</p>
-            <p class="help-contact-item__value">
-              <a href="mailto:hello@undrgrnd.com.au" id="contactEmail">hello@undrgrnd.com.au</a>
-            </p>
-          </div>
-        </div>
-
-        <div class="help-contact-item">
-          <div class="help-contact-item__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.72 16z"></path></svg>
-          </div>
-          <div>
-            <p class="help-contact-item__label">Phone</p>
-            <p class="help-contact-item__value">
-              <a href="tel:+61000000000" id="contactPhone">Contact us</a>
-            </p>
-          </div>
-        </div>
-
-        <p class="help-response-note">We respond within 24 hours</p>
-      </div>
-
+<section class="article-hero" aria-labelledby="articleHeading">
+  <div class="article-hero__inner">
+    <nav class="article-hero__breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      <a href="/learn.html">Learn</a>
+      <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      <span>A Beginner Stretching Routine for Tight Muscles</span>
+    </nav>
+    <span class="program-badge badge--stretching">Stretching</span>
+    <h1 id="articleHeading">A Beginner Stretching Routine for Tight Muscles</h1>
+    <div class="article-hero__meta">
+      <span class="article-hero__read-time">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        5 min read
+      </span>
     </div>
   </div>
 </section>
-
-
 <!-- =========================================================================
-     5. BOOKING POLICIES
+     2. ARTICLE BODY
      ========================================================================= -->
-<section class="policies-section reveal" aria-labelledby="policiesHeading">
-  <div class="policies-section__inner">
-    <h2 id="policiesHeading">Booking Policies</h2>
-
-    <div class="policy-list">
-
-      <div class="policy-item">
-        <button class="policy-item__question" aria-expanded="false" type="button">
-          <span class="policy-item__question-text">Cancellation Policy</span>
-          <span class="policy-item__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-          </span>
-        </button>
-        <div class="policy-item__answer" role="region">
-          <div class="policy-item__answer-inner">
-            Cancel up to 24 hours before class for full credit. Cancellations made within 24 hours of the class start time may forfeit the class credit. Please contact us as early as possible if you are unable to attend.
-          </div>
-        </div>
-      </div>
-
-      <div class="policy-item">
-        <button class="policy-item__question" aria-expanded="false" type="button">
-          <span class="policy-item__question-text">Late Arrival Policy</span>
-          <span class="policy-item__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-          </span>
-        </button>
-        <div class="policy-item__answer" role="region">
-          <div class="policy-item__answer-inner">
-            Please arrive 10 minutes early to allow time to change and warm up. Entry after 10 minutes may be refused for safety reasons — particularly for aerial and pole classes where a proper warm-up is essential to prevent injury.
-          </div>
-        </div>
-      </div>
-
-      <div class="policy-item">
-        <button class="policy-item__question" aria-expanded="false" type="button">
-          <span class="policy-item__question-text">First-Time Visitors</span>
-          <span class="policy-item__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-          </span>
-        </button>
-        <div class="policy-item__answer" role="region">
-          <div class="policy-item__answer-inner">
-            Arrive 15 minutes early to complete your waiver and meet your instructor. What to bring: water bottle, towel, and appropriate clothing for your class type. See the "Preparing for Your Class" section below for specific clothing requirements by program.
-          </div>
-        </div>
-      </div>
-
-      <div class="policy-item">
-        <button class="policy-item__question" aria-expanded="false" type="button">
-          <span class="policy-item__question-text">Medical Clearance</span>
-          <span class="policy-item__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-          </span>
-        </button>
-        <div class="policy-item__answer" role="region">
-          <div class="policy-item__answer-inner">
-            Recovery Movement classes require medical clearance from your treating practitioner before attending. Please contact us prior to booking a Recovery class to discuss your requirements. This policy exists to ensure your safety and the safety of other students.
-          </div>
-        </div>
-      </div>
-
+<section class="article-body" aria-label="Article content">
+  <div class="article-body__inner">
+    <div class="coming-soon-notice">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      <h2>Article Coming Soon</h2>
+      <p>Ten minutes a day is all it takes. This beginner routine targets the hips, hamstrings, and lower back.</p>
+      <p>This guide is being written by our instructors. Check back soon for the full article.</p>
+      <a href="/learn.html" class="cta-button">Back to Learn</a>
     </div>
   </div>
 </section>
-
-
-<!-- =========================================================================
-     6. WHAT TO BRING
-     ========================================================================= -->
-<section class="bring-section reveal" aria-labelledby="bringHeading">
-  <div class="bring-section__inner">
-    <h2 id="bringHeading">Preparing for Your Class</h2>
-
-    <div class="bring-grid">
-
-      <div class="bring-card reveal reveal-delay-1">
-        <div class="bring-card__icon" aria-hidden="true">
-          <!-- Lucide: music -->
-          <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
-        </div>
-        <h3 class="bring-card__type">Dance</h3>
-        <ul class="bring-list">
-          <li>
-            <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Comfortable activewear
-          </li>
-          <li>
-            <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Water bottle
-          </li>
-          <li>
-            <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Indoor shoes or bare feet
-          </li>
-        </ul>
-      </div>
-
-      <div class="bring-card reveal reveal-delay-2">
-        <div class="bring-card__icon" aria-hidden="true">
-          <!-- Lucide: trending-up -->
-          <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
-        </div>
-        <h3 class="bring-card__type">Pole Fitness</h3>
-        <ul class="bring-list">
-          <li>
-            <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Shorts and tank top (skin grip needed)
-          </li>
-          <li>
-            <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            No lotion or oils before class
-          </li>
-          <li>
-            <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Water bottle
-          </li>
-        </ul>
-      </div>
-
-      <div class="bring-card reveal reveal-delay-3">
-        <div class="bring-card__icon" aria-hidden="true">
-          <!-- Lucide: wind -->
-          <svg viewBox="0 0 24 24"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg>
-        </div>
-        <h3 class="bring-card__type">Yoga</h3>
-        <ul class="bring-list">
-          <li>
-            <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Comfortable, stretchy clothing
-          </li>
-          <li>
-            <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Mat provided by studio
-          </li>
-          <li>
-            <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Water bottle
-          </li>
-        </ul>
-      </div>
-
-      <div class="bring-card reveal reveal-delay-4">
-        <div class="bring-card__icon" aria-hidden="true">
-          <!-- Lucide: layers -->
-          <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-        </div>
-        <h3 class="bring-card__type">Aerial</h3>
-        <ul class="bring-list">
-          <li>
-            <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Form-fitting clothing covering torso and legs
-          </li>
-          <li>
-            <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            No jewellery
-          </li>
-          <li>
-            <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Water bottle
-          </li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- =========================================================================
-     FOOTER — copy contents of /components/footer-component.html here
-     ========================================================================= -->
-
-
-<!-- =========================================================================
-     PAGE-SPECIFIC JAVASCRIPT
-     ========================================================================= -->
-<script>
-(function () {
-  'use strict';
-
-  /* -------------------------------------------------------------------------
-     1. Load contact info from site-config.json
-  ------------------------------------------------------------------------- */
-  fetch('/site-config.json')
-    .then(function (res) { return res.json(); })
-    .then(function (config) {
-      var contact = config.business && config.business.contact;
-      if (!contact) return;
-
-      var emailEl = document.getElementById('contactEmail');
-      if (emailEl && contact.email) {
-        emailEl.href = 'mailto:' + contact.email;
-        emailEl.textContent = contact.email;
-      }
-
-      var phoneEl = document.getElementById('contactPhone');
-      if (phoneEl && contact.phone) {
-        var raw = contact.phone.replace(/\s/g, '');
-        phoneEl.href = 'tel:' + raw;
-        phoneEl.textContent = contact.phone;
-      }
-
-      /* Class Manager iframe — swap placeholder if URL is configured */
-      var booking = config.booking;
-      if (booking && booking.timetable_url && booking.timetable_url !== '' && booking.timetable_url.indexOf('placeholder') === -1) {
-        var placeholder = document.getElementById('calendarPlaceholder');
-        if (placeholder) {
-          var iframe = document.createElement('iframe');
-          iframe.id = 'class-manager-calendar';
-          iframe.src = booking.timetable_url;
-          iframe.width = '100%';
-          iframe.height = '900px';
-          iframe.setAttribute('frameborder', '0');
-          iframe.title = 'UNDRGRND Movement Class Schedule';
-          iframe.loading = 'lazy';
-          placeholder.parentNode.replaceChild(iframe, placeholder);
-        }
-      }
-    })
-    .catch(function (err) {
-      console.warn('timetable.html: site-config.json load error —', err.message);
-    });
-
-  /* -------------------------------------------------------------------------
-     2. Booking policies accordion
-  ------------------------------------------------------------------------- */
-  document.querySelectorAll('.policy-item__question').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var item   = btn.closest('.policy-item');
-      var isOpen = item.classList.contains('open');
-      document.querySelectorAll('.policy-item').forEach(function (el) {
-        el.classList.remove('open');
-        el.querySelector('.policy-item__question').setAttribute('aria-expanded', 'false');
-      });
-      if (!isOpen) {
-        item.classList.add('open');
-        btn.setAttribute('aria-expanded', 'true');
-      }
-    });
-  });
-
-  /* -------------------------------------------------------------------------
-     5. Scroll animations
-  ------------------------------------------------------------------------- */
-  var revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    revealEls.forEach(function (el) { observer.observe(el); });
-  } else {
-    revealEls.forEach(function (el) { el.classList.add('visible'); });
-  }
-
-}());
-</script>
-
-
-<!--
-  UNDRGRND Movement — Footer Component
-  File: /components/footer-component.html
-
   Usage: Copy this entire block into any page <body>, as the last element before </body>.
   Dependencies:
     - /css/global.css (must be loaded in <head>)
@@ -2468,40 +1430,8 @@ window.addEventListener('scroll', () => {
   }
 });
 </script>
+</body>
+</html>
 
-<!-- Class Manager Scripts -->
-<script src="https://cdn.classmanager.com/assets/app/js/embed-script.js" defer></script>
-<script>
-  const data_config = {
-    styles: {
-      'thClasses': null,
-      'tdClasses': null,
-      'trClasses': null,
-      'tableClasses': null,
-      'theadClasses': null,
-      'tbodyClasses': null,
-    },
-    type: 'season',
-    id: 1,
-    layout: 'table',
-    data: ['time','location','class','staff','price']
-  };
-
-  const cm_config = {
-    div_id: 'timetable',
-    public_key: 'c8b02e58-1d42-4611-9426-696e72a43630',
-    company_url: 'undrgrnd-movement'
-  };
-
-  // Hide loading message once timetable loads
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      const loadingDiv = document.getElementById('timetable-loading');
-      if (loadingDiv && document.getElementById('timetable').children.length > 0) {
-        loadingDiv.style.display = 'none';
-      }
-    }, 2000);
-  });
-</script>
 </body>
 </html>

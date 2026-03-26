@@ -121,6 +121,10 @@
         "href": "/about.html"
       },
       {
+        "label": "Learn",
+        "href": "/learn.html"
+      },
+      {
         "label": "Contact",
         "href": "/contact.html"
       }

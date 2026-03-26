@@ -1,12 +1,55 @@
 # UNDRGRND Movement - Robots.txt
+# https://www.undrgrnd.com.au
+
+# =====================================================================
+# Standard web crawlers
+# =====================================================================
 User-agent: *
 Allow: /
-
-# Allow AI crawlers to access llms.txt
-Allow: /llms.txt
-
-# Sitemap
-Sitemap: https://www.undrgrnd.com.au/sitemap.xml
-
-# No restrictions - all pages are public
 Disallow:
+
+# =====================================================================
+# AI & LLM crawlers — explicitly permitted
+# =====================================================================
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# =====================================================================
+# LLM context file — provides structured data for AI models
+# =====================================================================
+# llms.txt: https://www.undrgrnd.com.au/llms.txt
+
+# =====================================================================
+# Sitemap
+# =====================================================================
+Sitemap: https://www.undrgrnd.com.au/sitemap.xml

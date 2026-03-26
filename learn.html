@@ -3,290 +3,143 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Title & Meta Description -->
-  <title>Learn | Movement Guides &amp; Tips | UNDRGRND Movement Gold Coast</title>
-  <meta name="description" content="Free movement guides from UNDRGRND Movement, Southport Gold Coast. Learn how to stretch, improve flexibility, start pole fitness, yoga, aerial &amp; dance.">
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.undrgrnd.com.au/learn.html">
-  <!-- Robots -->
+  <title>Learn | Movement Guides & Tips | UNDRGRND Movement Gold Coast</title>
+  <meta name="description" content="Practical guides on flexibility, pole fitness, yoga, aerial, and dance. Written for beginners, useful for everyone. From UNDRGRND Movement, Southport Gold Coast.">
   <meta name="robots" content="index, follow">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <!-- Global CSS -->
+  <link rel="canonical" href="https://www.undrgrnd.com.au/learn.html">
   <link rel="stylesheet" href="/css/global.css">
-  <!-- Schema Generator -->
-  <script src="/js/schema-generator.js"></script>
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
+  <meta property="og:title" content="Learn | Movement Guides & Tips | UNDRGRND Movement">
+  <meta property="og:description" content="Practical guides on flexibility, pole fitness, yoga, aerial, and dance. Written for beginners, useful for everyone.">
   <meta property="og:url" content="https://www.undrgrnd.com.au/learn.html">
-  <meta property="og:title" content="Learn | Movement Guides &amp; Tips | UNDRGRND Movement Gold Coast">
-  <meta property="og:description" content="Free movement guides from UNDRGRND Movement, Southport Gold Coast. Stretching, flexibility, pole fitness, yoga, aerial and dance tips for beginners.">
+  <meta property="og:type" content="website">
   <meta property="og:image" content="https://www.undrgrnd.com.au/images/og-image.webp">
-  <!-- Page-specific styles -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.undrgrnd.com.au/images/og-image.webp">
   <style>
-    /* -----------------------------------------------------------------------
-       HERO
-    ----------------------------------------------------------------------- */
     .learn-hero {
-      padding: 9rem 5% 5rem;
-      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139, 92, 246, 0.18) 0%, transparent 70%), #0A0A0A;
+      background: linear-gradient(180deg, #0d0d0d 0%, #1a0a2e 100%);
+      padding: 120px 24px 64px;
       text-align: center;
     }
-    .learn-hero__eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
+    .learn-hero__label {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      color: #9b6dff;
       text-transform: uppercase;
-      color: #A78BFA;
-      margin-bottom: 1.25rem;
-    }
-    .learn-hero__eyebrow::before {
-      content: '';
-      display: block;
-      width: 28px;
-      height: 2px;
-      background: linear-gradient(135deg, #8B5CF6, #EC4899);
-      border-radius: 2px;
-    }
-    .learn-hero__eyebrow::after {
-      content: '';
-      display: block;
-      width: 28px;
-      height: 2px;
-      background: linear-gradient(135deg, #8B5CF6, #EC4899);
-      border-radius: 2px;
-    }
-    .learn-hero h1 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(3rem, 8vw, 5.5rem);
-      line-height: 1.0;
-      letter-spacing: 2px;
-      color: #FFFFFF;
-      margin: 0 0 1.25rem;
-    }
-    .learn-hero__sub {
-      font-size: clamp(1rem, 2vw, 1.15rem);
-      color: #A1A1A1;
-      line-height: 1.7;
-      max-width: 560px;
-      margin: 0 auto;
-    }
-    /* -----------------------------------------------------------------------
-       ARTICLES GRID
-    ----------------------------------------------------------------------- */
-    .learn-section {
-      background: #0D0D0D;
-      padding: 5rem 5%;
-    }
-    .learn-section__inner {
-      max-width: 1400px;
-      margin-inline: auto;
-    }
-    .learn-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-    @media (min-width: 640px) {
-      .learn-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    @media (min-width: 1024px) {
-      .learn-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-    /* -----------------------------------------------------------------------
-       ARTICLE CARD
-    ----------------------------------------------------------------------- */
-    .learn-card {
-      background: #1A1A1A;
-      border: 1px solid rgba(139, 92, 246, 0.2);
-      border-radius: 20px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: all 0.35s ease;
-    }
-    .learn-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(139, 92, 246, 0.45);
-      box-shadow: 0 20px 50px rgba(139, 92, 246, 0.15);
-    }
-    .learn-card__img {
-      height: 160px;
+      margin-bottom: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-shrink: 0;
+      gap: 12px;
     }
-    .learn-card__img svg {
-      width: 48px;
-      height: 48px;
-      fill: none;
-      stroke-width: 1.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
+    .learn-hero__label::before,
+    .learn-hero__label::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: #9b6dff;
     }
-    .learn-card__body {
-      padding: 1.75rem 1.75rem 1rem;
+    .learn-hero__title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #fff;
+      margin: 0 0 16px;
+      letter-spacing: 0.04em;
+    }
+    .learn-hero__sub {
+      font-size: 1.1rem;
+      color: #aaa;
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .learn-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 64px 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .learn-card {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 16px;
+      padding: 32px;
+      text-decoration: none;
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
-      flex: 1;
+      gap: 12px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .learn-card:hover {
+      border-color: #9b6dff;
+      transform: translateY(-4px);
+    }
+    .learn-card__icon {
+      margin-bottom: 4px;
+    }
+    .learn-card__category {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
     }
     .learn-card__title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.45rem;
-      letter-spacing: 1px;
-      color: #FFFFFF;
-      line-height: 1.15;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #fff;
       margin: 0;
+      line-height: 1.2;
     }
     .learn-card__desc {
       font-size: 0.9rem;
-      color: #A1A1A1;
+      color: #999;
       line-height: 1.6;
+      margin: 0;
+      flex: 1;
     }
     .learn-card__meta {
-      margin-top: auto;
-      padding-top: 0.5rem;
-    }
-    .learn-card__read-time {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
       font-size: 0.78rem;
-      font-weight: 600;
-      color: #A1A1A1;
-      letter-spacing: 0.04em;
+      color: #555;
+      margin-top: 4px;
     }
-    .learn-card__read-time svg {
-      width: 14px;
-      height: 14px;
-      stroke: #8B5CF6;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      flex-shrink: 0;
-    }
-    .learn-card__actions {
-      padding: 0 1.75rem 1.75rem;
-    }
-    .learn-card__actions .cta-button {
-      width: 100%;
-      justify-content: center;
-    }
-    /* -----------------------------------------------------------------------
-       BADGE COLOURS (re-used from program cards)
-    ----------------------------------------------------------------------- */
-    .badge--dance         { background: rgba(236, 72, 153, 0.15); color: #F472B6; border-color: rgba(236, 72, 153, 0.25); }
-    .badge--pole          { background: rgba(139, 92, 246, 0.15); color: #A78BFA; border-color: rgba(139, 92, 246, 0.25); }
-    .badge--yoga          { background: rgba(59, 130, 246, 0.15); color: #60A5FA; border-color: rgba(59, 130, 246, 0.25); }
-    .badge--aerial        { background: rgba(16, 185, 129, 0.15); color: #34D399; border-color: rgba(16, 185, 129, 0.25); }
-    .badge--stretching    { background: rgba(20, 184, 166, 0.15); color: #2DD4BF; border-color: rgba(20, 184, 166, 0.25); }
-    .program-badge {
-      display: inline-block;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.28rem 0.8rem;
-      border-radius: 50px;
-      border: 1px solid;
-      width: fit-content;
-    }
-    /* -----------------------------------------------------------------------
-       CTA SECTION
-    ----------------------------------------------------------------------- */
     .learn-cta {
-      background: linear-gradient(180deg, #0D0D0D 0%, #0A0A0A 100%);
-      padding: 5rem 5%;
+      background: #0d0d0d;
+      border-top: 1px solid #222;
+      padding: 80px 24px;
       text-align: center;
-      border-top: 1px solid rgba(139, 92, 246, 0.15);
     }
-    .learn-cta__inner {
-      max-width: 640px;
-      margin-inline: auto;
+    .learn-cta__title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #fff;
+      margin: 0 0 16px;
     }
-    .learn-cta h2 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(2rem, 5vw, 3rem);
-      letter-spacing: 1px;
-      color: #FFFFFF;
-      margin: 0 0 1rem;
-    }
-    .learn-cta p {
-      font-size: 1rem;
-      color: #A1A1A1;
-      line-height: 1.7;
-      margin: 0 0 2rem;
+    .learn-cta__sub {
+      color: #aaa;
+      max-width: 480px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
     }
     .learn-cta__buttons {
       display: flex;
-      gap: 1rem;
+      gap: 16px;
       justify-content: center;
       flex-wrap: wrap;
     }
   </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": [
-    "LocalBusiness",
-    "DanceSchool"
-  ],
-  "@id": "https://www.undrgrnd.com.au/#business",
-  "name": "UNDRGRND Movement",
-  "description": "Boutique movement studio in Southport offering beginner-friendly dance, pole fitness, yoga, and aerial classes for adults and kids on the Gold Coast.",
-  "url": "https://www.undrgrnd.com.au",
-  "telephone": "+61721402690",
-  "email": "undrgrndgc@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "163 Ferry Rd",
-    "addressLocality": "Southport",
-    "addressRegion": "QLD",
-    "postalCode": "4215",
-    "addressCountry": "AU"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": -27.9654,
-    "longitude": 153.4076
-  },
-  "sameAs": [
-    "https://www.undrgrnd.com.au",
-    "https://maps.app.goo.gl/UMrxgrQbENHh1y7U9"
-  ]
-}
-</script>
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://www.undrgrnd.com.au/images/og-image.webp">
 </head>
 <body>
-  File: /components/nav-component.html
 
-  Usage: Copy this entire block into any page <body>, as the first element.
-  Dependencies:
-    - /css/global.css (must be loaded in <head>)
-    - site-config.json (navigation data loaded via fetch in <script> below)
-
-  Navigation data source: site-config.json → navigation.main_menu, navigation.cta_button
--->
-
-<!-- =====================================================================
-     NAV STYLES (scoped to this component)
-     ===================================================================== -->
 <style>
   /* --- Header / Nav wrapper --- */
   .site-nav {
@@ -860,205 +713,98 @@
 </script>
 
 
-<!-- =========================================================================
-     1. HERO
-     ========================================================================= -->
-<section class="learn-hero" aria-labelledby="learnHeroHeading">
-  <p class="learn-hero__eyebrow">UNDRGRND Movement &mdash; Southport, Gold Coast</p>
-  <h1 id="learnHeroHeading">Learn</h1>
+
+<section class="learn-hero">
+  <p class="learn-hero__label">UNDRGRND MOVEMENT — SOUTHPORT, GOLD COAST</p>
+  <h1 class="learn-hero__title">Learn</h1>
   <p class="learn-hero__sub">Practical guides on movement, flexibility, and fitness. Written for beginners, useful for everyone.</p>
 </section>
-<!-- =========================================================================
-     2. ARTICLES GRID
-     ========================================================================= -->
-<section class="learn-section" aria-labelledby="articlesHeading">
-  <div class="learn-section__inner">
-    <div class="learn-grid" role="list">
-    <article class="learn-card" aria-label="How to Do the Splits">
-      <div class="learn-card__img" style="background: linear-gradient(135deg, rgba(20, 184, 166, 0.18), rgba(59, 130, 246, 0.08));">
-        <svg aria-hidden="true" viewBox="0 0 24 24" style="stroke: rgba(20, 184, 166, 0.6);"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-      </div>
-      <div class="learn-card__body">
-        <span class="program-badge badge--stretching">Flexibility</span>
+
+<div class="learn-grid">
+
+      <a href="/learn/how-to-do-the-splits.html" class="learn-card">
+        <div class="learn-card__icon" style="color:#00bfa5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <span class="learn-card__category" style="color:#00bfa5">Flexibility</span>
         <h2 class="learn-card__title">How to Do the Splits</h2>
-        <p class="learn-card__desc">A step-by-step guide to safely working towards your full splits, no matter where you are starting from.</p>
-        <div class="learn-card__meta">
-          <span class="learn-card__read-time">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            6 min read
-          </span>
+        <p class="learn-card__desc">A step-by-step guide to safely working towards your full splits, whether you're a complete beginner or returning after a break.</p>
+        <span class="learn-card__meta">8 min read</span>
+      </a>
+      <a href="/learn/beginner-stretching-routine.html" class="learn-card">
+        <div class="learn-card__icon" style="color:#7c4dff">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
         </div>
-      </div>
-      <div class="learn-card__actions">
-        <a href="/learn/how-to-do-the-splits.html" class="cta-button">Read Article</a>
-      </div>
-    </article>
-    <article class="learn-card" aria-label="A Beginner Stretching Routine for Tight Muscles">
-      <div class="learn-card__img" style="background: linear-gradient(135deg, rgba(20, 184, 166, 0.18), rgba(59, 130, 246, 0.08));">
-        <svg aria-hidden="true" viewBox="0 0 24 24" style="stroke: rgba(20, 184, 166, 0.6);"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-      </div>
-      <div class="learn-card__body">
-        <span class="program-badge badge--stretching">Stretching</span>
+        <span class="learn-card__category" style="color:#7c4dff">Stretching</span>
         <h2 class="learn-card__title">A Beginner Stretching Routine for Tight Muscles</h2>
-        <p class="learn-card__desc">Ten minutes a day is all it takes. This beginner routine targets the hips, hamstrings, and lower back.</p>
-        <div class="learn-card__meta">
-          <span class="learn-card__read-time">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            5 min read
-          </span>
+        <p class="learn-card__desc">A simple daily stretching routine designed for people who sit at a desk all day or haven't stretched in years.</p>
+        <span class="learn-card__meta">6 min read</span>
+      </a>
+      <a href="/learn/what-to-expect-first-pole-class.html" class="learn-card">
+        <div class="learn-card__icon" style="color:#e040fb">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
         </div>
-      </div>
-      <div class="learn-card__actions">
-        <a href="/learn/beginner-stretching-routine.html" class="cta-button">Read Article</a>
-      </div>
-    </article>
-    <article class="learn-card" aria-label="What to Expect in Your First Pole Fitness Class">
-      <div class="learn-card__img" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(167, 139, 250, 0.1));">
-        <svg aria-hidden="true" viewBox="0 0 24 24" style="stroke: rgba(139, 92, 246, 0.6);"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-      </div>
-      <div class="learn-card__body">
-        <span class="program-badge badge--pole">Pole Fitness</span>
+        <span class="learn-card__category" style="color:#e040fb">Pole Fitness</span>
         <h2 class="learn-card__title">What to Expect in Your First Pole Fitness Class</h2>
-        <p class="learn-card__desc">First class nerves are completely normal. Here is exactly what happens in a beginner pole session so you know what to expect.</p>
-        <div class="learn-card__meta">
-          <span class="learn-card__read-time">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            4 min read
-          </span>
+        <p class="learn-card__desc">Everything you need to know before your first pole class — what to wear, what to bring, and what actually happens.</p>
+        <span class="learn-card__meta">5 min read</span>
+      </a>
+      <a href="/learn/how-to-do-a-backbend.html" class="learn-card">
+        <div class="learn-card__icon" style="color:#00bfa5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
         </div>
-      </div>
-      <div class="learn-card__actions">
-        <a href="/learn/what-to-expect-first-pole-class.html" class="cta-button">Read Article</a>
-      </div>
-    </article>
-    <article class="learn-card" aria-label="How to Do a Backbend Safely">
-      <div class="learn-card__img" style="background: linear-gradient(135deg, rgba(20, 184, 166, 0.18), rgba(59, 130, 246, 0.08));">
-        <svg aria-hidden="true" viewBox="0 0 24 24" style="stroke: rgba(20, 184, 166, 0.6);"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-      </div>
-      <div class="learn-card__body">
-        <span class="program-badge badge--stretching">Flexibility</span>
+        <span class="learn-card__category" style="color:#00bfa5">Flexibility</span>
         <h2 class="learn-card__title">How to Do a Backbend Safely</h2>
-        <p class="learn-card__desc">Backbends require a combination of flexibility and strength. Learn how to build both progressively and safely.</p>
-        <div class="learn-card__meta">
-          <span class="learn-card__read-time">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            7 min read
-          </span>
+        <p class="learn-card__desc">Learn how to build the strength and flexibility needed for a safe, supported backbend — from beginner bridges to full wheel pose.</p>
+        <span class="learn-card__meta">7 min read</span>
+      </a>
+      <a href="/learn/aerial-yoga-for-beginners.html" class="learn-card">
+        <div class="learn-card__icon" style="color:#00e5ff">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
         </div>
-      </div>
-      <div class="learn-card__actions">
-        <a href="/learn/how-to-do-a-backbend.html" class="cta-button">Read Article</a>
-      </div>
-    </article>
-    <article class="learn-card" aria-label="Aerial Yoga for Beginners: Everything You Need to Know">
-      <div class="learn-card__img" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.18), rgba(59, 130, 246, 0.08));">
-        <svg aria-hidden="true" viewBox="0 0 24 24" style="stroke: rgba(16, 185, 129, 0.6);"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-      </div>
-      <div class="learn-card__body">
-        <span class="program-badge badge--aerial">Aerial</span>
+        <span class="learn-card__category" style="color:#00e5ff">Aerial</span>
         <h2 class="learn-card__title">Aerial Yoga for Beginners: Everything You Need to Know</h2>
-        <p class="learn-card__desc">Suspended from a silk hammock, aerial yoga is gentler than it looks. Find out what makes it different and who it is for.</p>
-        <div class="learn-card__meta">
-          <span class="learn-card__read-time">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            5 min read
-          </span>
+        <p class="learn-card__desc">What is aerial yoga, who is it for, and what can you expect in your first class? All your questions answered.</p>
+        <span class="learn-card__meta">6 min read</span>
+      </a>
+      <a href="/learn/benefits-of-dance-for-adults.html" class="learn-card">
+        <div class="learn-card__icon" style="color:#ff4081">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
         </div>
-      </div>
-      <div class="learn-card__actions">
-        <a href="/learn/aerial-yoga-for-beginners.html" class="cta-button">Read Article</a>
-      </div>
-    </article>
-    <article class="learn-card" aria-label="The Benefits of Dance Classes for Adults">
-      <div class="learn-card__img" style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.18), rgba(139, 92, 246, 0.1));">
-        <svg aria-hidden="true" viewBox="0 0 24 24" style="stroke: rgba(236, 72, 153, 0.6);"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-      </div>
-      <div class="learn-card__body">
-        <span class="program-badge badge--dance">Dance</span>
+        <span class="learn-card__category" style="color:#ff4081">Dance</span>
         <h2 class="learn-card__title">The Benefits of Dance Classes for Adults</h2>
-        <p class="learn-card__desc">Dance is not just for kids. Discover the physical, mental, and social benefits of starting dance as an adult.</p>
-        <div class="learn-card__meta">
-          <span class="learn-card__read-time">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            6 min read
-          </span>
+        <p class="learn-card__desc">Why more adults are returning to dance — and the surprising physical, mental, and social benefits that come with it.</p>
+        <span class="learn-card__meta">5 min read</span>
+      </a>
+      <a href="/learn/yoga-for-beginners-gold-coast.html" class="learn-card">
+        <div class="learn-card__icon" style="color:#448aff">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
         </div>
-      </div>
-      <div class="learn-card__actions">
-        <a href="/learn/benefits-of-dance-for-adults.html" class="cta-button">Read Article</a>
-      </div>
-    </article>
-    <article class="learn-card" aria-label="Starting Yoga: A Guide for Complete Beginners">
-      <div class="learn-card__img" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.18), rgba(139, 92, 246, 0.08));">
-        <svg aria-hidden="true" viewBox="0 0 24 24" style="stroke: rgba(59, 130, 246, 0.6);"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-      </div>
-      <div class="learn-card__body">
-        <span class="program-badge badge--yoga">Yoga</span>
+        <span class="learn-card__category" style="color:#448aff">Yoga</span>
         <h2 class="learn-card__title">Starting Yoga: A Guide for Complete Beginners</h2>
-        <p class="learn-card__desc">You do not need to be flexible to start yoga. This guide covers what to wear, what to bring, and what to expect.</p>
-        <div class="learn-card__meta">
-          <span class="learn-card__read-time">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            5 min read
-          </span>
+        <p class="learn-card__desc">Everything a complete beginner needs to know about starting yoga — the styles, the poses, and what to expect in your first class.</p>
+        <span class="learn-card__meta">7 min read</span>
+      </a>
+      <a href="/learn/how-to-improve-flexibility.html" class="learn-card">
+        <div class="learn-card__icon" style="color:#00bfa5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
         </div>
-      </div>
-      <div class="learn-card__actions">
-        <a href="/learn/yoga-for-beginners-gold-coast.html" class="cta-button">Read Article</a>
-      </div>
-    </article>
-    <article class="learn-card" aria-label="How to Improve Your Flexibility: A Practical Guide">
-      <div class="learn-card__img" style="background: linear-gradient(135deg, rgba(20, 184, 166, 0.18), rgba(59, 130, 246, 0.08));">
-        <svg aria-hidden="true" viewBox="0 0 24 24" style="stroke: rgba(20, 184, 166, 0.6);"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-      </div>
-      <div class="learn-card__body">
-        <span class="program-badge badge--stretching">Flexibility</span>
+        <span class="learn-card__category" style="color:#00bfa5">Flexibility</span>
         <h2 class="learn-card__title">How to Improve Your Flexibility: A Practical Guide</h2>
-        <p class="learn-card__desc">Flexibility is a skill, not a talent. Learn the science behind stretching and the most effective methods to improve it.</p>
-        <div class="learn-card__meta">
-          <span class="learn-card__read-time">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            8 min read
-          </span>
-        </div>
-      </div>
-      <div class="learn-card__actions">
-        <a href="/learn/how-to-improve-flexibility.html" class="cta-button">Read Article</a>
-      </div>
-    </article>
-    </div>
+        <p class="learn-card__desc">A practical, science-backed guide to improving your flexibility at any age — including the most common mistakes to avoid.</p>
+        <span class="learn-card__meta">9 min read</span>
+      </a>
+</div>
+
+<section class="learn-cta">
+  <h2 class="learn-cta__title">Ready to Move?</h2>
+  <p class="learn-cta__sub">Reading about movement is a great start. The next step is experiencing it. Our beginner-friendly classes in Southport are open to everyone, no experience required.</p>
+  <div class="learn-cta__buttons">
+    <a href="/adults.html" class="cta-button">View Adult Classes</a>
+    <a href="/timetable.html" class="cta-secondary">See the Timetable</a>
   </div>
 </section>
-<!-- =========================================================================
-     3. CTA
-     ========================================================================= -->
-<section class="learn-cta" aria-labelledby="learnCtaHeading">
-  <div class="learn-cta__inner">
-    <h2 id="learnCtaHeading">Ready to Move?</h2>
-    <p>Reading about movement is a great start. The next step is experiencing it. Our beginner-friendly classes in Southport are open to everyone, no experience required.</p>
-    <div class="learn-cta__buttons">
-      <a href="/adults.html" class="cta-button">View Adult Classes</a>
-      <a href="/timetable.html" class="cta-secondary">See the Timetable</a>
-    </div>
-  </div>
-</section>
-  Usage: Copy this entire block into any page <body>, as the last element before </body>.
-  Dependencies:
-    - /css/global.css (must be loaded in <head>)
-    - site-config.json (footer data loaded via fetch in <script> below)
 
-  Data sources:
-    - project.tagline
-    - business.legal_name, business.address, business.contact, business.hours
-    - navigation.main_menu
-
-  NAP CONSISTENCY: Name, Address, Phone are rendered directly from
-  site-config.json to ensure exact match with Google My Business.
--->
-
-<!-- =====================================================================
-     FOOTER STYLES (scoped to this component)
-     ===================================================================== -->
 <style>
   /* --- Footer wrapper --- */
   .site-footer {
@@ -1673,8 +1419,6 @@ window.addEventListener('scroll', () => {
   }
 });
 </script>
-</body>
-</html>
 
 </body>
 </html>

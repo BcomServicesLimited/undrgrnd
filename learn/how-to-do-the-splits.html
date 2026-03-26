@@ -292,6 +292,47 @@
       margin-top: 3rem;
       text-align: center;
     }
+    /* ---- Step Illustration Panels ---- */
+    .steps-illustration {
+      margin: 2rem 0 2.5rem;
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      border-radius: 14px;
+      overflow: hidden;
+      background: #0a0a0a;
+      box-shadow: 0 0 40px rgba(139, 92, 246, 0.12), 0 0 80px rgba(236, 72, 153, 0.06);
+      animation: stepGlowIn 0.8s ease-out both;
+    }
+    .steps-illustration .article-image {
+      aspect-ratio: 16/9;
+      object-fit: contain;
+      background: #0a0a0a;
+      padding: 0.5rem 0;
+    }
+    .steps-illustration figcaption {
+      background: rgba(139, 92, 246, 0.07);
+      border-top: 1px solid rgba(139, 92, 246, 0.2);
+      color: #9b6dff;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 0.88rem;
+      letter-spacing: 0.01em;
+      padding: 0.75rem 1.25rem;
+      text-align: center;
+    }
+    @keyframes stepGlowIn {
+      from { opacity: 0; transform: translateY(16px); box-shadow: none; }
+      to   { opacity: 1; transform: translateY(0);    box-shadow: 0 0 40px rgba(139,92,246,0.12), 0 0 80px rgba(236,72,153,0.06); }
+    }
+    /* Intersection Observer fade-in for step panels */
+    .steps-illustration.hidden-until-visible {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .steps-illustration.hidden-until-visible.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body>
@@ -954,6 +995,11 @@
     <li><strong>Frog Pose:</strong> A deep groin opener essential for middle splits. Hold for 60 to 90 seconds.</li>
   </ul>
 
+  <figure class="article-image-container steps-illustration">
+    <img src="/images/learn/steps-warmup.webp" alt="Six warm-up stretch poses illustrated as glowing neon figures: runner's lunge, half pigeon, standing forward fold, butterfly, wide-legged fold, and frog pose" class="article-image" width="1376" height="768" loading="lazy">
+    <figcaption>The 6 essential warm-up stretches before splits training — complete all 6 before moving on to split progressions.</figcaption>
+  </figure>
+
   <h2 id="front-splits">Mastering the Front Splits</h2>
   <p>The front split involves extending one leg straight forward and the other straight back, with both legs flat on the ground. To achieve a "square" front split, your hips must face directly forward rather than twisting open to the side. A twisted hip position is a common shortcut that reduces the effective stretch on the hip flexors and gives a false impression of depth.</p>
 
@@ -973,6 +1019,11 @@
     <li>Hold the position where you feel a deep, manageable stretch. Do not bounce. Breathe deeply and hold for 30 to 60 seconds, or longer if comfortable.</li>
     <li>To exit the stretch safely, bend your front knee and step back into a lunge before standing. Never push yourself out of a deep stretch quickly.</li>
   </ol>
+
+  <figure class="article-image-container steps-illustration">
+    <img src="/images/learn/steps-front-splits.webp" alt="Six progressive steps toward a front split illustrated as glowing neon figures: from low lunge through to full flat front split" class="article-image" width="1376" height="768" loading="lazy">
+    <figcaption>The 6-step front split progression — each step builds on the last. Never skip ahead; let your body adapt before moving forward.</figcaption>
+  </figure>
 
   <p>As your flexibility improves over weeks and months, you will find your hips gradually sinking closer to the floor. Use blocks or folded blankets under your front thigh as support while you build towards the full flat position. This is called a "supported split" and is an excellent training tool.</p>
 
@@ -995,6 +1046,11 @@
     <li>To exit, walk your hands back toward your body and carefully bring your feet back together, bending your knees as needed.</li>
   </ol>
 
+  <figure class="article-image-container steps-illustration">
+    <img src="/images/learn/steps-middle-splits.webp" alt="Five progressive steps toward a middle split illustrated as glowing neon figures: from wide-legged standing through to full flat straddle split" class="article-image" width="1376" height="768" loading="lazy">
+    <figcaption>The 5-step middle split progression — viewed from the front. The key is keeping your knees and toes pointing upward throughout.</figcaption>
+  </figure>
+
   <p>A highly effective training method for middle splits is the wall straddle. Lie on your back with your legs extended up the wall, then allow gravity to slowly open your legs into a straddle. This passive stretch is extremely effective because your muscles can fully relax against gravity. Hold for 3 to 5 minutes for maximum benefit.</p>
 
   <h2 id="oversplits">Advanced Training: The Oversplits</h2>
@@ -1014,6 +1070,11 @@
     <li><strong>Incorporate PNF stretching:</strong> Proprioceptive Neuromuscular Facilitation (PNF) involves contracting the target muscle isometrically for 5 to 10 seconds, then relaxing and sinking deeper. This technique is highly effective for advanced flexibility gains.</li>
     <li><strong>Never train oversplits cold:</strong> Always complete a full warm-up and reach your flat split before attempting any elevated variation.</li>
   </ul>
+
+  <figure class="article-image-container steps-illustration">
+    <img src="/images/learn/steps-oversplits.webp" alt="Four progressive oversplit stages illustrated as glowing neon figures: flat split, then front foot elevated on progressively higher yoga blocks" class="article-image" width="1376" height="768" loading="lazy">
+    <figcaption>The 4-stage oversplit progression — only advance to the next block height when the current position feels comfortable and controlled.</figcaption>
+  </figure>
 
   <h2 id="timeline">How Long Does It Take?</h2>
   <p>This is the most common question, and the honest answer is: it depends. Your starting flexibility, training frequency, age, and individual anatomy all play a role. However, research and practical experience provide some general benchmarks.</p>
@@ -1710,6 +1771,39 @@
       }
     });
 
+}());
+</script>
+
+<script>
+// Scroll-reveal for step illustration panels
+(function() {
+  var panels = document.querySelectorAll('.steps-illustration');
+  if (!panels.length) return;
+  panels.forEach(function(el) {
+    el.classList.remove('hidden-until-visible');
+    el.style.animation = 'none';
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease, box-shadow 0.7s ease';
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          entry.target.style.boxShadow = '0 0 40px rgba(139,92,246,0.18), 0 0 80px rgba(236,72,153,0.08)';
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    panels.forEach(function(el) { io.observe(el); });
+  } else {
+    panels.forEach(function(el) {
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+    });
+  }
 }());
 </script>
 

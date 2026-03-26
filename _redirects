@@ -1,0 +1,20 @@
+# UNDRGRND Movement — 301 Redirects
+# Fixes dead program URLs found in Google Search Console (March 2026)
+
+# Old program page slugs → current page slugs
+/programs/aerial-silks.html          /programs/aerial-silks-foundations.html          301
+/programs/aerial-yoga.html           /programs/aerial-yoga-foundations.html           301
+/programs/choreography-fusion.html   /programs/choreography-fusion-foundations.html   301
+/programs/movement-dance.html        /programs/movement-flow-foundations.html         301
+/programs/recovery-movement.html     /programs/recovery-movement-flow-foundations.html 301
+
+# Old yoga page names → Fusion Yoga Foundations
+/programs/modern-yoga.html           /programs/fusion-yoga-foundations.html           301
+/programs/traditional-yoga.html      /programs/fusion-yoga-foundations.html           301
+/programs/yoga-fusion.html           /programs/fusion-yoga-foundations.html           301
+
+# Removed program — redirect to adults page
+/programs/afro-groove-foundations.html  /adults.html                                  301
+
+# Homepage clean URL redirect (prevents index.html redirect issue)
+/index.html                          /                                                 301

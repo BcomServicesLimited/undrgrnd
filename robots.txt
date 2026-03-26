@@ -2,6 +2,9 @@
 User-agent: *
 Allow: /
 
+# Allow AI crawlers to access llms.txt
+Allow: /llms.txt
+
 # Sitemap
 Sitemap: https://www.undrgrnd.com.au/sitemap.xml
 

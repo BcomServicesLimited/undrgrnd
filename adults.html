@@ -1916,10 +1916,10 @@
       });
     }
 
-    /* Drop-in price */
+    /* Per-class price */
     var priceHtml = '';
-    if (program.estimated_pricing && program.estimated_pricing.drop_in) {
-      priceHtml = '<p class="program-card__price">From <strong>$' + program.estimated_pricing.drop_in + '</strong> per class</p>';
+    if (program.price && !isComingSoon) {
+      priceHtml = '<p class="program-card__price"><strong>$' + program.price + '</strong> per class</p>';
     }
 
     /* Medical badge */

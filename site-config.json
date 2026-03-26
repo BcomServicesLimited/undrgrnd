@@ -151,11 +151,7 @@
             "Coordination and rhythm",
             "Full-body fitness through movement"
           ],
-          "estimated_pricing": {
-            "drop_in": 25,
-            "class_pack_10": 200,
-            "unlimited_monthly": 180
-          }
+          "price": 29
         },
         {
           "id": "movement-flow",
@@ -171,11 +167,7 @@
             "Smooth transitions and coordination",
             "Confidence through gentle movement"
           ],
-          "estimated_pricing": {
-            "drop_in": 25,
-            "class_pack_10": 200,
-            "unlimited_monthly": 180
-          },
+          "price": 35,
           "intensity": "Balanced",
           "status": "active",
           "full_description": "Move, explore, and reconnect with your body through natural, flowing movement. Movement Flow - Foundations is a beginner-friendly class built around simple sequences that help you move better, feel more confident, and develop your own way of moving. Rather than following a fixed dance style, this class blends different movement approaches into smooth, continuous patterns that feel natural and intuitive. You'll move through guided sequences that improve coordination, mobility, and overall body control without pressure to get everything perfect. With an emphasis on smooth transitions, posture, and ease of movement, you'll build strength, flexibility, and awareness through each curated, smooth, authentic, and holistic movement. Suitable for both men and women, this class offers a structured yet relaxed space to move freely, build confidence, and enjoy the process from the first session.",
@@ -198,10 +190,6 @@
             "Mindful, gradual progression"
           ],
           "medical_requirements": "Medical clearance from your healthcare provider is required before participating in this program. Please bring documentation to your first class.",
-          "estimated_pricing": {
-            "drop_in": 30,
-            "class_pack_8": 200
-          },
           "intensity": "Balanced",
           "status": "coming_soon"
         }
@@ -230,11 +218,6 @@
             "Safety-first approach to every movement",
             "Building foundational strength and control"
           ],
-          "estimated_pricing": {
-            "drop_in": 28,
-            "class_pack_10": 220,
-            "unlimited_monthly": 200
-          },
           "intensity": "Moderate",
           "status": "coming_soon"
         },
@@ -254,11 +237,6 @@
           ],
           "client_outcome": "I can move around the pole smoothly and confidently",
           "prerequisite": "Pole Fitness Foundations or instructor approval",
-          "estimated_pricing": {
-            "drop_in": 28,
-            "class_pack_10": 220,
-            "unlimited_monthly": 200
-          },
           "intensity": "Moderate",
           "status": "coming_soon",
           "full_description": "Pole Flow \u2013 Foundations builds on the basics of pole movement by introducing smooth transitions, connected sequences, and a greater sense of fluidity and control on the pole. The class focuses on linking movements together in a way that feels natural and graceful, developing coordination, timing, and body awareness through guided flow-based sequences. Through each curated, smooth, and authentic movement, you'll improve your ability to transition between positions with ease and confidence. This class is ideal for those who have completed Pole Fitness \u2013 Foundations and are ready to develop their movement quality and flow."
@@ -278,11 +256,6 @@
             "Safe technique and posture"
           ],
           "prerequisite": "Pole Fitness Foundations or instructor approval",
-          "estimated_pricing": {
-            "drop_in": 28,
-            "class_pack_10": 220,
-            "unlimited_monthly": 200
-          },
           "intensity": "Active",
           "status": "coming_soon",
           "full_description": "Pole Strength & Movement \u2013 Foundations introduces a strength-focused approach to pole training, combining conditioning exercises with controlled movement patterns to build upper body strength, core stability, and overall body control. The class focuses on developing the physical foundation needed to progress in pole fitness, with an emphasis on safe technique, body alignment, and progressive strength building. Through guided exercises and structured movement sequences, you'll build the strength and control needed to perform more advanced pole skills with confidence. This class is ideal for those who have completed Pole Fitness \u2013 Foundations and want to build strength and conditioning alongside their pole practice."
@@ -297,11 +270,7 @@
           "level": "All Levels",
           "hero_program": false,
           "short_description": "Modern fusion of traditional yoga with contemporary movement",
-          "estimated_pricing": {
-            "drop_in": 22,
-            "class_pack_10": 180,
-            "unlimited_monthly": 160
-          },
+          "price": 32,
           "intensity": "Balanced",
           "status": "active",
           "full_description": "A balanced approach to yoga that brings together structure and flow. Fusion Yoga \u2013 Foundations is a beginner-friendly class that combines traditional yoga principles with modern, movement-based flow to create a practice that feels both grounded and dynamic. 'Fusion' means you'll experience both sides \u2014 the stability of classic postures and the fluidity of continuous movement. Some parts of the class focus on alignment, breath, and controlled holds, while others guide you through smooth transitions that build strength, mobility, and coordination. This combination allows you to develop a deeper understanding of your body while keeping the practice engaging and accessible from the first session. Suitable for beginners with no prior experience, this class offers a structured yet flexible environment to build strength, improve mobility, and move with more awareness and control.",
@@ -321,11 +290,6 @@
           "level": "Beginner / Foundation",
           "hero_program": false,
           "short_description": "Experience yoga suspended in silk hammocks",
-          "estimated_pricing": {
-            "drop_in": 30,
-            "class_pack_10": 250,
-            "unlimited_monthly": 220
-          },
           "intensity": "Balanced",
           "status": "coming_soon",
           "full_description": "Aerial Yoga \u2013 Foundations introduces you to movement using a suspended hammock in a safe and structured environment. The class focuses on improving flexibility, mobility, and strength while reducing pressure on the joints through supported movement. Through simple, guided sequences, the hammock is used to assist stretching, balance, and controlled transitions, allowing you to move with greater ease and confidence. Each session emphasises posture, alignment, and gentle strength work, making movement more accessible while still building control. This class is ideal for beginners with no prior experience who want to explore a supported approach to movement while improving flexibility, strength, and body awareness.",
@@ -369,11 +333,7 @@
             "Cool-down and stretching to prevent injury",
             "A supportive community of fellow aerialists"
           ],
-          "estimated_pricing": {
-            "drop_in": 32,
-            "class_pack_10": 280,
-            "unlimited_monthly": 240
-          },
+          "price": 35,
           "intensity": "Balanced",
           "status": "active"
         }
@@ -387,11 +347,7 @@
           "level": "All Levels",
           "hero_program": false,
           "short_description": "Women's movement and confidence through choreographed dance",
-          "estimated_pricing": {
-            "drop_in": 25,
-            "class_pack_10": 200,
-            "unlimited_monthly": 180
-          },
+          "price": 32,
           "intensity": "Balanced",
           "status": "active",
           "full_description": "Step in, learn the sequence, and make it your own. Choreography Fusion \u2013 Foundations is a beginner-friendly class focused on building confidence through simple, guided choreography that's easy to follow from the first session. 'Fusion' means you're not locked into one style. Each class blends elements from different movement styles \u2014 such as groove, flow, and basic contemporary \u2014 giving you variety while helping you understand how movement connects across styles. You'll learn short combinations step by step, with clear breakdowns that help you understand timing, transitions, and how sequences are built \u2014 not just copy them. The focus is on coordination, timing, and moving through a full sequence with clarity and control, without pressure to perform or get everything perfect. Ideal for adults who want to build confidence, improve coordination, and learn choreography in a structured but flexible way.",
@@ -428,13 +384,11 @@
             "Recovery from training or daily stress",
             "Complete beginners to stretching practice"
           ],
-          "estimated_pricing": {
-            "drop_in": 18,
-            "class_pack_10": 160,
-            "unlimited_monthly": 140
-          }
+          "price": 35
         }
-      ],
+      ]
+    },
+    "adults_meta": {
       "intensity_groups": {
         "balanced": "Low-impact, accessible, suitable for all fitness levels",
         "moderate": "Moderate intensity, some fitness base recommended",
@@ -454,11 +408,7 @@
           "category": "Yoga",
           "age_range": "6-16 years",
           "short_description": "Fun, age-appropriate yoga for children",
-          "estimated_pricing": {
-            "drop_in": 18,
-            "term_8_weeks": 120
-          },
-          "status": "active",
+          "status": "coming_soon",
           "full_description": "Kids Yoga \u2013 Foundations introduces children to movement through simple, engaging, and structured activities that support coordination, balance, and body awareness. The class uses basic yoga poses in a fun and accessible way to help children build confidence while staying active. Through easy-to-follow sequences, light stretching, and gentle movement, children improve flexibility, posture, and overall coordination. Sessions are designed to keep children engaged while encouraging healthy movement habits from an early age. This class is ideal for children who benefit from calm, structured movement and want to build confidence, focus, and body awareness in a safe and supportive environment."
         },
         {
@@ -468,10 +418,6 @@
           "category": "Yoga",
           "age_range": "8-16 years",
           "short_description": "Playful aerial yoga in hammocks for kids",
-          "estimated_pricing": {
-            "drop_in": 22,
-            "term_8_weeks": 150
-          },
           "status": "coming_soon",
           "full_description": "Kids Aerial Yoga - Foundations introduces children to movement using a soft, suspended hammock in a safe and supportive environment. The class focuses on building coordination, balance, and body awareness while keeping movement fun and engaging. Through simple, guided exercises, children use the hammock to explore stretching, gentle strength work, and basic movement patterns. The support of the hammock allows them to move with confidence, reducing pressure on the joints while making movement more accessible and enjoyable. This class is ideal for children who enjoy playful movement and want to build confidence, coordination, and flexibility in a safe and structured setting."
         }
@@ -485,10 +431,6 @@
           "age_range": "8-16 years",
           "short_description": "Gymnastics-style pole fitness for strength and coordination",
           "note": "Strength and coordination-based movement - gymnastics style",
-          "estimated_pricing": {
-            "drop_in": 20,
-            "term_8_weeks": 140
-          },
           "status": "coming_soon",
           "full_description": "Pole Fitness Kids - Foundations help children build strength, coordination, and body awareness through safe and structured movement using the pole. The class is designed to support physical development while introducing controlled, age-appropriate movement in a positive and supportive environment. Through simple, guided exercises such as basic holds, grip work, and low-level movement patterns, children learn how to move with control and stability. Movements are introduced step by step, allowing them to build upper body strength, core stability, and coordination at a comfortable pace. This class is ideal for children who enjoy active movement and want to develop strength and confidence in a safe and structured setting."
         }
@@ -501,10 +443,6 @@
           "category": "Aerial",
           "age_range": "8-16 years",
           "short_description": "Introduction to aerial arts on suspended silks",
-          "estimated_pricing": {
-            "drop_in": 22,
-            "term_8_weeks": 150
-          },
           "status": "coming_soon",
           "full_description": "Kids Aerial Silks \u2013 Foundations introduces children to aerial movement using suspended fabric in a safe and structured environment. This class focuses on building strength, coordination, and body awareness while helping children gain confidence moving off the ground. Through simple, guided exercises such as basic grips, supported holds, and low-level movements, children learn how to move with control and stability on the silks. Movements are introduced step by step, allowing them to build strength and coordination at a comfortable pace while staying engaged and active. This class is ideal for children who enjoy movement, climbing, and exploring new physical challenges in a safe and supportive setting."
         }
@@ -517,11 +455,7 @@
           "category": "Dance",
           "age_range": "6-16 years",
           "short_description": "Hip hop and urban dance styles for kids",
-          "estimated_pricing": {
-            "drop_in": 18,
-            "term_8_weeks": 120
-          },
-          "status": "active",
+          "status": "coming_soon",
           "full_description": "Dance Moves (Urban Mix) \u2013 Foundations is a fun and beginner-friendly class that introduces children to rhythm, coordination, and basic dance movement in an engaging and structured environment. Inspired by simple urban-style movement, this class keeps kids active while helping them connect with music through easy, repeatable patterns. Through guided sequences, step patterns, and rhythm-based activities, children develop timing, coordination, and body awareness in a way that feels natural and enjoyable. Movements are kept simple and age-appropriate, allowing children to build confidence as they learn to move with control and ease. This class is ideal for kids who enjoy music, movement, and staying active while building confidence in a positive and supportive setting."
         },
         {
@@ -531,11 +465,7 @@
           "category": "Dance",
           "age_range": "8-16 years",
           "short_description": "Expressive contemporary dance focusing on rhythm and movement quality",
-          "estimated_pricing": {
-            "drop_in": 18,
-            "term_8_weeks": 120
-          },
-          "status": "active",
+          "status": "coming_soon",
           "full_description": "Modern Contemporary (Rhythm & Motion) \u2013 Foundations introduces children to expressive movement, coordination, and musicality in a structured and supportive environment. Blending simple contemporary elements with rhythm-based movement, this class helps children explore how their body moves naturally with music. Through easy-to-follow sequences and flowing movement patterns, children learn to move with control while developing balance, posture, and coordination. The focus is on building confidence through movement, while allowing space for natural expression. Children develop body awareness, improve coordination, and become more confident in how they move and express themselves."
         },
         {
@@ -545,11 +475,7 @@
           "category": "Dance",
           "age_range": "4-10 years",
           "short_description": "Imaginative movement and dance exploration for younger children",
-          "estimated_pricing": {
-            "drop_in": 16,
-            "term_8_weeks": 100
-          },
-          "status": "active",
+          "status": "coming_soon",
           "full_description": "Creative Dance \u2013 Foundations is a beginner-friendly class designed to encourage children to explore movement, imagination, and self-expression in a fun and supportive environment. This class focuses on helping children feel comfortable moving in their own way while building coordination and body awareness. Each session includes simple guided activities, creative movement tasks, and easy-to-follow patterns that support rhythm, balance, and control. Children are encouraged to explore different ways of moving while staying within a structured and safe framework. This class is ideal for children who enjoy freedom in movement and want to build confidence while expressing themselves in a safe and supportive environment."
         }
       ],

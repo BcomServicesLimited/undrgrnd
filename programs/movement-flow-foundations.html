@@ -160,17 +160,11 @@
     /* Pricing */
     .pricing { padding: 6rem 5%; background: var(--color-dark-bg); }
     .pricing__inner { max-width: 1000px; margin: 0 auto; }
-    .pricing__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
-    .pricing-card { background: var(--color-card-bg); border: 1px solid rgba(139,92,246,0.2); border-radius: 20px; padding: 2rem; text-align: center; position: relative; transition: transform 0.3s; }
-    .pricing-card:hover { transform: translateY(-4px); }
-    .pricing-card--featured { border-color: var(--color-primary-purple); background: linear-gradient(135deg, rgba(139,92,246,0.1), rgba(236,72,153,0.05)); }
-    .pricing-card__badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--color-primary-purple); color: #fff; font-size: 0.7rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 50px; white-space: nowrap; text-transform: uppercase; letter-spacing: 1px; }
-    .pricing-card__name { font-family: var(--font-body); font-weight: 700; color: var(--color-text-white); margin-bottom: 0.5rem; }
-    .pricing-card__price { font-family: var(--font-display); font-size: 3rem; color: var(--color-primary-purple); line-height: 1; margin: 1rem 0 0.25rem; }
-    .pricing-card__per { color: var(--color-text-gray); font-size: 0.85rem; margin-bottom: 1.5rem; }
-    .pricing-card__features { list-style: none; padding: 0; margin-bottom: 1.5rem; text-align: left; }
-    .pricing-card__features li { color: var(--color-text-gray); font-size: 0.9rem; padding: 0.4rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; gap: 0.5rem; }
-    .pricing-card__features li::before { content: '✓'; color: var(--color-primary-purple); font-weight: 700; flex-shrink: 0; }
+    .single-price-display { display: flex; justify-content: center; margin-top: 3rem; }
+    .single-price-card { background: var(--color-card-bg); border: 1px solid rgba(139,92,246,0.35); border-radius: 20px; padding: 3rem 4rem; text-align: center; min-width: 280px; }
+    .single-price-card__label { font-family: var(--font-body); font-weight: 700; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: #A78BFA; margin-bottom: 0.5rem; }
+    .single-price-card__price { font-family: var(--font-display); font-size: 4.5rem; color: var(--color-primary-purple); line-height: 1; margin: 1rem 0 0.25rem; }
+    .single-price-card__per { color: var(--color-text-gray); font-size: 0.9rem; }
     /* FAQ */
     .faq { padding: 6rem 5%; background: #0d0d0d; }
     .faq__inner { max-width: 800px; margin: 0 auto; }
@@ -209,7 +203,7 @@
       .program-hero__inner, .program-overview__inner, .who-for__inner { grid-template-columns: 1fr; }
       .program-hero__image { display: none; }
       .quick-info { position: static; }
-      .pricing__grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+      
       .related__grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 767px) {
@@ -855,8 +849,8 @@
       <div class="quick-info__row"><span class="quick-info__label">Class Size</span><span class="quick-info__value">Small groups</span></div>
       <div class="quick-info__row"><span class="quick-info__label">Location</span><span class="quick-info__value">163 Ferry Rd, Southport</span></div>
       <div class="quick-info__row"><span class="quick-info__label">What to Wear</span><span class="quick-info__value">Comfortable activewear, bare feet or dance shoes</span></div>
-      <div class="quick-info__price">$25</div>
-      <div class="quick-info__price-label">per drop-in class</div>
+      <div class="quick-info__price">$35</div>
+      <div class="quick-info__price-label">per class</div>
       <a href="https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/movement-flow-foundations" class="cta-button" style="width:100%;text-align:center;display:block;">Book Now</a>
     </div>
   </div>
@@ -957,43 +951,15 @@
 <section class="pricing" aria-label="Pricing">
   <div class="pricing__inner">
     <div class="section-header reveal">
-      <h2>Class Pricing</h2>
-      <p>Flexible options to suit your schedule and budget at UNDRGRND Movement Gold Coast</p>
+      <h2>Simple, Straightforward Pricing</h2>
+      <p>No packs. No memberships. Just show up and move.</p>
     </div>
-    <div class="pricing__grid">
-      <div class="pricing-card reveal">
-        <div class="pricing-card__name">Drop-In</div>
-        <div class="pricing-card__price">$25</div>
-        <div class="pricing-card__per">per class</div>
-        <ul class="pricing-card__features">
-          <li>Single class access</li>
-          <li>No commitment required</li>
-          <li>Book online or at studio</li>
-        </ul>
-        <a href="https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/movement-flow-foundations" class="cta-secondary" style="display:block;text-align:center;">Book Drop-In</a>
-      </div>
-      <div class="pricing-card pricing-card--featured reveal">
-        <div class="pricing-card__badge">Best Value</div>
-        <div class="pricing-card__name">10-Class Pack</div>
-        <div class="pricing-card__price">$200</div>
-        <div class="pricing-card__per">$20 per class · 3-month validity</div>
-        <ul class="pricing-card__features">
-          <li>10 classes to use flexibly</li>
-          <li>Valid for 3 months</li>
-          <li>Use across any dance class</li>
-        </ul>
-        <a href="https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/movement-flow-foundations" class="cta-button" style="display:block;text-align:center;">Get Class Pack</a>
-      </div>
-      <div class="pricing-card reveal">
-        <div class="pricing-card__name">Unlimited Monthly</div>
-        <div class="pricing-card__price">$180</div>
-        <div class="pricing-card__per">per month</div>
-        <ul class="pricing-card__features">
-          <li>Unlimited dance classes</li>
-          <li>Best for regular attendees</li>
-          <li>Month-to-month flexibility</li>
-        </ul>
-        <a href="https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/movement-flow-foundations" class="cta-secondary" style="display:block;text-align:center;">Go Unlimited</a>
+    <div class="single-price-display">
+      <div class="single-price-card">
+        <div class="single-price-card__label">Per Class</div>
+        <div class="single-price-card__price">$35</div>
+        <div class="single-price-card__per">each session</div>
+        <a href="https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/movement-flow-foundations" class="cta-button" style="display:block;text-align:center;margin-top:1.5rem;">Book This Class</a>
       </div>
     </div>
   </div>
@@ -1097,7 +1063,7 @@
     <p>Whether you are a Gold Coast resident who has never attended a movement class before, or someone who has tried other fitness options and found them too intense or too performance-focused, Movement Flow – Foundations offers a genuinely different experience. The focus is on your personal movement journey, not on keeping up with others or achieving a specific look.</p>
     <h3>Movement Flow at UNDRGRND Movement Southport, Gold Coast</h3>
     <p>UNDRGRND Movement is located at 163 Ferry Rd, Southport QLD 4215, making it easily accessible to Gold Coast residents from Southport, Surfers Paradise, Broadbeach, Robina, and surrounding suburbs. Our Southport studio is purpose-built for movement classes, with a welcoming atmosphere that feels nothing like a traditional gym.</p>
-    <p>We offer flexible booking options including drop-in classes ($25 per session), 10-class packs ($200), and unlimited monthly memberships ($180 per month). All options can be booked online through our timetable page, making it easy for Gold Coast residents to fit Movement Flow into their weekly routine.</p>
+    <p>Classes at UNDRGRND Movement are $35 per session with no packs or memberships required. Simply book online through our timetable page, making it easy for Gold Coast residents to fit this class into their weekly routine.</p>
     <h3>Start Your Movement Journey on the Gold Coast</h3>
     <p>If you have been looking for a movement class on the Gold Coast that welcomes beginners, supports all bodies, and makes movement genuinely enjoyable, Movement Flow – Foundations at UNDRGRND Movement Southport is exactly what you have been searching for. Join our growing community of Gold Coast movers and discover what your body is capable of when given the freedom to explore natural movement.</p>
     <p>Book your first Movement Flow class today at UNDRGRND Movement, 163 Ferry Rd, Southport — Gold Coast's home for accessible, confidence-building movement.</p>

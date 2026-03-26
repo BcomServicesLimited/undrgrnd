@@ -329,54 +329,17 @@ function generateServiceSchema(program) {
     var business = config.business;
     var project  = config.project;
 
-    /* Build Offer array from estimated_pricing */
+    /* Build Offer from single price field */
     var offers = [];
-    if (program.estimated_pricing) {
-      var pricing = program.estimated_pricing;
-
-      if (pricing.drop_in) {
-        offers.push({
-          '@type':         'Offer',
-          'name':          'Drop-In Class',
-          'price':         pricing.drop_in,
-          'priceCurrency': 'AUD',
-          'availability':  'https://schema.org/InStock',
-          'url':           project.domain + '/programs/' + (program.slug || program.id) + '.html'
-        });
-      }
-
-      if (pricing.class_pack_10) {
-        offers.push({
-          '@type':         'Offer',
-          'name':          '10-Class Pack',
-          'price':         pricing.class_pack_10,
-          'priceCurrency': 'AUD',
-          'availability':  'https://schema.org/InStock',
-          'url':           project.domain + '/programs/' + (program.slug || program.id) + '.html'
-        });
-      }
-
-      if (pricing.class_pack_8) {
-        offers.push({
-          '@type':         'Offer',
-          'name':          '8-Class Pack',
-          'price':         pricing.class_pack_8,
-          'priceCurrency': 'AUD',
-          'availability':  'https://schema.org/InStock',
-          'url':           project.domain + '/programs/' + (program.slug || program.id) + '.html'
-        });
-      }
-
-      if (pricing.unlimited_monthly) {
-        offers.push({
-          '@type':         'Offer',
-          'name':          'Unlimited Monthly',
-          'price':         pricing.unlimited_monthly,
-          'priceCurrency': 'AUD',
-          'availability':  'https://schema.org/InStock',
-          'url':           project.domain + '/programs/' + (program.slug || program.id) + '.html'
-        });
-      }
+    if (program.price) {
+      offers.push({
+        '@type':         'Offer',
+        'name':          'Per Class',
+        'price':         program.price,
+        'priceCurrency': 'AUD',
+        'availability':  'https://schema.org/InStock',
+        'url':           project.domain + '/programs/' + (program.slug || program.id) + '.html'
+      });
     }
 
     var schema = {

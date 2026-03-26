@@ -604,7 +604,7 @@
     }
 
     /* -----------------------------------------------------------------------
-       PRICING SECTION
+       PRICING SECTION — single price
     ----------------------------------------------------------------------- */
     .pricing-section {
       padding: 8rem 5%;
@@ -617,62 +617,25 @@
       margin: 0 auto 4rem;
     }
 
-    .pricing-grid {
-      max-width: 1000px;
-      margin-inline: auto;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+    .single-price-display {
+      display: flex;
+      justify-content: center;
     }
 
-    @media (min-width: 768px) {
-      .pricing-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-
-    .pricing-card {
+    .single-price-card {
       background: #1A1A1A;
-      border: 1px solid rgba(139, 92, 246, 0.2);
+      border: 1px solid rgba(139, 92, 246, 0.35);
       border-radius: 20px;
-      padding: 2.5rem 2rem;
+      padding: 3rem 4rem;
       text-align: center;
-      transition: all 0.35s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 0.75rem;
+      min-width: 280px;
     }
 
-    .pricing-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(139, 92, 246, 0.5);
-      box-shadow: 0 20px 50px rgba(139, 92, 246, 0.18);
-    }
-
-    .pricing-card--featured {
-      border-color: rgba(139, 92, 246, 0.5);
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(236, 72, 153, 0.05));
-      position: relative;
-    }
-
-    .pricing-card--featured::before {
-      content: 'Best Value';
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #FFFFFF;
-      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-      padding: 0.25rem 0.9rem;
-      border-radius: 50px;
-      white-space: nowrap;
-    }
-
-    .pricing-card__label {
+    .single-price-card__label {
       font-family: 'Outfit', sans-serif;
       font-size: 0.75rem;
       font-weight: 700;
@@ -681,32 +644,26 @@
       color: #A78BFA;
     }
 
-    .pricing-card__price {
+    .single-price-card__price {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 3.5rem;
+      font-size: 4.5rem;
       line-height: 1;
       color: #FFFFFF;
     }
 
-    .pricing-card__price sup {
-      font-size: 1.5rem;
+    .single-price-card__price sup {
+      font-size: 1.8rem;
       vertical-align: super;
       line-height: 0;
     }
 
-    .pricing-card__period {
-      font-size: 0.85rem;
-      color: #A1A1A1;
-    }
-
-    .pricing-card__tagline {
+    .single-price-card__period {
       font-size: 0.9rem;
       color: #A1A1A1;
-      font-style: italic;
     }
 
-    .pricing-card__cta {
-      margin-top: 0.5rem;
+    .single-price-card__cta {
+      margin-top: 1rem;
       width: 100%;
     }
 
@@ -1643,19 +1600,10 @@
       <p class="info-box__pricing-title">Pricing</p>
       <div id="infoBoxPricing">
         <div class="info-box__price-row">
-          <span class="info-box__price-label">Drop-In</span>
-          <span class="info-box__price-amount" id="priceDropIn">$25</span>
-        </div>
-        <div class="info-box__price-row">
-          <span class="info-box__price-label">10 Class Pack</span>
-          <span class="info-box__price-amount" id="pricePack">$200</span>
-        </div>
-        <div class="info-box__price-row">
-          <span class="info-box__price-label">Unlimited Monthly</span>
-          <span class="info-box__price-amount" id="priceMonthly">$180</span>
+          <span class="info-box__price-label">Per Class</span>
+          <span class="info-box__price-amount">$29</span>
         </div>
       </div>
-      <p class="info-box__note">Prices are estimates. See full pricing when booking.</p>
 
       <div class="info-box__cta">
         <a href="https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/booty-burn-foundations" class="cta-button">Book This Class</a>
@@ -1830,47 +1778,24 @@
 
 
 <!-- =========================================================================
-     6. PRICING SECTION
+     6. PRICING
      ========================================================================= -->
 <section class="pricing-section reveal" aria-labelledby="pricingHeading">
   <div class="pricing-section__header">
     <span class="section-label">Pricing</span>
-    <h2 id="pricingHeading">Flexible Pricing Options</h2>
-    <p style="color: #A1A1A1; font-size: 0.95rem; margin-top: 0.75rem;">All prices are estimates. Final pricing confirmed at booking.</p>
+    <h2 id="pricingHeading">Simple, Straightforward Pricing</h2>
+    <p style="color: #A1A1A1; font-size: 0.95rem; margin-top: 0.75rem;">No packs. No memberships. Just show up and move.</p>
   </div>
 
-  <div class="pricing-grid">
-
-    <div class="pricing-card reveal reveal-delay-1">
-      <p class="pricing-card__label">Drop-In</p>
-      <p class="pricing-card__price"><sup>$</sup><span id="pricingDropIn">25</span></p>
-      <p class="pricing-card__period">per class</p>
-      <p class="pricing-card__tagline">"Try it out"</p>
-      <div class="pricing-card__cta">
-        <a href="https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/booty-burn-foundations" class="cta-secondary" style="display: block; text-align: center;">Book a Class</a>
+  <div class="single-price-display">
+    <div class="single-price-card">
+      <p class="single-price-card__label">Per Class</p>
+      <p class="single-price-card__price"><sup>$</sup>29</p>
+      <p class="single-price-card__period">each session</p>
+      <div class="single-price-card__cta">
+        <a href="https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/booty-burn-foundations" class="cta-button" style="display: block; text-align: center;">Book This Class</a>
       </div>
     </div>
-
-    <div class="pricing-card pricing-card--featured reveal reveal-delay-2">
-      <p class="pricing-card__label">Class Pack</p>
-      <p class="pricing-card__price"><sup>$</sup><span id="pricingPack">200</span></p>
-      <p class="pricing-card__period">for 10 classes</p>
-      <p class="pricing-card__tagline">"Best value"</p>
-      <div class="pricing-card__cta">
-        <a href="https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/booty-burn-foundations" class="cta-button" style="display: block; text-align: center;">Get Pack</a>
-      </div>
-    </div>
-
-    <div class="pricing-card reveal reveal-delay-3">
-      <p class="pricing-card__label">Unlimited Monthly</p>
-      <p class="pricing-card__price"><sup>$</sup><span id="pricingMonthly">180</span></p>
-      <p class="pricing-card__period">per month</p>
-      <p class="pricing-card__tagline">"For dedicated students"</p>
-      <div class="pricing-card__cta">
-        <a href="https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/booty-burn-foundations" class="cta-secondary" style="display: block; text-align: center;">Go Unlimited</a>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -2579,11 +2504,7 @@
     var program = {
       name: 'Booty Burn - Foundations',
       short_description: 'High-energy lower body and glute-focused dance fitness class',
-      estimated_pricing: {
-        drop_in: 25,
-        class_pack_10: 200,
-        unlimited_monthly: 180
-      }
+      price: 29
     };
 
     var faqs = [

@@ -660,7 +660,7 @@
     }
 
     /* -----------------------------------------------------------------------
-       PRICING
+       PRICING — single price
     ----------------------------------------------------------------------- */
     .pricing-section {
       padding: 8rem 5%;
@@ -673,15 +673,55 @@
       margin: 0 auto 4rem;
     }
 
-    .pricing-grid {
-      max-width: 1000px;
-      margin-inline: auto;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+    .single-price-display {
+      display: flex;
+      justify-content: center;
     }
 
-    @media (min-width: 768px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
+    .single-price-card {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      border-radius: 20px;
+      padding: 3rem 4rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      min-width: 280px;
+    }
+
+    .single-price-card__label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #A78BFA;
+    }
+
+    .single-price-card__price {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 4.5rem;
+      line-height: 1;
+      color: #FFFFFF;
+    }
+
+    .single-price-card__price sup {
+      font-size: 1.8rem;
+      vertical-align: super;
+      line-height: 0;
+    }
+
+    .single-price-card__period {
+      font-size: 0.9rem;
+      color: #A1A1A1;
+    }
+
+    .single-price-card__cta {
+      margin-top: 1rem;
+      width: 100%;
+    }
 
     .pricing-card {
       background: #1A1A1A;
@@ -1736,21 +1776,12 @@
       <div class="info-box__divider"></div>
 
       <p class="info-box__pricing-title">Pricing</p>
-      <div>
+      <div id="infoBoxPricing">
         <div class="info-box__price-row">
-          <span class="info-box__price-label">Drop-In</span>
-          <span class="info-box__price-amount" id="priceDropIn">$32</span>
-        </div>
-        <div class="info-box__price-row">
-          <span class="info-box__price-label">10 Class Pack</span>
-          <span class="info-box__price-amount" id="pricePack">$280</span>
-        </div>
-        <div class="info-box__price-row">
-          <span class="info-box__price-label">Unlimited Monthly</span>
-          <span class="info-box__price-amount" id="priceMonthly">$240</span>
+          <span class="info-box__price-label">Per Class</span>
+          <span class="info-box__price-amount">$35</span>
         </div>
       </div>
-      <p class="info-box__note">Prices are estimates. See full pricing when booking.</p>
 
       <div class="info-box__cta">
         <a href="https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/aerial-silks-foundations" class="cta-button">Book This Class</a>
@@ -1963,42 +1994,19 @@
 <section class="pricing-section reveal" aria-labelledby="pricingHeading">
   <div class="pricing-section__header">
     <span class="section-label">Pricing</span>
-    <h2 id="pricingHeading">Flexible Pricing Options</h2>
-    <p style="color: #A1A1A1; font-size: 0.95rem; margin-top: 0.75rem;">All prices are estimates. Final pricing confirmed at booking.</p>
+    <h2 id="pricingHeading">Simple, Straightforward Pricing</h2>
+    <p style="color: #A1A1A1; font-size: 0.95rem; margin-top: 0.75rem;">No packs. No memberships. Just show up and move.</p>
   </div>
 
-  <div class="pricing-grid">
-
-    <div class="pricing-card reveal reveal-delay-1">
-      <p class="pricing-card__label">Drop-In</p>
-      <p class="pricing-card__price"><sup>$</sup><span id="pricingDropIn">32</span></p>
-      <p class="pricing-card__period">per class</p>
-      <p class="pricing-card__tagline">"Try it out"</p>
-      <div class="pricing-card__cta">
-        <a href="https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/aerial-silks-foundations" class="cta-secondary" style="display: block; text-align: center;">Book a Class</a>
+  <div class="single-price-display">
+    <div class="single-price-card">
+      <p class="single-price-card__label">Per Class</p>
+      <p class="single-price-card__price"><sup>$</sup>35</p>
+      <p class="single-price-card__period">each session</p>
+      <div class="single-price-card__cta">
+        <a href="https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/aerial-silks-foundations" class="cta-button" style="display: block; text-align: center;">Book This Class</a>
       </div>
     </div>
-
-    <div class="pricing-card pricing-card--featured reveal reveal-delay-2">
-      <p class="pricing-card__label">Class Pack</p>
-      <p class="pricing-card__price"><sup>$</sup><span id="pricingPack">280</span></p>
-      <p class="pricing-card__period">for 10 classes</p>
-      <p class="pricing-card__tagline">"Best value"</p>
-      <div class="pricing-card__cta">
-        <a href="https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/aerial-silks-foundations" class="cta-button" style="display: block; text-align: center;">Get Pack</a>
-      </div>
-    </div>
-
-    <div class="pricing-card reveal reveal-delay-3">
-      <p class="pricing-card__label">Unlimited Monthly</p>
-      <p class="pricing-card__price"><sup>$</sup><span id="pricingMonthly">240</span></p>
-      <p class="pricing-card__period">per month</p>
-      <p class="pricing-card__tagline">"For dedicated students"</p>
-      <div class="pricing-card__cta">
-        <a href="https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/aerial-silks-foundations" class="cta-secondary" style="display: block; text-align: center;">Go Unlimited</a>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -2322,26 +2330,7 @@
       var infoCategory = document.getElementById('infoCategory');
       if (infoCategory && program.category) infoCategory.textContent = program.category;
 
-      /* Pricing */
-      var p = program.estimated_pricing || {};
-      if (p.drop_in) {
-        ['priceDropIn', 'pricingDropIn'].forEach(function (id) {
-          var el = document.getElementById(id);
-          if (el) el.textContent = id === 'priceDropIn' ? '$' + p.drop_in : p.drop_in;
-        });
-      }
-      if (p.class_pack_10) {
-        ['pricePack', 'pricingPack'].forEach(function (id) {
-          var el = document.getElementById(id);
-          if (el) el.textContent = id === 'pricePack' ? '$' + p.class_pack_10 : p.class_pack_10;
-        });
-      }
-      if (p.unlimited_monthly) {
-        ['priceMonthly', 'pricingMonthly'].forEach(function (id) {
-          var el = document.getElementById(id);
-          if (el) el.textContent = id === 'priceMonthly' ? '$' + p.unlimited_monthly : p.unlimited_monthly;
-        });
-      }
+      /* Pricing — single price per class */
 
       /* Core focus cards */
       var focusGrid = document.getElementById('focusGrid');

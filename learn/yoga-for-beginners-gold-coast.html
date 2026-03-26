@@ -100,6 +100,41 @@
     .back-link:hover {
       text-decoration: underline;
     }
+    /* ---- Article Content Styles ---- */
+    .article-intro { font-size: 1.15rem; line-height: 1.7; color: #e0e0e0; margin-bottom: 2rem; font-weight: 300; }
+    .article-toc { background: rgba(139,92,246,0.05); border: 1px solid rgba(139,92,246,0.2); border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0 3rem; }
+    .article-toc__title { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #9b6dff; margin: 0 0 1rem; border: none; padding: 0; }
+    .article-toc__list { margin: 0; padding-left: 1.5rem; color: #b3b3b3; font-size: 0.95rem; line-height: 1.8; }
+    .article-toc__list a { color: #9b6dff; text-decoration: none; }
+    .article-toc__list a:hover { text-decoration: underline; }
+    .article-body h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 700; text-transform: uppercase; color: #fff; margin: 3.5rem 0 1.5rem; border-bottom: 1px solid rgba(139,92,246,0.3); padding-bottom: 0.5rem; scroll-margin-top: 80px; }
+    .article-body p { font-size: 1.05rem; line-height: 1.75; color: #b3b3b3; margin-bottom: 1.5rem; }
+    .article-body ul, .article-body ol { margin-bottom: 2rem; padding-left: 1.5rem; color: #b3b3b3; font-size: 1.05rem; line-height: 1.75; }
+    .article-body li { margin-bottom: 0.75rem; }
+    .article-body strong { color: #fff; font-weight: 600; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: rgba(20,20,20,0.5); border-radius: 8px; overflow: hidden; font-size: 0.95rem; }
+    .article-table th, .article-table td { padding: 0.9rem 1rem; text-align: left; border-bottom: 1px solid rgba(139,92,246,0.15); }
+    .article-table th { background: rgba(139,92,246,0.12); color: #9b6dff; font-weight: 700; text-transform: uppercase; font-size: 0.82rem; letter-spacing: 0.06em; }
+    .article-table td { color: #b3b3b3; }
+    .article-image-container { margin: 2.5rem 0; border-radius: 12px; overflow: hidden; background: #111; border: 1px solid rgba(139,92,246,0.2); }
+    .article-image { width: 100%; height: auto; display: block; aspect-ratio: 16/9; object-fit: cover; }
+    .article-image-container figcaption { padding: 0.85rem 1rem; font-size: 0.85rem; color: #777; text-align: center; font-style: italic; border-top: 1px solid rgba(139,92,246,0.1); }
+    .article-faq { margin: 1rem 0 2rem; }
+    .faq-item { border-bottom: 1px solid rgba(139,92,246,0.15); }
+    .faq-question { width: 100%; background: none; border: none; padding: 1.1rem 0; text-align: left; font-family: 'Outfit', Helvetica Neue, sans-serif; font-size: 1rem; font-weight: 600; color: #fff; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: color 0.3s ease; }
+    .faq-question:hover { color: #9b6dff; }
+    .faq-icon { width: 20px; height: 20px; flex-shrink: 0; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.3s ease; }
+    .faq-question[aria-expanded="true"] .faq-icon { transform: rotate(180deg); }
+    .faq-answer { display: none; padding: 0 0 1.25rem; }
+    .faq-answer.open { display: block; }
+    .faq-answer p { margin: 0; }
+    .article-cta { margin-top: 4rem; padding: 3rem 2rem; background: linear-gradient(135deg, rgba(139,92,246,0.1) 0%, rgba(236,72,153,0.1) 100%); border: 1px solid rgba(139,92,246,0.3); border-radius: 16px; text-align: center; }
+    .article-cta h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 700; text-transform: uppercase; color: #fff; margin: 0 0 1rem; }
+    .article-cta p { color: #e0e0e0; margin-bottom: 2rem; }
+    .article-back { margin-top: 3rem; text-align: center; }
+    .steps-illustration { margin: 2rem 0 2.5rem; border: 1px solid rgba(139,92,246,0.35); border-radius: 14px; overflow: hidden; background: #0a0a0a; box-shadow: 0 0 40px rgba(139,92,246,0.12), 0 0 80px rgba(236,72,153,0.06); }
+    .steps-illustration .article-image { aspect-ratio: 16/9; object-fit: contain; background: #0a0a0a; padding: 0.5rem 0; }
+    .steps-illustration figcaption { background: rgba(139,92,246,0.07); border-top: 1px solid rgba(139,92,246,0.2); color: #9b6dff; font-style: normal; font-weight: 500; font-size: 0.88rem; letter-spacing: 0.01em; padding: 0.75rem 1.25rem; text-align: center; }
   </style>
 </head>
 <body>
@@ -688,16 +723,122 @@
 </section>
 
 <div class="article-body">
-  <div class="coming-soon-box">
-    <div class="coming-soon-box__icon">🧘</div>
-    <h2 class="coming-soon-box__title">Article Coming Soon</h2>
-    <p class="coming-soon-box__text">Everything a complete beginner needs to know about starting yoga — the styles, the poses, and what to expect in your first class.</p>
-    <a href="/adults.html" class="cta-button">View Our Classes</a>
-    <br>
-    <a href="/learn.html" class="back-link">
-      &larr; Back to Learn
-    </a>
+
+  <p class="article-intro">Starting yoga for the first time can feel overwhelming. There are dozens of styles, a vocabulary of Sanskrit terms, and a culture that can seem impenetrable from the outside. But strip away the complexity and yoga is simply this: a practice of connecting breath, movement, and awareness that makes your body stronger, more flexible, and more resilient, while simultaneously calming your mind. This guide gives you everything you need to start yoga with confidence, regardless of your age, fitness level, or flexibility.</p>
+
+  <p>The most important thing to know before your first yoga class is that you do not need to be flexible to do yoga. This is the single most common misconception about the practice, and it prevents many people from ever trying. Yoga is not a flexibility performance &mdash; it is a process of gradually developing flexibility, strength, and body awareness over time. You start exactly where you are, and the practice meets you there.</p>
+
+  <nav class="article-toc" aria-label="Table of contents">
+    <h2 class="article-toc__title">In This Guide</h2>
+    <ol class="article-toc__list">
+      <li><a href="#what-is">What Yoga Actually Is</a></li>
+      <li><a href="#styles">Choosing the Right Style</a></li>
+      <li><a href="#poses">The 6 Essential Beginner Poses</a></li>
+      <li><a href="#first-class">What to Expect in Your First Class</a></li>
+      <li><a href="#physical">Physical Benefits</a></li>
+      <li><a href="#mental">Mental Benefits</a></li>
+      <li><a href="#mistakes">Common Beginner Mistakes</a></li>
+      <li><a href="#faq">Frequently Asked Questions</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="what-is">What Yoga Actually Is</h2>
+  <p>Yoga is a practice that originated in ancient India approximately 5,000 years ago. The word &ldquo;yoga&rdquo; comes from the Sanskrit root &ldquo;yuj,&rdquo; meaning to yoke or unite, referring to the union of body, mind, and breath. In its modern Western form, yoga primarily refers to the physical practice of asana (poses), pranayama (breathwork), and meditation, though the full traditional system encompasses a much broader philosophical and ethical framework.</p>
+  <p>What distinguishes yoga from other forms of exercise is the emphasis on the breath-movement connection. In yoga, every movement is coordinated with either an inhalation or an exhalation. This synchronisation of breath and movement is not merely a stylistic choice &mdash; it activates the parasympathetic nervous system, reduces cortisol levels, and produces the distinctive sense of calm and mental clarity that yoga practitioners describe. It is also what makes yoga genuinely different from stretching, despite the superficial similarities.</p>
+
+  <figure class="article-image-container">
+    <img src="/images/learn/yoga-beginners-hero.webp" alt="A woman in child's pose on a purple yoga mat in a dark minimalist studio with soft purple lighting" class="article-image" width="1376" height="768" loading="lazy">
+    <figcaption>Yoga is a practice of connecting breath, movement, and awareness &mdash; flexibility is a result of the practice, not a prerequisite for it.</figcaption>
+  </figure>
+
+  <h2 id="styles">Choosing the Right Style</h2>
+  <p>One of the most common sources of confusion for yoga beginners is the sheer variety of styles available. Each style has a different emphasis, pace, and physical demand. Choosing the right style for your goals and current fitness level is the most important decision you will make as a beginner.</p>
+
+  <table class="article-table">
+    <thead>
+      <tr><th>Style</th><th>Pace</th><th>Physical Demand</th><th>Best For</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Hatha</strong></td><td>Slow&ndash;moderate</td><td>Low&ndash;moderate</td><td>Complete beginners; learning foundational poses</td></tr>
+      <tr><td><strong>Vinyasa / Flow</strong></td><td>Moderate&ndash;fast</td><td>Moderate&ndash;high</td><td>Fitness-focused practitioners; dynamic movement</td></tr>
+      <tr><td><strong>Yin</strong></td><td>Very slow</td><td>Low</td><td>Deep flexibility; stress relief; recovery</td></tr>
+      <tr><td><strong>Restorative</strong></td><td>Extremely slow</td><td>Very low</td><td>Stress, injury recovery, nervous system reset</td></tr>
+      <tr><td><strong>Bikram / Hot</strong></td><td>Moderate</td><td>Moderate&ndash;high</td><td>Detoxification; flexibility in heat</td></tr>
+    </tbody>
+  </table>
+
+  <p>For complete beginners, <strong>Hatha yoga</strong> is the most recommended starting point. It moves at a pace that allows you to learn the poses properly, understand the alignment principles, and develop a feel for the breath-movement connection without being overwhelmed. Once you have a foundation in Hatha, you can explore other styles with much greater confidence and safety.</p>
+
+  <h2 id="poses">The 6 Essential Beginner Poses</h2>
+  <p>The following six poses form the foundation of most beginner yoga classes. Mastering these poses &mdash; understanding their alignment, their breath cues, and their modifications &mdash; will prepare you for the vast majority of what you will encounter in a beginner or intermediate class. Do not rush through them. Each pose has layers of subtlety that reveal themselves over months and years of practice.</p>
+
+  <figure class="article-image-container steps-illustration">
+    <img src="/images/learn/steps-yoga-beginners.webp" alt="Six essential beginner yoga poses illustrated as glowing neon figures: mountain pose, downward dog, warrior I, tree pose, cat-cow, savasana" class="article-image" width="1376" height="768" loading="lazy">
+    <figcaption>The 6 essential beginner yoga poses &mdash; master these before exploring more advanced variations.</figcaption>
+  </figure>
+
+  <p><strong>1. Mountain Pose (Tadasana):</strong> Stand with your feet hip-width apart, arms by your sides, and weight distributed evenly across both feet. Press all four corners of each foot into the floor, engage your thighs, lengthen your spine, and relax your shoulders away from your ears. Mountain pose is the foundation of all standing poses and teaches the fundamental alignment principles that carry through the entire practice. It is far more demanding than it appears.</p>
+  <p><strong>2. Downward-Facing Dog (Adho Mukha Svanasana):</strong> From all fours, tuck your toes and press your hips up and back, forming an inverted V shape. Press your hands firmly into the mat, spread your fingers wide, and work toward straightening your legs (bent knees are fine for beginners). This is one of the most important poses in yoga and simultaneously stretches the hamstrings, calves, and spine while strengthening the shoulders and arms.</p>
+  <p><strong>3. Warrior I (Virabhadrasana I):</strong> From a standing position, step one foot back into a lunge with your back foot angled at 45 degrees. Bend your front knee to 90 degrees, square your hips to the front, and raise your arms overhead. Warrior I builds strength in the legs and glutes, opens the hip flexors, and develops stability and focus. Hold for 5 to 10 breaths per side.</p>
+  <p><strong>4. Tree Pose (Vrksasana):</strong> Stand on one leg and place the sole of your other foot against your inner thigh or calf (never against the knee). Bring your hands to prayer position at your chest or extend them overhead. Tree pose develops balance, concentration, and ankle stability. Use a wall for support if needed.</p>
+  <p><strong>5. Cat-Cow (Marjaryasana-Bitilasana):</strong> On all fours, alternate between arching your back upward (cat) and dropping your belly toward the floor (cow), coordinating each movement with your breath. Inhale as you move into cow, exhale as you move into cat. This is the most accessible spinal mobility exercise in yoga and is an essential warm-up for any practice.</p>
+  <p><strong>6. Savasana (Corpse Pose):</strong> Lie flat on your back with your arms slightly away from your body, palms facing up. Close your eyes and allow your body to completely relax. Savasana is the final pose of every yoga class and is, paradoxically, one of the most important. It allows the nervous system to integrate the effects of the practice and is the primary vehicle for the deep relaxation response that yoga produces.</p>
+
+  <h2 id="first-class">What to Expect in Your First Class</h2>
+  <p>Your first yoga class will typically begin with a brief centering period in which you sit quietly, close your eyes, and begin to connect with your breath. This transition from the busyness of daily life into the focused attention of yoga practice is an important part of the experience, not merely a formality.</p>
+  <p>The class will move through a warm-up sequence, a main sequence of standing and floor poses, and a closing relaxation in savasana. Your instructor will offer verbal cues for alignment and breath throughout, and will typically offer modifications for each pose to accommodate different levels of flexibility and strength. Do not hesitate to use props such as blocks, straps, and bolsters &mdash; they are tools for deepening the practice, not signs of weakness.</p>
+  <p>Wear comfortable, fitted clothing that allows you to move freely. Yoga is practised barefoot on a mat. Avoid eating a large meal within two hours of class. Arrive a few minutes early to introduce yourself to the instructor and mention any injuries or limitations.</p>
+
+  <h2 id="physical">Physical Benefits</h2>
+  <p>The physical benefits of regular yoga practice are extensive and well-documented. Flexibility is the most obvious benefit, but it is far from the only one. Yoga builds functional strength throughout the entire body, with particular emphasis on the core, back, shoulders, and legs. Many yoga poses require sustained isometric muscle engagement that produces strength gains comparable to conventional resistance training, particularly in the stabilising muscles that are often neglected in gym-based exercise.</p>
+  <p>Yoga also significantly improves posture and spinal health. The combination of spinal extension, rotation, and flexion movements performed in a typical yoga class counteracts the postural imbalances created by prolonged sitting and screen use. Regular practitioners typically show measurable improvements in spinal mobility, reduced forward head posture, and reduced lower back pain within eight to twelve weeks of consistent practice.</p>
+
+  <h2 id="mental">Mental Benefits</h2>
+  <p>The mental benefits of yoga are inseparable from the physical practice. The breath-movement synchronisation that is central to yoga activates the parasympathetic nervous system, reducing cortisol and adrenaline levels and producing a measurable reduction in anxiety and stress. Multiple clinical studies have found yoga to be as effective as cognitive behavioural therapy for mild to moderate anxiety and depression, with the advantage of also producing physical health benefits simultaneously.</p>
+  <p>The mindfulness component of yoga &mdash; the sustained, non-judgmental attention to present-moment experience &mdash; is increasingly recognised as one of the most powerful tools available for improving mental health, emotional regulation, and cognitive function. Regular yoga practice has been shown to increase grey matter density in brain regions associated with self-awareness, compassion, and introspection.</p>
+
+  <h2 id="mistakes">Common Beginner Mistakes</h2>
+  <ul>
+    <li><strong>Comparing yourself to others:</strong> Every body is different, and every practitioner is at a different stage of their journey. Focus entirely on your own experience and your own breath.</li>
+    <li><strong>Holding the breath:</strong> The breath is the foundation of yoga. If you find yourself holding your breath in a pose, ease out of it slightly until you can breathe freely.</li>
+    <li><strong>Forcing flexibility:</strong> Yoga is not a flexibility competition. Never push into pain. The edge of a comfortable stretch is where the work happens &mdash; not beyond it.</li>
+    <li><strong>Skipping savasana:</strong> Many beginners leave before savasana. This is a mistake. Savasana is when the nervous system integrates the effects of the practice and the deepest benefits are realised.</li>
+    <li><strong>Practising too infrequently:</strong> Once a week is better than nothing, but twice to three times per week is where meaningful change begins to accumulate.</li>
+  </ul>
+
+  <h2 id="faq">Frequently Asked Questions</h2>
+  <div class="article-faq">
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Do I need to be flexible to start yoga?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>No. This is the most common misconception about yoga. You do not need any existing flexibility to begin. Yoga is the practice that develops flexibility over time &mdash; you do not need to arrive with it. Many of the most dedicated yoga practitioners started as complete beginners with very limited range of motion. The practice meets you exactly where you are.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What should I wear to a yoga class?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>Wear comfortable, fitted clothing that allows you to move freely in all directions. Avoid loose or baggy clothing that can fall over your face in inverted poses. Yoga leggings and a fitted top are ideal. You will practise barefoot, so no shoes are needed. Bring a yoga mat if you have one, though most studios provide mats for hire or purchase.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Is yoga a religion?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>No. While yoga has roots in Hindu and Buddhist philosophy, the physical practice of yoga as taught in modern Western studios is a secular movement and wellness practice. You do not need to hold any particular beliefs to practise yoga, and the vast majority of yoga classes in Australia make no religious references. The philosophical and spiritual dimensions of yoga are available to those who wish to explore them, but they are entirely optional.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How many times a week should I practise yoga?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>For beginners, two to three times per week is ideal. This frequency allows enough repetition for the poses to begin to feel familiar and for the physical benefits to accumulate, while allowing adequate recovery time between sessions. Once a week will produce some benefits but progress will be slow. Daily practice is excellent if your schedule allows, particularly for shorter sessions of 20 to 30 minutes.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What is the difference between yoga and Pilates?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>Both yoga and Pilates improve flexibility, core strength, and body awareness, but they differ significantly in their origins, philosophy, and approach. Yoga is an ancient practice that integrates breath, movement, and mindfulness, with a philosophical framework that extends beyond the physical. Pilates is a 20th-century system developed by Joseph Pilates that focuses specifically on core strength, spinal alignment, and controlled movement. Yoga tends to offer greater flexibility and mindfulness benefits; Pilates tends to offer more targeted core and postural strengthening. Both are excellent practices and many people benefit from doing both.</p></div>
+    </div>
   </div>
+
+  <div class="article-cta">
+    <h3>Ready to start your yoga journey?</h3>
+    <p>Our beginner yoga classes at UNDRGRND Movement in Southport, Gold Coast are designed for complete beginners. No experience, no flexibility, and no prior knowledge required &mdash; just bring yourself.</p>
+    <a href="/adults.html" class="cta-button">View Classes &amp; Book</a>
+  </div>
+
+  <p class="article-back"><a href="/learn.html" class="back-link">&larr; Back to Learn</a></p>
+
+</div>
 </div>
 
 <style>
@@ -1315,5 +1456,48 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
+<script>
+(function() {
+  var panels = document.querySelectorAll('.steps-illustration');
+  if (!panels.length) return;
+  panels.forEach(function(el) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease, box-shadow 0.7s ease';
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          entry.target.style.boxShadow = '0 0 40px rgba(139,92,246,0.18), 0 0 80px rgba(236,72,153,0.08)';
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    panels.forEach(function(el) { io.observe(el); });
+  } else {
+    panels.forEach(function(el) { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; });
+  }
+}());
+</script>
+<script>
+document.querySelectorAll('.faq-question').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var isOpen = this.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-question').forEach(function(b) {
+      b.setAttribute('aria-expanded', 'false');
+      var ans = b.nextElementSibling;
+      if (ans) ans.classList.remove('open');
+    });
+    if (!isOpen) {
+      this.setAttribute('aria-expanded', 'true');
+      var answer = this.nextElementSibling;
+      if (answer) answer.classList.add('open');
+    }
+  });
+});
+</script>
 </body>
 </html>

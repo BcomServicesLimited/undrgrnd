@@ -100,6 +100,41 @@
     .back-link:hover {
       text-decoration: underline;
     }
+    /* ---- Article Content Styles ---- */
+    .article-intro { font-size: 1.15rem; line-height: 1.7; color: #e0e0e0; margin-bottom: 2rem; font-weight: 300; }
+    .article-toc { background: rgba(139,92,246,0.05); border: 1px solid rgba(139,92,246,0.2); border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0 3rem; }
+    .article-toc__title { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #9b6dff; margin: 0 0 1rem; border: none; padding: 0; }
+    .article-toc__list { margin: 0; padding-left: 1.5rem; color: #b3b3b3; font-size: 0.95rem; line-height: 1.8; }
+    .article-toc__list a { color: #9b6dff; text-decoration: none; }
+    .article-toc__list a:hover { text-decoration: underline; }
+    .article-body h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 700; text-transform: uppercase; color: #fff; margin: 3.5rem 0 1.5rem; border-bottom: 1px solid rgba(139,92,246,0.3); padding-bottom: 0.5rem; scroll-margin-top: 80px; }
+    .article-body p { font-size: 1.05rem; line-height: 1.75; color: #b3b3b3; margin-bottom: 1.5rem; }
+    .article-body ul, .article-body ol { margin-bottom: 2rem; padding-left: 1.5rem; color: #b3b3b3; font-size: 1.05rem; line-height: 1.75; }
+    .article-body li { margin-bottom: 0.75rem; }
+    .article-body strong { color: #fff; font-weight: 600; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: rgba(20,20,20,0.5); border-radius: 8px; overflow: hidden; font-size: 0.95rem; }
+    .article-table th, .article-table td { padding: 0.9rem 1rem; text-align: left; border-bottom: 1px solid rgba(139,92,246,0.15); }
+    .article-table th { background: rgba(139,92,246,0.12); color: #9b6dff; font-weight: 700; text-transform: uppercase; font-size: 0.82rem; letter-spacing: 0.06em; }
+    .article-table td { color: #b3b3b3; }
+    .article-image-container { margin: 2.5rem 0; border-radius: 12px; overflow: hidden; background: #111; border: 1px solid rgba(139,92,246,0.2); }
+    .article-image { width: 100%; height: auto; display: block; aspect-ratio: 16/9; object-fit: cover; }
+    .article-image-container figcaption { padding: 0.85rem 1rem; font-size: 0.85rem; color: #777; text-align: center; font-style: italic; border-top: 1px solid rgba(139,92,246,0.1); }
+    .article-faq { margin: 1rem 0 2rem; }
+    .faq-item { border-bottom: 1px solid rgba(139,92,246,0.15); }
+    .faq-question { width: 100%; background: none; border: none; padding: 1.1rem 0; text-align: left; font-family: 'Outfit', Helvetica Neue, sans-serif; font-size: 1rem; font-weight: 600; color: #fff; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: color 0.3s ease; }
+    .faq-question:hover { color: #9b6dff; }
+    .faq-icon { width: 20px; height: 20px; flex-shrink: 0; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.3s ease; }
+    .faq-question[aria-expanded="true"] .faq-icon { transform: rotate(180deg); }
+    .faq-answer { display: none; padding: 0 0 1.25rem; }
+    .faq-answer.open { display: block; }
+    .faq-answer p { margin: 0; }
+    .article-cta { margin-top: 4rem; padding: 3rem 2rem; background: linear-gradient(135deg, rgba(139,92,246,0.1) 0%, rgba(236,72,153,0.1) 100%); border: 1px solid rgba(139,92,246,0.3); border-radius: 16px; text-align: center; }
+    .article-cta h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 700; text-transform: uppercase; color: #fff; margin: 0 0 1rem; }
+    .article-cta p { color: #e0e0e0; margin-bottom: 2rem; }
+    .article-back { margin-top: 3rem; text-align: center; }
+    .steps-illustration { margin: 2rem 0 2.5rem; border: 1px solid rgba(139,92,246,0.35); border-radius: 14px; overflow: hidden; background: #0a0a0a; box-shadow: 0 0 40px rgba(139,92,246,0.12), 0 0 80px rgba(236,72,153,0.06); }
+    .steps-illustration .article-image { aspect-ratio: 16/9; object-fit: contain; background: #0a0a0a; padding: 0.5rem 0; }
+    .steps-illustration figcaption { background: rgba(139,92,246,0.07); border-top: 1px solid rgba(139,92,246,0.2); color: #9b6dff; font-style: normal; font-weight: 500; font-size: 0.88rem; letter-spacing: 0.01em; padding: 0.75rem 1.25rem; text-align: center; }
   </style>
 </head>
 <body>
@@ -688,16 +723,123 @@
 </section>
 
 <div class="article-body">
-  <div class="coming-soon-box">
-    <div class="coming-soon-box__icon">🌉</div>
-    <h2 class="coming-soon-box__title">Article Coming Soon</h2>
-    <p class="coming-soon-box__text">Learn how to build the strength and flexibility needed for a safe, supported backbend — from beginner bridges to full wheel pose.</p>
-    <a href="/adults.html" class="cta-button">View Our Classes</a>
-    <br>
-    <a href="/learn.html" class="back-link">
-      &larr; Back to Learn
-    </a>
+
+  <p class="article-intro">A backbend is one of the most visually striking and physically rewarding movements in dance, yoga, and gymnastics. Whether your goal is a supported bridge, a full wheel pose, or the deep chest-opening backbends seen in contemporary dance and aerial arts, the path to getting there is the same: building the right combination of spinal mobility, shoulder flexibility, hip flexor length, and back extensor strength. This guide walks you through every stage of that journey safely and systematically.</p>
+
+  <p>The most common mistake people make when learning backbends is attempting to force the spine into a deeper curve without first addressing the underlying restrictions that are preventing it. A backbend is not just a spine movement &mdash; it requires mobility from the thoracic spine, flexibility in the hip flexors and quadriceps, and significant strength in the back extensors and glutes. Understanding these requirements is the first step to training effectively.</p>
+
+  <nav class="article-toc" aria-label="Table of contents">
+    <h2 class="article-toc__title">In This Guide</h2>
+    <ol class="article-toc__list">
+      <li><a href="#anatomy">The Anatomy of a Backbend</a></li>
+      <li><a href="#why-struggle">Why Most People Struggle</a></li>
+      <li><a href="#prep">Essential Preparatory Stretches</a></li>
+      <li><a href="#progression">The 5-Step Backbend Progression</a></li>
+      <li><a href="#bridge-vs-wheel">Bridge vs Wheel Pose</a></li>
+      <li><a href="#mistakes">Common Mistakes to Avoid</a></li>
+      <li><a href="#safety">Safety Rules</a></li>
+      <li><a href="#faq">Frequently Asked Questions</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="anatomy">The Anatomy of a Backbend</h2>
+  <p>A backbend is a spinal extension movement, but describing it simply as &ldquo;bending the spine backwards&rdquo; misses the complexity of what is actually happening. The spine is divided into three regions: the cervical (neck), thoracic (mid-back), and lumbar (lower back). In an ideal backbend, the curve should be distributed evenly across all three regions, with particular emphasis on the thoracic spine, which has the greatest capacity for extension. Most people, however, have a stiff thoracic spine and compensate by over-extending the lumbar region &mdash; which is the primary cause of lower back pain in backbend training.</p>
+  <p>The shoulders play an equally critical role. In a full wheel pose or deep backbend, the arms are extended overhead with the hands pressing into the floor. This requires significant shoulder flexion and external rotation, as well as flexibility in the pectorals and anterior deltoids. If the shoulders are tight, the body will compensate by collapsing into the lower back rather than opening through the chest.</p>
+
+  <table class="article-table">
+    <thead>
+      <tr><th>Body Region</th><th>Role in Backbend</th><th>Common Restriction</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Thoracic Spine</strong></td><td>Primary site of spinal extension</td><td>Stiffness from prolonged sitting</td></tr>
+      <tr><td><strong>Lumbar Spine</strong></td><td>Secondary extension; should not be over-loaded</td><td>Over-extension due to thoracic stiffness</td></tr>
+      <tr><td><strong>Hip Flexors</strong></td><td>Must lengthen to allow hips to extend fully</td><td>Tightness from sitting</td></tr>
+      <tr><td><strong>Shoulders / Chest</strong></td><td>Must open to allow arms overhead</td><td>Tight pectorals and anterior deltoids</td></tr>
+      <tr><td><strong>Back Extensors / Glutes</strong></td><td>Provide strength to hold the position</td><td>Weakness from sedentary lifestyle</td></tr>
+    </tbody>
+  </table>
+
+  <figure class="article-image-container">
+    <img src="/images/learn/backbend-hero.webp" alt="A female dancer performing a full wheel pose backbend on a dark studio floor with purple and magenta lighting" class="article-image" width="1376" height="768" loading="lazy">
+    <figcaption>A full wheel pose backbend requires thoracic mobility, shoulder flexibility, hip flexor length, and back extensor strength working in harmony.</figcaption>
+  </figure>
+
+  <h2 id="why-struggle">Why Most People Struggle</h2>
+  <p>The three most common reasons people struggle with backbends are tight hip flexors, limited thoracic mobility, and insufficient shoulder flexibility. These three restrictions are all direct consequences of modern sedentary lifestyles. Sitting for prolonged periods shortens the hip flexors, rounds the thoracic spine into kyphosis, and tightens the chest and shoulders. Attempting a backbend without addressing these restrictions is like trying to open a door that is locked from three sides simultaneously.</p>
+  <p>Weak back extensors are the fourth major obstacle. The erector spinae, multifidus, and glutes must be strong enough to actively lift and support the spine in extension. Many people have the flexibility to achieve a deeper backbend but lack the muscular strength to hold the position safely. This is why backbend training must include both stretching and strengthening work.</p>
+
+  <h2 id="prep">Essential Preparatory Stretches</h2>
+  <p>Before attempting any backbend progression, spend at least 10 to 15 minutes on the following preparatory exercises. These are not optional warm-ups &mdash; they are the foundational work that makes the backbend possible and safe. Perform these stretches daily for the best results.</p>
+  <ul>
+    <li><strong>Chest Opener (doorway stretch):</strong> Stand in a doorway with your forearms against the frame at shoulder height. Gently lean forward until you feel a deep stretch across the chest and front of the shoulders. Hold for 45 to 60 seconds. This is the single most important preparatory stretch for backbends.</li>
+    <li><strong>Kneeling Hip Flexor Stretch:</strong> Kneel on one knee in a lunge position and push your hips forward. Hold for 45 to 60 seconds per side. Tight hip flexors are one of the primary limiters of backbend depth.</li>
+    <li><strong>Thoracic Extension over a Foam Roller:</strong> Place a foam roller horizontally across your mid-back and gently extend over it, supporting your head with your hands. Move the roller up and down the thoracic spine. This directly targets the most commonly stiff region of the spine for backbends.</li>
+    <li><strong>Cat-Cow:</strong> On all fours, alternate between arching your back upward (cat) and dropping your belly toward the floor (cow). Perform 10 to 15 slow repetitions. This warms up the entire spine and improves segmental mobility.</li>
+    <li><strong>Shoulder Circles and Cross-Body Arm Stretch:</strong> Perform 10 large shoulder circles in each direction, then stretch each arm across your body to open the posterior shoulder. This prepares the shoulder joints for the overhead position required in wheel pose.</li>
+  </ul>
+
+  <h2 id="progression">The 5-Step Backbend Progression</h2>
+  <p>The following progression moves from the most accessible backbend variation to the full wheel pose. Do not skip stages. Each stage builds the specific strength and flexibility required for the next. Spend at least two to four weeks at each stage before progressing, and only advance when the current stage feels comfortable and controlled.</p>
+
+  <figure class="article-image-container steps-illustration">
+    <img src="/images/learn/steps-backbend.webp" alt="Five progressive backbend steps illustrated as glowing neon figures: lying flat, bridge pose, hands by ears, partial wheel, full wheel pose" class="article-image" width="1376" height="768" loading="lazy">
+    <figcaption>The 5-step backbend progression &mdash; build each stage before moving to the next.</figcaption>
+  </figure>
+
+  <p><strong>Stage 1 &mdash; Prone Back Extension (Cobra Pose):</strong> Lie face down with your hands under your shoulders. Press gently into the floor to lift your chest, keeping your hips on the ground. Hold for 30 seconds. This is the most accessible spinal extension exercise and begins to open the chest and thoracic spine without any weight-bearing demands.</p>
+  <p><strong>Stage 2 &mdash; Bridge Pose:</strong> Lie on your back with your knees bent and feet flat on the floor, hip-width apart. Press your feet into the floor and lift your hips toward the ceiling, squeezing your glutes at the top. Hold for 30 to 60 seconds. Bridge pose builds the glute and back extensor strength required for deeper backbends while gently opening the hip flexors.</p>
+  <p><strong>Stage 3 &mdash; Supported Wheel (Hands by Ears):</strong> From the bridge position, place your hands on the floor beside your ears with your fingers pointing toward your shoulders. Press into your hands and feet and attempt to lift the top of your head off the floor. Hold for 5 to 10 seconds. This stage introduces the shoulder and chest opening required for full wheel.</p>
+  <p><strong>Stage 4 &mdash; Partial Wheel:</strong> From the supported position above, begin to straighten your arms and legs as much as possible, lifting your head fully off the floor. Your arms may not be fully straight yet. Hold for 10 to 20 seconds. Focus on pressing the chest forward and opening the shoulders rather than pushing the hips higher.</p>
+  <p><strong>Stage 5 &mdash; Full Wheel Pose (Urdhva Dhanurasana):</strong> From stage 4, work toward fully straightening both the arms and legs. The chest should be open, the hips lifted high, and the weight distributed evenly between hands and feet. Hold for 20 to 30 seconds, breathing deeply. Exit by tucking your chin and lowering slowly to the floor, never collapsing.</p>
+
+  <h2 id="bridge-vs-wheel">Bridge vs Wheel Pose</h2>
+  <p>Bridge pose and wheel pose are often confused, but they are distinct movements with different demands. Bridge pose is performed with the arms remaining on the floor by the sides of the body. The hips are lifted but the thoracic spine remains relatively flat. Bridge is an excellent exercise for glute and back extensor strength and is appropriate for beginners. Wheel pose (also called full backbend or Urdhva Dhanurasana) requires the arms to be extended overhead with the hands pressing into the floor, creating a full arch from the hands to the feet. Wheel demands significantly more shoulder flexibility and thoracic mobility than bridge.</p>
+
+  <h2 id="mistakes">Common Mistakes to Avoid</h2>
+  <ul>
+    <li><strong>Dumping into the lower back:</strong> The most common and most dangerous backbend mistake. If you feel compression or pinching in your lower back, you are over-extending the lumbar spine. Focus on opening the thoracic spine and chest instead.</li>
+    <li><strong>Not engaging the glutes:</strong> The glutes protect the lower back in backbends by stabilising the pelvis. Always squeeze your glutes actively throughout any backbend.</li>
+    <li><strong>Collapsing the knees outward:</strong> In wheel pose, the knees have a tendency to splay outward. Keep them hip-width apart and actively press them toward each other throughout the pose.</li>
+    <li><strong>Holding the breath:</strong> Tension in the breath creates tension in the spine. Breathe deeply and continuously throughout the backbend.</li>
+    <li><strong>Skipping the warm-up:</strong> Attempting a deep backbend with a cold spine is one of the most reliable ways to injure yourself. Always complete a thorough warm-up before any backbend training.</li>
+  </ul>
+
+  <h2 id="safety">Safety Rules</h2>
+  <p>Backbend training carries a higher injury risk than most flexibility disciplines because it involves the spine directly. The following rules are non-negotiable for safe practice. Never attempt a deep backbend without a thorough warm-up. Never force the spine into a deeper curve than it naturally wants to go. If you feel sharp, shooting, or electrical pain in your spine or down your legs, stop immediately and consult a physiotherapist before continuing. Progress is measured in months, not days.</p>
+
+  <h2 id="faq">Frequently Asked Questions</h2>
+  <div class="article-faq">
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Is a backbend bad for your back?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>A backbend performed with correct technique and adequate preparation is not bad for your back. In fact, spinal extension exercises are often recommended by physiotherapists for people with disc-related lower back pain. The key is distributing the curve evenly across the spine rather than concentrating it in the lumbar region. Problems arise when people force the backbend without the necessary thoracic mobility and shoulder flexibility, causing the lower back to compensate.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How long does it take to learn wheel pose?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>For a complete beginner with average flexibility, achieving a full wheel pose typically takes three to six months of consistent daily practice. People with prior yoga, gymnastics, or dance experience may progress faster. The most important factors are the consistency of your preparatory stretching (particularly the chest and hip flexors) and the regularity of your progression work. Attempting to rush the process by skipping stages is the most common cause of setbacks.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What if my shoulders are too tight for wheel pose?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>Tight shoulders are one of the most common obstacles to wheel pose. The solution is consistent chest and shoulder stretching, particularly the doorway chest stretch and overhead shoulder stretches. Yin yoga poses such as puppy pose and supported fish pose are also highly effective for opening the chest and shoulders over time. Do not attempt wheel pose until you can comfortably place your hands on the floor beside your ears without your elbows flaring outward.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Should I feel it in my lower back?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>You should feel a stretch across the front of your body (chest, hip flexors, abdomen) and engagement in your back muscles and glutes. You should not feel sharp compression or pinching in your lower back. If you do, this indicates that your thoracic spine or hip flexors are too tight and the lower back is compensating. Ease out of the backbend and focus on the preparatory stretches before attempting again.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Can older adults learn backbends?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>Yes, absolutely. Adults of any age can improve their spinal mobility and work toward deeper backbends, though the timeline may be longer and the approach more gradual. The preparatory stretches and early stages of the progression are appropriate for most adults regardless of age. The key is progressing slowly, listening to your body, and working with a qualified instructor who can tailor the approach to your individual needs and any existing conditions.</p></div>
+    </div>
   </div>
+
+  <div class="article-cta">
+    <h3>Want to work on your backbend?</h3>
+    <p>Our Stretch &amp; Mobility and Yoga classes at UNDRGRND Movement in Southport include dedicated backbend training with expert guidance. Book your class today.</p>
+    <a href="/adults.html" class="cta-button">View Classes &amp; Book</a>
+  </div>
+
+  <p class="article-back"><a href="/learn.html" class="back-link">&larr; Back to Learn</a></p>
+
+</div>
 </div>
 
 <style>
@@ -1315,5 +1457,48 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
+<script>
+(function() {
+  var panels = document.querySelectorAll('.steps-illustration');
+  if (!panels.length) return;
+  panels.forEach(function(el) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease, box-shadow 0.7s ease';
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          entry.target.style.boxShadow = '0 0 40px rgba(139,92,246,0.18), 0 0 80px rgba(236,72,153,0.08)';
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    panels.forEach(function(el) { io.observe(el); });
+  } else {
+    panels.forEach(function(el) { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; });
+  }
+}());
+</script>
+<script>
+document.querySelectorAll('.faq-question').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var isOpen = this.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-question').forEach(function(b) {
+      b.setAttribute('aria-expanded', 'false');
+      var ans = b.nextElementSibling;
+      if (ans) ans.classList.remove('open');
+    });
+    if (!isOpen) {
+      this.setAttribute('aria-expanded', 'true');
+      var answer = this.nextElementSibling;
+      if (answer) answer.classList.add('open');
+    }
+  });
+});
+</script>
 </body>
 </html>

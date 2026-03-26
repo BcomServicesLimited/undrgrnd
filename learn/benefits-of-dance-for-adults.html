@@ -100,6 +100,41 @@
     .back-link:hover {
       text-decoration: underline;
     }
+    /* ---- Article Content Styles ---- */
+    .article-intro { font-size: 1.15rem; line-height: 1.7; color: #e0e0e0; margin-bottom: 2rem; font-weight: 300; }
+    .article-toc { background: rgba(139,92,246,0.05); border: 1px solid rgba(139,92,246,0.2); border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0 3rem; }
+    .article-toc__title { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #9b6dff; margin: 0 0 1rem; border: none; padding: 0; }
+    .article-toc__list { margin: 0; padding-left: 1.5rem; color: #b3b3b3; font-size: 0.95rem; line-height: 1.8; }
+    .article-toc__list a { color: #9b6dff; text-decoration: none; }
+    .article-toc__list a:hover { text-decoration: underline; }
+    .article-body h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 700; text-transform: uppercase; color: #fff; margin: 3.5rem 0 1.5rem; border-bottom: 1px solid rgba(139,92,246,0.3); padding-bottom: 0.5rem; scroll-margin-top: 80px; }
+    .article-body p { font-size: 1.05rem; line-height: 1.75; color: #b3b3b3; margin-bottom: 1.5rem; }
+    .article-body ul, .article-body ol { margin-bottom: 2rem; padding-left: 1.5rem; color: #b3b3b3; font-size: 1.05rem; line-height: 1.75; }
+    .article-body li { margin-bottom: 0.75rem; }
+    .article-body strong { color: #fff; font-weight: 600; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: rgba(20,20,20,0.5); border-radius: 8px; overflow: hidden; font-size: 0.95rem; }
+    .article-table th, .article-table td { padding: 0.9rem 1rem; text-align: left; border-bottom: 1px solid rgba(139,92,246,0.15); }
+    .article-table th { background: rgba(139,92,246,0.12); color: #9b6dff; font-weight: 700; text-transform: uppercase; font-size: 0.82rem; letter-spacing: 0.06em; }
+    .article-table td { color: #b3b3b3; }
+    .article-image-container { margin: 2.5rem 0; border-radius: 12px; overflow: hidden; background: #111; border: 1px solid rgba(139,92,246,0.2); }
+    .article-image { width: 100%; height: auto; display: block; aspect-ratio: 16/9; object-fit: cover; }
+    .article-image-container figcaption { padding: 0.85rem 1rem; font-size: 0.85rem; color: #777; text-align: center; font-style: italic; border-top: 1px solid rgba(139,92,246,0.1); }
+    .article-faq { margin: 1rem 0 2rem; }
+    .faq-item { border-bottom: 1px solid rgba(139,92,246,0.15); }
+    .faq-question { width: 100%; background: none; border: none; padding: 1.1rem 0; text-align: left; font-family: 'Outfit', Helvetica Neue, sans-serif; font-size: 1rem; font-weight: 600; color: #fff; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: color 0.3s ease; }
+    .faq-question:hover { color: #9b6dff; }
+    .faq-icon { width: 20px; height: 20px; flex-shrink: 0; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.3s ease; }
+    .faq-question[aria-expanded="true"] .faq-icon { transform: rotate(180deg); }
+    .faq-answer { display: none; padding: 0 0 1.25rem; }
+    .faq-answer.open { display: block; }
+    .faq-answer p { margin: 0; }
+    .article-cta { margin-top: 4rem; padding: 3rem 2rem; background: linear-gradient(135deg, rgba(139,92,246,0.1) 0%, rgba(236,72,153,0.1) 100%); border: 1px solid rgba(139,92,246,0.3); border-radius: 16px; text-align: center; }
+    .article-cta h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 700; text-transform: uppercase; color: #fff; margin: 0 0 1rem; }
+    .article-cta p { color: #e0e0e0; margin-bottom: 2rem; }
+    .article-back { margin-top: 3rem; text-align: center; }
+    .steps-illustration { margin: 2rem 0 2.5rem; border: 1px solid rgba(139,92,246,0.35); border-radius: 14px; overflow: hidden; background: #0a0a0a; box-shadow: 0 0 40px rgba(139,92,246,0.12), 0 0 80px rgba(236,72,153,0.06); }
+    .steps-illustration .article-image { aspect-ratio: 16/9; object-fit: contain; background: #0a0a0a; padding: 0.5rem 0; }
+    .steps-illustration figcaption { background: rgba(139,92,246,0.07); border-top: 1px solid rgba(139,92,246,0.2); color: #9b6dff; font-style: normal; font-weight: 500; font-size: 0.88rem; letter-spacing: 0.01em; padding: 0.75rem 1.25rem; text-align: center; }
   </style>
 </head>
 <body>
@@ -688,16 +723,110 @@
 </section>
 
 <div class="article-body">
-  <div class="coming-soon-box">
-    <div class="coming-soon-box__icon">💃</div>
-    <h2 class="coming-soon-box__title">Article Coming Soon</h2>
-    <p class="coming-soon-box__text">Why more adults are returning to dance — and the surprising physical, mental, and social benefits that come with it.</p>
-    <a href="/adults.html" class="cta-button">View Our Classes</a>
-    <br>
-    <a href="/learn.html" class="back-link">
-      &larr; Back to Learn
-    </a>
+
+  <p class="article-intro">More adults are returning to dance than at any point in recent history &mdash; and the reasons go far beyond fitness. Dance classes for adults offer a rare combination of physical challenge, creative expression, social connection, and genuine joy that is almost impossible to replicate in a conventional gym environment. Whether you danced as a child and stopped, or have never danced a step in your life, this guide explores why dance might be the most complete form of exercise you have never tried.</p>
+
+  <p>The evidence for the benefits of dance is compelling and growing. Research published in the New England Journal of Medicine found that dancing was the only physical activity associated with a reduced risk of dementia, outperforming swimming, cycling, and golf. A 2019 study in Frontiers in Psychology found that dance significantly outperformed conventional exercise in improving psychological well-being, body image, and social connectedness. These are not trivial findings &mdash; they point to something unique about dance as a human activity.</p>
+
+  <nav class="article-toc" aria-label="Table of contents">
+    <h2 class="article-toc__title">In This Guide</h2>
+    <ol class="article-toc__list">
+      <li><a href="#why-return">Why Adults Return to Dance</a></li>
+      <li><a href="#physical">Physical Benefits</a></li>
+      <li><a href="#cognitive">Cognitive Benefits</a></li>
+      <li><a href="#mental">Mental Health Benefits</a></li>
+      <li><a href="#social">Social Benefits</a></li>
+      <li><a href="#styles">Dance Styles for Adults</a></li>
+      <li><a href="#first-class">What to Expect as a Beginner</a></li>
+      <li><a href="#faq">Frequently Asked Questions</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="why-return">Why Adults Return to Dance</h2>
+  <p>Most adults who come to dance classes for the first time (or the first time in decades) arrive with a mixture of excitement and apprehension. They are excited because dance is something they have always wanted to do, or something they loved and gave up. They are apprehensive because they worry about looking foolish, not being able to keep up, or being judged for their body or their lack of coordination. These fears are completely understandable and almost universally unfounded.</p>
+  <p>The adult dance studio is one of the most supportive environments in fitness. Everyone in the room is there for the same reason: to move, to learn, and to enjoy themselves. The culture in adult dance classes tends to be warm, encouraging, and refreshingly free of the competitive atmosphere that can make gyms and some fitness classes feel intimidating. Most students are surprised by how quickly they feel at home.</p>
+  <p>People return to dance for many different reasons. Some are seeking a form of exercise that does not feel like exercise. Others are looking for a creative outlet after years of desk-based work. Some are going through a life transition &mdash; a divorce, a retirement, a move to a new city &mdash; and are looking for community and connection. Dance offers all of these things simultaneously, which is why it tends to produce such high levels of long-term commitment compared to conventional fitness activities.</p>
+
+  <figure class="article-image-container">
+    <img src="/images/learn/dance-adults-hero.webp" alt="A group of adult women dancing joyfully in a dark studio with dramatic purple and magenta lighting" class="article-image" width="1376" height="768" loading="lazy">
+    <figcaption>Adult dance classes combine physical challenge, creative expression, and genuine community in a way that conventional fitness cannot replicate.</figcaption>
+  </figure>
+
+  <h2 id="physical">Physical Benefits</h2>
+  <p>Dance is a genuinely comprehensive physical workout. Depending on the style and intensity, a one-hour dance class can burn between 300 and 600 calories while simultaneously developing cardiovascular fitness, muscular strength and endurance, coordination, balance, spatial awareness, and flexibility. Unlike most gym-based exercise, these physical benefits are developed in an integrated, whole-body way rather than in isolation.</p>
+  <p>The cardiovascular benefits of dance are well established. Regular dance classes improve aerobic capacity, reduce resting heart rate, and lower blood pressure. The interval-like nature of dance &mdash; alternating between high-energy movement sequences and lower-intensity transitions &mdash; is particularly effective for cardiovascular conditioning. A 2016 study in the American Journal of Preventive Medicine found that moderate-intensity dancing was associated with a 46 per cent lower risk of cardiovascular mortality compared to non-dancers.</p>
+  <p>Balance and coordination are two physical qualities that decline significantly with age if not actively maintained. Dance is one of the most effective activities for preserving and improving both, because it requires constant proprioceptive feedback, weight shifting, and multi-directional movement. This has direct implications for fall prevention in older adults, making dance one of the most practically beneficial forms of exercise for long-term health.</p>
+
+  <h2 id="cognitive">Cognitive Benefits</h2>
+  <p>Learning choreography is one of the most cognitively demanding activities available to adults. It requires the simultaneous engagement of spatial memory, sequential memory, auditory processing, motor planning, and attention &mdash; a combination that few other activities can match. This cognitive complexity is precisely why dance has such a powerful effect on brain health and why it is associated with reduced dementia risk.</p>
+  <p>Every time you learn a new combination, your brain forms new neural connections and strengthens existing ones. This process, known as neuroplasticity, is the mechanism by which the brain maintains and improves its function throughout life. Dance is one of the most effective neuroplasticity-promoting activities available, because it combines physical movement with music, social interaction, and the cognitive challenge of learning and remembering sequences.</p>
+
+  <h2 id="mental">Mental Health Benefits</h2>
+  <p>The mental health benefits of dance are profound and multifaceted. At the most basic level, dance triggers the release of endorphins, serotonin, and dopamine &mdash; the neurochemicals associated with mood elevation, stress reduction, and reward. The combination of rhythmic movement, music, and social connection produces a neurochemical response that is uniquely powerful compared to other forms of exercise.</p>
+  <p>Dance also has a distinctive relationship with body image. Unlike many fitness activities that focus on changing the body's appearance, dance focuses on what the body can do. This shift in perspective &mdash; from body as object to body as instrument &mdash; is transformative for many adults, particularly those who have struggled with body image or a difficult relationship with exercise. Multiple studies have found that regular dance participation significantly improves body image and self-esteem, independent of any changes in body composition.</p>
+
+  <h2 id="social">Social Benefits</h2>
+  <p>One of the most underappreciated benefits of adult dance classes is the social dimension. Loneliness and social isolation are significant public health concerns, particularly for adults who have moved cities, experienced relationship changes, or whose social networks have contracted with age. Dance classes provide a structured, regular opportunity for social connection that is built around a shared activity rather than the often-awkward forced socialisation of networking events or new-to-area groups.</p>
+  <p>The shared experience of learning something new together &mdash; particularly something that involves vulnerability, laughter, and physical expression &mdash; creates bonds between students that are qualitatively different from the connections formed in most social settings. Many students describe their dance class as the social highlight of their week and cite the community as the primary reason they keep coming back.</p>
+
+  <h2 id="styles">Dance Styles for Adults</h2>
+  <table class="article-table">
+    <thead>
+      <tr><th>Style</th><th>Physical Focus</th><th>Mood / Energy</th><th>Best For</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Contemporary</strong></td><td>Flexibility, floorwork, expression</td><td>Artistic, introspective</td><td>Creative expression, body awareness</td></tr>
+      <tr><td><strong>Jazz / Commercial</strong></td><td>Coordination, strength, cardio</td><td>High energy, fun</td><td>Fitness, learning choreography</td></tr>
+      <tr><td><strong>Hip Hop</strong></td><td>Rhythm, isolation, cardio</td><td>Energetic, urban</td><td>Cardio fitness, rhythm development</td></tr>
+      <tr><td><strong>Heels / Stiletto</strong></td><td>Posture, confidence, sensuality</td><td>Empowering, bold</td><td>Confidence building, self-expression</td></tr>
+      <tr><td><strong>Latin (Salsa, Bachata)</strong></td><td>Hip mobility, partner work, rhythm</td><td>Social, joyful</td><td>Social dancing, hip flexibility</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="first-class">What to Expect as a Beginner</h2>
+  <p>Walking into your first adult dance class as a complete beginner can feel daunting, but the experience is almost always far more positive than anticipated. Most adult beginner classes move at a pace that is accessible to everyone, with instructors who are experienced at breaking down choreography into manageable steps and creating an environment where mistakes are celebrated as part of the learning process.</p>
+
+  <figure class="article-image-container steps-illustration">
+    <img src="/images/learn/steps-dance.webp" alt="Five adult dance movement fundamentals illustrated as glowing neon figures: posture, step-touch, body roll, arm wave, freestyle" class="article-image" width="1376" height="768" loading="lazy">
+    <figcaption>Five fundamental movement skills developed through adult dance classes.</figcaption>
+  </figure>
+
+  <p>Wear comfortable, fitted clothing that allows you to move freely. Avoid loose clothing that can get in the way of movement or obscure your body lines from the instructor. For most styles, clean trainers or jazz shoes are appropriate. Bring water, as dance is more physically demanding than it looks.</p>
+  <p>Do not worry about keeping up perfectly in your first class. The goal of the first session is simply to experience the style, get comfortable in the space, and begin to develop a feel for the movement. Most students find that they pick up the basics faster than they expected, and that the class flies by.</p>
+
+  <h2 id="faq">Frequently Asked Questions</h2>
+  <div class="article-faq">
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Am I too old to start dancing?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>No. Adults of any age can begin dancing and experience significant benefits. The Gold Coast has a thriving adult dance community with students ranging from their 20s to their 70s. The key is finding the right class for your current fitness level and goals, and progressing at your own pace. Many of the most dedicated and expressive dancers in adult classes are those who started later in life.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Do I need prior experience to join an adult dance class?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>No. Beginner adult dance classes are specifically designed for people with no prior dance experience. You do not need to know any steps, have any sense of rhythm, or have any dance background. The instructor will teach you everything from scratch. The only requirement is a willingness to try and a readiness to laugh at yourself occasionally.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What if I have no rhythm?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>Rhythm is a skill, not an innate talent. Most people who believe they have no rhythm simply have not had enough exposure to rhythmic movement. Regular dance classes will significantly improve your ability to hear and respond to music. Within a few weeks of consistent practice, most students are surprised by how much their sense of rhythm has developed. Your instructor will also give you specific techniques for finding and internalising the beat.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How quickly will I improve?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>Most beginners notice significant improvement within four to six classes. You will begin to recognise movement patterns, anticipate transitions, and feel more comfortable in your body within the first month of regular attendance. Visible improvement in coordination, rhythm, and confidence typically becomes apparent to others within six to eight weeks. The rate of progress accelerates significantly once you begin attending more than once per week.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Is dance a good workout?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>Yes, dance is an excellent workout. A one-hour dance class typically burns between 300 and 600 calories depending on the style and intensity, while simultaneously developing cardiovascular fitness, muscular strength, coordination, balance, and flexibility. Unlike many gym-based workouts, the physical demands of dance are delivered in an enjoyable, engaging format that makes it far easier to maintain consistency over the long term.</p></div>
+    </div>
   </div>
+
+  <div class="article-cta">
+    <h3>Ready to start dancing?</h3>
+    <p>UNDRGRND Movement offers a wide range of adult dance classes in Southport, Gold Coast &mdash; from contemporary and jazz to hip hop and heels. All levels welcome. Book your first class today.</p>
+    <a href="/adults.html" class="cta-button">View Classes &amp; Book</a>
+  </div>
+
+  <p class="article-back"><a href="/learn.html" class="back-link">&larr; Back to Learn</a></p>
+
+</div>
 </div>
 
 <style>
@@ -1315,5 +1444,48 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
+<script>
+(function() {
+  var panels = document.querySelectorAll('.steps-illustration');
+  if (!panels.length) return;
+  panels.forEach(function(el) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease, box-shadow 0.7s ease';
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          entry.target.style.boxShadow = '0 0 40px rgba(139,92,246,0.18), 0 0 80px rgba(236,72,153,0.08)';
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    panels.forEach(function(el) { io.observe(el); });
+  } else {
+    panels.forEach(function(el) { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; });
+  }
+}());
+</script>
+<script>
+document.querySelectorAll('.faq-question').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var isOpen = this.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-question').forEach(function(b) {
+      b.setAttribute('aria-expanded', 'false');
+      var ans = b.nextElementSibling;
+      if (ans) ans.classList.remove('open');
+    });
+    if (!isOpen) {
+      this.setAttribute('aria-expanded', 'true');
+      var answer = this.nextElementSibling;
+      if (answer) answer.classList.add('open');
+    }
+  });
+});
+</script>
 </body>
 </html>

@@ -100,6 +100,41 @@
     .back-link:hover {
       text-decoration: underline;
     }
+    /* ---- Article Content Styles ---- */
+    .article-intro { font-size: 1.15rem; line-height: 1.7; color: #e0e0e0; margin-bottom: 2rem; font-weight: 300; }
+    .article-toc { background: rgba(139,92,246,0.05); border: 1px solid rgba(139,92,246,0.2); border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0 3rem; }
+    .article-toc__title { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #9b6dff; margin: 0 0 1rem; border: none; padding: 0; }
+    .article-toc__list { margin: 0; padding-left: 1.5rem; color: #b3b3b3; font-size: 0.95rem; line-height: 1.8; }
+    .article-toc__list a { color: #9b6dff; text-decoration: none; }
+    .article-toc__list a:hover { text-decoration: underline; }
+    .article-body h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 700; text-transform: uppercase; color: #fff; margin: 3.5rem 0 1.5rem; border-bottom: 1px solid rgba(139,92,246,0.3); padding-bottom: 0.5rem; scroll-margin-top: 80px; }
+    .article-body p { font-size: 1.05rem; line-height: 1.75; color: #b3b3b3; margin-bottom: 1.5rem; }
+    .article-body ul, .article-body ol { margin-bottom: 2rem; padding-left: 1.5rem; color: #b3b3b3; font-size: 1.05rem; line-height: 1.75; }
+    .article-body li { margin-bottom: 0.75rem; }
+    .article-body strong { color: #fff; font-weight: 600; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: rgba(20,20,20,0.5); border-radius: 8px; overflow: hidden; font-size: 0.95rem; }
+    .article-table th, .article-table td { padding: 0.9rem 1rem; text-align: left; border-bottom: 1px solid rgba(139,92,246,0.15); }
+    .article-table th { background: rgba(139,92,246,0.12); color: #9b6dff; font-weight: 700; text-transform: uppercase; font-size: 0.82rem; letter-spacing: 0.06em; }
+    .article-table td { color: #b3b3b3; }
+    .article-image-container { margin: 2.5rem 0; border-radius: 12px; overflow: hidden; background: #111; border: 1px solid rgba(139,92,246,0.2); }
+    .article-image { width: 100%; height: auto; display: block; aspect-ratio: 16/9; object-fit: cover; }
+    .article-image-container figcaption { padding: 0.85rem 1rem; font-size: 0.85rem; color: #777; text-align: center; font-style: italic; border-top: 1px solid rgba(139,92,246,0.1); }
+    .article-faq { margin: 1rem 0 2rem; }
+    .faq-item { border-bottom: 1px solid rgba(139,92,246,0.15); }
+    .faq-question { width: 100%; background: none; border: none; padding: 1.1rem 0; text-align: left; font-family: 'Outfit', Helvetica Neue, sans-serif; font-size: 1rem; font-weight: 600; color: #fff; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: color 0.3s ease; }
+    .faq-question:hover { color: #9b6dff; }
+    .faq-icon { width: 20px; height: 20px; flex-shrink: 0; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.3s ease; }
+    .faq-question[aria-expanded="true"] .faq-icon { transform: rotate(180deg); }
+    .faq-answer { display: none; padding: 0 0 1.25rem; }
+    .faq-answer.open { display: block; }
+    .faq-answer p { margin: 0; }
+    .article-cta { margin-top: 4rem; padding: 3rem 2rem; background: linear-gradient(135deg, rgba(139,92,246,0.1) 0%, rgba(236,72,153,0.1) 100%); border: 1px solid rgba(139,92,246,0.3); border-radius: 16px; text-align: center; }
+    .article-cta h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 700; text-transform: uppercase; color: #fff; margin: 0 0 1rem; }
+    .article-cta p { color: #e0e0e0; margin-bottom: 2rem; }
+    .article-back { margin-top: 3rem; text-align: center; }
+    .steps-illustration { margin: 2rem 0 2.5rem; border: 1px solid rgba(139,92,246,0.35); border-radius: 14px; overflow: hidden; background: #0a0a0a; box-shadow: 0 0 40px rgba(139,92,246,0.12), 0 0 80px rgba(236,72,153,0.06); }
+    .steps-illustration .article-image { aspect-ratio: 16/9; object-fit: contain; background: #0a0a0a; padding: 0.5rem 0; }
+    .steps-illustration figcaption { background: rgba(139,92,246,0.07); border-top: 1px solid rgba(139,92,246,0.2); color: #9b6dff; font-style: normal; font-weight: 500; font-size: 0.88rem; letter-spacing: 0.01em; padding: 0.75rem 1.25rem; text-align: center; }
   </style>
 </head>
 <body>
@@ -688,16 +723,110 @@
 </section>
 
 <div class="article-body">
-  <div class="coming-soon-box">
-    <div class="coming-soon-box__icon">🪂</div>
-    <h2 class="coming-soon-box__title">Article Coming Soon</h2>
-    <p class="coming-soon-box__text">What is aerial yoga, who is it for, and what can you expect in your first class? All your questions answered.</p>
-    <a href="/adults.html" class="cta-button">View Our Classes</a>
-    <br>
-    <a href="/learn.html" class="back-link">
-      &larr; Back to Learn
-    </a>
+
+  <p class="article-intro">Aerial yoga is one of the most unique and transformative movement practices available. Performed in a suspended silk hammock that hangs from the ceiling, it combines the principles of traditional yoga with elements of aerial acrobatics, allowing you to achieve poses that are impossible on the ground, decompress the spine through inversion, and experience a profound sense of freedom and playfulness. If you have been curious about aerial yoga but are not sure where to start, this guide answers every question you could have.</p>
+
+  <p>One of the most common misconceptions about aerial yoga is that it requires prior yoga experience, exceptional strength, or a particular body type. None of these are true. Aerial yoga classes at the beginner level are genuinely accessible to most people, and the hammock actually makes many yoga poses easier to achieve by providing support and traction that the floor cannot offer. The experience of being suspended &mdash; even partially &mdash; is something that most students describe as immediately addictive.</p>
+
+  <nav class="article-toc" aria-label="Table of contents">
+    <h2 class="article-toc__title">In This Guide</h2>
+    <ol class="article-toc__list">
+      <li><a href="#what-is">What Aerial Yoga Is</a></li>
+      <li><a href="#benefits">Physical and Mental Benefits</a></li>
+      <li><a href="#vs-yoga">Aerial Yoga vs Regular Yoga vs Aerial Silks</a></li>
+      <li><a href="#first-class">What Happens in Your First Class</a></li>
+      <li><a href="#poses">Five Foundational Poses</a></li>
+      <li><a href="#who-for">Who Aerial Yoga Is Suitable For</a></li>
+      <li><a href="#contraindications">Health Considerations</a></li>
+      <li><a href="#faq">Frequently Asked Questions</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="what-is">What Aerial Yoga Is</h2>
+  <p>Aerial yoga, also known as anti-gravity yoga or hammock yoga, is a practice that uses a large, low-hanging fabric hammock to support the body during yoga poses, stretches, and inversions. The hammock is typically made from a strong, stretchy nylon or polyester fabric and is rigged to a ceiling-mounted frame or structural beam at a height of approximately 90 centimetres to 1.2 metres from the floor. This height allows the practitioner to use the hammock for support in standing poses, to sit or recline inside it, or to fully invert with the hammock supporting the hips or waist.</p>
+  <p>The practice was developed in the early 2000s by Christopher Harrison, a Broadway choreographer and gymnast, who combined his background in aerial performance with yoga principles. It has since evolved into a globally practised discipline with multiple styles and approaches, ranging from deeply restorative hammock yoga (which focuses on passive stretching and relaxation) to more dynamic aerial yoga flow classes that incorporate strength, balance, and aerial transitions.</p>
+
+  <figure class="article-image-container">
+    <img src="/images/learn/aerial-yoga-hero.webp" alt="A woman suspended in a deep purple silk aerial yoga hammock performing an inverted pose in a dark studio" class="article-image" width="1376" height="768" loading="lazy">
+    <figcaption>The aerial yoga hammock provides support and traction that makes many poses more accessible than their floor-based equivalents.</figcaption>
+  </figure>
+
+  <h2 id="benefits">Physical and Mental Benefits</h2>
+  <p>The benefits of aerial yoga are both numerous and well-documented. From a physical perspective, the most significant benefit is spinal decompression. When you hang or invert in the hammock, gravity gently lengthens the spine, creating space between the vertebrae and relieving the compression that accumulates from sitting, standing, and carrying loads throughout the day. Many students report immediate relief from back pain and tension after their first inversion.</p>
+  <p>Aerial yoga also develops core strength in a uniquely effective way. Because the hammock is an unstable surface, your core muscles must work continuously to maintain balance and control, even in relatively simple poses. This produces a deep, functional core engagement that is different from the isolated core work performed in Pilates or gym training. Over time, regular aerial yoga practice produces noticeable improvements in core stability, posture, and overall body awareness.</p>
+  <p>The mental and emotional benefits are equally significant. The experience of being suspended &mdash; particularly during inversions &mdash; activates the vestibular system and produces a distinctive sense of calm and mental clarity that many students describe as meditative. The playful, exploratory nature of the practice also reduces the performance anxiety that some people experience in traditional yoga classes, making it particularly beneficial for those who struggle with stress, anxiety, or a difficult relationship with exercise.</p>
+
+  <h2 id="vs-yoga">Aerial Yoga vs Regular Yoga vs Aerial Silks</h2>
+  <table class="article-table">
+    <thead>
+      <tr><th>Practice</th><th>Equipment</th><th>Difficulty</th><th>Primary Focus</th><th>Best For</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Aerial Yoga</strong></td><td>Hammock (wide fabric)</td><td>Beginner&ndash;Intermediate</td><td>Yoga poses, inversions, decompression</td><td>Beginners, back pain relief, flexibility</td></tr>
+      <tr><td><strong>Regular Yoga</strong></td><td>Mat only</td><td>Beginner&ndash;Advanced</td><td>Poses, breath, mindfulness</td><td>All levels; wide range of styles</td></tr>
+      <tr><td><strong>Aerial Silks</strong></td><td>Two narrow fabric panels</td><td>Intermediate&ndash;Advanced</td><td>Climbing, wraps, drops, performance</td><td>Strength, performance, circus arts</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="first-class">What Happens in Your First Class</h2>
+  <p>Your first aerial yoga class will begin with a <strong>safety briefing</strong>. Your instructor will explain how the hammock is rigged, the weight limits of the equipment, how to enter and exit the hammock safely, and the basic rules of the studio. This is an essential part of every class, not just the first one, and should never be skipped.</p>
+  <p>The class will then move into a <strong>grounded warm-up</strong>, using the hammock for support in standing stretches and gentle spinal movements. This familiarises you with the feel of the fabric and begins to build your confidence with the equipment before you attempt any suspended positions.</p>
+  <p>The main section of the class introduces <strong>two to three foundational poses</strong> in the hammock. In a beginner class, these will typically include a seated hammock position, a supported backbend, and a gentle inversion with the hammock supporting the hips. Your instructor will guide you through each pose step by step, and you will have time to practice with individual feedback.</p>
+  <p>The class closes with a <strong>restorative cocoon</strong>: wrapping yourself fully inside the hammock and hanging in a cocooned position for five to ten minutes. This is one of the most beloved parts of aerial yoga and produces a profound sense of relaxation and sensory calm.</p>
+
+  <h2 id="poses">Five Foundational Poses</h2>
+
+  <figure class="article-image-container steps-illustration">
+    <img src="/images/learn/steps-aerial-yoga.webp" alt="Five progressive aerial yoga poses illustrated as glowing neon figures in a hammock: seated, backbend, cocoon, inverted hang, inverted split" class="article-image" width="1376" height="768" loading="lazy">
+    <figcaption>Five foundational aerial yoga poses &mdash; beginners typically start with poses 1 and 2 in their first class.</figcaption>
+  </figure>
+
+  <p><strong>1. Seated Hammock:</strong> Sit inside the hammock as you would sit in a swing, with the fabric supporting your hips and thighs. This is the entry point for most aerial yoga poses and the position from which many transitions begin. Focus on finding your balance and getting comfortable with the gentle swaying of the hammock.</p>
+  <p><strong>2. Supported Backbend:</strong> From the seated position, lean back into the hammock and allow it to support your upper back and shoulders as you open your chest toward the ceiling. This is a deeply restorative pose that opens the thoracic spine and chest with the support of the hammock, making it more accessible than a floor-based backbend.</p>
+  <p><strong>3. Cocoon:</strong> Wrap the hammock fabric around your entire body and hang in a foetal position. This is the most restorative pose in aerial yoga and is typically held for five to ten minutes at the end of class. The compression and suspension produce a deeply calming effect on the nervous system.</p>
+  <p><strong>4. Hip Inversion:</strong> With the hammock positioned at hip height, fold forward over the fabric and allow your upper body to hang toward the floor. This gentle inversion decompresses the lumbar spine and is accessible to most beginners. Your instructor will guide you through the entry and exit carefully.</p>
+  <p><strong>5. Inverted Split:</strong> An intermediate pose in which one leg extends upward while the other hangs toward the floor, with the hammock supporting the hips. This pose requires some hip flexibility and confidence with inversion, and is typically introduced after several classes of foundational work.</p>
+
+  <h2 id="who-for">Who Aerial Yoga Is Suitable For</h2>
+  <p>Aerial yoga is suitable for a remarkably wide range of people. It is particularly beneficial for those with back pain or spinal compression, as the inversion and decompression effects can provide significant relief. It is also excellent for people who have tried traditional yoga and found it inaccessible due to limited flexibility, as the hammock provides support that makes many poses achievable for beginners. People who are anxious about exercise or have a difficult relationship with their body often find aerial yoga to be a uniquely positive and non-judgmental environment.</p>
+  <p>Aerial yoga is also popular among experienced yogis and dancers who want to explore a new dimension of movement, and among people recovering from certain injuries who need a low-impact practice that still challenges strength and mobility.</p>
+
+  <h2 id="contraindications">Health Considerations</h2>
+  <p>While aerial yoga is broadly accessible, there are some health conditions for which it is contraindicated or requires medical clearance. These include glaucoma or other eye pressure conditions (inversion increases intraocular pressure), recent surgery (particularly abdominal, spinal, or joint surgery), uncontrolled high blood pressure, pregnancy beyond the first trimester, and severe vertigo or inner ear disorders. If you have any of these conditions, consult your doctor before attending an aerial yoga class. Always inform your instructor of any health conditions before the class begins.</p>
+
+  <h2 id="faq">Frequently Asked Questions</h2>
+  <div class="article-faq">
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Do I need prior yoga experience for aerial yoga?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>No. Aerial yoga classes at the beginner level are designed for people with no prior yoga or fitness experience. The hammock actually makes many yoga poses more accessible than their floor-based equivalents by providing support and traction. Your instructor will guide you through every pose step by step. The only requirement is a willingness to try something new.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Is it safe to be inverted in the hammock?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>Yes, when performed under the guidance of a qualified instructor with properly rigged equipment. The inversions taught in beginner aerial yoga classes are gentle and supported, with the hammock bearing most of the body's weight. Your instructor will guide you through the entry and exit of every inversion carefully. If you have any conditions that contraindicate inversion (such as glaucoma or high blood pressure), inform your instructor before class.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What if I am scared of heights?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>The hammock in aerial yoga hangs very close to the floor &mdash; typically 90 centimetres to 1.2 metres. You are never far from the ground, and in most poses your feet can touch the floor at any time. Many people who describe themselves as afraid of heights find aerial yoga completely manageable and even liberating. The sensation of suspension is quite different from the experience of being at height, and most students find it calming rather than frightening.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Are there weight limits for aerial yoga?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>Professional aerial yoga hammocks are rigged to support loads of 300 to 900 kilograms, far exceeding any individual body weight. However, individual studios may have their own guidelines based on their specific rigging and equipment. Contact your studio directly if you have concerns. Aerial yoga is practised by people of all body sizes and types.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How quickly will I progress in aerial yoga?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>Most beginners feel comfortable in the hammock within two to three classes and begin to explore more dynamic poses within four to six classes. Progress in aerial yoga is highly individual and depends on your existing flexibility, strength, and comfort with inversion. The most important thing is to attend regularly and communicate openly with your instructor about your goals and any challenges you encounter.</p></div>
+    </div>
   </div>
+
+  <div class="article-cta">
+    <h3>Ready to try aerial yoga?</h3>
+    <p>Our aerial yoga classes at UNDRGRND Movement in Southport are open to complete beginners. Experience the freedom of suspension and the deep release of inversion in a safe, supportive environment.</p>
+    <a href="/adults.html" class="cta-button">View Classes &amp; Book</a>
+  </div>
+
+  <p class="article-back"><a href="/learn.html" class="back-link">&larr; Back to Learn</a></p>
+
+</div>
 </div>
 
 <style>
@@ -1315,5 +1444,48 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
+<script>
+(function() {
+  var panels = document.querySelectorAll('.steps-illustration');
+  if (!panels.length) return;
+  panels.forEach(function(el) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease, box-shadow 0.7s ease';
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          entry.target.style.boxShadow = '0 0 40px rgba(139,92,246,0.18), 0 0 80px rgba(236,72,153,0.08)';
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    panels.forEach(function(el) { io.observe(el); });
+  } else {
+    panels.forEach(function(el) { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; });
+  }
+}());
+</script>
+<script>
+document.querySelectorAll('.faq-question').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var isOpen = this.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-question').forEach(function(b) {
+      b.setAttribute('aria-expanded', 'false');
+      var ans = b.nextElementSibling;
+      if (ans) ans.classList.remove('open');
+    });
+    if (!isOpen) {
+      this.setAttribute('aria-expanded', 'true');
+      var answer = this.nextElementSibling;
+      if (answer) answer.classList.add('open');
+    }
+  });
+});
+</script>
 </body>
 </html>

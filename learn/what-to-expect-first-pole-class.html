@@ -100,6 +100,41 @@
     .back-link:hover {
       text-decoration: underline;
     }
+    /* ---- Article Content Styles ---- */
+    .article-intro { font-size: 1.15rem; line-height: 1.7; color: #e0e0e0; margin-bottom: 2rem; font-weight: 300; }
+    .article-toc { background: rgba(139,92,246,0.05); border: 1px solid rgba(139,92,246,0.2); border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0 3rem; }
+    .article-toc__title { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #9b6dff; margin: 0 0 1rem; border: none; padding: 0; }
+    .article-toc__list { margin: 0; padding-left: 1.5rem; color: #b3b3b3; font-size: 0.95rem; line-height: 1.8; }
+    .article-toc__list a { color: #9b6dff; text-decoration: none; }
+    .article-toc__list a:hover { text-decoration: underline; }
+    .article-body h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 700; text-transform: uppercase; color: #fff; margin: 3.5rem 0 1.5rem; border-bottom: 1px solid rgba(139,92,246,0.3); padding-bottom: 0.5rem; scroll-margin-top: 80px; }
+    .article-body p { font-size: 1.05rem; line-height: 1.75; color: #b3b3b3; margin-bottom: 1.5rem; }
+    .article-body ul, .article-body ol { margin-bottom: 2rem; padding-left: 1.5rem; color: #b3b3b3; font-size: 1.05rem; line-height: 1.75; }
+    .article-body li { margin-bottom: 0.75rem; }
+    .article-body strong { color: #fff; font-weight: 600; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: rgba(20,20,20,0.5); border-radius: 8px; overflow: hidden; font-size: 0.95rem; }
+    .article-table th, .article-table td { padding: 0.9rem 1rem; text-align: left; border-bottom: 1px solid rgba(139,92,246,0.15); }
+    .article-table th { background: rgba(139,92,246,0.12); color: #9b6dff; font-weight: 700; text-transform: uppercase; font-size: 0.82rem; letter-spacing: 0.06em; }
+    .article-table td { color: #b3b3b3; }
+    .article-image-container { margin: 2.5rem 0; border-radius: 12px; overflow: hidden; background: #111; border: 1px solid rgba(139,92,246,0.2); }
+    .article-image { width: 100%; height: auto; display: block; aspect-ratio: 16/9; object-fit: cover; }
+    .article-image-container figcaption { padding: 0.85rem 1rem; font-size: 0.85rem; color: #777; text-align: center; font-style: italic; border-top: 1px solid rgba(139,92,246,0.1); }
+    .article-faq { margin: 1rem 0 2rem; }
+    .faq-item { border-bottom: 1px solid rgba(139,92,246,0.15); }
+    .faq-question { width: 100%; background: none; border: none; padding: 1.1rem 0; text-align: left; font-family: 'Outfit', Helvetica Neue, sans-serif; font-size: 1rem; font-weight: 600; color: #fff; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: color 0.3s ease; }
+    .faq-question:hover { color: #9b6dff; }
+    .faq-icon { width: 20px; height: 20px; flex-shrink: 0; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.3s ease; }
+    .faq-question[aria-expanded="true"] .faq-icon { transform: rotate(180deg); }
+    .faq-answer { display: none; padding: 0 0 1.25rem; }
+    .faq-answer.open { display: block; }
+    .faq-answer p { margin: 0; }
+    .article-cta { margin-top: 4rem; padding: 3rem 2rem; background: linear-gradient(135deg, rgba(139,92,246,0.1) 0%, rgba(236,72,153,0.1) 100%); border: 1px solid rgba(139,92,246,0.3); border-radius: 16px; text-align: center; }
+    .article-cta h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 700; text-transform: uppercase; color: #fff; margin: 0 0 1rem; }
+    .article-cta p { color: #e0e0e0; margin-bottom: 2rem; }
+    .article-back { margin-top: 3rem; text-align: center; }
+    .steps-illustration { margin: 2rem 0 2.5rem; border: 1px solid rgba(139,92,246,0.35); border-radius: 14px; overflow: hidden; background: #0a0a0a; box-shadow: 0 0 40px rgba(139,92,246,0.12), 0 0 80px rgba(236,72,153,0.06); }
+    .steps-illustration .article-image { aspect-ratio: 16/9; object-fit: contain; background: #0a0a0a; padding: 0.5rem 0; }
+    .steps-illustration figcaption { background: rgba(139,92,246,0.07); border-top: 1px solid rgba(139,92,246,0.2); color: #9b6dff; font-style: normal; font-weight: 500; font-size: 0.88rem; letter-spacing: 0.01em; padding: 0.75rem 1.25rem; text-align: center; }
   </style>
 </head>
 <body>
@@ -688,16 +723,119 @@
 </section>
 
 <div class="article-body">
-  <div class="coming-soon-box">
-    <div class="coming-soon-box__icon">💪</div>
-    <h2 class="coming-soon-box__title">Article Coming Soon</h2>
-    <p class="coming-soon-box__text">Everything you need to know before your first pole class — what to wear, what to bring, and what actually happens.</p>
-    <a href="/adults.html" class="cta-button">View Our Classes</a>
-    <br>
-    <a href="/learn.html" class="back-link">
-      &larr; Back to Learn
-    </a>
+
+  <p class="article-intro">Walking into your first pole fitness class can feel equal parts exciting and nerve-wracking. You might be wondering whether you need to be strong, what to wear, whether it is appropriate for your body type, or simply what on earth actually happens in the class. This guide answers every question a first-timer could have, so you can walk through the door feeling informed, confident, and ready to enjoy one of the most empowering fitness experiences available.</p>
+
+  <p>Pole fitness has evolved dramatically over the past two decades. What was once a niche underground practice has become a globally recognised sport and fitness discipline, with world championships, university clubs, and dedicated studios in every major city. At UNDRGRND Movement, our beginner pole classes are designed to be welcoming, non-intimidating, and genuinely fun &mdash; regardless of your fitness level, age, or dance background.</p>
+
+  <nav class="article-toc" aria-label="Table of contents">
+    <h2 class="article-toc__title">In This Guide</h2>
+    <ol class="article-toc__list">
+      <li><a href="#what-is-pole">What Pole Fitness Actually Is</a></li>
+      <li><a href="#what-to-wear">What to Wear and What to Bring</a></li>
+      <li><a href="#class-structure">What Happens in a First Class</a></li>
+      <li><a href="#first-moves">The First Moves You Will Learn</a></li>
+      <li><a href="#physical-demands">The Physical Demands</a></li>
+      <li><a href="#common-fears">Common Fears Addressed</a></li>
+      <li><a href="#pole-kisses">Understanding Pole Kisses</a></li>
+      <li><a href="#faq">Frequently Asked Questions</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="what-is-pole">What Pole Fitness Actually Is</h2>
+  <p>Pole fitness is a full-body strength and movement discipline performed on a vertical chrome or stainless steel pole. It combines elements of gymnastics, dance, acrobatics, and strength training into a single practice that develops grip strength, upper body and core power, coordination, spatial awareness, and flexibility simultaneously. It is one of the few fitness modalities that is genuinely enjoyable from the very first session, which is why retention rates in pole studios tend to be exceptionally high compared to conventional gyms.</p>
+  <p>The discipline exists on a broad spectrum. At the beginner level, classes focus on fundamental grip techniques, basic spins, body waves, and floor work. At the advanced end, practitioners perform inverted holds, aerial spins, and contortion-level flexibility moves that rival professional circus performance. The journey between those two points is gradual, structured, and deeply satisfying. Most students are surprised by how quickly they progress once they commit to regular practice.</p>
+  <p>It is also worth addressing the cultural context directly. Pole fitness is a legitimate sport and art form. It is recognised by the Global Association of International Sports Federations (GAISF) and is actively campaigning for Olympic inclusion. The vast majority of people who attend pole classes are there for the fitness, the community, and the creative challenge. The studio environment is one of the most body-positive and supportive spaces in fitness.</p>
+
+  <figure class="article-image-container">
+    <img src="/images/learn/pole-class-hero.webp" alt="A female dancer gripping a chrome pole in a dark dance studio with dramatic purple lighting" class="article-image" width="1376" height="768" loading="lazy">
+    <figcaption>Pole fitness combines strength, dance, and acrobatics into one of the most empowering fitness disciplines available.</figcaption>
+  </figure>
+
+  <h2 id="what-to-wear">What to Wear and What to Bring</h2>
+  <p>What you wear to a pole class is not just a matter of comfort &mdash; it directly affects your ability to grip the pole and perform moves safely. Skin contact with the pole is essential for grip, which means that unlike most fitness classes, less clothing is actually more functional in pole. This surprises many beginners, but it quickly makes sense once you understand the mechanics.</p>
+  <p>For your first class, wear shorts (not leggings) and a fitted top that exposes your midriff or at least your forearms. The inner thighs, the backs of the knees, and the forearms are the primary grip points used in beginner pole. If these areas are covered by fabric, the pole will slide rather than grip, making many moves impossible and potentially unsafe. As you advance, you will use even more skin contact points, which is why experienced pole dancers often wear minimal clothing during training.</p>
+  <ul>
+    <li><strong>Do not apply moisturiser or body lotion</strong> on the day of your class. Moisturiser is the enemy of pole grip and will cause you to slide off the pole regardless of your strength.</li>
+    <li><strong>Bring a small towel</strong> to wipe the pole between turns and to dry your hands if they become sweaty.</li>
+    <li><strong>Wear flat shoes or go barefoot</strong> for your first class. Heels are used in some pole styles but are not appropriate for beginners.</li>
+    <li><strong>Tie your hair back</strong> to keep it clear of the pole during spins.</li>
+    <li><strong>Bring water</strong> and a light snack for after class. Pole is more physically demanding than it looks.</li>
+  </ul>
+
+  <h2 id="class-structure">What Happens in a First Class</h2>
+  <p>A typical beginner pole class runs for 60 minutes and follows a clear structure. Understanding this structure in advance removes the anxiety of not knowing what to expect and allows you to focus on enjoying the experience.</p>
+
+  <figure class="article-image-container steps-illustration">
+    <img src="/images/learn/steps-pole-class.webp" alt="Five stages of a first pole fitness class illustrated as glowing neon figures: arriving, group warm-up, gripping the pole, basic spin, and cool-down" class="article-image" width="1376" height="768" loading="lazy">
+    <figcaption>What happens in a typical first pole fitness class &mdash; from arrival through to cool-down.</figcaption>
+  </figure>
+
+  <p>The class begins with a <strong>group warm-up</strong> of approximately 10 minutes. This typically includes dynamic movements such as arm circles, hip rotations, body rolls, and light cardio to increase blood flow and prepare the joints for the demands of pole work. The warm-up also serves as an introduction to the movement vocabulary of pole &mdash; the fluid, dance-influenced quality of movement that distinguishes pole fitness from pure gymnastics.</p>
+  <p>The instructor will then introduce <strong>pole grip and safety</strong>. You will learn how to grip the pole correctly using both hands, how to stand safely at the base of the pole, and the fundamental rule of pole: always have at least one hand on the pole when performing any move. You will practice basic holds, including the basic grip (both hands above your head), the cup grip (one hand above, one below), and the split grip.</p>
+  <p>The main section of the class introduces <strong>two to four beginner moves</strong>, typically including a basic spin, a body wave, and a floor-based transition. The instructor demonstrates each move, breaks it down into steps, and then gives students time to practice with individual feedback. This is where the real fun begins. Most students manage their first spin within the first class, which is enormously satisfying.</p>
+  <p>The class closes with a <strong>cool-down and stretch</strong> of approximately 10 minutes, targeting the shoulders, wrists, inner thighs, and hip flexors &mdash; the areas most engaged during pole work.</p>
+
+  <h2 id="first-moves">The First Moves You Will Learn</h2>
+  <table class="article-table">
+    <thead>
+      <tr><th>Move</th><th>What It Trains</th><th>Difficulty</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Fireman Spin</strong></td><td>Grip strength, body tension, spatial awareness</td><td>Beginner</td></tr>
+      <tr><td><strong>Chair Spin</strong></td><td>Core control, hip flexors, grip endurance</td><td>Beginner</td></tr>
+      <tr><td><strong>Body Wave</strong></td><td>Spinal mobility, coordination, body awareness</td><td>Beginner</td></tr>
+      <tr><td><strong>Basic Climb</strong></td><td>Upper body strength, grip, leg press</td><td>Beginner&ndash;Intermediate</td></tr>
+      <tr><td><strong>Front Hook Spin</strong></td><td>Hip flexibility, core, grip</td><td>Beginner&ndash;Intermediate</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="physical-demands">The Physical Demands</h2>
+  <p>Pole fitness is a genuinely demanding full-body workout. The primary muscles engaged are the forearms and hands (grip), the latissimus dorsi and biceps (pulling strength), the core (stability and body tension), and the inner thighs and glutes (leg hooks and holds). Over time, regular pole training produces noticeable improvements in upper body strength, core definition, and overall body composition.</p>
+  <p>Do not be discouraged if your hands and forearms feel fatigued quickly in your first few classes. Grip strength is a highly trainable quality, but it takes time to develop. Most students find that their grip strength improves significantly within four to six weeks of regular practice. The calluses that develop on your hands are a badge of honour in the pole community.</p>
+
+  <h2 id="common-fears">Common Fears Addressed</h2>
+  <p>The most common concern among first-timers is that they are not strong enough. This is almost universally unfounded. Beginner pole classes are specifically designed for people with no prior strength training. The moves taught in the first several classes require minimal upper body strength and focus primarily on technique, body awareness, and coordination. Strength develops naturally as a result of the training itself.</p>
+  <p>The second most common concern is body type. Pole fitness is genuinely inclusive of all body types, and there is no weight limit for the poles used in a professional studio environment. The physics of pole actually work in favour of people with more body mass in some respects &mdash; more weight creates more momentum in spins. What matters is technique, not size.</p>
+  <p>Age is another common concern. Pole fitness is practised by people in their 50s, 60s, and beyond. The key is progressing at your own pace and communicating with your instructor about any physical limitations or injuries.</p>
+
+  <h2 id="pole-kisses">Understanding Pole Kisses</h2>
+  <p>One thing no one tells you before your first pole class is that you will likely develop bruises. In the pole community, these are affectionately known as &ldquo;pole kisses&rdquo; or &ldquo;pole burns.&rdquo; They appear on the inner thighs, the backs of the knees, the shins, and the forearms &mdash; wherever the pole makes contact with your skin during grips and holds. They are a completely normal part of the learning process and are not a sign that you are doing anything wrong.</p>
+  <p>Pole kisses typically fade within a week and become less frequent as your skin toughens and your technique improves. Applying arnica gel after training can help reduce bruising. Most experienced pole dancers barely notice them anymore. Think of them as a sign of progress rather than injury.</p>
+
+  <h2 id="faq">Frequently Asked Questions</h2>
+  <div class="article-faq">
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Do I need to be strong to start pole fitness?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>No. Beginner pole classes are designed for people with no prior strength training. The first several classes focus on technique, body awareness, and basic spins that require minimal upper body strength. Strength develops naturally as a result of the training. Most students are surprised by how quickly their grip and upper body strength improve within the first month of regular practice.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What about bruising &mdash; is it normal?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>Yes, bruising (known as pole kisses) is completely normal for beginners and is not a sign of injury. Bruises appear where the pole contacts the skin during grips and holds, most commonly on the inner thighs, shins, and forearms. They fade within a week and become less frequent as your skin toughens and your technique improves. Arnica gel can help speed up recovery.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Is pole fitness appropriate for all body types?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>Absolutely. Pole fitness is one of the most inclusive fitness disciplines available and is practised by people of all body types, sizes, and ages. There is no weight limit for studio poles, which are engineered to hold several hundred kilograms. What matters in pole is technique, not body size. Many people find that pole fitness significantly improves their relationship with their body and their self-confidence.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How many classes before I see progress?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>Most students notice significant improvement within four to six classes. You will likely land your first spin in your very first class. Within a month of weekly classes, most beginners can perform three to five spins, a basic climb, and several floor transitions. Progress in pole is highly visible and motivating, which is one of the reasons retention rates in pole studios are so high.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What if I cannot do a move?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>This is completely normal and expected. Pole moves often require a combination of strength, flexibility, and spatial awareness that takes time to develop. Your instructor will offer modifications and progressions for every move. The most important thing is to practice consistently, communicate with your instructor about any difficulties, and trust the process. Every experienced pole dancer was once a beginner who could not do the moves.</p></div>
+    </div>
   </div>
+
+  <div class="article-cta">
+    <h3>Ready to try your first class?</h3>
+    <p>Our beginner pole fitness classes at our Southport Gold Coast studio are open to all levels, all body types, and all ages. Book your first class today and discover what your body is capable of.</p>
+    <a href="/adults.html" class="cta-button">View Classes &amp; Book</a>
+  </div>
+
+  <p class="article-back"><a href="/learn.html" class="back-link">&larr; Back to Learn</a></p>
+
+</div>
 </div>
 
 <style>
@@ -1315,5 +1453,48 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
+<script>
+(function() {
+  var panels = document.querySelectorAll('.steps-illustration');
+  if (!panels.length) return;
+  panels.forEach(function(el) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease, box-shadow 0.7s ease';
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          entry.target.style.boxShadow = '0 0 40px rgba(139,92,246,0.18), 0 0 80px rgba(236,72,153,0.08)';
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    panels.forEach(function(el) { io.observe(el); });
+  } else {
+    panels.forEach(function(el) { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; });
+  }
+}());
+</script>
+<script>
+document.querySelectorAll('.faq-question').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var isOpen = this.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-question').forEach(function(b) {
+      b.setAttribute('aria-expanded', 'false');
+      var ans = b.nextElementSibling;
+      if (ans) ans.classList.remove('open');
+    });
+    if (!isOpen) {
+      this.setAttribute('aria-expanded', 'true');
+      var answer = this.nextElementSibling;
+      if (answer) answer.classList.add('open');
+    }
+  });
+});
+</script>
 </body>
 </html>

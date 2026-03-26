@@ -100,6 +100,41 @@
     .back-link:hover {
       text-decoration: underline;
     }
+    /* ---- Article Content Styles ---- */
+    .article-intro { font-size: 1.15rem; line-height: 1.7; color: #e0e0e0; margin-bottom: 2rem; font-weight: 300; }
+    .article-toc { background: rgba(139,92,246,0.05); border: 1px solid rgba(139,92,246,0.2); border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0 3rem; }
+    .article-toc__title { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #9b6dff; margin: 0 0 1rem; border: none; padding: 0; }
+    .article-toc__list { margin: 0; padding-left: 1.5rem; color: #b3b3b3; font-size: 0.95rem; line-height: 1.8; }
+    .article-toc__list a { color: #9b6dff; text-decoration: none; }
+    .article-toc__list a:hover { text-decoration: underline; }
+    .article-body h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 700; text-transform: uppercase; color: #fff; margin: 3.5rem 0 1.5rem; border-bottom: 1px solid rgba(139,92,246,0.3); padding-bottom: 0.5rem; scroll-margin-top: 80px; }
+    .article-body p { font-size: 1.05rem; line-height: 1.75; color: #b3b3b3; margin-bottom: 1.5rem; }
+    .article-body ul, .article-body ol { margin-bottom: 2rem; padding-left: 1.5rem; color: #b3b3b3; font-size: 1.05rem; line-height: 1.75; }
+    .article-body li { margin-bottom: 0.75rem; }
+    .article-body strong { color: #fff; font-weight: 600; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: rgba(20,20,20,0.5); border-radius: 8px; overflow: hidden; font-size: 0.95rem; }
+    .article-table th, .article-table td { padding: 0.9rem 1rem; text-align: left; border-bottom: 1px solid rgba(139,92,246,0.15); }
+    .article-table th { background: rgba(139,92,246,0.12); color: #9b6dff; font-weight: 700; text-transform: uppercase; font-size: 0.82rem; letter-spacing: 0.06em; }
+    .article-table td { color: #b3b3b3; }
+    .article-image-container { margin: 2.5rem 0; border-radius: 12px; overflow: hidden; background: #111; border: 1px solid rgba(139,92,246,0.2); }
+    .article-image { width: 100%; height: auto; display: block; aspect-ratio: 16/9; object-fit: cover; }
+    .article-image-container figcaption { padding: 0.85rem 1rem; font-size: 0.85rem; color: #777; text-align: center; font-style: italic; border-top: 1px solid rgba(139,92,246,0.1); }
+    .article-faq { margin: 1rem 0 2rem; }
+    .faq-item { border-bottom: 1px solid rgba(139,92,246,0.15); }
+    .faq-question { width: 100%; background: none; border: none; padding: 1.1rem 0; text-align: left; font-family: 'Outfit', Helvetica Neue, sans-serif; font-size: 1rem; font-weight: 600; color: #fff; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: color 0.3s ease; }
+    .faq-question:hover { color: #9b6dff; }
+    .faq-icon { width: 20px; height: 20px; flex-shrink: 0; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.3s ease; }
+    .faq-question[aria-expanded="true"] .faq-icon { transform: rotate(180deg); }
+    .faq-answer { display: none; padding: 0 0 1.25rem; }
+    .faq-answer.open { display: block; }
+    .faq-answer p { margin: 0; }
+    .article-cta { margin-top: 4rem; padding: 3rem 2rem; background: linear-gradient(135deg, rgba(139,92,246,0.1) 0%, rgba(236,72,153,0.1) 100%); border: 1px solid rgba(139,92,246,0.3); border-radius: 16px; text-align: center; }
+    .article-cta h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 700; text-transform: uppercase; color: #fff; margin: 0 0 1rem; }
+    .article-cta p { color: #e0e0e0; margin-bottom: 2rem; }
+    .article-back { margin-top: 3rem; text-align: center; }
+    .steps-illustration { margin: 2rem 0 2.5rem; border: 1px solid rgba(139,92,246,0.35); border-radius: 14px; overflow: hidden; background: #0a0a0a; box-shadow: 0 0 40px rgba(139,92,246,0.12), 0 0 80px rgba(236,72,153,0.06); }
+    .steps-illustration .article-image { aspect-ratio: 16/9; object-fit: contain; background: #0a0a0a; padding: 0.5rem 0; }
+    .steps-illustration figcaption { background: rgba(139,92,246,0.07); border-top: 1px solid rgba(139,92,246,0.2); color: #9b6dff; font-style: normal; font-weight: 500; font-size: 0.88rem; letter-spacing: 0.01em; padding: 0.75rem 1.25rem; text-align: center; }
   </style>
 </head>
 <body>
@@ -684,20 +719,126 @@
   </p>
   <p class="article-category">Stretching</p>
   <h1 class="article-title">A Beginner Stretching Routine for Tight Muscles</h1>
-  <p class="article-meta">6 min read &middot; UNDRGRND Movement, Southport Gold Coast</p>
+  <p class="article-meta">7 min read &middot; UNDRGRND Movement, Southport Gold Coast</p>
 </section>
 
 <div class="article-body">
-  <div class="coming-soon-box">
-    <div class="coming-soon-box__icon">🧘</div>
-    <h2 class="coming-soon-box__title">Article Coming Soon</h2>
-    <p class="coming-soon-box__text">A simple daily stretching routine designed for people who sit at a desk all day or haven't stretched in years.</p>
-    <a href="/adults.html" class="cta-button">View Our Classes</a>
-    <br>
-    <a href="/learn.html" class="back-link">
-      &larr; Back to Learn
-    </a>
+
+  <p class="article-intro">A consistent stretching routine is one of the most impactful investments you can make in your long-term physical health. Whether your goal is to improve flexibility for dance or gymnastics, reduce the stiffness and discomfort that comes from a desk-based lifestyle, speed up recovery from training, or simply move through daily life with greater ease and comfort, the right stretching routine will get you there. This guide gives you a complete, science-backed beginner stretching routine that you can start today &mdash; no equipment required.</p>
+
+  <p>The most common mistake beginners make with stretching is treating it as an afterthought &mdash; a few half-hearted hamstring stretches tacked onto the end of a workout. Effective stretching is a deliberate, structured practice that targets the specific muscle groups that are most commonly tight, uses appropriate hold durations and techniques, and is performed with enough consistency to produce lasting changes. This guide gives you exactly that structure.</p>
+
+  <nav class="article-toc" aria-label="Table of contents">
+    <h2 class="article-toc__title">In This Guide</h2>
+    <ol class="article-toc__list">
+      <li><a href="#why-stretch">Why Stretching Matters</a></li>
+      <li><a href="#science">The Science of Stretching</a></li>
+      <li><a href="#when">When and How Often to Stretch</a></li>
+      <li><a href="#routine">The Complete Beginner Routine</a></li>
+      <li><a href="#upper-body">Upper Body Stretches</a></li>
+      <li><a href="#lower-body">Lower Body Stretches</a></li>
+      <li><a href="#mistakes">Common Mistakes</a></li>
+      <li><a href="#faq">Frequently Asked Questions</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="why-stretch">Why Stretching Matters</h2>
+  <p>Stretching is often dismissed as optional or secondary to &ldquo;real&rdquo; training. This is a significant mistake. Flexibility and mobility are foundational physical qualities that underpin every other form of movement. Without adequate range of motion in the hips, hamstrings, and thoracic spine, you cannot squat, deadlift, or run with correct mechanics. Without open shoulders and chest, overhead pressing and swimming are compromised. Without hip flexor length, lower back pain is almost inevitable for anyone who sits for prolonged periods.</p>
+  <p>The benefits of regular stretching extend well beyond flexibility. Research consistently shows that regular stretching reduces delayed onset muscle soreness (DOMS) after training, improves circulation to the muscles and connective tissues, reduces resting muscle tension, improves sleep quality, and produces measurable reductions in anxiety and stress through its effects on the parasympathetic nervous system. A 15-minute stretching session before bed is one of the most effective non-pharmacological interventions for improving sleep quality.</p>
+
+  <figure class="article-image-container">
+    <img src="/images/learn/beginner-stretching-hero.webp" alt="A woman performing a seated forward fold stretch on a dark studio floor with dramatic purple and magenta lighting" class="article-image" width="1376" height="768" loading="lazy">
+    <figcaption>A consistent stretching routine is one of the most impactful investments you can make in your long-term physical health.</figcaption>
+  </figure>
+
+  <h2 id="science">The Science of Stretching</h2>
+  <p>Understanding the basic science of stretching helps you train more effectively and avoid common mistakes. When you stretch a muscle, you are not primarily changing the physical length of the muscle fibre itself &mdash; you are re-educating the nervous system to permit greater range of motion. The nervous system uses sensory receptors called muscle spindles to monitor muscle length and rate of change. When a muscle is stretched beyond its habitual range, the muscle spindles trigger a protective contraction reflex to prevent overstretching and potential injury.</p>
+  <p>The goal of stretching is to gradually shift the nervous system's threshold for this protective reflex, allowing greater range of motion to become the new normal. This is achieved through slow, sustained stretching that gives the nervous system time to assess that the stretch is safe, and through consistent repetition that gradually recalibrates the system's sense of normal resting length. This neurological adaptation is the primary mechanism of flexibility improvement, and it explains why consistency is far more important than intensity in stretching practice.</p>
+  <p>Hold durations matter significantly. Research shows that holds of less than 15 seconds produce minimal lasting flexibility change. Holds of 30 seconds produce moderate improvement. Holds of 60 to 90 seconds produce the greatest lasting changes in range of motion. For beginners, aim for a minimum of 30 seconds per stretch, building toward 60 seconds as your practice develops.</p>
+
+  <h2 id="when">When and How Often to Stretch</h2>
+  <p>The ideal time to perform flexibility-focused stretching is when your muscles are warm &mdash; either after a workout, after a hot shower, or after a brief 5-minute warm-up of light movement. Stretching cold muscles is less effective and carries a slightly higher risk of strain. If you prefer to stretch in the morning, always warm up first with 5 minutes of walking, joint circles, or light movement.</p>
+  <p>For meaningful flexibility improvement, aim to stretch the target muscle groups at least four to five times per week. Daily stretching produces the fastest results. The minimum effective dose for flexibility development is approximately 15 minutes of sustained static stretching per session. If you can only commit to 10 minutes, focus on the muscle groups that are most restricted for your specific goals.</p>
+  <p>Avoid deep static stretching immediately before strength or power training, as it can temporarily reduce muscle force production. Dynamic stretching (controlled movements through full range) is the appropriate warm-up before any strength or speed-based activity. Reserve deep static stretching for after training or for dedicated flexibility sessions.</p>
+
+  <h2 id="routine">The Complete Beginner Routine</h2>
+  <p>The following routine targets all the major muscle groups that are most commonly tight in adults, particularly those with desk-based lifestyles. It takes approximately 20 to 25 minutes to complete and can be performed daily. Each stretch is held for 45 to 60 seconds. Breathe slowly and continuously throughout each stretch &mdash; never hold your breath.</p>
+
+  <figure class="article-image-container steps-illustration">
+    <img src="/images/learn/steps-stretching-routine.webp" alt="Six beginner stretching poses illustrated as glowing neon figures: neck roll, chest opener, seated forward fold, kneeling hip flexor, pigeon pose, and lying spinal twist" class="article-image" width="1376" height="768" loading="lazy">
+    <figcaption>The 6-pose beginner stretching routine &mdash; target the most commonly tight muscle groups in adults.</figcaption>
+  </figure>
+
+  <table class="article-table">
+    <thead>
+      <tr><th>Stretch</th><th>Target Muscles</th><th>Hold Duration</th><th>Sets</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Neck Side Stretch</strong></td><td>Cervical muscles, upper trapezius</td><td>45 sec each side</td><td>1&ndash;2</td></tr>
+      <tr><td><strong>Doorway Chest Opener</strong></td><td>Pectorals, anterior deltoids</td><td>60 sec</td><td>2</td></tr>
+      <tr><td><strong>Seated Forward Fold</strong></td><td>Hamstrings, lower back, calves</td><td>60 sec</td><td>2</td></tr>
+      <tr><td><strong>Kneeling Hip Flexor</strong></td><td>Hip flexors, quadriceps</td><td>60 sec each side</td><td>2</td></tr>
+      <tr><td><strong>Pigeon Pose</strong></td><td>Glutes, hip rotators, piriformis</td><td>60&ndash;90 sec each side</td><td>1&ndash;2</td></tr>
+      <tr><td><strong>Lying Spinal Twist</strong></td><td>Thoracic spine, obliques, IT band</td><td>45 sec each side</td><td>1&ndash;2</td></tr>
+      <tr><td><strong>Child's Pose</strong></td><td>Lats, thoracic spine, hip flexors</td><td>60&ndash;90 sec</td><td>1</td></tr>
+      <tr><td><strong>Butterfly Stretch</strong></td><td>Inner thighs, groin, adductors</td><td>60 sec</td><td>2</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="upper-body">Upper Body Stretches in Detail</h2>
+  <p><strong>Neck Side Stretch:</strong> Sit or stand tall with your spine lengthened. Gently drop your right ear toward your right shoulder, keeping your left shoulder relaxed and down. You should feel a stretch along the left side of your neck and into the upper trapezius. Hold for 45 seconds, then repeat on the other side. For a deeper stretch, gently place your right hand on the top of your head and allow the weight of your arm to increase the stretch. Never pull forcefully on your neck.</p>
+  <p><strong>Doorway Chest Opener:</strong> Stand in a doorway with your forearms resting against the door frame at shoulder height, elbows at 90 degrees. Gently lean your body forward through the doorway until you feel a deep stretch across the chest and the front of the shoulders. Hold for 60 seconds. This is one of the most important stretches for anyone who sits at a desk, as it directly counteracts the rounded shoulder and forward head posture that prolonged sitting creates.</p>
+  <p><strong>Overhead Tricep and Lat Stretch:</strong> Raise one arm overhead and bend the elbow, allowing your hand to drop toward the opposite shoulder blade. Use your other hand to gently press the elbow back and down. Hold for 45 seconds per side. This stretch targets the triceps and the lateral portion of the latissimus dorsi, which is often tight in people who do overhead work or who carry tension in the upper back.</p>
+
+  <h2 id="lower-body">Lower Body Stretches in Detail</h2>
+  <p><strong>Seated Forward Fold:</strong> Sit on the floor with your legs extended straight in front of you. Sit tall, then hinge forward from the hips (not the waist), reaching your hands toward your feet. Keep your spine as long as possible rather than rounding into a C-curve. Hold for 60 seconds. If your hamstrings are very tight, sit on a folded blanket to tilt your pelvis forward, or bend your knees slightly. This stretch targets the hamstrings, the lower back, and the calves.</p>
+  <p><strong>Kneeling Hip Flexor Stretch:</strong> Kneel on one knee in a lunge position with your front foot flat on the floor. Push your hips forward and slightly down until you feel a deep stretch in the front of the hip of the kneeling leg. Keep your torso upright and your core lightly engaged. Hold for 60 seconds per side. This is the single most important stretch for anyone who sits for prolonged periods, as the hip flexors are almost universally tight in desk workers and are a primary contributor to lower back pain.</p>
+  <p><strong>Pigeon Pose:</strong> From a kneeling position, bring one shin forward and place it on the floor in front of you at an angle (the more parallel to the front of your mat, the more intense the stretch). Extend the other leg straight behind you. Lower your hips toward the floor and fold your torso forward over the front shin. Hold for 60 to 90 seconds per side. Pigeon pose targets the glutes, hip rotators, and piriformis &mdash; muscles that are often chronically tight and contribute to lower back and sciatic pain.</p>
+  <p><strong>Butterfly Stretch:</strong> Sit on the floor and bring the soles of your feet together, allowing your knees to drop toward the floor. Hold your feet with both hands and gently press your knees toward the floor with your elbows. Hinge forward from the hips to deepen the stretch. Hold for 60 seconds. This stretch targets the inner thighs, groin, and adductors, which are essential for hip mobility and are a key preparatory stretch for the splits.</p>
+  <p><strong>Lying Spinal Twist:</strong> Lie on your back with your arms extended out to the sides. Draw one knee to your chest, then guide it across your body toward the opposite side of the floor, keeping both shoulders flat on the ground. Hold for 45 seconds per side. This stretch targets the thoracic spine, obliques, and IT band, and is excellent for relieving lower back tension and improving spinal rotation.</p>
+
+  <h2 id="mistakes">Common Mistakes</h2>
+  <ul>
+    <li><strong>Bouncing in the stretch:</strong> Bouncing (ballistic stretching) triggers the muscle's protective stretch reflex, causing it to contract rather than lengthen. Always stretch slowly and hold the position steadily.</li>
+    <li><strong>Holding the breath:</strong> Holding the breath creates tension throughout the body and reduces the effectiveness of the stretch. Breathe slowly and continuously, allowing the body to relax a little deeper on each exhale.</li>
+    <li><strong>Stretching to the point of pain:</strong> You should feel a deep, manageable stretch &mdash; not pain. Sharp or shooting pain is a signal to ease out of the stretch immediately. Stretching into pain activates the protective reflex and is counterproductive.</li>
+    <li><strong>Inconsistency:</strong> Stretching once a week produces minimal lasting change. Flexibility is a &ldquo;use it or lose it&rdquo; quality. Aim for at least four to five sessions per week for meaningful improvement.</li>
+    <li><strong>Skipping the warm-up:</strong> Stretching cold muscles is less effective and carries a higher risk of strain. Always warm up for at least 5 minutes before deep static stretching.</li>
+  </ul>
+
+  <h2 id="faq">Frequently Asked Questions</h2>
+  <div class="article-faq">
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How long should I hold each stretch?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>For meaningful flexibility improvement, hold each stretch for a minimum of 30 seconds. Research shows that holds of 60 to 90 seconds produce the greatest lasting changes in range of motion. Shorter holds (10 to 15 seconds) are insufficient to produce lasting flexibility change and are better suited to a dynamic warm-up than a flexibility session. As a beginner, aim for 45 seconds per stretch and build toward 60 to 90 seconds as your practice develops.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Should I stretch before or after exercise?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>For flexibility development, stretch after exercise when your muscles are warm and most receptive to lengthening. Deep static stretching before strength or power training can temporarily reduce muscle force production, so it is best avoided immediately before those activities. Dynamic stretching (controlled movements through full range) is the appropriate warm-up before any training session. If you want to stretch in the morning, always warm up first with 5 minutes of light movement.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Why do I feel more flexible on some days than others?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>Flexibility varies day to day based on several factors: how well you slept (poor sleep increases muscle tension), hydration levels (dehydration reduces muscle elasticity), stress levels (psychological stress causes physical muscle tension), how much you have moved that day, and ambient temperature (muscles are more pliable when warm). This variation is completely normal. On days when you feel less flexible, warm up more thoroughly before stretching and be patient with your body.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Is it normal to feel sore after stretching?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>Mild soreness in the stretched muscles the day after a stretching session is normal, particularly when you are new to stretching or when you have pushed into a deeper range than usual. This is similar to the delayed onset muscle soreness (DOMS) experienced after strength training and is a sign that the tissues are adapting. However, sharp or acute pain during or immediately after stretching is not normal and may indicate a strain. If you experience acute pain, stop and consult a physiotherapist.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How long before I notice results from stretching?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>Most people notice a reduction in day-to-day stiffness and an improvement in how their body feels within two to three weeks of consistent daily stretching. Measurable improvements in range of motion typically become apparent after four to six weeks. Significant flexibility gains &mdash; such as being able to touch your toes when you previously could not &mdash; generally require eight to twelve weeks of consistent practice. Progress is cumulative and gradual, but it is reliable with consistent effort.</p></div>
+    </div>
   </div>
+
+  <div class="article-cta">
+    <h3>Want guided stretching classes?</h3>
+    <p>Our Stretch &amp; Mobility and Yoga classes at UNDRGRND Movement in Southport provide expert-guided flexibility training in a supportive, motivating environment. Book your class today.</p>
+    <a href="/adults.html" class="cta-button">View Classes &amp; Book</a>
+  </div>
+
+  <p class="article-back"><a href="/learn.html" class="back-link">&larr; Back to Learn</a></p>
+
+</div>
 </div>
 
 <style>
@@ -1315,5 +1456,48 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
+<script>
+(function() {
+  var panels = document.querySelectorAll('.steps-illustration');
+  if (!panels.length) return;
+  panels.forEach(function(el) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease, box-shadow 0.7s ease';
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          entry.target.style.boxShadow = '0 0 40px rgba(139,92,246,0.18), 0 0 80px rgba(236,72,153,0.08)';
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    panels.forEach(function(el) { io.observe(el); });
+  } else {
+    panels.forEach(function(el) { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; });
+  }
+}());
+</script>
+<script>
+document.querySelectorAll('.faq-question').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var isOpen = this.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-question').forEach(function(b) {
+      b.setAttribute('aria-expanded', 'false');
+      var ans = b.nextElementSibling;
+      if (ans) ans.classList.remove('open');
+    });
+    if (!isOpen) {
+      this.setAttribute('aria-expanded', 'true');
+      var answer = this.nextElementSibling;
+      if (answer) answer.classList.add('open');
+    }
+  });
+});
+</script>
 </body>
 </html>

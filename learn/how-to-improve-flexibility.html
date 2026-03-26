@@ -100,6 +100,41 @@
     .back-link:hover {
       text-decoration: underline;
     }
+    /* ---- Article Content Styles ---- */
+    .article-intro { font-size: 1.15rem; line-height: 1.7; color: #e0e0e0; margin-bottom: 2rem; font-weight: 300; }
+    .article-toc { background: rgba(139,92,246,0.05); border: 1px solid rgba(139,92,246,0.2); border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0 3rem; }
+    .article-toc__title { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #9b6dff; margin: 0 0 1rem; border: none; padding: 0; }
+    .article-toc__list { margin: 0; padding-left: 1.5rem; color: #b3b3b3; font-size: 0.95rem; line-height: 1.8; }
+    .article-toc__list a { color: #9b6dff; text-decoration: none; }
+    .article-toc__list a:hover { text-decoration: underline; }
+    .article-body h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 700; text-transform: uppercase; color: #fff; margin: 3.5rem 0 1.5rem; border-bottom: 1px solid rgba(139,92,246,0.3); padding-bottom: 0.5rem; scroll-margin-top: 80px; }
+    .article-body p { font-size: 1.05rem; line-height: 1.75; color: #b3b3b3; margin-bottom: 1.5rem; }
+    .article-body ul, .article-body ol { margin-bottom: 2rem; padding-left: 1.5rem; color: #b3b3b3; font-size: 1.05rem; line-height: 1.75; }
+    .article-body li { margin-bottom: 0.75rem; }
+    .article-body strong { color: #fff; font-weight: 600; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: rgba(20,20,20,0.5); border-radius: 8px; overflow: hidden; font-size: 0.95rem; }
+    .article-table th, .article-table td { padding: 0.9rem 1rem; text-align: left; border-bottom: 1px solid rgba(139,92,246,0.15); }
+    .article-table th { background: rgba(139,92,246,0.12); color: #9b6dff; font-weight: 700; text-transform: uppercase; font-size: 0.82rem; letter-spacing: 0.06em; }
+    .article-table td { color: #b3b3b3; }
+    .article-image-container { margin: 2.5rem 0; border-radius: 12px; overflow: hidden; background: #111; border: 1px solid rgba(139,92,246,0.2); }
+    .article-image { width: 100%; height: auto; display: block; aspect-ratio: 16/9; object-fit: cover; }
+    .article-image-container figcaption { padding: 0.85rem 1rem; font-size: 0.85rem; color: #777; text-align: center; font-style: italic; border-top: 1px solid rgba(139,92,246,0.1); }
+    .article-faq { margin: 1rem 0 2rem; }
+    .faq-item { border-bottom: 1px solid rgba(139,92,246,0.15); }
+    .faq-question { width: 100%; background: none; border: none; padding: 1.1rem 0; text-align: left; font-family: 'Outfit', Helvetica Neue, sans-serif; font-size: 1rem; font-weight: 600; color: #fff; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; transition: color 0.3s ease; }
+    .faq-question:hover { color: #9b6dff; }
+    .faq-icon { width: 20px; height: 20px; flex-shrink: 0; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.3s ease; }
+    .faq-question[aria-expanded="true"] .faq-icon { transform: rotate(180deg); }
+    .faq-answer { display: none; padding: 0 0 1.25rem; }
+    .faq-answer.open { display: block; }
+    .faq-answer p { margin: 0; }
+    .article-cta { margin-top: 4rem; padding: 3rem 2rem; background: linear-gradient(135deg, rgba(139,92,246,0.1) 0%, rgba(236,72,153,0.1) 100%); border: 1px solid rgba(139,92,246,0.3); border-radius: 16px; text-align: center; }
+    .article-cta h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 700; text-transform: uppercase; color: #fff; margin: 0 0 1rem; }
+    .article-cta p { color: #e0e0e0; margin-bottom: 2rem; }
+    .article-back { margin-top: 3rem; text-align: center; }
+    .steps-illustration { margin: 2rem 0 2.5rem; border: 1px solid rgba(139,92,246,0.35); border-radius: 14px; overflow: hidden; background: #0a0a0a; box-shadow: 0 0 40px rgba(139,92,246,0.12), 0 0 80px rgba(236,72,153,0.06); }
+    .steps-illustration .article-image { aspect-ratio: 16/9; object-fit: contain; background: #0a0a0a; padding: 0.5rem 0; }
+    .steps-illustration figcaption { background: rgba(139,92,246,0.07); border-top: 1px solid rgba(139,92,246,0.2); color: #9b6dff; font-style: normal; font-weight: 500; font-size: 0.88rem; letter-spacing: 0.01em; padding: 0.75rem 1.25rem; text-align: center; }
   </style>
 </head>
 <body>
@@ -688,16 +723,120 @@
 </section>
 
 <div class="article-body">
-  <div class="coming-soon-box">
-    <div class="coming-soon-box__icon">📐</div>
-    <h2 class="coming-soon-box__title">Article Coming Soon</h2>
-    <p class="coming-soon-box__text">A practical, science-backed guide to improving your flexibility at any age — including the most common mistakes to avoid.</p>
-    <a href="/adults.html" class="cta-button">View Our Classes</a>
-    <br>
-    <a href="/learn.html" class="back-link">
-      &larr; Back to Learn
-    </a>
+
+  <p class="article-intro">Flexibility is one of the most misunderstood components of fitness. Many people believe it is a fixed trait &mdash; that you are either flexible or you are not, and that if you were not born with it, you cannot develop it. This is not true. Flexibility is a highly trainable physical quality that can be improved at any age, with the right approach and consistent practice. This guide gives you the science, the methods, and the practical tools to improve your flexibility systematically and safely.</p>
+
+  <p>The key to improving flexibility is understanding what flexibility actually is and what limits it. Most people assume that tight muscles are the primary obstacle to flexibility. In reality, the nervous system is the primary gatekeeper of your range of motion. Your muscles are capable of far greater length than your nervous system currently allows. The goal of flexibility training is not to physically stretch the muscles &mdash; it is to re-educate the nervous system to permit greater range of motion. Once you understand this, the entire approach to flexibility training changes.</p>
+
+  <nav class="article-toc" aria-label="Table of contents">
+    <h2 class="article-toc__title">In This Guide</h2>
+    <ol class="article-toc__list">
+      <li><a href="#what-is">What Flexibility Actually Is</a></li>
+      <li><a href="#why-lose">Why People Lose Flexibility</a></li>
+      <li><a href="#five-types">The 5 Types of Stretching</a></li>
+      <li><a href="#nervous-system">The Role of the Nervous System</a></li>
+      <li><a href="#how-often">How Often and When to Stretch</a></li>
+      <li><a href="#age">Age and Flexibility</a></li>
+      <li><a href="#four-week-plan">A 4-Week Flexibility Plan</a></li>
+      <li><a href="#faq">Frequently Asked Questions</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="what-is">What Flexibility Actually Is</h2>
+  <p>Flexibility is defined as the range of motion available at a joint or series of joints. It is determined by the interaction of multiple factors: the length and elasticity of the muscles and connective tissues surrounding the joint, the architecture of the joint itself (which is largely determined by genetics and cannot be changed), and &mdash; most importantly &mdash; the nervous system's tolerance for movement at the extremes of that range.</p>
+  <p>It is important to distinguish between flexibility and mobility, as these terms are often used interchangeably but refer to different things. Flexibility is a passive quality: the range of motion available when an external force (such as gravity or a partner) is applied. Mobility is an active quality: the range of motion you can access and control using your own muscular strength. A dancer who can hold their leg at 180 degrees using their own strength has both high flexibility and high mobility. Someone who can only achieve that range when a partner assists them has flexibility but limited mobility. For most functional purposes, mobility is more important than flexibility.</p>
+
+  <figure class="article-image-container">
+    <img src="/images/learn/improve-flexibility-hero.webp" alt="A female dancer performing a standing side stretch with one arm raised overhead in a dark studio with purple lighting" class="article-image" width="1376" height="768" loading="lazy">
+    <figcaption>Flexibility is a trainable quality that can be improved at any age with the right approach and consistent practice.</figcaption>
+  </figure>
+
+  <h2 id="why-lose">Why People Lose Flexibility</h2>
+  <p>Flexibility naturally declines with age if it is not actively maintained, but the rate of decline is far more influenced by lifestyle than by age itself. The primary driver of flexibility loss in modern adults is sedentary behaviour. When muscles are held in shortened positions for prolonged periods &mdash; as they are during sitting &mdash; the nervous system gradually recalibrates its sense of normal resting length, making those shortened positions feel natural and resisting attempts to lengthen beyond them.</p>
+  <p>Muscular imbalances are another significant contributor. When one muscle group is chronically overactive and another is chronically underactive, the overactive muscles become tight and the underactive ones become weak. This pattern is extremely common in desk workers: the hip flexors and chest muscles are overactive and tight, while the glutes, mid-back muscles, and hamstrings are underactive and weak. Addressing these imbalances through a combination of stretching and strengthening is essential for meaningful flexibility improvement.</p>
+  <p>Dehydration also affects flexibility. Muscles and connective tissues are largely composed of water, and even mild dehydration reduces their elasticity and pliability. Adequate hydration is a simple but often overlooked component of flexibility training.</p>
+
+  <h2 id="five-types">The 5 Types of Stretching</h2>
+  <p>Not all stretching is created equal. Different types of stretching produce different physiological effects and are appropriate in different contexts. Understanding the five main types of stretching allows you to choose the right method for your goals and training situation.</p>
+
+  <table class="article-table">
+    <thead>
+      <tr><th>Type</th><th>Description</th><th>Best Used</th><th>Flexibility Benefit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Static</strong></td><td>Hold a position at end range for 30&ndash;90 seconds</td><td>Post-exercise or dedicated flexibility session</td><td>High &mdash; primary method for improving passive range of motion</td></tr>
+      <tr><td><strong>Dynamic</strong></td><td>Controlled movements through full range</td><td>Warm-up before exercise</td><td>Moderate &mdash; improves active range of motion</td></tr>
+      <tr><td><strong>PNF</strong></td><td>Contract muscle isometrically, then relax and stretch deeper</td><td>Advanced flexibility training</td><td>Very high &mdash; most effective method for rapid gains</td></tr>
+      <tr><td><strong>Active</strong></td><td>Hold stretched position using own muscle strength</td><td>Functional flexibility training</td><td>High &mdash; develops mobility as well as flexibility</td></tr>
+      <tr><td><strong>Myofascial Release</strong></td><td>Foam roller or massage ball applied to soft tissue</td><td>Before stretching to release fascial restrictions</td><td>Moderate &mdash; improves tissue quality and stretch receptivity</td></tr>
+    </tbody>
+  </table>
+
+  <figure class="article-image-container steps-illustration">
+    <img src="/images/learn/steps-flexibility.webp" alt="Five flexibility training methods illustrated as glowing neon figures: static stretch, dynamic leg swing, PNF partner stretch, active leg raise, and foam rolling" class="article-image" width="1376" height="768" loading="lazy">
+    <figcaption>The 5 key flexibility training methods &mdash; use a combination of all five for the fastest results.</figcaption>
+  </figure>
+
+  <p><strong>Static stretching</strong> is the most familiar form and the most effective for improving passive range of motion over time. The key is holding each stretch for a minimum of 30 seconds, with 60 to 90 seconds being optimal for flexibility development. Shorter holds (10 to 15 seconds) are insufficient to produce lasting changes in muscle length.</p>
+  <p><strong>PNF stretching</strong> (Proprioceptive Neuromuscular Facilitation) is the most effective method for rapid flexibility gains. The technique involves contracting the target muscle isometrically against resistance for 5 to 10 seconds, then relaxing and moving deeper into the stretch. This works by exploiting the post-contraction relaxation response of the nervous system, which temporarily allows greater range of motion than passive stretching alone. PNF can be performed with a partner or using a strap for resistance.</p>
+  <p><strong>Active stretching</strong> develops mobility rather than just flexibility by requiring you to hold the stretched position using your own muscular strength. For example, lying on your back and lifting your leg as high as possible without assistance develops active hip flexion. This type of training is essential for dancers, gymnasts, and martial artists who need to access their flexibility under load and at speed.</p>
+
+  <h2 id="nervous-system">The Role of the Nervous System</h2>
+  <p>The stretch reflex is the nervous system's primary protective mechanism against muscle injury. When a muscle is stretched rapidly or beyond its habitual range, sensory receptors called muscle spindles send an emergency signal to the spinal cord, which responds by triggering an immediate contraction of the stretched muscle. This is why bouncing in a stretch (ballistic stretching) is counterproductive &mdash; it triggers the very reflex that prevents the muscle from lengthening.</p>
+  <p>Slow, sustained stretching bypasses the stretch reflex by giving the nervous system time to assess that the stretch is safe and non-threatening. Over time, repeated exposure to the stretched position gradually shifts the nervous system's threshold for the protective reflex, allowing greater range of motion to become the new normal. This is the fundamental mechanism by which all flexibility training works, regardless of the specific method used.</p>
+  <p>This neurological understanding also explains why flexibility gains are often lost quickly when training stops. The nervous system adapts rapidly in both directions: it will permit greater range of motion with consistent training, but it will also return to its previous threshold relatively quickly without it. Consistency is therefore the single most important variable in flexibility training.</p>
+
+  <h2 id="how-often">How Often and When to Stretch</h2>
+  <p>For meaningful flexibility improvement, aim to stretch the target muscle groups at least four to five times per week. Daily stretching is ideal and will produce the fastest results. The minimum effective dose for flexibility development is approximately 15 minutes of sustained static stretching per session, targeting the specific muscle groups you want to improve.</p>
+  <p>The best time to stretch for flexibility development is when your muscles are warm. This means either after a workout, after a hot shower, or after a brief warm-up of 5 to 10 minutes of light movement. Stretching cold muscles is less effective and carries a slightly higher risk of strain. If you prefer to stretch in the morning, always warm up first.</p>
+  <p>Avoid deep static stretching immediately before strength or power training, as it can temporarily reduce muscle force production by up to 8 per cent. Dynamic stretching is the appropriate warm-up before any strength or speed-based activity. Reserve deep static stretching for after training or for dedicated flexibility sessions.</p>
+
+  <h2 id="age">Age and Flexibility</h2>
+  <p>Flexibility naturally declines from approximately the age of 30 if it is not actively maintained. The connective tissues become less elastic, the muscles lose some of their water content, and the nervous system becomes less responsive to flexibility training. However, these changes are far less dramatic than most people assume, and meaningful flexibility improvement is possible at any age.</p>
+  <p>Research consistently shows that adults in their 50s, 60s, and 70s can achieve significant flexibility gains with consistent training. The timeline may be longer and the approach may need to be more gradual, but the fundamental mechanisms of flexibility development remain intact throughout life. The most important adaptation for older adults is to allow more time for warm-up, to use longer hold durations (60 to 90 seconds rather than 30 seconds), and to be more conservative with the intensity of the stretch.</p>
+
+  <h2 id="four-week-plan">A 4-Week Flexibility Plan</h2>
+  <p>The following plan is designed for adults who want to improve their overall flexibility systematically over four weeks. It targets the most commonly tight muscle groups and uses a combination of static stretching and myofascial release. Perform the plan four to five times per week, ideally after a workout or after a 5-minute warm-up.</p>
+  <ul>
+    <li><strong>Week 1:</strong> Focus on the hip flexors and hamstrings. Perform kneeling hip flexor stretch (60 seconds per side) and seated hamstring stretch (60 seconds per side) daily. Add foam rolling for the quads and IT band.</li>
+    <li><strong>Week 2:</strong> Add chest and shoulder stretching. Doorway chest stretch (60 seconds), overhead tricep stretch (45 seconds per side), and thoracic extension over a foam roller (10 repetitions).</li>
+    <li><strong>Week 3:</strong> Introduce PNF for the hamstrings. Perform the contract-relax technique: contract the hamstring for 8 seconds, relax, then stretch deeper for 30 seconds. Repeat 3 times per side.</li>
+    <li><strong>Week 4:</strong> Add active flexibility work. Perform standing leg raises (front and side, 10 repetitions per direction per leg) and active hip circles (10 per direction per leg) to begin converting passive flexibility into active mobility.</li>
+  </ul>
+
+  <h2 id="faq">Frequently Asked Questions</h2>
+  <div class="article-faq">
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Can adults really improve their flexibility?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>Yes, absolutely. Adults of any age can improve their flexibility with consistent, appropriate training. While the rate of progress may be slower than in younger practitioners, the fundamental mechanisms of flexibility development &mdash; nervous system adaptation and connective tissue remodelling &mdash; remain active throughout life. Research consistently shows meaningful flexibility gains in adults in their 50s, 60s, and 70s with regular stretching practice.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How long before I see results from flexibility training?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>Most people notice a reduction in day-to-day stiffness within two to three weeks of consistent daily stretching. Measurable improvements in range of motion typically become apparent after four to six weeks. Significant gains &mdash; such as being able to touch your toes when you previously could not &mdash; generally require eight to twelve weeks of consistent practice. Progress is cumulative and gradual, but it is reliable with consistent effort.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Does stretching make you weaker?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>Prolonged static stretching (more than 60 seconds per muscle) performed immediately before strength or power training can temporarily reduce muscle force production by a small amount. However, this effect is short-lived and does not affect long-term strength development. Stretching after training or in dedicated flexibility sessions has no negative effect on strength. The long-term benefits of improved flexibility &mdash; including better movement quality, reduced injury risk, and improved recovery &mdash; far outweigh any temporary pre-training effects.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What is the difference between flexibility and mobility?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>Flexibility is a passive quality: the range of motion available at a joint when an external force is applied, such as gravity or a partner. Mobility is an active quality: the range of motion you can access and control using your own muscular strength. You can be flexible without being mobile (for example, if you can only achieve a high leg position with assistance), but you cannot be mobile without being flexible. For most functional and athletic purposes, mobility is more important than passive flexibility.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Is yoga or Pilates better for flexibility?<svg class="faq-icon" aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+      <div class="faq-answer"><p>Both yoga and Pilates improve flexibility, but through different mechanisms and with different emphases. Yoga typically produces greater improvements in passive flexibility through longer-held static stretches and a wider variety of joint positions. Pilates tends to produce greater improvements in active mobility and functional flexibility through controlled, strength-based movement. For pure flexibility development, yoga is generally more effective. For functional mobility and core-supported flexibility, Pilates is excellent. Many practitioners benefit from incorporating both.</p></div>
+    </div>
   </div>
+
+  <div class="article-cta">
+    <h3>Ready to improve your flexibility?</h3>
+    <p>Our Stretch &amp; Mobility, Yoga, and Aerial classes at UNDRGRND Movement in Southport are all excellent for improving flexibility under expert guidance. Book your class today.</p>
+    <a href="/adults.html" class="cta-button">View Classes &amp; Book</a>
+  </div>
+
+  <p class="article-back"><a href="/learn.html" class="back-link">&larr; Back to Learn</a></p>
+
+</div>
 </div>
 
 <style>
@@ -1315,5 +1454,48 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
+<script>
+(function() {
+  var panels = document.querySelectorAll('.steps-illustration');
+  if (!panels.length) return;
+  panels.forEach(function(el) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease, box-shadow 0.7s ease';
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          entry.target.style.boxShadow = '0 0 40px rgba(139,92,246,0.18), 0 0 80px rgba(236,72,153,0.08)';
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    panels.forEach(function(el) { io.observe(el); });
+  } else {
+    panels.forEach(function(el) { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; });
+  }
+}());
+</script>
+<script>
+document.querySelectorAll('.faq-question').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var isOpen = this.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-question').forEach(function(b) {
+      b.setAttribute('aria-expanded', 'false');
+      var ans = b.nextElementSibling;
+      if (ans) ans.classList.remove('open');
+    });
+    if (!isOpen) {
+      this.setAttribute('aria-expanded', 'true');
+      var answer = this.nextElementSibling;
+      if (answer) answer.classList.add('open');
+    }
+  });
+});
+</script>
 </body>
 </html>

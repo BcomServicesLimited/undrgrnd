@@ -135,31 +135,15 @@
   "provider": {
     "@type": "LocalBusiness",
     "@id": "https://www.undrgrnd.com.au/#business",
-    "name": "UNDRGRND Movement",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "163 Ferry Rd",
-      "addressLocality": "Southport",
-      "addressRegion": "QLD",
-      "postalCode": "4215",
-      "addressCountry": "AU"
-    }
+    "name": "UNDRGRND Movement"
   },
   "hasCourseInstance": {
     "@type": "CourseInstance",
     "courseMode": "In-person",
     "location": {
-      "@type": "Place",
-      "name": "UNDRGRND Movement",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "163 Ferry Rd",
-        "addressLocality": "Southport",
-        "addressRegion": "QLD",
-        "postalCode": "4215",
-        "addressCountry": "AU"
+        "@type": "Place",
+        "name": "UNDRGRND Movement"
       }
-    }
   }
 }
 </script>
@@ -625,7 +609,7 @@
         { label: 'Learn',    href: '/learn.html' },
         { label: 'Contact',   href: '/contact.html' }
       ];
-      var fallbackCta = { text: 'Book Now', href: 'https://app.classmanager.com/classes/undrgrnd-movement' };
+      var fallbackCta = { text: 'Book Now', href: '/timetable.html' };
       buildDesktopMenu(fallbackMenu, fallbackCta);
       buildMobileMenu(fallbackMenu, fallbackCta);
       highlightActivePage();
@@ -821,7 +805,7 @@
       <p class="program-hero__sub">Gymnastics-style pole fitness for children aged 8 to 16. Kids Pole Fitness Foundations at UNDRGRND Movement Southport builds strength, coordination, and confidence — taught with a focus on safety and age-appropriate technique.</p>
       <div class="program-hero__location">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Southport Studio &nbsp;|&nbsp; 163 Ferry Rd, Southport QLD 4215
+        Southport Studio &nbsp;|&nbsp; UNDRGRND Movement
       </div>
       
       <div class="program-hero__ctas">
@@ -853,7 +837,7 @@
       <h3>Quick Info</h3>
       <div class="quick-info__row"><span class="quick-info__label">Level</span><span class="quick-info__value">Kids — Ages 8–16</span></div>
       <div class="quick-info__row"><span class="quick-info__label">Category</span><span class="quick-info__value">Pole Fitness</span></div>
-      <div class="quick-info__row"><span class="quick-info__label">Location</span><span class="quick-info__value">163 Ferry Rd, Southport</span></div>
+      <div class="quick-info__row"><span class="quick-info__label">Location</span><span class="quick-info__value">UNDRGRND Movement</span></div>
       <div class="quick-info__row"><span class="quick-info__label">Ages</span><span class="quick-info__value">8–16 years</span></div>
       <a href="/contact.html" class="cta-button" style="width:100%;text-align:center;display:block;">Register Interest</a>
     </div>
@@ -1020,12 +1004,12 @@
 <section class="seo-content" aria-label="About This Program">
   <div class="seo-content__inner">
     <h2>Kids Pole Fitness Foundations on the Gold Coast — UNDRGRND Movement Southport</h2>
-    <p>UNDRGRND Movement offers Kids Pole Fitness Foundations classes at our Southport studio, 163 Ferry Rd, Gold Coast. This program is designed for children aged 8 to 16 years and teaches pole fitness in a gymnastics style — focused on strength, coordination, and safe technique.</p>
+    <p>UNDRGRND Movement offers Kids Pole Fitness Foundations classes at our Southport studio, UNDRGRND Movement, Gold Coast. This program is designed for children aged 8 to 16 years and teaches pole fitness in a gymnastics style — focused on strength, coordination, and safe technique.</p>
     <h3>What Is Kids Pole Fitness?</h3>
     <p>Kids Pole Fitness Foundations at UNDRGRND Movement is vertical gymnastics. The program uses the pole as a tool for developing upper body strength, core conditioning, coordination, and body control — skills that benefit children across all physical activities. The approach is entirely age-appropriate and has no connection to adult pole dancing styles.</p>
     <p>At UNDRGRND Movement Southport, Kids Pole Fitness is taught with safety as the absolute priority. Our instructor is qualified in pole fitness and trained to work with children, ensuring that every Gold Coast child participates safely and progresses at an appropriate pace.</p>
     <h3>Kids Pole Fitness at UNDRGRND Movement Southport, Gold Coast</h3>
-    <p>UNDRGRND Movement is located at 163 Ferry Rd, Southport QLD 4215. Pricing and enrolment details will be available soon. Register your interest to be notified when classes open.</p>
+    <p>UNDRGRND Movement is located at UNDRGRND Movement. Pricing and enrolment details will be available soon. Register your interest to be notified when classes open.</p>
   </div>
 </section>
 
@@ -1485,64 +1469,7 @@ if (typeof SchemaGenerator !== 'undefined') {
     <div class="footer-col footer-col--contact">
       <h3 class="footer-col__heading">Contact Us</h3>
 
-      <address class="footer-contact" style="font-style: normal;" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-
-        <!-- Address: site-config.json → business.address -->
-        <div class="footer-contact__item">
-          <span class="footer-contact__icon" aria-hidden="true">
-            <!-- Lucide: map-pin -->
-            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          </span>
-          <div class="footer-contact__text">
-            <strong>Studio</strong>
-            <!-- NAP: street, suburb, state, postcode from site-config.json business.address -->
-            <span id="footerAddress">163 Ferry Rd<br>Southport QLD 4215<br>Australia</span>
-          </div>
-        </div>
-
-        <!-- Email: site-config.json → business.contact.email -->
-        <div class="footer-contact__item">
-          <span class="footer-contact__icon" aria-hidden="true">
-            <!-- Lucide: mail -->
-            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          </span>
-          <div class="footer-contact__text">
-            <strong>Email</strong>
-            <!-- NAP: email from site-config.json business.contact.email -->
-            <a href="mailto:undrgrndgc@gmail.com" id="footerEmail" itemprop="email">undrgrndgc@gmail.com</a>
-          </div>
-        </div>
-
-        <!-- Phone: site-config.json → business.contact.phone -->
-        <div class="footer-contact__item">
-          <span class="footer-contact__icon" aria-hidden="true">
-            <!-- Lucide: phone -->
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"></path></svg>
-          </span>
-          <div class="footer-contact__text">
-            <strong>Phone</strong>
-            <!-- NAP: phone from site-config.json business.contact.phone -->
-            <a href="tel:+61721402690" id="footerPhone" itemprop="telephone">0721 402 690</a>
-          </div>
-        </div>
-
-        <!-- Hours: site-config.json → business.hours -->
-        <div class="footer-contact__item">
-          <span class="footer-contact__icon" aria-hidden="true">
-            <!-- Lucide: clock -->
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          </span>
-          <div class="footer-contact__text">
-            <strong>Hours</strong>
-            <div class="footer-hours">
-              <!-- Hours summary from site-config.json business.hours -->
-              <span>Mon–Fri:</span> 6:00 AM – 9:00 PM<br>
-              <span>Sat–Sun:</span> 8:00 AM – 4:00 PM
-            </div>
-          </div>
-        </div>
-
-      </address>
+      <address style="font-style: normal;"><span id="footerAddress">UNDRGRND Movement</span></address>
     </div>
 
   </div><!-- /.footer-main -->

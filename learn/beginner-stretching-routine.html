@@ -645,7 +645,7 @@
         { label: 'Learn',    href: '/learn.html' },
         { label: 'Contact',   href: '/contact.html' }
       ];
-      var fallbackCta = { text: 'Book Now', href: 'https://app.classmanager.com/classes/undrgrnd-movement' };
+      var fallbackCta = { text: 'Book Now', href: '/timetable.html' };
       buildDesktopMenu(fallbackMenu, fallbackCta);
       buildMobileMenu(fallbackMenu, fallbackCta);
       highlightActivePage();
@@ -943,7 +943,7 @@
 
   <div class="article-cta">
     <h3>Want guided stretching classes?</h3>
-    <p>Our Stretch &amp; Mobility and Yoga classes at UNDRGRND Movement in Southport provide expert-guided flexibility training in a supportive, motivating environment. Book your class today.</p>
+    <p>Our Stretch &amp; Mobility and Yoga classes at UNDRGRND Movement provide expert-guided flexibility training in a supportive, motivating environment. Book your class today.</p>
     <a href="/adults.html" class="cta-button">View Classes &amp; Book</a>
   </div>
 
@@ -1325,64 +1325,7 @@
     <div class="footer-col footer-col--contact">
       <h3 class="footer-col__heading">Contact Us</h3>
 
-      <address class="footer-contact" style="font-style: normal;" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-
-        <!-- Address: site-config.json → business.address -->
-        <div class="footer-contact__item">
-          <span class="footer-contact__icon" aria-hidden="true">
-            <!-- Lucide: map-pin -->
-            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          </span>
-          <div class="footer-contact__text">
-            <strong>Studio</strong>
-            <!-- NAP: street, suburb, state, postcode from site-config.json business.address -->
-            <span id="footerAddress">163 Ferry Rd<br>Southport QLD 4215<br>Australia</span>
-          </div>
-        </div>
-
-        <!-- Email: site-config.json → business.contact.email -->
-        <div class="footer-contact__item">
-          <span class="footer-contact__icon" aria-hidden="true">
-            <!-- Lucide: mail -->
-            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          </span>
-          <div class="footer-contact__text">
-            <strong>Email</strong>
-            <!-- NAP: email from site-config.json business.contact.email -->
-            <a href="mailto:undrgrndgc@gmail.com" id="footerEmail" itemprop="email">undrgrndgc@gmail.com</a>
-          </div>
-        </div>
-
-        <!-- Phone: site-config.json → business.contact.phone -->
-        <div class="footer-contact__item">
-          <span class="footer-contact__icon" aria-hidden="true">
-            <!-- Lucide: phone -->
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"></path></svg>
-          </span>
-          <div class="footer-contact__text">
-            <strong>Phone</strong>
-            <!-- NAP: phone from site-config.json business.contact.phone -->
-            <a href="tel:+61721402690" id="footerPhone" itemprop="telephone">0721 402 690</a>
-          </div>
-        </div>
-
-        <!-- Hours: site-config.json → business.hours -->
-        <div class="footer-contact__item">
-          <span class="footer-contact__icon" aria-hidden="true">
-            <!-- Lucide: clock -->
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          </span>
-          <div class="footer-contact__text">
-            <strong>Hours</strong>
-            <div class="footer-hours">
-              <!-- Hours summary from site-config.json business.hours -->
-              <span>Mon–Fri:</span> 6:00 AM – 9:00 PM<br>
-              <span>Sat–Sun:</span> 8:00 AM – 4:00 PM
-            </div>
-          </div>
-        </div>
-
-      </address>
+      <address style="font-style: normal;"><span id="footerAddress">UNDRGRND Movement</span></address>
     </div>
 
   </div><!-- /.footer-main -->

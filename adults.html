@@ -6,7 +6,7 @@
 
   <!-- Title & Meta Description -->
   <title>Adult Movement Classes Gold Coast | Dance, Pole, Yoga &amp; Aerial | Southport</title>
-  <meta name="description" content="Adult dance, pole, yoga & aerial classes in Southport, Gold Coast. Beginner-friendly, no experience needed. Discover your class at UNDRGRND Movement.">
+  <meta name="description" content="Adult dance, pole, yoga & aerial classes. Beginner-friendly, no experience needed. Discover your class at UNDRGRND Movement.">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://www.undrgrnd.com.au/adults.html">
@@ -27,7 +27,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.undrgrnd.com.au/adults.html">
   <meta property="og:title" content="Adult Movement Classes Gold Coast | Dance, Pole, Yoga &amp; Aerial">
-  <meta property="og:description" content="Beginner-friendly adult movement classes in Southport, Gold Coast. Dance, pole fitness, yoga, aerial and recovery programs.">
+  <meta property="og:description" content="Beginner-friendly adult movement classes. Dance, pole fitness, yoga, aerial and recovery programs.">
   <meta property="og:image" content="https://www.undrgrnd.com.au/images/og-image.webp">
 
   <!-- Page-specific styles -->
@@ -1377,7 +1377,7 @@
         { label: 'Learn',    href: '/learn.html' },
         { label: 'Contact',   href: '/contact.html' }
       ];
-      var fallbackCta = { text: 'Book Now', href: 'https://app.classmanager.com/classes/undrgrnd-movement' };
+      var fallbackCta = { text: 'Book Now', href: '/timetable.html' };
       buildDesktopMenu(fallbackMenu, fallbackCta);
       buildMobileMenu(fallbackMenu, fallbackCta);
       highlightActivePage();
@@ -1582,7 +1582,7 @@
       </p>
 
       <div style="margin-top: 0.5rem;">
-        <a href="https://app.classmanager.com/classes/undrgrnd-movement" class="cta-button">View Timetable</a>
+        <a href="/timetable.html" class="cta-button">View Timetable</a>
       </div>
     </div>
 
@@ -1787,7 +1787,7 @@
     </p>
 
     <p>
-      Our yoga and movement offerings each bring different approaches to building strength, flexibility, and body awareness on the Gold Coast. <strong>Fusion Yoga - Foundations</strong> blends traditional yoga with contemporary movement for a dynamic, accessible practice. <strong>Aerial Yoga - Foundations</strong> (coming soon) uses suspended silk hammocks for a unique, decompressive practice. <strong>Aerial Silks - Foundations</strong> builds upper body strength, core stability, and spatial awareness through suspended fabric work. <strong>Choreography Fusion - Foundations</strong> builds coordination and confidence through accessible, structured dance sequences. <strong>Stretch &amp; Mobility - Foundations</strong> is a gentle, beginner-friendly class focused on improving flexibility, reducing stiffness, and restoring ease of movement at UNDRGRND Movement Southport.
+      Our yoga and movement offerings each bring different approaches to building strength, flexibility, and body awareness on the Gold Coast. <strong>Fusion Yoga - Foundations</strong> blends traditional yoga with contemporary movement for a dynamic, accessible practice. <strong>Aerial Yoga - Foundations</strong> (coming soon) uses suspended silk hammocks for a unique, decompressive practice. <strong>Aerial Silks - Foundations</strong> builds upper body strength, core stability, and spatial awareness through suspended fabric work. <strong>Choreography Fusion - Foundations</strong> builds coordination and confidence through accessible, structured dance sequences. <strong>Stretch &amp; Mobility - Foundations</strong> is a gentle, beginner-friendly class focused on improving flexibility, reducing stiffness, and restoring ease of movement at UNDRGRND Movement.
     </p>
 
     <h3>Gentle / Slow Classes (45+ Recovery)</h3>
@@ -1850,7 +1850,7 @@
     <p>Please ensure you have your medical clearance documentation ready to present at your first class.</p>
 
     <div class="modal-box__actions">
-      <a href="https://app.classmanager.com/classes/undrgrnd-movement" class="cta-button">I Have Clearance — Book Now</a>
+      <a href="/timetable.html" class="cta-button">I Have Clearance — Book Now</a>
       <a href="/contact.html" class="cta-secondary" style="padding: 0.8rem 1.5rem;">Contact Us First</a>
     </div>
 
@@ -1959,7 +1959,7 @@
       ? '<a href="mailto:undrgrndgc@gmail.com?subject=Waitlist for ' + escHtml(program.name) + '" class="btn-learn">Join Waitlist</a>'
       : (isMedical
           ? '<button class="btn-book" data-medical="true" type="button">Book Now</button>'
-          : '<a href="https://app.classmanager.com/classes/undrgrnd-movement" class="btn-book">Book Now</a>');
+          : '<a href="/timetable.html" class="btn-book">Book Now</a>');
     var learnBtn = isComingSoon
       ? '<a href="#" class="btn-learn disabled" aria-disabled="true">Coming Soon</a>'
       : '<a href="/programs/' + escHtml(slug) + '.html" class="btn-learn">Learn More</a>';
@@ -2551,64 +2551,7 @@
     <div class="footer-col footer-col--contact">
       <h3 class="footer-col__heading">Contact Us</h3>
 
-      <address class="footer-contact" style="font-style: normal;" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-
-        <!-- Address: site-config.json → business.address -->
-        <div class="footer-contact__item">
-          <span class="footer-contact__icon" aria-hidden="true">
-            <!-- Lucide: map-pin -->
-            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          </span>
-          <div class="footer-contact__text">
-            <strong>Studio</strong>
-            <!-- NAP: street, suburb, state, postcode from site-config.json business.address -->
-            <span id="footerAddress">163 Ferry Rd<br>Southport QLD 4215<br>Australia</span>
-          </div>
-        </div>
-
-        <!-- Email: site-config.json → business.contact.email -->
-        <div class="footer-contact__item">
-          <span class="footer-contact__icon" aria-hidden="true">
-            <!-- Lucide: mail -->
-            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          </span>
-          <div class="footer-contact__text">
-            <strong>Email</strong>
-            <!-- NAP: email from site-config.json business.contact.email -->
-            <a href="mailto:undrgrndgc@gmail.com" id="footerEmail" itemprop="email">undrgrndgc@gmail.com</a>
-          </div>
-        </div>
-
-        <!-- Phone: site-config.json → business.contact.phone -->
-        <div class="footer-contact__item">
-          <span class="footer-contact__icon" aria-hidden="true">
-            <!-- Lucide: phone -->
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"></path></svg>
-          </span>
-          <div class="footer-contact__text">
-            <strong>Phone</strong>
-            <!-- NAP: phone from site-config.json business.contact.phone -->
-            <a href="tel:+61721402690" id="footerPhone" itemprop="telephone">0721 402 690</a>
-          </div>
-        </div>
-
-        <!-- Hours: site-config.json → business.hours -->
-        <div class="footer-contact__item">
-          <span class="footer-contact__icon" aria-hidden="true">
-            <!-- Lucide: clock -->
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          </span>
-          <div class="footer-contact__text">
-            <strong>Hours</strong>
-            <div class="footer-hours">
-              <!-- Hours summary from site-config.json business.hours -->
-              <span>Mon–Fri:</span> 6:00 AM – 9:00 PM<br>
-              <span>Sat–Sun:</span> 8:00 AM – 4:00 PM
-            </div>
-          </div>
-        </div>
-
-      </address>
+      <address style="font-style: normal;"><span id="footerAddress">UNDRGRND Movement</span></address>
     </div>
 
   </div><!-- /.footer-main -->

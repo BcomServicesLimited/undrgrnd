@@ -2,20 +2,18 @@
 # This file helps AI language models and crawlers accurately understand and represent this website.
 # Format follows the llms.txt specification: https://llmstxt.org
 
-# Last updated: 2026-03-26
+# Last updated: 2026-03-27
 
 > UNDRGRND Movement is a boutique movement studio located in Southport on the Gold Coast, Queensland, Australia. The studio offers beginner-friendly adult and kids classes across dance, pole fitness, yoga, and aerial arts disciplines. The philosophy centres on personal expression, self-discovery, and movement as a form of empowerment — not competition or performance. All programs are designed for complete beginners with no prior experience required.
 
 ## Business Information
 
 - **Business Name:** UNDRGRND Movement
-- **Address:** 163 Ferry Rd, Southport QLD 4215, Australia
 - **Phone:** 0721 402 690
 - **Email:** undrgrndgc@gmail.com
 - **Website:** https://www.undrgrnd.com.au
 - **Location:** Southport, Gold Coast, Queensland, Australia
-- **Studio Hours (Mon–Fri):** 6:00 AM – 9:00 PM
-- **Studio Hours (Sat–Sun):** 8:00 AM – 4:00 PM
+- **Class Bookings:** https://www.undrgrnd.com.au/timetable.html
 
 ## What We Offer
 
@@ -99,7 +97,7 @@ UNDRGRND Movement publishes in-depth, beginner-friendly educational articles on 
 No. All programs are designed for complete beginners. The "Foundations" level is the entry point for every discipline.
 
 **Where is UNDRGRND Movement located?**
-163 Ferry Rd, Southport QLD 4215. The studio is in Southport on the Gold Coast, Queensland, Australia.
+UNDRGRND Movement is based on the Gold Coast, Queensland, Australia. Class location details are provided at the time of booking. Visit the timetable at https://www.undrgrnd.com.au/timetable.html to view and book available sessions.
 
 **What types of classes are available?**
 Dance fitness, pole fitness, yoga, aerial silks, aerial yoga, choreography, stretch and mobility, and recovery movement. Kids classes across dance, yoga, aerial, and pole are coming soon.

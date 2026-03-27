@@ -1561,11 +1561,9 @@
 }());
 </script>
 
-
 <!-- =========================================================================
      NAVIGATION — copy contents of /components/nav-component.html here
      ========================================================================= -->
-
 
 <!-- =========================================================================
      STICKY BOOK NOW BUTTON
@@ -1577,7 +1575,6 @@
     Book Now
   </a>
 </div>
-
 
 <!-- =========================================================================
      1. HERO SECTION
@@ -1610,7 +1607,6 @@
     </div>
   </div>
 </section>
-
 
 <!-- =========================================================================
      2. PROGRAM OVERVIEW — two columns
@@ -1702,7 +1698,6 @@
   </div>
 </section>
 
-
 <!-- =========================================================================
      3. CORE FOCUS AREAS
      ========================================================================= -->
@@ -1747,7 +1742,6 @@
     </div>
   </div>
 </section>
-
 
 <!-- =========================================================================
      4. WHO IT'S FOR
@@ -1796,7 +1790,6 @@
 
   </div>
 </section>
-
 
 <!-- =========================================================================
      5. WHAT TO EXPECT — timeline
@@ -1865,7 +1858,6 @@
   </div>
 </section>
 
-
 <!-- =========================================================================
      6. PRICING
      ========================================================================= -->
@@ -1887,7 +1879,6 @@
     </div>
   </div>
 </section>
-
 
 <!-- =========================================================================
      7. FAQ ACCORDION
@@ -1963,7 +1954,6 @@
   </div>
 </section>
 
-
 <!-- =========================================================================
      8. RELATED PROGRAMS
      ========================================================================= -->
@@ -2006,7 +1996,6 @@
     </div>
   </div>
 </section>
-
 
 <!-- =========================================================================
      9. SEO CONTENT SECTION
@@ -2097,7 +2086,6 @@
   </div>
 </section>
 
-
 <!-- =========================================================================
      10. CTA SECTION
      ========================================================================= -->
@@ -2111,7 +2099,6 @@
     </div>
   </div>
 </section>
-
 
 <!--
   UNDRGRND Movement — Footer Component
@@ -2222,45 +2209,7 @@
   }
 
   /* Social icons */
-  .footer-social {
-    display: flex;
-    gap: 0.85rem;
-    align-items: center;
-  }
-
-  .footer-social__link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    border: 1.5px solid rgba(139, 92, 246, 0.4); /* site-config: primary_purple at 40% */
-    color: #A1A1A1;                           /* site-config: text_gray */
-    text-decoration: none;
-    transition: all 0.3s ease;               /* site-config: design.effects.transition */
-    background: transparent;
-  }
-
-  .footer-social__link:hover {
-    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%); /* site-config: gradient_purple */
-    border-color: transparent;
-    color: #FFFFFF;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
-  }
-
-  .footer-social__link svg {
-    width: 18px;
-    height: 18px;
-    stroke: currentColor;
-    fill: none;
-    stroke-width: 1.75;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-
-  /* ---- COLUMN 2: Quick Links ---- */
+/* ---- COLUMN 2: Quick Links ---- */
   .footer-links {
     list-style: none;
     margin: 0;
@@ -2432,17 +2381,7 @@
         <img src="../images/logo/logo-full.webp" alt="UNDRGRND Movement full logo — Southport Gold Coast" width="200" height="80" style="height:60px;width:auto;display:block;" loading="lazy">
       </a>
       <p class="footer-brand__tagline" id="footerTagline">Gold Coast's underground movement studio.</p>
-      <div class="footer-social" aria-label="Social media links">
-        <a href="https://www.instagram.com/undrgrnd.movement/" class="footer-social__link" id="footerInstagram" aria-label="Follow UNDRGRND Movement on Instagram" target="_blank" rel="noopener noreferrer">
-          <!-- Instagram icon -->
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-        </a>
-        <a href="https://www.facebook.com/undrgrnd.movement" class="footer-social__link" id="footerFacebook" aria-label="Follow UNDRGRND Movement on Facebook" target="_blank" rel="noopener noreferrer">
-          <!-- Facebook icon -->
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-        </a>
-      </div>
-    </div>
+</div>
 
     <!-- Column 2: Quick Links -->
     <div class="footer-col footer-col--links">
@@ -2542,14 +2481,6 @@
         taglineEl.textContent = config.project.tagline;
       }
 
-      /* Social links */
-      if (config.social) {
-        var igEl = document.getElementById('footerInstagram');
-        var fbEl = document.getElementById('footerFacebook');
-        if (igEl && config.social.instagram) igEl.href = config.social.instagram;
-        if (fbEl && config.social.facebook) fbEl.href = config.social.facebook;
-      }
-
       /* Quick links */
       var navLinks = document.getElementById('footerNavLinks');
       if (navLinks && config.navigation && config.navigation.main_menu) {
@@ -2571,7 +2502,6 @@
 
 }());
 </script>
-
 
 <!-- =========================================================================
      PAGE SCRIPTS

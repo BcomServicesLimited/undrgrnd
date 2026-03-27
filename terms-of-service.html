@@ -977,11 +977,9 @@
 }());
 </script>
 
-
 <!-- =========================================================================
      NAVIGATION — copy contents of /components/nav-component.html here
      ========================================================================= -->
-
 
 <!-- =========================================================================
      1. PAGE HEADER
@@ -997,7 +995,6 @@
     <p class="legal-hero__intro">By participating in classes at UNDRGRND Movement, you agree to these terms. Please read this document carefully before booking or attending any class.</p>
   </div>
 </header>
-
 
 <!-- =========================================================================
      2. MAIN BODY — TOC + CONTENT
@@ -1284,11 +1281,9 @@
   </div>
 </main>
 
-
 <!-- =========================================================================
      FOOTER — copy contents of /components/footer-component.html here
      ========================================================================= -->
-
 
 <!-- =========================================================================
      PAGE-SPECIFIC JAVASCRIPT
@@ -1384,7 +1379,6 @@
 
 }());
 </script>
-
 
 <!--
   UNDRGRND Movement — Footer Component
@@ -1495,45 +1489,7 @@
   }
 
   /* Social icons */
-  .footer-social {
-    display: flex;
-    gap: 0.85rem;
-    align-items: center;
-  }
-
-  .footer-social__link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    border: 1.5px solid rgba(139, 92, 246, 0.4); /* site-config: primary_purple at 40% */
-    color: #A1A1A1;                           /* site-config: text_gray */
-    text-decoration: none;
-    transition: all 0.3s ease;               /* site-config: design.effects.transition */
-    background: transparent;
-  }
-
-  .footer-social__link:hover {
-    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%); /* site-config: gradient_purple */
-    border-color: transparent;
-    color: #FFFFFF;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
-  }
-
-  .footer-social__link svg {
-    width: 18px;
-    height: 18px;
-    stroke: currentColor;
-    fill: none;
-    stroke-width: 1.75;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-
-  /* ---- COLUMN 2: Quick Links ---- */
+/* ---- COLUMN 2: Quick Links ---- */
   .footer-links {
     list-style: none;
     margin: 0;
@@ -1725,43 +1681,7 @@
         Foundational movement for body and mind
       </p>
 
-      <!-- Social links: site-config.json → business.contact.instagram / .facebook -->
-      <div class="footer-social" aria-label="Social media links">
-
-        <!-- Instagram -->
-        <a
-          href="#"
-          class="footer-social__link"
-          id="footerInstagram"
-          aria-label="UNDRGRND Movement on Instagram"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <!-- Lucide: instagram -->
-          <svg aria-hidden="true" viewBox="0 0 24 24">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-          </svg>
-        </a>
-
-        <!-- Facebook -->
-        <a
-          href="#"
-          class="footer-social__link"
-          id="footerFacebook"
-          aria-label="UNDRGRND Movement on Facebook"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <!-- Lucide: facebook -->
-          <svg aria-hidden="true" viewBox="0 0 24 24">
-            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-          </svg>
-        </a>
-
-      </div>
-    </div>
+</div>
 
     <!-- ---- COLUMN 2: Quick Links ---- -->
     <div class="footer-col footer-col--links">
@@ -1810,7 +1730,6 @@
 <!-- =====================================================================
      FOOTER JAVASCRIPT
      Data source: site-config.json → project, business, navigation
-     NAP values are pre-rendered in HTML above; JS only updates social
      links and nav items to avoid any NAP inconsistency from async load.
      ===================================================================== -->
 <script>
@@ -1828,23 +1747,6 @@
       var taglineEl = document.getElementById('footerTagline');
       if (taglineEl && config.project && config.project.tagline) {
         taglineEl.textContent = config.project.tagline;
-      }
-
-      /* --- Social links: business.contact.instagram / .facebook ---
-           URLs are placeholders until client updates site-config.json.
-           We only set href if the value is not a placeholder string.
-      --- */
-      var instagram = config.business && config.business.contact && config.business.contact.instagram;
-      var facebook  = config.business && config.business.contact && config.business.contact.facebook;
-
-      var igLink = document.getElementById('footerInstagram');
-      if (igLink && instagram && instagram.indexOf('PLACEHOLDER') === -1) {
-        igLink.href = instagram;
-      }
-
-      var fbLink = document.getElementById('footerFacebook');
-      if (fbLink && facebook && facebook.indexOf('PLACEHOLDER') === -1) {
-        fbLink.href = facebook;
       }
 
       /* --- NAP: Address --- */

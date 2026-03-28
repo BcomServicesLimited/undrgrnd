@@ -1579,7 +1579,7 @@
       </p>
 
       <div style="margin-top: 0.5rem;">
-        <a href="/timetable.html" class="cta-button">View Timetable</a>
+        <a href="#book" class="cta-button">View Timetable</a>
       </div>
     </div>
 
@@ -1840,7 +1840,7 @@
     <p>Please ensure you have your medical clearance documentation ready to present at your first class.</p>
 
     <div class="modal-box__actions">
-      <a href="/timetable.html" class="cta-button">I Have Clearance — Book Now</a>
+      <a href="#book" class="cta-button">I Have Clearance — Book Now</a>
       <a href="/contact.html" class="cta-secondary" style="padding: 0.8rem 1.5rem;">Contact Us First</a>
     </div>
 
@@ -1945,10 +1945,10 @@
       : '';
     /* Book Now button — triggers modal for recovery classes; waitlist for coming soon */
     var bookBtn = isComingSoon
-      ? '<a href="mailto:undrgrndgc@gmail.com?subject=Waitlist for ' + escHtml(program.name) + '" class="btn-learn">Join Waitlist</a>'
+      ? '<a href="#book" class="btn-learn">Join Waitlist</a>'
       : (isMedical
           ? '<button class="btn-book" data-medical="true" type="button">Book Now</button>'
-          : '<a href="/timetable.html" class="btn-book">Book Now</a>');
+          : '<a href="#book" class="btn-book">Book Now</a>');
     var learnBtn = isComingSoon
       ? '<a href="#" class="btn-learn disabled" aria-disabled="true">Coming Soon</a>'
       : '<a href="/programs/' + escHtml(slug) + '.html" class="btn-learn">Learn More</a>';
@@ -2149,7 +2149,65 @@
   UNDRGRND Movement — Footer Component
   File: /components/footer-component.html
 
-  Usage: Copy this entire block into any page <body>, as the last element before </body>.
+  Usage: Copy this entire block into any page <body>, as the last element before 
+<!-- Booking Modal -->
+<div id="bookingModal" role="dialog" aria-modal="true" aria-label="Book a Class" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.85);overflow-y:auto;">
+  <div style="position:relative;max-width:680px;margin:2rem auto;padding:1rem;">
+    <button id="bookingModalClose" aria-label="Close booking form" style="position:absolute;top:0.5rem;right:0.5rem;background:rgba(139,92,246,0.15);border:1px solid #8B5CF6;color:#fff;font-size:1.4rem;line-height:1;width:2.2rem;height:2.2rem;border-radius:50%;cursor:pointer;z-index:10000;display:flex;align-items:center;justify-content:center;">&times;</button>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdRMvUrAyMw6PVrSJvVjikBy_swYzT06MNeARSuOREnwmuHew/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" title="Book a Class at UNDRGRND Movement" style="border-radius:8px;background:#fff;">Loading&#8230;</iframe>
+  </div>
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('bookingModal');
+  var closeBtn = document.getElementById('bookingModalClose');
+  function openModal(e){
+    if(e){ e.preventDefault(); }
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  if(closeBtn){ closeBtn.addEventListener('click', closeModal); }
+  modal.addEventListener('click', function(e){ if(e.target === modal){ closeModal(); } });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeModal(); } });
+  // Intercept all booking links
+  var BOOKING_HREFS = ['/timetable.html', '/contact.html', '/adults.html'];
+  var BOOKING_LABELS = /book|enrol|enroll|register|sign.?up|join|reserve|get.?started|view.?timetable|view.?classes/i;
+  function isBookingLink(a){
+    var href = (a.getAttribute('href') || '').toLowerCase();
+    var text = a.textContent.trim();
+    // Exclude nav links and plain "contact" or "timetable" nav items
+    if(a.closest('nav') || a.closest('.nav-menu') || a.closest('.nav-mobile-menu')){ return false; }
+    // Exclude footer links
+    if(a.closest('footer') || a.closest('.site-footer')){ return false; }
+    // Match booking hrefs with booking-style label text
+    var hrefMatch = BOOKING_HREFS.some(function(h){ return href === h; });
+    var mailMatch = href.indexOf('mailto:') === 0 && href.indexOf('waitlist') > -1;
+    var labelMatch = BOOKING_LABELS.test(text);
+    return (hrefMatch || mailMatch) && labelMatch;
+  }
+  document.querySelectorAll('a').forEach(function(a){
+    if(isBookingLink(a)){
+      a.addEventListener('click', openModal);
+    }
+  });
+  // Also handle dynamically created nav CTA "Book Now" button
+  var observer = new MutationObserver(function(){
+    document.querySelectorAll('a.cta-button').forEach(function(a){
+      if(!a.dataset.modalBound){
+        a.dataset.modalBound = '1';
+        a.addEventListener('click', openModal);
+      }
+    });
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+})();
+</script>
+
+</body>.
   Dependencies:
     - /css/global.css (must be loaded in <head>)
     - site-config.json (footer data loaded via fetch in <script> below)

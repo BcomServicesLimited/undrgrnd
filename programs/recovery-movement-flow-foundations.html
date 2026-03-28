@@ -947,7 +947,7 @@
         Southport Studio &nbsp;|&nbsp; UNDRGRND Movement
       </div>
       <div class="program-hero__ctas">
-        <a href="mailto:undrgrndgc@gmail.com?subject=Recovery%20Movement%20Flow%20Waitlist" class="cta-button">Join Waitlist</a>
+        <a href="#book" class="cta-button">Join Waitlist</a>
         <a href="/contact.html" class="cta-secondary">Contact Us First</a>
       </div>
       <!-- Medical clearance warning in hero -->
@@ -997,7 +997,7 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;margin-right:0.4rem;" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
         Medical Clearance Required
       </div>
-      <a href="mailto:undrgrndgc@gmail.com?subject=Recovery%20Movement%20Flow%20Waitlist" class="cta-button" style="width:100%;text-align:center;display:block;">Join Waitlist</a>
+      <a href="#book" class="cta-button" style="width:100%;text-align:center;display:block;">Join Waitlist</a>
     </div>
   </div>
 </section>
@@ -1198,7 +1198,7 @@
   <h2>Ready to Begin Your Recovery Journey?</h2>
   <p>Contact us first to discuss your situation and confirm your medical clearance. We are here to support your recovery journey at UNDRGRND Movement Southport.</p>
   <div class="program-cta__buttons">
-    <a href="mailto:undrgrndgc@gmail.com?subject=Recovery%20Movement%20Flow%20Waitlist" class="cta-button">Join Waitlist</a>
+    <a href="#book" class="cta-button">Join Waitlist</a>
     <a href="/contact.html" class="cta-secondary">Contact Us First</a>
   </div>
 </section>
@@ -1218,7 +1218,7 @@
     <p>Recovery Movement Flow – Foundations requires written medical clearance from your GP or specialist before your first class. Please bring your documentation to your first session at UNDRGRND Movement Southport.</p>
     <p>If you already have clearance, you can book directly through our timetable. If you are unsure, please contact us first.</p>
     <div class="modal__buttons">
-      <a href="mailto:undrgrndgc@gmail.com?subject=Recovery%20Movement%20Flow%20Waitlist" class="cta-button" style="text-align:center;">Join Waitlist</a>
+      <a href="#book" class="cta-button" style="text-align:center;">Join Waitlist</a>
       <a href="/contact.html" class="cta-secondary" style="text-align:center;">Contact Us First</a>
     </div>
   </div>
@@ -1226,7 +1226,7 @@
 
 <!-- Sticky Book Now -->
 <div class="sticky-book" id="stickyBook">
-  <a href="mailto:undrgrndgc@gmail.com?subject=Recovery%20Movement%20Flow%20Waitlist" class="cta-button">Join Waitlist</a>
+  <a href="#book" class="cta-button">Join Waitlist</a>
 </div>
 
 <!-- FOOTER PLACEHOLDER — inlined by build script -->
@@ -1289,7 +1289,65 @@ if (typeof SchemaGenerator !== 'undefined') {
   UNDRGRND Movement — Footer Component
   File: /components/footer-component.html
 
-  Usage: Copy this entire block into any page <body>, as the last element before </body>.
+  Usage: Copy this entire block into any page <body>, as the last element before 
+<!-- Booking Modal -->
+<div id="bookingModal" role="dialog" aria-modal="true" aria-label="Book a Class" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.85);overflow-y:auto;">
+  <div style="position:relative;max-width:680px;margin:2rem auto;padding:1rem;">
+    <button id="bookingModalClose" aria-label="Close booking form" style="position:absolute;top:0.5rem;right:0.5rem;background:rgba(139,92,246,0.15);border:1px solid #8B5CF6;color:#fff;font-size:1.4rem;line-height:1;width:2.2rem;height:2.2rem;border-radius:50%;cursor:pointer;z-index:10000;display:flex;align-items:center;justify-content:center;">&times;</button>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdRMvUrAyMw6PVrSJvVjikBy_swYzT06MNeARSuOREnwmuHew/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" title="Book a Class at UNDRGRND Movement" style="border-radius:8px;background:#fff;">Loading&#8230;</iframe>
+  </div>
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('bookingModal');
+  var closeBtn = document.getElementById('bookingModalClose');
+  function openModal(e){
+    if(e){ e.preventDefault(); }
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  if(closeBtn){ closeBtn.addEventListener('click', closeModal); }
+  modal.addEventListener('click', function(e){ if(e.target === modal){ closeModal(); } });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeModal(); } });
+  // Intercept all booking links
+  var BOOKING_HREFS = ['/timetable.html', '/contact.html', '/adults.html'];
+  var BOOKING_LABELS = /book|enrol|enroll|register|sign.?up|join|reserve|get.?started|view.?timetable|view.?classes/i;
+  function isBookingLink(a){
+    var href = (a.getAttribute('href') || '').toLowerCase();
+    var text = a.textContent.trim();
+    // Exclude nav links and plain "contact" or "timetable" nav items
+    if(a.closest('nav') || a.closest('.nav-menu') || a.closest('.nav-mobile-menu')){ return false; }
+    // Exclude footer links
+    if(a.closest('footer') || a.closest('.site-footer')){ return false; }
+    // Match booking hrefs with booking-style label text
+    var hrefMatch = BOOKING_HREFS.some(function(h){ return href === h; });
+    var mailMatch = href.indexOf('mailto:') === 0 && href.indexOf('waitlist') > -1;
+    var labelMatch = BOOKING_LABELS.test(text);
+    return (hrefMatch || mailMatch) && labelMatch;
+  }
+  document.querySelectorAll('a').forEach(function(a){
+    if(isBookingLink(a)){
+      a.addEventListener('click', openModal);
+    }
+  });
+  // Also handle dynamically created nav CTA "Book Now" button
+  var observer = new MutationObserver(function(){
+    document.querySelectorAll('a.cta-button').forEach(function(a){
+      if(!a.dataset.modalBound){
+        a.dataset.modalBound = '1';
+        a.addEventListener('click', openModal);
+      }
+    });
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+})();
+</script>
+
+</body>.
   Dependencies:
     - /css/global.css (must be loaded in <head>)
     - site-config.json (footer data loaded via fetch in <script> below)

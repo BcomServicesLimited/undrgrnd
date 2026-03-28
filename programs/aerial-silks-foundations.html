@@ -1756,7 +1756,7 @@
      STICKY BOOK NOW
      ========================================================================= -->
 <div class="sticky-book" id="stickyBook" aria-hidden="true">
-  <a href="/timetable.html" tabindex="-1">
+  <a href="#book" tabindex="-1">
     <!-- Lucide: calendar -->
     <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
     Book Now
@@ -1788,8 +1788,8 @@
     </p>
 
     <div class="prog-hero__ctas">
-      <a href="/timetable.html" class="cta-button">Book This Class</a>
-      <a href="/timetable.html" class="cta-secondary">View Timetable</a>
+      <a href="#book" class="cta-button">Book This Class</a>
+      <a href="#book" class="cta-secondary">View Timetable</a>
     </div>
   </div>
 </section>
@@ -1877,7 +1877,7 @@
       </div>
 
       <div class="info-box__cta">
-        <a href="/timetable.html" class="cta-button">Book This Class</a>
+        <a href="#book" class="cta-button">Book This Class</a>
       </div>
     </aside>
 
@@ -2092,7 +2092,7 @@
       <p class="single-price-card__price"><sup>$</sup>35</p>
       <p class="single-price-card__period">each session</p>
       <div class="single-price-card__cta">
-        <a href="/timetable.html" class="cta-button" style="display: block; text-align: center;">Book This Class</a>
+        <a href="#book" class="cta-button" style="display: block; text-align: center;">Book This Class</a>
       </div>
     </div>
   </div>
@@ -2318,7 +2318,7 @@
     <h2 id="ctaHeading">Ready to Fly?</h2>
     <p class="cta-section__sub">Join Gold Coast's most safety-focused beginner aerial silks program at UNDRGRND Movement. No experience, strength, or flexibility required — just bring yourself.</p>
     <div class="cta-section__buttons">
-      <a href="/timetable.html" class="cta-button">Book Your First Aerial Silks Class</a>
+      <a href="#book" class="cta-button">Book Your First Aerial Silks Class</a>
       <a href="/contact.html" class="cta-secondary">Have questions? Get in touch</a>
     </div>
   </div>
@@ -2583,7 +2583,65 @@
   UNDRGRND Movement — Footer Component
   File: /components/footer-component.html
 
-  Usage: Copy this entire block into any page <body>, as the last element before </body>.
+  Usage: Copy this entire block into any page <body>, as the last element before 
+<!-- Booking Modal -->
+<div id="bookingModal" role="dialog" aria-modal="true" aria-label="Book a Class" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.85);overflow-y:auto;">
+  <div style="position:relative;max-width:680px;margin:2rem auto;padding:1rem;">
+    <button id="bookingModalClose" aria-label="Close booking form" style="position:absolute;top:0.5rem;right:0.5rem;background:rgba(139,92,246,0.15);border:1px solid #8B5CF6;color:#fff;font-size:1.4rem;line-height:1;width:2.2rem;height:2.2rem;border-radius:50%;cursor:pointer;z-index:10000;display:flex;align-items:center;justify-content:center;">&times;</button>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdRMvUrAyMw6PVrSJvVjikBy_swYzT06MNeARSuOREnwmuHew/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" title="Book a Class at UNDRGRND Movement" style="border-radius:8px;background:#fff;">Loading&#8230;</iframe>
+  </div>
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('bookingModal');
+  var closeBtn = document.getElementById('bookingModalClose');
+  function openModal(e){
+    if(e){ e.preventDefault(); }
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  if(closeBtn){ closeBtn.addEventListener('click', closeModal); }
+  modal.addEventListener('click', function(e){ if(e.target === modal){ closeModal(); } });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeModal(); } });
+  // Intercept all booking links
+  var BOOKING_HREFS = ['/timetable.html', '/contact.html', '/adults.html'];
+  var BOOKING_LABELS = /book|enrol|enroll|register|sign.?up|join|reserve|get.?started|view.?timetable|view.?classes/i;
+  function isBookingLink(a){
+    var href = (a.getAttribute('href') || '').toLowerCase();
+    var text = a.textContent.trim();
+    // Exclude nav links and plain "contact" or "timetable" nav items
+    if(a.closest('nav') || a.closest('.nav-menu') || a.closest('.nav-mobile-menu')){ return false; }
+    // Exclude footer links
+    if(a.closest('footer') || a.closest('.site-footer')){ return false; }
+    // Match booking hrefs with booking-style label text
+    var hrefMatch = BOOKING_HREFS.some(function(h){ return href === h; });
+    var mailMatch = href.indexOf('mailto:') === 0 && href.indexOf('waitlist') > -1;
+    var labelMatch = BOOKING_LABELS.test(text);
+    return (hrefMatch || mailMatch) && labelMatch;
+  }
+  document.querySelectorAll('a').forEach(function(a){
+    if(isBookingLink(a)){
+      a.addEventListener('click', openModal);
+    }
+  });
+  // Also handle dynamically created nav CTA "Book Now" button
+  var observer = new MutationObserver(function(){
+    document.querySelectorAll('a.cta-button').forEach(function(a){
+      if(!a.dataset.modalBound){
+        a.dataset.modalBound = '1';
+        a.addEventListener('click', openModal);
+      }
+    });
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+})();
+</script>
+
+</body>.
   Dependencies:
     - /css/global.css (must be loaded in <head>)
     - site-config.json (footer data loaded via fetch in <script> below)

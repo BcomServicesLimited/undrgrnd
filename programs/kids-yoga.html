@@ -809,7 +809,7 @@
       
       <div class="program-hero__ctas">
         <a href="#book" class="cta-button">Register Interest</a>
-        <a href="#book" class="cta-secondary">View Timetable</a>
+        <a href="/timetable.html" class="cta-secondary">View Timetable</a>
       </div>
     </div>
     <picture>
@@ -1102,37 +1102,37 @@ if (typeof SchemaGenerator !== 'undefined') {
   if(closeBtn){ closeBtn.addEventListener('click', closeModal); }
   modal.addEventListener('click', function(e){ if(e.target === modal){ closeModal(); } });
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeModal(); } });
-  // Intercept all booking links
-  var BOOKING_HREFS = ['/timetable.html', '/contact.html', '/adults.html'];
-  var BOOKING_LABELS = /book|enrol|enroll|register|sign.?up|join|reserve|get.?started|view.?timetable|view.?classes/i;
-  function isBookingLink(a){
-    var href = (a.getAttribute('href') || '').toLowerCase();
-    var text = a.textContent.trim();
-    // Exclude nav links and plain "contact" or "timetable" nav items
-    if(a.closest('nav') || a.closest('.nav-menu') || a.closest('.nav-mobile-menu')){ return false; }
-    // Exclude footer links
-    if(a.closest('footer') || a.closest('.site-footer')){ return false; }
-    // Match booking hrefs with booking-style label text
-    var hrefMatch = BOOKING_HREFS.some(function(h){ return href === h; });
-    var mailMatch = href.indexOf('mailto:') === 0 && href.indexOf('waitlist') > -1;
-    var labelMatch = BOOKING_LABELS.test(text);
-    return (hrefMatch || mailMatch) && labelMatch;
-  }
-  document.querySelectorAll('a').forEach(function(a){
-    if(isBookingLink(a)){
-      a.addEventListener('click', openModal);
+
+  /* ── Event delegation: catches all booking clicks including dynamically
+        rendered program cards (btn-book, cta-button, data-medical buttons) ── */
+  var BOOKING_LABELS = /^(book|enrol|enroll|register|sign.?up|join.?waitlist|reserve|get.?started|i.have.clearance)/i;
+  document.body.addEventListener('click', function(e){
+    var el = e.target;
+    // Walk up to find the clickable element (handles clicks on child spans/SVGs)
+    while(el && el !== document.body){
+      var tag = el.tagName ? el.tagName.toLowerCase() : '';
+      var cls = el.className || '';
+      var href = el.getAttribute ? (el.getAttribute('href') || '') : '';
+      var text = el.textContent ? el.textContent.trim() : '';
+      var isMedicalBtn = el.dataset && el.dataset.medical === 'true';
+
+      // Is this a booking element?
+      var isBookBtn = (cls.indexOf('btn-book') > -1) || (cls.indexOf('cta-button') > -1 && BOOKING_LABELS.test(text));
+      var isBookLink = (tag === 'a') && (href === '#book') && BOOKING_LABELS.test(text);
+      var isMedical  = isMedicalBtn;
+
+      // Exclude nav and footer
+      var inNav    = el.closest && (el.closest('nav') || el.closest('.nav-menu') || el.closest('.nav-mobile-menu'));
+      var inFooter = el.closest && (el.closest('footer') || el.closest('.site-footer'));
+
+      if((isBookBtn || isBookLink || isMedical) && !inNav && !inFooter){
+        e.preventDefault();
+        openModal(null);
+        return;
+      }
+      el = el.parentElement;
     }
   });
-  // Also handle dynamically created nav CTA "Book Now" button
-  var observer = new MutationObserver(function(){
-    document.querySelectorAll('a.cta-button').forEach(function(a){
-      if(!a.dataset.modalBound){
-        a.dataset.modalBound = '1';
-        a.addEventListener('click', openModal);
-      }
-    });
-  });
-  observer.observe(document.body, { childList: true, subtree: true });
 })();
 </script>
 

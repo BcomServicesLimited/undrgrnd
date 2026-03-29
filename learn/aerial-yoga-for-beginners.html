@@ -1423,7 +1423,7 @@ window.addEventListener('scroll', () => {
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0, rootMargin: "0px 0px -40px 0px" });
     panels.forEach(function(el) { io.observe(el); });
   } else {
     panels.forEach(function(el) { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; });

@@ -2294,7 +2294,7 @@
             observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.1 });
+      }, { threshold: 0, rootMargin: "0px 0px -40px 0px" });
       revealEls.forEach(function (el) { observer.observe(el); });
     } else {
       revealEls.forEach(function (el) { el.classList.add('visible'); });

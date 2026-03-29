@@ -797,17 +797,19 @@
     ----------------------------------------------------------------------- */
     .reveal {
       opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transform: translateY(20px);
+      animation: revealFadeIn 0.7s ease forwards;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @keyframes revealFadeIn {
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    .reveal-delay-1 { transition-delay: 0.08s; }
-    .reveal-delay-2 { transition-delay: 0.16s; }
-    .reveal-delay-3 { transition-delay: 0.24s; }
-    .reveal-delay-4 { transition-delay: 0.32s; }
-    .reveal-delay-5 { transition-delay: 0.40s; }
+    .reveal-delay-1 { animation-delay: 0.08s; transition-delay: 0.08s; }
+    .reveal-delay-2 { animation-delay: 0.16s; transition-delay: 0.16s; }
+    .reveal-delay-3 { animation-delay: 0.24s; transition-delay: 0.24s; }
+    .reveal-delay-4 { animation-delay: 0.32s; transition-delay: 0.32s; }
+    .reveal-delay-5 { animation-delay: 0.40s; transition-delay: 0.40s; }
     .reveal-delay-6 { transition-delay: 0.48s; }
     .reveal-delay-7 { transition-delay: 0.56s; }
     .reveal-delay-8 { transition-delay: 0.64s; }

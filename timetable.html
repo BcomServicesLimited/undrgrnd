@@ -117,42 +117,7 @@
     /* -----------------------------------------------------------------------
        INTEGRATION NOTICE BANNER
     ----------------------------------------------------------------------- */
-    .integration-notice {
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.07));
-      border-bottom: 1px solid rgba(139, 92, 246, 0.2);
-      padding: 0.85rem 5%;
-    }
 
-    .integration-notice__inner {
-      max-width: 1400px;
-      margin-inline: auto;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-
-    .integration-notice svg {
-      width: 16px;
-      height: 16px;
-      stroke: #A78BFA;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      flex-shrink: 0;
-    }
-
-    .integration-notice__text {
-      font-size: 0.85rem;
-      color: #A78BFA;
-      font-weight: 600;
-    }
-
-    .integration-notice__sub {
-      font-size: 0.8rem;
-      color: rgba(161, 161, 161, 0.7);
-    }
 
     /* -----------------------------------------------------------------------
        STICKY FILTER BAR
@@ -1420,15 +1385,7 @@
      ========================================================================= -->
 
 <!-- =========================================================================
-     INTEGRATION NOTICE BANNER
-     ========================================================================= -->
-<div class="integration-notice" role="status" aria-live="polite">
-  <div class="integration-notice__inner">
-    <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-    <span class="integration-notice__text">Booking integration pending.</span>
-    <span class="integration-notice__sub">Class Manager URL to be configured in site-config.json &rarr; <code style="font-family: monospace; color: #A78BFA;">booking.timetable_url</code></span>
-  </div>
-</div>
+
 
 <!-- =========================================================================
      1. HERO SECTION
@@ -2346,37 +2303,6 @@ window.addEventListener('scroll', () => {
 </script>
 
 
-<script>
-  const data_config = {
-    styles: {
-      'thClasses': null,
-      'tdClasses': null,
-      'trClasses': null,
-      'tableClasses': null,
-      'theadClasses': null,
-      'tbodyClasses': null,
-    },
-    type: 'season',
-    id: 1,
-    layout: 'table',
-    data: ['time','location','class','staff','price']
-  };
 
-  const cm_config = {
-    div_id: 'timetable',
-    public_key: 'c8b02e58-1d42-4611-9426-696e72a43630',
-    company_url: 'undrgrnd-movement'
-  };
-
-  // Hide loading message once timetable loads
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      const loadingDiv = document.getElementById('timetable-loading');
-      if (loadingDiv && document.getElementById('timetable').children.length > 0) {
-        loadingDiv.style.display = 'none';
-      }
-    }, 2000);
-  });
-</script>
 </body>
 </html>

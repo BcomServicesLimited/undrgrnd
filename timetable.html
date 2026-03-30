@@ -10,8 +10,8 @@
 
   <!-- Canonical -->
   <link rel="canonical" href="https://www.undrgrnd.com.au/timetable.html">
-  <!-- Content Security Policy for Class Manager embed -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.classmanager.com; connect-src 'self' https://app.classmanager.com https://api.classmanager.com; style-src 'self' 'unsafe-inline';">
+  <!-- Content Security Policy for Momence embed -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://momence.com; connect-src 'self' https://momence.com; style-src 'self' 'unsafe-inline';">
 
   <!-- Favicon placeholders -->
   <!-- Google Fonts -->
@@ -1474,14 +1474,21 @@
       </ul>
     </div>
 
-    <!-- Class Manager Timetable Embed -->
+    <!-- Momence Timetable Embed -->
     <div class="timetable-container">
-      <div id="timetable"></div>
-    </div>
-
-    <!-- Loading Message (shows while timetable loads) -->
-    <div id="timetable-loading" style="text-align: center; padding: 3rem;">
-      <p>Loading class timetable...</p>
+      <div id="ribbon-schedule"></div>
+      <script
+        async
+        type="module"
+        host_id="235744"
+        teacher_ids="[362990]"
+        location_ids="[201938]"
+        tag_ids="[]"
+        default_filter="show-all"
+        locale="en"
+        lock_timezone="Australia/Brisbane"
+        src="https://momence.com/plugin/host-schedule/host-schedule.js"
+      ></script>
     </div>
 
   </div>
@@ -2338,8 +2345,7 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
-<!-- Class Manager Scripts -->
-<script src="https://cdn.classmanager.com/assets/app/js/embed-script.js" defer></script>
+
 <script>
   const data_config = {
     styles: {

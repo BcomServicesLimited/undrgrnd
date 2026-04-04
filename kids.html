@@ -1652,7 +1652,7 @@
         <p>Structured, age-appropriate movement classes for children aged 6 to 8. Dance, yoga, aerial, and pole fitness in a safe, fun, and supportive environment at our Southport studio.</p>
         <ul>
           <li>Creative Dance - Foundations</li>
-          <li>Dance Moves (Urban Mix) - Foundations</li>
+          <li>Urban Mix – Foundations</li>
           <li>Modern Contemporary (Rhythm &amp; Motion) - Foundations</li>
           <li>Kids Yoga - Foundations</li>
           <li>Kids Aerial Yoga - Foundations (Coming Soon)</li>
@@ -1950,7 +1950,7 @@
     </p>
 
     <p>
-      Children aged 6 to 8 on the Gold Coast have access to the full range of class options at UNDRGRND Movement. <strong>Dance Moves (Urban Mix) - Foundations</strong> introduces hip hop and urban dance styles in a fun, structured format, building rhythm, coordination, and performance confidence through age-appropriate choreography. <strong>Modern Contemporary (Rhythm &amp; Motion) - Foundations</strong> takes a more expressive approach, developing movement quality, musicality, and artistic awareness.
+      Children aged 6 to 8 on the Gold Coast have access to the full range of class options at UNDRGRND Movement. <strong>Urban Mix – Foundations</strong> introduces hip hop and urban dance styles in a fun, structured format, building rhythm, coordination, and performance confidence through age-appropriate choreography. <strong>Modern Contemporary (Rhythm &amp; Motion) - Foundations</strong> takes a more expressive approach, developing movement quality, musicality, and artistic awareness.
     </p>
 
     <p>
@@ -2078,10 +2078,12 @@
       benefitItems += '<li>' + buildCheckSvg() + '<span>' + escHtml(b) + '</span></li>';
     });
 
-    var priceHtml = ''; /* Pricing removed — all kids programs are coming soon */
-
     /* Coming Soon badge */
     var isComingSoon = program.status === 'coming_soon';
+
+    var priceHtml = (!isComingSoon && program.price)
+      ? '<p class="program-card__price"><strong>' + escHtml(program.price.replace(' per class','')) + '</strong> per class</p>'
+      : '';
     var comingSoonBadge = isComingSoon
       ? '<span class="program-badge badge--coming-soon">Coming Soon</span>'
       : '';

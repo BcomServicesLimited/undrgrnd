@@ -454,13 +454,14 @@
       "dance": [
         {
           "id": "kids-dance-moves",
-          "name": "Dance Moves (Urban Mix) - Foundations",
+          "name": "Urban Mix - Foundations",
           "slug": "kids-dance-moves",
           "category": "Dance",
           "age_range": "6-8 years",
           "short_description": "Hip hop and urban dance styles for kids",
-          "status": "coming_soon",
-          "full_description": "Dance Moves (Urban Mix) – Foundations is a fun and beginner-friendly class that introduces children to rhythm, coordination, and basic dance movement in an engaging and structured environment. Inspired by simple urban-style movement, this class keeps kids active while helping them connect with music through easy, repeatable patterns. Through guided sequences, step patterns, and rhythm-based activities, children develop timing, coordination, and body awareness in a way that feels natural and enjoyable. Movements are kept simple and age-appropriate, allowing children to build confidence as they learn to move with control and ease. This class is ideal for kids who enjoy music, movement, and staying active while building confidence in a positive and supportive setting."
+          "status": "active",
+          "full_description": "Urban Mix – Foundations is a fun and beginner-friendly class that introduces children to rhythm, coordination, and basic dance movement in an engaging and structured environment. Inspired by simple urban-style movement, this class keeps kids active while helping them connect with music through easy, repeatable patterns. Through guided sequences, step patterns, and rhythm-based activities, children develop timing, coordination, and body awareness in a way that feels natural and enjoyable. Movements are kept simple and age-appropriate, allowing children to build confidence as they learn to move with control and ease. This class is ideal for kids who enjoy music, movement, and staying active while building confidence in a positive and supportive setting.",
+          "price": "$35 per class"
         },
         {
           "id": "kids-modern-contemporary",

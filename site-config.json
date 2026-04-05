@@ -339,7 +339,7 @@
           ],
           "price": 35,
           "intensity": "Balanced",
-          "status": "active"
+          "status": "coming_soon"
         }
       ],
       "choreography": [
@@ -353,7 +353,7 @@
           "short_description": "Women's movement and confidence through choreographed dance",
           "price": 35,
           "intensity": "Balanced",
-          "status": "active",
+          "status": "coming_soon",
           "full_description": "Step in, learn the sequence, and make it your own. Choreography Fusion – Foundations is a beginner-friendly class focused on building confidence through simple, guided choreography that's easy to follow from the first session. 'Fusion' means you're not locked into one style. Each class blends elements from different movement styles — such as groove, flow, and basic contemporary — giving you variety while helping you understand how movement connects across styles. You'll learn short combinations step by step, with clear breakdowns that help you understand timing, transitions, and how sequences are built — not just copy them. The focus is on coordination, timing, and moving through a full sequence with clarity and control, without pressure to perform or get everything perfect. Ideal for adults who want to build confidence, improve coordination, and learn choreography in a structured but flexible way.",
           "booking_url": "https://app.classmanager.com/portal/undrgrnd-movement/enrolment/classes/choreography-fusion-foundations",
           "core_focus": [

@@ -475,13 +475,14 @@
         },
         {
           "id": "kids-creative-dance",
-          "name": "Creative Dance - Foundations",
+          "name": "Creative Dance",
           "slug": "kids-creative-dance",
           "category": "Dance",
           "age_range": "6-8 years",
           "short_description": "Imaginative movement and dance exploration for younger children",
-          "status": "coming_soon",
-          "full_description": "Creative Dance – Foundations is a beginner-friendly class designed to encourage children to explore movement, imagination, and self-expression in a fun and supportive environment. This class focuses on helping children feel comfortable moving in their own way while building coordination and body awareness. Each session includes simple guided activities, creative movement tasks, and easy-to-follow patterns that support rhythm, balance, and control. Children are encouraged to explore different ways of moving while staying within a structured and safe framework. This class is ideal for children who enjoy freedom in movement and want to build confidence while expressing themselves in a safe and supportive environment."
+          "status": "active",
+          "price": 35,
+          "full_description": "Creative Dance is a beginner-friendly class designed to encourage children to explore movement, imagination, and self-expression in a fun and supportive environment. This class focuses on helping children feel comfortable moving in their own way while building coordination and body awareness. Each session includes simple guided activities, creative movement tasks, and easy-to-follow patterns that support rhythm, balance, and control. Children are encouraged to explore different ways of moving while staying within a structured and safe framework. This class is ideal for children who enjoy freedom in movement and want to build confidence while expressing themselves in a safe and supportive environment."
         }
       ],
       "age_bands": {

@@ -364,7 +364,7 @@ label {
   justify-content: center;
   gap: 0.5rem;
   padding: var(--spacing-button);           /* 0.8rem 2rem */
-  background: var(--gradient-purple);       /* linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%) */
+  background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
   color: var(--color-text-white);
   font-family: var(--font-body);
   font-weight: var(--fw-bold);
@@ -374,31 +374,16 @@ label {
   border-radius: var(--border-radius-pill); /* 50px */
   border: none;
   cursor: pointer;
-  transition: var(--transition);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
   white-space: nowrap;
   text-decoration: none;
-  position: relative;
-  overflow: hidden;
-}
-
-.cta-button::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #A78BFA 0%, #F472B6 100%);
-  opacity: 0;
-  transition: var(--transition);
-  border-radius: inherit;
 }
 
 .cta-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(139, 92, 246, 0.5);
   color: var(--color-text-white);
-}
-
-.cta-button:hover::before {
-  opacity: 1;
+  filter: brightness(1.2);
 }
 
 .cta-button:active {

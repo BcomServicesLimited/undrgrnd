@@ -211,93 +211,6 @@
     }
 
     /* -----------------------------------------------------------------------
-       CLASS FINDER WIDGET
-    ----------------------------------------------------------------------- */
-    .class-finder-wrap {
-      position: relative;
-      z-index: 10;
-      max-width: 1400px;
-      margin-inline: auto;
-      padding: 0 5%;
-      margin-top: -4rem;
-    }
-
-    .class-finder {
-      background: #1A1A1A; /* design.colors.card_bg */
-      border: 1px solid rgba(139, 92, 246, 0.35);
-      border-radius: 20px;
-      padding: 3rem;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-    }
-
-    .class-finder__title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2rem;
-      letter-spacing: 1px;
-      color: #FFFFFF;
-      margin-bottom: 2rem;
-    }
-
-    .class-finder__grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-
-    @media (min-width: 768px) {
-      .class-finder__grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-      }
-    }
-
-    .class-finder__group label {
-      display: block;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #A1A1A1;
-      margin-bottom: 0.75rem;
-    }
-
-    .class-finder__buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-    }
-
-    .finder-btn {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 600;
-      padding: 0.55rem 1.25rem;
-      border-radius: 50px;
-      border: 1.5px solid rgba(139, 92, 246, 0.3);
-      background: transparent;
-      color: #A1A1A1;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      letter-spacing: 0.03em;
-    }
-
-    .finder-btn:hover,
-    .finder-btn.selected {
-      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-      border-color: transparent;
-      color: #FFFFFF;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 15px rgba(139, 92, 246, 0.35);
-    }
-
-    .class-finder__cta {
-      margin-top: 2rem;
-      display: flex;
-      justify-content: flex-start;
-    }
-
-    /* -----------------------------------------------------------------------
        WHY UNDRGRND SECTION
     ----------------------------------------------------------------------- */
     .why-section {
@@ -1414,46 +1327,6 @@
 </section>
 
 <!-- =========================================================================
-     2. CLASS FINDER WIDGET
-     ========================================================================= -->
-<div class="class-finder-wrap" id="classFinder">
-  <div class="class-finder">
-
-    <h2 class="class-finder__title">Find Your Perfect Class</h2>
-
-    <div class="class-finder__grid">
-
-      <!-- Group A: Adults / Kids -->
-      <div class="class-finder__group">
-        <label>I'm looking for classes for:</label>
-        <div class="class-finder__buttons" role="group" aria-label="Age group selection">
-          <button class="finder-btn" data-group="audience" data-value="adults" type="button">Adults</button>
-          <button class="finder-btn" data-group="audience" data-value="kids" type="button">Kids</button>
-        </div>
-      </div>
-
-      <!-- Group B: Category -->
-      <div class="class-finder__group">
-        <label>I'm interested in:</label>
-        <div class="class-finder__buttons" role="group" aria-label="Category selection">
-          <button class="finder-btn" data-group="category" data-value="dance" type="button">Dance</button>
-          <button class="finder-btn" data-group="category" data-value="pole" type="button">Pole</button>
-          <button class="finder-btn" data-group="category" data-value="yoga" type="button">Yoga</button>
-          <button class="finder-btn" data-group="category" data-value="aerial" type="button">Aerial</button>
-          <button class="finder-btn" data-group="category" data-value="recovery" type="button">Recovery</button>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="class-finder__cta">
-      <button class="cta-button" id="showClassesBtn" type="button">Show Me Classes</button>
-    </div>
-
-  </div>
-</div>
-
-<!-- =========================================================================
      3. WHY UNDRGRND SECTION
      ========================================================================= -->
 <section class="why-section reveal" aria-labelledby="whyHeading">
@@ -1762,43 +1635,6 @@
       console.warn('Homepage: site-config.json load error —', err.message);
     });
 
-  /* -------------------------------------------------------------------------
-     3. Class Finder Widget
-     Navigates to /adults.html or /kids.html with category hash
-  ------------------------------------------------------------------------- */
-  var selectedAudience = null;
-  var selectedCategory = null;
-
-  document.querySelectorAll('.finder-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var group = btn.getAttribute('data-group');
-      var value = btn.getAttribute('data-value');
-
-      /* Deselect siblings in same group */
-      document.querySelectorAll('.finder-btn[data-group="' + group + '"]').forEach(function (b) {
-        b.classList.remove('selected');
-        b.setAttribute('aria-pressed', 'false');
-      });
-
-      /* Select clicked button */
-      btn.classList.add('selected');
-      btn.setAttribute('aria-pressed', 'true');
-
-      if (group === 'audience') selectedAudience = value;
-      if (group === 'category') selectedCategory = value;
-    });
-  });
-
-  var showBtn = document.getElementById('showClassesBtn');
-  if (showBtn) {
-    showBtn.addEventListener('click', function () {
-      var audience  = selectedAudience  || 'adults';
-      var category  = selectedCategory  || '';
-      var basePage  = audience === 'kids' ? '/kids.html' : '/adults.html';
-      var url       = category ? basePage + '#' + category : basePage;
-      window.location.href = url;
-    });
-  }
 
   /* -------------------------------------------------------------------------
      4. Intersection Observer — fade-in scroll animations

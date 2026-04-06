@@ -614,6 +614,128 @@
     .reveal-delay-1 { transition-delay: 0.1s; }
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* -----------------------------------------------------------------------
+       PRIVATE COACHING SECTION
+    ----------------------------------------------------------------------- */
+    .coaching-section {
+      padding: 8rem 5%;
+      background: #0D0D0D;
+    }
+
+    .coaching-section__inner {
+      max-width: 1400px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .coaching-section__inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 6rem;
+      }
+    }
+
+    .coaching-section__image-wrap {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      aspect-ratio: 3 / 4;
+      max-height: 600px;
+    }
+
+    .coaching-section__image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .coaching-section__content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .coaching-section__tagline {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    .coaching-section__title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.0;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin: 0;
+    }
+
+    .coaching-section__price {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      background: rgba(139, 92, 246, 0.12);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      border-radius: 12px;
+      padding: 0.6rem 1.2rem;
+      width: fit-content;
+    }
+
+    .coaching-section__price span {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #A1A1A1;
+    }
+
+    .coaching-section__desc {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      color: #A1A1A1;
+      line-height: 1.7;
+      max-width: 520px;
+    }
+
+    .coaching-section__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #A78BFA;
+      text-decoration: none;
+      border: 1px solid rgba(139, 92, 246, 0.4);
+      border-radius: 50px;
+      padding: 0.8rem 1.8rem;
+      width: fit-content;
+      transition: all 0.3s ease;
+      margin-top: 0.5rem;
+    }
+
+    .coaching-section__cta:hover {
+      background: rgba(139, 92, 246, 0.12);
+      border-color: rgba(139, 92, 246, 0.7);
+      color: #FFFFFF;
+    }
   </style>
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -1432,7 +1554,35 @@
 </section>
 
 <!-- =========================================================================
-     5. LOCATION SECTION
+     5. PRIVATE 1:1 COACHING SECTION
+     ========================================================================= -->
+<section class="coaching-section reveal" aria-labelledby="coachingHeading">
+  <div class="coaching-section__inner">
+    <!-- Image -->
+    <div class="coaching-section__image-wrap reveal reveal-delay-1">
+      <img
+        src="/images/private-coaching.webp"
+        alt="Private 1:1 movement coaching session at UNDRGRND Movement, Gold Coast"
+        loading="lazy"
+        width="600"
+        height="800"
+      >
+    </div>
+    <!-- Content -->
+    <div class="coaching-section__content reveal reveal-delay-2">
+      <span class="section-label">One-on-One</span>
+      <p class="coaching-section__tagline">Body Control &bull; Flow &bull; Confidence</p>
+      <h2 class="coaching-section__title" id="coachingHeading">Private 1:1 Movement Coaching</h2>
+      <div class="coaching-section__price">
+        $250 <span>per session</span>
+      </div>
+      <p class="coaching-section__desc">Private movement coaching designed for individuals serious about improving body control, flow, and confidence. Each session is structured, focused, and tailored to your level, with hands-on guidance and clear progression.</p>
+      <a href="/contact.html" class="coaching-section__cta">Available on Request &rarr;</a>
+    </div>
+  </div>
+</section>
+<!-- =========================================================================
+     6. LOCATION SECTION
      ========================================================================= -->
 <section class="location-section reveal" aria-labelledby="locationHeading">
   <div class="location-section__inner">

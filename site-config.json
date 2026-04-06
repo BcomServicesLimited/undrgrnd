@@ -227,10 +227,10 @@
         },
         {
           "id": "pole-flow",
-          "name": "Pole Flow - Foundations",
+          "name": "Pole Flow",
           "slug": "pole-flow-foundations",
           "category": "Pole Fitness",
-          "level": "Intermediate",
+          "level": "Beginner",
           "hero_program": false,
           "short_description": "Create smooth transitions and flowing movement around the pole",
           "core_focus": [
@@ -247,10 +247,10 @@
         },
         {
           "id": "pole-strength",
-          "name": "Pole Strength & Movement - Foundations",
+          "name": "Pole Strength & Movement",
           "slug": "pole-strength-movement",
           "category": "Pole Fitness",
-          "level": "Intermediate / Advanced",
+          "level": "Beginner",
           "hero_program": false,
           "short_description": "Build conditioning, holds, and controlled movement on the pole",
           "core_focus": [
@@ -345,10 +345,10 @@
       "choreography": [
         {
           "id": "choreography-fusion",
-          "name": "Choreography Fusion - Foundations",
+          "name": "Choreography Fusion",
           "slug": "choreography-fusion-foundations",
           "category": "Choreography",
-          "level": "All Levels",
+          "level": "Beginner",
           "hero_program": false,
           "short_description": "Women's movement and confidence through choreographed dance",
           "price": "$35 per class",
@@ -465,13 +465,14 @@
         },
         {
           "id": "kids-modern-contemporary",
-          "name": "Modern Contemporary (Rhythm & Motion) - Foundations",
+          "name": "Modern Contemporary (Rhythm & Motion)",
           "slug": "kids-modern-contemporary",
           "category": "Dance",
           "age_range": "6-8 years",
           "short_description": "Expressive contemporary dance focusing on rhythm and movement quality",
           "status": "coming_soon",
-          "full_description": "Modern Contemporary (Rhythm & Motion) – Foundations introduces children to expressive movement, coordination, and musicality in a structured and supportive environment. Blending simple contemporary elements with rhythm-based movement, this class helps children explore how their body moves naturally with music. Through easy-to-follow sequences and flowing movement patterns, children learn to move with control while developing balance, posture, and coordination. The focus is on building confidence through movement, while allowing space for natural expression. Children develop body awareness, improve coordination, and become more confident in how they move and express themselves."
+          "full_description": "Modern Contemporary (Rhythm & Motion) – Foundations introduces children to expressive movement, coordination, and musicality in a structured and supportive environment. Blending simple contemporary elements with rhythm-based movement, this class helps children explore how their body moves naturally with music. Through easy-to-follow sequences and flowing movement patterns, children learn to move with control while developing balance, posture, and coordination. The focus is on building confidence through movement, while allowing space for natural expression. Children develop body awareness, improve coordination, and become more confident in how they move and express themselves.",
+          "level": "Beginner"
         },
         {
           "id": "kids-creative-dance",

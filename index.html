@@ -618,40 +618,37 @@
     /* -----------------------------------------------------------------------
        PRIVATE COACHING SECTION
     ----------------------------------------------------------------------- */
-    .coaching-section {
-      padding: 8rem 5%;
+       .coaching-section {
+      padding: 8rem 0 8rem;
       background: #0D0D0D;
     }
-
     .coaching-section__inner {
-      max-width: 1400px;
-      margin-inline: auto;
       display: flex;
       flex-direction: column;
       gap: 3rem;
     }
-
     .coaching-section__image-wrap {
       position: relative;
-      border-radius: 20px;
       overflow: hidden;
       width: 100%;
       aspect-ratio: 16 / 9;
     }
-
     .coaching-section__image-wrap img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
-
     .coaching-section__content {
+      max-width: 1400px;
+      margin-inline: auto;
+      padding: 0 5%;
+      width: 100%;
+      box-sizing: border-box;
       display: grid;
       grid-template-columns: 1fr;
       gap: 1.5rem;
     }
-
     @media (min-width: 768px) {
       .coaching-section__content {
         grid-template-columns: 1fr 1fr;

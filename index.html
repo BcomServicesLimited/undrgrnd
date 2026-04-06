@@ -626,26 +626,17 @@
     .coaching-section__inner {
       max-width: 1400px;
       margin-inline: auto;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    @media (min-width: 1024px) {
-      .coaching-section__inner {
-        grid-template-columns: 1fr 1fr;
-        gap: 6rem;
-      }
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
     }
 
     .coaching-section__image-wrap {
       position: relative;
       border-radius: 20px;
       overflow: hidden;
-      border: 1px solid rgba(139, 92, 246, 0.2);
-      aspect-ratio: 3 / 4;
-      max-height: 600px;
+      width: 100%;
+      aspect-ratio: 16 / 9;
     }
 
     .coaching-section__image-wrap img {
@@ -656,9 +647,26 @@
     }
 
     .coaching-section__content {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr;
       gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .coaching-section__content {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+        gap: 2rem 4rem;
+      }
+      .coaching-section__content .coaching-section__title {
+        grid-column: 1 / -1;
+      }
+      .coaching-section__content .coaching-section__tagline {
+        grid-column: 1 / -1;
+      }
+      .coaching-section__content > .section-label {
+        grid-column: 1 / -1;
+      }
     }
 
     .coaching-section__tagline {
@@ -1564,8 +1572,8 @@
         src="/images/private-coaching.webp"
         alt="Private 1:1 movement coaching session at UNDRGRND Movement, Gold Coast"
         loading="lazy"
-        width="600"
-        height="800"
+        width="1400"
+        height="788"
       >
     </div>
     <!-- Content -->

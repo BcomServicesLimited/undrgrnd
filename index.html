@@ -618,18 +618,39 @@
     /* -----------------------------------------------------------------------
        PRIVATE COACHING SECTION
     ----------------------------------------------------------------------- */
-       .coaching-section {
-      padding: 8rem 0 8rem;
+    .coaching-section {
+      padding: 8rem 5%;
       background: #0D0D0D;
     }
     .coaching-section__inner {
+      max-width: 1400px;
+      margin-inline: auto;
       display: flex;
       flex-direction: column;
-      gap: 3rem;
+      gap: 2.5rem;
+    }
+    .coaching-section__header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .coaching-section__body {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+    @media (min-width: 768px) {
+      .coaching-section__body {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
     }
     .coaching-section__image-wrap {
       position: relative;
       overflow: hidden;
+      border-radius: 16px;
       width: 100%;
       aspect-ratio: 16 / 9;
     }
@@ -639,31 +660,10 @@
       object-fit: cover;
       display: block;
     }
-    .coaching-section__content {
-      max-width: 1400px;
-      margin-inline: auto;
-      padding: 0 5%;
-      width: 100%;
-      box-sizing: border-box;
-      display: grid;
-      grid-template-columns: 1fr;
+    .coaching-section__details {
+      display: flex;
+      flex-direction: column;
       gap: 1.5rem;
-    }
-    @media (min-width: 768px) {
-      .coaching-section__content {
-        grid-template-columns: 1fr 1fr;
-        align-items: start;
-        gap: 2rem 4rem;
-      }
-      .coaching-section__content .coaching-section__title {
-        grid-column: 1 / -1;
-      }
-      .coaching-section__content .coaching-section__tagline {
-        grid-column: 1 / -1;
-      }
-      .coaching-section__content > .section-label {
-        grid-column: 1 / -1;
-      }
     }
 
     .coaching-section__tagline {
@@ -1563,26 +1563,30 @@
      ========================================================================= -->
 <section class="coaching-section reveal" aria-labelledby="coachingHeading">
   <div class="coaching-section__inner">
-    <!-- Image -->
-    <div class="coaching-section__image-wrap reveal reveal-delay-1">
-      <img
-        src="/images/private-coaching.webp"
-        alt="Private 1:1 movement coaching session at UNDRGRND Movement, Gold Coast"
-        loading="lazy"
-        width="1400"
-        height="788"
-      >
-    </div>
-    <!-- Content -->
-    <div class="coaching-section__content reveal reveal-delay-2">
+    <!-- Header: label + title above everything -->
+    <div class="coaching-section__header">
       <span class="section-label">One-on-One</span>
       <p class="coaching-section__tagline">Body Control &bull; Flow &bull; Confidence</p>
       <h2 class="coaching-section__title" id="coachingHeading">1:1 Movement Coaching &mdash; Personalised for Women</h2>
-      <div class="coaching-section__price">
-        $250 <span>per session</span>
+    </div>
+    <!-- Body: image left, details right -->
+    <div class="coaching-section__body">
+      <div class="coaching-section__image-wrap reveal reveal-delay-1">
+        <img
+          src="/images/private-coaching.webp"
+          alt="Private 1:1 movement coaching session at UNDRGRND Movement, Gold Coast"
+          loading="lazy"
+          width="1400"
+          height="788"
+        >
       </div>
-      <p class="coaching-section__desc">Private movement coaching designed for individuals serious about improving body control, flow, and confidence. Each session is structured, focused, and tailored to your level, with hands-on guidance and clear progression.</p>
-      <a href="/contact.html" class="coaching-section__cta">Available on Request &rarr;</a>
+      <div class="coaching-section__details reveal reveal-delay-2">
+        <div class="coaching-section__price">
+          $250 <span>per session</span>
+        </div>
+        <p class="coaching-section__desc">Private movement coaching designed for individuals serious about improving body control, flow, and confidence. Each session is structured, focused, and tailored to your level, with hands-on guidance and clear progression.</p>
+        <a href="/contact.html" class="coaching-section__cta">Available on Request &rarr;</a>
+      </div>
     </div>
   </div>
 </section>

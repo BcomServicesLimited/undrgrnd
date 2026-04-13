@@ -1264,16 +1264,16 @@ if (typeof SchemaGenerator !== 'undefined') {
       var href = el.getAttribute ? (el.getAttribute('href') || '') : '';
       var text = el.textContent ? el.textContent.trim() : '';
       var isMedicalBtn = el.dataset && el.dataset.medical === 'true';
-
+      // Skip elements that already have an external payment link
+      if(href && href.indexOf('buy.stripe.com') > -1){ break; }
+      if(href && href.indexOf('http') === 0 && href.indexOf('#book') === -1){ break; }
       // Is this a booking element?
       var isBookBtn = (cls.indexOf('btn-book') > -1) || (cls.indexOf('cta-button') > -1 && BOOKING_LABELS.test(text));
       var isBookLink = (tag === 'a') && (href === '#book') && BOOKING_LABELS.test(text);
       var isMedical  = isMedicalBtn;
-
       // Exclude nav and footer
       var inNav    = el.closest && (el.closest('nav') || el.closest('.nav-menu') || el.closest('.nav-mobile-menu'));
       var inFooter = el.closest && (el.closest('footer') || el.closest('.site-footer'));
-
       if((isBookBtn || isBookLink || isMedical) && !inNav && !inFooter){
         e.preventDefault();
         openModal(null);

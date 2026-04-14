@@ -2105,62 +2105,6 @@
   File: /components/footer-component.html
 
   Usage: Copy this entire block into any page <body>, as the last element before 
-<!-- Booking Modal -->
-<div id="bookingModal" role="dialog" aria-modal="true" aria-label="Book a Class" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.85);overflow-y:auto;">
-  <div style="position:relative;max-width:680px;margin:2rem auto;padding:1rem;">
-    <button id="bookingModalClose" aria-label="Close booking form" style="position:absolute;top:0.5rem;right:0.5rem;background:rgba(139,92,246,0.15);border:1px solid #8B5CF6;color:#fff;font-size:1.4rem;line-height:1;width:2.2rem;height:2.2rem;border-radius:50%;cursor:pointer;z-index:10000;display:flex;align-items:center;justify-content:center;">&times;</button>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdRMvUrAyMw6PVrSJvVjikBy_swYzT06MNeARSuOREnwmuHew/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" title="Book a Class at UNDRGRND Movement" style="border-radius:8px;background:#fff;">Loading&#8230;</iframe>
-  </div>
-</div>
-<script>
-(function(){
-  var modal = document.getElementById('bookingModal');
-  var closeBtn = document.getElementById('bookingModalClose');
-  function openModal(e){
-    if(e){ e.preventDefault(); }
-    modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-  }
-  function closeModal(){
-    modal.style.display = 'none';
-    document.body.style.overflow = '';
-  }
-  if(closeBtn){ closeBtn.addEventListener('click', closeModal); }
-  modal.addEventListener('click', function(e){ if(e.target === modal){ closeModal(); } });
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeModal(); } });
-
-  /* ── Event delegation: catches all booking clicks including dynamically
-        rendered program cards (btn-book, cta-button, data-medical buttons) ── */
-  var BOOKING_LABELS = /^(book|enrol|enroll|register|sign.?up|join.?waitlist|reserve|get.?started|i.have.clearance)/i;
-  document.body.addEventListener('click', function(e){
-    var el = e.target;
-    // Walk up to find the clickable element (handles clicks on child spans/SVGs)
-    while(el && el !== document.body){
-      var tag = el.tagName ? el.tagName.toLowerCase() : '';
-      var cls = el.className || '';
-      var href = el.getAttribute ? (el.getAttribute('href') || '') : '';
-      var text = el.textContent ? el.textContent.trim() : '';
-      var isMedicalBtn = el.dataset && el.dataset.medical === 'true';
-
-      // Is this a booking element?
-      var isBookBtn = (cls.indexOf('btn-book') > -1) || (cls.indexOf('cta-button') > -1 && BOOKING_LABELS.test(text));
-      var isBookLink = (tag === 'a') && (href === '#book') && BOOKING_LABELS.test(text);
-      var isMedical  = isMedicalBtn;
-
-      // Exclude nav and footer
-      var inNav    = el.closest && (el.closest('nav') || el.closest('.nav-menu') || el.closest('.nav-mobile-menu'));
-      var inFooter = el.closest && (el.closest('footer') || el.closest('.site-footer'));
-
-      if((isBookBtn || isBookLink || isMedical) && !inNav && !inFooter){
-        e.preventDefault();
-        openModal(null);
-        return;
-      }
-      el = el.parentElement;
-    }
-  });
-})();
-</script>
 
 </body>
 

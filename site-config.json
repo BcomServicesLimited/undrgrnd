@@ -223,7 +223,8 @@
             "Building foundational strength and control"
           ],
           "intensity": "Moderate",
-          "status": "active"
+          "status": "active",
+          "price": "$35 per class"
         },
         {
           "id": "pole-flow",

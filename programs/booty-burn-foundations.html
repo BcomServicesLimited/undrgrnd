@@ -1352,9 +1352,6 @@
   <ul class="nav-mobile-menu__list" id="navMobileList">
     <!-- Populated by JavaScript from site-config.json navigation.main_menu -->
   </ul>
-  <div class="nav-mobile-menu__cta" id="navMobileCta">
-    <!-- Populated by JavaScript from site-config.json navigation.cta_button -->
-  </div>
 </nav>
 
 <!-- Main header -->
@@ -1370,11 +1367,6 @@
     <ul class="nav-menu" id="navDesktopMenu" role="list" aria-label="Main navigation">
       <!-- Populated by JavaScript -->
     </ul>
-
-    <!-- Desktop CTA — site-config.json navigation.cta_button -->
-    <div class="nav-cta" id="navDesktopCta">
-      <!-- Populated by JavaScript -->
-    </div>
 
     <!-- Hamburger (mobile only) -->
     <button
@@ -1449,11 +1441,6 @@
       list.appendChild(li);
     });
 
-    var ctaA = document.createElement('a');
-    ctaA.href = cta.href;
-    ctaA.className = 'cta-button';
-    ctaA.textContent = cta.text;
-    ctaWrap.appendChild(ctaA);
   }
 
   /* ------------------------------------------------------------------
@@ -1475,10 +1462,6 @@
       list.appendChild(li);
     });
 
-    var ctaA = document.createElement('a');
-    ctaA.href = cta.href;
-    ctaA.textContent = cta.text;
-    ctaWrap.appendChild(ctaA);
   }
 
   /* ------------------------------------------------------------------

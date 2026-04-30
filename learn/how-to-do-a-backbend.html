@@ -645,7 +645,7 @@
         { label: 'Learn',    href: '/learn.html' },
         { label: 'Contact',   href: '/contact.html' }
       ];
-      var fallbackCta = { text: 'Buy Now', href: 'https://buy.stripe.com/8x2cN70pncR8ccz75T6J203' };
+      var fallbackCta = { text: 'Buy Now', href: '#' };
       buildDesktopMenu(fallbackMenu, fallbackCta);
       buildMobileMenu(fallbackMenu, fallbackCta);
       highlightActivePage();
@@ -1503,7 +1503,7 @@ document.querySelectorAll('.faq-question').forEach(function(btn) {
       var isMedicalBtn = el.dataset && el.dataset.medical === 'true';
 
       // Is this a booking element?
-      var isBookBtn = (cls.indexOf('btn-book') > -1) || (cls.indexOf('cta-button') > -1 && BOOKING_LABELS.test(text));
+      var isBookBtn = (cls.indexOf('btn-book') > -1) || (cls.indexOf('cta-button') > -1 && cls.indexOf('dance-booking-button') === -1 && BOOKING_LABELS.test(text));
       var isBookLink = (tag === 'a') && (href === '#book') && BOOKING_LABELS.test(text);
       var isMedical  = isMedicalBtn;
 

@@ -1219,8 +1219,7 @@
      ------------------------------------------------------------------ */
   function buildDesktopMenu(items, cta) {
     var list = document.getElementById('navDesktopMenu');
-    var ctaWrap = document.getElementById('navDesktopCta');
-    if (!list || !ctaWrap) return;
+    if (!list) return;
 
     items.forEach(function (item) {
       var li = document.createElement('li');
@@ -1242,8 +1241,7 @@
      ------------------------------------------------------------------ */
   function buildMobileMenu(items, cta) {
     var list = document.getElementById('navMobileList');
-    var ctaWrap = document.getElementById('navMobileCta');
-    if (!list || !ctaWrap) return;
+    if (!list) return;
 
     items.forEach(function (item) {
       var li = document.createElement('li');

@@ -1661,8 +1661,7 @@
      ------------------------------------------------------------------ */
   function buildDesktopMenu(items, cta) {
     var list = document.getElementById('navDesktopMenu');
-    var ctaWrap = document.getElementById('navDesktopCta');
-    if (!list || !ctaWrap) return;
+    if (!list) return;
 
     items.forEach(function (item) {
       var li = document.createElement('li');
@@ -1684,8 +1683,7 @@
      ------------------------------------------------------------------ */
   function buildMobileMenu(items, cta) {
     var list = document.getElementById('navMobileList');
-    var ctaWrap = document.getElementById('navMobileCta');
-    if (!list || !ctaWrap) return;
+    if (!list) return;
 
     items.forEach(function (item) {
       var li = document.createElement('li');
@@ -1937,9 +1935,7 @@
         <div class="info-box__price-row">
           <span class="info-box__price-label"> See full pricing when booking.</p>
 
-      <div class="info-box__cta">
-        <a href="#" class="cta-button dance-booking-button" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:6px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Buy Now</a>
-      </div>
+      <div class="info-box__cta"></div>
     </aside>
 
   </div>

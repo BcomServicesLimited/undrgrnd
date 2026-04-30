@@ -710,8 +710,7 @@
      ------------------------------------------------------------------ */
   function buildDesktopMenu(items, cta) {
     var list = document.getElementById('navDesktopMenu');
-    var ctaWrap = document.getElementById('navDesktopCta');
-    if (!list || !ctaWrap) return;
+    if (!list) return;
 
     items.forEach(function (item) {
       var li = document.createElement('li');
@@ -733,8 +732,7 @@
      ------------------------------------------------------------------ */
   function buildMobileMenu(items, cta) {
     var list = document.getElementById('navMobileList');
-    var ctaWrap = document.getElementById('navMobileCta');
-    if (!list || !ctaWrap) return;
+    if (!list) return;
 
     items.forEach(function (item) {
       var li = document.createElement('li');
@@ -915,7 +913,6 @@
       <div class="quick-info__row"><span class="quick-info__label">What to Wear</span><span class="quick-info__value">Comfortable activewear, bare feet or dance shoes</span></div>
       <div class="quick-info__price">$35</div>
       <div class="quick-info__price-label">per class</div>
-      <a href="#" class="cta-button dance-booking-button" target="_blank" rel="noopener" style="width:100%;text-align:center;display:block;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:6px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Buy Now</a>
     </div>
   </div>
 </section>
@@ -1024,7 +1021,6 @@
         <div class="single-price-card__price">$35</div>
         <div class="single-price-card__per">per session, billed weekly</div>
         <p style="font-size:0.85rem;color:#A1A1A1;margin:1rem 0 1.5rem;line-height:1.6;">Your card is charged automatically the day before each class. Join any time — pay weekly for the remainder of the term. No refunds for missed classes.</p>
-        <a href="#" class="cta-button dance-booking-button" target="_blank" rel="noopener" style="display:block;text-align:center;margin-top:0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:6px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Buy Now</a>
       </div>
     </div>
   </div>

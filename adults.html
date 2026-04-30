@@ -1795,7 +1795,7 @@
     <p>Please ensure you have your medical clearance documentation ready to present at your first class.</p>
 
     <div class="modal-box__actions">
-      <a href="https://buy.stripe.com/8x2cN70pncR8ccz75T6J203" class="cta-button" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:6px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Buy Now</a>
+      <a href="#" class="cta-button dance-booking-button" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:6px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Buy Now</a>
       <a href="/contact.html" class="cta-secondary" style="padding: 0.8rem 1.5rem;">Contact Us First</a>
     </div>
 
@@ -1903,7 +1903,7 @@
       ? '<a href="#book" class="btn-learn">Join Waitlist</a>'
       : (isMedical
           ? '<button class="btn-book" data-medical="true" type="button">Book Now</button>'
-          : '<a href="https://buy.stripe.com/8x2cN70pncR8ccz75T6J203" class="btn-book" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:6px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Buy Now</a>');
+          : '<a href="#" class="btn-book dance-booking-button" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:6px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Buy Now</a>');
     var learnBtn = isComingSoon
       ? '<a href="#" class="btn-learn disabled" aria-disabled="true">Coming Soon</a>'
       : '<a href="/programs/' + escHtml(slug) + '.html" class="btn-learn">Learn More</a>';
@@ -2106,6 +2106,7 @@
 
   Usage: Copy this entire block into any page <body>, as the last element before 
 
+  <script src="/js/booking-controller.js"></script>
 </body>
 
 <!-- =====================================================================

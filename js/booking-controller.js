@@ -9,6 +9,9 @@
  * Two button types:
  *   .dance-booking-button        → page buttons (href + full text updated)
  *   .dance-booking-button-header → header nav button (href only updated, text stays "BUY NOW")
+ *
+ * For pages that build cards dynamically (adults.html, kids.html),
+ * call window.updateBookingButtons() after injecting the card HTML.
  */
 
 (function () {
@@ -181,6 +184,10 @@
     // Append new text node at the end
     btn.appendChild(document.createTextNode(text));
   }
+
+  // ── Expose globally so dynamic pages (adults.html, kids.html) can call
+  //    window.updateBookingButtons() after injecting card HTML ───────────────
+  window.updateBookingButtons = run;
 
   // Run after DOM is ready
   if (document.readyState === 'loading') {

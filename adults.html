@@ -1953,6 +1953,9 @@
 
       grid.innerHTML = html;
 
+      /* Update booking buttons now that cards are in the DOM */
+      if (typeof window.updateBookingButtons === 'function') { window.updateBookingButtons(); }
+
       /* Inject Service schemas for adult programs */
       if (typeof SchemaGenerator !== 'undefined' && SchemaGenerator.generateServiceSchema) {
         order.forEach(function (catKey) {

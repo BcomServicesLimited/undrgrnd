@@ -12,7 +12,7 @@
   <meta property="og:description" content="A practical, science-backed guide to improving your flexibility at any age — the 5 types of stretching, the role of the nervous system, a 4-week plan, and the most common mistakes to avoid.">
   <meta property="og:url" content="https://www.undrgrnd.com.au/learn/how-to-improve-flexibility.html">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="https://www.undrgrnd.com.au/images/learn/improve-flexibility-hero.webp">
+  <meta property="og:image" content="https://www.undrgrnd.com.au/images/learn/improve-flexibility-hero.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="How to Improve Your Flexibility: A Science-Backed Guide | UNDRGRND Movement Gold Coast">
   <meta name="twitter:description" content="A practical, science-backed guide to improving your flexibility at any age — the 5 types of stretching, the role of the nervous system, a 4-week plan, and the most common mistakes to avoid.">
@@ -23,7 +23,7 @@
   <meta property="article:author" content="UNDRGRND Movement">
   <meta property="article:section" content="Movement &amp; Fitness">
   <meta name="keywords" content="how to improve flexibility, flexibility training, stretching science, improve range of motion Gold Coast">
-  <meta name="twitter:image" content="https://www.undrgrnd.com.au/images/learn/improve-flexibility-hero.webp">
+  <meta name="twitter:image" content="https://www.undrgrnd.com.au/images/learn/improve-flexibility-hero.png">
   <style>
     .article-hero {
       background: linear-gradient(180deg, #0d0d0d 0%, #1a0a2e 100%);
@@ -637,6 +637,8 @@
         { label: 'Learn',    href: '/learn.html' },
         { label: 'Contact',   href: '/contact.html' }
       ];
+      buildDesktopMenu(fallbackMenu, null);
+      buildMobileMenu(fallbackMenu, null);
       highlightActivePage();
     });
 
@@ -1221,7 +1223,7 @@
     <div class="footer-col footer-col--contact">
       <h3 class="footer-col__heading">Contact Us</h3>
 
-      <address style="font-style: normal;"><span id="footerAddress">UNDRGRND Movement</span></address>
+      <address style="font-style: normal; line-height: 1.9;"><span id="footerAddress">Inside Flips Academy, 163 Ferry Rd, Southport QLD 4215</span><br><a id="footerPhone" href="tel:+61721402690">0721 402 690</a><br><a id="footerEmail" href="mailto:undrgrndgc@gmail.com">undrgrndgc@gmail.com</a></address>
     </div>
 
   </div><!-- /.footer-main -->
@@ -1291,10 +1293,11 @@
       /* --- NAP: Phone --- */
       var phoneEl = document.getElementById('footerPhone');
       if (phoneEl && config.business && config.business.contact && config.business.contact.phone) {
-        var phone = config.business.contact.phone;
-        if (phone.indexOf('PLACEHOLDER') === -1) {
-          phoneEl.href = 'tel:' + phone.replace(/\s/g, '');
-          phoneEl.textContent = phone;
+        var phoneText = config.business.contact.phone_display || config.business.contact.phone;
+        var phoneHref = config.business.contact.phone_international || config.business.contact.phone;
+        if (phoneText.indexOf('PLACEHOLDER') === -1) {
+          phoneEl.href = 'tel:' + phoneHref.replace(/\s/g, '');
+          phoneEl.textContent = phoneText;
         }
       }
 
@@ -1346,47 +1349,6 @@
 }());
 </script>
 
-<script>
-// Mobile menu toggle
-const hamburger = document.querySelector('.hamburger-menu');
-const navLinks = document.querySelector('.nav-links');
-
-if (hamburger) {
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    hamburger.classList.toggle('active');
-  });
-}
-
-// Close mobile menu when link clicked
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-    hamburger.classList.remove('active');
-  });
-});
-
-// Highlight active page
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.nav-links a').forEach(link => {
-  if (link.getAttribute('href') === currentPage ||
-      (currentPage === '' && link.getAttribute('href') === '/')) {
-    link.classList.add('active');
-  }
-});
-
-// Add scrolled class to nav
-window.addEventListener('scroll', () => {
-  const nav = document.querySelector('nav');
-  if (nav) {
-    if (window.scrollY > 50) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  }
-});
-</script>
 
 <script>
 (function() {

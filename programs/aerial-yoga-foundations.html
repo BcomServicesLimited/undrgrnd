@@ -356,6 +356,34 @@
 <!-- ═══════════════════════════════════════════════════════════════
      FAQ
 ═══════════════════════════════════════════════════════════════ -->
+<!-- =========================================================================
+     PRICING
+     ========================================================================= -->
+<style>
+    .pricing{padding:6rem 5%;background:var(--color-dark-bg);}
+    .pricing__inner{max-width:900px;margin:0 auto;}
+    .single-price-display{display:flex;justify-content:center;margin-top:3rem;}
+    .single-price-card{background:var(--color-card-bg);border:1px solid rgba(139,92,246,0.35);border-radius:20px;padding:3rem 4rem;text-align:center;min-width:280px;}
+    .single-price-card__label{font-family:var(--font-body);font-weight:700;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:#A78BFA;margin-bottom:0.5rem;}
+    .single-price-card__price{font-family:var(--font-display);font-size:4.5rem;color:var(--color-primary-purple);line-height:1;margin:1rem 0 0.25rem;}
+    .single-price-card__per{color:var(--color-text-gray);font-size:0.9rem;}
+</style>
+<section class="pricing reveal" aria-label="Pricing">
+  <div class="pricing__inner">
+    <div class="section-header reveal">
+      <h2>Simple, Straightforward Pricing</h2>
+      <p>No packs, no memberships. $35 per class, aligned with Queensland school terms.</p>
+    </div>
+    <div class="single-price-display">
+      <div class="single-price-card">
+        <div class="single-price-card__label">Per Class</div>
+        <div class="single-price-card__price">$35</div>
+        <div class="single-price-card__per">each session</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="faq" aria-label="Frequently Asked Questions">
   <div class="faq__inner">
     <div class="section-header reveal">

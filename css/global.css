@@ -750,6 +750,18 @@ label {
 .choose-card:hover .choose-card__cta { color: var(--color-text-white); }
 
 /* ==========================================================================
+   PRICING — shared single-price card (adult/kids program pages)
+   Several pages had the markup but no styling, so $35 rendered as plain text.
+   ========================================================================== */
+.single-price-display { display: flex; justify-content: center; margin-top: 3rem; }
+.single-price-card { background: var(--color-card-bg); border: 1px solid rgba(139,92,246,0.35); border-radius: 20px; padding: 3rem 4rem; text-align: center; min-width: 280px; }
+.single-price-card__label { font-family: var(--font-body); font-weight: 700; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-purple); margin-bottom: 0.5rem; }
+.single-price-card__price { font-family: var(--font-display); font-size: 4.5rem; color: var(--color-primary-purple); line-height: 1; margin: 1rem 0 0.25rem; }
+.single-price-card__price sup { font-size: 0.45em; vertical-align: super; }
+.single-price-card__per,
+.single-price-card__period { color: var(--color-text-gray); font-size: 0.9rem; }
+
+/* ==========================================================================
    FINAL CTA — standard closing call-to-action (shared across pages)
    ========================================================================== */
 .final-cta { padding: clamp(4rem, 10vw, 8rem) 5%; background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(139, 92, 246, 0.12) 0%, transparent 70%), #0D0D0D; text-align: center; }

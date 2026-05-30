@@ -189,6 +189,17 @@
   //    window.updateBookingButtons() after injecting card HTML ───────────────
   window.updateBookingButtons = run;
 
+  // ── Expose term data + helpers so other pages (e.g. timetable.html) can
+  //    build term-aware UI without duplicating the pricing tables. Single
+  //    source of truth stays in this file. ──────────────────────────────────
+  window.UNDRGRND_Booking = {
+    TERMS: TERMS,
+    TERM_LINKS: TERM_LINKS,
+    getBrisbaneToday: getBrisbaneToday,
+    parseDate: parseDate,
+    getWeeksRemaining: getWeeksRemaining
+  };
+
   // Run after DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', run);

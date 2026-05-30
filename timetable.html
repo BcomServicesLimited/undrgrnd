@@ -1401,60 +1401,27 @@
     <div class="timetable-intro">
       <p>Our timetable features foundation classes across dance, pole, yoga, and aerial for adults and kids on the Gold Coast. All programs are beginner-friendly and designed for complete newcomers to movement at UNDRGRND Movement.</p>
     </div>
-    <!-- Coming Soon Notice -->
-    <div class="coming-soon-notice" style="background:#1A1A1A;border:1px solid rgba(245,158,11,0.3);border-radius:12px;padding:1.5rem 2rem;margin-bottom:2rem;">
-      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:#FBBF24;margin:0 0 0.75rem;">Coming Soon to the Timetable</h3>
-      <p style="color:#A1A1A1;font-size:0.9rem;margin:0 0 0.75rem;">The following programs are in development and will be added to the live timetable when bookings open. <a href="#book" style="color:#A78BFA;">Join the waitlist</a> to be notified.</p>
-      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:0.5rem;">
-        <li style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.25);border-radius:50px;padding:0.3rem 0.9rem;font-size:0.82rem;color:#FBBF24;">Recovery Movement Flow - Foundations</li>
-        <li style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.25);border-radius:50px;padding:0.3rem 0.9rem;font-size:0.82rem;color:#FBBF24;">Pole Flow - Foundations</li>
-        <li style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.25);border-radius:50px;padding:0.3rem 0.9rem;font-size:0.82rem;color:#FBBF24;">Aerial Yoga - Foundations</li>
-        <li style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.25);border-radius:50px;padding:0.3rem 0.9rem;font-size:0.82rem;color:#FBBF24;">Kids Aerial Yoga - Foundations</li>
-        <li style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.25);border-radius:50px;padding:0.3rem 0.9rem;font-size:0.82rem;color:#FBBF24;">Pole Fitness Kids - Foundations</li>
-        <li style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.25);border-radius:50px;padding:0.3rem 0.9rem;font-size:0.82rem;color:#FBBF24;">Kids Aerial Silks - Foundations</li>
-      </ul>
-    </div>
-
     <!-- ═══════════════════════════════════════════════════════════════════
-         CUSTOM CLASS CALENDAR
-         To add a new class: add an object to the CLASSES array in the
-         <script> block below. No other changes needed.
+         AVAILABLE CLASSES + TERM BOOKING
+         · CLASSES array (below) drives the "Available Classes" list.
+         · Term buttons are built from window.UNDRGRND_Booking (single source
+           of truth in /js/booking-controller.js).
          ═══════════════════════════════════════════════════════════════════ -->
-
-    <!-- Calendar CSS -->
     <style>
-      /* ── Calendar container ── */
-      .cal-wrap {
-        margin: 2rem 0;
+      /* ── Section sub-heads ── */
+      .tt-subhead {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 1.9rem;
+        letter-spacing: 0.04em;
+        color: #fff;
+        margin: 2.75rem 0 0.35rem;
       }
-
-      /* ── Term banner ── */
-      .cal-term-banner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 0.75rem;
-        background: rgba(139,92,246,0.08);
-        border: 1px solid rgba(139,92,246,0.25);
-        border-radius: 12px;
-        padding: 0.9rem 1.4rem;
-        margin-bottom: 1.75rem;
-        font-size: 0.9rem;
-        color: #A1A1A1;
-        flex-wrap: wrap;
-      }
-      .cal-term-banner__info { display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 0; }
-      .cal-term-banner strong { color: #fff; }
-      .cal-term-banner svg { flex-shrink: 0; width: 18px; height: 18px; stroke: #8B5CF6; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-      .cal-term-banner .cta-button { flex-shrink: 0; font-size: 0.82rem; padding: 0.55rem 1.1rem; white-space: nowrap; }
+      .tt-subhead:first-of-type { margin-top: 1rem; }
+      .tt-subhead-note { color: #A1A1A1; font-size: 0.9rem; margin: 0 0 1.5rem; max-width: 60ch; }
+      .tt-subhead-note strong { color: #fff; }
 
       /* ── Filter tabs ── */
-      .cal-filters {
-        display: flex;
-        gap: 0.5rem;
-        flex-wrap: wrap;
-        margin-bottom: 1.5rem;
-      }
+      .cal-filters { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
       .cal-filter-btn {
         background: rgba(255,255,255,0.04);
         border: 1px solid rgba(139,92,246,0.2);
@@ -1475,151 +1442,130 @@
         color: #fff;
       }
 
-      /* ── Day columns grid ── */
-      .cal-grid {
+      /* ── Available classes grid ── */
+      .tt-class-grid {
         display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        gap: 0.75rem;
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+        gap: 1rem;
       }
-      @media (max-width: 900px) {
-        .cal-grid { grid-template-columns: repeat(4, 1fr); }
-      }
-      @media (max-width: 560px) {
-        .cal-grid { grid-template-columns: repeat(2, 1fr); }
-      }
-
-      /* ── Day column ── */
-      .cal-day {
-        display: flex;
-        flex-direction: column;
-        gap: 0.6rem;
-      }
-      .cal-day-header {
-        font-family: 'Bebas Neue', sans-serif;
-        font-size: 0.95rem;
-        letter-spacing: 0.1em;
-        color: #A1A1A1;
-        padding-bottom: 0.4rem;
-        border-bottom: 1px solid rgba(139,92,246,0.15);
-        text-align: center;
-      }
-      .cal-day--has-class .cal-day-header {
-        color: #fff;
-      }
-
-      /* ── Class card ── */
       .cal-class-card {
         background: #1A1A1A;
         border: 1px solid rgba(139,92,246,0.25);
         border-radius: 12px;
-        padding: 0.85rem 1rem;
+        padding: 1rem 1.1rem;
         transition: border-color 0.2s ease, transform 0.2s ease;
-        cursor: default;
       }
-      .cal-class-card:hover {
-        border-color: rgba(139,92,246,0.6);
-        transform: translateY(-2px);
-      }
-      .cal-class-card--kids {
-        border-color: rgba(245,158,11,0.3);
-      }
-      .cal-class-card--kids:hover {
-        border-color: rgba(245,158,11,0.7);
-      }
+      .cal-class-card:hover { border-color: rgba(139,92,246,0.6); transform: translateY(-2px); }
+      .cal-class-card--kids { border-color: rgba(245,158,11,0.3); }
+      .cal-class-card--kids:hover { border-color: rgba(245,158,11,0.7); }
       .cal-class-card__badge {
         display: inline-block;
-        font-size: 0.65rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        border-radius: 50px;
-        padding: 0.15rem 0.55rem;
-        margin-bottom: 0.45rem;
+        font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em;
+        text-transform: uppercase; border-radius: 50px;
+        padding: 0.15rem 0.55rem; margin-bottom: 0.5rem;
       }
-      .badge--adults {
-        background: rgba(139,92,246,0.15);
-        color: #A78BFA;
-        border: 1px solid rgba(139,92,246,0.3);
+      .badge--adults { background: rgba(139,92,246,0.15); color: #A78BFA; border: 1px solid rgba(139,92,246,0.3); }
+      .badge--kids   { background: rgba(245,158,11,0.12); color: #FBBF24; border: 1px solid rgba(245,158,11,0.3); }
+      .cal-class-card__day {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;
+        color: #A78BFA; margin-bottom: 0.25rem;
       }
-      .badge--kids {
-        background: rgba(245,158,11,0.12);
-        color: #FBBF24;
-        border: 1px solid rgba(245,158,11,0.3);
-      }
-      .cal-class-card__name {
-        font-size: 0.88rem;
-        font-weight: 700;
-        color: #fff;
-        line-height: 1.3;
-        margin-bottom: 0.3rem;
-      }
+      .cal-class-card__name { font-size: 0.95rem; font-weight: 700; color: #fff; line-height: 1.3; margin-bottom: 0.35rem; }
       .cal-class-card__time {
-        font-size: 0.78rem;
-        color: #A1A1A1;
-        display: flex;
-        align-items: center;
-        gap: 0.3rem;
-        margin-bottom: 0.25rem;
+        font-size: 0.8rem; color: #A1A1A1;
+        display: flex; align-items: center; gap: 0.3rem; margin-bottom: 0.25rem;
       }
       .cal-class-card__time svg {
-        width: 12px; height: 12px;
-        stroke: currentColor; fill: none;
+        width: 12px; height: 12px; stroke: currentColor; fill: none;
+        stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0;
+      }
+      .cal-class-card__meta { font-size: 0.75rem; color: #6B6B6B; margin-top: 0.2rem; }
+      .cal-class-card__price { font-size: 0.82rem; font-weight: 700; color: #8B5CF6; margin-top: 0.55rem; }
+      .cal-no-results { text-align: center; padding: 3rem 1rem; color: #A1A1A1; font-size: 0.9rem; display: none; }
+
+      /* ── Term booking buttons ── */
+      .tt-terms {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+        margin: 0.5rem 0 1rem;
+      }
+      .tt-term-btn {
+        display: flex; flex-direction: column; gap: 0.3rem;
+        text-decoration: none;
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(139,92,246,0.3);
+        border-radius: 16px;
+        padding: 1.4rem 1.5rem;
+        transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      }
+      .tt-term-btn:hover { transform: translateY(-3px); border-color: rgba(139,92,246,0.7); background: rgba(139,92,246,0.1); }
+      .tt-term-btn__status {
+        font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em;
+        text-transform: uppercase; color: #A1A1A1;
+      }
+      .tt-term-btn__name {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 1.6rem; letter-spacing: 0.04em; color: #fff; line-height: 1;
+      }
+      .tt-term-btn__dates { font-size: 0.8rem; color: #A1A1A1; }
+      .tt-term-btn__price { font-size: 1rem; font-weight: 700; color: #8B5CF6; margin-top: 0.15rem; }
+      .tt-term-btn__cta {
+        margin-top: 0.7rem; align-self: flex-start;
+        display: inline-flex; align-items: center; gap: 0.4rem;
+        font-size: 0.74rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+        color: #fff; background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+        border-radius: 50px; padding: 0.5rem 1.1rem;
+      }
+      .tt-term-btn__cta svg {
+        width: 13px; height: 13px; stroke: currentColor; fill: none;
         stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
-        flex-shrink: 0;
       }
-      .cal-class-card__meta {
-        font-size: 0.75rem;
-        color: #6B6B6B;
-        margin-top: 0.2rem;
-      }
-      .cal-class-card__price {
-        font-size: 0.8rem;
-        font-weight: 700;
-        color: #8B5CF6;
-        margin-top: 0.5rem;
-      }
-
-      /* ── Empty day ── */
-      .cal-empty {
-        text-align: center;
-        padding: 1.2rem 0;
-        color: rgba(161,161,161,0.25);
-        font-size: 0.75rem;
-        letter-spacing: 0.05em;
-      }
-
-      /* ── No results message ── */
-      .cal-no-results {
-        text-align: center;
-        padding: 3rem 1rem;
-        color: #A1A1A1;
-        font-size: 0.9rem;
-        display: none;
-      }
+      /* current term — highlighted */
+      .tt-term-btn--current { border-color: #8B5CF6; background: rgba(139,92,246,0.12); box-shadow: 0 0 0 1px rgba(139,92,246,0.35); }
+      .tt-term-btn--current .tt-term-btn__status { color: #34D399; }
+      .tt-term-btn--current .tt-term-btn__price { color: #A78BFA; }
+      /* future term */
+      .tt-term-btn--future .tt-term-btn__status { color: #A78BFA; }
+      /* ended term — disabled */
+      .tt-term-btn--ended { opacity: 0.4; border-style: dashed; pointer-events: none; cursor: not-allowed; }
+      .tt-term-btn--ended:hover { transform: none; }
+      .tt-term-btn--ended .tt-term-btn__cta { background: #2A2A2A; color: #777; }
+      .tt-term-btn--ended .tt-term-btn__price { color: #777; }
     </style>
 
-    <div class="cal-wrap" id="classCalendar">
+    <!-- ── Available classes ── -->
+    <h2 class="tt-subhead">Available Classes</h2>
+    <p class="tt-subhead-note">Our current beginner-friendly foundation classes. Choose your term below to book.</p>
 
-      <!-- Term banner -->
-      <div class="cal-term-banner">
-        <div class="cal-term-banner__info">
-          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-          <span><strong>Term 2, 2026</strong> &nbsp;|&nbsp; 20 April – 26 June 2026 &nbsp;|&nbsp; Aligned with Queensland school terms &nbsp;|&nbsp; <strong>$35 per class</strong> &nbsp;|&nbsp; Pay upfront for remaining term sessions &amp; save</span>
-        </div>
-        <a href="#" class="cta-button dance-booking-button" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:5px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Book Now</a>
-      </div>
+    <div class="cal-filters" id="ttFilters">
+      <button class="cal-filter-btn active" data-filter="all">All Classes</button>
+      <button class="cal-filter-btn" data-filter="adults">Adults</button>
+      <button class="cal-filter-btn" data-filter="kids">Kids</button>
+    </div>
 
-      <!-- Filter buttons -->
-      <div class="cal-filters" id="calFilters">
-        <button class="cal-filter-btn active" data-filter="all">All Classes</button>
-        <button class="cal-filter-btn" data-filter="adults">Adults</button>
-        <button class="cal-filter-btn" data-filter="kids">Kids</button>
-      </div>
+    <div class="tt-class-grid" id="ttClassGrid"></div>
+    <p class="cal-no-results" id="ttNoResults">No classes match the selected filter.</p>
 
-      <!-- Day grid (populated by JS) -->
-      <div class="cal-grid" id="calGrid"></div>
-      <p class="cal-no-results" id="calNoResults">No classes match the selected filter.</p>
+    <!-- ── Term booking ── -->
+    <h2 class="tt-subhead">Choose Your Term</h2>
+    <p class="tt-subhead-note"><strong>$35 per class</strong>, aligned with Queensland school terms. Pay upfront for the whole term &mdash; join mid-term and you only pay for the classes that are left.</p>
 
+    <div class="tt-terms" id="ttTerms"></div>
+
+    <!-- Coming Soon Notice -->
+    <div class="coming-soon-notice" style="background:#1A1A1A;border:1px solid rgba(245,158,11,0.3);border-radius:12px;padding:1.5rem 2rem;margin-top:2.5rem;">
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:#FBBF24;margin:0 0 0.75rem;">Coming Soon to the Timetable</h3>
+      <p style="color:#A1A1A1;font-size:0.9rem;margin:0 0 0.75rem;">The following programs are in development and will be added to the live timetable when bookings open. <a href="#book" style="color:#A78BFA;">Join the waitlist</a> to be notified.</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:0.5rem;">
+        <li style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.25);border-radius:50px;padding:0.3rem 0.9rem;font-size:0.82rem;color:#FBBF24;">Recovery Movement Flow - Foundations</li>
+        <li style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.25);border-radius:50px;padding:0.3rem 0.9rem;font-size:0.82rem;color:#FBBF24;">Pole Flow - Foundations</li>
+        <li style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.25);border-radius:50px;padding:0.3rem 0.9rem;font-size:0.82rem;color:#FBBF24;">Aerial Yoga - Foundations</li>
+        <li style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.25);border-radius:50px;padding:0.3rem 0.9rem;font-size:0.82rem;color:#FBBF24;">Kids Aerial Yoga - Foundations</li>
+        <li style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.25);border-radius:50px;padding:0.3rem 0.9rem;font-size:0.82rem;color:#FBBF24;">Pole Fitness Kids - Foundations</li>
+        <li style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.25);border-radius:50px;padding:0.3rem 0.9rem;font-size:0.82rem;color:#FBBF24;">Kids Aerial Silks - Foundations</li>
+      </ul>
     </div>
 
     <script>
@@ -1634,190 +1580,120 @@
            timeEnd   : "HH:MM" 24-hour
            ageNote   : Optional age/audience note shown in small text
            price     : Display price string
-           link      : href for booking (use "#book" until live)
          ════════════════════════════════════════════════════════════════════ */
       var CLASSES = [
-        {
-          name:      "Movement Flow – Foundations",
-          category:  "adults",
-          day:       1,
-          timeStart: "16:00",
-          timeEnd:   "17:00",
-          ageNote:   "Adults",
-          price:     "$35",
-          link:      "#book"
-        },
-        {
-          name:      "Urban Mix – Foundations",
-          category:  "kids",
-          day:       2,
-          timeStart: "15:45",
-          timeEnd:   "16:30",
-          ageNote:   "Ages 6 – 8",
-          price:     "$35",
-          link:      "/programs/kids-dance-moves.html"
-        },
-        {
-          name:      "Booty Burn Dance – Foundations",
-          category:  "adults",
-          day:       1,
-          timeStart: "17:00",
-          timeEnd:   "18:00",
-          ageNote:   "Adults",
-          price:     "$35",
-          link:      "#book"
-        },
-        {
-          name:      "Kids Creative Dance – Foundations",
-          category:  "kids",
-          day:       2,
-          timeStart: "16:30",
-          timeEnd:   "17:15",
-          ageNote:   "Ages 6 – 8",
-          price:     "$35",
-          link:      "#book"
-        },
-        {
-          name:      "Aerial Silks – Foundations",
-          category:  "adults",
-          day:       2,
-          timeStart: "18:00",
-          timeEnd:   "19:00",
-          ageNote:   "Adults",
-          price:     "$35",
-          link:      "/programs/aerial-silks-foundations.html"
-        },
-        {
-          name:      "Stretch & Mobility – Foundations",
-          category:  "adults",
-          day:       3,
-          timeStart: "16:00",
-          timeEnd:   "17:00",
-          ageNote:   "Adults",
-          price:     "$35",
-          link:      "#book"
-        },
-        {
-          name:      "Fusion Yoga – Foundations",
-          category:  "adults",
-          day:       3,
-          timeStart: "17:00",
-          timeEnd:   "18:00",
-          ageNote:   "Adults",
-          price:     "$35",
-          link:      "#book"
-        },
-        {
-          name:      "Pole Fitness – Foundations",
-          category:  "adults",
-          day:       4,
-          timeStart: "16:30",
-          timeEnd:   "17:30",
-          ageNote:   "Adults",
-          price:     "$35",
-          link:      "/programs/pole-fitness-foundations.html"
-        }
+        { name: "Movement Flow – Foundations",       category: "adults", day: 1, timeStart: "16:00", timeEnd: "17:00", ageNote: "Adults",     price: "$35" },
+        { name: "Booty Burn Dance – Foundations",    category: "adults", day: 1, timeStart: "17:00", timeEnd: "18:00", ageNote: "Adults",     price: "$35" },
+        { name: "Urban Mix – Foundations",           category: "kids",   day: 2, timeStart: "15:45", timeEnd: "16:30", ageNote: "Ages 6 – 8", price: "$35" },
+        { name: "Kids Creative Dance – Foundations", category: "kids",   day: 2, timeStart: "16:30", timeEnd: "17:15", ageNote: "Ages 6 – 8", price: "$35" },
+        { name: "Aerial Silks – Foundations",        category: "adults", day: 2, timeStart: "18:00", timeEnd: "19:00", ageNote: "Adults",     price: "$35" },
+        { name: "Stretch & Mobility – Foundations",  category: "adults", day: 3, timeStart: "16:00", timeEnd: "17:00", ageNote: "Adults",     price: "$35" },
+        { name: "Fusion Yoga – Foundations",         category: "adults", day: 3, timeStart: "17:00", timeEnd: "18:00", ageNote: "Adults",     price: "$35" },
+        { name: "Pole Fitness – Foundations",        category: "adults", day: 4, timeStart: "16:30", timeEnd: "17:30", ageNote: "Adults",     price: "$35" }
       ];
 
-      /* ── Helpers ── */
-      var DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-      var DAYS_SHORT = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+      var DAYS_FULL = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      var MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
       function fmt12(t) {
-        var parts = t.split(":");
-        var h = parseInt(parts[0], 10);
-        var m = parts[1];
+        var p = t.split(":");
+        var h = parseInt(p[0], 10);
+        var m = p[1];
         var ampm = h >= 12 ? "pm" : "am";
         h = h % 12 || 12;
         return h + (m !== "00" ? ":" + m : "") + " " + ampm;
       }
+      function fmtDay(str)  { var p = str.split("-"); return parseInt(p[2], 10) + " " + MONTHS[parseInt(p[1], 10) - 1]; }
+      function fmtDayY(str) { var p = str.split("-"); return parseInt(p[2], 10) + " " + MONTHS[parseInt(p[1], 10) - 1] + " " + p[0]; }
 
-      function renderCalendar(filter) {
-        var grid = document.getElementById("calGrid");
-        var noResults = document.getElementById("calNoResults");
+      /* ── Available classes list ── */
+      var SVG_CLOCK = '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>';
+      function renderClasses(filter) {
+        var grid = document.getElementById("ttClassGrid");
+        var noResults = document.getElementById("ttNoResults");
         grid.innerHTML = "";
-
-        var filtered = filter === "all" ? CLASSES : CLASSES.filter(function(c){ return c.category === filter; });
-
-        if (filtered.length === 0) {
-          noResults.style.display = "block";
-          return;
-        }
+        var list = (filter === "all" ? CLASSES : CLASSES.filter(function (c) { return c.category === filter; }));
+        list = list.slice().sort(function (a, b) { return (a.day - b.day) || a.timeStart.localeCompare(b.timeStart); });
+        if (!list.length) { noResults.style.display = "block"; return; }
         noResults.style.display = "none";
-
-        /* Build day columns for days that have at least one class */
-        var activeDays = [];
-        for (var d = 0; d < 7; d++) {
-          var dayClasses = filtered.filter(function(c){ return c.day === d; });
-          activeDays.push({ day: d, classes: dayClasses });
-        }
-
-        activeDays.forEach(function(col) {
-          var dayDiv = document.createElement("div");
-          dayDiv.className = "cal-day" + (col.classes.length > 0 ? " cal-day--has-class" : "");
-
-          var header = document.createElement("div");
-          header.className = "cal-day-header";
-          header.textContent = DAYS_SHORT[col.day];
-          dayDiv.appendChild(header);
-
-          if (col.classes.length === 0) {
-            var empty = document.createElement("div");
-            empty.className = "cal-empty";
-            empty.textContent = "—";
-            dayDiv.appendChild(empty);
-          } else {
-            col.classes.forEach(function(cls) {
-              var card = document.createElement("div");
-              card.className = "cal-class-card" + (cls.category === "kids" ? " cal-class-card--kids" : "");
-
-              var badge = document.createElement("span");
-              badge.className = "cal-class-card__badge " + (cls.category === "kids" ? "badge--kids" : "badge--adults");
-              badge.textContent = cls.category === "kids" ? "Kids" : "Adults";
-
-              var name = document.createElement("div");
-              name.className = "cal-class-card__name";
-              name.textContent = cls.name;
-
-              var time = document.createElement("div");
-              time.className = "cal-class-card__time";
-              time.innerHTML = '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>' + fmt12(cls.timeStart) + " – " + fmt12(cls.timeEnd);
-
-              var price = document.createElement("div");
-              price.className = "cal-class-card__price";
-              price.textContent = cls.price + " per class";
-
-              card.appendChild(badge);
-              card.appendChild(name);
-              card.appendChild(time);
-
-              if (cls.ageNote) {
-                var meta = document.createElement("div");
-                meta.className = "cal-class-card__meta";
-                meta.textContent = cls.ageNote;
-                card.appendChild(meta);
-              }
-
-              card.appendChild(price);
-              dayDiv.appendChild(card);
-            });
-          }
-
-          grid.appendChild(dayDiv);
+        list.forEach(function (cls) {
+          var card = document.createElement("div");
+          card.className = "cal-class-card" + (cls.category === "kids" ? " cal-class-card--kids" : "");
+          var html = '<span class="cal-class-card__badge ' + (cls.category === "kids" ? "badge--kids" : "badge--adults") + '">' +
+                     (cls.category === "kids" ? "Kids" : "Adults") + '</span>' +
+                     '<div class="cal-class-card__day">' + DAYS_FULL[cls.day] + '</div>' +
+                     '<div class="cal-class-card__name">' + cls.name + '</div>' +
+                     '<div class="cal-class-card__time">' + SVG_CLOCK + fmt12(cls.timeStart) + " – " + fmt12(cls.timeEnd) + '</div>' +
+                     (cls.ageNote ? '<div class="cal-class-card__meta">' + cls.ageNote + '</div>' : '') +
+                     '<div class="cal-class-card__price">' + cls.price + ' per class</div>';
+          card.innerHTML = html;
+          grid.appendChild(card);
         });
       }
 
-      /* ── Filter button logic ── */
-      document.getElementById("calFilters").addEventListener("click", function(e) {
-        var btn = e.target.closest(".cal-filter-btn");
-        if (!btn) return;
-        document.querySelectorAll(".cal-filter-btn").forEach(function(b){ b.classList.remove("active"); });
-        btn.classList.add("active");
-        renderCalendar(btn.dataset.filter);
-      });
+      /* ── Term booking buttons (term-aware pricing from booking-controller.js) ── */
+      var SVG_CART = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>';
+      function renderTerms() {
+        var wrap = document.getElementById("ttTerms");
+        if (!wrap) return;
+        var B = window.UNDRGRND_Booking;
+        if (!B) { wrap.innerHTML = '<p style="color:#A1A1A1;">Booking information is loading — please refresh.</p>'; return; }
+        var today = B.getBrisbaneToday();
+        wrap.innerHTML = "";
+        B.TERMS.forEach(function (term) {
+          var start = B.parseDate(term.start), end = B.parseDate(term.end);
+          var fullWeeks = B.getWeeksRemaining(start, start, end);
+          var status, price, link, clickable, priceLabel, ctaText, statusLabel;
+          if (today > end) {
+            status = "ended"; clickable = false;
+            price = B.TERM_LINKS[fullWeeks].price;
+            statusLabel = "Ended"; priceLabel = "Term ended"; ctaText = "Closed";
+          } else if (today >= start && today <= end) {
+            status = "current"; clickable = true;
+            var wk = B.getWeeksRemaining(today, start, end);
+            price = B.TERM_LINKS[wk].price; link = B.TERM_LINKS[wk].url;
+            statusLabel = "Now Open";
+            priceLabel = "$" + price + " · " + wk + " week" + (wk !== 1 ? "s" : "") + " left";
+            ctaText = "Book Now";
+          } else {
+            status = "future"; clickable = true;
+            price = B.TERM_LINKS[fullWeeks].price; link = B.TERM_LINKS[fullWeeks].url;
+            statusLabel = "Upcoming";
+            priceLabel = "$" + price + " · full term";
+            ctaText = "Book Full Term";
+          }
+          var a = document.createElement("a");
+          a.className = "tt-term-btn tt-term-btn--" + status;
+          if (clickable) { a.href = link; a.target = "_blank"; a.rel = "noopener"; }
+          else { a.href = "#"; a.setAttribute("aria-disabled", "true"); }
+          a.innerHTML =
+            '<span class="tt-term-btn__status">' + statusLabel + '</span>' +
+            '<span class="tt-term-btn__name">' + term.name + '</span>' +
+            '<span class="tt-term-btn__dates">' + fmtDay(term.start) + ' – ' + fmtDayY(term.end) + '</span>' +
+            '<span class="tt-term-btn__price">' + priceLabel + '</span>' +
+            '<span class="tt-term-btn__cta">' + (clickable ? SVG_CART : '') + ctaText + '</span>';
+          wrap.appendChild(a);
+        });
+      }
 
-      /* ── Initial render ── */
-      renderCalendar("all");
+      function init() {
+        renderClasses("all");
+        renderTerms();
+        document.getElementById("ttFilters").addEventListener("click", function (e) {
+          var btn = e.target.closest(".cal-filter-btn");
+          if (!btn) return;
+          document.querySelectorAll("#ttFilters .cal-filter-btn").forEach(function (b) { b.classList.remove("active"); });
+          btn.classList.add("active");
+          renderClasses(btn.dataset.filter);
+        });
+      }
+
+      /* Wait for DOM (and booking-controller.js, loaded at end of body) before building. */
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
+      } else {
+        init();
+      }
     })();
     </script>
 

@@ -412,156 +412,8 @@
   }
 </style>
 
-<div id="navOverlay" class="nav-mobile-overlay" aria-hidden="true"></div>
-<nav class="site-nav" id="siteNav" role="navigation" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a href="/" class="nav-logo" aria-label="UNDRGRND Movement — Home">
-      <div>
-        <div class="nav-logo__title">UNDRGRND</div>
-        <div class="nav-logo__sub">movement</div>
-      </div>
-    </a>
-    <ul class="nav-menu" id="navDesktopMenu" role="list"></ul>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navMobileMenu">
-      <span class="nav-hamburger__line"></span>
-      <span class="nav-hamburger__line"></span>
-      <span class="nav-hamburger__line"></span>
-    </button>
-  </div>
-</nav>
-<div class="nav-mobile-menu" id="navMobileMenu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
-  <ul class="nav-mobile-menu__list" id="navMobileMenuList" role="list"></ul>
-</div>
+<div id="site-nav"></div>
 
-<script>
-(function () {
-  var CONFIG_URL = '/site-config.json';
-  var FALLBACK_MENU = [
-    { label: 'Home', url: '/' },
-    { label: 'Adults', url: '/adults.html' },
-    { label: 'Kids', url: '/kids.html' },
-    { label: 'Timetable', url: '/timetable.html' },
-    { label: 'About', url: '/about.html' },
-    { label: 'Contact', url: '/contact.html' }
-  ];
-  var FALLBACK_CTA = { text: 'Buy Now', href: 'https://buy.stripe.com/8x2cN70pncR8ccz75T6J203' };
-
-  function buildDesktopMenu(menuItems, cta) {
-    var desktopMenu = document.getElementById('navDesktopMenu');
-    var desktopCta = document.getElementById('navDesktopCta');
-    if (desktopMenu) {
-      desktopMenu.innerHTML = menuItems.map(function (item) {
-        return '<li class="nav-menu__item"><a href="' + item.url + '" class="nav-menu__link">' + item.label + '</a></li>';
-      }).join('');
-    }
-    if (desktopCta) {
-      desktopCta.innerHTML = 
-        '<a href="' + (cta.href || cta.url) + '" class="cta-button" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:5px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>' + (cta.text || cta.label) + '</a>';
-    }
-  }
-
-  function buildMobileMenu(menuItems, cta) {
-    var mobileList = document.getElementById('navMobileMenuList');
-    var mobileCta = document.getElementById('navMobileCta');
-    if (mobileList) {
-      mobileList.innerHTML = menuItems.map(function (item) {
-        return '<li class="nav-mobile-menu__item"><a href="' + item.url + '" class="nav-mobile-menu__link">' + item.label + '</a></li>';
-      }).join('');
-    }
-    if (mobileCta) {
-    }
-  }
-
-  fetch(CONFIG_URL)
-    .then(function (r) { return r.json(); })
-    .then(function (config) {
-      var nav = config.navigation || {};
-      var menuItems = (nav.main_menu || []).map(function (item) {
-        return { label: item.label, url: item.url };
-      });
-      if (!menuItems.length) menuItems = FALLBACK_MENU;
-      var cta = nav.cta_button || FALLBACK_CTA;
-    buildDesktopMenu(menuItems, cta);
-    buildMobileMenu(menuItems, cta);
-      setActiveLink();
-    })
-    .catch(function () {
-      buildDesktopMenu(FALLBACK_MENU, FALLBACK_CTA);
-      buildMobileMenu(FALLBACK_MENU, FALLBACK_CTA);
-      setActiveLink();
-    });
-
-  function setActiveLink() {
-    var path = window.location.pathname;
-    document.querySelectorAll('.nav-menu__link').forEach(function (link) {
-      if (isActivePath(path, link.getAttribute('href'))) {
-        link.classList.add('active');
-        link.setAttribute('aria-current', 'page');
-      }
-    });
-    document.querySelectorAll('.nav-mobile-menu__link').forEach(function (link) {
-      if (isActivePath(path, link.getAttribute('href'))) {
-        link.classList.add('active');
-        link.setAttribute('aria-current', 'page');
-      }
-    });
-  }
-
-  function isActivePath(currentPath, linkHref) {
-    if (!linkHref) return false;
-    if (linkHref === '/' && (currentPath === '/' || currentPath === '/index.html')) return true;
-    if (linkHref !== '/' && currentPath !== '/') {
-      return currentPath.replace(/\/$/, '') === linkHref.replace(/\/$/, '');
-    }
-    return false;
-  }
-
-  var nav = document.getElementById('siteNav');
-  function onScroll() {
-    if (!nav) return;
-    if (window.scrollY > 50) { nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); }
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
-  var hamburger = document.getElementById('navHamburger');
-  var mobileMenu = document.getElementById('navMobileMenu');
-  var overlay = document.getElementById('navOverlay');
-
-  function openMobileMenu() {
-    hamburger.classList.add('open');
-    hamburger.setAttribute('aria-expanded', 'true');
-    mobileMenu.classList.add('open');
-    mobileMenu.setAttribute('aria-hidden', 'false');
-    overlay.classList.add('open');
-    overlay.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeMobileMenu() {
-    hamburger.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', 'false');
-    mobileMenu.classList.remove('open');
-    mobileMenu.setAttribute('aria-hidden', 'true');
-    overlay.classList.remove('open');
-    overlay.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-
-  if (hamburger) {
-    hamburger.addEventListener('click', function () {
-      if (hamburger.classList.contains('open')) { closeMobileMenu(); } else { openMobileMenu(); }
-    });
-  }
-  if (overlay) { overlay.addEventListener('click', closeMobileMenu); }
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && hamburger && hamburger.classList.contains('open')) {
-      closeMobileMenu();
-      hamburger.focus();
-    }
-  });
-}());
-</script>
 
 <!-- ═══════════════════════════════════════════════════════════════
      HERO
@@ -901,52 +753,8 @@ if (typeof SchemaGenerator !== 'undefined') {
   @media (min-width: 768px) { .footer-bottom__tagline { text-align: right; } }
 </style>
 
-<footer class="site-footer" role="contentinfo" itemscope itemtype="https://schema.org/LocalBusiness">
-  <div class="footer-main">
-    <div class="footer-col footer-col--brand">
-      <a href="/" class="footer-brand__logo" aria-label="UNDRGRND Movement — Home">
-        <img src="../images/logo/logo-full.webp" alt="UNDRGRND Movement full logo — Southport Gold Coast" width="232" height="50" style="height:50px;width:auto;display:block;" loading="lazy">
-      </a>
-      <p class="footer-brand__tagline" id="footerTagline">Foundational movement for body and mind</p>
-</div>
-    <div class="footer-col footer-col--links">
-      <h3 class="footer-col__heading">Quick Links</h3>
-      <ul class="footer-links" id="footerNavLinks" role="list"></ul>
-    </div>
-    <div class="footer-col footer-col--contact">
-      <h3 class="footer-col__heading">Contact Us</h3>
-      <address style="font-style: normal; line-height: 1.9;"><span id="footerAddress">Inside Flips Academy, 163 Ferry Rd, Southport QLD 4215</span><br><a id="footerPhone" href="tel:+61721402690">0721 402 690</a><br><a id="footerEmail" href="mailto:undrgrndgc@gmail.com">undrgrndgc@gmail.com</a></address>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p class="footer-bottom__copy">&copy; 2026 <span itemprop="name">UNDRGRND Movement</span>. All rights reserved.</p>
-    <nav class="footer-bottom__links" aria-label="Legal links"><a href="/privacy-policy.html">Privacy Policy</a><span aria-hidden="true">|</span><a href="/terms-of-service.html">Terms of Service</a></nav>
-    <p class="footer-bottom__tagline">Proudly serving Gold Coast and Southport communities</p>
-  </div>
-</footer>
+<div id="site-footer"></div>
 
-<script>
-(function () {
-  'use strict';
-  fetch('/site-config.json')
-    .then(function (res) { if (!res.ok) throw new Error('Could not load site-config.json'); return res.json(); })
-    .then(function (config) {
-      var taglineEl = document.getElementById('footerTagline');
-      if (taglineEl && config.project && config.project.tagline) taglineEl.textContent = config.project.tagline;
-      var emailEl = document.getElementById('footerEmail');
-      if (emailEl && config.business && config.business.contact && config.business.contact.email) { var email = config.business.contact.email; emailEl.href = 'mailto:' + email; emailEl.textContent = email; }
-      var phoneEl = document.getElementById('footerPhone');
-      if (phoneEl && config.business && config.business.contact && config.business.contact.phone) { var phone = config.business.contact.phone; if (phone.indexOf('PLACEHOLDER') === -1) { phoneEl.href = 'tel:' + phone.replace(/\s/g, ''); phoneEl.textContent = phone; } }
-      var navList = document.getElementById('footerNavLinks');
-      if (navList && config.navigation && config.navigation.main_menu) { config.navigation.main_menu.forEach(function (item) { var li = document.createElement('li'); li.className = 'footer-links__item'; var a = document.createElement('a'); a.href = item.url; a.textContent = item.label; li.appendChild(a); navList.appendChild(li); }); }
-    })
-    .catch(function () {
-      var fallbackLinks = [{label:'Home',href:'/'},{label:'Adults',href:'/adults.html'},{label:'Kids',href:'/kids.html'},{label:'Timetable',href:'/timetable.html'},{label:'About',href:'/about.html'},{label:'Contact',href:'/contact.html'}];
-      var navList = document.getElementById('footerNavLinks');
-      if (navList) { fallbackLinks.forEach(function (item) { var li = document.createElement('li'); li.className = 'footer-links__item'; var a = document.createElement('a'); a.href = item.href; a.textContent = item.label; li.appendChild(a); navList.appendChild(li); }); }
-    });
-}());
-</script>
 
 
 <!-- Booking Modal -->
@@ -1006,6 +814,7 @@ if (typeof SchemaGenerator !== 'undefined') {
 })();
 </script>
 
+  <script src="/js/layout.js"></script>
   <script src="/js/booking-controller.js"></script>
 </body>
 </html>

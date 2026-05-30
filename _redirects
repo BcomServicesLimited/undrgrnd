@@ -15,6 +15,7 @@
 
 # Removed program — redirect to adults page
 /programs/afro-groove-foundations.html  /adults.html                                  301
+/programs/pole-fitness-foundations.html /adults.html                                  301
 
 # Homepage clean URL redirect (prevents index.html redirect issue)
 /index.html                          /                                                 301

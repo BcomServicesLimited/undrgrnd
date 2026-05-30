@@ -200,33 +200,6 @@
       ],
       "pole": [
         {
-          "id": "pole-foundations",
-          "name": "Pole Fitness - Foundations",
-          "slug": "pole-fitness-foundations",
-          "category": "Pole Fitness",
-          "level": "Beginner / Foundation",
-          "hero_program": false,
-          "short_description": "Learn how to use the pole safely with grip basics and simple spins",
-          "full_description": "Pole Fitness – Foundations is a beginner-friendly class designed to introduce you to pole movement in a safe, structured, and supportive environment. The class focuses on building grip strength, body awareness, and basic movement patterns on the pole, giving you the confidence and technique to progress safely. Through simple, guided exercises such as basic grips, walking patterns, and low-level spins, you'll develop upper body strength, core stability, and coordination at a comfortable pace. Each session places strong emphasis on technique, posture, and control, ensuring you build a solid foundation before progressing to more complex movements. This class is ideal for complete beginners with no prior experience who want to explore pole fitness in a safe and encouraging setting.",
-          "core_focus": [
-            "Grip strength and basic technique",
-            "Body awareness and posture",
-            "Low-level spins and walking patterns",
-            "Upper body strength and core stability"
-          ],
-          "client_outcome": "I understand the pole and feel safe using it",
-          "what_to_expect": [
-            "Introduction to pole grip techniques",
-            "Learning to walk around the pole confidently",
-            "Basic low-level spins and transitions",
-            "Safety-first approach to every movement",
-            "Building foundational strength and control"
-          ],
-          "intensity": "Moderate",
-          "status": "active",
-          "price": "$35 per class"
-        },
-        {
           "id": "pole-flow",
           "name": "Pole Flow",
           "slug": "pole-flow-foundations",

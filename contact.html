@@ -1440,8 +1440,10 @@
         </div>
 
         <address class="contact-address" itemscope itemtype="https://schema.org/PostalAddress">
-          <strong itemprop="name">UNDRGRND Movement</strong>
-          </address>
+          <strong itemprop="name">UNDRGRND Movement</strong><br>
+          <span itemprop="streetAddress">Inside Flips Academy, 163 Ferry Rd</span><br>
+          <span itemprop="addressLocality">Southport</span> <span itemprop="addressRegion">QLD</span> <span itemprop="postalCode">4215</span>
+        </address>
 
         <div class="map-container">
           <iframe
@@ -1506,7 +1508,7 @@
           </div>
           <div>
             <p class="contact-detail-row__label">Studio Hours</p>
-            
+            <p class="contact-detail-row__value">Mon&ndash;Fri: 6:00 AM &ndash; 9:00 PM<br>Sat&ndash;Sun: 8:00 AM &ndash; 4:00 PM</p>
           </div>
         </div>
 
@@ -1723,138 +1725,21 @@
 
       /* Phone */
       if (contact.phone) {
-        var raw = contact.phone.replace(/\s/g, '');
+        var phoneText = contact.phone_display || contact.phone;
+        var phoneHref = (contact.phone_international || contact.phone).replace(/\s/g, '');
         var phoneEl = document.getElementById('detailPhone');
         if (phoneEl) {
-          phoneEl.href = 'tel:' + raw;
-          phoneEl.textContent = contact.phone;
+          phoneEl.href = 'tel:' + phoneHref;
+          phoneEl.textContent = phoneText;
         }
       }
 
-      /* Social links */
-      /* Hours */
-      var hours = config.business && config.business.hours;
-      if (hours) {
-        var row1 = document.getElementById('hoursRow1');
-        var row2 = document.getElementById('hoursRow2');
-        if (row1 && hours.weekdays) {
-          row1.cells[1].textContent = hours.weekdays;
-        }
-        if (row2 && hours.weekends) {
-          row2.cells[1].textContent = hours.weekends;
-        }
-      }
     })
     .catch(function (err) {
       console.warn('contact.html: site-config.json load error —', err.message);
     });
 
-  /* -------------------------------------------------------------------------
-     3. Contact form validation and submission
-  ------------------------------------------------------------------------- */
-  var form        = document.getElementById('contactForm');
-  var submitBtn   = document.getElementById('submitBtn');
-  var formSuccess = document.getElementById('formSuccess');
-  var formError   = document.getElementById('formGlobalError');
-
-  function showError(fieldId, errorId) {
-    var field = document.getElementById(fieldId);
-    var error = document.getElementById(errorId);
-    if (field) field.classList.add('error');
-    if (error) error.classList.add('visible');
-  }
-
-  function clearError(fieldId, errorId) {
-    var field = document.getElementById(fieldId);
-    var error = document.getElementById(errorId);
-    if (field) field.classList.remove('error');
-    if (error) error.classList.remove('visible');
-  }
-
-  function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }
-
-  /* Clear errors on input */
-  ['fieldName', 'fieldEmail', 'fieldSubject', 'fieldMessage'].forEach(function (id) {
-    var el = document.getElementById(id);
-    if (el) {
-      el.addEventListener('input', function () {
-        el.classList.remove('error');
-        var errId = 'error' + id.replace('field', '');
-        var errEl = document.getElementById(errId);
-        if (errEl) errEl.classList.remove('visible');
-      });
-    }
-  });
-
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      var isValid = true;
-
-      /* Name */
-      var name = document.getElementById('fieldName');
-      if (!name || !name.value.trim()) {
-        showError('fieldName', 'errorName');
-        isValid = false;
-      } else {
-        clearError('fieldName', 'errorName');
-      }
-
-      /* Email */
-      var email = document.getElementById('fieldEmail');
-      if (!email || !email.value.trim() || !isValidEmail(email.value.trim())) {
-        showError('fieldEmail', 'errorEmail');
-        isValid = false;
-      } else {
-        clearError('fieldEmail', 'errorEmail');
-      }
-
-      /* Subject */
-      var subject = document.getElementById('fieldSubject');
-      if (!subject || !subject.value) {
-        showError('fieldSubject', 'errorSubject');
-        isValid = false;
-      } else {
-        clearError('fieldSubject', 'errorSubject');
-      }
-
-      /* Message */
-      var message = document.getElementById('fieldMessage');
-      if (!message || !message.value.trim()) {
-        showError('fieldMessage', 'errorMessage');
-        isValid = false;
-      } else {
-        clearError('fieldMessage', 'errorMessage');
-      }
-
-      if (!isValid) return;
-
-      /* Disable submit while "sending" */
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending\u2026';
-      formError.classList.remove('visible');
-
-      /* Placeholder submission — log to console, show success */
-      /* FORM BACKEND: Replace this block with Formspree/Netlify Forms/email API call */
-      console.log('Form submission (placeholder):', {
-        name: name.value.trim(),
-        email: email.value.trim(),
-        phone: document.getElementById('fieldPhone') ? document.getElementById('fieldPhone').value.trim() : '',
-        subject: subject.value,
-        interest: document.getElementById('fieldInterest') ? document.getElementById('fieldInterest').value : '',
-        message: message.value.trim()
-      });
-
-      setTimeout(function () {
-        form.style.display = 'none';
-        formSuccess.classList.add('visible');
-        formSuccess.focus();
-      }, 800);
-    });
-  }
+  /* Contact form removed — enquiries via email / phone / booking modal. */
 
   /* -------------------------------------------------------------------------
      4. FAQ accordion

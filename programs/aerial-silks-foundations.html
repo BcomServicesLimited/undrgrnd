@@ -1204,31 +1204,41 @@
 <!-- =========================================================================
      1. HERO SECTION
      ========================================================================= -->
-<section class="prog-hero" aria-label="Aerial Silks — UNDRGRND Movement">
-
-  <picture>
-              <source media="(max-width: 767px)" srcset="../images/hero/aerial-silks-foundations-mobile.webp" type="image/webp">
-              <source media="(min-width: 768px)" srcset="../images/hero/aerial-silks-foundations.webp" type="image/webp">
-              <img src="../images/hero/aerial-silks-foundations.webp" alt="Student learning aerial silks at UNDRGRND Movement, Gold Coast" loading="eager" width="1400" height="781" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
-            </picture>
-
-  <div class="prog-hero__bg" aria-hidden="true"></div>
-
-  <div class="prog-hero__content">
-    <span class="prog-hero__level" id="heroLevel">Beginner / Foundation — Balanced</span>
-
-    <h1 class="prog-hero__h1">Aerial Silks - Foundations</h1>
-
-    <p class="prog-hero__location">
-      <!-- Lucide: map-pin -->
-      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-      Southport Studio | UNDRGRND Movement
-    </p>
-
-    <div class="prog-hero__ctas">
-      <a href="#" class="cta-button dance-booking-button" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:6px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Buy Now</a>
-      <a href="/timetable.html" class="cta-secondary">View Timetable</a>
+<style>
+    /* program-hero — unified with the other program pages */
+    .program-hero{min-height:70vh;display:flex;align-items:center;background:#0A0A0A;padding:8rem 5% 4rem;position:relative;overflow:hidden;}
+    .program-hero::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(139,92,246,.05) 0%,transparent 70%);pointer-events:none;}
+    .program-hero__inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1400px;margin:0 auto;width:100%;}
+    .program-hero__content{position:relative;z-index:1;}
+    .program-hero__badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.4);color:var(--color-primary-purple);padding:.4rem 1rem;border-radius:50px;font-family:var(--font-body);font-size:.8rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:1.5rem;}
+    .program-hero__h1{font-family:var(--font-display);font-size:clamp(2.5rem,5vw,4rem);line-height:1.05;color:var(--color-text-white);margin-bottom:1.5rem;}
+    .program-hero__h1 span{color:var(--color-primary-purple);}
+    .program-hero__sub{font-family:var(--font-body);font-size:1.1rem;color:var(--color-text-gray);margin-bottom:2rem;line-height:1.7;}
+    .program-hero__location{display:flex;align-items:center;gap:.5rem;color:var(--color-text-gray);font-size:.9rem;margin-bottom:2rem;}
+    .program-hero__location svg{color:var(--color-primary-purple);}
+    .program-hero__ctas{display:flex;gap:1rem;flex-wrap:wrap;}
+    @media(max-width:1023px){.program-hero__inner{grid-template-columns:1fr;}.program-hero picture{display:none;}}
+    </style>
+<section class="program-hero" aria-label="Aerial Silks - Foundations Hero">
+  <div class="program-hero__inner">
+    <div class="program-hero__content">
+      <div class="program-hero__badge">Balanced &nbsp;&middot;&nbsp; Beginner Friendly</div>
+      <h1 class="program-hero__h1">Aerial Silks - Foundations<br><span>Aerial Arts Gold Coast</span></h1>
+      <p class="program-hero__sub">Learn to move, wrap and perform on suspended silks in a safe, structured beginner class at UNDRGRND Movement Southport.</p>
+      <div class="program-hero__location">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Southport Studio &nbsp;|&nbsp; UNDRGRND Movement
+      </div>
+      <div class="program-hero__ctas">
+        <a href="#" class="cta-button dance-booking-button" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:6px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Buy Now</a>
+        <a href="/timetable.html" class="cta-secondary">View Timetable</a>
+      </div>
     </div>
+    <picture>
+      <source media="(max-width: 767px)" srcset="../images/hero/aerial-silks-foundations-mobile.webp" type="image/webp">
+      <source media="(min-width: 768px)" srcset="../images/hero/aerial-silks-foundations.webp" type="image/webp">
+      <img src="../images/hero/aerial-silks-foundations.webp" alt="Aerial silks class at UNDRGRND Movement, Southport Gold Coast" loading="eager" width="1400" height="781" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
+    </picture>
   </div>
 </section>
 
@@ -1941,7 +1951,7 @@
      3. Sticky Book Now
   ------------------------------------------------------------------------- */
   var stickyBook = document.getElementById('stickyBook');
-  var heroEl     = document.querySelector('.prog-hero');
+  var heroEl     = document.querySelector('.program-hero');
   var stickyLink = stickyBook ? stickyBook.querySelector('a') : null;
 
   window.addEventListener('scroll', function () {

@@ -87,6 +87,8 @@
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+      max-width: 100%;
+      min-width: 0;
     }
 
     .hero__eyebrow {
@@ -112,11 +114,13 @@
 
     .hero__h1 {
       font-family: 'Bebas Neue', sans-serif; /* design.fonts.display */
-      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-size: clamp(2.5rem, 11vw, 5.5rem);
       line-height: 1.0;
       letter-spacing: 1px;
       color: #FFFFFF;
       margin: 0;
+      max-width: 100%;
+      overflow-wrap: break-word;
     }
 
     .hero__h1 span {
@@ -162,6 +166,14 @@
       flex-wrap: wrap;
       gap: 1rem;
       margin-top: 0.5rem;
+    }
+
+    /* Hero CTA: allow the long term-aware booking label to wrap on mobile
+       instead of clipping (global .cta-button is white-space:nowrap). */
+    .hero__ctas .cta-button {
+      white-space: normal;
+      max-width: 100%;
+      text-align: center;
     }
 
     /* Hero right — image placeholder */

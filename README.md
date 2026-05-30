@@ -1,171 +1,49 @@
-# UNDRGRND Movement Website
+# UNDRGRND Movement — Website
 
-Official website for UNDRGRND Movement — Gold Coast's premier movement studio offering dance, pole fitness, yoga, and aerial classes.
+Static marketing site for **UNDRGRND Movement**, a Gold Coast movement studio (dance, pole, yoga, aerial — adults & kids) inside Flips Academy, Southport.
 
-## Live Site
-- **Domain:** https://www.undrgrnd.com.au
-- **Repository:** https://github.com/BcomServicesLimited/BcomITSolutionsPROJECT
+- **Live:** https://www.undrgrnd.com.au
+- **Repo:** https://github.com/BcomServicesLimited/undrgrnd
+- **Hosting:** Cloudflare Pages — **auto-deploys on every push to `main`**. No build step; the repo root is served as-is.
 
-## Location
+## Contact / NAP (canonical)
 - **Studio:** Inside Flips Academy, 163 Ferry Rd, Southport QLD 4215
-- **Phone:** 0721 402 690
-- **Email:** undrgrndgc@gmail.com
-- **Booking:** https://undrgrnd-movement.classmanager.com/register
+- **Phone:** 0721 402 690  ·  **Email:** undrgrndgc@gmail.com
 
-## 🏗️ Built With
-- HTML5 (semantic markup)
-- CSS3 (custom styles, no frameworks)
-- Vanilla JavaScript
-- Class Manager booking integration
+## Stack
+Hand-written HTML5 + one stylesheet (`css/global.css`) + vanilla JS. No framework, no bundler.
 
-## 📁 File Structure
-
+## Structure
 ```
-/
-├── index.html                          # Homepage
-├── adults.html                         # Adults landing page
-├── kids.html                           # Kids landing page
-├── timetable.html                      # Booking calendar
-├── about.html                          # About page
-├── contact.html                        # Contact page
-├── privacy-policy.html                 # Privacy policy
-├── terms-of-service.html               # Terms of service
-├── 404.html                            # Error page
-├── sitemap.xml                         # SEO sitemap
-├── robots.txt                          # Crawl rules
-├── site-config.json                    # Single source of truth for all data
-│
-├── programs/                                       # Individual program pages
-│   │
-│   ├── ADULTS — DANCE
-│   ├── afro-groove-foundations.html                # Afro Groove - Foundations (ACTIVE)
-│   ├── booty-burn-foundations.html                 # Booty Burn - Foundations (ACTIVE, NEW 2026)
-│   ├── movement-flow-foundations.html              # Movement Flow - Foundations (ACTIVE)
-│   ├── recovery-movement-flow-foundations.html     # Recovery Movement Flow - Foundations (COMING SOON)
-│   │
-│   ├── ADULTS — POLE
-│   ├── pole-fitness-foundations.html               # Pole Fitness - Foundations (COMING SOON)
-│   ├── pole-flow-foundations.html                  # Pole Flow - Foundations (COMING SOON)
-│   ├── pole-strength-movement.html                 # Pole Strength & Movement - Foundations (ACTIVE)
-│   │
-│   ├── ADULTS — YOGA
-│   ├── fusion-yoga-foundations.html                # Fusion Yoga - Foundations (ACTIVE)
-│   ├── traditional-yoga-foundations.html           # Traditional Yoga - Foundations (ACTIVE)
-│   ├── flow-yoga-foundations.html                  # Flow Yoga - Foundations (ACTIVE)
-│   ├── aerial-yoga-foundations.html                # Aerial Yoga - Foundations (ACTIVE)
-│   │
-│   ├── ADULTS — AERIAL
-│   ├── aerial-silks-foundations.html               # Aerial Silks - Foundations (ACTIVE)
-│   │
-│   ├── ADULTS — CHOREOGRAPHY
-│   ├── choreography-fusion-foundations.html        # Choreography Fusion - Foundations (ACTIVE)
-│   │
-│   ├── KIDS — DANCE
-│   ├── kids-dance-moves.html                       # Dance Moves (Urban Mix) - Foundations (ACTIVE)
-│   ├── kids-modern-contemporary.html               # Modern Contemporary (Rhythm & Motion) - Foundations (ACTIVE)
-│   ├── kids-creative-dance.html                    # Creative Dance - Foundations (ACTIVE)
-│   │
-│   ├── KIDS — YOGA
-│   ├── kids-yoga.html                              # Kids Yoga - Foundations (ACTIVE)
-│   ├── kids-aerial-yoga.html                       # Kids Aerial Yoga - Foundations (COMING SOON)
-│   │
-│   ├── KIDS — POLE
-│   ├── kids-pole-foundations.html                  # Pole Fitness Kids - Foundations (COMING SOON)
-│   │
-│   └── KIDS — AERIAL
-│       └── kids-aerial-silks.html                  # Kids Aerial Silks - Foundations (COMING SOON)
-│
-├── css/
-│   └── global.css                      # Main stylesheet (design tokens from site-config.json)
-│
-├── js/
-│   └── schema-generator.js             # JSON-LD schema markup generator
-│
-├── components/
-│   ├── nav-component.html              # Navigation (reusable)
-│   └── footer-component.html          # Footer (reusable)
-│
-└── images/
-    ├── hero/                                       # Hero images (desktop + mobile WebP)
-    └── undgrnd-logo.png                            # UNDRGRND Movement logo
+/                         Home, adults, kids, timetable, about, contact, learn, legal, 404
+/programs/*.html          18 individual program pages
+/learn/*.html             8 SEO/blog articles
+/css/global.css           Shared design tokens + utilities
+/js/booking-controller.js Term-aware Stripe booking links (see below)
+/js/schema-generator.js   Runtime JSON-LD schema injection
+/site-config.json         Business data, navigation, programs (consumed at runtime)
+/images/                  hero/, learn/, programs/, instructor/, logo/
+/_redirects               301s for old/retired URLs
+/sitemap.xml /robots.txt /llms.txt
 ```
 
-## 🚀 Deployment
+## Booking & pricing
+`js/booking-controller.js` is the single source of truth for booking links. Pricing is **$35/class**, paid upfront for the classes remaining in the current QLD school term. It holds the term date ranges and 10 pre-made Stripe links (1–10 weeks, $35–$350) and rewrites every `.dance-booking-button` at runtime. It also exposes `window.UNDRGRND_Booking` so `timetable.html` can build its term buttons from the same data.
 
-### Before Launch Checklist
-- [ ] Update `site-config.json` with actual business details (phone, social media URLs)
-- [ ] Configure Class Manager booking URLs in `site-config.json → booking`
-- [ ] Add Google Analytics GA4 tracking code to `site-config.json → analytics.ga4_id`
-- [ ] Add Facebook Pixel ID to `site-config.json → analytics.facebook_pixel_id`
-- [ ] Add Google Tag Manager ID to `site-config.json → analytics.gtm_id`
-- [ ] Set up SSL certificate (HTTPS)
-- [ ] Test all contact forms
-- [ ] Verify all internal links work
-- [ ] Check mobile responsiveness on real devices
-- [ ] Run accessibility audit (WCAG 2.1 AA)
-- [ ] Submit sitemap to Google Search Console
-- [ ] Set up and verify Google My Business listing
-- [ ] Replace all image placeholders with real photography
-- [ ] Test booking integration (Class Manager iframe)
+## Currently bookable (active)
+Only the live timetable classes sell via Stripe Buy Now; everything else shows **Join Waitlist**.
 
-### Deploy to GitHub
-```bash
-git init
-git add .
-git commit -m "Initial website deployment"
-git remote add origin https://github.com/BcomServicesLimited/undrgrnd.git
-git push -u origin main
-```
+- Movement Flow, Booty Burn Dance, Aerial Silks, Stretch & Mobility, Fusion Yoga, Pole Fitness (adults)
+- Urban Mix / Kids Dance Moves, Kids Creative Dance (kids)
 
-### Deploy to Hosting
+Program status (`active` vs `coming_soon`) lives in `site-config.json`; the adults/kids landing pages build their cards from it.
 
-**Option 1: Netlify (Recommended)**
-1. Connect GitHub repo at https://app.netlify.com
-2. Set publish directory to `/` (root)
-3. Auto-deploys on every push to `main`
-4. HTTPS automatically configured
-5. Add custom domain `undrgrnd.com.au` in site settings
+## Editing
+- **Business data, contact, hours, programs:** `site-config.json`.
+- **Booking prices/terms/Stripe links:** `js/booking-controller.js` (creating a new Stripe link is required for any new price point).
+- **Nav/footer:** currently inlined per page (kept in sync via the per-page populate JS). Consolidating these into a shared include is a known follow-up.
 
-**Option 2: Traditional Hosting**
-1. Upload all files via FTP to public root (e.g. `public_html/`)
-2. Configure domain DNS — point A record to hosting IP
-3. Install SSL certificate (Let's Encrypt or provider certificate)
-4. Test live site across devices and browsers
+## Deploy
+`git add … && git commit && git push` to `main` → Cloudflare Pages deploys automatically.
 
-## ⚙️ Configuration
-
-All website data is stored in `site-config.json` — the **single source of truth**. Never hardcode business details, colours, program information, or pricing directly into HTML files. All pages fetch and render data from this file at runtime.
-
-Key sections in `site-config.json`:
-
-| Section | Contents |
-|---|---|
-| `project` | Name, tagline, domain, repository |
-| `business` | Legal name, address, contact details, hours |
-| `design` | Colours, fonts, spacing, effects |
-| `navigation` | Menu items, CTA button |
-| `programs.adults` | All 13 adult programs (dance, pole, yoga, aerial, choreography) |
-| `programs.adults.intensity_groups` | Intensity group definitions (balanced, moderate, active) |
-| `programs.kids` | All 7 kids programs |
-| `programs.kids.age_bands` | Age band definitions (4–7, 8–12, 13–16) |
-| `booking` | Class Manager integration URLs |
-| `legal` | Disclaimers, waiver, privacy summary, COVID policy |
-| `instructor` | Instructor bio, qualifications, philosophy |
-| `analytics` | GA4, Facebook Pixel, GTM IDs |
-
-## 📊 SEO
-- Local SEO optimised for Gold Coast and Southport
-- JSON-LD schema markup on all pages (LocalBusiness, DanceSchool, YogaStudio, Service, FAQPage, BreadcrumbList)
-- XML sitemap with 27 URLs at `/sitemap.xml`
-- `robots.txt` allows all crawlers
-- NAP (Name, Address, Phone) consistency across all pages
-- Mobile-first responsive design
-- Semantic HTML5 with ARIA attributes
-
-## Contact
-- **Email:** undrgrndgc@gmail.com
-- **Phone:** 0721 402 690
-- **Studio:** Inside Flips Academy, 163 Ferry Rd, Southport QLD 4215
-
-## 📄 License
 © 2026 UNDRGRND Movement. All rights reserved.

@@ -19,3 +19,4 @@
 
 # Homepage clean URL redirect (prevents index.html redirect issue)
 /index.html                          /                                                 301
+/timetable.html  /enrol.html  301

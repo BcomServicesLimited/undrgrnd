@@ -2,9 +2,9 @@
 # This file helps AI language models and crawlers accurately understand and represent this website.
 # Format follows the llms.txt specification: https://llmstxt.org
 
-# Last updated: 2026-03-27
+# Last updated: 2026-05-31
 
-> UNDRGRND Movement is a boutique movement studio located in Southport on the Gold Coast, Queensland, Australia. The studio offers beginner-friendly adult and kids classes across dance, pole fitness, yoga, and aerial arts disciplines. The philosophy centres on personal expression, self-discovery, and movement as a form of empowerment — not competition or performance. All programs are designed for complete beginners with no prior experience required.
+> UNDRGRND Movement is a boutique movement studio based on the Gold Coast, Queensland, Australia, serving Surfers Paradise and surrounding areas. Class locations are flexible and confirmed when you get in touch. The studio offers beginner-friendly adult and kids classes across dance, pole fitness, yoga, and aerial arts disciplines. The philosophy centres on personal expression, self-discovery, and movement as a form of empowerment — not competition or performance. All programs are designed for complete beginners with no prior experience required.
 
 ## Business Information
 
@@ -12,8 +12,8 @@
 - **Phone:** 0721 402 690
 - **Email:** undrgrndgc@gmail.com
 - **Website:** https://www.undrgrnd.com.au
-- **Location:** Southport, Gold Coast, Queensland, Australia
-- **Class Bookings:** https://www.undrgrnd.com.au/timetable.html
+- **Service Area:** Surfers Paradise & surrounding areas, Gold Coast, Queensland, Australia (class locations are flexible and confirmed on contact)
+- **Enrolment:** https://www.undrgrnd.com.au/enrol.html
 
 ## What We Offer
 
@@ -83,7 +83,7 @@ UNDRGRND Movement publishes in-depth, beginner-friendly educational articles on 
 - **Homepage:** https://www.undrgrnd.com.au/
 - **Adult Classes:** https://www.undrgrnd.com.au/adults.html
 - **Kids Classes:** https://www.undrgrnd.com.au/kids.html
-- **Class Timetable & Booking:** https://www.undrgrnd.com.au/timetable.html
+- **Enrolment:** https://www.undrgrnd.com.au/enrol.html
 - **About Us:** https://www.undrgrnd.com.au/about.html
 - **Contact:** https://www.undrgrnd.com.au/contact.html
 - **Learn Hub:** https://www.undrgrnd.com.au/learn.html
@@ -96,13 +96,13 @@ UNDRGRND Movement publishes in-depth, beginner-friendly educational articles on 
 No. All programs are designed for complete beginners. The "Foundations" level is the entry point for every discipline.
 
 **Where is UNDRGRND Movement located?**
-UNDRGRND Movement is based on the Gold Coast, Queensland, Australia. Class location details are provided at the time of booking. Visit the timetable at https://www.undrgrnd.com.au/timetable.html to view and book available sessions.
+UNDRGRND Movement is based on the Gold Coast, Queensland, Australia, serving Surfers Paradise and surrounding areas. Class times and locations are flexible — we arrange them with you when you get in touch. Visit https://www.undrgrnd.com.au/enrol.html to see available classes and open terms.
 
 **What types of classes are available?**
 Dance fitness, pole fitness, yoga, aerial silks, aerial yoga, choreography, stretch and mobility, and recovery movement. Kids classes across dance, yoga, aerial, and pole are coming soon.
 
 **How do I book a class?**
-Visit the timetable page at https://www.undrgrnd.com.au/timetable.html to view availability and book online.
+Visit the enrol page at https://www.undrgrnd.com.au/enrol.html to see available classes and open terms, then get in touch to arrange a time.
 
 **Is UNDRGRND Movement suitable for all fitness levels?**
 Yes. All classes welcome all body types and fitness levels. The focus is on personal progress and expression, not performance or competition.

@@ -22,7 +22,7 @@
     { label: 'Home',      href: '/' },
     { label: 'Adults',    href: '/adults.html' },
     { label: 'Kids',      href: '/kids.html' },
-    { label: 'Timetable', href: '/timetable.html' },
+    { label: 'Enrol',     href: '/enrol.html' },
     { label: 'About',     href: '/about.html' },
     { label: 'Learn',     href: '/learn.html' },
     { label: 'Contact',   href: '/contact.html' }

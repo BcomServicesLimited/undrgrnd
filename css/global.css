@@ -1343,18 +1343,18 @@ label {
   }
 
 /* ==========================================================================
-   Booking buttons — let the long term-aware label wrap on narrow screens.
-   The label (e.g. "Book Now — 5 Weeks Remaining ($175)") is set at runtime
-   by booking-controller.js; .cta-button is white-space:nowrap by default,
-   which overflowed the viewport on phones (hero + program pages).
+   Booking buttons — let the long term-aware label wrap instead of overflowing.
+   The label (e.g. "Book Now — 5 Weeks Remaining ($175)") is set at runtime by
+   booking-controller.js; .cta-button is white-space:nowrap by default, which
+   overflowed constrained containers (quick-info cards) and narrow viewports.
+   Applied at all widths so the label always wraps within its own button.
+   !important overrides the per-page inline .cta-button { white-space:nowrap }.
    ========================================================================== */
-@media (max-width: 600px) {
-  /* !important to override the per-page inline .cta-button { white-space:nowrap } */
-  .dance-booking-button {
-    white-space: normal !important;
-    max-width: 100%;
-    text-align: center;
-  }
+.dance-booking-button {
+  white-space: normal !important;
+  max-width: 100%;
+  text-align: center;
+  line-height: 1.35;
 }
 
 

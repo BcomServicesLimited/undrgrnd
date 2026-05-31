@@ -190,7 +190,9 @@
           ],
           "medical_requirements": "Medical clearance from your healthcare provider is required before participating in this program. Please bring documentation to your first class.",
           "intensity": "Balanced",
-          "status": "coming_soon"
+          "status": "active",
+          "booking_method": "email_request",
+          "price": "$35 per class"
         }
       ],
       "pole": [

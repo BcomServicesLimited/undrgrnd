@@ -208,3 +208,50 @@
   }
 
 })();
+
+
+/* ==========================================================================
+   Email-to-book buttons (.email-book-btn)
+   Native mail app on mobile (let the mailto: fire), Gmail web compose on
+   desktop (where a default mail client often isn't configured). The mailto:
+   href stays as the universal fallback.
+   ========================================================================== */
+(function () {
+  'use strict';
+  function isDesktop() {
+    try {
+      return window.matchMedia('(pointer: fine)').matches && window.innerWidth >= 1024;
+    } catch (e) {
+      return window.innerWidth >= 1024;
+    }
+  }
+  function mailtoToGmail(href) {
+    var body = href.replace(/^mailto:/i, '');
+    var q = body.indexOf('?');
+    var to = q === -1 ? body : body.slice(0, q);
+    var params = new URLSearchParams(q === -1 ? '' : body.slice(q + 1));
+    var url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(to);
+    if (params.get('subject')) url += '&su=' + encodeURIComponent(params.get('subject'));
+    if (params.get('body')) url += '&body=' + encodeURIComponent(params.get('body'));
+    return url;
+  }
+  function wire() {
+    var btns = document.querySelectorAll('a.email-book-btn[href^="mailto:"]');
+    Array.prototype.forEach.call(btns, function (a) {
+      if (a.dataset.emailWired) return;
+      a.dataset.emailWired = '1';
+      a.addEventListener('click', function (e) {
+        if (isDesktop()) {
+          e.preventDefault();
+          window.open(mailtoToGmail(a.getAttribute('href')), '_blank', 'noopener');
+        }
+        /* mobile: fall through to the native mailto: handler */
+      });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', wire);
+  } else {
+    wire();
+  }
+})();

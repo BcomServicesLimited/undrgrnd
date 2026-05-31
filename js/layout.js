@@ -29,7 +29,7 @@
   ];
 
   var NAP = {
-    address: 'Inside Flips Academy, 163 Ferry Rd, Southport QLD 4215',
+    address: 'Surfers Paradise & surrounding areas · Gold Coast',
     phoneText: '0721 402 690',
     phoneHref: 'tel:+61721402690',
     email: 'undrgrndgc@gmail.com',
@@ -89,7 +89,7 @@
         '<div class="footer-main">' +
           '<div class="footer-col footer-col--brand">' +
             '<a href="/" class="footer-brand__logo" aria-label="UNDRGRND Movement — Home">' +
-              '<img src="/images/logo/logo-full.webp" alt="UNDRGRND Movement full logo — Southport Gold Coast" width="232" height="50" style="height:50px;width:auto;display:block;" loading="lazy">' +
+              '<img src="/images/logo/logo-full.webp" alt="UNDRGRND Movement full logo — Gold Coast" width="232" height="50" style="height:50px;width:auto;display:block;" loading="lazy">' +
             '</a>' +
             '<p class="footer-brand__tagline">' + NAP.tagline + '</p>' +
           '</div>' +
@@ -113,7 +113,7 @@
             '<span aria-hidden="true">|</span>' +
             '<a href="/terms-of-service.html">Terms of Service</a>' +
           '</nav>' +
-          '<p class="footer-bottom__tagline">Proudly serving Gold Coast and Southport communities</p>' +
+          '<p class="footer-bottom__tagline">Proudly serving Surfers Paradise &amp; the wider Gold Coast</p>' +
         '</div>' +
       '</footer>';
   }

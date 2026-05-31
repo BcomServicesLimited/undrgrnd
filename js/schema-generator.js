@@ -216,16 +216,9 @@ function generateLocalBusinessSchema() {
       'description': project.tagline,
       'address': {
         '@type': 'PostalAddress',
-        'streetAddress':   address.street,
         'addressLocality': address.suburb,
         'addressRegion':   address.state,
-        'postalCode':      address.postcode,
         'addressCountry':  'AU'
-      },
-      'geo': {
-        '@type':     'GeoCoordinates',
-        'latitude':  address.geo.latitude,
-        'longitude': address.geo.longitude
       },
       'email': contact.email,
       'openingHours': formatOpeningHours(hours),

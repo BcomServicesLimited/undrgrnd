@@ -10,15 +10,10 @@
     "category_primary": "Dance School",
     "category_secondary": "Yoga Studio",
     "address": {
-      "street": "Inside Flips Academy, 163 Ferry Rd",
-      "suburb": "Southport",
+      "suburb": "Gold Coast",
       "state": "QLD",
-      "postcode": "4215",
       "country": "Australia",
-      "geo": {
-        "latitude": "-27.9654",
-        "longitude": "153.4076"
-      }
+      "service_area": "Surfers Paradise & surrounding areas"
     },
     "contact": {
       "email": "undrgrndgc@gmail.com",
@@ -43,15 +38,15 @@
     "local_keywords": {
       "primary": [
         "Gold Coast",
-        "Southport"
+        "Surfers Paradise"
       ],
       "secondary": [
-        "Surfers Paradise",
         "Broadbeach",
+        "Main Beach",
         "Bundall",
-        "Main Beach"
+        "Mermaid Beach"
       ],
-      "service_area": "Gold Coast and surrounding suburbs"
+      "service_area": "Surfers Paradise & surrounding Gold Coast areas"
     },
     "target_keywords": [
       "dance school gold coast",

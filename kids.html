@@ -292,6 +292,7 @@
 
     /* Card image */
     .program-card__img {
+      position: relative;
       height: 200px;
       overflow: hidden;
       display: block;
@@ -328,6 +329,44 @@
       gap: 0.75rem;
       flex: 1;
     }
+
+    /* Top badge row — consistent height across cards */
+    .program-card__badges {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Corner flag on the image (coming soon) — kept out of the text flow
+       so titles, descriptions and bullets align across cards. */
+    .program-card__flags {
+      position: absolute;
+      top: 0.85rem;
+      left: 0.85rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.45rem;
+      z-index: 2;
+    }
+    .card-flag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 0.34rem 0.75rem;
+      border-radius: 50px;
+      border: 1px solid;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+    }
+    .card-flag svg { width: 12px; height: 12px; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .card-flag--soon { background: rgba(20, 20, 20, 0.85); color: #FBBF24; border-color: rgba(245, 158, 11, 0.5); }
+    .card-flag--soon svg { stroke: #FBBF24; }
 
     /* Category badges */
     .badge--dance   { background: rgba(236, 72, 153, 0.15); color: #F472B6; border-color: rgba(236, 72, 153, 0.25); }
@@ -435,6 +474,9 @@
       color: #FFFFFF;
       line-height: 1.1;
       margin: 0;
+      min-height: 3.3rem;          /* reserve 2 lines so content aligns */
+      display: flex;
+      align-items: flex-end;
     }
 
     .program-card__age {
@@ -462,6 +504,7 @@
       font-size: 0.9rem;
       color: #A1A1A1;
       line-height: 1.6;
+      min-height: 2.9rem;          /* reserve ~2 lines so bullets align */
     }
 
     .program-card__benefits {
@@ -508,6 +551,18 @@
 
     .program-card__actions {
       padding: 0 1.75rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .program-card__actions .btn-learn,
+    .program-card__actions .btn-book {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      white-space: normal;
     }
 
     .btn-learn {
@@ -1522,8 +1577,8 @@
     var priceHtml = (!isComingSoon && program.price)
       ? '<p class="program-card__price"><strong>' + escHtml(program.price.replace(' per class','')) + '</strong> per class</p>'
       : '';
-    var comingSoonBadge = isComingSoon
-      ? '<span class="program-badge badge--coming-soon">Coming Soon</span>'
+    var comingSoonFlag = isComingSoon
+      ? '<span class="card-flag card-flag--soon"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Coming Soon</span>'
       : '';
     var learnBtn = isComingSoon
       ? '<a href="#" class="btn-learn disabled" aria-disabled="true">Coming Soon</a>'
@@ -1536,10 +1591,12 @@
       + ' data-age-min="' + age.min + '" data-age-max="' + age.max + '">'
       + '<div class="program-card__img">'
       +   '<img src="/images/hero/' + escHtml(slug) + '.webp" alt="' + escHtml(program.name) + ' at UNDRGRND Movement Gold Coast" loading="lazy" width="600" height="338">'
+      +   (comingSoonFlag ? '<div class="program-card__flags">' + comingSoonFlag + '</div>' : '')
       + '</div>'
       + '<div class="program-card__body">'
-      +   '<span class="program-badge badge--' + meta.cls + '">' + escHtml(meta.label) + '</span>'
-      +   (comingSoonBadge ? comingSoonBadge : '')
+      +   '<div class="program-card__badges">'
+      +     '<span class="program-badge badge--' + meta.cls + '">' + escHtml(meta.label) + '</span>'
+      +   '</div>'
       +   '<h3 class="program-card__name">' + escHtml(program.name) + '</h3>'
       +   (program.age_range
           ? '<span class="program-card__age"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>' + escHtml(program.age_range) + '</span>'

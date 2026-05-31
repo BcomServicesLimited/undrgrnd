@@ -361,20 +361,22 @@
           "name": "Kids Yoga - Foundations",
           "slug": "kids-yoga",
           "category": "Yoga",
-          "age_range": "6-8 years",
+          "age_range": "7-10 years",
           "short_description": "Fun, age-appropriate yoga for children",
-          "status": "coming_soon",
-          "full_description": "Kids Yoga – Foundations introduces children to movement through simple, engaging, and structured activities that support coordination, balance, and body awareness. The class uses basic yoga poses in a fun and accessible way to help children build confidence while staying active. Through easy-to-follow sequences, light stretching, and gentle movement, children improve flexibility, posture, and overall coordination. Sessions are designed to keep children engaged while encouraging healthy movement habits from an early age. This class is ideal for children who benefit from calm, structured movement and want to build confidence, focus, and body awareness in a safe and supportive environment."
+          "status": "active",
+          "full_description": "Kids Yoga – Foundations introduces children to movement through simple, engaging, and structured activities that support coordination, balance, and body awareness. The class uses basic yoga poses in a fun and accessible way to help children build confidence while staying active. Through easy-to-follow sequences, light stretching, and gentle movement, children improve flexibility, posture, and overall coordination. Sessions are designed to keep children engaged while encouraging healthy movement habits from an early age. This class is ideal for children who benefit from calm, structured movement and want to build confidence, focus, and body awareness in a safe and supportive environment.",
+          "price": "$35 per class"
         },
         {
           "id": "kids-aerial-yoga",
           "name": "Kids Aerial Yoga - Foundations",
           "slug": "kids-aerial-yoga",
           "category": "Yoga",
-          "age_range": "6-8 years",
+          "age_range": "7-10 years",
           "short_description": "Playful aerial yoga in hammocks for kids",
-          "status": "coming_soon",
-          "full_description": "Kids Aerial Yoga - Foundations introduces children to movement using a soft, suspended hammock in a safe and supportive environment. The class focuses on building coordination, balance, and body awareness while keeping movement fun and engaging. Through simple, guided exercises, children use the hammock to explore stretching, gentle strength work, and basic movement patterns. The support of the hammock allows them to move with confidence, reducing pressure on the joints while making movement more accessible and enjoyable. This class is ideal for children who enjoy playful movement and want to build confidence, coordination, and flexibility in a safe and structured setting."
+          "status": "active",
+          "full_description": "Kids Aerial Yoga - Foundations introduces children to movement using a soft, suspended hammock in a safe and supportive environment. The class focuses on building coordination, balance, and body awareness while keeping movement fun and engaging. Through simple, guided exercises, children use the hammock to explore stretching, gentle strength work, and basic movement patterns. The support of the hammock allows them to move with confidence, reducing pressure on the joints while making movement more accessible and enjoyable. This class is ideal for children who enjoy playful movement and want to build confidence, coordination, and flexibility in a safe and structured setting.",
+          "price": "$35 per class"
         }
       ],
       "pole": [

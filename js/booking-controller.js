@@ -189,7 +189,7 @@
   //    window.updateBookingButtons() after injecting card HTML ───────────────
   window.updateBookingButtons = run;
 
-  // ── Expose term data + helpers so other pages (e.g. timetable.html) can
+  // ── Expose term data + helpers so other pages (e.g. enrol.html) can
   //    build term-aware UI without duplicating the pricing tables. Single
   //    source of truth stays in this file. ──────────────────────────────────
   window.UNDRGRND_Booking = {

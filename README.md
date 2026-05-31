@@ -1,13 +1,13 @@
 # UNDRGRND Movement — Website
 
-Static marketing site for **UNDRGRND Movement**, a Gold Coast movement studio (dance, pole, yoga, aerial — adults & kids) inside Flips Academy, Southport.
+Static marketing site for **UNDRGRND Movement**, a Gold Coast movement studio (dance, pole, yoga, aerial — adults & kids) serving Surfers Paradise & surrounding areas. It operates as a service-area business — class times and locations are flexible and confirmed when the customer gets in touch.
 
 - **Live:** https://www.undrgrnd.com.au
 - **Repo:** https://github.com/BcomServicesLimited/undrgrnd
 - **Hosting:** Cloudflare Pages — **auto-deploys on every push to `main`**. No build step; the repo root is served as-is.
 
 ## Contact / NAP (canonical)
-- **Studio:** Inside Flips Academy, 163 Ferry Rd, Southport QLD 4215
+- **Service area:** Surfers Paradise & surrounding areas · Gold Coast QLD (no fixed venue — locations are flexible, confirmed on contact)
 - **Phone:** 0721 402 690  ·  **Email:** undrgrndgc@gmail.com
 
 ## Stack
@@ -15,7 +15,7 @@ Hand-written HTML5 + one stylesheet (`css/global.css`) + vanilla JS. No framewor
 
 ## Structure
 ```
-/                         Home, adults, kids, timetable, about, contact, learn, legal, 404
+/                         Home, adults, kids, enrol, about, contact, learn, legal, 404
 /programs/*.html          18 individual program pages
 /learn/*.html             8 SEO/blog articles
 /css/global.css           Shared design tokens + utilities
@@ -28,10 +28,10 @@ Hand-written HTML5 + one stylesheet (`css/global.css`) + vanilla JS. No framewor
 ```
 
 ## Booking & pricing
-`js/booking-controller.js` is the single source of truth for booking links. Pricing is **$35/class**, paid upfront for the classes remaining in the current QLD school term. It holds the term date ranges and 10 pre-made Stripe links (1–10 weeks, $35–$350) and rewrites every `.dance-booking-button` at runtime. It also exposes `window.UNDRGRND_Booking` so `timetable.html` can build its term buttons from the same data.
+`js/booking-controller.js` is the single source of truth for booking links. Pricing is **$35/class**, paid upfront for the classes remaining in the current QLD school term. It holds the term date ranges and 10 pre-made Stripe links (1–10 weeks, $35–$350) and rewrites every `.dance-booking-button` at runtime. It also exposes `window.UNDRGRND_Booking` so `enrol.html` can build its term buttons from the same data.
 
 ## Currently bookable (active)
-Only the live timetable classes sell via Stripe Buy Now; everything else shows **Join Waitlist**.
+Only the live classes sell via Stripe Buy Now; everything else shows **Join Waitlist**. The Enrol page shows no class times/dates — customers contact UNDRGRND to arrange a time.
 
 - Movement Flow, Booty Burn Dance, Aerial Silks, Stretch & Mobility, Fusion Yoga, Pole Fitness (adults)
 - Urban Mix / Kids Dance Moves, Kids Creative Dance (kids)

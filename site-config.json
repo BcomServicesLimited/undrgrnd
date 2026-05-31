@@ -195,26 +195,6 @@
       ],
       "pole": [
         {
-          "id": "pole-flow",
-          "name": "Pole Flow",
-          "slug": "pole-flow-foundations",
-          "category": "Pole Fitness",
-          "level": "Beginner",
-          "hero_program": false,
-          "short_description": "Create smooth transitions and flowing movement around the pole",
-          "core_focus": [
-            "Smooth transitions and connected sequences",
-            "Flow and movement quality",
-            "Coordination and timing",
-            "Body awareness and control"
-          ],
-          "client_outcome": "I can move around the pole smoothly and confidently",
-          "prerequisite": "Pole Fitness Foundations or instructor approval",
-          "intensity": "Moderate",
-          "status": "coming_soon",
-          "full_description": "Pole Flow – Foundations builds on the basics of pole movement by introducing smooth transitions, connected sequences, and a greater sense of fluidity and control on the pole. The class focuses on linking movements together in a way that feels natural and graceful, developing coordination, timing, and body awareness through guided flow-based sequences. Through each curated, smooth, and authentic movement, you'll improve your ability to transition between positions with ease and confidence. This class is ideal for those who have completed Pole Fitness – Foundations and are ready to develop their movement quality and flow."
-        },
-        {
           "id": "pole-strength",
           "name": "Pole Strength & Movement",
           "slug": "pole-strength-movement",

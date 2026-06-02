@@ -20,12 +20,12 @@
   /* ─── Single source of truth ──────────────────────────────────────────── */
   var MENU = [
     { label: 'Home',      href: '/' },
-    { label: 'Adults',    href: '/adults.html' },
-    { label: 'Kids',      href: '/kids.html' },
-    { label: 'Enrol',     href: '/enrol.html' },
-    { label: 'About',     href: '/about.html' },
-    { label: 'Learn',     href: '/learn.html' },
-    { label: 'Contact',   href: '/contact.html' }
+    { label: 'Adults',    href: '/adults' },
+    { label: 'Kids',      href: '/kids' },
+    { label: 'Enrol',     href: '/enrol' },
+    { label: 'About',     href: '/about' },
+    { label: 'Learn',     href: '/learn' },
+    { label: 'Contact',   href: '/contact' }
   ];
 
   var NAP = {
@@ -41,7 +41,7 @@
   /* ─── Helpers ─────────────────────────────────────────────────────────── */
   function isActive(href) {
     var path = window.location.pathname;
-    if (href === '/') return path === '/' || path === '/index.html';
+    if (href === '/') return path === '/' || path === '/index';
     return path.replace(/\/$/, '') === href.replace(/\/$/, '');
   }
 
@@ -109,9 +109,9 @@
         '<div class="footer-bottom">' +
           '<p class="footer-bottom__copy">&copy; ' + YEAR + ' <span itemprop="name">UNDRGRND Movement</span>. All rights reserved.</p>' +
           '<nav class="footer-bottom__links" aria-label="Legal links">' +
-            '<a href="/privacy-policy.html">Privacy Policy</a>' +
+            '<a href="/privacy-policy">Privacy Policy</a>' +
             '<span aria-hidden="true">|</span>' +
-            '<a href="/terms-of-service.html">Terms of Service</a>' +
+            '<a href="/terms-of-service">Terms of Service</a>' +
           '</nav>' +
           '<p class="footer-bottom__tagline">Proudly serving Surfers Paradise &amp; the wider Gold Coast</p>' +
         '</div>' +

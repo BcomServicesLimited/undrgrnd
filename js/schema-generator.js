@@ -22,7 +22,7 @@
  *
  *     var breadcrumbs = [
  *       { name: 'Home', url: 'https://www.undrgrnd.com.au/' },
- *       { name: 'Adults', url: 'https://www.undrgrnd.com.au/adults.html' }
+ *       { name: 'Adults', url: 'https://www.undrgrnd.com.au/adults' }
  *     ];
  *     document.head.insertAdjacentHTML('beforeend', generateBreadcrumbSchema(breadcrumbs));
  *   </script>
@@ -268,7 +268,7 @@ function generateLocalBusinessSchema() {
  *   Array of breadcrumb items in order, e.g.:
  *   [
  *     { name: 'Home',   url: 'https://www.undrgrnd.com.au/' },
- *     { name: 'Adults', url: 'https://www.undrgrnd.com.au/adults.html' }
+ *     { name: 'Adults', url: 'https://www.undrgrnd.com.au/adults' }
  *   ]
  * @returns {string} Complete <script type="application/ld+json"> tag
  */
@@ -330,7 +330,7 @@ function generateServiceSchema(program) {
         'price':         program.price,
         'priceCurrency': 'AUD',
         'availability':  'https://schema.org/InStock',
-        'url':           project.domain + '/programs/' + (program.slug || program.id) + '.html'
+        'url':           project.domain + '/programs/' + (program.slug || program.id) + ''
       });
     }
 
@@ -350,7 +350,7 @@ function generateServiceSchema(program) {
         '@type': 'City',
         'name':  business.address.suburb + ', ' + business.address.state
       },
-      'url': project.domain + '/programs/' + (program.slug || program.id) + '.html'
+      'url': project.domain + '/programs/' + (program.slug || program.id) + ''
     };
 
     /* Add audience/level if present */

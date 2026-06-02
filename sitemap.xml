@@ -11,31 +11,31 @@
 
   <!-- MAIN PAGES -->
   <url>
-    <loc>https://www.undrgrnd.com.au/adults.html</loc>
+    <loc>https://www.undrgrnd.com.au/adults</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/kids.html</loc>
+    <loc>https://www.undrgrnd.com.au/kids</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/enrol.html</loc>
+    <loc>https://www.undrgrnd.com.au/enrol</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/about.html</loc>
+    <loc>https://www.undrgrnd.com.au/about</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/contact.html</loc>
+    <loc>https://www.undrgrnd.com.au/contact</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -43,67 +43,67 @@
 
   <!-- PROGRAM PAGES — Open / Enrolling -->
   <url>
-    <loc>https://www.undrgrnd.com.au/programs/booty-burn-foundations.html</loc>
+    <loc>https://www.undrgrnd.com.au/programs/booty-burn-foundations</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/programs/movement-flow-foundations.html</loc>
+    <loc>https://www.undrgrnd.com.au/programs/movement-flow-foundations</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/programs/recovery-movement-flow-foundations.html</loc>
+    <loc>https://www.undrgrnd.com.au/programs/recovery-movement-flow-foundations</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/programs/pole-strength-movement.html</loc>
+    <loc>https://www.undrgrnd.com.au/programs/pole-strength-movement</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/programs/fusion-yoga-foundations.html</loc>
+    <loc>https://www.undrgrnd.com.au/programs/fusion-yoga-foundations</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/programs/aerial-silks-foundations.html</loc>
+    <loc>https://www.undrgrnd.com.au/programs/aerial-silks-foundations</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/programs/stretch-mobility-foundations.html</loc>
+    <loc>https://www.undrgrnd.com.au/programs/stretch-mobility-foundations</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/programs/kids-yoga.html</loc>
+    <loc>https://www.undrgrnd.com.au/programs/kids-yoga</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/programs/kids-aerial-yoga.html</loc>
+    <loc>https://www.undrgrnd.com.au/programs/kids-aerial-yoga</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/programs/kids-dance-moves.html</loc>
+    <loc>https://www.undrgrnd.com.au/programs/kids-dance-moves</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/programs/kids-creative-dance.html</loc>
+    <loc>https://www.undrgrnd.com.au/programs/kids-creative-dance</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -111,31 +111,31 @@
 
   <!-- PROGRAM PAGES — Coming Soon -->
   <url>
-    <loc>https://www.undrgrnd.com.au/programs/choreography-fusion-foundations.html</loc>
+    <loc>https://www.undrgrnd.com.au/programs/choreography-fusion-foundations</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/programs/aerial-yoga-foundations.html</loc>
+    <loc>https://www.undrgrnd.com.au/programs/aerial-yoga-foundations</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/programs/kids-modern-contemporary.html</loc>
+    <loc>https://www.undrgrnd.com.au/programs/kids-modern-contemporary</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/programs/kids-aerial-silks.html</loc>
+    <loc>https://www.undrgrnd.com.au/programs/kids-aerial-silks</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/programs/kids-pole-foundations.html</loc>
+    <loc>https://www.undrgrnd.com.au/programs/kids-pole-foundations</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -143,55 +143,55 @@
 
   <!-- LEARN -->
   <url>
-    <loc>https://www.undrgrnd.com.au/learn.html</loc>
+    <loc>https://www.undrgrnd.com.au/learn</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/learn/how-to-do-the-splits.html</loc>
+    <loc>https://www.undrgrnd.com.au/learn/how-to-do-the-splits</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/learn/beginner-stretching-routine.html</loc>
+    <loc>https://www.undrgrnd.com.au/learn/beginner-stretching-routine</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/learn/what-to-expect-first-pole-class.html</loc>
+    <loc>https://www.undrgrnd.com.au/learn/what-to-expect-first-pole-class</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/learn/how-to-do-a-backbend.html</loc>
+    <loc>https://www.undrgrnd.com.au/learn/how-to-do-a-backbend</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/learn/aerial-yoga-for-beginners.html</loc>
+    <loc>https://www.undrgrnd.com.au/learn/aerial-yoga-for-beginners</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/learn/benefits-of-dance-for-adults.html</loc>
+    <loc>https://www.undrgrnd.com.au/learn/benefits-of-dance-for-adults</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/learn/yoga-for-beginners-gold-coast.html</loc>
+    <loc>https://www.undrgrnd.com.au/learn/yoga-for-beginners-gold-coast</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/learn/how-to-improve-flexibility.html</loc>
+    <loc>https://www.undrgrnd.com.au/learn/how-to-improve-flexibility</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -199,13 +199,13 @@
 
   <!-- LEGAL -->
   <url>
-    <loc>https://www.undrgrnd.com.au/privacy-policy.html</loc>
+    <loc>https://www.undrgrnd.com.au/privacy-policy</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.undrgrnd.com.au/terms-of-service.html</loc>
+    <loc>https://www.undrgrnd.com.au/terms-of-service</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

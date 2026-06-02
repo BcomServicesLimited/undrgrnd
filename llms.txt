@@ -2,7 +2,7 @@
 # This file helps AI language models and crawlers accurately understand and represent this website.
 # Format follows the llms.txt specification: https://llmstxt.org
 
-# Last updated: 2026-05-31
+# Last updated: 2026-06-02
 
 > UNDRGRND Movement is a boutique movement studio based on the Gold Coast, Queensland, Australia, serving Surfers Paradise and surrounding areas. Class locations are flexible and confirmed when you get in touch. The studio offers beginner-friendly adult and kids classes across dance, pole fitness, yoga, and aerial arts disciplines. The philosophy centres on personal expression, self-discovery, and movement as a form of empowerment — not competition or performance. All programs are designed for complete beginners with no prior experience required.
 
@@ -19,32 +19,35 @@
 
 UNDRGRND Movement offers movement classes for adults and children. All classes are beginner-friendly and structured around the "Foundations" level — meaning no prior experience is needed to join any class.
 
-### Adult Programs — Currently Active
+### Adult Programs — Currently Open (Enrolling)
 
 - **Booty Burn - Foundations** — High-energy dance fitness class focused on glute activation and lower body strength. Page: https://www.undrgrnd.com.au/programs/booty-burn-foundations.html
 - **Movement Flow - Foundations** — Natural movement principles to build coordination, body awareness, and fluid motion. Page: https://www.undrgrnd.com.au/programs/movement-flow-foundations.html
 - **Fusion Yoga - Foundations** — A blend of traditional yoga and modern movement to build mobility and strength. Page: https://www.undrgrnd.com.au/programs/fusion-yoga-foundations.html
 - **Aerial Silks - Foundations** — Learn to climb, wrap, and create shapes using suspended fabric silks. Page: https://www.undrgrnd.com.au/programs/aerial-silks-foundations.html
-- **Choreography Fusion - Foundations** — Build confidence through simple, guided dance choreography. Page: https://www.undrgrnd.com.au/programs/choreography-fusion-foundations.html
 - **Stretch & Mobility - Foundations** — Improve flexibility, reduce stiffness, and move better. Page: https://www.undrgrnd.com.au/programs/stretch-mobility-foundations.html
+- **Pole Strength & Movement** — Build conditioning, master holds, and develop controlled movement on the pole. Beginner-friendly and scaled to your level. Page: https://www.undrgrnd.com.au/programs/pole-strength-movement.html
+- **Recovery Movement Flow - Foundations** — Gentle, supported movement for returning after injury, fatigue, or inactivity. Medical clearance required; booked by request via email rather than online. Page: https://www.undrgrnd.com.au/programs/recovery-movement-flow-foundations.html
 
 ### Adult Programs — Coming Soon
 
-- **Recovery Movement Flow - Foundations** — Gentle, supportive movement for those returning after injury. Medical clearance required. Page: https://www.undrgrnd.com.au/programs/recovery-movement-flow-foundations.html
-- **Pole Strength & Movement - Foundations** — Advanced conditioning, holds, and controlled movement on the pole. Page: https://www.undrgrnd.com.au/programs/pole-strength-movement.html
+- **Choreography Fusion - Foundations** — Build confidence through simple, guided dance choreography. Page: https://www.undrgrnd.com.au/programs/choreography-fusion-foundations.html
 - **Aerial Yoga - Foundations** — Supported movement in a hammock to build flexibility and decompress joints. Page: https://www.undrgrnd.com.au/programs/aerial-yoga-foundations.html
+
+### Kids Programs — Currently Open (Enrolling)
+
+Kids classes are age-appropriate, non-competitive, and focused on building confidence, coordination, and creativity.
+
+- **Kids Yoga - Foundations** (ages 7–10) — Fun, age-appropriate yoga building flexibility, focus, and confidence. Page: https://www.undrgrnd.com.au/programs/kids-yoga.html
+- **Kids Aerial Yoga - Foundations** (ages 7–10) — Playful aerial yoga in silk hammocks. Page: https://www.undrgrnd.com.au/programs/kids-aerial-yoga.html
+- **Dance Moves (Urban Mix) - Foundations** (ages 6–8) — Hip hop and urban dance styles in a fun, structured format. Page: https://www.undrgrnd.com.au/programs/kids-dance-moves.html
+- **Creative Dance - Foundations** (ages 6–8) — Imaginative movement and dance exploration for younger children. Page: https://www.undrgrnd.com.au/programs/kids-creative-dance.html
 
 ### Kids Programs — Coming Soon
 
-All kids programs are currently in development and will be available soon. Classes are designed for children and are age-appropriate, non-competitive, and focused on building confidence, coordination, and creativity.
-
-- **Kids Yoga - Foundations** — Page: https://www.undrgrnd.com.au/programs/kids-yoga.html
-- **Kids Aerial Yoga - Foundations** — Page: https://www.undrgrnd.com.au/programs/kids-aerial-yoga.html
-- **Pole Fitness Kids - Foundations** — Page: https://www.undrgrnd.com.au/programs/kids-pole-foundations.html
+- **Modern Contemporary (Rhythm & Motion) - Foundations** (ages 6–8) — Page: https://www.undrgrnd.com.au/programs/kids-modern-contemporary.html
 - **Kids Aerial Silks - Foundations** — Page: https://www.undrgrnd.com.au/programs/kids-aerial-silks.html
-- **Dance Moves (Urban Mix) - Foundations** — Page: https://www.undrgrnd.com.au/programs/kids-dance-moves.html
-- **Modern Contemporary (Rhythm & Motion) - Foundations** — Page: https://www.undrgrnd.com.au/programs/kids-modern-contemporary.html
-- **Creative Dance - Foundations** — Page: https://www.undrgrnd.com.au/programs/kids-creative-dance.html
+- **Pole Fitness Kids - Foundations** — Page: https://www.undrgrnd.com.au/programs/kids-pole-foundations.html
 
 ## Learn — Movement Education Articles
 
@@ -98,7 +101,7 @@ No. All programs are designed for complete beginners. The "Foundations" level is
 UNDRGRND Movement is based on the Gold Coast, Queensland, Australia, serving Surfers Paradise and surrounding areas. Class times and locations are flexible — we arrange them with you when you get in touch. Visit https://www.undrgrnd.com.au/enrol.html to see available classes and open terms.
 
 **What types of classes are available?**
-Dance fitness, pole fitness, yoga, aerial silks, aerial yoga, choreography, stretch and mobility, and recovery movement. Kids classes across dance, yoga, aerial, and pole are coming soon.
+Dance fitness, pole fitness, yoga, aerial silks, stretch and mobility, and recovery movement (medical clearance required). Kids dance and yoga classes are open now for ages 6–10, with kids aerial silks and kids pole coming soon.
 
 **How do I book a class?**
 Visit the enrol page at https://www.undrgrnd.com.au/enrol.html to see available classes and open terms, then get in touch to arrange a time.

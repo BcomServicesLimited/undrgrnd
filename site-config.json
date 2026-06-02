@@ -212,8 +212,9 @@
           ],
           "prerequisite": "Pole Fitness Foundations or instructor approval",
           "intensity": "Active",
-          "status": "coming_soon",
-          "full_description": "Pole Strength & Movement – Foundations introduces a strength-focused approach to pole training, combining conditioning exercises with controlled movement patterns to build upper body strength, core stability, and overall body control. The class focuses on developing the physical foundation needed to progress in pole fitness, with an emphasis on safe technique, body alignment, and progressive strength building. Through guided exercises and structured movement sequences, you'll build the strength and control needed to perform more advanced pole skills with confidence. This class is ideal for those who have completed Pole Fitness – Foundations and want to build strength and conditioning alongside their pole practice."
+          "status": "active",
+          "full_description": "Pole Strength & Movement – Foundations introduces a strength-focused approach to pole training, combining conditioning exercises with controlled movement patterns to build upper body strength, core stability, and overall body control. The class focuses on developing the physical foundation needed to progress in pole fitness, with an emphasis on safe technique, body alignment, and progressive strength building. Through guided exercises and structured movement sequences, you'll build the strength and control needed to perform more advanced pole skills with confidence. This class is ideal for those who have completed Pole Fitness – Foundations and want to build strength and conditioning alongside their pole practice.",
+          "price": "$35 per class"
         }
       ],
       "yoga": [

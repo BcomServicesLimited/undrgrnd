@@ -50,13 +50,13 @@
     },
     "target_keywords": [
       "dance school gold coast",
-      "yoga studio southport",
+      "yoga studio gold coast",
       "pole fitness gold coast",
-      "aerial classes southport",
+      "aerial classes gold coast",
       "kids dance classes gold coast",
       "beginner dance fitness gold coast",
       "movement studio gold coast",
-      "recovery movement classes southport"
+      "recovery movement classes gold coast"
     ]
   },
   "design": {
@@ -101,27 +101,27 @@
       },
       {
         "label": "Adults",
-        "href": "/adults.html"
+        "href": "/adults"
       },
       {
         "label": "Kids",
-        "href": "/kids.html"
+        "href": "/kids"
       },
       {
         "label": "Enrol",
-        "href": "/enrol.html"
+        "href": "/enrol"
       },
       {
         "label": "About",
-        "href": "/about.html"
+        "href": "/about"
       },
       {
         "label": "Learn",
-        "href": "/learn.html"
+        "href": "/learn"
       },
       {
         "label": "Contact",
-        "href": "/contact.html"
+        "href": "/contact"
       }
     ],
     "cta_button": {

@@ -3,435 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Title & Meta Description -->
-  <title>Page Not Found | UNDRGRND Movement</title>
-  <meta name="description" content="The page you're looking for doesn't exist. Return to UNDRGRND Movement homepage.">
-
-  <!-- No canonical on 404 pages -->
-  <meta name="robots" content="noindex, nofollow">
-
-  <!-- Favicon placeholders -->
-  <!-- Google Fonts -->
+  <title>Page Not Found | UNDRGRND</title>
+  <meta name="description" content="Page not found.">
+  <link rel="canonical" href="https://www.undrgrnd.com.au/404">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.undrgrnd.com.au/404">
+  <meta property="og:title" content="Page Not Found | UNDRGRND">
+  <meta property="og:description" content="Page not found.">
+  <meta property="og:image" content="https://www.undrgrnd.com.au/images/og-image.jpg">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Global CSS -->
-  <link rel="stylesheet" href="/css/global.css">
-
-  <!-- Page-specific styles -->
-  <style>
-    /* -----------------------------------------------------------------------
-       FULL-VIEWPORT WRAPPER
-    ----------------------------------------------------------------------- */
-    .error-page {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      background: #0A0A0A;
-    }
-
-    /* -----------------------------------------------------------------------
-       MAIN ERROR CONTENT
-    ----------------------------------------------------------------------- */
-    .error-main {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 8rem 5% 6rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Background radial glow */
-    .error-main::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 70% 50% at 50% 40%, rgba(139, 92, 246, 0.18) 0%, transparent 65%),
-        radial-gradient(ellipse 40% 30% at 30% 70%, rgba(236, 72, 153, 0.08) 0%, transparent 60%);
-      pointer-events: none;
-    }
-
-    .error-inner {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      max-width: 680px;
-      margin-inline: auto;
-    }
-
-    /* -----------------------------------------------------------------------
-       404 DISPLAY NUMBER
-    ----------------------------------------------------------------------- */
-    .error-number {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(7rem, 20vw, 12rem);
-      line-height: 0.85;
-      letter-spacing: 4px;
-      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1.5rem;
-      display: block;
-      /* Subtle animation */
-      animation: errorPulse 4s ease-in-out infinite;
-    }
-
-    @keyframes errorPulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.8; }
-    }
-
-    /* -----------------------------------------------------------------------
-       HEADING & TEXT
-    ----------------------------------------------------------------------- */
-    .error-inner h1 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(1.8rem, 5vw, 3rem);
-      letter-spacing: 1px;
-      color: #FFFFFF;
-      margin-bottom: 1.25rem;
-      line-height: 1.1;
-    }
-
-    .error-inner__text {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 400;
-      color: #A1A1A1;
-      line-height: 1.7;
-      margin-bottom: 3rem;
-      max-width: 480px;
-      margin-inline: auto;
-    }
-
-    /* -----------------------------------------------------------------------
-       NAVIGATION BUTTONS GRID
-    ----------------------------------------------------------------------- */
-    .error-nav {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-bottom: 3rem;
-      max-width: 520px;
-      margin-inline: auto;
-    }
-
-    @media (max-width: 480px) {
-      .error-nav {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .error-nav__btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.6rem;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-decoration: none;
-      border-radius: 14px;
-      padding: 1rem 1.25rem;
-      transition: all 0.3s ease;
-      border: 1px solid transparent;
-    }
-
-    .error-nav__btn svg {
-      width: 16px;
-      height: 16px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      flex-shrink: 0;
-    }
-
-    /* Primary — gradient fill */
-    .error-nav__btn--primary {
-      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-      color: #FFFFFF;
-      grid-column: 1 / -1;
-    }
-
-    .error-nav__btn--primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(139, 92, 246, 0.4);
-    }
-
-    @media (max-width: 480px) {
-      .error-nav__btn--primary { grid-column: 1; }
-    }
-
-    /* Secondary — outlined */
-    .error-nav__btn--secondary {
-      background: rgba(139, 92, 246, 0.06);
-      border-color: rgba(139, 92, 246, 0.25);
-      color: #A1A1A1;
-    }
-
-    .error-nav__btn--secondary:hover {
-      background: rgba(139, 92, 246, 0.12);
-      border-color: rgba(139, 92, 246, 0.5);
-      color: #FFFFFF;
-      transform: translateY(-2px);
-    }
-
-    /* -----------------------------------------------------------------------
-       CONTACT FALLBACK TEXT
-    ----------------------------------------------------------------------- */
-    .error-contact {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.85rem;
-      color: rgba(161, 161, 161, 0.55);
-      line-height: 1.6;
-    }
-
-    .error-contact a {
-      color: #A78BFA;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      transition: color 0.2s ease;
-    }
-
-    .error-contact a:hover { color: #FFFFFF; }
-
-    /* -----------------------------------------------------------------------
-       DECORATIVE DIVIDER DOTS
-    ----------------------------------------------------------------------- */
-    .error-divider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .error-divider__dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: rgba(139, 92, 246, 0.35);
-    }
-
-    .error-divider__dot:nth-child(2) {
-      background: rgba(167, 139, 250, 0.5);
-      width: 8px;
-      height: 8px;
-    }
-  </style>
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
-  <meta property="og:image" content="https://www.undrgrnd.com.au/images/og-image.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://www.undrgrnd.com.au/images/og-image.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Outfit:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/undrgrnd.css">
 </head>
-
-<body class="error-page">
-<!--
-  UNDRGRND Movement — Navigation Component
-  File: /components/nav-component.html
-
-  Usage: Copy this entire block into any page <body>, as the first element.
-  Dependencies:
-    - /css/global.css (must be loaded in <head>)
-    - site-config.json (navigation data loaded via fetch in <script> below)
-
-  Navigation data source: site-config.json → navigation.main_menu, navigation.cta_button
--->
-
-<!-- =====================================================================
-     NAV STYLES (scoped to this component)
-     ===================================================================== -->
-
-
-<!-- =====================================================================
-     NAV HTML
-     ===================================================================== -->
-
-<!-- Full-screen overlay (mobile) -->
-<div id="site-nav"></div>
-
-
-<!-- =========================================================================
-     NAVIGATION — copy contents of /components/nav-component.html here
-     ========================================================================= -->
-
-<!-- =========================================================================
-     ERROR CONTENT
-     ========================================================================= -->
-<main class="error-main" aria-labelledby="errorHeading">
-  <div class="error-inner">
-
-    <!-- 404 number -->
-    <span class="error-number" aria-hidden="true">404</span>
-
-    <!-- Heading -->
-    <h1 id="errorHeading">Oops! This Page Doesn't Exist</h1>
-
-    <!-- Subtext -->
-    <p class="error-inner__text">Looks like you've ventured into uncharted territory. Let's get you back on track.</p>
-
-    <!-- Decorative dots -->
-    <div class="error-divider" aria-hidden="true">
-      <span class="error-divider__dot"></span>
-      <span class="error-divider__dot"></span>
-      <span class="error-divider__dot"></span>
+<body>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="logo" aria-label="UNDRGRND home">UNDRGRND</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="/programs">Programs</a>
+        <a href="/enrol">Enrol</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <a href="/enrol" class="btn btn--primary nav__cta">Enrol Now</a>
+      <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
-
-    <!-- Navigation buttons -->
-    <nav class="error-nav" aria-label="Return to site navigation">
-
-      <a href="/" class="error-nav__btn error-nav__btn--primary">
-        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-        Go Home
-      </a>
-
-      <a href="#book" class="error-nav__btn error-nav__btn--secondary">
-        <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg>
-        View Classes
-      </a>
-
-      <a href="/enrol" class="error-nav__btn error-nav__btn--secondary">
-        <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-        Check Timetable
-      </a>
-
-      <a href="/contact" class="error-nav__btn error-nav__btn--secondary">
-        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-        Contact Us
-      </a>
-
-    </nav>
-
-    <!-- Contact fallback -->
-    <p class="error-contact">
-      If you think this is a mistake, please contact us at
-      <a href="mailto:undrgrndgc@gmail.com" id="errorEmail">undrgrndgc@gmail.com</a>
-    </p>
-
-  </div>
-</main>
-
-<!-- =========================================================================
-     FOOTER — copy contents of /components/footer-component.html here
-     ========================================================================= -->
-
-<!-- =========================================================================
-     PAGE-SPECIFIC JAVASCRIPT
-     ========================================================================= -->
-<script>
-(function () {
-  'use strict';
-
-  /* Load contact email from site-config.json */
-  fetch('/site-config.json')
-    .then(function (res) { return res.json(); })
-    .then(function (config) {
-      var email = config.business && config.business.contact && config.business.contact.email;
-      if (email) {
-        var emailEl = document.getElementById('errorEmail');
-        if (emailEl) {
-          emailEl.href = 'mailto:' + email;
-          emailEl.textContent = email;
-        }
-      }
-    })
-    .catch(function () {
-      /* Fallback email already rendered in HTML — no action needed */
-    });
-
-}());
-</script>
-
-<!--
-  UNDRGRND Movement — Footer Component
-  File: /components/footer-component.html
-
-  Usage: Copy this entire block into any page <body>, as the last element before 
-<!-- Booking Modal -->
-<div id="bookingModal" role="dialog" aria-modal="true" aria-label="Book a Class" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.85);overflow-y:auto;">
-  <div style="position:relative;max-width:680px;margin:2rem auto;padding:1rem;">
-    <button id="bookingModalClose" aria-label="Close booking form" style="position:absolute;top:0.5rem;right:0.5rem;background:rgba(139,92,246,0.15);border:1px solid #8B5CF6;color:#fff;font-size:1.4rem;line-height:1;width:2.2rem;height:2.2rem;border-radius:50%;cursor:pointer;z-index:10000;display:flex;align-items:center;justify-content:center;">&times;</button>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdRMvUrAyMw6PVrSJvVjikBy_swYzT06MNeARSuOREnwmuHew/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" title="Book a Class at UNDRGRND Movement" style="border-radius:8px;background:#fff;">Loading&#8230;</iframe>
-  </div>
-</div>
-<script>
-(function(){
-  var modal = document.getElementById('bookingModal');
-  var closeBtn = document.getElementById('bookingModalClose');
-  function openModal(e){
-    if(e){ e.preventDefault(); }
-    modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-  }
-  function closeModal(){
-    modal.style.display = 'none';
-    document.body.style.overflow = '';
-  }
-  if(closeBtn){ closeBtn.addEventListener('click', closeModal); }
-  modal.addEventListener('click', function(e){ if(e.target === modal){ closeModal(); } });
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeModal(); } });
-
-  /* ── Event delegation: catches all booking clicks including dynamically
-        rendered program cards (btn-book, cta-button, data-medical buttons) ── */
-  var BOOKING_LABELS = /^(book|enrol|enroll|register|sign.?up|join.?waitlist|reserve|get.?started|i.have.clearance)/i;
-  document.body.addEventListener('click', function(e){
-    var el = e.target;
-    // Walk up to find the clickable element (handles clicks on child spans/SVGs)
-    while(el && el !== document.body){
-      var tag = el.tagName ? el.tagName.toLowerCase() : '';
-      var cls = el.className || '';
-      var href = el.getAttribute ? (el.getAttribute('href') || '') : '';
-      var text = el.textContent ? el.textContent.trim() : '';
-      var isMedicalBtn = el.dataset && el.dataset.medical === 'true';
-
-      // Is this a booking element?
-      var isBookBtn = (cls.indexOf('btn-book') > -1) || (cls.indexOf('cta-button') > -1 && cls.indexOf('dance-booking-button') === -1 && BOOKING_LABELS.test(text));
-      var isBookLink = (tag === 'a') && (href === '#book') && BOOKING_LABELS.test(text);
-      var isMedical  = isMedicalBtn;
-
-      // Exclude nav and footer
-      var inNav    = el.closest && (el.closest('nav') || el.closest('.nav-menu') || el.closest('.nav-mobile-menu'));
-      var inFooter = el.closest && (el.closest('footer') || el.closest('.site-footer'));
-
-      if((isBookBtn || isBookLink || isMedical) && !inNav && !inFooter){
-        e.preventDefault();
-        openModal(null);
-        return;
-      }
-      el = el.parentElement;
-    }
-  });
-})();
-</script>
-
-  <script src="/js/layout.js"></script>
-  <script src="/js/booking-controller.js"></script>
-</body>
-
-<!-- =====================================================================
-     FOOTER STYLES (scoped to this component)
-     ===================================================================== -->
-
-
-<!-- =====================================================================
-     FOOTER HTML
-     NAP data populated from site-config.json via JavaScript fetch
-     ===================================================================== -->
-<div id="site-footer"></div>
-
-
+    <div class="nav__mobile" id="mobileNav">
+      <a href="/programs">Programs</a>
+      <a href="/enrol">Enrol</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="/enrol" class="btn btn--primary btn--block">Enrol Now</a>
+    </div>
+  </header>
+  <main>
+    <section class="section center" style="min-height:60vh;display:flex;align-items:center;">
+      <div class="container">
+        <span class="eyebrow">Lost?</span>
+        <h1 style="font-size:clamp(3rem,12vw,6rem);">404</h1>
+        <p class="section__lead" style="margin:0 auto 2rem;">That page moved or never existed. Let's get you back to the good stuff.</p>
+        <div class="cta-band__btns"><a href="/" class="btn btn--primary">Home</a><a href="/programs" class="btn btn--ghost">View Programs</a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="/" class="logo">UNDRGRND</a>
+          <p class="footer__tag">Kids pole, aerial &amp; movement classes on the Gold Coast — building strong, confident kids aged 6–17.</p>
+          <span class="footer__safe"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Child Safe · WWCC instructors</span>
+        </div>
+        <div class="footer__col">
+          <h4>Explore</h4>
+          <a href="/programs">Programs</a>
+          <a href="/enrol">Enrol</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Get in Touch</h4>
+          <p>Surfers Paradise &amp; surrounding areas · Gold Coast</p>
+          <a href="tel:+61721402690">0721 402 690</a>
+          <a href="mailto:undrgrndgc@gmail.com">undrgrndgc@gmail.com</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 UNDRGRND. All rights reserved.</span>
+        <span><a href="/privacy-policy">Privacy</a> · <a href="/terms-of-service">Terms</a></span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    var burger=document.getElementById('burger'),mobileNav=document.getElementById('mobileNav');
+    if(burger){burger.addEventListener('click',function(){var o=mobileNav.classList.toggle('open');burger.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);});
+    mobileNav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mobileNav.classList.remove('open');burger.classList.remove('open');});});}
+    document.querySelectorAll('.faq__q').forEach(function(q){q.addEventListener('click',function(){var i=q.closest('.faq__item'),o=i.classList.contains('open');document.querySelectorAll('.faq__item').forEach(function(x){x.classList.remove('open');});if(!o)i.classList.add('open');});});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12});
+    document.querySelectorAll('.section .container > *, .hero__copy, .hero__media').forEach(function(el){el.classList.add('reveal');io.observe(el);});
+  </script>
 </body>
 </html>

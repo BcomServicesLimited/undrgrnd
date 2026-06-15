@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title & Meta Description -->
+  <title>Booty Burn Dance – Foundations | Dance Fitness Gold Coast | UNDRGRND Movement</title>
+  <meta name="description" content="Booty Burn foundations class. High-energy dance fitness for glute strength &amp; lower body tone. Beginners welcome at UNDRGRND Movement.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.undrgrnd.com.au/programs/booty-burn-foundations">
+
+  <!-- Favicon placeholders -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="/css/global.css">
+
+  <!-- Schema Generator -->
+  <script src="/js/schema-generator.js"></script>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.undrgrnd.com.au/programs/booty-burn-foundations">
+  <meta property="og:title" content="Booty Burn Dance – Foundations | Dance Fitness Gold Coast | UNDRGRND Movement">
+  <meta property="og:description" content="High-energy beginner dance fitness focused on glute activation and lower body strength at UNDRGRND Movement. Gold Coast's welcoming dance studio.">
+  <meta property="og:image" content="https://www.undrgrnd.com.au/images/og-image.jpg">
+
+  <!-- Page-specific styles -->
+  <style>
+    /* -----------------------------------------------------------------------
+       HERO — full-width
+    ----------------------------------------------------------------------- */
+    .prog-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: #0A0A0A;
+    }
+
+    .prog-hero__bg {
+      position: absolute;
+      inset: 0;
+      background: none;
+    }
+
+    /* Image placeholder overlay */
+    .prog-hero__img-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      z-index: 0;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(236, 72, 153, 0.08) 100%);
+    }
+
+    .prog-hero__img-placeholder svg {
+      width: 64px;
+      height: 64px;
+      stroke: rgba(139, 92, 246, 0.35);
+      fill: none;
+      stroke-width: 1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .prog-hero__img-placeholder p {
+      font-size: 0.78rem;
+      color: rgba(161, 161, 161, 0.4);
+      max-width: 320px;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .prog-hero__content {
+      position: relative;
+      z-index: 1;
+      max-width: 1400px;
+      margin-inline: auto;
+      padding: 0 5% 5rem;
+      width: 100%;
+    }
+
+    .prog-hero__level {
+      display: inline-block;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 50px;
+      background: rgba(236, 72, 153, 0.15);
+      border: 1px solid rgba(236, 72, 153, 0.3);
+      color: #F472B6;
+      margin-bottom: 1rem;
+    }
+
+    .prog-hero__h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      line-height: 0.95;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin: 0 0 1.25rem;
+      max-width: 900px;
+    }
+
+    .prog-hero__location {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #A1A1A1;
+      margin-bottom: 2rem;
+    }
+
+    .prog-hero__location svg {
+      width: 15px;
+      height: 15px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .prog-hero__ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* -----------------------------------------------------------------------
+       STICKY BOOK NOW BUTTON
+    ----------------------------------------------------------------------- */
+    .sticky-book {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 900;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .sticky-book.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .sticky-book a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      text-decoration: none;
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      padding: 0.85rem 1.5rem;
+      border-radius: 50px;
+      box-shadow: 0 8px 30px rgba(139, 92, 246, 0.45);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .sticky-book a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(139, 92, 246, 0.6);
+    }
+
+    .sticky-book a svg {
+      width: 16px;
+      height: 16px;
+      stroke: #FFFFFF;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* -----------------------------------------------------------------------
+       PROGRAM OVERVIEW — two columns
+    ----------------------------------------------------------------------- */
+    .overview-section {
+      padding: 8rem 5%;
+      background: #0A0A0A;
+    }
+
+    .overview-section__inner {
+      max-width: 1400px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    @media (min-width: 1024px) {
+      .overview-section__inner {
+        grid-template-columns: 1fr 380px;
+        gap: 5rem;
+        align-items: start;
+      }
+    }
+
+    .overview-section__eyebrow {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #A78BFA;
+      margin-bottom: 0.75rem;
+    }
+
+    .overview-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 1.5rem;
+    }
+
+    .overview-section__desc {
+      font-size: 1.05rem;
+      color: #A1A1A1;
+      line-height: 1.8;
+    }
+
+    /* Quick Info Box */
+    .info-box {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      padding: 2rem;
+      position: sticky;
+      top: 100px;
+    }
+
+    .info-box__title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+    }
+
+    .info-box__rows {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-box__row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .info-box__row-icon {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      background: rgba(139, 92, 246, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .info-box__row-icon svg {
+      width: 15px;
+      height: 15px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .info-box__row-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #A1A1A1;
+      line-height: 1;
+      margin-bottom: 0.2rem;
+    }
+
+    .info-box__row-value {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      line-height: 1.3;
+    }
+
+    .info-box__divider {
+      height: 1px;
+      background: rgba(139, 92, 246, 0.12);
+      margin: 1rem 0;
+    }
+
+    .info-box__pricing-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #A78BFA;
+      margin-bottom: 0.75rem;
+    }
+
+    .info-box__price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .info-box__price-row:last-child { border-bottom: none; }
+
+    .info-box__price-label {
+      font-size: 0.88rem;
+      color: #A1A1A1;
+    }
+
+    .info-box__price-amount {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #A78BFA;
+    }
+
+    .info-box__note {
+      font-size: 0.75rem;
+      color: rgba(161, 161, 161, 0.6);
+      margin-top: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .info-box__cta {
+      margin-top: 1.5rem;
+    }
+
+    .info-box__cta a {
+      display: block;
+      text-align: center;
+    }
+
+    /* -----------------------------------------------------------------------
+       CORE FOCUS SECTION
+    ----------------------------------------------------------------------- */
+    .focus-section {
+      padding: 8rem 5%;
+      background: #0D0D0D;
+    }
+
+    .focus-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .focus-grid {
+      max-width: 1400px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .focus-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .focus-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .focus-card {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: all 0.35s ease;
+    }
+
+    .focus-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(139, 92, 246, 0.5);
+      box-shadow: 0 20px 50px rgba(139, 92, 246, 0.18);
+    }
+
+    .focus-card__icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.1));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+    }
+
+    .focus-card__icon svg {
+      width: 26px;
+      height: 26px;
+      stroke: #A78BFA;
+      fill: none;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .focus-card__text {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .focus-card__sub {
+      font-size: 0.85rem;
+      color: #A1A1A1;
+      line-height: 1.5;
+    }
+
+    /* -----------------------------------------------------------------------
+       WHO IT'S FOR
+    ----------------------------------------------------------------------- */
+    .who-section {
+      padding: 8rem 5%;
+      background: #0A0A0A;
+    }
+
+    .who-section__inner {
+      max-width: 1400px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .who-section__inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .who-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 2rem;
+    }
+
+    .who-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .who-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 1rem;
+      color: #A1A1A1;
+      line-height: 1.5;
+    }
+
+    .who-list li svg {
+      width: 18px;
+      height: 18px;
+      stroke: #A78BFA;
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* -----------------------------------------------------------------------
+       WHAT TO EXPECT — timeline
+    ----------------------------------------------------------------------- */
+    .expect-section {
+      padding: 8rem 5%;
+      background: #0D0D0D;
+    }
+
+    .expect-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .expect-timeline {
+      max-width: 800px;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .expect-step {
+      display: flex;
+      gap: 1.5rem;
+      position: relative;
+    }
+
+    .expect-step__left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .expect-step__num {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      color: #FFFFFF;
+      flex-shrink: 0;
+    }
+
+    .expect-step__line {
+      width: 2px;
+      flex: 1;
+      background: rgba(139, 92, 246, 0.15);
+      margin: 4px 0;
+      min-height: 30px;
+    }
+
+    .expect-step:last-child .expect-step__line {
+      display: none;
+    }
+
+    .expect-step__content {
+      padding-bottom: 2.5rem;
+      padding-top: 0.5rem;
+    }
+
+    .expect-step__title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 0.35rem;
+    }
+
+    .expect-step__desc {
+      font-size: 0.9rem;
+      color: #A1A1A1;
+      line-height: 1.6;
+    }
+
+    .expect-reassurance {
+      max-width: 800px;
+      margin: 2rem auto 0;
+      padding: 1.5rem 2rem;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.07));
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 16px;
+      font-size: 1rem;
+      color: #FFFFFF;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    /* -----------------------------------------------------------------------
+       PRICING SECTION — single price
+    ----------------------------------------------------------------------- */
+    .pricing-section {
+      padding: 8rem 5%;
+      background: #0A0A0A;
+    }
+
+    .pricing-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .single-price-display {
+      display: flex;
+      justify-content: center;
+    }
+
+    .single-price-card {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      border-radius: 20px;
+      padding: 3rem 4rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      min-width: 280px;
+    }
+
+    .single-price-card__label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #A78BFA;
+    }
+
+    .single-price-card__price {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 4.5rem;
+      line-height: 1;
+      color: #FFFFFF;
+    }
+
+    .single-price-card__price sup {
+      font-size: 1.8rem;
+      vertical-align: super;
+      line-height: 0;
+    }
+
+    .single-price-card__period {
+      font-size: 0.9rem;
+      color: #A1A1A1;
+    }
+
+    .single-price-card__cta {
+      margin-top: 1rem;
+      width: 100%;
+    }
+
+    /* -----------------------------------------------------------------------
+       FAQ ACCORDION
+    ----------------------------------------------------------------------- */
+    .faq-section {
+      padding: 8rem 5%;
+      background: #0D0D0D;
+    }
+
+    .faq-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 3rem;
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .faq-item {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.3s ease;
+    }
+
+    .faq-item.open { border-color: rgba(139, 92, 246, 0.45); }
+
+    .faq-item__question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .faq-item__question-text {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      line-height: 1.4;
+    }
+
+    .faq-item__icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item.open .faq-item__icon {
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+      border-color: transparent;
+      transform: rotate(45deg);
+    }
+
+    .faq-item__icon svg {
+      width: 14px;
+      height: 14px;
+      stroke: #8B5CF6;
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.3s ease;
+    }
+
+    .faq-item.open .faq-item__icon svg { stroke: #FFFFFF; }
+
+    .faq-item__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    .faq-item.open .faq-item__answer { max-height: 400px; }
+
+    .faq-item__answer-inner {
+      padding: 0 1.75rem 1.5rem;
+      font-size: 0.93rem;
+      color: #A1A1A1;
+      line-height: 1.7;
+    }
+
+    /* -----------------------------------------------------------------------
+       RELATED PROGRAMS
+    ----------------------------------------------------------------------- */
+    .related-section {
+      padding: 8rem 5%;
+      background: #0A0A0A;
+    }
+
+    .related-section__header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .related-grid {
+      max-width: 1400px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .related-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .related-card {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .related-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(139, 92, 246, 0.45);
+      box-shadow: 0 15px 40px rgba(139, 92, 246, 0.12);
+    }
+
+    .related-card__img {
+      height: 160px;
+      background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(139, 92, 246, 0.1));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .related-card__img svg {
+      width: 36px;
+      height: 36px;
+      stroke: rgba(236, 72, 153, 0.5);
+      fill: none;
+      stroke-width: 1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .related-card__body {
+      padding: 1.5rem;
+    }
+
+    .related-card__name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.35rem;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
+    }
+
+    .related-card__desc {
+      font-size: 0.88rem;
+      color: #A1A1A1;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    /* -----------------------------------------------------------------------
+       SEO CONTENT SECTION
+    ----------------------------------------------------------------------- */
+    .seo-section {
+      padding: 8rem 5%;
+      background: #0D0D0D;
+    }
+
+    .seo-section__inner {
+      max-width: 900px;
+      margin-inline: auto;
+    }
+
+    .seo-section h2 { margin-bottom: 2rem; }
+
+    .seo-section h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.55rem;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin: 2.5rem 0 1rem;
+    }
+
+    .seo-section p {
+      font-size: 1rem;
+      color: #A1A1A1;
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+
+    .seo-section strong { color: #FFFFFF; font-weight: 600; }
+
+    /* -----------------------------------------------------------------------
+       CTA SECTION
+    ----------------------------------------------------------------------- */
+    .cta-section {
+      padding: 8rem 5%;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(236, 72, 153, 0.08) 100%);
+      border-top: 1px solid rgba(139, 92, 246, 0.15);
+    }
+
+    .cta-section__inner {
+      max-width: 700px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 1.25rem;
+    }
+
+    .cta-section__sub {
+      font-size: 1rem;
+      color: #A1A1A1;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .cta-section__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    /* -----------------------------------------------------------------------
+       SCROLL ANIMATIONS
+    ----------------------------------------------------------------------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.08s; }
+    .reveal-delay-2 { transition-delay: 0.16s; }
+    .reveal-delay-3 { transition-delay: 0.24s; }
+    .reveal-delay-4 { transition-delay: 0.32s; }
+  </style>
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Booty Burn Dance – Foundations",
+  "description": "High-energy beginner dance fitness class focused on glute activation and lower body strength. Gold Coast dance fitness.",
+  "url": "https://www.undrgrnd.com.au/programs/booty-burn-foundations",
+  "keywords": "dance fitness gold coast, booty burn class southport",
+  "provider": {
+    "@type": "LocalBusiness",
+    "@id": "https://www.undrgrnd.com.au/#business",
+    "name": "UNDRGRND Movement"
+  },
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "In-person",
+    "location": {
+        "@type": "Place",
+        "name": "UNDRGRND Movement"
+      }
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "35",
+    "priceCurrency": "AUD",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need dance experience for Booty Burn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not at all. Booty Burn \u2013 Foundations is designed specifically for beginners. Every movement is taught step-by-step, and our Gold Coast instructor will ensure you feel comfortable and confident from your very first class. The class is structured so that anyone can follow along regardless of their fitness or dance background."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What muscles does Booty Burn target?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Booty Burn primarily targets the glutes, hamstrings, quadriceps, and inner thighs, with core engagement throughout. The dance-inspired sequences also work your hip flexors and improve overall lower body mobility. You will feel the burn in all the right places while having fun moving to music."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Booty Burn suitable if I have knee or hip issues?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We recommend speaking with your healthcare provider before starting any new fitness class if you have existing joint concerns. Our Surfers Paradise instructor is experienced in offering modifications for different bodies and fitness levels. Please let us know about any injuries or limitations before class so we can ensure you move safely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I wear to Booty Burn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Comfortable, form-fitting activewear that allows freedom of movement is ideal. Supportive athletic shoes or dance trainers work well for this class. Avoid loose or baggy clothing that may restrict movement. Bring a water bottle \u2014 this is a high-energy class and you will want to stay hydrated throughout."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly will I see results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many Gold Coast students notice improved energy, coordination, and body awareness within just a few classes. Physical changes like increased strength and muscle tone typically become noticeable after 4\u20136 weeks of consistent attendance. The most important thing is to enjoy the process \u2014 the results follow naturally when you are having fun and showing up regularly."
+      }
+    }
+  ]
+}
+</script>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.undrgrnd.com.au/images/og-image.jpg">
+</head>
+
+<body>
+<!--
+  UNDRGRND Movement — Navigation Component
+  File: /components/nav-component.html
+
+  Usage: Copy this entire block into any page <body>, as the first element.
+  Dependencies:
+    - /css/global.css (must be loaded in <head>)
+    - site-config.json (navigation data loaded via fetch in <script> below)
+
+  Navigation data source: site-config.json → navigation.main_menu, navigation.cta_button
+-->
+
+<!-- =====================================================================
+     NAV STYLES (scoped to this component)
+     ===================================================================== -->
+
+
+<!-- =====================================================================
+     NAV HTML
+     ===================================================================== -->
+
+<!-- Full-screen overlay (mobile) -->
+<div id="site-nav"></div>
+
+
+<!-- =========================================================================
+     NAVIGATION — copy contents of /components/nav-component.html here
+     ========================================================================= -->
+
+<!-- =========================================================================
+     STICKY BOOK NOW BUTTON
+     ========================================================================= -->
+<div class="sticky-book" id="stickyBook" aria-hidden="true">
+  <a href="#book" tabindex="-1">
+    <!-- Lucide: calendar -->
+    <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+    Book Now
+  </a>
+</div>
+
+<!-- =========================================================================
+     1. HERO SECTION
+     ========================================================================= -->
+<style>
+    /* program-hero — unified with the other program pages */
+    .program-hero{min-height:70vh;display:flex;align-items:center;background:#0A0A0A;padding:8rem 5% 4rem;position:relative;overflow:hidden;}
+    .program-hero::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(139,92,246,.05) 0%,transparent 70%);pointer-events:none;}
+    .program-hero__inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1400px;margin:0 auto;width:100%;}
+    .program-hero__content{position:relative;z-index:1;}
+    .program-hero__badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.4);color:var(--color-primary-purple);padding:.4rem 1rem;border-radius:50px;font-family:var(--font-body);font-size:.8rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:1.5rem;}
+    .program-hero__h1{font-family:var(--font-display);font-size:clamp(2.5rem,5vw,4rem);line-height:1.05;color:var(--color-text-white);margin-bottom:1.5rem;}
+    .program-hero__h1 span{color:var(--color-primary-purple);}
+    .program-hero__sub{font-family:var(--font-body);font-size:1.1rem;color:var(--color-text-gray);margin-bottom:2rem;line-height:1.7;}
+    .program-hero__location{display:flex;align-items:center;gap:.5rem;color:var(--color-text-gray);font-size:.9rem;margin-bottom:2rem;}
+    .program-hero__location svg{color:var(--color-primary-purple);}
+    .program-hero__ctas{display:flex;gap:1rem;flex-wrap:wrap;}
+    @media(max-width:1023px){.program-hero__inner{grid-template-columns:1fr;}.program-hero picture{display:none;}}
+    </style>
+<section class="program-hero" aria-label="Booty Burn Dance – Foundations Hero">
+  <div class="program-hero__inner">
+    <div class="program-hero__content">
+      <div class="program-hero__badge">Active &nbsp;&middot;&nbsp; Beginner Friendly</div>
+      <h1 class="program-hero__h1">Booty Burn Dance – Foundations<br><span>Dance Fitness Gold Coast</span></h1>
+      <p class="program-hero__sub">High-energy, glute-focused dance fitness that builds lower-body strength, coordination and rhythm — no experience needed.</p>
+      <div class="program-hero__location">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Surfers Paradise &amp; surrounding areas
+      </div>
+      <div class="program-hero__ctas">
+        <a href="#" class="cta-button dance-booking-button" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:6px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Buy Now</a>
+        <a href="/enrol" class="cta-secondary">Enrol Now</a>
+      </div>
+    </div>
+    <picture>
+      <source media="(max-width: 767px)" srcset="../images/hero/booty-burn-foundations-mobile.webp" type="image/webp">
+      <source media="(min-width: 768px)" srcset="../images/hero/booty-burn-foundations.webp" type="image/webp">
+      <img src="../images/hero/booty-burn-foundations.webp" alt="Booty burn dance fitness class at UNDRGRND Movement, Gold Coast" loading="eager" width="1400" height="781" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
+    </picture>
+  </div>
+</section>
+
+<style>
+    .program-overview { padding: 6rem 5%; background: var(--color-dark-bg); }
+    .program-overview__inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 380px; gap: 4rem; align-items: start; }
+    .program-overview__desc h2 { font-family: var(--font-display); font-size: 2.5rem; color: var(--color-text-white); margin-bottom: 1.5rem; }
+    .program-overview__desc p { color: var(--color-text-gray); line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.05rem; }
+    .quick-info {
+      background: var(--color-card-bg);
+      border: 1px solid rgba(139,92,246,0.3);
+      border-radius: 20px;
+      padding: 2rem;
+      position: sticky;
+      top: 100px;
+    }
+    .quick-info h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--color-text-white); margin-bottom: 1.5rem; }
+    .quick-info__row { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 0.9rem; }
+    .quick-info__row:last-of-type { border-bottom: none; }
+    .quick-info__label { color: var(--color-text-gray); }
+    .quick-info__value { color: var(--color-text-white); font-weight: 600; text-align: right; }
+    .quick-info__price { font-size: 1.8rem; font-family: var(--font-display); color: var(--color-primary-purple); margin: 1.5rem 0 0.5rem; }
+    .quick-info__price-label { color: var(--color-text-gray); font-size: 0.85rem; margin-bottom: 1.5rem; }
+    /* Core Focus */
+    .core-focus { padding: 6rem 5%; background: #0d0d0d; }
+    .core-focus__inner { max-width: 1400px; margin: 0 auto; }
+    .section-header { text-align: center; margin-bottom: 3.5rem; }
+    .section-header h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); color: var(--color-text-white); margin-bottom: 1rem; }
+    .section-header p { color: var(--color-text-gray); max-width: 600px; margin: 0 auto; line-height: 1.7; }
+    .core-focus__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+    .core-focus__card {
+      background: var(--color-card-bg);
+      border: 1px solid rgba(139,92,246,0.2);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    .core-focus__card:hover { transform: translateY(-4px); border-color: rgba(139,92,246,0.5); }
+    .core-focus__icon { width: 48px; height: 48px; background: rgba(139,92,246,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; color: var(--color-primary-purple); }
+    .core-focus__card h3 { font-family: var(--font-body); font-size: 1rem; font-weight: 700; color: var(--color-text-white); margin-bottom: 0.5rem; }
+    .core-focus__card p { color: var(--color-text-gray); font-size: 0.9rem; line-height: 1.6; }
+    /* Who It's For */
+    .who-for { padding: 6rem 5%; background: var(--color-dark-bg); }
+    .who-for__inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .who-for__content h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); color: var(--color-text-white); margin-bottom: 1.5rem; }
+    .who-for__list { list-style: none; padding: 0; }
+    .who-for__list li { display: flex; align-items: flex-start; gap: 0.75rem; color: var(--color-text-gray); margin-bottom: 1rem; line-height: 1.6; }
+    .who-for__list li::before { content: ''; width: 8px; height: 8px; background: var(--color-primary-purple); border-radius: 50%; margin-top: 0.45rem; flex-shrink: 0; }
+    .who-for__stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .stat-card { background: var(--color-card-bg); border: 1px solid rgba(139,92,246,0.2); border-radius: 16px; padding: 1.5rem; text-align: center; }
+    .stat-card__number { font-family: var(--font-display); font-size: 2.5rem; color: var(--color-primary-purple); }
+    .stat-card__label { color: var(--color-text-gray); font-size: 0.85rem; margin-top: 0.25rem; }
+    /* What to Expect */
+    .what-expect { padding: 6rem 5%; background: #0d0d0d; }
+    .what-expect__inner { max-width: 900px; margin: 0 auto; }
+    .expect-timeline { position: relative; padding-left: 2rem; }
+    .expect-timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--color-primary-purple), transparent); }
+    .expect-item { position: relative; margin-bottom: 2.5rem; }
+    .expect-item::before { content: attr(data-step); position: absolute; left: -2.75rem; width: 28px; height: 28px; background: var(--color-primary-purple); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: #fff; }
+    .expect-item h3 { font-family: var(--font-body); font-size: 1.05rem; font-weight: 700; color: var(--color-text-white); margin-bottom: 0.5rem; }
+    .expect-item p { color: var(--color-text-gray); line-height: 1.7; }
+    /* Pricing */
+    .pricing { padding: 6rem 5%; background: var(--color-dark-bg); }
+    .pricing__inner { max-width: 1000px; margin: 0 auto; }
+    .single-price-display { display: flex; justify-content: center; margin-top: 3rem; }
+    .single-price-card { background: var(--color-card-bg); border: 1px solid rgba(139,92,246,0.35); border-radius: 20px; padding: 3rem 4rem; text-align: center; min-width: 280px; }
+    .single-price-card__label { font-family: var(--font-body); font-weight: 700; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: #A78BFA; margin-bottom: 0.5rem; }
+    .single-price-card__price { font-family: var(--font-display); font-size: 4.5rem; color: var(--color-primary-purple); line-height: 1; margin: 1rem 0 0.25rem; }
+    .single-price-card__per { color: var(--color-text-gray); font-size: 0.9rem; }
+    /* FAQ */
+    .faq { padding: 6rem 5%; background: #0d0d0d; }
+    .faq__inner { max-width: 800px; margin: 0 auto; }
+    .faq__item { border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .faq__question { width: 100%; background: none; border: none; color: var(--color-text-white); font-family: var(--font-body); font-size: 1rem; font-weight: 600; padding: 1.5rem 0; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .faq__question svg { flex-shrink: 0; transition: transform 0.3s; color: var(--color-primary-purple); }
+    .faq__item.open .faq__question svg { transform: rotate(180deg); }
+    .faq__answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .faq__item.open .faq__answer { max-height: 300px; }
+    .faq__answer p { color: var(--color-text-gray); line-height: 1.7; padding-bottom: 1.5rem; }
+    /* Related */
+    .related { padding: 6rem 5%; background: var(--color-dark-bg); }
+    .related__inner { max-width: 1400px; margin: 0 auto; }
+    .related__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .related-card { background: var(--color-card-bg); border: 1px solid rgba(139,92,246,0.2); border-radius: 16px; padding: 1.5rem; text-decoration: none; transition: transform 0.3s, border-color 0.3s; display: block; }
+    .related-card:hover { transform: translateY(-4px); border-color: rgba(139,92,246,0.5); }
+    .related-card__badge { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--color-primary-purple); margin-bottom: 0.5rem; }
+    .related-card__name { font-family: var(--font-display); font-size: 1.3rem; color: var(--color-text-white); margin-bottom: 0.5rem; }
+    .related-card__desc { color: var(--color-text-gray); font-size: 0.9rem; line-height: 1.5; }
+    /* SEO content */
+    .seo-content { padding: 6rem 5%; background: #0d0d0d; }
+    .seo-content__inner { max-width: 900px; margin: 0 auto; }
+    .seo-content h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.5rem); color: var(--color-text-white); margin-bottom: 1.5rem; }
+    .seo-content h3 { font-family: var(--font-body); font-size: 1.2rem; font-weight: 700; color: var(--color-text-white); margin: 2rem 0 0.75rem; }
+    .seo-content p { color: var(--color-text-gray); line-height: 1.8; margin-bottom: 1.25rem; }
+    /* CTA */
+    .program-cta { padding: 6rem 5%; background: linear-gradient(135deg, #0A0A0A 0%, #1a0a2e 50%, #0A0A0A 100%); text-align: center; }
+    .program-cta h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); color: var(--color-text-white); margin-bottom: 1rem; }
+    .program-cta p { color: var(--color-text-gray); max-width: 600px; margin: 0 auto 2rem; line-height: 1.7; }
+    .program-cta__buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    /* Sticky book now */
+    /* Responsive */
+    @media (max-width: 1023px) {
+      .program-hero__inner, .program-overview__inner, .who-for__inner { grid-template-columns: 1fr; }
+      .program-hero__image { display: none; }
+      .quick-info { position: static; }
+      .related__grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 767px) {
+      .who-for__stats { grid-template-columns: 1fr 1fr; }
+      .related__grid { grid-template-columns: 1fr; }
+    }
+    /* Reveal animation */
+  </style>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PROGRAM OVERVIEW
+═══════════════════════════════════════════════════════════════ -->
+<section class="program-overview" aria-label="Program Overview">
+  <div class="program-overview__inner">
+    <div class="program-overview__desc reveal">
+      <h2>About Booty Burn Dance – Foundations</h2>
+      <p>Booty Burn Dance – Foundations is a high-energy, beginner-friendly dance fitness class focused on lower body strength, glute activation, and full-body conditioning through fun and engaging movement. Combining dance-inspired sequences with targeted lower body exercises, this class is designed to build strength, improve coordination, and get your heart rate up in a supportive and motivating environment.</p>
+      <p>Through each curated, smooth, and authentic movement, you'll work your glutes, legs, and core while developing rhythm, confidence, and body awareness. No prior dance experience is required — just come ready to move and have fun.</p>
+    </div>
+    <div class="quick-info reveal">
+      <h3>At a Glance</h3>
+      <div class="quick-info__row"><span class="quick-info__label">Day / Time</span><span class="quick-info__value">Monday 5:00–6:00 pm</span></div>
+      <div class="quick-info__row"><span class="quick-info__label">Level</span><span class="quick-info__value">Beginner / Foundation</span></div>
+      <div class="quick-info__row"><span class="quick-info__label">Intensity</span><span class="quick-info__value">Active / High Energy</span></div>
+      <div class="quick-info__row"><span class="quick-info__label">Duration</span><span class="quick-info__value">60 minutes</span></div>
+      <div class="quick-info__row"><span class="quick-info__label">Class Size</span><span class="quick-info__value">Max 15 students</span></div>
+      <div class="quick-info__row"><span class="quick-info__label">What to Bring</span><span class="quick-info__value">Activewear, water bottle, supportive shoes</span></div>
+      <div class="quick-info__price">$35</div>
+      <div class="quick-info__price-label">per class</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CORE FOCUS
+═══════════════════════════════════════════════════════════════ -->
+<section class="core-focus" aria-label="Core Focus Areas">
+  <div class="core-focus__inner">
+    <div class="section-header reveal">
+      <h2>Core Focus Areas</h2>
+      <p>What you will work on in every Booty Burn class at UNDRGRND Movement</p>
+    </div>
+    <div class="core-focus__grid">
+      <div class="core-focus__card reveal">
+        <div class="core-focus__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h3>Glute Activation and Lower Body Strength</h3>
+        <p>Targeted exercises to build and tone your glutes and legs.</p>
+      </div>
+      <div class="core-focus__card reveal">
+        <div class="core-focus__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+        <h3>Dance-Inspired Conditioning Sequences</h3>
+        <p>Fun, rhythmic movement that never feels like a workout.</p>
+      </div>
+      <div class="core-focus__card reveal">
+        <div class="core-focus__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h3>Coordination and Rhythm</h3>
+        <p>Build timing and body awareness through structured patterns.</p>
+      </div>
+      <div class="core-focus__card reveal">
+        <div class="core-focus__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <h3>Full-Body Fitness Through Movement</h3>
+        <p>Cardio, strength, and confidence in every session.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     WHO IT'S FOR
+═══════════════════════════════════════════════════════════════ -->
+<section class="who-for" aria-label="Who This Class Is For">
+  <div class="who-for__inner">
+    <div class="who-for__content reveal">
+      <h2>Is Booty Burn Right For You?</h2>
+      <ul class="who-for__list">
+        <li>Adults who want a fun, high-energy workout</li>
+        <li>Anyone looking to tone and strengthen their lower body</li>
+        <li>Beginners with no prior dance experience</li>
+        <li>Those who want to improve coordination and body confidence</li>
+      </ul>
+    </div>
+    <div class="who-for__stats reveal">
+      <div class="stat-card"><div class="stat-card__number">0</div><div class="stat-card__label">Experience Required</div></div>
+      <div class="stat-card"><div class="stat-card__number">60</div><div class="stat-card__label">Minutes Per Class</div></div>
+      <div class="stat-card"><div class="stat-card__number">15</div><div class="stat-card__label">Max Class Size</div></div>
+      <div class="stat-card"><div class="stat-card__number">All</div><div class="stat-card__label">Body Types Welcome</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     WHAT TO EXPECT
+═══════════════════════════════════════════════════════════════ -->
+<section class="what-expect" aria-label="What to Expect">
+  <div class="what-expect__inner">
+    <div class="section-header reveal">
+      <h2>Your First Booty Burn Class</h2>
+      <p>A typical Booty Burn – Foundations session at UNDRGRND Movement</p>
+    </div>
+    <div class="expect-timeline reveal">
+      <div class="expect-item" data-step="1">
+        <h3>Dynamic Warm-Up to Activate Your Lower Body</h3>
+        <p>We start every class with a targeted warm-up that wakes up your glutes, hips, and legs — preparing your body for the work ahead.</p>
+      </div>
+      <div class="expect-item" data-step="2">
+        <h3>Dance-Inspired Movement Sequences</h3>
+        <p>Each sequence is broken down into easy-to-follow steps that combine dance-style movement with targeted lower body conditioning.</p>
+      </div>
+      <div class="expect-item" data-step="3">
+        <h3>Glute and Leg-Focused Conditioning</h3>
+        <p>The heart of the class — energetic, music-driven exercises that target your glutes, hamstrings, quads, and inner thighs.</p>
+      </div>
+      <div class="expect-item" data-step="4">
+        <h3>Core Integration and Full-Body Flow</h3>
+        <p>We bring it all together with core-engaged movement that connects your lower body strength to full-body coordination.</p>
+      </div>
+      <div class="expect-item" data-step="5">
+        <h3>Cool-Down and Stretch</h3>
+        <p>Every class ends with a proper cool-down and stretch to support recovery, reduce soreness, and leave you feeling great.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PRICING
+═══════════════════════════════════════════════════════════════ -->
+<section class="pricing" aria-label="Pricing">
+  <div class="pricing__inner">
+    <div class="section-header reveal">
+      <h2>Simple, Straightforward Pricing</h2>
+      <p>Term commitment required. Aligned with Queensland school terms.</p>
+    </div>
+    <div class="single-price-display">
+      <div class="single-price-card">
+        <div class="single-price-card__label">Per Class</div>
+        <div class="single-price-card__price">$35</div>
+        <div class="single-price-card__per">per session, billed weekly</div>
+        <p style="font-size:0.85rem;color:#A1A1A1;margin:1rem 0 1.5rem;line-height:1.6;">Your card is charged automatically the day before each class. Join any time — pay weekly for the remainder of the term. No refunds for missed classes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FAQ
+═══════════════════════════════════════════════════════════════ -->
+<section class="faq" aria-label="Frequently Asked Questions">
+  <div class="faq__inner">
+    <div class="section-header reveal">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq__list">
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          Do I need dance experience for Booty Burn?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq__answer"><p>Not at all. Booty Burn Dance – Foundations is designed specifically for beginners. Every movement is taught step-by-step, and our Gold Coast instructor will ensure you feel comfortable and confident from your very first class. The class is structured so that anyone can follow along regardless of their fitness or dance background.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          What muscles does Booty Burn target?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq__answer"><p>Booty Burn primarily targets the glutes, hamstrings, quadriceps, and inner thighs, with core engagement throughout. The dance-inspired sequences also work your hip flexors and improve overall lower body mobility. You will feel the burn in all the right places while having fun moving to music.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          Is Booty Burn suitable if I have knee or hip issues?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq__answer"><p>We recommend speaking with your healthcare provider before starting any new fitness class if you have existing joint concerns. Our Surfers Paradise instructor is experienced in offering modifications for different bodies and fitness levels. Please let us know about any injuries or limitations before class so we can ensure you move safely.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          What should I wear to Booty Burn?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq__answer"><p>Comfortable, form-fitting activewear that allows freedom of movement is ideal. Supportive athletic shoes or dance trainers work well for this class. Avoid loose or baggy clothing that may restrict movement. Bring a water bottle — this is a high-energy class and you will want to stay hydrated throughout.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          How quickly will I see results?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq__answer"><p>Many Gold Coast students notice improved energy, coordination, and body awareness within just a few classes. Physical changes like increased strength and muscle tone typically become noticeable after 4–6 weeks of consistent attendance. The most important thing is to enjoy the process — the results follow naturally when you are having fun and showing up regularly.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     RELATED PROGRAMS
+═══════════════════════════════════════════════════════════════ -->
+<section class="related" aria-label="Related Programs">
+  <div class="related__inner">
+    <div class="section-header reveal">
+      <h2>You Might Also Like</h2>
+      <p>Other classes available at UNDRGRND Movement</p>
+    </div>
+    <div class="related__grid">
+      <a href="/programs/stretch-mobility-foundations" class="related-card reveal">
+        <div class="related-card__badge">Mobility</div>
+        <div class="related-card__name">Stretch &amp; Mobility - Foundations</div>
+        <div class="related-card__desc">Improve flexibility, reduce stiffness, and restore ease of movement in a gentle, beginner-friendly class.</div>
+      </a>
+      <a href="/programs/choreography-fusion-foundations" class="related-card reveal">
+        <div class="related-card__badge">Choreography</div>
+        <div class="related-card__name">Choreography Fusion - Foundations</div>
+        <div class="related-card__desc">Women's movement and confidence through choreographed dance sequences.</div>
+      </a>
+      <a href="/programs/movement-flow-foundations" class="related-card reveal">
+        <div class="related-card__badge">Movement</div>
+        <div class="related-card__name">Movement Flow - Foundations</div>
+        <div class="related-card__desc">Build body flow and confidence through expressive, intuitive movement.</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SEO CONTENT
+═══════════════════════════════════════════════════════════════ -->
+<section class="seo-content" aria-label="About Booty Burn Dance Fitness on the Gold Coast">
+  <div class="seo-content__inner">
+    <h2>Booty Burn Dance Fitness on the Gold Coast — Beginner-Friendly at UNDRGRND Movement</h2>
+    <p>Booty Burn Dance – Foundations is one of the most exciting and results-driven dance fitness classes available to adults on the Gold Coast. Combining targeted lower body conditioning with dance-inspired movement sequences, this class delivers a high-energy workout that feels more like a dance party than a gym session. At UNDRGRND Movement on the Gold Coast, our Booty Burn Dance Foundations class has been designed specifically for beginners on the Gold Coast who want to build lower body strength, improve coordination, and discover the joy of movement in a safe, supportive, and genuinely welcoming environment.</p>
+    <h3>What Is Booty Burn Dance Fitness?</h3>
+    <p>Booty Burn is a contemporary dance fitness format that fuses targeted glute and lower body conditioning with rhythmic, music-driven movement sequences. Unlike traditional gym-based glute workouts, Booty Burn uses dance-inspired choreography to make the conditioning process engaging, enjoyable, and highly effective. The result is a class that simultaneously builds strength, improves coordination, and elevates your mood — all while working your glutes, legs, and core in ways that feel natural and empowering.</p>
+    <p>The Gold Coast fitness community has embraced dance-based conditioning formats because they offer something that traditional gym workouts often cannot: genuine enjoyment. When you are having fun moving to music, you push harder, stay longer, and come back more often. Booty Burn harnesses this principle to deliver real physical results through an experience that Gold Coast adults genuinely look forward to.</p>
+    <h3>Benefits of Booty Burn for Lower Body Strength</h3>
+    <p>The primary physical benefit of Booty Burn is targeted lower body development. The class specifically focuses on glute activation — a critical component of functional fitness that is often underdeveloped in Gold Coast adults who spend long hours sitting. Strong glutes support healthy posture, reduce lower back pain, improve athletic performance, and contribute to the kind of toned, shapely physique that many people work hard to achieve.</p>
+    <p>Beyond glute activation, Booty Burn works the hamstrings, quadriceps, and inner thighs through dynamic, multi-directional movement patterns. This comprehensive lower body approach builds balanced strength that supports everyday activities — from climbing stairs to carrying groceries — while also improving overall athletic capability. Gold Coast students regularly report improvements in their strength, endurance, and physical confidence after just a few weeks of consistent Booty Burn practice.</p>
+    <p>The cardiovascular component of Booty Burn is equally significant. The high-energy, continuous nature of the class elevates your heart rate and keeps it elevated throughout the session, delivering meaningful aerobic conditioning alongside the strength work. This dual benefit — strength and cardio in a single class — makes Booty Burn one of the most time-efficient fitness options available on the Gold Coast.</p>
+    <h3>Why Dance-Based Fitness Works for Beginners</h3>
+    <p>Dance-based fitness formats like Booty Burn are uniquely effective for beginners because they leverage the brain's natural response to music and rhythm. When movement is set to music, it becomes easier to learn, easier to remember, and significantly more enjoyable to perform. The rhythmic structure of the class helps beginners internalise movement patterns quickly, building coordination and body awareness at a faster rate than traditional exercise formats.</p>
+    <p>At our Gold Coast classes, Booty Burn Dance Foundations is structured to ensure that complete beginners feel comfortable from their very first class. Movements are introduced one at a time, built up gradually, and repeated until everyone in the class feels confident before moving on. There is no pressure to perform, no mirrors to feel self-conscious in front of, and no competition between students. The Gold Coast community that has formed around our Booty Burn classes is one of the most welcoming and supportive groups in our studio.</p>
+    <h3>How UNDRGRND Movement Teaches Booty Burn</h3>
+    <p>UNDRGRND Movement's approach to teaching Booty Burn is rooted in the studio's broader philosophy of foundational movement for body and mind. Every class begins with a dynamic warm-up that specifically targets the glutes, hips, and lower body — preparing the muscles and joints for the demands of the session. Movement sequences are introduced progressively, with each new element building on what has come before. The instructor provides clear, accessible cues that help students understand not just what to do, but why — building body awareness alongside physical strength.</p>
+    <p>Our Surfers Paradise instructor brings qualifications in movement practice and a deep understanding of how to create safe, effective, and enjoyable fitness experiences for adults of all backgrounds. This means that the class is not just physically effective — it is also emotionally safe. Students are never pushed beyond their comfort level, and the studio environment is deliberately designed to be non-judgmental and inclusive. Gold Coast adults of all ages, backgrounds, and body types are welcome in our Booty Burn Dance Foundations class.</p>
+    <h3>Located on the Gold Coast, Serving the Gold Coast</h3>
+    <p>UNDRGRND Movement serves Gold Coast residents across Surfers Paradise, Broadbeach, Bundall, Main Beach, and surrounding suburbs. Class locations are flexible and confirmed when you get in touch — welcoming, well-equipped spaces that reflect the values of the UNDRGRND Movement community.</p>
+    <p>For Gold Coast adults who want to build lower body strength, improve their fitness, and have fun doing it, Booty Burn Dance Foundations is the ideal starting point. The class is designed to remove every barrier to entry — no experience required, no special equipment needed, no performance pressure. Just movement, music, and community across Surfers Paradise and the Gold Coast.</p>
+    <h3>Building Confidence Through Strength and Movement</h3>
+    <p>One of the most consistent things Gold Coast students tell us about Booty Burn Dance Foundations is how much it has improved their confidence — not just physically, but in how they carry themselves every day. There is something deeply empowering about discovering that your body is capable of more than you thought. When you feel your glutes activating, your coordination improving, and your energy levels rising, it changes the way you approach every aspect of your life.</p>
+    <p>The confidence built in Booty Burn Dance Foundations often leads students to explore other programs at UNDRGRND Movement. Many of our Gold Coast students progress from Booty Burn into Movement Flow - Foundations or Choreography Fusion, building on the foundation of lower body strength and rhythmic confidence they have developed. The progression path is natural and entirely student-led — there is no pressure to advance before you are ready.</p>
+    <h3>A Supportive Community on the Gold Coast</h3>
+    <p>UNDRGRND Movement is more than a dance studio — it is a community. The Gold Coast adults who attend our Booty Burn Dance Foundations classes come from all walks of life, and what unites them is a shared commitment to movement, strength, and mutual support. Our Gold Coast classes is a place where you can be yourself, move at your own pace, and be celebrated for showing up — regardless of how the class goes.</p>
+    <p>Ready to feel the burn? Book your first Booty Burn class today at UNDRGRND Movement — Gold Coast's most welcoming beginner dance fitness studio.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CTA
+═══════════════════════════════════════════════════════════════ -->
+<section class="program-cta" aria-label="Book Booty Burn Dance - Foundations">
+  <h2>Ready to Start Your Booty Burn Dance Journey?</h2>
+  <p>Join Gold Coast's most welcoming beginner dance fitness class at UNDRGRND Movement. No experience needed — just bring yourself and a willingness to move and sweat.</p>
+  <div class="program-cta__buttons">
+    <a href="#" class="cta-button dance-booking-button" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:6px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Buy Now</a>
+    <a href="/contact" class="cta-secondary">Questions? Contact Us</a>
+  </div>
+</section>
+
+<!--
+  UNDRGRND Movement — Footer Component
+  File: /components/footer-component.html
+
+  Usage: Copy this entire block into any page <body>, as the last element before 
+<!-- Booking Modal -->
+<div id="bookingModal" role="dialog" aria-modal="true" aria-label="Book a Class" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.85);overflow-y:auto;">
+  <div style="position:relative;max-width:680px;margin:2rem auto;padding:1rem;">
+    <button id="bookingModalClose" aria-label="Close booking form" style="position:absolute;top:0.5rem;right:0.5rem;background:rgba(139,92,246,0.15);border:1px solid #8B5CF6;color:#fff;font-size:1.4rem;line-height:1;width:2.2rem;height:2.2rem;border-radius:50%;cursor:pointer;z-index:10000;display:flex;align-items:center;justify-content:center;">&times;</button>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdRMvUrAyMw6PVrSJvVjikBy_swYzT06MNeARSuOREnwmuHew/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" title="Book a Class at UNDRGRND Movement" style="border-radius:8px;background:#fff;">Loading&#8230;</iframe>
+  </div>
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('bookingModal');
+  var closeBtn = document.getElementById('bookingModalClose');
+  function openModal(e){
+    if(e){ e.preventDefault(); }
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  if(closeBtn){ closeBtn.addEventListener('click', closeModal); }
+  modal.addEventListener('click', function(e){ if(e.target === modal){ closeModal(); } });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeModal(); } });
+
+  /* ── Event delegation: catches all booking clicks including dynamically
+        rendered program cards (btn-book, cta-button, data-medical buttons) ── */
+  var BOOKING_LABELS = /^(book|enrol|enroll|register|sign.?up|join.?waitlist|reserve|get.?started|i.have.clearance)/i;
+  document.body.addEventListener('click', function(e){
+    var el = e.target;
+    // Walk up to find the clickable element (handles clicks on child spans/SVGs)
+    while(el && el !== document.body){
+      var tag = el.tagName ? el.tagName.toLowerCase() : '';
+      var cls = el.className || '';
+      var href = el.getAttribute ? (el.getAttribute('href') || '') : '';
+      var text = el.textContent ? el.textContent.trim() : '';
+      var isMedicalBtn = el.dataset && el.dataset.medical === 'true';
+
+      // Is this a booking element?
+      var isBookBtn = (cls.indexOf('btn-book') > -1) || (cls.indexOf('cta-button') > -1 && cls.indexOf('dance-booking-button') === -1 && BOOKING_LABELS.test(text));
+      var isBookLink = (tag === 'a') && (href === '#book') && BOOKING_LABELS.test(text);
+      var isMedical  = isMedicalBtn;
+
+      // Exclude nav and footer
+      var inNav    = el.closest && (el.closest('nav') || el.closest('.nav-menu') || el.closest('.nav-mobile-menu'));
+      var inFooter = el.closest && (el.closest('footer') || el.closest('.site-footer'));
+
+      if((isBookBtn || isBookLink || isMedical) && !inNav && !inFooter){
+        e.preventDefault();
+        openModal(null);
+        return;
+      }
+      el = el.parentElement;
+    }
+  });
+})();
+</script>
+
+  <script src="/js/layout.js"></script>
+  <script src="/js/booking-controller.js"></script>
+</body>
+
+<!-- =====================================================================
+     FOOTER STYLES (scoped to this component)
+     ===================================================================== -->
+
+
+<!-- =====================================================================
+     FOOTER HTML
+     ===================================================================== -->
+<div id="site-footer"></div>
+
+
+<!-- =========================================================================
+     PAGE SCRIPTS
+     ========================================================================= -->
+<script>
+(function () {
+  'use strict';
+
+  /* -------------------------------------------------------------------------
+     1. Schema.org JSON-LD — Breadcrumb + Service + FAQ
+  ------------------------------------------------------------------------- */
+  if (window.SchemaGenerator) {
+    var breadcrumbs = [
+      { name: 'Home',    url: 'https://www.undrgrnd.com.au/' },
+      { name: 'Adults',  url: 'https://www.undrgrnd.com.au/adults' },
+      { name: 'Booty Burn Dance – Foundations', url: 'https://www.undrgrnd.com.au/programs/booty-burn-foundations' }
+    ];
+
+    var program = {
+      name: 'Booty Burn Dance – Foundations',
+      short_description: 'High-energy lower body and glute-focused dance fitness class',
+      price: 35
+    };
+
+    var faqs = [
+      {
+        question: 'Do I need dance experience for Booty Burn?',
+        answer: 'Not at all. Booty Burn Dance – Foundations is designed specifically for beginners. Every movement is taught step-by-step, and our Gold Coast instructor will ensure you feel comfortable and confident from your very first class.'
+      },
+      {
+        question: 'What muscles does Booty Burn target?',
+        answer: 'Booty Burn primarily targets the glutes, hamstrings, quadriceps, and inner thighs, with core engagement throughout. The dance-inspired sequences also work your hip flexors and improve overall lower body mobility.'
+      },
+      {
+        question: 'Is Booty Burn suitable if I have knee or hip issues?',
+        answer: 'We recommend speaking with your healthcare provider before starting any new fitness class if you have existing joint concerns. Our instructor offers modifications for different bodies and fitness levels.'
+      },
+      {
+        question: 'What should I wear to Booty Burn?',
+        answer: 'Comfortable, form-fitting activewear that allows freedom of movement is ideal. Supportive athletic shoes or dance trainers work well for this class. Bring a water bottle as this is a high-energy class.'
+      },
+      {
+        question: 'How quickly will I see results?',
+        answer: 'Many Gold Coast students notice improved energy, coordination, and body awareness within just a few classes. Physical changes like increased strength and muscle tone typically become noticeable after 4–6 weeks of consistent attendance.'
+      }
+    ];
+
+    document.head.insertAdjacentHTML('beforeend', window.SchemaGenerator.generateBreadcrumbSchema(breadcrumbs));
+    document.head.insertAdjacentHTML('beforeend', window.SchemaGenerator.generateServiceSchema(program));
+    document.head.insertAdjacentHTML('beforeend', window.SchemaGenerator.generateFAQSchema(faqs));
+  }
+
+  /* -------------------------------------------------------------------------
+     2. Sticky Book Now button — show after scrolling past hero
+  ------------------------------------------------------------------------- */
+  var stickyBook = document.getElementById('stickyBook');
+  if (stickyBook) {
+    window.addEventListener('scroll', function () {
+      var heroHeight = window.innerHeight * 0.6;
+      if (window.scrollY > heroHeight) {
+        stickyBook.classList.add('visible');
+        stickyBook.setAttribute('aria-hidden', 'false');
+        stickyBook.querySelector('a').removeAttribute('tabindex');
+      } else {
+        stickyBook.classList.remove('visible');
+        stickyBook.setAttribute('aria-hidden', 'true');
+        stickyBook.querySelector('a').setAttribute('tabindex', '-1');
+      }
+    }, { passive: true });
+  }
+
+  /* -------------------------------------------------------------------------
+     3. FAQ accordion
+  ------------------------------------------------------------------------- */
+  document.querySelectorAll('.faq__question').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.closest('.faq__item');
+      var isOpen = item.classList.contains('open');
+
+      /* Close all */
+      document.querySelectorAll('.faq__item').forEach(function (el) {
+        el.classList.remove('open');
+        el.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
+      });
+
+      /* Toggle clicked */
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  /* -------------------------------------------------------------------------
+     4. Scroll-reveal animations
+  ------------------------------------------------------------------------- */
+  function initReveal() {
+    var revealEls = document.querySelectorAll('.reveal');
+    if (!revealEls.length) return;
+
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0, rootMargin: "0px 0px -40px 0px" });
+      revealEls.forEach(function (el) { observer.observe(el); });
+    } else {
+      revealEls.forEach(function (el) { el.classList.add('visible'); });
+    }
+  }
+
+  initReveal();
+
+  /* -------------------------------------------------------------------------
+     5. Smooth scroll for anchor links
+  ------------------------------------------------------------------------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var targetId = anchor.getAttribute('href').slice(1);
+      var target   = document.getElementById(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+}());
+</script>
+
+</body>
+</html>

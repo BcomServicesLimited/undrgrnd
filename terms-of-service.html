@@ -3,87 +3,920 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service | UNDRGRND</title>
-  <meta name="description" content="Terms of Service for UNDRGRND.">
+
+  <!-- Title & Meta Description -->
+  <title>Terms of Service | UNDRGRND Movement</title>
+  <meta name="description" content="Terms of service for UNDRGRND Movement. Please read before participating in classes.">
+
+  <!-- Canonical -->
   <link rel="canonical" href="https://www.undrgrnd.com.au/terms-of-service">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.undrgrnd.com.au/terms-of-service">
-  <meta property="og:title" content="Terms of Service | UNDRGRND">
-  <meta property="og:description" content="Terms of Service for UNDRGRND.">
-  <meta property="og:image" content="https://www.undrgrnd.com.au/images/og-image.jpg">
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Robots — allow indexing for trust/E-E-A-T signals -->
+  <meta name="robots" content="index, follow">
+
+  <!-- Favicon placeholders -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&amp;family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/undrgrnd.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="/css/global.css">
+
+  <!-- Page-specific styles -->
+  <style>
+    /* -----------------------------------------------------------------------
+       PAGE HEADER
+    ----------------------------------------------------------------------- */
+    .legal-hero {
+      padding: 10rem 5% 4rem;
+      background: #0A0A0A;
+      border-bottom: 1px solid rgba(139, 92, 246, 0.12);
+    }
+
+    .legal-hero__inner {
+      max-width: 900px;
+      margin-inline: auto;
+    }
+
+    .legal-hero__eyebrow {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #A78BFA;
+      margin-bottom: 0.75rem;
+    }
+
+    .legal-hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 0.95;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      margin-bottom: 1.25rem;
+    }
+
+    .legal-hero__meta {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.82rem;
+      color: rgba(161, 161, 161, 0.6);
+      margin-bottom: 1.25rem;
+    }
+
+    .legal-hero__meta svg {
+      width: 13px;
+      height: 13px;
+      stroke: rgba(161, 161, 161, 0.5);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .legal-hero__intro {
+      font-size: 1rem;
+      color: #A1A1A1;
+      line-height: 1.75;
+      max-width: 720px;
+    }
+
+    /* -----------------------------------------------------------------------
+       MAIN LAYOUT
+    ----------------------------------------------------------------------- */
+    .legal-body {
+      padding: 5rem 5% 8rem;
+      background: #0A0A0A;
+    }
+
+    .legal-body__inner {
+      max-width: 900px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+
+    @media (min-width: 1024px) {
+      .legal-body__inner {
+        grid-template-columns: 220px 1fr;
+        gap: 5rem;
+        align-items: start;
+      }
+    }
+
+    /* -----------------------------------------------------------------------
+       TABLE OF CONTENTS
+    ----------------------------------------------------------------------- */
+    .toc {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 16px;
+      padding: 1.75rem;
+    }
+
+    @media (min-width: 1024px) {
+      .toc {
+        position: sticky;
+        top: 100px;
+      }
+    }
+
+    .toc__heading {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(161, 161, 161, 0.5);
+      margin-bottom: 1rem;
+    }
+
+    .toc__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .toc__list li a {
+      display: block;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #A1A1A1;
+      text-decoration: none;
+      padding: 0.35rem 0.6rem;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      line-height: 1.4;
+    }
+
+    .toc__list li a:hover {
+      color: #A78BFA;
+      background: rgba(139, 92, 246, 0.08);
+    }
+
+    .toc__list li a.active {
+      color: #FFFFFF;
+      background: rgba(139, 92, 246, 0.12);
+    }
+
+    /* -----------------------------------------------------------------------
+       LEGAL CONTENT
+    ----------------------------------------------------------------------- */
+    .legal-content {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+    }
+
+    .legal-section {
+      scroll-margin-top: 100px;
+    }
+
+    .legal-section__number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: #8B5CF6;
+      margin-bottom: 0.75rem;
+    }
+
+    .legal-section h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .legal-section p {
+      font-size: 0.97rem;
+      color: #A1A1A1;
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+
+    .legal-section p:last-child { margin-bottom: 0; }
+
+    .legal-section ul {
+      list-style: none;
+      margin: 0.75rem 0 1rem;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .legal-section ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.93rem;
+      color: #A1A1A1;
+      line-height: 1.65;
+    }
+
+    .legal-section ul li::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #8B5CF6;
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+
+    .legal-section ul li strong { color: #FFFFFF; }
+
+    .legal-section a {
+      color: #A78BFA;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+
+    .legal-section a:hover { color: #FFFFFF; }
+
+    /* Quoted legal text block */
+    .legal-quote {
+      background: rgba(139, 92, 246, 0.05);
+      border-left: 3px solid #8B5CF6;
+      border-radius: 0 12px 12px 0;
+      padding: 1.25rem 1.5rem;
+      margin: 1rem 0 1.25rem;
+    }
+
+    .legal-quote p {
+      font-size: 0.93rem;
+      color: rgba(161, 161, 161, 0.9);
+      line-height: 1.8;
+      margin: 0;
+      font-style: italic;
+    }
+
+    /* Warning / important box */
+    .legal-warning {
+      background: rgba(245, 158, 11, 0.06);
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .legal-warning p {
+      font-size: 0.9rem;
+      color: rgba(161, 161, 161, 0.9);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .legal-warning p strong { color: #F59E0B; }
+
+    /* Info highlight box */
+    .legal-highlight {
+      background: rgba(139, 92, 246, 0.06);
+      border: 1px solid rgba(139, 92, 246, 0.15);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .legal-highlight p {
+      font-size: 0.9rem;
+      color: #A1A1A1;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .legal-highlight p strong { color: #A78BFA; }
+
+    /* Contact block */
+    .legal-contact-block {
+      background: #1A1A1A;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 14px;
+      padding: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .legal-contact-block__row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .legal-contact-block__row:last-child { border-bottom: none; padding-bottom: 0; }
+    .legal-contact-block__row:first-child { padding-top: 0; }
+
+    .legal-contact-block__label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(161, 161, 161, 0.5);
+      min-width: 80px;
+      margin-top: 2px;
+    }
+
+    .legal-contact-block__value {
+      font-size: 0.92rem;
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+
+    .legal-contact-block__value a {
+      color: #A78BFA;
+      text-decoration: none;
+    }
+
+    .legal-contact-block__value a:hover { color: #FFFFFF; }
+
+    /* Back to top */
+    .back-to-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #A1A1A1;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      margin-top: 1rem;
+    }
+
+    .back-to-top:hover { color: #A78BFA; }
+
+    .back-to-top svg {
+      width: 14px;
+      height: 14px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <meta property="og:image" content="https://www.undrgrnd.com.au/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.undrgrnd.com.au/images/og-image.jpg">
 </head>
+
 <body>
-  <header class="nav">
-    <div class="container nav__inner">
-      <a href="/" class="logo" aria-label="UNDRGRND home">UNDRGRND</a>
-      <nav class="nav__links" aria-label="Primary">
-        <a href="/programs">Programs</a>
-        <a href="/enrol">Enrol</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-      </nav>
-      <a href="/enrol" class="btn btn--primary nav__cta">Enrol Now</a>
-      <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    </div>
-    <div class="nav__mobile" id="mobileNav">
-      <a href="/programs">Programs</a>
-      <a href="/enrol">Enrol</a>
-      <a href="/about">About</a>
-      <a href="/contact">Contact</a>
-      <a href="/enrol" class="btn btn--primary btn--block">Enrol Now</a>
-    </div>
-  </header>
-  <main>
-    <section class="section">
-      <div class="container" style="max-width:800px;">
-        <span class="eyebrow">Legal</span>
-        <h1 style="margin-bottom:1.5rem;">Terms of Service</h1>
-        <p style="color:var(--muted);margin-bottom:1rem;">This terms of service applies to undrgrnd.com.au. For any questions, contact us at <a href="mailto:undrgrndgc@gmail.com" style="color:var(--purple-light)">undrgrndgc@gmail.com</a>.</p>
-        <p style="color:var(--muted-2);font-size:0.9rem;">Last updated June 2026. Full terms of service content to be added.</p>
-      </div>
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <a href="/" class="logo">UNDRGRND</a>
-          <p class="footer__tag">Kids pole, aerial &amp; movement classes on the Gold Coast — building strong, confident kids aged 6–17.</p>
-          <span class="footer__safe"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Child Safe · WWCC instructors</span>
+<!--
+  UNDRGRND Movement — Navigation Component
+  File: /components/nav-component.html
+
+  Usage: Copy this entire block into any page <body>, as the first element.
+  Dependencies:
+    - /css/global.css (must be loaded in <head>)
+    - site-config.json (navigation data loaded via fetch in <script> below)
+
+  Navigation data source: site-config.json → navigation.main_menu, navigation.cta_button
+-->
+
+<!-- =====================================================================
+     NAV STYLES (scoped to this component)
+     ===================================================================== -->
+
+
+<!-- =====================================================================
+     NAV HTML
+     ===================================================================== -->
+
+<!-- Full-screen overlay (mobile) -->
+<div id="site-nav"></div>
+
+
+<!-- =========================================================================
+     NAVIGATION — copy contents of /components/nav-component.html here
+     ========================================================================= -->
+
+<!-- =========================================================================
+     1. PAGE HEADER
+     ========================================================================= -->
+<header class="legal-hero" id="top">
+  <div class="legal-hero__inner">
+    <p class="legal-hero__eyebrow">UNDRGRND Movement &mdash; Legal</p>
+    <h1>Terms of Service</h1>
+    <p class="legal-hero__meta">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      Last Updated: 4 April 2026
+    </p>
+    <p class="legal-hero__intro">By participating in classes at UNDRGRND Movement, you agree to these terms. Please read this document carefully before booking or attending any class.</p>
+  </div>
+</header>
+
+<!-- =========================================================================
+     2. MAIN BODY — TOC + CONTENT
+     ========================================================================= -->
+<main class="legal-body" aria-label="Terms of service content">
+  <div class="legal-body__inner">
+
+    <!-- TABLE OF CONTENTS -->
+    <nav class="toc" aria-label="Terms of service table of contents">
+      <p class="toc__heading">Contents</p>
+      <ol class="toc__list">
+        <li><a href="#section-1">1. Acceptance of Terms</a></li>
+        <li><a href="#section-2">2. Participation Waiver</a></li>
+        <li><a href="#section-2b">3. Child Participation Waiver</a></li>
+        <li><a href="#section-3">4. Medical Clearance</a></li>
+        <li><a href="#section-4">5. General Disclaimer</a></li>
+        <li><a href="#section-5">6. Booking &amp; Cancellation</a></li>
+        <li><a href="#section-6">7. Code of Conduct</a></li>
+        <li><a href="#section-7">8. Intellectual Property</a></li>
+        <li><a href="#section-8">9. Limitation of Liability</a></li>
+        <li><a href="#section-9">10. Governing Law</a></li>
+        <li><a href="#section-10">11. COVID-19 &amp; Health</a></li>
+        <li><a href="#section-11">12. Changes to Terms</a></li>
+        <li><a href="#section-12">13. Contact</a></li>
+      </ol>
+    </nav>
+
+    <!-- LEGAL CONTENT -->
+    <div class="legal-content">
+
+      <!-- ----------------------------------------------------------------
+           SECTION 1: Acceptance of Terms
+      ----------------------------------------------------------------- -->
+      <section class="legal-section" id="section-1" aria-labelledby="s1heading">
+        <span class="legal-section__number" aria-hidden="true">1</span>
+        <h2 id="s1heading">Acceptance of Terms</h2>
+
+        <p>By booking a class, attending a session, or otherwise using the services of UNDRGRND Movement, you confirm that you have read, understood, and agree to be bound by these Terms of Service. These terms constitute a legally binding agreement between you and UNDRGRND Movement.</p>
+
+        <p>If you do not agree with any part of these terms, please do not book or attend classes. Your continued use of our services following any update to these terms constitutes acceptance of the revised terms.</p>
+
+        <p>These terms apply to all participants, including adults attending in their own right and parents or guardians booking on behalf of minors. Where a parent or guardian books on behalf of a child, the parent or guardian accepts these terms on behalf of themselves and the child.</p>
+
+        <div class="legal-highlight">
+          <p><strong>Important:</strong> These terms may be updated from time to time. We recommend reviewing this page before each new enrolment period. The "Last Updated" date at the top of this page indicates when the terms were most recently revised.</p>
         </div>
-        <div class="footer__col">
-          <h4>Explore</h4>
-          <a href="/programs">Programs</a>
-          <a href="/enrol">Enrol</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
+      </section>
+
+      <!-- ----------------------------------------------------------------
+           SECTION 2: Participation Waiver
+      ----------------------------------------------------------------- -->
+      <section class="legal-section" id="section-2" aria-labelledby="s2heading">
+        <span class="legal-section__number" aria-hidden="true">2</span>
+        <h2 id="s2heading">Participation Waiver</h2>
+
+        <p>By booking or attending any class at UNDRGRND Movement, you confirm that you have read, understood, and agree to these terms.</p>
+
+        <div class="legal-quote">
+          <p id="liabilityWaiver"><strong>1. Assumption of Risk</strong><br>You acknowledge that participation in movement-based classes, including dance, pole fitness, yoga, and aerial activities, involves inherent physical risk. You voluntarily participate at your own risk.</p>
         </div>
-        <div class="footer__col">
-          <h4>Get in Touch</h4>
-          <p>Surfers Paradise &amp; surrounding areas · Gold Coast</p>
-          <a href="tel:+61721402690">0721 402 690</a>
-          <a href="mailto:undrgrndgc@gmail.com">undrgrndgc@gmail.com</a>
+
+        <ul>
+          <li><strong>2. Medical Fitness:</strong> You confirm that you are physically able to participate. You agree to inform your instructor of any injuries, medical conditions, or limitations prior to class.</li>
+          <li><strong>3. Personal Responsibility:</strong> You agree to follow all instructions and participate within your own limits. You are responsible for your own safety during all classes.</li>
+          <li><strong>4. Liability Waiver:</strong> To the extent permitted by law, you release UNDRGRND Movement, its instructors, and staff from any liability for injury, loss, or damage arising from participation. This waiver does not exclude your rights under the Australian Consumer Law.</li>
+          <li><strong>5. Bookings &amp; Cancellations:</strong> All bookings are final and non-refundable. Bookings cannot be rescheduled. Failure to attend a booked class (no-show) will result in the session being forfeited and charged in full. This does not affect your rights under the Australian Consumer Law.</li>
+          <li><strong>6. Code of Conduct:</strong> All participants must behave respectfully. Unsafe or inappropriate behaviour may result in removal from class.</li>
+          <li><strong>7. Media:</strong> You consent to being included in photos or videos for promotional purposes unless you notify us otherwise.</li>
+          <li><strong>8. Minors:</strong> Where a parent or guardian books on behalf of a minor, they agree to these terms on behalf of the child.</li>
+        </ul>
+
+        <div class="legal-warning">
+          <p><strong>Note:</strong> By proceeding with your booking, you agree to these terms. Nothing in this waiver excludes, restricts, or modifies any rights you may have under the Australian Consumer Law, including any guarantees that cannot be excluded by law.</p>
         </div>
-      </div>
-      <div class="footer__bottom">
-        <span>&copy; 2026 UNDRGRND. All rights reserved.</span>
-        <span><a href="/privacy-policy">Privacy</a> · <a href="/terms-of-service">Terms</a></span>
-      </div>
+      </section>
+
+      <!-- ----------------------------------------------------------------
+           SECTION 2b: Child Participation Waiver
+      ----------------------------------------------------------------- -->
+      <section class="legal-section" id="section-2b" aria-labelledby="s2bheading">
+        <span class="legal-section__number" aria-hidden="true">3</span>
+        <h2 id="s2bheading">Child Participation Waiver</h2>
+
+        <p>By booking a class on behalf of a child, you confirm that you are the parent or legal guardian and agree to these terms on behalf of the child.</p>
+
+        <ul>
+          <li>You acknowledge that participation in movement-based activities, including dance, pole fitness, yoga, and aerial classes, involves inherent physical risk.</li>
+          <li>You confirm that the child is physically able to participate and that you have disclosed any medical conditions, injuries, or limitations prior to class.</li>
+          <li>You accept full responsibility for the child's participation and agree that the child will follow all instructor guidance and safety instructions.</li>
+          <li>To the extent permitted by law, you release UNDRGRND Movement, its instructors, and staff from liability for injury, loss, or damage arising from participation.</li>
+        </ul>
+
+        <div class="legal-warning">
+          <p><strong>Note:</strong> This does not affect your rights under the Australian Consumer Law.</p>
+        </div>
+      </section>
+
+      <!-- ----------------------------------------------------------------
+           SECTION 3: Medical Clearance Requirements
+      ----------------------------------------------------------------- -->
+      <section class="legal-section" id="section-3" aria-labelledby="s3heading">
+        <span class="legal-section__number" aria-hidden="true">3</span>
+        <h2 id="s3heading">Medical Clearance Requirements</h2>
+
+        <div class="legal-quote">
+          <p id="medicalDisclaimer">Medical clearance from your healthcare provider is required before participating in Recovery Movement classes. By booking this class, you confirm that you have obtained appropriate medical clearance and that your healthcare provider has approved your participation in physical movement activities.</p>
+        </div>
+
+        <p>The following requirements apply to all participants in Recovery Movement classes:</p>
+
+        <ul>
+          <li><strong>Written clearance required:</strong> Medical clearance must be provided in writing from a registered General Practitioner (GP) or specialist.</li>
+          <li><strong>Currency of clearance:</strong> The clearance document must be dated within the three months prior to your first Recovery Movement class.</li>
+          <li><strong>Documentation at first class:</strong> You must bring your written clearance documentation to your first Recovery Movement class. Digital copies are accepted.</li>
+          <li><strong>Right to refuse entry:</strong> UNDRGRND Movement instructors reserve the right to refuse entry to any Recovery Movement class where appropriate medical clearance has not been provided or cannot be verified.</li>
+        </ul>
+
+        <p>If you are unsure whether you require medical clearance for any class, please contact us before booking. We are happy to discuss your circumstances and help you find the most appropriate class for your current health status.</p>
+      </section>
+
+      <!-- ----------------------------------------------------------------
+           SECTION 4: General Disclaimer
+      ----------------------------------------------------------------- -->
+      <section class="legal-section" id="section-4" aria-labelledby="s4heading">
+        <span class="legal-section__number" aria-hidden="true">4</span>
+        <h2 id="s4heading">General Disclaimer</h2>
+
+        <div class="legal-quote">
+          <p id="generalDisclaimer">All classes at UNDRGRND Movement are conducted by qualified instructors. Participants engage in physical activities at their own risk. Please inform your instructor of any injuries, medical conditions, or physical limitations before class. We recommend consulting with your healthcare provider before beginning any new exercise program.</p>
+        </div>
+
+        <p>UNDRGRND Movement makes every reasonable effort to ensure that classes are conducted safely and by appropriately qualified instructors. However, we cannot guarantee that participation in any class will be free from risk of injury. All participants are encouraged to exercise personal judgement and to communicate openly with instructors about their physical condition before and during classes.</p>
+      </section>
+
+      <!-- ----------------------------------------------------------------
+           SECTION 5: Booking and Cancellation Policies
+      ----------------------------------------------------------------- -->
+      <section class="legal-section" id="section-5" aria-labelledby="s5heading">
+        <span class="legal-section__number" aria-hidden="true">6</span>
+        <h2 id="s5heading">Booking and Cancellation Policies</h2>
+
+        <p>The following policies apply to all class bookings at UNDRGRND Movement:</p>
+
+        <ul>
+          <li><strong>Bookings:</strong> Bookings must be made via the online booking system or by direct contact with the studio.</li>
+          <li><strong>Late cancellations:</strong> Cancellations made after the booking is confirmed will not receive a credit.</li>
+          <li><strong>No-shows:</strong> Failure to attend a booked class without prior cancellation will result in the session being forfeited and charged in full.</li>
+          <li><strong>Class pack validity:</strong> Class packs are valid for the current term only. Unused classes will expire at the end of the term.</li>
+          <li><strong>Refunds:</strong> No refunds are available unless required by law. This does not affect any rights you may have under the Australian Consumer Law.</li>
+        </ul>
+
+        <div class="legal-highlight">
+          <p><strong>Australian Consumer Law:</strong> Nothing in these cancellation policies excludes any consumer guarantees or rights you may have under the Australian Consumer Law, including any right to a refund where a service is not provided as agreed.</p>
+        </div>
+      </section>
+
+      <!-- ----------------------------------------------------------------
+           SECTION 6: Code of Conduct
+      ----------------------------------------------------------------- -->
+      <section class="legal-section" id="section-6" aria-labelledby="s6heading">
+        <span class="legal-section__number" aria-hidden="true">6</span>
+        <h2 id="s6heading">Code of Conduct</h2>
+
+        <p>UNDRGRND Movement is committed to maintaining a safe, respectful, and inclusive environment for all participants and staff. All participants are expected to adhere to the following code of conduct:</p>
+
+        <ul>
+          <li><strong>Respect:</strong> Treat instructors, staff, and fellow students with respect at all times. Disrespectful or disruptive behaviour will not be tolerated.</li>
+          <li><strong>Punctuality:</strong> Please arrive on time for all classes. For your first class, we ask that you arrive at least 10 minutes early to complete any required paperwork and receive an orientation.</li>
+          <li><strong>Appropriate attire:</strong> Wear appropriate attire for the class type as advised by your instructor. Specific clothing requirements are listed on individual program pages.</li>
+          <li><strong>Photography and video:</strong> No photography or video recording of other participants or instructors is permitted without prior written permission from UNDRGRND Movement and the individuals concerned.</li>
+          <li><strong>Alcohol and drugs:</strong> Participation in classes under the influence of alcohol or drugs is strictly prohibited and will result in immediate removal from the class.</li>
+          <li><strong>Studio rules and safety:</strong> Follow all studio rules and safety protocols as directed by instructors. This includes equipment handling, warm-up requirements, and movement boundaries.</li>
+          <li><strong>Harassment:</strong> Harassment, bullying, or inappropriate behaviour of any kind will result in immediate removal from the class and may result in permanent exclusion from UNDRGRND Movement.</li>
+        </ul>
+      </section>
+
+      <!-- ----------------------------------------------------------------
+           SECTION 7: Intellectual Property
+      ----------------------------------------------------------------- -->
+      <section class="legal-section" id="section-7" aria-labelledby="s7heading">
+        <span class="legal-section__number" aria-hidden="true">7</span>
+        <h2 id="s7heading">Intellectual Property</h2>
+
+        <p>All content created by UNDRGRND Movement, including but not limited to class choreography, teaching materials, training programmes, website content, and marketing materials, is the intellectual property of UNDRGRND Movement and is protected by Australian copyright law.</p>
+
+        <ul>
+          <li><strong>No recording or reproduction:</strong> Recording, reproducing, distributing, or publishing any class content, choreography, or teaching materials without prior written permission from UNDRGRND Movement is strictly prohibited.</li>
+          <li><strong>Trademark:</strong> The UNDRGRND Movement name, logo, and associated branding are the property of UNDRGRND Movement. Unauthorised use of these marks is prohibited.</li>
+          <li><strong>Personal use only:</strong> Any materials provided to participants for personal use (such as practice notes or programme guides) are for personal, non-commercial use only and may not be shared or reproduced.</li>
+        </ul>
+      </section>
+
+      <!-- ----------------------------------------------------------------
+           SECTION 8: Limitation of Liability
+      ----------------------------------------------------------------- -->
+      <section class="legal-section" id="section-8" aria-labelledby="s8heading">
+        <span class="legal-section__number" aria-hidden="true">8</span>
+        <h2 id="s8heading">Limitation of Liability</h2>
+
+        <p>To the extent permitted by law, UNDRGRND Movement's liability is limited as follows:</p>
+
+        <ul>
+          <li><strong>Personal injury:</strong> UNDRGRND Movement is not liable for any personal injury sustained during participation in classes or use of studio facilities, except where such injury results from the gross negligence or wilful misconduct of UNDRGRND Movement or its instructors.</li>
+          <li><strong>Personal property:</strong> UNDRGRND Movement is not liable for the loss, theft, or damage of any personal property brought to the studio or to any outdoor class location.</li>
+          <li><strong>Cancelled classes:</strong> UNDRGRND Movement is not liable for any loss or inconvenience arising from classes cancelled due to circumstances beyond our reasonable control, including but not limited to extreme weather events, public health orders, or facility unavailability. Class credits will be provided where possible.</li>
+          <li><strong>Maximum liability:</strong> Where liability cannot be excluded by law, UNDRGRND Movement's maximum liability to any participant is limited to the amount paid by that participant for the specific class or service in connection with which the liability arose.</li>
+        </ul>
+
+        <div class="legal-warning">
+          <p><strong>Australian Consumer Law:</strong> Nothing in this section excludes, restricts, or modifies any consumer guarantee, right, or remedy that cannot be excluded under the Australian Consumer Law or any other applicable legislation.</p>
+        </div>
+      </section>
+
+      <!-- ----------------------------------------------------------------
+           SECTION 9: Governing Law
+      ----------------------------------------------------------------- -->
+      <section class="legal-section" id="section-9" aria-labelledby="s9heading">
+        <span class="legal-section__number" aria-hidden="true">9</span>
+        <h2 id="s9heading">Governing Law</h2>
+
+        <p>These Terms of Service are governed by and construed in accordance with the laws of Queensland, Australia. Any dispute arising in connection with these terms or the services of UNDRGRND Movement will be subject to the exclusive jurisdiction of the courts of Queensland.</p>
+
+        <p>The Australian Consumer Law, as set out in Schedule 2 of the <em>Competition and Consumer Act 2010</em> (Cth), applies to these terms and to all services provided by UNDRGRND Movement to consumers in Australia. Nothing in these terms is intended to exclude, restrict, or modify any right or remedy that you may have under the Australian Consumer Law.</p>
+      </section>
+
+      <!-- ----------------------------------------------------------------
+           SECTION 10: COVID-19 and Health Policies
+      ----------------------------------------------------------------- -->
+      <section class="legal-section" id="section-10" aria-labelledby="s10heading">
+        <span class="legal-section__number" aria-hidden="true">10</span>
+        <h2 id="s10heading">COVID-19 and Health Policies</h2>
+
+        <div class="legal-quote">
+          <p id="covidPolicy">We maintain hygiene protocols in accordance with Queensland Health guidelines. Please do not attend class if you are unwell or experiencing COVID-19 symptoms.</p>
+        </div>
+
+        <p>The following health policies apply to all participants at all times:</p>
+
+        <ul>
+          <li><strong>Stay home if unwell:</strong> If you are experiencing any symptoms of illness, including but not limited to fever, cough, sore throat, or respiratory symptoms, you must not attend class. Please contact us to arrange a class credit.</li>
+          <li><strong>Queensland Health guidelines:</strong> All participants are required to comply with current Queensland Health guidelines relating to communicable diseases. These guidelines may change from time to time.</li>
+          <li><strong>Capacity limits:</strong> UNDRGRND Movement may implement reduced class capacity limits in response to public health requirements or studio safety considerations. Bookings will be managed accordingly.</li>
+          <li><strong>Online classes:</strong> In the event that in-person classes are required to move online due to public health orders or other circumstances, participants will be notified and class credits will be provided where online participation is not possible.</li>
+        </ul>
+      </section>
+
+      <!-- ----------------------------------------------------------------
+           SECTION 11: Changes to Terms
+      ----------------------------------------------------------------- -->
+      <section class="legal-section" id="section-11" aria-labelledby="s11heading">
+        <span class="legal-section__number" aria-hidden="true">11</span>
+        <h2 id="s11heading">Changes to Terms</h2>
+
+        <p>UNDRGRND Movement reserves the right to modify these Terms of Service at any time. When changes are made:</p>
+
+        <ul>
+          <li>The updated terms will be posted on this page with a new "Last Updated" date.</li>
+          <li>Material changes that significantly affect participant rights or obligations will be communicated to active clients via email prior to taking effect.</li>
+          <li>Your continued use of UNDRGRND Movement's services after updated terms have been posted constitutes your acceptance of the revised terms.</li>
+        </ul>
+
+        <p>If you do not agree with any changes to these terms, you may request deletion of your account and personal information by contacting us using the details in Section 12 below.</p>
+      </section>
+
+      <!-- ----------------------------------------------------------------
+           SECTION 12: Contact
+      ----------------------------------------------------------------- -->
+      <section class="legal-section" id="section-12" aria-labelledby="s12heading">
+        <span class="legal-section__number" aria-hidden="true">12</span>
+        <h2 id="s12heading">Contact</h2>
+
+        <p>If you have any questions about these Terms of Service, please contact us:</p>
+
+        <div class="legal-contact-block">
+          <div class="legal-contact-block__row">
+            <span class="legal-contact-block__label">Business</span>
+            <span class="legal-contact-block__value">UNDRGRND Movement</span>
+          </div>
+          <div class="legal-contact-block__row">
+            <span class="legal-contact-block__label">Address</span>
+            <span class="legal-contact-block__value" id="contactAddress">UNDRGRND Movement, Australia</span>
+          </div>
+          <div class="legal-contact-block__row">
+            <span class="legal-contact-block__label">Email</span>
+            <span class="legal-contact-block__value">
+              <a href="mailto:undrgrndgc@gmail.com" id="contactEmail">undrgrndgc@gmail.com</a>
+            </span>
+          </div>
+          <div class="legal-contact-block__row">
+            <span class="legal-contact-block__label">Phone</span>
+            <span class="legal-contact-block__value" id="contactPhone">Contact us by email</span>
+          </div>
+        </div>
+
+        <p>We aim to respond to all enquiries within two business days.</p>
+
+        <a href="#top" class="back-to-top" aria-label="Back to top of page">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+          Back to top
+        </a>
+      </section>
+
     </div>
-  </footer>
-  <script>
-    var burger=document.getElementById('burger'),mobileNav=document.getElementById('mobileNav');
-    if(burger){burger.addEventListener('click',function(){var o=mobileNav.classList.toggle('open');burger.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);});
-    mobileNav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mobileNav.classList.remove('open');burger.classList.remove('open');});});}
-    document.querySelectorAll('.faq__q').forEach(function(q){q.addEventListener('click',function(){var i=q.closest('.faq__item'),o=i.classList.contains('open');document.querySelectorAll('.faq__item').forEach(function(x){x.classList.remove('open');});if(!o)i.classList.add('open');});});
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12});
-    document.querySelectorAll('.section .container > *, .hero__copy, .hero__media').forEach(function(el){el.classList.add('reveal');io.observe(el);});
-  </script>
+    <!-- END LEGAL CONTENT -->
+
+  </div>
+</main>
+
+<!-- =========================================================================
+     FOOTER — copy contents of /components/footer-component.html here
+     ========================================================================= -->
+
+<!-- =========================================================================
+     PAGE-SPECIFIC JAVASCRIPT
+     ========================================================================= -->
+<script>
+(function () {
+  'use strict';
+
+  /* -------------------------------------------------------------------------
+     1. Load legal text and contact info from site-config.json
+  ------------------------------------------------------------------------- */
+  fetch('/site-config.json')
+    .then(function (res) { return res.json(); })
+    .then(function (config) {
+
+      var legal = config.legal || {};
+      var business = config.business || {};
+      var contact = business.contact || {};
+      var address = business.address || {};
+
+      /* Legal text blocks */
+      var waiverEl = document.getElementById('liabilityWaiver');
+      if (waiverEl && legal.liability_waiver) waiverEl.textContent = legal.liability_waiver;
+
+      var medEl = document.getElementById('medicalDisclaimer');
+      if (medEl && legal.medical_disclaimer) medEl.textContent = legal.medical_disclaimer;
+
+      var genEl = document.getElementById('generalDisclaimer');
+      if (genEl && legal.general_disclaimer) genEl.textContent = legal.general_disclaimer;
+
+      var covidEl = document.getElementById('covidPolicy');
+      if (covidEl && legal.covid_policy) covidEl.textContent = legal.covid_policy;
+
+      /* Contact info */
+      var emailEl = document.getElementById('contactEmail');
+      if (emailEl && contact.email) {
+        emailEl.href = 'mailto:' + contact.email;
+        emailEl.textContent = contact.email;
+      }
+
+      var phoneEl = document.getElementById('contactPhone');
+      if (phoneEl && contact.phone && contact.phone.indexOf('PLACEHOLDER') === -1) {
+        phoneEl.innerHTML = '<a href="tel:' + contact.phone.replace(/\s/g, '') + '">' + contact.phone + '</a>';
+      }
+
+      var addrEl = document.getElementById('contactAddress');
+      if (addrEl && address.street) {
+        addrEl.textContent = address.street + ', ' + address.suburb + ' ' + address.state + ' ' + address.postcode + ', ' + address.country;
+      }
+
+    })
+    .catch(function (err) {
+      console.warn('terms-of-service.html: site-config.json load error \u2014', err.message);
+    });
+
+  /* -------------------------------------------------------------------------
+     2. TOC active link on scroll
+  ------------------------------------------------------------------------- */
+  var sections = document.querySelectorAll('.legal-section');
+  var tocLinks = document.querySelectorAll('.toc__list a');
+
+  if ('IntersectionObserver' in window && sections.length && tocLinks.length) {
+    var tocObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var id = entry.target.getAttribute('id');
+          tocLinks.forEach(function (link) {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+
+    sections.forEach(function (section) { tocObserver.observe(section); });
+  }
+
+  /* -------------------------------------------------------------------------
+     3. Smooth scroll for TOC links and back-to-top
+  ------------------------------------------------------------------------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var targetId = anchor.getAttribute('href').slice(1);
+      var target = document.getElementById(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+}());
+</script>
+
+<!--
+  UNDRGRND Movement — Footer Component
+  File: /components/footer-component.html
+
+  Usage: Copy this entire block into any page <body>, as the last element before 
+<!-- Booking Modal -->
+<div id="bookingModal" role="dialog" aria-modal="true" aria-label="Book a Class" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.85);overflow-y:auto;">
+  <div style="position:relative;max-width:680px;margin:2rem auto;padding:1rem;">
+    <button id="bookingModalClose" aria-label="Close booking form" style="position:absolute;top:0.5rem;right:0.5rem;background:rgba(139,92,246,0.15);border:1px solid #8B5CF6;color:#fff;font-size:1.4rem;line-height:1;width:2.2rem;height:2.2rem;border-radius:50%;cursor:pointer;z-index:10000;display:flex;align-items:center;justify-content:center;">&times;</button>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdRMvUrAyMw6PVrSJvVjikBy_swYzT06MNeARSuOREnwmuHew/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" title="Book a Class at UNDRGRND Movement" style="border-radius:8px;background:#fff;">Loading&#8230;</iframe>
+  </div>
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('bookingModal');
+  var closeBtn = document.getElementById('bookingModalClose');
+  function openModal(e){
+    if(e){ e.preventDefault(); }
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  if(closeBtn){ closeBtn.addEventListener('click', closeModal); }
+  modal.addEventListener('click', function(e){ if(e.target === modal){ closeModal(); } });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeModal(); } });
+
+  /* ── Event delegation: catches all booking clicks including dynamically
+        rendered program cards (btn-book, cta-button, data-medical buttons) ── */
+  var BOOKING_LABELS = /^(book|enrol|enroll|register|sign.?up|join.?waitlist|reserve|get.?started|i.have.clearance)/i;
+  document.body.addEventListener('click', function(e){
+    var el = e.target;
+    // Walk up to find the clickable element (handles clicks on child spans/SVGs)
+    while(el && el !== document.body){
+      var tag = el.tagName ? el.tagName.toLowerCase() : '';
+      var cls = el.className || '';
+      var href = el.getAttribute ? (el.getAttribute('href') || '') : '';
+      var text = el.textContent ? el.textContent.trim() : '';
+      var isMedicalBtn = el.dataset && el.dataset.medical === 'true';
+
+      // Is this a booking element?
+      var isBookBtn = (cls.indexOf('btn-book') > -1) || (cls.indexOf('cta-button') > -1 && cls.indexOf('dance-booking-button') === -1 && BOOKING_LABELS.test(text));
+      var isBookLink = (tag === 'a') && (href === '#book') && BOOKING_LABELS.test(text);
+      var isMedical  = isMedicalBtn;
+
+      // Exclude nav and footer
+      var inNav    = el.closest && (el.closest('nav') || el.closest('.nav-menu') || el.closest('.nav-mobile-menu'));
+      var inFooter = el.closest && (el.closest('footer') || el.closest('.site-footer'));
+
+      if((isBookBtn || isBookLink || isMedical) && !inNav && !inFooter){
+        e.preventDefault();
+        openModal(null);
+        return;
+      }
+      el = el.parentElement;
+    }
+  });
+})();
+</script>
+
+  <script src="/js/layout.js"></script>
+  <script src="/js/booking-controller.js"></script>
+</body>
+
+<!-- =====================================================================
+     FOOTER STYLES (scoped to this component)
+     ===================================================================== -->
+
+
+<!-- =====================================================================
+     FOOTER HTML
+     NAP data populated from site-config.json via JavaScript fetch
+     ===================================================================== -->
+<div id="site-footer"></div>
+
+
 </body>
 </html>

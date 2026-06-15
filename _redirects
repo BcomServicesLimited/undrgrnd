@@ -1,18 +1,25 @@
-# UNDRGRND — redirects from the old (adults+kids) site to the kids-only rebuild
-# Old kids program pages -> closest new program
-/programs/kids-pole-foundations    /programs/pole-foundations          301
-/programs/kids-aerial-silks         /programs/aerial-foundations        301
-/programs/kids-aerial-yoga          /programs/aerial-yoga-foundations   301
-/programs/kids-yoga                 /programs/aerial-yoga-foundations   301
-/programs/kids-creative-dance       /programs                           301
-/programs/kids-dance-moves          /programs                           301
-/programs/kids-modern-contemporary  /programs                           301
-/programs/kids-pole                 /programs/pole-foundations          301
-# Everything else under /programs (old adult pages) -> programs overview
-/programs/*                         /programs                           301
-# Old hubs / retired sections -> home
-/kids                               /                                   301
-/adults                             /                                   301
-/timetable                          /enrol                              301
-/learn                              /                                   301
-/learn/*                            /                                   301
+# UNDRGRND Movement — 301 Redirects
+# Fixes dead program URLs found in Google Search Console (March 2026)
+
+# Old program page slugs → current page slugs
+/programs/aerial-silks.html                    /programs/aerial-silks-foundations 301
+/programs/aerial-yoga.html                     /programs/aerial-yoga-foundations  301
+/programs/choreography-fusion.html             /programs/choreography-fusion-foundations 301
+/programs/movement-dance.html                  /programs/movement-flow-foundations 301
+/programs/recovery-movement.html               /programs/recovery-movement-flow-foundations 301
+
+# Old yoga page names → Fusion Yoga Foundations
+/programs/modern-yoga.html                     /programs/fusion-yoga-foundations  301
+/programs/traditional-yoga.html                /programs/fusion-yoga-foundations  301
+/programs/yoga-fusion.html                     /programs/fusion-yoga-foundations  301
+
+# Removed program — redirect to adults page
+/programs/afro-groove-foundations.html         /adults                            301
+/programs/pole-fitness-foundations.html        /adults                            301
+
+# Homepage clean URL redirect (prevents index.html redirect issue)
+/index.html                          /                                                 301
+/timetable.html                                /enrol                             301
+/programs/pole-flow-foundations.html           /adults                            301
+/programs/pole-flow                            /adults                            301
+/programs/pole-fitness                         /adults                            301

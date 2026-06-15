@@ -65,7 +65,7 @@
       '<header class="site-nav" id="siteNav" role="banner">' +
         '<div class="nav-inner">' +
           '<a href="/" class="nav-logo" aria-label="UNDRGRND Movement — Home">' +
-            '<img src="/images/logo/logo-header.webp" alt="UNDRGRND Movement logo — dance and yoga studio Gold Coast" width="232" height="50" style="height:50px;width:auto;display:block;" loading="eager">' +
+            '<img src="/images/logo/logo-header.webp" alt="UNDRGRND Movement logo — dance and yoga studio Gold Coast" width="96" height="50" style="height:50px;width:auto;display:block;" loading="eager">' +
           '</a>' +
           '<ul class="nav-menu" id="navDesktopMenu" role="list" aria-label="Main navigation">' + menuItems('nav-menu__link') + '</ul>' +
           '<button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMobileMenu">' +
@@ -89,7 +89,7 @@
         '<div class="footer-main">' +
           '<div class="footer-col footer-col--brand">' +
             '<a href="/" class="footer-brand__logo" aria-label="UNDRGRND Movement — Home">' +
-              '<img src="/images/logo/logo-full.webp" alt="UNDRGRND Movement full logo — Gold Coast" width="232" height="50" style="height:50px;width:auto;display:block;" loading="lazy">' +
+              '<img src="/images/logo/logo-full.webp" alt="UNDRGRND Movement full logo — Gold Coast" width="96" height="50" style="height:50px;width:auto;display:block;" loading="lazy">' +
             '</a>' +
             '<p class="footer-brand__tagline">' + NAP.tagline + '</p>' +
           '</div>' +

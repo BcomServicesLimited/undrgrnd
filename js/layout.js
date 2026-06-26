@@ -21,7 +21,17 @@
   var MENU = [
     { label: 'Home',      href: '/' },
     { label: 'Adults',    href: '/adults' },
-    { label: 'Kids',      href: '/kids' },
+    { label: 'Kids',      href: '/kids', children: [
+        { label: 'Recreational Movement Programs', href: '/kids', children: [
+            { label: 'Kids Yoga',               href: '/programs/kids-yoga' },
+            { label: 'Kids Aerial Yoga',        href: '/programs/kids-aerial-yoga' },
+            { label: 'Kids Pole Fitness',       href: '/programs/kids-pole-foundations' },
+            { label: 'Kids Aerial Silks',       href: '/programs/kids-aerial-silks' },
+            { label: 'Urban Mix / Dance Moves', href: '/programs/kids-dance-moves' },
+            { label: 'Modern Contemporary',     href: '/programs/kids-modern-contemporary' },
+            { label: 'Creative Dance',          href: '/programs/kids-creative-dance' }
+          ] }
+      ] },
     { label: 'Enrol',     href: '/enrol' },
     { label: 'About',     href: '/about' },
     { label: 'Learn',     href: '/learn' },
@@ -45,12 +55,67 @@
     return path.replace(/\/$/, '') === href.replace(/\/$/, '');
   }
 
+  /* Desktop dropdown items — supports one level of nested flyout */
+  function dropdownItems(children) {
+    return children.map(function (c) {
+      if (c.children && c.children.length) {
+        var sub = c.children.map(function (g) {
+          return '<li><a href="' + g.href + '" class="nav-subdropdown__link">' + g.label + '</a></li>';
+        }).join('');
+        return '<li class="nav-dropdown__item has-subdropdown">' +
+               '<a href="' + c.href + '" class="nav-dropdown__link nav-dropdown__link--parent" aria-haspopup="true">' + c.label +
+               ' <span class="nav-caret nav-caret--right" aria-hidden="true">&#9656;</span></a>' +
+               '<ul class="nav-subdropdown" role="menu">' + sub + '</ul>' +
+               '</li>';
+      }
+      if (c.heading) {
+        return '<li class="nav-dropdown__heading"><a href="' + c.href + '">' + c.label + '</a></li>';
+      }
+      return '<li><a href="' + c.href + '" class="nav-dropdown__link">' + c.label + '</a></li>';
+    }).join('');
+  }
+
+  /* Mobile submenu — nested groups render as heading + indented links */
+  function mobileSubItems(children) {
+    return children.map(function (c) {
+      if (c.children && c.children.length) {
+        var inner = c.children.map(function (g) {
+          return '<li><a href="' + g.href + '" class="nav-mobile-submenu__link">' + g.label + '</a></li>';
+        }).join('');
+        return '<li class="nav-mobile-submenu__heading"><a href="' + c.href + '">' + c.label + '</a></li>' + inner;
+      }
+      if (c.heading) {
+        return '<li class="nav-mobile-submenu__heading"><a href="' + c.href + '">' + c.label + '</a></li>';
+      }
+      return '<li><a href="' + c.href + '" class="nav-mobile-submenu__link">' + c.label + '</a></li>';
+    }).join('');
+  }
+
   function menuItems(linkClass) {
+    var itemClass = linkClass.replace('__link', '__item');
+    var isMobile  = linkClass.indexOf('mobile') > -1;
+
     return MENU.map(function (m) {
       var active = isActive(m.href);
       var cls = linkClass + (active ? ' active' : '');
       var cur = active ? ' aria-current="page"' : '';
-      return '<li class="' + linkClass.replace('__link', '__item') + '">' +
+
+      /* Items with a submenu (e.g. Kids → Recreational → classes) */
+      if (m.children && m.children.length) {
+        if (isMobile) {
+          return '<li class="' + itemClass + '">' +
+                 '<a href="' + m.href + '" class="' + cls + '"' + cur + '>' + m.label + '</a>' +
+                 '<ul class="nav-mobile-submenu">' + mobileSubItems(m.children) + '</ul>' +
+                 '</li>';
+        }
+        return '<li class="' + itemClass + ' has-dropdown">' +
+               '<a href="' + m.href + '" class="' + cls + '"' + cur + ' aria-haspopup="true">' + m.label +
+               ' <span class="nav-caret" aria-hidden="true">&#9662;</span></a>' +
+               '<ul class="nav-dropdown" role="menu">' + dropdownItems(m.children) + '</ul>' +
+               '</li>';
+      }
+
+      return '<li class="' + itemClass + '">' +
              '<a href="' + m.href + '" class="' + cls + '"' + cur + '>' + m.label + '</a></li>';
     }).join('');
   }

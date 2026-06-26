@@ -129,9 +129,9 @@
       '</nav>' +
       '<header class="site-nav" id="siteNav" role="banner">' +
         '<div class="nav-inner">' +
-          '<a href="/" class="nav-logo" aria-label="UNDRGRND Movement — Integrated Movement Arts Academy — Home">' +
+          '<a href="/" class="nav-logo" aria-label="UNDRGRND Movement — Integrated Movement Arts — Home">' +
             '<img src="/images/logo/logo-header.webp" alt="UNDRGRND Movement logo — dance and yoga studio Gold Coast" width="96" height="50" style="height:50px;width:auto;display:block;" loading="eager">' +
-            '<span class="nav-logo__tagline">Integrated Movement Arts Academy</span>' +
+            '<span class="nav-logo__tagline">Integrated Movement Arts</span>' +
           '</a>' +
           '<ul class="nav-menu" id="navDesktopMenu" role="list" aria-label="Main navigation">' + menuItems('nav-menu__link') + '</ul>' +
           '<button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMobileMenu">' +
@@ -154,10 +154,10 @@
       '<footer class="site-footer" role="contentinfo" itemscope itemtype="https://schema.org/LocalBusiness">' +
         '<div class="footer-main">' +
           '<div class="footer-col footer-col--brand">' +
-            '<a href="/" class="footer-brand__logo" aria-label="UNDRGRND Movement — Integrated Movement Arts Academy — Home">' +
+            '<a href="/" class="footer-brand__logo" aria-label="UNDRGRND Movement — Integrated Movement Arts — Home">' +
               '<img src="/images/logo/logo-full.webp" alt="UNDRGRND Movement full logo — Gold Coast" width="96" height="50" style="height:50px;width:auto;display:block;" loading="lazy">' +
             '</a>' +
-            '<p class="footer-brand__academy">Integrated Movement Arts Academy</p>' +
+            '<p class="footer-brand__academy">Integrated Movement Arts</p>' +
             '<p class="footer-brand__tagline">' + NAP.tagline + '</p>' +
           '</div>' +
           '<div class="footer-col footer-col--links">' +

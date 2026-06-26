@@ -827,7 +827,7 @@ label {
     text-transform: uppercase;
     color: #A1A1A1;                            /* site-config: design.colors.text_gray */
     line-height: 1.35;
-    max-width: 12ch;                           /* two balanced lines beside the mark */
+    max-width: 14ch;                           /* two balanced lines beside the mark */
   }
 
   /* Decorative — hide below the mobile breakpoint so the header stays uncluttered */

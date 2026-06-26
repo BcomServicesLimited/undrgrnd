@@ -806,12 +806,33 @@ label {
     gap: 2rem;
   }
 
-  /* --- Logo --- */
+  /* --- Logo lockup (mark + descriptor) --- */
   .nav-logo {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    gap: 0.8rem;
     text-decoration: none;
     flex-shrink: 0;
+  }
+
+  /* Secondary descriptor: muted + divider keeps the logo the clear focal point */
+  .nav-logo__tagline {
+    padding-left: 0.8rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.18);
+    font-family: 'Outfit', Helvetica Neue, sans-serif; /* site-config: design.fonts.body */
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #A1A1A1;                            /* site-config: design.colors.text_gray */
+    line-height: 1.35;
+    max-width: 12ch;                           /* two balanced lines beside the mark */
+  }
+
+  /* Decorative — hide below the mobile breakpoint so the header stays uncluttered */
+  @media (max-width: 600px) {
+    .nav-logo__tagline { display: none; }
   }
 
   .nav-logo__title {
@@ -1324,6 +1345,15 @@ label {
     text-transform: lowercase;
     color: #A1A1A1;                           /* site-config: design.colors.text_gray */
     margin-top: 2px;
+  }
+
+  .footer-brand__academy {
+    font-family: 'Outfit', Helvetica Neue, sans-serif; /* site-config: design.fonts.body */
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;                           /* site-config: design.colors.text_white */
+    margin: -0.5rem 0 0.5rem;
   }
 
   .footer-brand__tagline {

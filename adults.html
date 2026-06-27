@@ -15,7 +15,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
   <!-- Global CSS -->
   <link rel="stylesheet" href="/css/global.css">
@@ -1021,9 +1021,10 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.undrgrnd.com.au/images/og-image.jpg">
+  <link rel="stylesheet" href="/css/theme-v2.css">
 </head>
 
-<body>
+<body class="v2">
 <!--
   UNDRGRND Movement — Navigation Component
   File: /components/nav-component.html
@@ -1056,38 +1057,17 @@
 <!-- =========================================================================
      1. HERO SECTION
      ========================================================================= -->
-<section class="page-hero" aria-label="Adult Programs — UNDRGRND Movement">
-  <div class="page-hero__bg" aria-hidden="true"></div>
-
-  <div class="page-hero__inner">
-
-    <div class="page-hero__content">
-      <span class="page-hero__eyebrow">Adult Programs</span>
-
-      <h1 class="page-hero__h1">Adult Movement Classes on the Gold Coast</h1>
-
-      <p class="page-hero__subheadline">Beginner-friendly programs for every body and every goal</p>
-
-      <p class="page-hero__location">
-        <!-- Lucide: map-pin -->
-        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-        Located on the Gold Coast, serving the Gold Coast
-      </p>
-
-      <div style="margin-top: 0.5rem;">
-        <a href="/enrol" class="cta-button">Enrol Now</a>
-      </div>
+<header class="v2-hero v2-hero--img" style="background-image:linear-gradient(180deg,rgba(22,22,24,0.45) 0%,rgba(22,22,24,0.10) 32%,rgba(22,22,24,0.22) 55%,rgba(22,22,24,0.58) 82%,#F2F2F4 100%),url('/images/hero/hero-adults.webp');" aria-label="Adult Programs — UNDRGRND Movement">
+  <div class="v2-hero__inner">
+    <span class="v2-eyebrow">Adult Programs</span>
+    <h1>Adult Movement Classes on the Gold&nbsp;Coast</h1>
+    <p>Beginner-friendly dance, pole, yoga, aerial and recovery classes for every body and every goal — across the Gold Coast.</p>
+    <div class="v2-btns">
+      <a href="/enrol" class="v2-btn v2-btn--primary">Enrol Now</a>
+      <a href="#programs" class="v2-btn v2-btn--ghost">View Classes</a>
     </div>
-
-    <!-- Hero image placeholder -->
-    <picture>
-              <source media="(max-width: 767px)" srcset="/images/hero/hero-adults-mobile.webp" type="image/webp">
-              <source media="(min-width: 768px)" srcset="/images/hero/hero-adults.webp" type="image/webp">
-              <img src="/images/hero/hero-adults.webp" alt="Adult movement class at UNDRGRND Movement studio, Surfers Paradise Gold Coast" loading="eager" width="1400" height="781" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
-            </picture>
-
   </div>
-</section>
+</header>
 
 <!-- =========================================================================
 <!-- =========================================================================

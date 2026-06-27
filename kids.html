@@ -15,7 +15,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
   <!-- Global CSS -->
   <link rel="stylesheet" href="/css/global.css">
@@ -1074,9 +1074,10 @@
 </script>
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.undrgrnd.com.au/images/og-image.jpg">
+  <link rel="stylesheet" href="/css/theme-v2.css">
 </head>
 
-<body>
+<body class="v2">
 <!--
   UNDRGRND Movement — Navigation Component
   File: /components/nav-component.html
@@ -1109,45 +1110,17 @@
 <!-- =========================================================================
      1. HERO SECTION
      ========================================================================= -->
-<section class="page-hero" aria-label="Kids Programs — UNDRGRND Movement">
-  <div class="page-hero__bg" aria-hidden="true"></div>
-
-  <div class="page-hero__inner">
-
-    <div class="page-hero__content">
-      <span class="page-hero__eyebrow">Kids Programs</span>
-
-      <h1 class="page-hero__h1">Kids Movement Classes on the Gold Coast</h1>
-
-      <p class="page-hero__subheadline">Building confidence, strength, and joy through movement</p>
-
-      <div class="page-hero__meta">
-        <span class="page-hero__tag">
-          <!-- Lucide: users -->
-          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          Programs for ages 6–10
-        </span>
-        <span class="page-hero__tag">
-          <!-- Lucide: map-pin -->
-          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          Gold Coast classes serving Gold Coast families
-        </span>
-      </div>
-
-      <div style="margin-top: 0.5rem;">
-        <a href="#programs" class="cta-button">View Kids Classes</a>
-      </div>
+<header class="v2-hero v2-hero--img" style="background-image:linear-gradient(180deg,rgba(22,22,24,0.45) 0%,rgba(22,22,24,0.10) 32%,rgba(22,22,24,0.22) 55%,rgba(22,22,24,0.58) 82%,#F2F2F4 100%),url('/images/hero/hero-kids.webp');" aria-label="Kids Programs — UNDRGRND Movement">
+  <div class="v2-hero__inner">
+    <span class="v2-eyebrow">Kids Programs</span>
+    <h1>Kids Movement Classes on the Gold&nbsp;Coast</h1>
+    <p>Building confidence, strength and joy through movement — fun, supportive dance, yoga, aerial and pole classes for kids across the Gold Coast.</p>
+    <div class="v2-btns">
+      <a href="#programs" class="v2-btn v2-btn--primary">View Kids Classes</a>
+      <a href="#enquiry" class="v2-btn v2-btn--ghost">Enquire Now</a>
     </div>
-
-    <!-- Hero image placeholder -->
-    <picture>
-              <source media="(max-width: 767px)" srcset="/images/hero/hero-kids-mobile.webp" type="image/webp">
-              <source media="(min-width: 768px)" srcset="/images/hero/hero-kids.webp" type="image/webp">
-              <img src="/images/hero/hero-kids.webp" alt="Kids movement class at UNDRGRND Movement studio, Surfers Paradise Gold Coast" loading="eager" width="1400" height="781" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
-            </picture>
-
   </div>
-</section>
+</header>
 
 <!-- =========================================================================
      1B. AGE BANDS SECTION

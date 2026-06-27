@@ -4,1407 +4,212 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Title & Meta Description -->
   <title>Dance, Pole &amp; Yoga Classes Gold Coast | UNDRGRND Movement Studio</title>
   <meta name="description" content="Gold Coast dance, pole fitness, yoga &amp; aerial classes at UNDRGRND Movement — beginner-friendly programs for every body, serving Surfers Paradise &amp; surrounding areas. Get started today.">
-
-  <!-- Canonical -->
   <link rel="canonical" href="https://www.undrgrnd.com.au/">
 
-  <!-- Favicon placeholders (replace with actual files before launch) -->
-  <!-- Google Fonts: Bebas Neue (display) + Outfit (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
-  <!-- Global CSS -->
   <link rel="stylesheet" href="/css/global.css">
-
-  <!-- Schema Generator (LocalBusiness schema injected via JS below) -->
   <script src="/js/schema-generator.js"></script>
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.undrgrnd.com.au/">
   <meta property="og:title" content="Dance, Pole &amp; Yoga Classes Gold Coast | UNDRGRND Movement">
-  <meta property="og:description" content="Gold Coast dance, pole fitness, yoga, aerial &amp; recovery classes for adults and kids at UNDRGRND Movement. Beginner-friendly, serving Surfers Paradise &amp; surrounding areas.">
+  <meta property="og:description" content="Gold Coast dance, pole fitness, yoga, aerial &amp; recovery classes for adults and kids at UNDRGRND Movement.">
   <meta property="og:image" content="https://www.undrgrnd.com.au/images/og-image.jpg">
 
-  <!-- Page-specific styles -->
-  <style>
-    /* -----------------------------------------------------------------------
-       HERO SECTION
-    ----------------------------------------------------------------------- */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      background-color: #0A0A0A; /* design.colors.dark_bg */
-    }
-
-    /* Animated radial gradient background */
-    .hero__bg {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      background:
-        radial-gradient(ellipse 80% 60% at 70% 50%, rgba(139, 92, 246, 0.18) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 40% at 20% 80%, rgba(236, 72, 153, 0.12) 0%, transparent 55%),
-        radial-gradient(ellipse 60% 50% at 50% 10%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
-      animation: heroBgPulse 8s ease-in-out infinite alternate;
-    }
-
-    @keyframes heroBgPulse {
-      0%   { opacity: 0.7; transform: scale(1); }
-      100% { opacity: 1;   transform: scale(1.05); }
-    }
-
-    .hero__inner {
-      position: relative;
-      z-index: 1;
-      max-width: 1400px;
-      margin-inline: auto;
-      padding: 6rem 5% 4rem;
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    @media (min-width: 1024px) {
-      .hero__inner {
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        padding: 8rem 5% 6rem;
-      }
-    }
-
-    /* Hero left — text */
-    .hero__content {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      max-width: 100%;
-      min-width: 0;
-    }
-
-    .hero__eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: #A78BFA; /* design.colors.accent_purple */
-    }
-
-    .hero__eyebrow::before {
-      content: '';
-      display: block;
-      width: 28px;
-      height: 2px;
-      background: linear-gradient(135deg, #8B5CF6, #EC4899);
-      border-radius: 2px;
-    }
-
-    .hero__h1 {
-      font-family: 'Bebas Neue', sans-serif; /* design.fonts.display */
-      font-size: clamp(2.5rem, 11vw, 5.5rem);
-      line-height: 1.0;
-      letter-spacing: 1px;
-      color: #FFFFFF;
-      margin: 0;
-      max-width: 100%;
-      overflow-wrap: break-word;
-    }
-
-    .hero__h1 span {
-      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: transparent;
-    }
-
-    .hero__subheadline {
-      font-family: 'Outfit', sans-serif;
-      font-size: clamp(1rem, 2vw, 1.25rem);
-      font-weight: 400;
-      color: #A1A1A1; /* design.colors.text_gray */
-      line-height: 1.6;
-      max-width: 480px;
-    }
-
-    .hero__location {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: #FFFFFF;
-    }
-
-    .hero__location svg {
-      width: 16px;
-      height: 16px;
-      stroke: #8B5CF6;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      flex-shrink: 0;
-    }
-
-    .hero__ctas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 0.5rem;
-    }
-
-    /* Hero CTA: allow the long term-aware booking label to wrap on mobile
-       instead of clipping (global .cta-button is white-space:nowrap). */
-    .hero__ctas .cta-button {
-      white-space: normal;
-      max-width: 100%;
-      text-align: center;
-    }
-
-    /* Hero right — image placeholder */
-    .hero__image-wrap {
-      position: relative;
-      height: 500px;
-      border-radius: 20px; /* design.effects.border_radius */
-      overflow: hidden;
-      border: 1px solid rgba(139, 92, 246, 0.2); /* design.effects.card_border */
-    }
-
-    @media (min-width: 1024px) {
-      .hero__image-wrap {
-        height: 600px;
-      }
-    }
-
-    /* Hero image — keep the dancer centred. On the single-column layout a
-       tall portrait crop of this wide image clipped her pose, so shorten the
-       frame (less horizontal cropping) and bias the crop a touch right to
-       balance the dark pillar on the left. */
-    .hero__img { object-position: center; }
-    @media (max-width: 1023px) {
-      .hero__image-wrap { height: 420px; }
-      .hero__img { object-position: 54% center; }
-    }
-
-    .hero__image-placeholder {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(236, 72, 153, 0.1) 50%, rgba(26, 26, 26, 0.9) 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .hero__image-placeholder svg {
-      width: 64px;
-      height: 64px;
-      stroke: rgba(139, 92, 246, 0.5);
-      fill: none;
-      stroke-width: 1;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .hero__image-placeholder p {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.85rem;
-      color: rgba(161, 161, 161, 0.7);
-      max-width: 280px;
-      line-height: 1.5;
-    }
-
-    /* -----------------------------------------------------------------------
-       WHY UNDRGRND SECTION
-    ----------------------------------------------------------------------- */
-    .why-section {
-      padding: 8rem 5%; /* design.spacing.section_padding */
-      background: #0A0A0A;
-    }
-
-    .why-section__header {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 4rem;
-    }
-
-    .why-section__subtitle {
-      font-size: 1.05rem;
-      color: #A1A1A1;
-      line-height: 1.7;
-      margin-top: 1rem;
-    }
-
-    .pillars-grid {
-      max-width: 1400px;
-      margin-inline: auto;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-
-    @media (min-width: 768px) {
-      .pillars-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .pillar-card {
-      background: #1A1A1A;
-      border: 1px solid rgba(139, 92, 246, 0.2);
-      border-radius: 20px;
-      padding: 3rem 2rem;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    .pillar-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(139, 92, 246, 0.5);
-      box-shadow: 0 20px 50px rgba(139, 92, 246, 0.15);
-    }
-
-    .pillar-card__icon {
-      width: 60px;
-      height: 60px;
-      margin: 0 auto 1.5rem;
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.1));
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(139, 92, 246, 0.25);
-    }
-
-    .pillar-card__icon svg {
-      width: 28px;
-      height: 28px;
-      stroke: #8B5CF6;
-      fill: none;
-      stroke-width: 1.75;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .pillar-card__title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.6rem;
-      letter-spacing: 1px;
-      color: #FFFFFF;
-      margin-bottom: 0.75rem;
-    }
-
-    .pillar-card__text {
-      font-size: 0.95rem;
-      color: #A1A1A1;
-      line-height: 1.65;
-    }
-
-    /* -----------------------------------------------------------------------
-       FEATURED PROGRAMS SECTION
-    ----------------------------------------------------------------------- */
-    .programs-section {
-      padding: 8rem 5%;
-      background: #0D0D0D;
-    }
-
-    .programs-section__header {
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto 4rem;
-    }
-
-    .programs-grid {
-      max-width: 1400px;
-      margin-inline: auto;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    @media (min-width: 768px) {
-      .programs-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .program-card {
-      background: #1A1A1A;
-      border: 1px solid rgba(139, 92, 246, 0.2);
-      border-radius: 20px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .program-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(139, 92, 246, 0.5);
-      box-shadow: 0 25px 60px rgba(139, 92, 246, 0.18);
-    }
-
-    .program-card__image {
-      height: 240px;
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(236, 72, 153, 0.15) 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    .program-card__image svg {
-      width: 48px;
-      height: 48px;
-      stroke: rgba(139, 92, 246, 0.6);
-      fill: none;
-      stroke-width: 1;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .program-card__image-label {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.78rem;
-      color: rgba(161, 161, 161, 0.6);
-      max-width: 220px;
-      line-height: 1.4;
-    }
-
-    .program-card__body {
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-      flex: 1;
-    }
-
-    .program-card__badge {
-      display: inline-block;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.3rem 0.85rem;
-      border-radius: 50px;
-      background: rgba(139, 92, 246, 0.15);
-      color: #A78BFA;
-      border: 1px solid rgba(139, 92, 246, 0.25);
-      width: fit-content;
-    }
-
-    .program-card__name {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.75rem;
-      letter-spacing: 1px;
-      color: #FFFFFF;
-      line-height: 1.1;
-      margin: 0;
-    }
-
-    .program-card__desc {
-      font-size: 0.93rem;
-      color: #A1A1A1;
-      line-height: 1.6;
-    }
-
-    .program-card__price {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.85rem;
-      color: #A1A1A1;
-      margin-top: auto;
-    }
-
-    .program-card__price strong {
-      color: #A78BFA;
-      font-size: 1.2rem;
-    }
-
-    .program-card__footer {
-      padding: 0 2rem 2rem;
-    }
-
-    .program-card__footer a {
-      display: inline-block;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: #8B5CF6;
-      text-decoration: none;
-      border-bottom: 1.5px solid rgba(139, 92, 246, 0.3);
-      padding-bottom: 2px;
-      transition: all 0.3s ease;
-    }
-
-    .program-card__footer a:hover {
-      color: #EC4899;
-      border-color: rgba(236, 72, 153, 0.5);
-    }
-
-    /* -----------------------------------------------------------------------
-       LOCATION SECTION
-    ----------------------------------------------------------------------- */
-    .location-section {
-      padding: 8rem 5%;
-      background: #0A0A0A;
-    }
-
-    .location-section__inner {
-      max-width: 1400px;
-      margin-inline: auto;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 3rem;
-    }
-
-    @media (min-width: 1024px) {
-      .location-section__inner {
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: start;
-      }
-    }
-
-    .location-section__content h2 {
-      margin-bottom: 1.5rem;
-    }
-
-    .location-section__text {
-      font-size: 1rem;
-      color: #A1A1A1;
-      line-height: 1.75;
-      margin-bottom: 1.25rem;
-    }
-
-    .location-section__approach {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      margin: 1.5rem 0;
-    }
-
-    .location-approach-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      font-size: 0.93rem;
-      color: #A1A1A1;
-      line-height: 1.5;
-    }
-
-    .location-approach-item svg {
-      width: 16px;
-      height: 16px;
-      stroke: #8B5CF6;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .location-section__address {
-      margin-top: 1.5rem;
-      padding: 1.25rem 1.5rem;
-      background: #1A1A1A;
-      border: 1px solid rgba(139, 92, 246, 0.2);
-      border-radius: 12px;
-      font-size: 0.9rem;
-      color: #A1A1A1;
-      line-height: 1.7;
-    }
-
-    .location-section__address strong {
-      color: #FFFFFF;
-      font-weight: 600;
-      display: block;
-      margin-bottom: 0.25rem;
-    }
-
-    .map-embed {
-      border-radius: 20px;
-      overflow: hidden;
-      border: 1px solid rgba(139, 92, 246, 0.2);
-      height: 420px;
-    }
-
-    .map-embed iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-      display: block;
-    }
-
-    /* -----------------------------------------------------------------------
-       SEO CONTENT SECTION
-    ----------------------------------------------------------------------- */
-    .seo-section {
-      padding: 8rem 5%;
-      background: #0D0D0D;
-    }
-
-    .seo-section__inner {
-      max-width: 900px;
-      margin-inline: auto;
-    }
-
-    .seo-section h2 {
-      margin-bottom: 2rem;
-    }
-
-    .seo-section h3 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.6rem;
-      letter-spacing: 1px;
-      color: #FFFFFF;
-      margin: 2.5rem 0 1rem;
-    }
-
-    .seo-section p {
-      font-size: 1rem;
-      color: #A1A1A1;
-      line-height: 1.8;
-      margin-bottom: 1.25rem;
-    }
-
-    .seo-section strong {
-      color: #FFFFFF;
-      font-weight: 600;
-    }
-
-    .seo-section__cta-text {
-      margin-top: 2.5rem;
-      padding: 2rem;
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.07));
-      border: 1px solid rgba(139, 92, 246, 0.2);
-      border-radius: 16px;
-      font-size: 1.05rem;
-      color: #FFFFFF;
-      line-height: 1.6;
-    }
-
-    .seo-section__cta-text a {
-      color: #A78BFA;
-      text-decoration: underline;
-      text-decoration-color: rgba(167, 139, 250, 0.4);
-      transition: color 0.3s ease;
-    }
-
-    .seo-section__cta-text a:hover {
-      color: #EC4899;
-    }
-
-    /* -----------------------------------------------------------------------
-       SCROLL ANIMATION
-    ----------------------------------------------------------------------- */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-
-    /* -----------------------------------------------------------------------
-       PRIVATE COACHING SECTION
-    ----------------------------------------------------------------------- */
-    .coaching-section {
-      padding: 8rem 5%;
-      background: #0D0D0D;
-    }
-    .coaching-section__inner {
-      max-width: 1400px;
-      margin-inline: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 2.5rem;
-    }
-    .coaching-section__header {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .coaching-section__body {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-      align-items: start;
-    }
-    @media (min-width: 768px) {
-      .coaching-section__body {
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
-      }
-    }
-    .coaching-section__image-wrap {
-      position: relative;
-      overflow: hidden;
-      border-radius: 16px;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-    }
-    .coaching-section__image-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .coaching-section__details {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .coaching-section__tagline {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: transparent;
-    }
-
-    .coaching-section__title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      line-height: 1.0;
-      letter-spacing: 1px;
-      color: #FFFFFF;
-      margin: 0;
-    }
-
-    .coaching-section__price {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #FFFFFF;
-      background: rgba(139, 92, 246, 0.12);
-      border: 1px solid rgba(139, 92, 246, 0.3);
-      border-radius: 12px;
-      padding: 0.6rem 1.2rem;
-      width: fit-content;
-    }
-
-    .coaching-section__price span {
-      font-size: 0.85rem;
-      font-weight: 400;
-      color: #A1A1A1;
-    }
-
-    .coaching-section__desc {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.05rem;
-      color: #A1A1A1;
-      line-height: 1.7;
-      max-width: 520px;
-    }
-
-    .coaching-section__cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #A78BFA;
-      text-decoration: none;
-      border: 1px solid rgba(139, 92, 246, 0.4);
-      border-radius: 50px;
-      padding: 0.8rem 1.8rem;
-      width: fit-content;
-      transition: all 0.3s ease;
-      margin-top: 0.5rem;
-    }
-
-    .coaching-section__cta:hover {
-      background: rgba(139, 92, 246, 0.12);
-      border-color: rgba(139, 92, 246, 0.7);
-      color: #FFFFFF;
-    }
-  </style>
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": [
-    "LocalBusiness",
-    "DanceSchool"
-  ],
-  "@id": "https://www.undrgrnd.com.au/#business",
-  "name": "UNDRGRND Movement",
-  "description": "Boutique movement studio on the Gold Coast offering beginner-friendly dance, pole fitness, yoga, and aerial classes for adults and kids on the Gold Coast.",
-  "url": "https://www.undrgrnd.com.au",
-  "telephone": "+61721402690",
-  "email": "undrgrndgc@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Gold Coast",
-    "addressRegion": "QLD",
-    "addressCountry": "AU"
-  },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "opens": "06:00",
-      "closes": "21:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Saturday",
-        "Sunday"
-      ],
-      "opens": "08:00",
-      "closes": "16:00"
-    }
-  ],
-  "priceRange": "$$",
-  "currenciesAccepted": "AUD",
-  "paymentAccepted": "Credit Card, Cash",
-  "areaServed": {
-    "@type": "City",
-    "name": "Gold Coast"
-  },
-  "sameAs": [
-    "https://www.undrgrnd.com.au"
-  ]
-}
-</script>
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://www.undrgrnd.com.au/images/og-image.jpg">
+  <link rel="stylesheet" href="/css/theme-v2.css">
 </head>
+<body class="v2">
 
-<body>
-<!--
-  UNDRGRND Movement — Navigation Component
-  File: /components/nav-component.html
+  <div id="site-nav"></div>
 
-  Usage: Copy this entire block into any page <body>, as the first element.
-  Dependencies:
-    - /css/global.css (must be loaded in <head>)
-    - site-config.json (navigation data loaded via fetch in <script> below)
-
-  Navigation data source: site-config.json → navigation.main_menu, navigation.cta_button
--->
-
-<!-- =====================================================================
-     NAV STYLES (scoped to this component)
-     ===================================================================== -->
-
-
-<!-- =====================================================================
-     NAV HTML
-     ===================================================================== -->
-
-<!-- Full-screen overlay (mobile) -->
-<div id="site-nav"></div>
-
-
-<!-- =========================================================================
-     NAVIGATION (inline from /components/nav-component.html)
-     ========================================================================= -->
-<!-- NAV_COMPONENT_PLACEHOLDER -->
-<!-- Copy contents of /components/nav-component.html here -->
-
-<!-- =========================================================================
-     1. HERO SECTION
-     ========================================================================= -->
-<section class="hero" aria-label="Hero — UNDRGRND Movement">
-  <div class="hero__bg" aria-hidden="true"></div>
-
-  <div class="hero__inner">
-
-    <!-- Left: Text content -->
-    <div class="hero__content">
-
-      <span class="hero__eyebrow">Gold Coast Movement Space</span>
-
-      <h1 class="hero__h1">
-        Gold Coast's<br>
-        <span>UNDRGRND</span><br>
-        Movement Revolution
-      </h1>
-
-      <!-- Subheadline: site-config.json project.tagline -->
-      <p class="hero__subheadline" id="heroTagline">
-        Foundational movement for body and mind
-      </p>
-
-      <!-- Location: site-config.json business.address -->
-      <p class="hero__location">
-        <!-- Lucide: map-pin -->
-        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-        <span>UNDRGRND Movement</span>
-      </p>
-
-      <!-- CTAs -->
-      <div class="hero__ctas">
-        <a href="#choose" class="cta-button">Find Your Class</a>
-        <a href="#" class="cta-secondary dance-booking-button" target="_blank" rel="noopener">Buy Now</a>
+  <!-- ===================== FULL-SCREEN HERO SLIDER ===================== -->
+  <header class="v2-hero">
+    <div class="v2-slides" id="heroSlides">
+      <div class="v2-slide is-active" style="background-image:url('/images/hero/hero-home.webp')"></div>
+      <div class="v2-slide" style="background-image:url('/images/hero/kids-dance-moves.webp')"></div>
+      <div class="v2-slide" style="background-image:url('/images/hero/hero-adults.webp')"></div>
+      <div class="v2-slide" style="background-image:url('/images/hero/kids-aerial-silks.webp')"></div>
+    </div>
+    <div class="v2-hero__scrim"></div>
+    <div class="v2-hero__inner">
+      <span class="v2-eyebrow">Gold Coast Movement Space</span>
+      <h1>Movement for every body</h1>
+      <p>Foundational movement for body and mind — beginner-friendly dance, pole, yoga and aerial classes for kids and adults across the Gold Coast.</p>
+      <div class="v2-btns">
+        <a class="v2-btn v2-btn--primary" href="/enrol">Enrol Now</a>
+        <a class="v2-btn v2-btn--ghost" href="#choose">Explore Classes</a>
       </div>
+    </div>
+    <div class="v2-dots" id="heroDots"></div>
+  </header>
 
+  <!-- ===================== LIGHT → GREY FLOW ===================== -->
+  <div class="v2-flow">
+
+    <section class="v2-sec v2-sec--center" id="choose">
+      <div class="v2-head">
+        <span class="v2-label">Find Your Fit</span>
+        <h2>Who's Moving?</h2>
+        <p class="lead">Pick where to start — whether you're moving for yourself or booking for your child. Every class is beginner-friendly.</p>
+      </div>
+    </section>
+    <div class="v2-grid2">
+      <a class="v2-card" href="/adults">
+        <div class="v2-card__img" style="background-image:url('/images/hero/hero-adults.webp')"></div>
+        <div class="v2-card__body"><span class="v2-pill">For Adults</span><h3>Adult Classes</h3>
+          <p>Dance, pole, yoga &amp; aerial — supportive, beginner-friendly classes for every body.</p>
+          <span class="more">Explore adult classes &rarr;</span></div>
+      </a>
+      <a class="v2-card" href="/kids">
+        <div class="v2-card__img" style="background-image:url('/images/hero/hero-kids.webp')"></div>
+        <div class="v2-card__body"><span class="v2-pill">For Kids</span><h3>Kids Classes</h3>
+          <p>Fun, confidence-building dance &amp; movement classes for children.</p>
+          <span class="more">Explore kids classes &rarr;</span></div>
+      </a>
     </div>
 
-    <!-- Right: Hero image placeholder -->
-    <div class="hero__image-wrap" aria-hidden="true">
-      <picture>
-        <source media="(max-width: 767px)" srcset="/images/hero/hero-home-mobile.webp" type="image/webp">
-        <source media="(min-width: 768px)" srcset="/images/hero/hero-home.webp" type="image/webp">
-        <img class="hero__img" src="/images/hero/hero-home.webp" alt="Adult dancer in dark UNDRGRND Movement studio, Surfers Paradise Gold Coast" loading="eager" width="1400" height="781" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
-      </picture>
-    </div>
-
-  </div>
-</section>
-
-<!-- =========================================================================
-     2. AUDIENCE CHOOSER — "Who's moving?" (helps visitors choose fast)
-     ========================================================================= -->
-<section class="choose-section reveal" id="choose" aria-labelledby="chooseHeading">
-  <div class="choose-section__header">
-    <span class="section-label">Find Your Fit</span>
-    <h2 id="chooseHeading">Who's Moving?</h2>
-    <p>Pick where to start — whether you're moving for yourself or booking for your child. Every class is beginner-friendly.</p>
-  </div>
-  <div class="choose-grid">
-    <a class="choose-card" href="/adults">
-      <div class="choose-card__img">
-        <img src="/images/hero/hero-adults.webp" alt="Adult movement class at UNDRGRND Movement Gold Coast" loading="lazy" width="800" height="450">
+    <section class="v2-sec v2-sec--center">
+      <div class="v2-head">
+        <span class="v2-label">Our Philosophy</span>
+        <h2>Why UNDRGRND Movement?</h2>
+        <p class="lead">Foundational movement for body and mind. Not competition. Not performance pressure. Personal transformation only.</p>
       </div>
-      <div class="choose-card__body">
-        <h3>For Adults</h3>
-        <p>Dance, pole, yoga &amp; aerial — supportive, beginner-friendly classes for every body.</p>
-        <span class="choose-card__cta">Explore adult classes &rarr;</span>
-      </div>
-    </a>
-    <a class="choose-card" href="/kids">
-      <div class="choose-card__img">
-        <img src="/images/hero/hero-kids.webp" alt="Kids movement class at UNDRGRND Movement Gold Coast" loading="lazy" width="800" height="450">
-      </div>
-      <div class="choose-card__body">
-        <h3>For Kids</h3>
-        <p>Fun, confidence-building dance &amp; movement classes for children aged 6&ndash;10.</p>
-        <span class="choose-card__cta">Explore kids classes &rarr;</span>
-      </div>
-    </a>
-  </div>
-</section>
-
-<!-- =========================================================================
-     3. WHY UNDRGRND SECTION
-     ========================================================================= -->
-<section class="why-section reveal" aria-labelledby="whyHeading">
-  <div class="why-section__header">
-    <span class="section-label">Our Philosophy</span>
-    <h2 id="whyHeading">Why UNDRGRND Movement?</h2>
-    <!-- Subtitle: site-config.json philosophy.mission -->
-    <p class="why-section__subtitle" id="whyMission">
-      UNDRGRND Movement stands for foundational movement for body and mind. Not competition. Not performance pressure. Personal transformation only.
-    </p>
-  </div>
-
-  <div class="pillars-grid">
-
-    <!-- Pillar 1: Foundation -->
-    <div class="pillar-card reveal reveal-delay-1">
-      <div class="pillar-card__icon" aria-hidden="true">
-        <!-- Lucide: layers -->
+    </section>
+    <div class="v2-pillars">
+      <div class="v2-pillar">
         <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+        <h3>Foundation</h3><p>Every journey starts with the basics — strong foundations so your body grows with confidence and lasting strength.</p>
       </div>
-      <h3 class="pillar-card__title">Foundation</h3>
-      <p class="pillar-card__text">Every journey starts with the basics. We build strong movement foundations so your body can grow with confidence, reducing injury and building lasting strength.</p>
-    </div>
-
-    <!-- Pillar 2: Recovery -->
-    <div class="pillar-card reveal reveal-delay-2">
-      <div class="pillar-card__icon" aria-hidden="true">
-        <!-- Lucide: heart -->
+      <div class="v2-pillar">
         <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        <h3>Recovery</h3><p>Movement is medicine. A trauma-informed, recovery-focused approach that meets your body where it is — at your own pace.</p>
       </div>
-      <h3 class="pillar-card__title">Recovery</h3>
-      <p class="pillar-card__text">Movement is medicine. Our trauma-informed, recovery-focused approach supports bodies returning from injury, stress, or long periods of inactivity — at your own pace.</p>
-    </div>
-
-    <!-- Pillar 3: Expression -->
-    <div class="pillar-card reveal reveal-delay-3">
-      <div class="pillar-card__icon" aria-hidden="true">
-        <!-- Lucide: zap -->
+      <div class="v2-pillar">
         <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-      </div>
-      <h3 class="pillar-card__title">Expression</h3>
-      <p class="pillar-card__text">Dance, aerial, and movement arts are powerful tools for self-expression. We create a safe, inclusive space where every body can discover its own language of movement.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- =========================================================================
-     4. FEATURED PROGRAMS
-     ========================================================================= -->
-<section class="programs-section reveal" id="programs" aria-labelledby="programsHeading">
-  <div class="programs-section__header">
-    <span class="section-label">Featured Programs</span>
-    <h2 id="programsHeading">Start Your Movement Journey</h2>
-  </div>
-
-  <!-- Program cards: hero_program: true from site-config.json -->
-  <div class="programs-grid" id="programsGrid">
-
-    <!-- Movement Flow - Foundations — site-config.json programs.adults.dance[1] -->
-    <article class="program-card reveal reveal-delay-1">
-      <div class="program-card__image" style="padding:0;overflow:hidden;" aria-hidden="true">
-        <picture style="width:100%;height:100%;display:block;">
-          <source media="(max-width: 767px)" srcset="/images/hero/movement-flow-foundations-mobile.webp" type="image/webp">
-          <source media="(min-width: 768px)" srcset="/images/hero/movement-flow-foundations.webp" type="image/webp">
-          <img src="/images/hero/movement-flow-foundations.webp" alt="Movement flow foundations class at UNDRGRND Movement Gold Coast" loading="lazy" width="800" height="450" style="width:100%;height:100%;object-fit:cover;display:block;">
-        </picture>
-      </div>
-      <div class="program-card__body">
-        <span class="program-card__badge">Dance</span>
-        <h3 class="program-card__name">Movement Flow - Foundations</h3>
-        <p class="program-card__desc">Move, explore, and reconnect with your body through natural, flowing movement</p>
-        <p class="program-card__price"><strong>$35</strong> per class</p>
-      </div>
-      <div class="program-card__footer">
-        <a href="/programs/movement-flow-foundations">Learn More &rarr;</a>
-      </div>
-    </article>
-
-
-    <!-- Fusion Yoga – Foundations — site-config.json programs.adults.yoga[0] -->
-    <article class="program-card reveal reveal-delay-3">
-      <div class="program-card__image" style="padding:0;overflow:hidden;" aria-hidden="true">
-        <picture style="width:100%;height:100%;display:block;">
-          <source media="(max-width: 767px)" srcset="/images/hero/fusion-yoga-foundations-mobile.webp" type="image/webp">
-          <source media="(min-width: 768px)" srcset="/images/hero/fusion-yoga-foundations.webp" type="image/webp">
-          <img src="/images/hero/fusion-yoga-foundations.webp" alt="Fusion yoga class at UNDRGRND Movement, Gold Coast" loading="lazy" width="800" height="450" style="width:100%;height:100%;object-fit:cover;display:block;">
-        </picture>
-      </div>
-      <div class="program-card__body">
-        <span class="program-card__badge">Yoga</span>
-        <h3 class="program-card__name">Fusion Yoga – Foundations</h3>
-        <p class="program-card__desc">Traditional yoga blended with contemporary movement for a dynamic, accessible practice</p>
-        <p class="program-card__price"><strong>$35</strong> per class</p>
-      </div>
-      <div class="program-card__footer">
-        <a href="/programs/fusion-yoga-foundations">Learn More &rarr;</a>
-      </div>
-    </article>
-
-
-  </div>
-</section>
-
-<!-- =========================================================================
-     5. PRIVATE 1:1 COACHING SECTION
-     ========================================================================= -->
-<section class="coaching-section reveal" aria-labelledby="coachingHeading">
-  <div class="coaching-section__inner">
-    <!-- Header: label + title above everything -->
-    <div class="coaching-section__header">
-      <span class="section-label">One-on-One</span>
-      <p class="coaching-section__tagline">Body Control &bull; Flow &bull; Confidence</p>
-      <h2 class="coaching-section__title" id="coachingHeading">1:1 Movement Coaching &mdash; Personalised for Women</h2>
-    </div>
-    <!-- Body: image left, details right -->
-    <div class="coaching-section__body">
-      <div class="coaching-section__image-wrap reveal reveal-delay-1">
-        <img
-          src="/images/private-coaching.webp"
-          alt="Private 1:1 movement coaching session at UNDRGRND Movement, Gold Coast"
-          loading="lazy"
-          width="1400"
-          height="788"
-        >
-      </div>
-      <div class="coaching-section__details reveal reveal-delay-2">
-        <div class="coaching-section__price">
-          $250 <span>per session</span>
-        </div>
-        <p class="coaching-section__desc">Private movement coaching designed for individuals serious about improving body control, flow, and confidence. Each session is structured, focused, and tailored to your level, with hands-on guidance and clear progression.</p>
-        <a href="/contact" class="coaching-section__cta">Available on Request &rarr;</a>
+        <h3>Expression</h3><p>A safe, inclusive space where every body can discover its own language of movement through dance and aerial arts.</p>
       </div>
     </div>
-  </div>
-</section>
-<!-- =========================================================================
-     6. LOCATION SECTION
-     ========================================================================= -->
-<section class="location-section reveal" aria-labelledby="locationHeading">
-  <div class="location-section__inner">
 
-    <!-- Text content -->
-    <div class="location-section__content">
-      <span class="section-label">Find Us</span>
-      <h2 id="locationHeading">Movement Beyond Four Walls</h2>
+    <div class="v2-bleed" style="background-image:url('/images/hero/kids-dance-moves.webp')"></div>
 
-      <!-- site-config.json philosophy.unique_approach -->
-      <p class="location-section__text">
-        UNDRGRND Movement isn't confined to a single space. Our classes run across multiple environments — from our UNDRGRND Movement studio, to the parks and beaches of the Gold Coast — because we believe movement should be as free as the people who practice it.
-      </p>
-
-      <div class="location-section__approach">
-        <div class="location-approach-item">
-          <!-- Lucide: check -->
-          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          Classes held in studio, park, beach, and specialised spaces
-        </div>
-        <div class="location-approach-item">
-          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          Focus on individual ability and health condition
-        </div>
-        <div class="location-approach-item">
-          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          Trauma-informed movement practices
-        </div>
-        <div class="location-approach-item">
-          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          Collaborative programs with registered counsellors
-        </div>
+    <section class="v2-sec v2-sec--center">
+      <div class="v2-head">
+        <span class="v2-label">Featured Programs</span>
+        <h2>Start Your Movement Journey</h2>
       </div>
-
-      <address class="location-section__address" style="font-style: normal; line-height: 1.8;">
-        <strong>UNDRGRND Movement</strong><br>
-        Surfers Paradise &amp; surrounding areas &middot; Gold Coast<br>
-        <span style="color:#A1A1A1;font-size:0.92rem;">Class locations are flexible — confirmed when you get in touch.</span>
-      </address>
+    </section>
+    <div class="v2-grid3">
+      <a class="v2-card" href="/programs/movement-flow-foundations">
+        <div class="v2-card__img v2-card__img--sm" style="background-image:url('/images/hero/movement-flow-foundations.webp')"></div>
+        <div class="v2-card__body"><span class="v2-pill">Dance</span><h3>Movement Flow</h3>
+          <p>Move, explore and reconnect with your body through natural, flowing movement.</p>
+          <p class="price">$35 <span style="font-weight:300;color:var(--v2-muted)">per class</span></p>
+          <span class="more">Learn more &rarr;</span></div>
+      </a>
+      <a class="v2-card" href="/programs/fusion-yoga-foundations">
+        <div class="v2-card__img v2-card__img--sm" style="background-image:url('/images/hero/fusion-yoga-foundations.webp')"></div>
+        <div class="v2-card__body"><span class="v2-pill">Yoga</span><h3>Fusion Yoga</h3>
+          <p>Build strength, flexibility and calm in a welcoming foundations class.</p>
+          <p class="price">$35 <span style="font-weight:300;color:var(--v2-muted)">per class</span></p>
+          <span class="more">Learn more &rarr;</span></div>
+      </a>
+      <a class="v2-card" href="/programs/kids-creative-dance">
+        <div class="v2-card__img v2-card__img--sm" style="background-image:url('/images/hero/kids-creative-dance.webp')"></div>
+        <div class="v2-card__body"><span class="v2-pill">Kids</span><h3>Creative Dance</h3>
+          <p>Imaginative, playful classes that build coordination and a love of movement.</p>
+          <p class="price">$35 <span style="font-weight:300;color:var(--v2-muted)">per class</span></p>
+          <span class="more">Learn more &rarr;</span></div>
+      </a>
     </div>
 
-  </div>
-</section>
-
-<!-- =========================================================================
-     6. SEO CONTENT SECTION
-     ========================================================================= -->
-<section class="seo-section reveal" aria-labelledby="seoHeading">
-  <div class="seo-section__inner">
-
-    <h2 id="seoHeading">Gold Coast's Premier Dance School and Yoga Studio</h2>
-
-    <p>
-      <strong>UNDRGRND Movement</strong> is Gold Coast's underground movement revolution — a movement community across Surfers Paradise and the wider Gold Coast dedicated to foundational movement for every body. Whether you are stepping onto a dance floor for the first time, returning to movement after injury, or looking for a creative physical practice that goes beyond the ordinary gym, UNDRGRND Movement offers a home for your journey. UNDRGRND Movement serves the Gold Coast community with classes in dance, pole fitness, yoga, aerial arts, and recovery movement.
-    </p>
-
-    <h3>A Dance School Built on Foundation, Not Performance</h3>
-
-    <p>
-      Most dance schools on the Gold Coast are built around performance and competition. UNDRGRND Movement is different. Our philosophy is rooted in personal transformation — building the kind of foundational movement literacy that changes how you live in your body every day. Our Gold Coast classes welcomes complete beginners, people returning from injury, and anyone who has ever felt that movement spaces were not built for them.
-    </p>
-
-    <p>
-      Our adult dance programs include <strong>Booty Burn Dance – Foundations</strong>, a targeted lower body strength and dance conditioning class, and <strong>Movement Flow - Foundations</strong>, a beginner-friendly class built around natural, flowing movement sequences. Both programs build coordination, body confidence, and strength through simple, repeatable movement patterns. No prior dance experience is required. Classes are held on the Gold Coast and are open to adults across the Gold Coast, including Surfers Paradise, Broadbeach, Bundall, and Main Beach.
-    </p>
-
-    <h3>Pole Fitness on the Gold Coast — Safe, Structured, and Empowering</h3>
-
-    <p>
-      Pole fitness is one of the most complete full-body workouts available, combining strength, flexibility, coordination, and artistry. Our Gold Coast pole classes teach grip techniques, body positioning, basic spins, and safety protocols in a structured, beginner-friendly way. Students progress at their own pace through our Pole Strength and Movement program as their confidence and ability grow.
-    </p>
-
-    <p>
-      Our Gold Coast classes provides a safe, supportive environment for pole fitness training. We believe that every person who walks through our doors deserves patient, expert instruction and a community that celebrates progress over perfection. Our Gold Coast pole fitness classes are open to adults of all fitness levels, and no prior experience is necessary to begin.
-    </p>
-
-    <h3>Yoga Classes on the Gold Coast — Traditional, Modern, and Aerial</h3>
-
-    <p>
-      UNDRGRND Movement offers a range of yoga classes on the Gold Coast to suit every preference and experience level. Our yoga classes include <strong>Fusion Yoga - Foundations</strong>, which blends traditional yoga with contemporary movement for a dynamic, accessible practice; and <strong>Aerial Yoga - Foundations</strong> (coming soon), where students experience yoga suspended in silk hammocks for a unique, decompressive practice.
-    </p>
-
-    <p>
-      Our Gold Coast yoga studio is designed for all levels. Whether you are a complete beginner exploring yoga for the first time or an experienced practitioner looking for a fresh approach, our Surfers Paradise classes provide a welcoming, non-competitive environment. Yoga at UNDRGRND Movement is about connecting body and mind — not achieving the perfect pose.
-    </p>
-
-    <h3>Aerial Arts on the Gold Coast — Silks and Aerial Yoga</h3>
-
-    <p>
-      Aerial arts are among the most physically and creatively rewarding movement practices available. Our <strong>Aerial Silks - Foundations</strong> program teaches students to climb, wrap, and create stunning shapes using suspended fabric. This beginner-friendly class on the Gold Coast builds upper body strength, core stability, flexibility, and spatial awareness in a safe, structured environment. No prior experience is required — our instructors guide every student through each skill progression with individual attention and spotting.
-    </p>
-
-    <p>
-      For younger students, our <strong>Kids Aerial Silks</strong> and <strong>Kids Aerial Yoga</strong> programs bring the magic of aerial arts to children aged 8 to 16. These Gold Coast kids' aerial classes are taught with a strong emphasis on safety, fun, and age-appropriate skill development. Gold Coast families across the Gold Coast trust UNDRGRND Movement to provide high-quality, supervised aerial training for their children.
-    </p>
-
-    <h3>Recovery Movement — Specialised Classes for Rehabilitation</h3>
-
-    <p>
-      UNDRGRND Movement is one of the few Gold Coast studios to offer a dedicated <strong>Recovery Movement Flow - Foundations</strong> program. This specialised class is designed for individuals recovering from injury, surgery, or physical and emotional stress. Using slow, mindful movement with controlled range of motion, the program supports a safe return to physical activity for people who have been inactive for extended periods.
-    </p>
-
-    <p>
-      Medical clearance from a healthcare provider is required before participating in Recovery Movement classes. This requirement exists to protect your safety and ensure that your instructor can tailor the class to your specific needs. UNDRGRND Movement works collaboratively with registered counsellors and healthcare professionals to provide a truly integrated approach to movement and rehabilitation on the Gold Coast.
-    </p>
-
-    <h3>Kids Dance and Movement Classes on the Gold Coast</h3>
-
-    <p>
-      UNDRGRND Movement offers a comprehensive range of kids' classes for children aged 4 to 16 across the Gold Coast. Our children's programs include <strong>Creative Dance - Foundations</strong> for ages 4 to 7, <strong>Dance Moves - Foundations</strong> for hip hop and urban styles, <strong>Contemporary Dance - Foundations</strong> for expressive movement, <strong>Kids Yoga - Foundations</strong>, <strong>Kids Aerial Yoga - Foundations</strong> (coming soon), <strong>Kids Aerial Silks - Foundations</strong> (coming soon), and <strong>Pole Fitness Kids - Foundations</strong> (coming soon) — taught in a gymnastics style focused on strength, coordination, and safety.
-    </p>
-
-    <p>
-      All Gold Coast kids' classes at UNDRGRND Movement are taught by qualified instructors in a safe, supervised environment. Our Gold Coast classes is conveniently located for families across the Gold Coast, including Surfers Paradise, Broadbeach, and surrounding suburbs. Term packages and casual drop-in options are available.
-    </p>
-
-    <h3>Movement Beyond the Studio — Gold Coast's Multi-Environment Approach</h3>
-
-    <p>
-      One of the things that makes UNDRGRND Movement unique on the Gold Coast is our multi-environment approach to movement. Classes are not confined to the UNDRGRND Movement studio. We also run sessions in local parks and on the beaches of the Gold Coast — because we believe that movement should be as natural and free as the environment around us. This approach is particularly powerful for recovery movement and yoga, where the natural environment adds an additional dimension of calm and connection.
-    </p>
-
-    <p>
-      Our Gold Coast movement studio serves students from across the Gold Coast, Surfers Paradise, Broadbeach, Bundall, Main Beach, and surrounding areas. Whether you are looking for a dance school, a yoga studio, aerial classes, or a recovery movement program, UNDRGRND Movement on the Gold Coast is your home for foundational movement on the Gold Coast.
-    </p>
-
-    <div class="seo-section__cta-text">
-      Ready to start your movement journey? <a href="/enrol">browse our classes &amp; enrol</a> or <a href="/contact">contact us today</a>.
+    <!-- 1:1 Coaching -->
+    <section class="v2-sec v2-sec--center">
+      <div class="v2-head">
+        <span class="v2-label">One-on-One</span>
+        <h2>1:1 Movement Coaching</h2>
+      </div>
+    </section>
+    <div class="v2-grid2" style="align-items:center;">
+      <div style="border-radius:4px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,0.08);">
+        <img src="/images/private-coaching.webp" alt="Private 1:1 movement coaching session at UNDRGRND Movement, Gold Coast" loading="lazy" width="1400" height="788" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div>
+        <p class="v2-pill">Body Control · Flow · Confidence</p>
+        <p style="font-size:2.2rem;font-weight:700;color:var(--v2-text);margin-bottom:0.75rem;">$250 <span style="font-weight:300;color:var(--v2-muted);font-size:1rem;">per session</span></p>
+        <p style="color:var(--v2-muted);font-weight:300;line-height:1.8;margin-bottom:1.5rem;">Private movement coaching designed for individuals serious about improving body control, flow, and confidence. Each session is structured, focused, and tailored to your level, with hands-on guidance and clear progression.</p>
+        <a href="/contact" class="v2-btn v2-btn--dark">Available on Request</a>
+      </div>
     </div>
 
+    <!-- Location -->
+    <section class="v2-sec v2-sec--center">
+      <div class="v2-head">
+        <span class="v2-label">Find Us</span>
+        <h2>Movement Beyond Four Walls</h2>
+        <p class="lead">UNDRGRND Movement isn't confined to a single space. Our classes run across multiple environments — from our studio to the parks and beaches of the Gold Coast — because movement should be as free as the people who practice it. Class locations are flexible and confirmed when you get in touch.</p>
+      </div>
+    </section>
+
+    <!-- SEO content -->
+    <section class="v2-sec">
+      <div class="v2-prose">
+        <h2 style="text-align:center;">Gold Coast's Premier Dance School and Yoga Studio</h2>
+        <p><strong>UNDRGRND Movement</strong> is Gold Coast's underground movement revolution — a community across Surfers Paradise and the wider Gold Coast dedicated to foundational movement for every body. Whether you are stepping onto a dance floor for the first time, returning to movement after injury, or looking for a creative physical practice beyond the ordinary gym, UNDRGRND Movement offers a home for your journey — with classes in dance, pole fitness, yoga, aerial arts, and recovery movement.</p>
+        <h3>A Dance School Built on Foundation, Not Performance</h3>
+        <p>Most dance schools on the Gold Coast are built around performance and competition. UNDRGRND Movement is different. Our philosophy is rooted in personal transformation — building the foundational movement literacy that changes how you live in your body every day. Our classes welcome complete beginners, people returning from injury, and anyone who has ever felt that movement spaces were not built for them.</p>
+        <h3>Pole, Yoga &amp; Aerial — Safe, Structured, Empowering</h3>
+        <p>Our beginner-friendly Gold Coast classes span pole fitness, Fusion Yoga, and Aerial Silks — building strength, flexibility, coordination, and artistry at your own pace, with patient, expert instruction and a community that celebrates progress over perfection. No prior experience is necessary to begin.</p>
+        <h3>Recovery Movement — Specialised Classes for Rehabilitation</h3>
+        <p>UNDRGRND Movement is one of the few Gold Coast studios to offer a dedicated Recovery Movement Flow program for individuals recovering from injury, surgery, or stress. Using slow, mindful movement with controlled range of motion, it supports a safe return to activity. Medical clearance is required, and we work collaboratively with registered counsellors and healthcare professionals.</p>
+        <h3>Kids Dance &amp; Movement Classes</h3>
+        <p>We offer a comprehensive range of kids' classes including Creative Dance, Urban Mix / Dance Moves, Modern Contemporary, Kids Yoga, Kids Aerial Yoga, Kids Aerial Silks, and Kids Pole Fitness — taught by qualified instructors in a safe, supervised environment for families across Surfers Paradise, Broadbeach, and surrounding suburbs.</p>
+        <div style="text-align:center;margin-top:2rem;">Ready to start your movement journey? <a href="/enrol">Browse our classes &amp; enrol</a> or <a href="/contact">contact us today</a>.</div>
+      </div>
+    </section>
+
+    <div style="height:6rem"></div>
   </div>
-</section>
 
-<!-- =========================================================================
-     CLOSING CTA (shared .final-cta — styles in global.css)
-     ========================================================================= -->
-<section class="final-cta reveal" aria-labelledby="homeFinalCta">
-  <div class="final-cta__inner">
-    <span class="section-label">Get Started</span>
-    <h2 id="homeFinalCta">Ready to Move?</h2>
-    <p class="final-cta__text">No matter where you are in your movement journey, you belong here. Find a class that fits and we'll see you on the mat.</p>
-    <div class="final-cta__buttons">
-      <a href="#choose" class="cta-button">Find Your Class</a>
-      <a href="/contact" class="cta-secondary">Get In Touch</a>
-    </div>
-  </div>
-</section>
+  <!-- ===================== DARK CTA ===================== -->
+  <section class="v2-cta">
+    <span class="v2-label">Get Started</span>
+    <h2>Ready to move?</h2>
+    <p>Beginner-friendly classes for kids and adults across the Gold Coast. Find your class today.</p>
+    <a class="v2-btn v2-btn--primary" href="/enrol">Enrol Now</a>
+  </section>
 
-<!-- =========================================================================
-     FOOTER (inline from /components/footer-component.html)
-     ========================================================================= -->
-<!-- FOOTER_COMPONENT_PLACEHOLDER -->
-<!-- Copy contents of /components/footer-component.html here -->
-
-<!-- =========================================================================
-     PAGE-SPECIFIC JAVASCRIPT
-     ========================================================================= -->
-<script>
-(function () {
-  'use strict';
-
-  /* -------------------------------------------------------------------------
-     1. Inject LocalBusiness schema via schema-generator.js
-     Data source: site-config.json (loaded by schema-generator.js)
-  ------------------------------------------------------------------------- */
-  if (typeof SchemaGenerator !== 'undefined' && SchemaGenerator.generateLocalBusinessSchema) {
-    SchemaGenerator.generateLocalBusinessSchema()
-      .then(function (tag) {
-        document.head.insertAdjacentHTML('beforeend', tag);
-      })
-      .catch(function (err) {
-        console.warn('Homepage: Could not inject LocalBusiness schema —', err.message);
-      });
-
-    /* Breadcrumb schema for homepage */
-    var breadcrumbTag = SchemaGenerator.generateBreadcrumbSchema([
-      { name: 'Home', url: 'https://www.undrgrnd.com.au/' }
-    ]);
-    if (breadcrumbTag) {
-      document.head.insertAdjacentHTML('beforeend', breadcrumbTag);
-    }
-  }
-
-  /* -------------------------------------------------------------------------
-     2. Load dynamic content from site-config.json
-  ------------------------------------------------------------------------- */
-  fetch('/site-config.json')
-    .then(function (res) { return res.json(); })
-    .then(function (config) {
-
-      /* Tagline */
-      var taglineEl = document.getElementById('heroTagline');
-      if (taglineEl && config.project && config.project.tagline) {
-        taglineEl.textContent = config.project.tagline;
-      }
-
-      /* Philosophy mission */
-      var missionEl = document.getElementById('whyMission');
-      if (missionEl && config.philosophy && config.philosophy.mission) {
-        missionEl.textContent = config.philosophy.mission;
-      }
-
-    })
-    .catch(function (err) {
-      console.warn('Homepage: site-config.json load error —', err.message);
-    });
-
-
-  /* -------------------------------------------------------------------------
-     4. Intersection Observer — fade-in scroll animations
-  ------------------------------------------------------------------------- */
-  var revealEls = document.querySelectorAll('.reveal');
-
-  if ('IntersectionObserver' in window) {
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0, rootMargin: "0px 0px -40px 0px" });
-
-    revealEls.forEach(function (el) { observer.observe(el); });
-  } else {
-    /* Fallback for older browsers */
-    revealEls.forEach(function (el) { el.classList.add('visible'); });
-  }
-
-  /* -------------------------------------------------------------------------
-     5. Smooth scroll for anchor links
-  ------------------------------------------------------------------------- */
-  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-    anchor.addEventListener('click', function (e) {
-      var targetId = anchor.getAttribute('href').slice(1);
-      var target   = document.getElementById(targetId);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
-
-}());
-</script>
-
-<!--
-  UNDRGRND Movement — Footer Component
-  File: /components/footer-component.html
-
-  Usage: Copy this entire block into any page <body>, as the last element before 
-<!-- Booking Modal -->
-<div id="bookingModal" role="dialog" aria-modal="true" aria-label="Book a Class" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.85);overflow-y:auto;">
-  <div style="position:relative;max-width:680px;margin:2rem auto;padding:1rem;">
-    <button id="bookingModalClose" aria-label="Close booking form" style="position:absolute;top:0.5rem;right:0.5rem;background:rgba(139,92,246,0.15);border:1px solid #8B5CF6;color:#fff;font-size:1.4rem;line-height:1;width:2.2rem;height:2.2rem;border-radius:50%;cursor:pointer;z-index:10000;display:flex;align-items:center;justify-content:center;">&times;</button>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdRMvUrAyMw6PVrSJvVjikBy_swYzT06MNeARSuOREnwmuHew/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" title="Book a Class at UNDRGRND Movement" style="border-radius:8px;background:#fff;">Loading&#8230;</iframe>
-  </div>
-</div>
-<script>
-(function(){
-  var modal = document.getElementById('bookingModal');
-  var closeBtn = document.getElementById('bookingModalClose');
-  function openModal(e){
-    if(e){ e.preventDefault(); }
-    modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-  }
-  function closeModal(){
-    modal.style.display = 'none';
-    document.body.style.overflow = '';
-  }
-  if(closeBtn){ closeBtn.addEventListener('click', closeModal); }
-  modal.addEventListener('click', function(e){ if(e.target === modal){ closeModal(); } });
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeModal(); } });
-
-  /* ── Event delegation: catches all booking clicks including dynamically
-        rendered program cards (btn-book, cta-button, data-medical buttons) ── */
-  var BOOKING_LABELS = /^(book|enrol|enroll|register|sign.?up|join.?waitlist|reserve|get.?started|i.have.clearance)/i;
-  document.body.addEventListener('click', function(e){
-    var el = e.target;
-    // Walk up to find the clickable element (handles clicks on child spans/SVGs)
-    while(el && el !== document.body){
-      var tag = el.tagName ? el.tagName.toLowerCase() : '';
-      var cls = el.className || '';
-      var href = el.getAttribute ? (el.getAttribute('href') || '') : '';
-      var text = el.textContent ? el.textContent.trim() : '';
-      var isMedicalBtn = el.dataset && el.dataset.medical === 'true';
-
-      // Is this a booking element?
-      var isBookBtn = (cls.indexOf('btn-book') > -1) || (cls.indexOf('cta-button') > -1 && cls.indexOf('dance-booking-button') === -1 && BOOKING_LABELS.test(text));
-      var isBookLink = (tag === 'a') && (href === '#book') && BOOKING_LABELS.test(text);
-      var isMedical  = isMedicalBtn;
-
-      // Exclude nav and footer
-      var inNav    = el.closest && (el.closest('nav') || el.closest('.nav-menu') || el.closest('.nav-mobile-menu'));
-      var inFooter = el.closest && (el.closest('footer') || el.closest('.site-footer'));
-
-      if((isBookBtn || isBookLink || isMedical) && !inNav && !inFooter){
-        e.preventDefault();
-        openModal(null);
-        return;
-      }
-      el = el.parentElement;
-    }
-  });
-})();
-</script>
+  <div id="site-footer"></div>
 
   <script src="/js/layout.js"></script>
   <script src="/js/booking-controller.js"></script>
-</body>
-
-<!-- =====================================================================
-     FOOTER STYLES (scoped to this component)
-     ===================================================================== -->
-
-
-<!-- =====================================================================
-     FOOTER HTML
-     NAP data populated from site-config.json via JavaScript fetch
-     ===================================================================== -->
-<div id="site-footer"></div>
-
-
+  <script>
+    /* Hero slider: crossfade + dots */
+    (function () {
+      var slides = Array.prototype.slice.call(document.querySelectorAll('.v2-slide'));
+      var dotsWrap = document.getElementById('heroDots');
+      if (slides.length < 2) return;
+      var i = 0, timer;
+      slides.forEach(function (s, idx) {
+        var b = document.createElement('button');
+        b.setAttribute('aria-label', 'Slide ' + (idx + 1));
+        if (idx === 0) b.className = 'is-active';
+        b.addEventListener('click', function () { go(idx); reset(); });
+        dotsWrap.appendChild(b);
+      });
+      var dots = Array.prototype.slice.call(dotsWrap.children);
+      function go(n) {
+        slides[i].classList.remove('is-active'); dots[i].classList.remove('is-active');
+        i = (n + slides.length) % slides.length;
+        slides[i].classList.add('is-active'); dots[i].classList.add('is-active');
+      }
+      function reset() { clearInterval(timer); timer = setInterval(function () { go(i + 1); }, 5500); }
+      reset();
+    })();
+  </script>
 </body>
 </html>

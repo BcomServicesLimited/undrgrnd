@@ -212,19 +212,6 @@
       reset();
     })();
 
-    /* Announcement strip: slide it away (and raise the nav) once scrolled */
-    (function () {
-      var strip = document.querySelector('.v2-strip');
-      var nav = document.querySelector('.site-nav');
-      if (!strip) return;
-      function onScroll() {
-        var past = window.scrollY > 40;
-        strip.classList.toggle('is-hidden', past);
-        if (nav) nav.style.top = past ? '0px' : '40px';
-      }
-      window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll();
-    })();
   </script>
 </body>
 </html>

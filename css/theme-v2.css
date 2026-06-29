@@ -228,3 +228,6 @@ body.v2 .nav-mobile-submenu__link {
   font-size: 0.8rem;
 }
 body.v2 .nav-mobile-submenu__link { font-size: 0.95rem; }
+
+/* Top nav links: lighter weight + wider tracking to match the eyebrow */
+body.v2 .nav-menu__link { font-weight: 400; letter-spacing: 0.18em; }

@@ -198,3 +198,10 @@ body.v2 .program-hero .program-hero__eyebrow { color: #A78BFA; }
 /* v2-hero text must stay white over the generic body.v2 dark-text rules */
 body.v2 .v2-hero h1, body.v2 .v2-hero p, body.v2 .v2-hero .v2-eyebrow { color: #fff !important; }
 body.v2 .v2-hero .v2-btn--primary { color: #fff !important; }
+
+/* ---- Announcement strip (under hero) ---- */
+.v2-strip { display:block; background:linear-gradient(135deg,#7C3AED 0%,#DB2777 100%); color:#fff;
+  text-align:center; text-decoration:none; padding:0.95rem 1.5rem; font-weight:700; font-size:0.85rem;
+  letter-spacing:0.16em; text-transform:uppercase; transition:filter .25s ease; }
+.v2-strip:hover { filter:brightness(1.07); }
+@media (max-width:600px){ .v2-strip { font-size:0.72rem; letter-spacing:0.1em; } }

@@ -27,7 +27,13 @@ body.v2 .site-nav { background: #161618; border-bottom: 1px solid rgba(255,255,2
 body.v2 .site-nav.scrolled { background: #161618; border-bottom-color: rgba(255,255,255,0.10); }
 body.v2 .nav-menu__link { color: rgba(255,255,255,0.92); }
 body.v2 .nav-menu__link:hover, body.v2 .nav-menu__link.active { color: #fff; }
-body.v2 .nav-logo__tagline { color: #EDEDF0; border-left-color: rgba(255,255,255,0.35); }
+body.v2 .nav-logo { gap: 1rem; }
+body.v2 .nav-logo__tagline {
+  color: #fff; border-left: none; padding-left: 0;
+  font-family: 'Roboto', Helvetica Neue, Arial, sans-serif;
+  font-size: 0.6rem; font-weight: 400; letter-spacing: 0.18em;
+  line-height: 1.45; text-transform: uppercase; max-width: 13ch;
+}
 body.v2 .nav-hamburger__line { background: #fff; }
 
 /* ===================== HERO: full-screen (optionally a slider) ===================== */

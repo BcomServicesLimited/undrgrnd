@@ -211,3 +211,10 @@ body.v2 .v2-hero .v2-btn--primary { color: #fff !important; }
 /* push the fixed nav down so the strip sits above it (homepage only); JS sets top:0 once scrolled */
 body.has-strip .site-nav, body.has-strip .site-nav.scrolled { top:40px; }
 @media (max-width:600px){ .v2-strip { font-size:0.58rem; letter-spacing:0.05em; } }
+
+/* ---- Hover dropdown + mobile submenu: use Roboto to match the nav ---- */
+body.v2 .nav-dropdown__link, body.v2 .nav-subdropdown__link,
+body.v2 .nav-dropdown__heading a, body.v2 .nav-dropdown__link--parent,
+body.v2 .nav-mobile-submenu__link, body.v2 .nav-mobile-submenu__heading a {
+  font-family: 'Roboto', Helvetica Neue, Arial, sans-serif;
+}

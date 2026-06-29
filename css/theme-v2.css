@@ -224,7 +224,7 @@ body.v2 .nav-dropdown__link, body.v2 .nav-subdropdown__link, body.v2 .nav-dropdo
 body.v2 .nav-mobile-submenu__link {
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 0.8rem;
 }
 body.v2 .nav-mobile-submenu__link { font-size: 0.95rem; }

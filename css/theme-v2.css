@@ -223,7 +223,7 @@ body.v2 .nav-mobile-submenu__link, body.v2 .nav-mobile-submenu__heading a {
 body.v2 .nav-dropdown__link, body.v2 .nav-subdropdown__link, body.v2 .nav-dropdown__link--parent,
 body.v2 .nav-mobile-submenu__link {
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.22em;
   font-weight: 400;
   font-size: 0.8rem;
 }

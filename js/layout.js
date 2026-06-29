@@ -130,7 +130,7 @@
       '<header class="site-nav" id="siteNav" role="banner">' +
         '<div class="nav-inner">' +
           '<a href="/" class="nav-logo" aria-label="UNDRGRND Movement — Integrated Movement Arts — Home">' +
-            '<img src="/images/logo/logo-header.webp" alt="UNDRGRND Movement logo — dance and yoga studio Gold Coast" width="96" height="50" style="height:50px;width:auto;display:block;" loading="eager">' +
+            '<img src="/images/logo/logo-header-t.webp" alt="UNDRGRND Movement logo — dance and yoga studio Gold Coast" width="96" height="50" style="height:50px;width:auto;display:block;" loading="eager">' +
             '<span class="nav-logo__tagline">Integrated Movement Arts</span>' +
           '</a>' +
           '<ul class="nav-menu" id="navDesktopMenu" role="list" aria-label="Main navigation">' + menuItems('nav-menu__link') + '</ul>' +
@@ -155,7 +155,7 @@
         '<div class="footer-main">' +
           '<div class="footer-col footer-col--brand">' +
             '<a href="/" class="footer-brand__logo" aria-label="UNDRGRND Movement — Integrated Movement Arts — Home">' +
-              '<img src="/images/logo/logo-full.webp" alt="UNDRGRND Movement full logo — Gold Coast" width="96" height="50" style="height:50px;width:auto;display:block;" loading="lazy">' +
+              '<img src="/images/logo/logo-full-t.webp" alt="UNDRGRND Movement full logo — Gold Coast" width="96" height="50" style="height:50px;width:auto;display:block;" loading="lazy">' +
             '</a>' +
             '<p class="footer-brand__academy">Integrated Movement Arts</p>' +
             '<p class="footer-brand__tagline">' + NAP.tagline + '</p>' +

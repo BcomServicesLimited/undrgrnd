@@ -208,7 +208,7 @@
         i = (n + slides.length) % slides.length;
         slides[i].classList.add('is-active'); dots[i].classList.add('is-active');
       }
-      function reset() { clearInterval(timer); timer = setInterval(function () { go(i + 1); }, 5500); }
+      function reset() { clearInterval(timer); timer = setInterval(function () { go(i + 1); }, 4000); }
       reset();
     })();
 

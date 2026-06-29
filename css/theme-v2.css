@@ -218,3 +218,13 @@ body.v2 .nav-dropdown__heading a, body.v2 .nav-dropdown__link--parent,
 body.v2 .nav-mobile-submenu__link, body.v2 .nav-mobile-submenu__heading a {
   font-family: 'Roboto', Helvetica Neue, Arial, sans-serif;
 }
+
+/* Dropdown items styled like the nav links (uppercase + spacing) */
+body.v2 .nav-dropdown__link, body.v2 .nav-subdropdown__link, body.v2 .nav-dropdown__link--parent,
+body.v2 .nav-mobile-submenu__link {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+body.v2 .nav-mobile-submenu__link { font-size: 0.95rem; }

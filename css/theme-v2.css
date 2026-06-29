@@ -229,11 +229,11 @@ body.v2 .nav-mobile-submenu__link, body.v2 .nav-mobile-submenu__heading a {
 body.v2 .nav-dropdown__link, body.v2 .nav-subdropdown__link, body.v2 .nav-dropdown__link--parent,
 body.v2 .nav-mobile-submenu__link {
   text-transform: uppercase;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.2em;
   font-weight: 400;
-  font-size: 0.8rem;
+  font-size: 0.68rem;
 }
-body.v2 .nav-mobile-submenu__link { font-size: 0.95rem; }
+body.v2 .nav-mobile-submenu__link { font-size: 0.9rem; }
 
 /* Top nav links: lighter weight + wider tracking to match the eyebrow */
 body.v2 .nav-menu__link { font-weight: 400; letter-spacing: 0.18em; }

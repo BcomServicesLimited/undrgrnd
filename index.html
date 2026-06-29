@@ -208,8 +208,9 @@
         i = (n + slides.length) % slides.length;
         slides[i].classList.add('is-active'); dots[i].classList.add('is-active');
       }
-      function reset() { clearInterval(timer); timer = setInterval(function () { go(i + 1); }, 4000); }
-      reset();
+      function reset() { clearInterval(timer); timer = setInterval(function () { go(i + 1); }, 3500); }
+      /* advance the first slide sooner so it doesn't linger on load */
+      timer = setTimeout(function () { go(i + 1); reset(); }, 1800);
     })();
 
   </script>

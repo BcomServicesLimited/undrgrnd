@@ -38,6 +38,12 @@
 
   var YEAR = '2026'; // bump as needed; static to avoid Date() in cached contexts
 
+  /* Maintenance notice — set SHOW to false (or delete) when finished updating */
+  var MAINTENANCE = {
+    show: true,
+    text: "We're currently updating the site — some details may change."
+  };
+
   /* ─── Helpers ─────────────────────────────────────────────────────────── */
   function isActive(href) {
     var path = window.location.pathname;
@@ -112,7 +118,11 @@
 
   /* ─── Markup ──────────────────────────────────────────────────────────── */
   function navHTML() {
+    var maint = (MAINTENANCE && MAINTENANCE.show)
+      ? '<div class="maint-strip" role="status"><span>' + MAINTENANCE.text + '</span></div>'
+      : '';
     return '' +
+      maint +
       '<div class="nav-mobile-overlay" id="navOverlay" aria-hidden="true"></div>' +
       '<nav class="nav-mobile-menu" id="navMobileMenu" aria-label="Mobile navigation" aria-hidden="true">' +
         '<ul class="nav-mobile-menu__list" id="navMobileList">' + menuItems('nav-mobile-menu__link') + '</ul>' +
@@ -206,6 +216,7 @@
   function mount() {
     var navMount = document.getElementById('site-nav');
     var footMount = document.getElementById('site-footer');
+    if (MAINTENANCE && MAINTENANCE.show) document.body.classList.add('has-maint');
     if (navMount) navMount.outerHTML = navHTML();
     if (footMount) footMount.outerHTML = footerHTML();
     wireNav();

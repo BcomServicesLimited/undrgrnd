@@ -21,11 +21,10 @@
   var MENU = [
     { label: 'Home',      href: '/' },
     { label: 'Programs',  href: '#', children: [
-        { label: 'Recreational Movement Programs', href: '#', children: [
-            { label: 'Junior Academy · 6–10',    href: '/programs/junior-academy' },
-            { label: 'Tween Exploration · 11–14', href: '/programs/tween-exploration' },
-            { label: 'Teen Elite Lab · 14–17',   href: '/programs/teen-elite-lab' }
-          ] }
+        { label: 'Recreational Movement Programs', href: '#', heading: true },
+        { label: 'Junior Academy · 6–10',    href: '/programs/junior-academy' },
+        { label: 'Tween Exploration · 11–14', href: '/programs/tween-exploration' },
+        { label: 'Teen Elite Lab · 14–17',   href: '/programs/teen-elite-lab' }
       ] },
     { label: 'Contact',   href: '/contact' }
   ];

@@ -75,11 +75,15 @@
     return Math.max(1, Math.min(10, w));
   }
 
-  function pack(weeks, termName, mode) {
+  var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function fmtDate(str) { var p = str.split('-'); return parseInt(p[2], 10) + ' ' + MONTHS[parseInt(p[1], 10) - 1]; }
+  function fmtRange(start, end) { return fmtDate(start) + ' – ' + fmtDate(end); }
+
+  function pack(weeks, term, mode) {
     if (weeks == null) return null;
     weeks = Math.max(1, Math.min(10, weeks));
     var link = TERM_LINKS[weeks];
-    return { weeks: weeks, price: link.price, url: link.url, termName: termName, mode: mode };
+    return { weeks: weeks, price: link.price, url: link.url, termName: term.name, dates: fmtRange(term.start, term.end), mode: mode };
   }
 
   // ─── DECIDE WHAT TO SELL TODAY ─────────────────────────────────────────────
@@ -90,17 +94,17 @@
       if (today >= start && today <= end) {
         var mid = new Date(Math.round((start.getTime() + end.getTime()) / 2));
         if (today < mid) {
-          return pack(getWeeksRemaining(today, start, end), TERMS[i].name, 'remaining');
+          return pack(getWeeksRemaining(today, start, end), TERMS[i], 'remaining');
         }
         if (i + 1 < TERMS.length) {
-          return pack(termFullWeeks(TERMS[i + 1]), TERMS[i + 1].name, 'next');
+          return pack(termFullWeeks(TERMS[i + 1]), TERMS[i + 1], 'next');
         }
-        return pack(getWeeksRemaining(today, start, end), TERMS[i].name, 'remaining');
+        return pack(getWeeksRemaining(today, start, end), TERMS[i], 'remaining');
       }
     }
     for (var j = 0; j < TERMS.length; j++) {
       if (today < parseDate(TERMS[j].start)) {
-        return pack(termFullWeeks(TERMS[j]), TERMS[j].name, 'next');
+        return pack(termFullWeeks(TERMS[j]), TERMS[j], 'next');
       }
     }
     return null; // after the final term
@@ -122,8 +126,8 @@
     for (var n = 0; n < notes.length; n++) {
       if (b) {
         notes[n].textContent = (b.mode === 'remaining')
-          ? b.termName + ' · ' + b.weeks + ' week' + (b.weeks !== 1 ? 's' : '') + ' remaining'
-          : 'Now enrolling for ' + b.termName + ' · ' + b.weeks + ' weeks';
+          ? b.termName + ' (' + b.dates + ') · ' + b.weeks + ' week' + (b.weeks !== 1 ? 's' : '') + ' remaining'
+          : 'Now enrolling for ' + b.termName + ' (' + b.dates + ') · ' + b.weeks + ' weeks';
       } else {
         notes[n].textContent = 'Enrolments open soon for next term';
       }

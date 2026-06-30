@@ -310,3 +310,6 @@ body.v2 .site-footer { background:#161618; border-top:1px solid rgba(255,255,255
   .mslide-ap { background-image: url('/images/hero/hero-aerial-pole-m.webp') !important; background-position: center !important; }
   .mbanner-junior { background-image: linear-gradient(180deg,rgba(22,22,24,0.45) 0%,rgba(22,22,24,0.10) 32%,rgba(22,22,24,0.22) 55%,rgba(22,22,24,0.58) 82%,#F2F2F4 100%), url('/images/hero/hero-junior-academy-m.webp') !important; background-position: center !important; }
 }
+
+/* Booking/primary buttons always have white text (never inherit link colour) */
+a.v2-btn--primary, .v2-prose a.v2-btn--primary, a.v2-btn--primary.dance-booking-button { color: #fff !important; }

@@ -316,6 +316,58 @@ body.v2 .site-footer { background:#161618; border-top:1px solid rgba(255,255,255
 /* Booking/primary buttons always have white text (never inherit link colour) */
 a.v2-btn--primary, .v2-prose a.v2-btn--primary, a.v2-btn--primary.dance-booking-button { color: #fff !important; }
 
+/* ===================== BOOKING CARD (price + term + enrol) ===================== */
+.v2-booking-card {
+  max-width: 440px;
+  margin: 3rem auto 0;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 14px;
+  padding: 2rem 1.75rem;
+  text-align: center;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.07);
+}
+.v2-booking-card__price {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--v2-muted);
+  letter-spacing: 0.01em;
+}
+.v2-booking-card__price span {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--v2-text);
+  letter-spacing: -0.01em;
+  margin-right: 0.15rem;
+}
+.v2-booking-card__meta {
+  margin: 0.6rem auto 0;
+  max-width: 34ch;
+  color: var(--v2-muted);
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.v2-booking-card__term {
+  margin: 1.5rem 0 0;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  color: var(--v2-accent-solid);
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+}
+.v2-booking-card__term:empty { display: none; }
+.v2-booking-card__btns {
+  display: flex;
+  gap: 0.85rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.4rem;
+}
+.v2-booking-card__btns .v2-btn { min-width: 9.5rem; }
+
 /* Term/remaining-weeks note on the homepage hero */
 .v2-hero__term { color:#F4F4F6; font-size:clamp(0.64rem, 2.7vw, 1.05rem); font-weight:700; letter-spacing:0.01em; margin:0 0 1.1rem; white-space:nowrap; text-shadow:0 1px 3px rgba(0,0,0,0.45); }
 .v2-hero__term:empty { display:none; }

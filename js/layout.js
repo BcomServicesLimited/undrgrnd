@@ -154,10 +154,6 @@
             '<p class="footer-brand__academy">Integrated Movement Arts</p>' +
             '<p class="footer-brand__tagline">' + NAP.tagline + '</p>' +
           '</div>' +
-          '<div class="footer-col footer-col--links">' +
-            '<h3 class="footer-col__heading">Quick Links</h3>' +
-            '<ul class="footer-links" role="list">' + footerLinks() + '</ul>' +
-          '</div>' +
           '<div class="footer-col footer-col--contact">' +
             '<h3 class="footer-col__heading">Contact Us</h3>' +
             '<address style="font-style: normal; line-height: 1.9;">' +

@@ -143,28 +143,21 @@
   function footerHTML() {
     return '' +
       '<footer class="site-footer" role="contentinfo" itemscope itemtype="https://schema.org/LocalBusiness">' +
-        '<div class="footer-main">' +
-          '<div class="footer-col footer-col--brand">' +
-            '<a href="/" class="footer-brand__logo" aria-label="UNDRGRND Movement — Integrated Movement Arts — Home">' +
-              '<img src="/images/logo/logo-full-t.webp" alt="UNDRGRND Movement full logo — Gold Coast" width="96" height="50" style="height:50px;width:auto;display:block;" loading="lazy">' +
-            '</a>' +
-            '<p class="footer-brand__academy">Integrated Movement Arts</p>' +
-            '<p class="footer-brand__tagline">' + NAP.tagline + '</p>' +
+        '<div class="footer-v2">' +
+          '<a href="/" class="footer-v2__logo" aria-label="UNDRGRND Movement — Home">' +
+            '<img src="/images/logo/logo-full-t.webp" alt="UNDRGRND Movement" width="92" height="48" style="height:46px;width:auto;display:block;margin:0 auto;" loading="lazy">' +
+          '</a>' +
+          '<p class="footer-v2__name">Integrated Movement Arts</p>' +
+          '<p class="footer-v2__tagline">' + NAP.tagline + '</p>' +
+          '<a class="footer-v2__phone" href="' + NAP.phoneHref + '" itemprop="telephone">' + NAP.phoneText + '</a>' +
+          '<div class="footer-v2__bottom">' +
+            '<p>&copy; ' + YEAR + ' <span itemprop="name">UNDRGRND Movement</span>. All rights reserved.</p>' +
+            '<nav class="footer-v2__legal" aria-label="Legal links">' +
+              '<a href="/privacy-policy">Privacy Policy</a>' +
+              '<span aria-hidden="true">·</span>' +
+              '<a href="/terms-of-service">Terms of Service</a>' +
+            '</nav>' +
           '</div>' +
-          '<div class="footer-col footer-col--contact">' +
-            '<h3 class="footer-col__heading">Contact Us</h3>' +
-            '<address style="font-style: normal; line-height: 1.9;">' +
-              '<a href="' + NAP.phoneHref + '" itemprop="telephone">' + NAP.phoneText + '</a>' +
-            '</address>' +
-          '</div>' +
-        '</div>' +
-        '<div class="footer-bottom">' +
-          '<p class="footer-bottom__copy">&copy; ' + YEAR + ' <span itemprop="name">UNDRGRND Movement</span>. All rights reserved.</p>' +
-          '<nav class="footer-bottom__links" aria-label="Legal links">' +
-            '<a href="/privacy-policy">Privacy Policy</a>' +
-            '<span aria-hidden="true">|</span>' +
-            '<a href="/terms-of-service">Terms of Service</a>' +
-          '</nav>' +
         '</div>' +
       '</footer>';
   }

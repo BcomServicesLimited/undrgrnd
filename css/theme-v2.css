@@ -313,3 +313,7 @@ body.v2 .site-footer { background:#161618; border-top:1px solid rgba(255,255,255
 
 /* Booking/primary buttons always have white text (never inherit link colour) */
 a.v2-btn--primary, .v2-prose a.v2-btn--primary, a.v2-btn--primary.dance-booking-button { color: #fff !important; }
+
+/* Term/remaining-weeks note on the homepage hero */
+.v2-hero__term { color:#EDEDED; font-size:0.95rem; font-weight:400; letter-spacing:0.04em; margin:0 0 1.1rem; text-shadow:0 1px 3px rgba(0,0,0,0.4); }
+.v2-hero__term:empty { display:none; }

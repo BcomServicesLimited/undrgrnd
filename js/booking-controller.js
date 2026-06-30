@@ -141,7 +141,7 @@
         btn.removeAttribute('aria-disabled');
         btn.style.pointerEvents = '';
         btn.style.opacity = '';
-        setButtonText(btn, 'Enrol Now — $' + b.price);
+        setButtonText(btn, 'Enrol Now');
       } else {
         btn.href = '#';
         btn.setAttribute('aria-disabled', 'true');

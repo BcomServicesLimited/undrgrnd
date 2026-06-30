@@ -59,7 +59,8 @@ body.v2 .nav-hamburger__line { background: #fff; }
 /* ---- Buttons ---- */
 .v2-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
 .v2-btn { padding: 1rem 2.3rem; border-radius: 50px; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.1em;
-          text-transform: uppercase; text-decoration: none; display: inline-block; transition: all .25s ease; cursor: pointer; }
+          text-transform: uppercase; text-decoration: none; display: inline-block; text-align: center; line-height: 1;
+          transition: all .25s ease; cursor: pointer; }
 .v2-btn--primary { background: var(--v2-accent); color: #fff; border: 0; }
 .v2-btn--primary:hover { filter: brightness(1.08); transform: translateY(-2px); }
 .v2-btn--ghost { border: 1px solid rgba(255,255,255,0.55); color: #fff; }

@@ -260,3 +260,11 @@ body.v2 .learn-hero, body.v2 .article-hero, body.v2 .legal-hero, body.v2 .page-h
 }
 body.v2 .program-hero__image, body.v2 .program-hero__image img,
 body.v2 .program-hero picture, body.v2 .program-hero picture img { max-height: 280px; }
+
+/* ---- Two-column intro strip (heading | text), thin rules top & bottom ---- */
+.v2-intro { border-top: 1px solid rgba(0,0,0,0.12); border-bottom: 1px solid rgba(0,0,0,0.12); }
+.v2-intro__inner { max-width: 1180px; margin: 0 auto; padding: clamp(3.5rem,7vw,6rem) 6%;
+  display: grid; grid-template-columns: 1fr 1.25fr; gap: clamp(2rem,5vw,5rem); align-items: start; }
+@media (max-width: 820px) { .v2-intro__inner { grid-template-columns: 1fr; gap: 1.25rem; } }
+body.v2 .v2-intro__title { font-size: clamp(2.1rem,4vw,3.3rem); font-weight: 300; line-height: 1.08; letter-spacing: -0.01em; color: var(--v2-text); }
+.v2-intro__body p { color: var(--v2-text); font-weight: 400; font-size: 1.15rem; line-height: 1.75; margin: 0; }

@@ -37,7 +37,6 @@
     address: 'Surfers Paradise & surrounding areas · Gold Coast',
     phoneText: '0721 402 690',
     phoneHref: 'tel:+61721402690',
-    email: 'undrgrndgc@gmail.com',
     tagline: 'Foundational movement for body and mind'
   };
 
@@ -163,8 +162,7 @@
             '<h3 class="footer-col__heading">Contact Us</h3>' +
             '<address style="font-style: normal; line-height: 1.9;">' +
               '<span itemprop="address">' + NAP.address + '</span><br>' +
-              '<a href="' + NAP.phoneHref + '" itemprop="telephone">' + NAP.phoneText + '</a><br>' +
-              '<a href="mailto:' + NAP.email + '" itemprop="email">' + NAP.email + '</a>' +
+              '<a href="' + NAP.phoneHref + '" itemprop="telephone">' + NAP.phoneText + '</a>' +
             '</address>' +
           '</div>' +
         '</div>' +

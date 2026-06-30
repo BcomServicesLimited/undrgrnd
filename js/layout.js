@@ -27,8 +27,6 @@
             { label: 'Teen Elite Lab · 14–17',   href: '/programs/teen-elite-lab' }
           ] }
       ] },
-    { label: 'About',     href: '/about' },
-    { label: 'Learn',     href: '/learn' },
     { label: 'Contact',   href: '/contact' }
   ];
 

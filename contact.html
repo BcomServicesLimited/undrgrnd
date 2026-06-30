@@ -9,7 +9,29 @@
   <link rel="stylesheet" href="/fonts/roboto.css">
   <link rel="stylesheet" href="/css/global.css">
   <link rel="stylesheet" href="/css/theme-v2.css">
-  <script src="/js/schema-generator.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "@id": "https://www.undrgrnd.com.au/contact#page",
+        "url": "https://www.undrgrnd.com.au/contact",
+        "name": "Contact / Enquire — UNDRGRND Movement",
+        "about": { "@id": "https://www.undrgrnd.com.au/#business" }
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.undrgrnd.com.au/#business",
+        "name": "UNDRGRND Movement",
+        "url": "https://www.undrgrnd.com.au/",
+        "telephone": "+61721402690",
+        "areaServed": { "@type": "City", "name": "Gold Coast" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Gold Coast", "addressRegion": "QLD", "addressCountry": "AU" }
+      }
+    ]
+  }
+  </script>
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.undrgrnd.com.au/contact">
   <meta property="og:title" content="Contact / Enquire | UNDRGRND Movement">

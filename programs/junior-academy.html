@@ -9,7 +9,39 @@
   <link rel="stylesheet" href="/fonts/roboto.css">
   <link rel="stylesheet" href="/css/global.css">
   <link rel="stylesheet" href="/css/theme-v2.css">
-  <script src="/js/schema-generator.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://www.undrgrnd.com.au/programs/junior-academy#service",
+        "name": "Junior Academy (Ages 6–10)",
+        "serviceType": "Children's movement and dance program",
+        "url": "https://www.undrgrnd.com.au/programs/junior-academy",
+        "description": "Playful, foundational movement classes for kids aged 6–10 on the Gold Coast — building coordination, confidence and creativity.",
+        "provider": { "@type": "LocalBusiness", "@id": "https://www.undrgrnd.com.au/#business", "name": "UNDRGRND Movement" },
+        "areaServed": { "@type": "City", "name": "Gold Coast" },
+        "audience": { "@type": "PeopleAudience", "suggestedMinAge": 6, "suggestedMaxAge": 10 },
+        "offers": {
+          "@type": "Offer",
+          "price": "35.00",
+          "priceCurrency": "AUD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.undrgrnd.com.au/programs/junior-academy",
+          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "35.00", "priceCurrency": "AUD", "unitText": "per class" }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.undrgrnd.com.au/" },
+          { "@type": "ListItem", "position": 2, "name": "Junior Academy", "item": "https://www.undrgrnd.com.au/programs/junior-academy" }
+        ]
+      }
+    ]
+  }
+  </script>
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.undrgrnd.com.au/programs/junior-academy">
   <meta property="og:title" content="Junior Academy (Ages 6–10) | UNDRGRND Movement">

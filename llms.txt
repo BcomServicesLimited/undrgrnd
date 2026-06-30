@@ -1,118 +1,62 @@
 # UNDRGRND Movement — llms.txt
-# This file helps AI language models and crawlers accurately understand and represent this website.
+# Helps AI language models and crawlers accurately understand and represent this website.
 # Format follows the llms.txt specification: https://llmstxt.org
+# Last updated: 2026-07-01
 
-# Last updated: 2026-06-02
-
-> UNDRGRND Movement is a boutique movement studio based on the Gold Coast, Queensland, Australia, serving Surfers Paradise and surrounding areas. Class locations are flexible and confirmed when you get in touch. The studio offers beginner-friendly adult and kids classes across dance, pole fitness, yoga, and aerial arts disciplines. The philosophy centres on personal expression, self-discovery, and movement as a form of empowerment — not competition or performance. All programs are designed for complete beginners with no prior experience required.
+> UNDRGRND Movement is a kids movement studio on the Gold Coast, Queensland, Australia, serving Surfers Paradise and surrounding areas. It teaches "Integrated Movement Arts" — an approach where children build physical literacy by exploring multiple movement disciplines (dance, aerial and conditioning) as one connected practice. Programs are organised into three age bands for ages 6 to 17. Classes are beginner-friendly, non-competitive, and run by term. There are no adult classes. Class days, times and locations are flexible and confirmed when you get in touch. Phone calls are answered by an AI receptionist available anytime.
 
 ## Business Information
 
 - **Business Name:** UNDRGRND Movement
-- **Phone:** 0721 402 690
+- **Type:** Children's movement & dance studio (ages 6–17)
+- **Phone:** 0721 402 690 (calls answered by an AI receptionist; +61 7 2140 2690 in international format)
 - **Website:** https://www.undrgrnd.com.au
 - **Service Area:** Surfers Paradise & surrounding areas, Gold Coast, Queensland, Australia (class locations are flexible and confirmed on contact)
-- **Enrolment:** https://www.undrgrnd.com.au/enrol
+- **Pricing:** $35 AUD per class, paid upfront for the term
+- **Booking:** Enrolment is by term via Stripe checkout on each program page; or enquire via the contact form / by phone
+- **Instagram:** https://instagram.com/undrgrnd_goldcoast
 
-## What We Offer
+## Programs (Ages 6–17)
 
-UNDRGRND Movement offers movement classes for adults and children. All classes are beginner-friendly and structured around the "Foundations" level — meaning no prior experience is needed to join any class.
+UNDRGRND Movement offers three age-banded programs. All are beginner-friendly and run by school term. Pricing is $35 per class, paid upfront for the term.
 
-### Adult Programs — Currently Open (Enrolling)
+- **Junior Academy** — ages 6–10. Playful, foundational movement: creative dance and movement games, beginner floor work and flexibility, an introduction to aerial and balance. Builds coordination, confidence and a love of movement. Page: https://www.undrgrnd.com.au/programs/junior-academy
+- **Tween Exploration** — ages 11–14. Movement classes exploring dance, aerial and conditioning while building strength and self-expression. Page: https://www.undrgrnd.com.au/programs/tween-exploration
+- **Teen Elite Lab** — ages 14–17. Advanced movement training: serious technique, strength and performance across the movement arts. Page: https://www.undrgrnd.com.au/programs/teen-elite-lab
 
-- **Booty Burn - Foundations** — High-energy dance fitness class focused on glute activation and lower body strength. Page: https://www.undrgrnd.com.au/programs/booty-burn-foundations
-- **Movement Flow - Foundations** — Natural movement principles to build coordination, body awareness, and fluid motion. Page: https://www.undrgrnd.com.au/programs/movement-flow-foundations
-- **Fusion Yoga - Foundations** — A blend of traditional yoga and modern movement to build mobility and strength. Page: https://www.undrgrnd.com.au/programs/fusion-yoga-foundations
-- **Aerial Silks - Foundations** — Learn to climb, wrap, and create shapes using suspended fabric silks. Page: https://www.undrgrnd.com.au/programs/aerial-silks-foundations
-- **Stretch & Mobility - Foundations** — Improve flexibility, reduce stiffness, and move better. Page: https://www.undrgrnd.com.au/programs/stretch-mobility-foundations
-- **Pole Strength & Movement** — Build conditioning, master holds, and develop controlled movement on the pole. Beginner-friendly and scaled to your level. Page: https://www.undrgrnd.com.au/programs/pole-strength-movement
-- **Recovery Movement Flow - Foundations** — Gentle, supported movement for returning after injury, fatigue, or inactivity. Medical clearance required; booked by request via email rather than online. Page: https://www.undrgrnd.com.au/programs/recovery-movement-flow-foundations
+## How Enrolment Works
 
-### Adult Programs — Coming Soon
-
-- **Choreography Fusion - Foundations** — Build confidence through simple, guided dance choreography. Page: https://www.undrgrnd.com.au/programs/choreography-fusion-foundations
-- **Aerial Yoga - Foundations** — Supported movement in a hammock to build flexibility and decompress joints. Page: https://www.undrgrnd.com.au/programs/aerial-yoga-foundations
-
-### Kids Programs — Currently Open (Enrolling)
-
-Kids classes are age-appropriate, non-competitive, and focused on building confidence, coordination, and creativity.
-
-- **Kids Yoga - Foundations** (ages 7–10) — Fun, age-appropriate yoga building flexibility, focus, and confidence. Page: https://www.undrgrnd.com.au/programs/kids-yoga
-- **Kids Aerial Yoga - Foundations** (ages 7–10) — Playful aerial yoga in silk hammocks. Page: https://www.undrgrnd.com.au/programs/kids-aerial-yoga
-- **Dance Moves (Urban Mix) - Foundations** (ages 6–8) — Hip hop and urban dance styles in a fun, structured format. Page: https://www.undrgrnd.com.au/programs/kids-dance-moves
-- **Creative Dance - Foundations** (ages 6–8) — Imaginative movement and dance exploration for younger children. Page: https://www.undrgrnd.com.au/programs/kids-creative-dance
-
-### Kids Programs — Coming Soon
-
-- **Modern Contemporary (Rhythm & Motion) - Foundations** (ages 6–8) — Page: https://www.undrgrnd.com.au/programs/kids-modern-contemporary
-- **Kids Aerial Silks - Foundations** — Page: https://www.undrgrnd.com.au/programs/kids-aerial-silks
-- **Pole Fitness Kids - Foundations** — Page: https://www.undrgrnd.com.au/programs/kids-pole-foundations
-
-## Learn — Movement Education Articles
-
-UNDRGRND Movement publishes in-depth, beginner-friendly educational articles on flexibility, dance, yoga, pole fitness, and aerial arts. All articles are written for complete beginners and are designed to help people understand and safely practice movement disciplines.
-
-### Learn Hub
-
-- **Learn Hub (all articles):** https://www.undrgrnd.com.au/learn
-
-### Flexibility & Stretching
-
-- **How to Do the Splits** — A comprehensive guide covering front splits, middle splits, and oversplits. Includes anatomy tables, warm-up routines, 6-step front split progression, 5-step middle split progression, oversplit safety guidelines, and a full FAQ. Page: https://www.undrgrnd.com.au/learn/how-to-do-the-splits
-- **A Beginner Stretching Routine for Tight Muscles** — A science-backed daily stretching routine for beginners, covering 8 essential stretches, hold durations, upper and lower body stretches in detail, and common mistakes. Page: https://www.undrgrnd.com.au/learn/beginner-stretching-routine
-- **How to Do a Backbend** — A step-by-step guide to learning backbends safely, from bridge pose through to full wheel pose. Covers anatomy, preparatory stretches, a 5-stage progression, and safety guidelines. Page: https://www.undrgrnd.com.au/learn/how-to-do-a-backbend
-- **How to Improve Your Flexibility** — A practical, science-backed guide to improving flexibility at any age. Covers the 5 types of stretching, the nervous system's role in flexibility, a 4-week training plan, and common mistakes. Page: https://www.undrgrnd.com.au/learn/how-to-improve-flexibility
-
-### Pole Fitness
-
-- **What to Expect at Your First Pole Fitness Class** — Everything a beginner needs to know before their first pole class: what to wear, class structure, the first moves taught, pole kisses (bruising), and how to overcome common fears. Page: https://www.undrgrnd.com.au/learn/what-to-expect-first-pole-class
-
-### Aerial Arts
-
-- **Aerial Yoga for Beginners: Everything You Need to Know** — A complete guide to aerial yoga for beginners. Covers what aerial yoga is, how it differs from floor yoga, 5 foundational poses, benefits, safety, contraindications, and what to wear. Page: https://www.undrgrnd.com.au/learn/aerial-yoga-for-beginners
-
-### Dance
-
-- **The Benefits of Dance Classes for Adults** — A research-backed guide to the physical, cognitive, mental, and social benefits of adult dance classes. Covers cardiovascular fitness, neuroplasticity, emotional regulation, social connection, and a style comparison table. Page: https://www.undrgrnd.com.au/learn/benefits-of-dance-for-adults
-
-### Yoga
-
-- **Yoga for Beginners on the Gold Coast** — A complete guide for complete yoga beginners. Covers the main yoga styles (Hatha, Vinyasa, Yin, Restorative, Fusion), 6 essential beginner poses, what to expect in a first class, and the physical and mental benefits. Page: https://www.undrgrnd.com.au/learn/yoga-for-beginners-gold-coast
+Classes run by Queensland school term. Each program page shows the current term, its dates, and how many weeks remain, with an "Enrol Now" button that goes to secure Stripe checkout for the right number of weeks at $35 each. Partway through a term, enrolment automatically switches to selling the next full term so new families can join cleanly. To ask about days, times or suitability, use the contact form or call — the AI receptionist will help or pass a message to the team.
 
 ## Key Pages
 
 - **Homepage:** https://www.undrgrnd.com.au/
-- **Adult Classes:** https://www.undrgrnd.com.au/adults
-- **Kids Classes:** https://www.undrgrnd.com.au/kids
-- **Enrolment:** https://www.undrgrnd.com.au/enrol
-- **About Us:** https://www.undrgrnd.com.au/about
-- **Contact:** https://www.undrgrnd.com.au/contact
-- **Learn Hub:** https://www.undrgrnd.com.au/learn
+- **Junior Academy (6–10):** https://www.undrgrnd.com.au/programs/junior-academy
+- **Tween Exploration (11–14):** https://www.undrgrnd.com.au/programs/tween-exploration
+- **Teen Elite Lab (14–17):** https://www.undrgrnd.com.au/programs/teen-elite-lab
+- **Contact / Enquire:** https://www.undrgrnd.com.au/contact
 - **Privacy Policy:** https://www.undrgrnd.com.au/privacy-policy
 - **Terms of Service:** https://www.undrgrnd.com.au/terms-of-service
 
 ## Frequently Asked Questions
 
-**Do I need experience to join a class?**
-No. All programs are designed for complete beginners. The "Foundations" level is the entry point for every discipline.
+**What ages are the classes for?**
+Ages 6 to 17, split into three programs: Junior Academy (6–10), Tween Exploration (11–14) and Teen Elite Lab (14–17). There are no adult classes.
 
-**Where is UNDRGRND Movement located?**
-UNDRGRND Movement is based on the Gold Coast, Queensland, Australia, serving Surfers Paradise and surrounding areas. Class times and locations are flexible — we arrange them with you when you get in touch. Visit https://www.undrgrnd.com.au/enrol to see available classes and open terms.
+**Does my child need previous experience?**
+No. Programs are beginner-friendly and designed to build from the foundations. Teen Elite Lab is more advanced but still welcomes committed newcomers.
 
-**What types of classes are available?**
-Dance fitness, pole fitness, yoga, aerial silks, stretch and mobility, and recovery movement (medical clearance required). Kids dance and yoga classes are open now for ages 6–10, with kids aerial silks and kids pole coming soon.
+**How much does it cost?**
+$35 AUD per class, paid upfront for the term.
 
-**How do I book a class?**
-Visit the enrol page at https://www.undrgrnd.com.au/enrol to see available classes and open terms, then get in touch to arrange a time.
+**Where are classes held?**
+On the Gold Coast, serving Surfers Paradise and surrounding areas. Days, times and locations are flexible and confirmed when you get in touch.
 
-**Is UNDRGRND Movement suitable for all fitness levels?**
-Yes. All classes welcome all body types and fitness levels. The focus is on personal progress and expression, not performance or competition.
+**How do I enrol or ask a question?**
+Enrol by term using the "Enrol Now" button on any program page, or use the contact form at https://www.undrgrnd.com.au/contact. You can also call 0721 402 690 — calls are answered by a friendly AI receptionist anytime.
 
-**Does UNDRGRND Movement publish educational content?**
-Yes. The Learn section at https://www.undrgrnd.com.au/learn contains in-depth, beginner-friendly articles on flexibility, splits, backbends, pole fitness, aerial yoga, dance, and yoga. All articles are written for complete beginners and are regularly updated.
-
-**Can I learn the splits as an adult?**
-Yes. The article at https://www.undrgrnd.com.au/learn/how-to-do-the-splits provides a complete guide to learning the splits at any age, including front splits, middle splits, and oversplits.
+**What is "Integrated Movement Arts"?**
+It is UNDRGRND's approach to movement education: children develop physical literacy by exploring multiple movement disciplines — dance, aerial and conditioning — as one connected practice rather than as separate, siloed classes.
 
 ## Sitemap
 

@@ -369,6 +369,9 @@ a.v2-btn--primary, .v2-prose a.v2-btn--primary, a.v2-btn--primary.dance-booking-
 }
 .v2-booking-card__btns .v2-btn { min-width: 9.5rem; }
 
+/* Subtle hero H1 (present for SEO, visually understated) */
+.v2-hero__h1 { color:#fff; font-size:clamp(1.15rem, 3.4vw, 1.7rem); font-weight:400; letter-spacing:0.01em; line-height:1.3; max-width:22ch; margin:0.5rem 0 1rem; text-shadow:0 1px 6px rgba(0,0,0,0.4); }
+
 /* Term/remaining-weeks note on the homepage hero */
 .v2-hero__term { color:#F4F4F6; font-size:clamp(0.64rem, 2.7vw, 1.05rem); font-weight:700; letter-spacing:0.01em; margin:0 0 1.1rem; white-space:nowrap; text-shadow:0 1px 3px rgba(0,0,0,0.45); }
 .v2-hero__term:empty { display:none; }

@@ -369,6 +369,18 @@ a.v2-btn--primary, .v2-prose a.v2-btn--primary, a.v2-btn--primary.dance-booking-
 }
 .v2-booking-card__btns .v2-btn { min-width: 9.5rem; }
 
+/* Visually-hidden H1 / heading — invisible on screen, zero layout space,
+   still read by search engines and screen readers (legitimate, not cloaking). */
+.v2-sr-only {
+  position: absolute !important;
+  width: 1px !important; height: 1px !important;
+  padding: 0 !important; margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 /* ===================== LEARN / PARENTS' GUIDE ===================== */
 .learn-head { background: var(--v2-grey-top); padding: 7rem 6% 3rem; text-align: center; }
 .learn-head__inner { max-width: 720px; margin: 0 auto; }

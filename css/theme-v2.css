@@ -299,3 +299,8 @@ body.v2 .site-footer { background:#161618; border-top:1px solid rgba(255,255,255
   /* Inner-page banners: keep them shorter & wider so the 2.5:1 image shows more */
   body.v2:not(.has-strip) .v2-hero { aspect-ratio: auto; height: auto; min-height: 220px; max-height: 300px; }
 }
+
+/* Buttons inside prose keep their own colours (was inheriting the purple link colour) */
+.v2-prose a.v2-btn { text-decoration: none; }
+.v2-prose a.v2-btn--primary, .v2-prose a.v2-btn--dark { color: #fff; }
+.v2-prose a.v2-btn--outline, .v2-prose a.v2-btn--ghost { color: var(--v2-text); }

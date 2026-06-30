@@ -173,7 +173,6 @@
             '<span aria-hidden="true">|</span>' +
             '<a href="/terms-of-service">Terms of Service</a>' +
           '</nav>' +
-          '<p class="footer-bottom__tagline">Proudly serving Surfers Paradise &amp; the wider Gold Coast</p>' +
         '</div>' +
       '</footer>';
   }

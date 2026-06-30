@@ -11,36 +11,91 @@
   <link rel="stylesheet" href="/css/theme-v2.css">
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "@id": "https://www.undrgrnd.com.au/programs/junior-academy#service",
-        "name": "Junior Academy (Ages 6–10)",
-        "serviceType": "Children's movement and dance program",
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.undrgrnd.com.au/programs/junior-academy#service",
+      "name": "Junior Academy (Ages 6\u201310)",
+      "serviceType": "Children's movement and dance program",
+      "url": "https://www.undrgrnd.com.au/programs/junior-academy",
+      "description": "Playful, foundational movement classes for kids aged 6\u201310 on the Gold Coast \u2014 building coordination, confidence and creativity.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.undrgrnd.com.au/#business",
+        "name": "UNDRGRND Movement"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Gold Coast"
+      },
+      "audience": {
+        "@type": "PeopleAudience",
+        "suggestedMinAge": 6,
+        "suggestedMaxAge": 10
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "35.00",
+        "priceCurrency": "AUD",
+        "availability": "https://schema.org/InStock",
         "url": "https://www.undrgrnd.com.au/programs/junior-academy",
-        "description": "Playful, foundational movement classes for kids aged 6–10 on the Gold Coast — building coordination, confidence and creativity.",
-        "provider": { "@type": "LocalBusiness", "@id": "https://www.undrgrnd.com.au/#business", "name": "UNDRGRND Movement" },
-        "areaServed": { "@type": "City", "name": "Gold Coast" },
-        "audience": { "@type": "PeopleAudience", "suggestedMinAge": 6, "suggestedMaxAge": 10 },
-        "offers": {
-          "@type": "Offer",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
           "price": "35.00",
           "priceCurrency": "AUD",
-          "availability": "https://schema.org/InStock",
-          "url": "https://www.undrgrnd.com.au/programs/junior-academy",
-          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "35.00", "priceCurrency": "AUD", "unitText": "per class" }
+          "unitText": "per class"
         }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.undrgrnd.com.au/" },
-          { "@type": "ListItem", "position": 2, "name": "Junior Academy", "item": "https://www.undrgrnd.com.au/programs/junior-academy" }
-        ]
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.undrgrnd.com.au/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Junior Academy",
+          "item": "https://www.undrgrnd.com.au/programs/junior-academy"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does my child need any experience to join Junior Academy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not at all. Junior Academy is designed for complete beginners aged 6\u201310. Classes are playful and pressure-free, building skills from the ground up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should my child wear and bring?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Comfortable, fitted activewear they can move freely in, hair tied back, and a water bottle. Bare feet or grip socks \u2014 we'll let you know. No equipment is needed to start."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost and how does payment work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$35 per class, paid upfront for the term. The number of classes depends on the weeks remaining in the current term \u2014 the Enrol Now button shows the exact amount."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.undrgrnd.com.au/programs/junior-academy">
@@ -73,6 +128,13 @@
           <li>Small, fully supervised classes</li>
           <li>Qualified, caring instructors</li>
         </ul>
+        <h2 style="text-align:center;margin-top:1rem;">Frequently Asked Questions</h2>
+        <h3>Does my child need any experience to join Junior Academy?</h3>
+        <p>Not at all. Junior Academy is designed for complete beginners aged 6–10. Classes are playful and pressure-free, building skills from the ground up.</p>
+        <h3>What should my child wear and bring?</h3>
+        <p>Comfortable, fitted activewear they can move freely in, hair tied back, and a water bottle. Bare feet or grip socks — we&#x27;ll let you know. No equipment is needed to start.</p>
+        <h3>How much does it cost and how does payment work?</h3>
+        <p>$35 per class, paid upfront for the term. The number of classes depends on the weeks remaining in the current term — the Enrol Now button shows the exact amount.</p>
         <div class="v2-booking-card">
           <p class="v2-booking-card__price"><span>$35</span> per class</p>
           <p class="v2-booking-card__meta">Paid upfront for the term. Class days and times are confirmed when you get in touch.</p>

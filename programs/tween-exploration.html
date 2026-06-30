@@ -11,36 +11,91 @@
   <link rel="stylesheet" href="/css/theme-v2.css">
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "@id": "https://www.undrgrnd.com.au/programs/tween-exploration#service",
-        "name": "Tween Exploration (Ages 11–14)",
-        "serviceType": "Children's movement and dance program",
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.undrgrnd.com.au/programs/tween-exploration#service",
+      "name": "Tween Exploration (Ages 11\u201314)",
+      "serviceType": "Children's movement and dance program",
+      "url": "https://www.undrgrnd.com.au/programs/tween-exploration",
+      "description": "Movement classes for kids aged 11\u201314 on the Gold Coast \u2014 dance, aerial and conditioning while building strength and self-expression.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.undrgrnd.com.au/#business",
+        "name": "UNDRGRND Movement"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Gold Coast"
+      },
+      "audience": {
+        "@type": "PeopleAudience",
+        "suggestedMinAge": 11,
+        "suggestedMaxAge": 14
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "35.00",
+        "priceCurrency": "AUD",
+        "availability": "https://schema.org/InStock",
         "url": "https://www.undrgrnd.com.au/programs/tween-exploration",
-        "description": "Movement classes for kids aged 11–14 on the Gold Coast — dance, aerial and conditioning while building strength and self-expression.",
-        "provider": { "@type": "LocalBusiness", "@id": "https://www.undrgrnd.com.au/#business", "name": "UNDRGRND Movement" },
-        "areaServed": { "@type": "City", "name": "Gold Coast" },
-        "audience": { "@type": "PeopleAudience", "suggestedMinAge": 11, "suggestedMaxAge": 14 },
-        "offers": {
-          "@type": "Offer",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
           "price": "35.00",
           "priceCurrency": "AUD",
-          "availability": "https://schema.org/InStock",
-          "url": "https://www.undrgrnd.com.au/programs/tween-exploration",
-          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "35.00", "priceCurrency": "AUD", "unitText": "per class" }
+          "unitText": "per class"
         }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.undrgrnd.com.au/" },
-          { "@type": "ListItem", "position": 2, "name": "Tween Exploration", "item": "https://www.undrgrnd.com.au/programs/tween-exploration" }
-        ]
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.undrgrnd.com.au/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tween Exploration",
+          "item": "https://www.undrgrnd.com.au/programs/tween-exploration"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "My child is new to movement \u2014 is Tween Exploration still suitable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. While tweens take on more complex work, the program is beginner-friendly and meets each child at their level, whether they're new or continuing from Junior Academy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a typical class cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A blend of dance, beginner aerial and conditioning \u2014 building strength, coordination and self-expression as one connected practice rather than separate classes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost and how does the term work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$35 per class, paid upfront for the term. Classes run by Queensland school term; the Enrol Now button shows the current term and total for the weeks remaining."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.undrgrnd.com.au/programs/tween-exploration">
@@ -73,6 +128,13 @@
           <li>Performance &amp; self-expression</li>
           <li>Supportive, non-competitive coaching</li>
         </ul>
+        <h2 style="text-align:center;margin-top:1rem;">Frequently Asked Questions</h2>
+        <h3>My child is new to movement — is Tween Exploration still suitable?</h3>
+        <p>Yes. While tweens take on more complex work, the program is beginner-friendly and meets each child at their level, whether they&#x27;re new or continuing from Junior Academy.</p>
+        <h3>What does a typical class cover?</h3>
+        <p>A blend of dance, beginner aerial and conditioning — building strength, coordination and self-expression as one connected practice rather than separate classes.</p>
+        <h3>How much does it cost and how does the term work?</h3>
+        <p>$35 per class, paid upfront for the term. Classes run by Queensland school term; the Enrol Now button shows the current term and total for the weeks remaining.</p>
         <div class="v2-booking-card">
           <p class="v2-booking-card__price"><span>$35</span> per class</p>
           <p class="v2-booking-card__meta">Paid upfront for the term. Class days and times are confirmed when you get in touch.</p>

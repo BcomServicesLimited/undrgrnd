@@ -11,36 +11,91 @@
   <link rel="stylesheet" href="/css/theme-v2.css">
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "@id": "https://www.undrgrnd.com.au/programs/teen-elite-lab#service",
-        "name": "Teen Elite Lab (Ages 14–17)",
-        "serviceType": "Children's movement and dance program",
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.undrgrnd.com.au/programs/teen-elite-lab#service",
+      "name": "Teen Elite Lab (Ages 14\u201317)",
+      "serviceType": "Children's movement and dance program",
+      "url": "https://www.undrgrnd.com.au/programs/teen-elite-lab",
+      "description": "Advanced movement training for teens aged 14\u201317 on the Gold Coast \u2014 serious technique, strength and performance across the movement arts.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.undrgrnd.com.au/#business",
+        "name": "UNDRGRND Movement"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Gold Coast"
+      },
+      "audience": {
+        "@type": "PeopleAudience",
+        "suggestedMinAge": 14,
+        "suggestedMaxAge": 17
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "35.00",
+        "priceCurrency": "AUD",
+        "availability": "https://schema.org/InStock",
         "url": "https://www.undrgrnd.com.au/programs/teen-elite-lab",
-        "description": "Advanced movement training for teens aged 14–17 on the Gold Coast — serious technique, strength and performance across the movement arts.",
-        "provider": { "@type": "LocalBusiness", "@id": "https://www.undrgrnd.com.au/#business", "name": "UNDRGRND Movement" },
-        "areaServed": { "@type": "City", "name": "Gold Coast" },
-        "audience": { "@type": "PeopleAudience", "suggestedMinAge": 14, "suggestedMaxAge": 17 },
-        "offers": {
-          "@type": "Offer",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
           "price": "35.00",
           "priceCurrency": "AUD",
-          "availability": "https://schema.org/InStock",
-          "url": "https://www.undrgrnd.com.au/programs/teen-elite-lab",
-          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "35.00", "priceCurrency": "AUD", "unitText": "per class" }
+          "unitText": "per class"
         }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.undrgrnd.com.au/" },
-          { "@type": "ListItem", "position": 2, "name": "Teen Elite Lab", "item": "https://www.undrgrnd.com.au/programs/teen-elite-lab" }
-        ]
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.undrgrnd.com.au/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Teen Elite Lab",
+          "item": "https://www.undrgrnd.com.au/programs/teen-elite-lab"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Teen Elite Lab only for experienced movers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's our most advanced program, but committed newcomers aged 14\u201317 are welcome. The focus is serious technique and strength, scaled to each teen's starting point."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What will my teen work on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Technique, strength and performance across the movement arts \u2014 dance, aerial and conditioning \u2014 with real goals and standards for motivated young movers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost and how does payment work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$35 per class, paid upfront for the term. The Enrol Now button shows the current term dates and the total for the weeks remaining."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.undrgrnd.com.au/programs/teen-elite-lab">
@@ -73,6 +128,13 @@
           <li>Goal-focused, individual coaching</li>
           <li>Performance opportunities</li>
         </ul>
+        <h2 style="text-align:center;margin-top:1rem;">Frequently Asked Questions</h2>
+        <h3>Is Teen Elite Lab only for experienced movers?</h3>
+        <p>It&#x27;s our most advanced program, but committed newcomers aged 14–17 are welcome. The focus is serious technique and strength, scaled to each teen&#x27;s starting point.</p>
+        <h3>What will my teen work on?</h3>
+        <p>Technique, strength and performance across the movement arts — dance, aerial and conditioning — with real goals and standards for motivated young movers.</p>
+        <h3>How much does it cost and how does payment work?</h3>
+        <p>$35 per class, paid upfront for the term. The Enrol Now button shows the current term dates and the total for the weeks remaining.</p>
         <div class="v2-booking-card">
           <p class="v2-booking-card__price"><span>$35</span> per class</p>
           <p class="v2-booking-card__meta">Paid upfront for the term. Class days and times are confirmed when you get in touch.</p>

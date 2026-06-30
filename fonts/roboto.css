@@ -1,0 +1,8 @@
+/* Self-hosted Roboto (variable, latin) — replaces the Google Fonts request */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/roboto.woff2') format('woff2');
+}

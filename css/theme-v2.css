@@ -304,3 +304,9 @@ body.v2 .site-footer { background:#161618; border-top:1px solid rgba(255,255,255
 .v2-prose a.v2-btn { text-decoration: none; }
 .v2-prose a.v2-btn--primary, .v2-prose a.v2-btn--dark { color: #fff; }
 .v2-prose a.v2-btn--outline, .v2-prose a.v2-btn--ghost { color: var(--v2-text); }
+
+/* Mobile: subject-focused crops for wide hero images */
+@media (max-width: 600px) {
+  .mslide-ap { background-image: url('/images/hero/hero-aerial-pole-m.webp') !important; background-position: center !important; }
+  .mbanner-junior { background-image: linear-gradient(180deg,rgba(22,22,24,0.45) 0%,rgba(22,22,24,0.10) 32%,rgba(22,22,24,0.22) 55%,rgba(22,22,24,0.58) 82%,#F2F2F4 100%), url('/images/hero/hero-junior-academy-m.webp') !important; background-position: center !important; }
+}

@@ -208,7 +208,7 @@ body.v2 .v2-hero .v2-btn--primary { color: #fff !important; }
 /* ---- Announcement strip (gold, fixed at the very top, above the nav) ---- */
 .v2-strip { position:fixed; top:0; left:0; right:0; z-index:1100; height:40px;
   display:flex; align-items:center; justify-content:center;
-  background:linear-gradient(180deg,#E6BE54 0%,#A9781A 100%); color:#fff; text-decoration:none;
+  background:linear-gradient(180deg,#5EC2F0 0%,#2E9BD6 100%); color:#fff; text-decoration:none;
   font-weight:700; font-size:0.8rem; letter-spacing:0.14em; text-transform:uppercase;
   white-space:nowrap; padding:0 1rem; text-shadow:0 1px 2px rgba(0,0,0,0.25);
   transition:transform .35s ease, filter .25s ease; }

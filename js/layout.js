@@ -157,7 +157,6 @@
           '<div class="footer-col footer-col--contact">' +
             '<h3 class="footer-col__heading">Contact Us</h3>' +
             '<address style="font-style: normal; line-height: 1.9;">' +
-              '<span itemprop="address">' + NAP.address + '</span><br>' +
               '<a href="' + NAP.phoneHref + '" itemprop="telephone">' + NAP.phoneText + '</a>' +
             '</address>' +
           '</div>' +

@@ -24,3 +24,6 @@
 /programs/pole-flow                            /adults                            301
 /programs/pole-fitness                         /adults                            301
 /enrol                                         /contact                           301
+/about                                         /                                  301
+/learn                                         /                                  301
+/learn/*                                       /                                  301

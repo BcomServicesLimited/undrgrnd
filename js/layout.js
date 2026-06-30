@@ -23,13 +23,9 @@
     { label: 'Adults',    href: '/adults' },
     { label: 'Kids',      href: '/kids', children: [
         { label: 'Recreational Movement Programs', href: '/kids', children: [
-            { label: 'Kids Yoga',               href: '/programs/kids-yoga' },
-            { label: 'Kids Aerial Yoga',        href: '/programs/kids-aerial-yoga' },
-            { label: 'Kids Pole Fitness',       href: '/programs/kids-pole-foundations' },
-            { label: 'Kids Aerial Silks',       href: '/programs/kids-aerial-silks' },
-            { label: 'Urban Mix / Dance Moves', href: '/programs/kids-dance-moves' },
-            { label: 'Modern Contemporary',     href: '/programs/kids-modern-contemporary' },
-            { label: 'Creative Dance',          href: '/programs/kids-creative-dance' }
+            { label: 'The Junior Academy · 6–10',    href: '/programs/junior-academy' },
+            { label: 'The Tween Exploration · 11–14', href: '/programs/tween-exploration' },
+            { label: 'The Teen Elite Lab · 14–17',   href: '/programs/teen-elite-lab' }
           ] }
       ] },
     { label: 'Enrol',     href: '/enrol' },

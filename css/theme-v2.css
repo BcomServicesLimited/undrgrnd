@@ -278,16 +278,11 @@ body.v2 .v2-intro__title { font-size: clamp(2.1rem,4vw,3.3rem); font-weight: 300
 body.v2 .footer-main { padding: 2.5rem 5% 1.25rem; }
 body.v2 .footer-bottom { padding: 1rem 5%; }
 
-/* ---- Clean centered footer (v2) ---- */
-body.v2 .site-footer { background:#161618; border-top:1px solid rgba(255,255,255,0.08); border-image:none; }
-.footer-v2 { max-width:680px; margin:0 auto; padding:3.25rem 6% 2.25rem; text-align:center; }
-.footer-v2__logo { display:inline-block; margin-bottom:1.1rem; }
-.footer-v2__name { color:#fff; font-size:0.7rem; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; margin:0 0 0.55rem; }
-.footer-v2__tagline { color:#9a9aa3; font-size:0.95rem; font-weight:300; margin:0 0 1rem; }
-.footer-v2__phone { display:inline-block; color:#fff; font-size:1.1rem; font-weight:500; letter-spacing:0.02em; text-decoration:none; margin-bottom:1.9rem; transition:color .2s ease; }
-.footer-v2__phone:hover { color:#A78BFA; }
-.footer-v2__bottom { border-top:1px solid rgba(255,255,255,0.08); padding-top:1.4rem; }
-.footer-v2__bottom p { color:#74747d; font-size:0.8rem; margin:0 0 0.5rem; }
-.footer-v2__legal { display:flex; gap:0.6rem; justify-content:center; align-items:center; font-size:0.8rem; }
-.footer-v2__legal a { color:#9a9aa3; text-decoration:none; transition:color .2s ease; }
-.footer-v2__legal a:hover { color:#A78BFA; }
+/* ---- Narrow footer strip ---- */
+body.v2 .site-footer { background:#161618; border-top:1px solid rgba(255,255,255,0.10); border-image:none; }
+.footer-strip { text-align:center; padding:1.5rem 6%; }
+.footer-strip__copy { color:#8a8a92; font-size:0.8rem; letter-spacing:0.02em; margin:0 0 0.55rem; }
+.footer-strip__legal { display:flex; gap:0.7rem; justify-content:center; align-items:center; font-size:0.8rem; }
+.footer-strip__legal a { color:#9a9aa3; text-decoration:none; transition:color .2s ease; }
+.footer-strip__legal a:hover { color:#A78BFA; }
+.footer-strip__legal span { color:#55555c; }

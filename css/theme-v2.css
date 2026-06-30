@@ -242,7 +242,8 @@ body.v2 .nav-menu__link { font-weight: 400; letter-spacing: 0.18em; font-size: 0
    COMPACT PAGE HEADERS — inner pages use a small header band, not a full
    banner. The homepage (body.has-strip) keeps its full-screen slider.
    ========================================================================= */
-body.v2:not(.has-strip) .v2-hero { height: 46vh; min-height: 300px; max-height: 470px; }
+body.v2:not(.has-strip) .v2-hero { height: 58vh; min-height: 380px; max-height: 600px; }
+body.v2:not(.has-strip) .v2-hero.v2-hero--img { background-position: center; }
 body.v2:not(.has-strip) .v2-hero__inner { padding-bottom: 4vh; }
 body.v2:not(.has-strip) .v2-hero h1 { font-size: clamp(1.9rem, 4.2vw, 3.1rem); }
 body.v2:not(.has-strip) .v2-hero p { display: none; }

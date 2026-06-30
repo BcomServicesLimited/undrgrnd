@@ -290,3 +290,12 @@ body.v2 .site-footer { background:#161618; border-top:1px solid rgba(255,255,255
 /* outline button on light backgrounds */
 .v2-btn--outline { border:1px solid rgba(0,0,0,0.28); color:var(--v2-text); }
 .v2-btn--outline:hover { background:rgba(0,0,0,0.05); }
+
+/* ===================== MOBILE: fit hero/banner images better ===================== */
+@media (max-width: 600px) {
+  /* Homepage full-screen slider: shorter so wide images aren't over-zoomed/cropped */
+  body.has-strip .v2-hero { height: 66vh; min-height: 440px; }
+  body.has-strip .v2-hero__inner { padding-bottom: 8vh; }
+  /* Inner-page banners: keep them shorter & wider so the 2.5:1 image shows more */
+  body.v2:not(.has-strip) .v2-hero { aspect-ratio: auto; height: auto; min-height: 220px; max-height: 300px; }
+}

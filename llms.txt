@@ -28,6 +28,17 @@ UNDRGRND Movement offers three age-banded programs. All are beginner-friendly an
 
 Classes run by Queensland school term. Each program page shows the current term, its dates, and how many weeks remain, with an "Enrol Now" button that goes to secure Stripe checkout for the right number of weeks at $35 each. Partway through a term, enrolment automatically switches to selling the next full term so new families can join cleanly. To ask about days, times or suitability, use the contact form or call — the AI receptionist will help or pass a message to the team.
 
+## Parents' Guide (Learn)
+
+Beginner-friendly, parent-focused articles on kids movement, dance and aerial on the Gold Coast. Written to help parents choose, prepare for and understand movement classes for their child.
+
+- **Parents' Guide hub:** https://www.undrgrnd.com.au/learn
+- **What Age Should Kids Start Movement & Dance Classes?** — How to match the class to the child's stage (6–10, 11–14, 14–17) rather than a specific age; no experience needed. https://www.undrgrnd.com.au/learn/when-should-kids-start-movement-classes
+- **7 Benefits of Movement Classes for Kids** — Physical literacy, confidence, focus, emotional regulation, friendship and a lifelong love of movement. https://www.undrgrnd.com.au/learn/benefits-of-movement-classes-for-kids
+- **What Is Integrated Movement Arts? A Parent's Guide** — Why a multi-discipline approach (dance, aerial, conditioning) builds stronger, more adaptable young movers than early specialisation. https://www.undrgrnd.com.au/learn/what-is-integrated-movement-arts
+- **What to Expect at Your Child's First Class** — What happens, what to wear and bring, helping a shy child, and how parents can help. https://www.undrgrnd.com.au/learn/what-to-expect-first-class
+- **Is Aerial Safe for Kids? A Parent's Guide** — How beginner aerial for children is low height, strength-first, small-class and progressive. https://www.undrgrnd.com.au/learn/is-aerial-safe-for-kids
+
 ## Key Pages
 
 - **Homepage:** https://www.undrgrnd.com.au/
@@ -35,6 +46,7 @@ Classes run by Queensland school term. Each program page shows the current term,
 - **Tween Exploration (11–14):** https://www.undrgrnd.com.au/programs/tween-exploration
 - **Teen Elite Lab (14–17):** https://www.undrgrnd.com.au/programs/teen-elite-lab
 - **Contact / Enquire:** https://www.undrgrnd.com.au/contact
+- **Parents' Guide (Learn):** https://www.undrgrnd.com.au/learn
 - **Privacy Policy:** https://www.undrgrnd.com.au/privacy-policy
 - **Terms of Service:** https://www.undrgrnd.com.au/terms-of-service
 

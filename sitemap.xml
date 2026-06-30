@@ -37,6 +37,44 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- PARENTS' GUIDE (LEARN) -->
+  <url>
+    <loc>https://www.undrgrnd.com.au/learn</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.undrgrnd.com.au/learn/when-should-kids-start-movement-classes</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.undrgrnd.com.au/learn/benefits-of-movement-classes-for-kids</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.undrgrnd.com.au/learn/what-is-integrated-movement-arts</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.undrgrnd.com.au/learn/what-to-expect-first-class</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.undrgrnd.com.au/learn/is-aerial-safe-for-kids</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- LEGAL -->
   <url>
     <loc>https://www.undrgrnd.com.au/privacy-policy</loc>

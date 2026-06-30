@@ -144,7 +144,9 @@
       '<footer class="site-footer" role="contentinfo" itemscope itemtype="https://schema.org/LocalBusiness">' +
         '<div class="footer-strip">' +
           '<p class="footer-strip__copy">&copy; ' + YEAR + ' <span itemprop="name">UNDRGRND Movement</span>. All rights reserved.</p>' +
-          '<nav class="footer-strip__legal" aria-label="Legal links">' +
+          '<nav class="footer-strip__legal" aria-label="Footer links">' +
+            '<a href="/learn">Parents&rsquo; Guide</a>' +
+            '<span aria-hidden="true">|</span>' +
             '<a href="/privacy-policy">Privacy Policy</a>' +
             '<span aria-hidden="true">|</span>' +
             '<a href="/terms-of-service">Terms of Service</a>' +

@@ -20,8 +20,7 @@
   /* ─── Single source of truth ──────────────────────────────────────────── */
   var MENU = [
     { label: 'Home',      href: '/' },
-    { label: 'Adults',    href: '/adults' },
-    { label: 'Kids',      href: '/kids', children: [
+    { label: 'Programs',  href: '/kids', children: [
         { label: 'Recreational Movement Programs', href: '/kids', children: [
             { label: 'The Junior Academy · 6–10',    href: '/programs/junior-academy' },
             { label: 'The Tween Exploration · 11–14', href: '/programs/tween-exploration' },

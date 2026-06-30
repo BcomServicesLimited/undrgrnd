@@ -286,3 +286,7 @@ body.v2 .site-footer { background:#161618; border-top:1px solid rgba(255,255,255
 .footer-strip__legal a { color:#9a9aa3; text-decoration:none; transition:color .2s ease; }
 .footer-strip__legal a:hover { color:#A78BFA; }
 .footer-strip__legal span { color:#55555c; }
+
+/* outline button on light backgrounds */
+.v2-btn--outline { border:1px solid rgba(0,0,0,0.28); color:var(--v2-text); }
+.v2-btn--outline:hover { background:rgba(0,0,0,0.05); }

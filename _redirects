@@ -19,7 +19,8 @@
 
 # Homepage clean URL redirect (prevents index.html redirect issue)
 /index.html                          /                                                 301
-/timetable.html                                /enrol                             301
+/timetable.html                                /contact                             301
 /programs/pole-flow-foundations.html           /adults                            301
 /programs/pole-flow                            /adults                            301
 /programs/pole-fitness                         /adults                            301
+/enrol                                         /contact                           301

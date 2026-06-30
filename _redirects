@@ -1,29 +1,46 @@
 # UNDRGRND Movement — 301 Redirects
-# Fixes dead program URLs found in Google Search Console (March 2026)
+# Site restructured to kids age-band programs (2026): Junior Academy,
+# Tween Exploration, Teen Elite Lab. All retired URLs point to a live page.
 
-# Old program page slugs → current page slugs
-/programs/aerial-silks.html                    /programs/aerial-silks-foundations 301
-/programs/aerial-yoga.html                     /programs/aerial-yoga-foundations  301
-/programs/choreography-fusion.html             /programs/choreography-fusion-foundations 301
-/programs/movement-dance.html                  /programs/movement-flow-foundations 301
-/programs/recovery-movement.html               /programs/recovery-movement-flow-foundations 301
+# ── Removed top-level pages ────────────────────────────────────────────
+/adults            /                              301
+/kids              /                              301
+/enrol             /contact                       301
+/about             /                              301
+/learn             /                              301
+/learn/*           /                              301
+/index.html        /                              301
+/timetable.html    /contact                       301
 
-# Old yoga page names → Fusion Yoga Foundations
-/programs/modern-yoga.html                     /programs/fusion-yoga-foundations  301
-/programs/traditional-yoga.html                /programs/fusion-yoga-foundations  301
-/programs/yoga-fusion.html                     /programs/fusion-yoga-foundations  301
+# ── Retired kids class pages → closest age-band program ────────────────
+/programs/kids-yoga                  /programs/junior-academy     301
+/programs/kids-aerial-yoga           /programs/junior-academy     301
+/programs/kids-creative-dance        /programs/junior-academy     301
+/programs/kids-dance-moves           /programs/junior-academy     301
+/programs/kids-aerial-silks          /programs/tween-exploration  301
+/programs/kids-modern-contemporary   /programs/tween-exploration  301
+/programs/kids-pole-foundations      /programs/teen-elite-lab     301
 
-# Removed program — redirect to adults page
-/programs/afro-groove-foundations.html         /adults                            301
-/programs/pole-fitness-foundations.html        /adults                            301
-
-# Homepage clean URL redirect (prevents index.html redirect issue)
-/index.html                          /                                                 301
-/timetable.html                                /contact                             301
-/programs/pole-flow-foundations.html           /adults                            301
-/programs/pole-flow                            /adults                            301
-/programs/pole-fitness                         /adults                            301
-/enrol                                         /contact                           301
-/about                                         /                                  301
-/learn                                         /                                  301
-/learn/*                                       /                                  301
+# ── Retired adult/foundation program pages → homepage ──────────────────
+/programs/aerial-silks-foundations           /   301
+/programs/aerial-silks.html                  /   301
+/programs/aerial-yoga-foundations            /   301
+/programs/aerial-yoga.html                   /   301
+/programs/booty-burn-foundations             /   301
+/programs/choreography-fusion-foundations    /   301
+/programs/choreography-fusion.html           /   301
+/programs/fusion-yoga-foundations            /   301
+/programs/modern-yoga.html                   /   301
+/programs/traditional-yoga.html              /   301
+/programs/yoga-fusion.html                   /   301
+/programs/movement-flow-foundations          /   301
+/programs/movement-dance.html                /   301
+/programs/pole-strength-movement             /   301
+/programs/pole-flow-foundations.html         /   301
+/programs/pole-flow                          /   301
+/programs/pole-fitness                       /   301
+/programs/pole-fitness-foundations.html      /   301
+/programs/afro-groove-foundations.html       /   301
+/programs/recovery-movement-flow-foundations /   301
+/programs/recovery-movement.html             /   301
+/programs/stretch-mobility-foundations       /   301

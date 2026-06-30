@@ -369,6 +369,24 @@ a.v2-btn--primary, .v2-prose a.v2-btn--primary, a.v2-btn--primary.dance-booking-
 }
 .v2-booking-card__btns .v2-btn { min-width: 9.5rem; }
 
+/* ===================== FAQ ACCORDION (details/summary) ===================== */
+.v2-faq { max-width: 760px; margin: 1.5rem auto 0; text-align: left; }
+.v2-faq__item { border-bottom: 1px solid rgba(0,0,0,0.1); }
+.v2-faq__item summary {
+  list-style: none; cursor: pointer; position: relative;
+  padding: 1.15rem 2.25rem 1.15rem 0;
+  font-weight: 600; font-size: 1.02rem; color: var(--v2-text); line-height: 1.45;
+}
+.v2-faq__item summary::-webkit-details-marker { display: none; }
+.v2-faq__item summary::after {
+  content: '+'; position: absolute; right: 0.15rem; top: 50%; transform: translateY(-50%);
+  font-size: 1.5rem; font-weight: 300; line-height: 1; color: var(--v2-accent-solid);
+}
+.v2-faq__item[open] summary::after { content: '\2212'; }
+.v2-faq__item summary:hover { color: var(--v2-accent-solid); }
+.v2-faq__a { padding: 0 0 1.3rem; }
+.v2-faq__a p { margin: 0; color: var(--v2-muted); font-weight: 300; font-size: 1rem; line-height: 1.75; }
+
 /* Visually-hidden H1 / heading — invisible on screen, zero layout space,
    still read by search engines and screen readers (legitimate, not cloaking). */
 .v2-sr-only {

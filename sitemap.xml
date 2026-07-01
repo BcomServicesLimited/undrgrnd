@@ -77,6 +77,12 @@
 
   <!-- LEGAL -->
   <url>
+    <loc>https://www.undrgrnd.com.au/child-safety-policy</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
     <loc>https://www.undrgrnd.com.au/privacy-policy</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>yearly</changefreq>

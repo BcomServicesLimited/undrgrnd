@@ -157,6 +157,8 @@
           '<nav class="footer-strip__legal" aria-label="Footer links">' +
             '<a href="/learn">Parents&rsquo; Guide</a>' +
             '<span aria-hidden="true">|</span>' +
+            '<a href="/child-safety-policy">Child Safety</a>' +
+            '<span aria-hidden="true">|</span>' +
             '<a href="/privacy-policy">Privacy Policy</a>' +
             '<span aria-hidden="true">|</span>' +
             '<a href="/terms-of-service">Terms of Service</a>' +

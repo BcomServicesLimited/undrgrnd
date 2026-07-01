@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Child Safety &amp; Governance Policy | UNDRGRND Movement</title>
+  <meta name="description" content="UNDRGRND Movement's Child Safety & Governance Policy. We adopt the National Principles for Child Safe Organisations and comply with Queensland child protection and Blue Card requirements.">
+
+  <link rel="canonical" href="https://www.undrgrnd.com.au/child-safety-policy">
+  <meta name="robots" content="index, follow">
+
+  <link rel="stylesheet" href="/fonts/roboto.css">
+  <link rel="stylesheet" href="/css/global.css">
+
+  <style>
+    .legal-hero { padding: 10rem 5% 4rem; background: #0A0A0A; border-bottom: 1px solid rgba(139, 92, 246, 0.12); }
+    .legal-hero__inner { max-width: 900px; margin-inline: auto; }
+    .legal-hero__eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #A78BFA; margin-bottom: 0.75rem; }
+    .legal-hero__title { font-size: clamp(1.9rem, 5vw, 3.2rem); line-height: 1.05; letter-spacing: 0.01em; color: #FFFFFF; margin-bottom: 1.25rem; font-weight: 700; }
+    .legal-hero__meta { display: flex; align-items: center; gap: 0.6rem; font-size: 0.82rem; color: rgba(161, 161, 161, 0.6); margin-bottom: 1.25rem; }
+    .legal-hero__meta svg { width: 13px; height: 13px; stroke: rgba(161, 161, 161, 0.5); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .legal-hero__intro { font-size: 1rem; color: #A1A1A1; line-height: 1.75; max-width: 720px; }
+
+    .legal-body { padding: 5rem 5% 8rem; background: #0A0A0A; }
+    .legal-body__inner { max-width: 900px; margin-inline: auto; display: grid; grid-template-columns: 1fr; gap: 4rem; }
+    @media (min-width: 1024px) { .legal-body__inner { grid-template-columns: 220px 1fr; gap: 5rem; align-items: start; } }
+
+    .toc { background: #1A1A1A; border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 16px; padding: 1.75rem; }
+    @media (min-width: 1024px) { .toc { position: sticky; top: 100px; } }
+    .toc__heading { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(161, 161, 161, 0.5); margin-bottom: 1rem; }
+    .toc__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.35rem; }
+    .toc__list li a { display: block; font-size: 0.82rem; font-weight: 600; color: #A1A1A1; text-decoration: none; padding: 0.4rem 0.6rem; border-radius: 8px; transition: all 0.2s ease; line-height: 1.4; }
+    .toc__list li a:hover { color: #A78BFA; background: rgba(139, 92, 246, 0.08); }
+    .toc__list li a.active { color: #FFFFFF; background: rgba(139, 92, 246, 0.12); }
+
+    .legal-content { display: flex; flex-direction: column; gap: 3.5rem; }
+    .legal-section { scroll-margin-top: 100px; }
+    .legal-section__number { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 8px; background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2); font-size: 0.72rem; font-weight: 800; color: #8B5CF6; margin-bottom: 0.75rem; }
+    .legal-section h2 { font-size: 1.25rem; font-weight: 800; color: #FFFFFF; margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+    .legal-section p { font-size: 0.95rem; color: #A1A1A1; line-height: 1.85; margin-bottom: 1rem; }
+    .legal-section p:last-child { margin-bottom: 0; }
+    .legal-section ul { list-style: none; margin: 0.75rem 0 1rem; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+    .legal-section ul li { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.93rem; color: #A1A1A1; line-height: 1.6; }
+    .legal-section ul li::before { content: ''; display: block; width: 6px; height: 6px; border-radius: 50%; background: #8B5CF6; flex-shrink: 0; margin-top: 8px; }
+    .legal-section ul li strong { color: #FFFFFF; }
+    .legal-section a { color: #A78BFA; text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s ease; }
+    .legal-section a:hover { color: #FFFFFF; }
+
+    .legal-highlight { background: rgba(139, 92, 246, 0.06); border: 1px solid rgba(139, 92, 246, 0.15); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1rem 0; }
+    .legal-highlight p { font-size: 0.9rem; color: #A1A1A1; line-height: 1.7; margin: 0; }
+    .legal-highlight p strong { color: #A78BFA; }
+
+    .legal-contact-block { background: #1A1A1A; border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 14px; padding: 1.5rem; margin-top: 1rem; }
+    .legal-contact-block__row { display: flex; align-items: flex-start; gap: 0.85rem; padding: 0.75rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+    .legal-contact-block__row:last-child { border-bottom: none; padding-bottom: 0; }
+    .legal-contact-block__row:first-child { padding-top: 0; }
+    .legal-contact-block__label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(161, 161, 161, 0.5); min-width: 80px; margin-top: 1px; }
+    .legal-contact-block__value { font-size: 0.92rem; color: #FFFFFF; font-weight: 600; }
+    .legal-contact-block__value a { color: #A78BFA; text-decoration: none; }
+    .legal-contact-block__value a:hover { color: #FFFFFF; }
+
+    .back-to-top { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #A1A1A1; text-decoration: none; transition: color 0.2s ease; margin-top: 1rem; }
+    .back-to-top:hover { color: #A78BFA; }
+    .back-to-top svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.undrgrnd.com.au/child-safety-policy">
+  <meta property="og:title" content="Child Safety & Governance Policy | UNDRGRND Movement">
+  <meta property="og:description" content="How UNDRGRND Movement keeps children safe — National Principles for Child Safe Organisations, Blue Card screening, boutique supervision and clear reporting.">
+  <meta property="og:image" content="https://www.undrgrnd.com.au/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/css/theme-v2.css?v=9">
+</head>
+
+<body class="v2">
+<div id="site-nav"></div>
+
+<header class="legal-hero" id="top">
+  <div class="legal-hero__inner">
+    <p class="legal-hero__eyebrow">UNDRGRND Movement &mdash; Governance</p>
+    <h1 class="v2-sr-only">Child Safety &amp; Governance Policy</h1>
+    <p class="legal-hero__title">Child Safety &amp; Governance Policy</p>
+    <p class="legal-hero__meta">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      Version 1.0 &middot; Last Updated: 1 July 2026
+    </p>
+    <p class="legal-hero__intro">UNDRGRND Movement is committed to providing a safe, respectful and inclusive environment for children and young people. This policy establishes the governance framework for protecting children, supporting families, managing risk and promoting a positive learning environment across all UNDRGRND programs. It applies to all instructors, contractors, volunteers, students, parents, guardians and visitors.</p>
+  </div>
+</header>
+
+<main class="legal-body" aria-label="Child safety and governance policy content">
+  <div class="legal-body__inner">
+
+    <nav class="toc" aria-label="Policy table of contents">
+      <p class="toc__heading">Contents</p>
+      <ol class="toc__list">
+        <li><a href="#section-1">1. Our Commitment</a></li>
+        <li><a href="#section-2">2. Scope</a></li>
+        <li><a href="#section-3">3. Programs Covered</a></li>
+        <li><a href="#section-4">4. Recruitment &amp; Screening</a></li>
+        <li><a href="#section-5">5. Boutique Supervision</a></li>
+        <li><a href="#section-6">6. Physical Contact</a></li>
+        <li><a href="#section-7">7. Progression</a></li>
+        <li><a href="#section-8">8. Equipment Safety</a></li>
+        <li><a href="#section-9">9. Medical &amp; Emergencies</a></li>
+        <li><a href="#section-10">10. Behaviour</a></li>
+        <li><a href="#section-11">11. Privacy</a></li>
+        <li><a href="#section-12">12. Reporting Concerns</a></li>
+        <li><a href="#section-13">13. Policy Review</a></li>
+        <li><a href="#section-14">14. Supporting Documents</a></li>
+      </ol>
+    </nav>
+
+    <div class="legal-content">
+
+      <section class="legal-section" id="section-1" aria-labelledby="s1heading">
+        <span class="legal-section__number" aria-hidden="true">1</span>
+        <h2 id="s1heading">Our Commitment</h2>
+        <p>UNDRGRND Movement is committed to providing a safe, respectful and inclusive environment for children and young people. We adopt the <strong>National Principles for Child Safe Organisations</strong> and comply with Queensland child protection and Blue Card requirements.</p>
+        <div class="legal-highlight">
+          <p><strong>Zero tolerance:</strong> UNDRGRND Movement has zero tolerance for child abuse and is committed to acting in the best interests of children and keeping them safe from harm at all times.</p>
+        </div>
+      </section>
+
+      <section class="legal-section" id="section-2" aria-labelledby="s2heading">
+        <span class="legal-section__number" aria-hidden="true">2</span>
+        <h2 id="s2heading">Scope</h2>
+        <p>This policy applies to all instructors, contractors, volunteers, students, parents, guardians and visitors involved with UNDRGRND Movement.</p>
+      </section>
+
+      <section class="legal-section" id="section-3" aria-labelledby="s3heading">
+        <span class="legal-section__number" aria-hidden="true">3</span>
+        <h2 id="s3heading">Programs Covered</h2>
+        <p>This policy applies to Movement Foundations, Creative Movement Foundations, Yoga &amp; Somatic Movement Foundations, Recovery &amp; Mobility Flow, and future Aerial Yoga, Aerial Foundations, Pole Foundations and Performance Teams.</p>
+      </section>
+
+      <section class="legal-section" id="section-4" aria-labelledby="s4heading">
+        <span class="legal-section__number" aria-hidden="true">4</span>
+        <h2 id="s4heading">Recruitment &amp; Screening</h2>
+        <p>Instructors must maintain relevant qualifications, a valid Blue Card where required, and current First Aid and CPR certification.</p>
+      </section>
+
+      <section class="legal-section" id="section-5" aria-labelledby="s5heading">
+        <span class="legal-section__number" aria-hidden="true">5</span>
+        <h2 id="s5heading">Boutique Supervision</h2>
+        <p>Children's programs are intentionally limited to a maximum of five participants, ensuring close supervision, individual attention and a safe learning environment.</p>
+      </section>
+
+      <section class="legal-section" id="section-6" aria-labelledby="s6heading">
+        <span class="legal-section__number" aria-hidden="true">6</span>
+        <h2 id="s6heading">Physical Contact</h2>
+        <p>Spotting is used only where necessary for instruction or safety and is undertaken professionally, respectfully and with the awareness of the student.</p>
+      </section>
+
+      <section class="legal-section" id="section-7" aria-labelledby="s7heading">
+        <span class="legal-section__number" aria-hidden="true">7</span>
+        <h2 id="s7heading">Progression</h2>
+        <p>Students progress according to demonstrated competency rather than age, ensuring every child advances safely and at a pace appropriate to their ability.</p>
+      </section>
+
+      <section class="legal-section" id="section-8" aria-labelledby="s8heading">
+        <span class="legal-section__number" aria-hidden="true">8</span>
+        <h2 id="s8heading">Equipment Safety</h2>
+        <p>Equipment is inspected regularly, and any unsafe equipment is removed from service immediately until repaired or replaced.</p>
+      </section>
+
+      <section class="legal-section" id="section-9" aria-labelledby="s9heading">
+        <span class="legal-section__number" aria-hidden="true">9</span>
+        <h2 id="s9heading">Medical Information &amp; Emergencies</h2>
+        <p>Parents and guardians provide medical information and emergency contacts before participation, so that instructors can respond appropriately and keep every child safe.</p>
+      </section>
+
+      <section class="legal-section" id="section-10" aria-labelledby="s10heading">
+        <span class="legal-section__number" aria-hidden="true">10</span>
+        <h2 id="s10heading">Behaviour</h2>
+        <p>Bullying, harassment and unsafe behaviour are not tolerated. All members of the UNDRGRND community are expected to treat one another with respect.</p>
+      </section>
+
+      <section class="legal-section" id="section-11" aria-labelledby="s11heading">
+        <span class="legal-section__number" aria-hidden="true">11</span>
+        <h2 id="s11heading">Privacy</h2>
+        <p>Personal information is managed in accordance with our privacy obligations and UNDRGRND policies. See our <a href="/privacy-policy">Privacy Policy</a> for full detail.</p>
+      </section>
+
+      <section class="legal-section" id="section-12" aria-labelledby="s12heading">
+        <span class="legal-section__number" aria-hidden="true">12</span>
+        <h2 id="s12heading">Reporting Concerns</h2>
+        <p>Child safety concerns are taken seriously, documented and escalated where required. If you have a concern about the safety or wellbeing of a child, please contact us using the details below.</p>
+        <div class="legal-highlight">
+          <p><strong>In an emergency,</strong> or if a child is in immediate danger, always call <strong>000</strong> first. Concerns can also be raised with the Queensland Family &amp; Child Commission and relevant authorities.</p>
+        </div>
+      </section>
+
+      <section class="legal-section" id="section-13" aria-labelledby="s13heading">
+        <span class="legal-section__number" aria-hidden="true">13</span>
+        <h2 id="s13heading">Policy Review</h2>
+        <p>This policy is reviewed annually, or sooner following any significant change to our programs, facilities or legal obligations.</p>
+      </section>
+
+      <section class="legal-section" id="section-14" aria-labelledby="s14heading">
+        <span class="legal-section__number" aria-hidden="true">14</span>
+        <h2 id="s14heading">Supporting Documents</h2>
+        <p>This policy is supported by the following documents, available on request:</p>
+        <ul>
+          <li>Privacy Policy</li>
+          <li>Terms &amp; Conditions</li>
+          <li>Parent &amp; Student Handbook</li>
+          <li>Instructor Code of Conduct</li>
+          <li>Parent Code of Conduct</li>
+          <li>Student Code of Conduct</li>
+          <li>Incident &amp; Injury Procedure</li>
+          <li>Emergency Response Procedure</li>
+          <li>Photography &amp; Media Consent Form</li>
+          <li>Medical Information Form</li>
+        </ul>
+
+        <div class="legal-contact-block">
+          <div class="legal-contact-block__row">
+            <span class="legal-contact-block__label">Business</span>
+            <span class="legal-contact-block__value">UNDRGRND Movement</span>
+          </div>
+          <div class="legal-contact-block__row">
+            <span class="legal-contact-block__label">Area</span>
+            <span class="legal-contact-block__value">Gold Coast, Queensland, Australia</span>
+          </div>
+          <div class="legal-contact-block__row">
+            <span class="legal-contact-block__label">Phone</span>
+            <span class="legal-contact-block__value"><a href="tel:+61721402690">0721 402 690</a></span>
+          </div>
+        </div>
+
+        <a href="#top" class="back-to-top" aria-label="Back to top of page">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+          Back to top
+        </a>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<script>
+(function () {
+  'use strict';
+  var sections = document.querySelectorAll('.legal-section');
+  var tocLinks = document.querySelectorAll('.toc__list a');
+  if ('IntersectionObserver' in window && sections.length && tocLinks.length) {
+    var tocObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var id = entry.target.getAttribute('id');
+          tocLinks.forEach(function (link) {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + id) link.classList.add('active');
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(function (section) { tocObserver.observe(section); });
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var target = document.getElementById(anchor.getAttribute('href').slice(1));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+}());
+</script>
+
+<script src="/js/layout.js?v=3"></script>
+</body>
+</html>

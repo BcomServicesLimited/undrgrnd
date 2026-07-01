@@ -398,6 +398,8 @@ a.v2-btn--primary, .v2-prose a.v2-btn--primary, a.v2-btn--primary.dance-booking-
 body.has-maint .site-nav { top: 38px; }
 
 /* ===================== FAQ ACCORDION (details/summary) ===================== */
+/* FAQ heading — smaller and not bold (overrides the big section-heading style) */
+body.v2 h2.v2-faq__title { font-size: 1.15rem; font-weight: 400; letter-spacing: 0.02em; }
 .v2-faq { max-width: 760px; margin: 1.5rem auto 0; text-align: left; }
 .v2-faq__item { border-bottom: 1px solid rgba(0,0,0,0.1); }
 .v2-faq__item summary {

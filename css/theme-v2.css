@@ -157,6 +157,11 @@ body.v2 .tabs-section, body.v2 .enquiry-section, body.v2 .programs-section__inne
   background: transparent !important;
 }
 body.v2 h1, body.v2 h2, body.v2 h3, body.v2 h4 { color: var(--v2-text); }
+/* Legal/policy pages are dark-themed — keep their headings/titles light
+   (overrides the v2 dark heading colour above, which otherwise wins on load order) */
+body.v2 .legal-hero__title,
+body.v2 .legal-section h2,
+body.v2 .legal-section h3 { color: #FFFFFF; }
 body.v2 p, body.v2 li, body.v2 address { color: var(--v2-muted); }
 body.v2 .section-label { color: var(--v2-accent-solid); }
 

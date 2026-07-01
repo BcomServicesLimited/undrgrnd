@@ -6,9 +6,19 @@
    ========================================================================= */
 
 /* ---- Fonts + palette (scoped to .v2 so old pages are unaffected) ---- */
+/* Self-hosted Montserrat (variable, latin) — content font under the banners */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/montserrat.woff2') format('woff2');
+}
 body.v2 {
-  --font-display: 'Roboto', sans-serif;
-  --font-body: 'Roboto', sans-serif;
+  --font-display: 'Montserrat', Helvetica Neue, Arial, sans-serif;
+  --font-body: 'Montserrat', Helvetica Neue, Arial, sans-serif;
+  /* Banner/hero text keeps Roboto (see .v2-hero override below) */
+  --font-banner: 'Roboto', Helvetica Neue, Arial, sans-serif;
   --v2-grey-top: #F2F2F4;
   --v2-grey-mid: #E3E3E8;
   --v2-charcoal: #161618;
@@ -16,10 +26,13 @@ body.v2 {
   --v2-muted: #6A6A73;
   --v2-accent: linear-gradient(135deg, #7C3AED 0%, #DB2777 100%);
   --v2-accent-solid: #7C3AED;
-  font-family: 'Roboto', Helvetica Neue, Arial, sans-serif;
+  font-family: 'Montserrat', Helvetica Neue, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   background: var(--v2-grey-top);
 }
+
+/* Banners are untouched: the hero image areas keep Roboto */
+body.v2 .v2-hero { font-family: var(--font-banner); }
 body.v2 h1, body.v2 h2, body.v2 h3 { font-weight: 700; letter-spacing: -0.01em; }
 
 /* ---- Nav: ALWAYS solid dark (readable over light hero areas) ---- */
@@ -30,7 +43,7 @@ body.v2 .nav-menu__link:hover, body.v2 .nav-menu__link.active { color: #fff; }
 body.v2 .nav-logo { gap: 1rem; }
 body.v2 .nav-logo__tagline {
   color: #fff; border-left: none; padding-left: 0;
-  font-family: 'Roboto', Helvetica Neue, Arial, sans-serif;
+  font-family: 'Montserrat', Helvetica Neue, Arial, sans-serif;
   font-size: 0.6rem; font-weight: 400; letter-spacing: 0.18em;
   line-height: 1.45; text-transform: uppercase; max-width: 13ch;
 }
@@ -221,7 +234,7 @@ body.v2 .v2-hero .v2-btn--primary { color: #fff !important; }
 body.v2 .nav-dropdown__link, body.v2 .nav-subdropdown__link,
 body.v2 .nav-dropdown__heading a, body.v2 .nav-dropdown__link--parent,
 body.v2 .nav-mobile-submenu__link, body.v2 .nav-mobile-submenu__heading a {
-  font-family: 'Roboto', Helvetica Neue, Arial, sans-serif;
+  font-family: 'Montserrat', Helvetica Neue, Arial, sans-serif;
 }
 
 /* Dropdown items styled like the nav links (uppercase + spacing) */

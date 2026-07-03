@@ -390,6 +390,22 @@ a.v2-btn--primary, .v2-prose a.v2-btn--primary, a.v2-btn--primary.dance-booking-
 }
 .v2-booking-card__btns .v2-btn { min-width: 9.5rem; }
 
+/* ===================== HOMEPAGE PROGRAMS ===================== */
+.v2-programs { background: var(--v2-grey-top); padding: 1rem 6% 2rem; }
+.v2-programs__inner { max-width: 1080px; margin: 0 auto; }
+.v2-programs__eyebrow { text-align: center; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--v2-accent-solid); font-weight: 600; margin: 0; }
+.v2-programs__title { text-align: center; font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; letter-spacing: -0.01em; color: var(--v2-text); margin: 0.5rem 0 2.25rem; }
+.v2-programs__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+@media (max-width: 820px) { .v2-programs__grid { grid-template-columns: 1fr; } }
+.v2-progcard { display: flex; flex-direction: column; background: #fff; border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; padding: 1.9rem 1.7rem; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.04); }
+.v2-progcard:hover { transform: translateY(-4px); box-shadow: 0 20px 48px rgba(0,0,0,0.10); }
+.v2-progcard__age { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--v2-accent-solid); font-weight: 600; }
+.v2-progcard__name { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.01em; color: var(--v2-text); margin: 0.5rem 0 0.6rem; }
+.v2-progcard__desc { font-size: 0.95rem; font-weight: 300; color: var(--v2-muted); line-height: 1.65; flex: 1; }
+.v2-progcard__more { margin-top: 1.2rem; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; color: var(--v2-accent-solid); }
+.v2-programs__foot { text-align: center; margin: 2.25rem 0 0; color: var(--v2-muted); font-weight: 300; font-size: 1rem; }
+.v2-programs__foot a { color: var(--v2-accent-solid); text-decoration: none; font-weight: 500; }
+
 /* ===================== MAINTENANCE STRIP ===================== */
 .maint-strip {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1001;

@@ -50,7 +50,7 @@
       "pricing": "$35 per class, paid upfront for the term",
       "term_based": true,
       "booking": "Stripe checkout on each program page; or enquire via form / phone",
-      "class_size": "Maximum 5 per class (boutique supervision)",
+      "class_size": "Up to 10 per class (small, closely supervised)",
       "disciplines": ["Dance", "Aerial", "Conditioning"],
       "approach": "Integrated Movement Arts - dance, aerial and conditioning as one connected practice"
     },
@@ -89,7 +89,7 @@
     "values": [
       "Beginner-friendly and inclusive",
       "Non-competitive - progress over performance",
-      "Small, closely supervised classes (max 5)",
+      "Small, closely supervised classes (up to 10)",
       "Confidence, coordination and creativity",
       "A lifelong love of movement"
     ]

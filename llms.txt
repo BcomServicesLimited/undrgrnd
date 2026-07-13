@@ -32,7 +32,7 @@ Classes run by Queensland school term. Each program page shows the current term,
 
 Beginner-friendly, parent-focused articles on kids movement, dance and aerial on the Gold Coast. Written to help parents choose, prepare for and understand movement classes for their child.
 
-- **Parents' Guide hub:** https://www.undrgrnd.com.au/learn
+- **Parents' Guide hub:** https://www.undrgrnd.com.au/learn/
 - **What Age Should Kids Start Movement & Dance Classes?** — How to match the class to the child's stage (6–10, 11–14, 14–17) rather than a specific age; no experience needed. https://www.undrgrnd.com.au/learn/when-should-kids-start-movement-classes
 - **7 Benefits of Movement Classes for Kids** — Physical literacy, confidence, focus, emotional regulation, friendship and a lifelong love of movement. https://www.undrgrnd.com.au/learn/benefits-of-movement-classes-for-kids
 - **What Is Integrated Movement Arts? A Parent's Guide** — Why a multi-discipline approach (dance, aerial, conditioning) builds stronger, more adaptable young movers than early specialisation. https://www.undrgrnd.com.au/learn/what-is-integrated-movement-arts
@@ -46,7 +46,7 @@ Beginner-friendly, parent-focused articles on kids movement, dance and aerial on
 - **Tween Exploration (11–14):** https://www.undrgrnd.com.au/programs/tween-exploration
 - **Teen Elite Lab (14–17):** https://www.undrgrnd.com.au/programs/teen-elite-lab
 - **Contact / Enquire:** https://www.undrgrnd.com.au/contact
-- **Parents' Guide (Learn):** https://www.undrgrnd.com.au/learn
+- **Parents' Guide (Learn):** https://www.undrgrnd.com.au/learn/
 - **Child Safety & Governance Policy:** https://www.undrgrnd.com.au/child-safety-policy
 - **Privacy Policy:** https://www.undrgrnd.com.au/privacy-policy
 - **Terms of Service:** https://www.undrgrnd.com.au/terms-of-service

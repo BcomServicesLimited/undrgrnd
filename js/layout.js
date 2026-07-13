@@ -155,7 +155,7 @@
         '<div class="footer-strip">' +
           '<p class="footer-strip__copy">&copy; ' + YEAR + ' <span itemprop="name">UNDRGRND Movement</span>. All rights reserved.</p>' +
           '<nav class="footer-strip__legal" aria-label="Footer links">' +
-            '<a href="/learn">Parents&rsquo; Guide</a>' +
+            '<a href="/learn/">Parents&rsquo; Guide</a>' +
             '<span aria-hidden="true">|</span>' +
             '<a href="/child-safety-policy">Child Safety</a>' +
             '<span aria-hidden="true">|</span>' +

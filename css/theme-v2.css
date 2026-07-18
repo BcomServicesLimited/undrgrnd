@@ -390,6 +390,13 @@ a.v2-btn--primary, .v2-prose a.v2-btn--primary, a.v2-btn--primary.dance-booking-
 }
 .v2-booking-card__btns .v2-btn { min-width: 9.5rem; }
 
+/* ===================== PROGRAM QUICK-FACTS STRIP ===================== */
+.v2-facts { list-style:none; margin:0 auto 2rem; padding:1.1rem 1.3rem; display:flex; flex-wrap:wrap; gap:1.1rem 2.4rem;
+  background:#fff; border:1px solid rgba(0,0,0,0.08); border-radius:14px; box-shadow:0 8px 26px rgba(30,20,60,0.05); }
+.v2-facts li { display:flex; flex-direction:column; gap:0.15rem; }
+.v2-facts__k { font-size:0.63rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--v2-muted); font-weight:700; }
+.v2-facts__v { font-size:1rem; font-weight:700; color:var(--v2-text); letter-spacing:-0.01em; }
+
 /* ===================== HOMEPAGE PROGRAMS (image-card shelf) ===================== */
 .v2-programs { background: var(--v2-grey-top); padding: 2.5rem 6% 3rem; }
 .v2-programs__inner { max-width: 1180px; margin: 0 auto; }

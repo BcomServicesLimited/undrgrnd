@@ -222,6 +222,17 @@
     if (navMount) navMount.outerHTML = navHTML();
     if (footMount) footMount.outerHTML = footerHTML();
     wireNav();
+    injectAnalytics();
+  }
+
+  /* Cloudflare Web Analytics — cookieless, no cookie banner needed */
+  function injectAnalytics() {
+    if (document.querySelector('script[data-cf-beacon]')) return;
+    var s = document.createElement('script');
+    s.defer = true;
+    s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    s.setAttribute('data-cf-beacon', '{"token": "3332b3b416e74280b9bfd992665e6cad"}');
+    (document.head || document.documentElement).appendChild(s);
   }
 
   if (document.readyState === 'loading') {
